@@ -75,6 +75,7 @@ ul, ol{padding-left:22px; margin:0 0 12px}
 li{margin:2px 0}
 strong{font-weight:650}
 .n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
 .n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
 figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
 figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
@@ -130,8 +131,10 @@ section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
 .qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
 .qblock dl.qd dd{margin:0; color:var(--ink-2)}
 .qblock .qnotes{display:none}
-body.companion .qblock .qnotes{display:block; height:58px; margin-top:6px;
-  background-image:repeating-linear-gradient(to bottom, transparent 0 18px, var(--rule-2) 18px 19px)}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
 .qindex h4{margin-top:18px}
 .checkcol{width:28px; text-align:center; color:var(--muted)}
 .tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
@@ -164,7 +167,7 @@ body.companion .qblock .qnotes{display:block; height:58px; margin-top:6px;
   a{color:inherit; text-decoration:none}
   .n{border:0}
   .qblock{border-color:#bbb; background:#fff}
-  body.companion .qblock .qnotes{background-image:repeating-linear-gradient(to bottom, transparent 0 18px, #bbb 18px 19px)}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
   @page{size:A4; margin:14mm 13mm}
 }
 </style>
@@ -195,9 +198,12 @@ body.companion .qblock .qnotes{display:block; height:58px; margin-top:6px;
   function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
   function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
     if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
-  document.addEventListener('pointerover',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
-  document.addEventListener('pointermove',function(e){ if(!tip.hidden) move(e); });
-  document.addEventListener('pointerout',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
   var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
   var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
   if('IntersectionObserver' in window){

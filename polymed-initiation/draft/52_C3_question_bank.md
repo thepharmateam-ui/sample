@@ -42,7 +42,7 @@ Follow-up: Which adjacency would you not enter, and why?
 ::: q theme="Strategy"
 Q: Between a low-cost volume manufacturer and a branded therapy company, where do you want Polymed to sit in 2030, and what share of revenue should be own-brand?
 Why: Positioning determines pricing power, margins and channel strategy for every line.
-Context: CRISIL puts own-brand sales at {{B-0749|range}} of revenue; management put the OEM/private-label share at {{CC-0280}} in FY22. <!-- CRR2402 p.1; TR4Q22 p.12 -->
+Context: CRISIL puts own-brand sales at {{B-0749}} of revenue; management put the OEM/private-label share at {{CC-0280}} in FY22. <!-- CRR2402 p.1; TR4Q22 p.12 -->
 Listen: Reassuring: a deliberate plan to grow branded share in higher-value lines while keeping OEM for scale. Concerning: no view, or a view that ignores CRISIL's point that India's low-cost image limits premiums.
 Follow-up: In which product lines do you already command a price premium over Chinese makers?
 :::
@@ -266,7 +266,7 @@ Follow-up: Does the OEM have a second source?
 ::: q theme="Renal" priority="must"
 Q: Management says Chinese dialysers enter India duty-free, paying {{WM-0060}} GST, while Polymed pays customs duty of {{WM-0062}} on imported raw materials and {{WM-0061}} GST. What is the landed price gap per dialyser today, and what happens to renal pricing if the anti-dumping investigation into dialysers from China and Malaysia does not lead to duties?
 Why: Dialyser pricing sets renal margins and the payback on the PLI-backed capacity (Section A4.3).
-Context: Polymed filed the petition (initiated 25-Jun-2026) and claims an injury margin of {{CA-0053}}. It told DGTR that the domestic industry made financial and cash losses and a negative return on capital in CY25. Renal revenue grew {{CA-0052}} yoy in 1QFY27 as Polymed chose price over volume. <!-- DGTR_DIAL_INIT p.1, p.4; TR4Q26 p.15; TR1Q27S p.3, p.4 -->
+Context: Polymed filed the petition (initiated 25-Jun-2026) and claims an injury margin of {{CA-0053}}. It told DGTR that the domestic industry made financial and cash losses and a negative return on capital in CY25. Renal revenue fell {{CA-0052|abs}} yoy in 1QFY27 as Polymed chose price over volume. <!-- DGTR_DIAL_INIT p.1, p.4; TR4Q26 p.15; TR1Q27S p.3, p.4 -->
 Listen: Reassuring: cost-down plans that close the gap without duties. Concerning: a strategy that depends on the trade remedy.
 Follow-up: What duty would restore dialyser profitability, and how large were the losses the petition describes?
 :::
@@ -274,7 +274,7 @@ Follow-up: What duty would restore dialyser profitability, and how large were th
 ::: q theme="Renal" priority="must"
 Q: What is the annual consumables pull-through per installed dialysis machine – bloodlines, fistula needles and dialysers – and what share of machines is sold outright versus placed against consumable commitments?
 Why: The razor-and-blade logic is the case for the machine business; placement terms decide its capital intensity.
-Context: Polymed placed {{CA-0088|num}} machines in FY26 against {{CA-0501|range}} guided, taking the installed base to about {{CA-0089|num}} machines. It had bid for {{CA-0273|range}} machines by Feb-2026. <!-- TR4Q26 p.4; TR4Q25 p.4; TR3Q26 p.11 -->
+Context: Polymed placed {{CA-0088|num}} machines in FY26 against {{CA-0501|range}} guided, taking the installed base to about {{CA-0089|num}} machines. It had bid for {{CA-0273}} machines by Feb-2026. <!-- TR4Q26 p.4; TR4Q25 p.4; TR3Q26 p.11 -->
 Listen: Reassuring: contractual consumable commitments and measured pull-through per machine. Concerning: machines sold at low margins without consumable lock-in.
 Follow-up: How many service engineers support the installed base, and what uptime do you commit to?
 :::
@@ -314,7 +314,7 @@ Follow-up: Who is the largest PPP dialysis operator you supply?
 ::: q theme="Renal"
 Q: How much of the dialysis machine is made in India, and which modules are still imported?
 Why: Local content drives cost, lead times and eligibility for procurement preferences.
-Context: Management put local content at {{CA-0504|range}}. <!-- TR4Q25 p.4 -->
+Context: Management put local content at {{CA-0504}}. <!-- TR4Q25 p.4 -->
 Listen: Reassuring: a plan to localize pumps and electronics. Concerning: dependence on one foreign module supplier.
 Follow-up: What is the warranty cost per machine?
 :::
@@ -325,6 +325,38 @@ Why: Home dialysis is a structural trend that could bypass centre-based consumab
 Context: Polymed's range already includes peritoneal-dialysis sets; there is no disclosed home-dialysis programme. <!-- AR16 p.6 -->
 Listen: Reassuring: a considered position either way. Concerning: no view.
 Follow-up: Which global player would you partner with in home dialysis?
+:::
+
+::: q theme="Renal" priority="must"
+Q: In May-2025 you said renal was not loss-making and had a positive operating margin. DGTR's initiation notice summarizes the petition as reporting financial losses, cash losses and a negative return on capital for the domestic dialyser industry in CY25. How do the two statements fit together: different scope, different period or a different cost allocation?
+Why: This is the only published data point on dialyser economics, and it points the other way from earlier commentary (Section A4.3).
+Context: Renal revenue was {{CB-0870}} in FY26; management does not disclose a renal margin. The petition's period of investigation is CY25; the May-2025 comment covered the renal line as a whole. <!-- TR4Q25 p.13-14; DGTR_DIAL_INIT p.4; DK4Q26 p.12 -->
+Listen: Reassuring: a clear bridge, for example dialysers loss-making while bloodlines, needles and machines are profitable, with a path to breakeven. Concerning: no reconciliation, or losses across the whole line.
+Follow-up: At what utilization of the dialyser plant does the product break even?
+:::
+
+::: q theme="Renal"
+Q: Your share claims for renal have ranged from {{CC-0535|range}} (May-2023) to {{CA-0580|range}} (Feb-2025) and {{CA-0242}} (Feb-2026). What market is the denominator: dialysers or all consumables, value or volume, public and private centres?
+Why: The claims move from call to call and cannot be tested without a stated base (Section A4.3).
+Context: The targets have moved too, from {{CC-0044|range}} within about five years (May-2021) to {{CA-0617|range}} by 2030 (Feb-2025). <!-- TR4Q23 p.17; TR3Q25 p.5, p.18; TR3Q26 p.5; TR2021 p.8 -->
+Listen: Reassuring: one consistent definition, with dialyser units and sessions behind it. Concerning: shares quoted on different bases.
+Follow-up: What is your share in PPP centres versus private chains?
+:::
+
+::: q theme="Renal"
+Q: How long does a public dialysis tender take from bid to installation, and what share of FY26 machine sales went to government or PPP buyers versus private hospitals and chains?
+Why: FY26 machine sales of {{CB-0596}} fell short of the {{CA-0501|range}} guided because government contracts slipped; the tender cycle decides how lumpy renal growth is.
+Context: Management had bid for {{CA-0273}} machines by Feb-2026 and plans a {{CA-0167}} rise in machine sales in FY27. <!-- DK4Q26 p.7; TR4Q25 p.4; TR3Q26 p.11; TR4Q26 p.13 -->
+Listen: Reassuring: a mix weighted to private buyers, or tenders already awarded. Concerning: dependence on a few state budgets.
+Follow-up: Do tender contracts include consumables, or only the machines?
+:::
+
+::: q theme="Renal"
+Q: Where does the India-made HDF machine stand, and who will buy it if PM-JAY pays the same per session for HDF as for haemodialysis?
+Why: HDF is the premium end of the market and is dominated by MNCs; the reimbursement ceiling limits it to private centres.
+Context: Management put HDF at {{CA-0462|plain}} of Indian dialysis and the private sector at {{CA-0464|plain}} of the market (Aug-2025). <!-- TR1Q26 p.11 -->
+Listen: Reassuring: regulatory approval in hand and named private-chain trials. Concerning: launch dates slipping without a buyer.
+Follow-up: Will the HDF machine use Polymed's own dialysers and bloodlines only?
 :::
 
 ### Blood management and diagnostics
@@ -506,11 +538,11 @@ Follow-up: How many hospitals do you cover directly?
 :::
 
 ::: q theme="Customers and channel"
-Q: How many months of stock do your European distributors hold today, compared with before FY26?
-Why: Inventory in the channel was the main stated cause of the FY26 slowdown.
-Context: Management said European distributors cut inventory cover from four to five months to two to three months in 1HFY26. <!-- TR1Q26 p.5, p.9 -->
-Listen: Reassuring: data from distributor reporting. Concerning: estimates.
-Follow-up: Do you have sell-out data from distributors?
+Q: What level of inventory cover do you regard as normal for your European distributors, and how do you monitor it – through sell-out reporting, order patterns or estimates?
+Why: Inventory in the channel was the main stated cause of the FY26 slowdown; without visibility of sell-out, the next destocking cycle would again surprise.
+Context: Management said European distributors cut inventory cover from {{WC-0068|range}} months to {{WC-0069|range}} months in 1HFY26. <!-- TR1Q26 p.5, p.9 -->
+Listen: Reassuring: contractual sell-out reporting from the larger distributors. Concerning: estimates from order patterns only.
+Follow-up: Which distributors share sell-out data with you today?
 :::
 
 ::: q theme="Customers and channel"
@@ -532,7 +564,7 @@ Follow-up: Do CDMO customers fund tooling and validation?
 ::: q theme="Customers and channel"
 Q: How do OEM and private-label margins compare with own-brand margins, and who are the largest OEM customers?
 Why: The OEM share and its margin gap are undisclosed but decide the value of the mix shift (Section A4.10).
-Context: Management put own brand at {{CC-0279}} and OEM at {{CC-0280}} in FY22, with a target of {{CC-0281|range}} own brand; CRISIL named "Atroge and Asept" among the big players Polymed supplies. <!-- TR4Q22 p.12; CR23 p.7 -->
+Context: Management put own brand at {{CC-0279}} and OEM at {{CC-0280}} in FY22, with a target of {{CC-0281}} own brand; CRISIL named "Atroge and Asept" among the big players Polymed supplies. <!-- TR4Q22 p.12; CR23 p.7 -->
 Listen: Reassuring: a narrow margin gap and diversified customers. Concerning: OEM priced near cost.
 Follow-up: Has the OEM share changed since FY22?
 :::
@@ -956,8 +988,8 @@ Follow-up: Which product has the highest complaint rate?
 ### Margins and costs
 
 ::: q theme="Margins and costs" priority="must"
-Q: Walk us through the FY27 EBITDA margin guidance of {{CA-0019|range}} for the standalone business. How much do raw materials, the Haryana wage increase, freight, mix and the rupee each contribute?
-Why: A quantified bridge shows which margin drivers management controls (Section A2).
+Q: Your standalone EBITDA margin guidance for FY27 is {{CA-0019|range}}. Of the cost pressures you have discussed publicly – raw materials, the Haryana wage increase, freight – which are structural and which cyclical, and what are the offsets you control: price, mix, automation?
+Why: Separating structural from cyclical pressure shows which margin drivers management controls (Section A2); the question stays within what management has already guided.
 Context: Haryana's minimum wage rose {{CA-0024}} from 1-Apr-2026; standalone operating EBITDA margin was {{A-0074}} in FY26. <!-- TR1Q27S p.3; AR26 p.8 -->
 Listen: Reassuring: a bridge with offsetting price and productivity actions. Concerning: margin held only by the rupee.
 Follow-up: Which cost line surprised you most in FY26?

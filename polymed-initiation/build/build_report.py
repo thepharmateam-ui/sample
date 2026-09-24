@@ -104,7 +104,8 @@ def fmt_fact(fid, fmt=""):
         elif f == "range":
             disp = fmt_range(r)
     tip = html.escape(tooltip(r)).replace("|", "&#124;")
-    return f'<span class="n" title="{tip}">{html.escape(disp)}</span>'
+    cls = "n nl" if len(disp) > 24 else "n"
+    return f'<span class="{cls}" title="{tip}">{html.escape(disp)}</span>'
 
 
 def fmt_range(r):
@@ -151,10 +152,10 @@ def fmt_range(r):
         return joined + "bps"
     scale = "bn" if ("billion" in low or " bn" in low) else ("mn" if ("million" in low or " mn" in low or "mn" in unit.lower()) else "")
     if unit.upper().startswith("USD") or "usd" in low or "$" in txt:
-        return "$" + joined + (scale or "mn")
+        return "$" + joined + (scale or "mn") + plus
     if unit.upper().startswith("EUR") or "eur" in low or "€" in txt:
-        return "€" + joined + (scale or "mn")
-    return joined
+        return "€" + joined + (scale or "mn") + plus
+    return joined + plus
 
 
 TOKEN = re.compile(r"\{\{([A-Z]{1,3}(?:-[0-9A-Za-z_]+)+)(?:\|([a-z,]+))?\}\}")
@@ -479,7 +480,7 @@ def build(out_path, draft_files, companion=False):
     body, toc = add_heading_ids(body, ("2", "3") if companion else ("1", "2"))
     toc_html = []
     for lvl, hid, txt in toc:
-        toc_html.append(f'<li class="l{lvl}"><a href="#{hid}">{html.escape(txt)}</a></li>')
+        toc_html.append(f'<li class="l{lvl}"><a href="#{hid}">{html.escape(html.unescape(txt))}</a></li>')
     tpl = open("build/template.html").read()
     title = "Polymed Plant Visit Questions" if companion else "Poly Medicure Initiating Coverage"
     page = (tpl.replace("{{TITLE}}", title)

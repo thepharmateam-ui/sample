@@ -6,7 +6,7 @@
 - Each figure is drawn from a fact ledger built from company filings, presentations, call transcripts, rating-agency rationales, regulator texts and peer offer documents.
 - Hover over any number, or press on it on a touch screen, to see the source document, its date and the page or slide.
 - Figures computed by us (shares, growth rates, CAGRs, currency conversions) are labelled "our calculation", and the tooltip shows the formula and its inputs.
-- Market-research estimates from commercial vendors are labelled as such and used only as ranges.
+- Market-research estimates from commercial vendors are labelled as such, with the vendor and the year, and are used for context only; we prefer regulator data, company filings and offer-document industry chapters where they exist.
 
 **Conventions.**
 - Currency: rupee amounts are in Rs. mn and Rs. bn; company figures reported in crore or lakh are converted. <!-- lint-ok -->

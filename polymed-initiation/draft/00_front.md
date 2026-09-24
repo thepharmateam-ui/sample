@@ -3,7 +3,7 @@
 <p class="ctitle">Poly Medicure (POLYMED): India's export-scale disposables maker, now buying its way up the value chain</p>
 <p class="csub">A low-cost, highly automated infusion franchise funds a push into renal, cardiology and orthopaedics. Execution on acquisitions, new plants and Chinese price competition is the test.</p>
 <p class="meta"><span><b>Draft</b> as of 24 Sep 2026</span><span><b>Data</b> to the 1QFY27 results (7-10 Aug 2026) and the 31st AGM (5 Sep 2026)</span><span><b>Sector</b> Medical devices and consumables</span></p>
-<p class="scope">Scope: the business and the industry only. This report contains no forecasts, estimates, valuation, rating or target price. Management guidance is reported as management's. Every number links to its source document and page: hover over it to see the citation.</p> <!-- lint-ok -->
+<p class="scope">Scope: the business and the industry only. This report contains no forecasts, estimates, valuation, rating or target price. Management guidance is reported as management's. Every number links to its source document and page: hover over it, or tap it on a touch screen, to see the citation.</p> <!-- lint-ok -->
 </div>
 
 <div class="kf" markdown="1">
