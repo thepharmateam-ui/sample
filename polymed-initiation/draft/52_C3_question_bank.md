@@ -202,7 +202,7 @@ Follow-up: Who are the two competitors you meet most often in port tenders?
 ::: q theme="Renal" priority="must"
 Q: Management says Chinese dialysers enter India duty-free, paying {{WM-0060}} GST, while Polymed pays customs duty of {{WM-0062}} on imported raw materials and {{WM-0061}} GST. What is the landed price gap per dialyser today, and what happens to renal pricing if the anti-dumping investigation into dialysers from China and Malaysia does not lead to duties?
 Why: Dialyser pricing sets renal margins and the payback on the PLI-backed capacity (Section A4.3).
-Context: The company, which filed the application, has claimed an injury margin of {{CA-0053}}. Renal revenue grew {{CA-0052}} yoy in 1QFY27 as Polymed chose price over volume. <!-- TR4Q26 p.15; TR1Q27S p.3, p.4 -->
+Context: Polymed filed the petition (initiated 25-Jun-2026) and claims an injury margin of {{CA-0053}}. It told DGTR that the domestic industry made financial and cash losses and a negative return on capital in CY25. Renal revenue grew {{CA-0052}} yoy in 1QFY27 as Polymed chose price over volume. <!-- DGTR_DIAL_INIT p.1, p.4; TR4Q26 p.15; TR1Q27S p.3, p.4 -->
 Listen: Reassuring: cost-down plans that close the gap without duties. Concerning: a strategy that depends on the trade remedy.
 Follow-up: Which customers switched to Chinese dialysers, and have any come back?
 :::
@@ -232,9 +232,9 @@ Follow-up: Are you on the approved list of the largest private dialysis chains?
 :::
 
 ::: q theme="Renal"
-Q: How much incentive have you received under the renal PLI so far, and are you meeting the incremental-sales thresholds?
+Q: Parliamentary data show no PLI incentive paid to Polymed so far, although it has invested {{F-0016}} of the {{F-0015}} it committed. Which thresholds have not been met, and what happens to the economics of the dialyser capacity if the incentive never comes?
 Why: The PLI's economics depend on hitting thresholds; the FY26 annual report discloses no PLI receipt (Section B3).
-Context: Management described an incremental-revenue requirement of {{CC-0124}} a year and a revenue ceiling of {{CC-0123}} in FY28. <!-- TR2Q22 p.6; AR26 -->
+Context: Management described an incremental-revenue requirement of {{CC-0124}} a year. Nipro, the other domestic dialyser maker, received {{F-0023}} of PLI incentive over FY23-FY25. <!-- TR2Q22 p.6; LSQ_AU1001_260724 pp.2-3, p.7 -->
 Listen: Reassuring: incentive accrued on track. Concerning: thresholds missed and incentive at risk.
 Follow-up: What happens to the dialyser capacity if the PLI lapses?
 :::
@@ -472,7 +472,7 @@ Follow-up: Would you consider a plant outside India?
 ::: q theme="Regulation and policy" priority="must"
 Q: What share of domestic revenue is sold through the trade channel at MRP, what trade margin do your products typically carry today, and how would a cap on trade margins change your realizations?
 Why: India is weighing a cap on trade margins for medical devices; the exposure depends on the channel mix and MRP headroom (Section B3).
-Context: Domestic revenue grew {{A-0265}} in FY26 to {{A-0263}}; the DPCO already caps annual price increases for non-scheduled devices at {{D-0185}}. <!-- AR26 p.47; PD24 p.41 -->
+Context: A press report of a Maharashtra FDA survey named a Polymed IV set bought at {{F-0083}} against an MRP of {{F-0084}}, a mark-up of {{F-0082}}. The Parliamentary Standing Committee on Health recommended capping the gap between landing price and MRP at {{F-0073}} in Aug-2026, and the Health Minister ordered a review. Domestic revenue was {{A-0263}} in FY26. <!-- FPJ_MAHFDA_2609 p.1; PIB_PSC176_2608 p.1; AR26 p.47 -->
 Listen: Reassuring: modest trade margins and hospital-led pricing. Concerning: MRPs set well above realized prices.
 Follow-up: Would you reset MRPs ahead of a cap?
 :::
@@ -480,7 +480,7 @@ Follow-up: Would you reset MRPs ahead of a cap?
 ::: q theme="Regulation and policy" priority="must"
 Q: With the US tariff on Indian devices at {{CA-0077}} and higher US duties on Chinese syringes and needles, which of your products become competitive in the US, and what is your exposure to the Section 232 investigation?
 Why: US trade policy is the largest external swing factor for the export thesis (Section B4).
-Context: The tariff was {{CA-0427}} in Aug-2025. <!-- TR1Q26 p.5; TR1Q27S p.12 -->
+Context: The duty on Indian HS 9018 goods rose to {{F-0212}} plus a further {{F-0213}} in Aug-2025, fell to nil after the Supreme Court's IEEPA ruling of 20-Feb-2026, and is now a {{F-0221}} Section 301 duty from 24-Jul-2026. Chinese syringes and needles pay {{F-0204}} under Section 301. US syringe imports from India (all makers) rose from {{F-0175}} in 2024 to {{F-0176}} in 2025, while imports from China fell. <!-- FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; SCOTUS_IEEPA_260220 p.2; FR_301ACT_260728 p.7; FR_301MOD_240918 p.9; F_CT_USA_M_901831_2025 p.1 -->
 Listen: Reassuring: product-by-product US plans. Concerning: US ambitions contingent on tariff outcomes.
 Follow-up: Do US customers ask you to hold inventory in the US?
 :::

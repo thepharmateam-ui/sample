@@ -32,7 +32,7 @@
    - prefilled flush syringes, {{A-0870}}, one of the largest single product families. <!-- DK1Q27 p.6; BRSR26 p.12, p.27 -->
 4. **Two-thirds of revenue is exported.** {{CB-0084}} of FY26 revenue came from outside India. Europe and the rest of the world each account for about a third, and India for the balance. The US is still small at {{CA-0078|range}} a year. <!-- DK1Q27 p.6; TR1Q27S p.12 -->
 5. **FY26 was a reset.** Standalone revenue grew only {{CA-0093}} against consolidated guidance of {{CA-0512}}. Management cited destocking by European distributors, Chinese product diverted from the US to Europe, faster Suez transit and late MDR renewals. 1QFY27 re-accelerated to {{CB-0319}} organic growth (Section A3). <!-- TR4Q26 p.4; DK1Q27 p.26 -->
-6. **Renal is the second engine, and the most contested.** Polymed is India's first domestic dialyser maker. It had about {{CA-0089|num}} dialysis machines installed by FY26. Duty-free Chinese dialysers pushed renal revenue down {{CA-0052|abs}} yoy in 1QFY27. The company's anti-dumping application claims an injury margin of {{CA-0053}} (Section A4.3). <!-- AR24 p.71; TR4Q26 p.4; TR1Q27S p.3, p.4 -->
+6. **Renal is the second engine, and the most contested.** Polymed is India's first domestic dialyser maker. It had about {{CA-0089|num}} dialysis machines installed by FY26. Duty-free Chinese dialysers pushed renal revenue down {{CA-0052|abs}} yoy in 1QFY27. Polymed's own anti-dumping petition says the dialyser business made losses and a negative return on capital in CY25, and it has received no PLI incentive so far (Section A4.3). <!-- AR24 p.71; TR4Q26 p.4; TR1Q27S p.3; DGTR_DIAL_INIT p.4; LSQ_AU1001_260724 pp.2-3 -->
 7. **Acquisitions add cardiology and orthopaedics, with a weak start.** PendraCare (Netherlands) and Citieffe (Italy) contributed {{CB-0184}} of revenue in 1QFY27. PendraCare lost {{A-0694|abs}} before tax in its first six months under Polymed; Citieffe was near breakeven. The in-house stent programme had about {{WM-0057|num}} implants by Jul-2026 (Sections A4.8, A4.9). <!-- DK1Q27 p.2, p.22; AR26 p.121, p.122 -->
 8. **Margin drivers are mostly company-specific.**
    - **Pressures:** raw materials ({{D-CS-rm_cost-FY26}} of standalone revenue), a {{CA-0024}} increase in Haryana's minimum wage from Apr-2026, freight, and dilution from the acquired businesses.
@@ -40,7 +40,7 @@
    - See Sections A2 and A7. <!-- TR1Q27S p.3; DK4Q26 p.29 -->
 9. **The industry backdrop is mixed.**
    - **Tailwinds:** India's device policy (PLI, NMDP and procurement preference), EU MDR attrition among small suppliers, and US duties on Chinese syringes and needles.
-   - **Risks:** a possible cap on trade margins in India, Chinese pricing in Europe and in renal, and US tariff volatility.
+   - **Risks:** a possible cap on trade margins in India (a Parliamentary committee has recommended limiting the landing-price-to-MRP gap to {{F-0073}}), Chinese pricing in Europe and in renal, and US tariff volatility. <!-- PIB_PSC176_2608 p.1 -->
    - See Part B.
 10. **Capital allocation and governance deserve diligence.**
    - **Unspent QIP money:** {{A-0586}} of the Aug-2024 QIP was unused at 31-Mar-2026.
@@ -58,7 +58,7 @@
 | Can renal earn a return against Chinese dialysers? | First Indian dialyser maker, installed machine base and an anti-dumping case | Renal revenue fell {{CA-0052|abs}} in 1QFY27; the PLI economics depend on volume | DGTR findings; renal growth; single-use conversion |
 | Will cardiology and orthopaedics create value? | Technology and approvals bought at {{A-0106}} and {{A-0118}} EBITDA, with manufacturing moving to India | PendraCare's pre-tax loss of {{A-0694|abs}} after closing; integration bandwidth | Segment margins in FY27-28; OEM contract renewals |
 | Can automation hold margins against wage and material inflation? | {{CB-1077}} automated assembly machines; standalone margin guidance of {{CA-0019|range}} | A {{CA-0024}} minimum-wage increase and freight costs have lifted cost ratios | Standalone EBITDA margin through FY27 |
-| How exposed is India to price policy? | Hospital-led demand and a PLI-backed manufacturing base | A cap on trade margins could compress MRP-based realizations in the trade channel | The government's decision on trade margins (Section B3) |
+| How exposed is India to price policy? | Hospital-led demand; tender channels reserved for local makers | A committee recommended a {{F-0073}} cap on the landing-price-to-MRP gap; a state survey cited a Polymed IV set at a {{F-0082}} mark-up | The government's decision on trade margins (Section B3) |
 | Governance: disclosed legacy or a live risk? | Transactions are disclosed and below materiality thresholds; audits are clean | Related-party job work, reclassified promoter entities, idle QIP money in hybrid funds | Trend in Vitromed job work; QIP deployment; board changes |
 :::
 <!-- DK1Q27 p.26; TR1Q27S p.3, p.4; AR26 p.12, p.122; DK4Q26 p.29; AR26 p.88; MA_2603 p.4 -->

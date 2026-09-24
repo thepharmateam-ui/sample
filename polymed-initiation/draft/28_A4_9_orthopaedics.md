@@ -57,7 +57,7 @@ The unit of demand is the fracture: one nail and its locking screws per long-bon
 :::
 <!-- AR26 p.12, p.120-121; TRCIT p.5; PRCIT p.2; MA_2512 p.8; RS3Q26 p.5; SUB26BV p.10 -->
 
-The deal was signed on 24 Sep 2025, closed on 6 Nov 2025, and Citieffe was consolidated from 7 Nov 2025. The multiple of {{A-0118}} was struck on CY24 EBITDA of {{CB-2512}}, which the company describes as excluding one-off expenses and income. <!-- DKAGM30 p.4; DK2Q26 p.7; DK4Q26 p.5; DKCIT p.12, p.15 -->
+The deal was signed on 24 Sep 2025, closed on 6 Nov 2025, and Citieffe was consolidated from 7 Nov 2025. The {{A-0118}} figure is based on CY24 EBITDA of {{CB-2512}}, which the company describes as excluding one-off expenses and income. <!-- DKAGM30 p.4; DK2Q26 p.7; DK4Q26 p.5; DKCIT p.12, p.15 -->
 
 ### Financials: flat sales, a net loss and a long receivables tail
 

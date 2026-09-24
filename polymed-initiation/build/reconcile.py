@@ -68,8 +68,8 @@ def fmt_num(x, dec=None):
 
 
 UNIT_ALIASES = {
-    "rs cr": "Rs cr", "rs. cr": "Rs cr", "inr cr": "Rs cr", "₹ cr": "Rs cr", "cr": "Rs cr", "rs crore": "Rs cr", "crore": "Rs cr",
-    "rs lakh": "Rs lakh", "rs lakhs": "Rs lakh", "lakh": "Rs lakh", "₹ lakh": "Rs lakh",
+    "rs cr": "Rs cr", "rs. cr": "Rs cr", "inr cr": "Rs cr", "₹ cr": "Rs cr", "rs crore": "Rs cr", 
+    "rs lakh": "Rs lakh", "rs lakh crore": "Rs lakh cr", "rs lakhs": "Rs lakh", "₹ lakh": "Rs lakh",
     "rs mn": "Rs mn", "rs million": "Rs mn", "inr mn": "Rs mn", "rs bn": "Rs bn", "inr bn": "Rs bn",
     "rs": "Rs", "inr": "Rs", "₹": "Rs",
     "inr cr": "Rs cr", "inr crore": "Rs cr", "inr crores": "Rs cr", "rs crores": "Rs cr", "₹ crore": "Rs cr",
@@ -108,6 +108,8 @@ def standardize(value, unit):
         return x * 0.1, "Rs mn"
     if u == "Rs bn":
         return x * 1000.0, "Rs mn"
+    if u == "Rs lakh cr":
+        return x * 1e6, "Rs mn"
     if u == "cr units":
         return x * 10.0, "mn units"
     if u == "lakh units":
@@ -119,6 +121,8 @@ def display_money_rs_mn(x, approx=False):
     t = "~" if approx else ""
     sign = "-" if x < 0 else ""
     a = abs(x)
+    if a >= 1e6:
+        return f"{t}{sign}Rs. {a / 1e6:,.1f}tn"
     if a >= 1000:
         return f"{t}{sign}Rs. {a / 1000:,.1f}bn"
     if a >= 10:
@@ -193,9 +197,30 @@ def display_ccy_text(v, ccy, mult, per=""):
     return f"{approx}{rel}{sym}{rng}{suffix}{plus}{per}"
 
 
+INDIAN_COUNT = re.compile(r"^(lakh|lakhs|lac|crore|crores|cr)\b\s*(.*)$", re.I)
+COUNT_NOUN = {"nos": "units", "no": "units", "kgs": "kg", "": ""}
+
+
+def display_indian_count(v, unit):
+    m = INDIAN_COUNT.match(unit.strip())
+    mult = 0.1 if m.group(1).lower().startswith("la") else 10.0  # in mn
+    noun = m.group(2).strip()
+    noun = COUNT_NOUN.get(noun.lower(), noun)
+    s = str(v).strip()
+    plus = "+" if s.endswith("+") else ""
+    x = to_float(s.rstrip("+"))
+    if x is None:
+        return f"{s} {unit}".strip()
+    mn = x * mult
+    body = f"{mn / 1000:,.1f}bn" if mn >= 1000 else (f"{mn:,.1f}mn" if mn < 100 else f"{mn:,.0f}mn")
+    return f"{body}{plus} {noun}".strip()
+
+
 def display(row):
     """House-style display string for a fact."""
     v, u = row["value"], norm_unit(row["unit"])
+    if INDIAN_COUNT.match((row["unit"] or "").strip()) and not u.startswith("Rs") and u not in ("lakh units", "cr units"):
+        return display_indian_count(v, row["unit"])
     x = to_float(v)
     approx = str(v).strip().startswith("~") or "[vendor estimate]" in (row.get("note") or "") and False
     if re.fullmatch(r"Rs per (EUR|USD)", u) and x is not None:
@@ -212,7 +237,7 @@ def display(row):
             s = f"{s} ({u})"  # ranges in money are rendered explicitly by the writer
         return s
     plus = "+" if str(v).strip().endswith("+") else ""
-    if u in ("Rs cr", "Rs lakh", "Rs mn", "Rs bn"):
+    if u in ("Rs cr", "Rs lakh", "Rs mn", "Rs bn", "Rs lakh cr"):
         vs, _ = standardize(v, u)
         return display_money_rs_mn(vs, approx) + plus
     if u == "Rs":

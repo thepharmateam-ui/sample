@@ -64,6 +64,15 @@ The Vitromed Healthcare relationship runs the other way. Polymed pays this promo
 
 We read Polymed's stance as pragmatic: own brand where it can build a franchise (India, Europe), private label and CDMO where access is otherwise hard (the US). The CDMO contracts are the first test of whether it can earn design fees, not just manufacturing margins.
 
+### Who else competes for OEM work
+
+- **Chinese suppliers** have long served the global majors. KDL, which ranks itself among China's ten largest exporters of polymer consumables, sells on OEM, ODM and own-brand terms and has long-term development and supply ties with several global device companies. <!-- KDL_AR25 p.23 -->
+- **Chinese private label carries risk for the buyer.** Jiangsu Caina made the syringes Cardinal Health sold in the US under its Monoject brand. The FDA found at least {{E-0279}} US complaints, sent a warning letter and in May-2024 told users to move away from Caina's syringes. <!-- FDA_WL_CAINA p.1; AHA_SYR p.1 -->
+- **Indian contract makers** are smaller. Angiplast offers CDMO and OEM services and makes components such as spikes, injection sites, connectors and clamps, and says it exports more than {{E-0386}} of its production. Lars Medicare calls itself a contract OEM supplier. Iscon Surgicals sold to OEMs as well as to government buyers. <!-- ANGIPLAST_WEB p.1; LARS_WEB p.1; BWR_ISCON p.2 -->
+- **The opening.** CRISIL says that pricing pressure and supply-chain problems during and after the pandemic have pushed OEMs to seek cost-competitive alternatives, making India an emerging hub for devices of high complexity and medium volume. <!-- PD24 p.141 -->
+
+Polymed's advantage over the Indian contract makers is its regulatory file: every plant is certified under the EU MDR and it holds {{D-0876}} US 510(k)s (Section A4.1). <!-- AR26 p.35; FDA510K_POLY p.1 -->
+
 ### What to watch
 
 ::: table id="oem_watch" title="Components, OEM and contract manufacturing: what to watch"
