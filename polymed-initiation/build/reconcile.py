@@ -143,6 +143,8 @@ def display(row):
     if u == "Rs":
         return ("~" if approx else "") + f"Rs. {fmt_num(x)}" + plus
     if u == "%":
+        if row.get("dec") is not None:
+            return f"{x:,.{row['dec']}f}%"
         return f"{str(v).strip().rstrip('%')}%" if not isinstance(v, (int, float)) else f"{fmt_num(x, None if abs(x) < 100 else 0)}%"
     if u == "EUR mn":
         return f"€{fmt_num(x)}mn{plus}"
@@ -249,7 +251,7 @@ def main():
             "segment": d.get("segment", ""), "geography": d.get("geography", ""), "period": d.get("period", ""),
             "value": round(val, dec), "unit": unit, "basis": "derived_ours", "doc_id": "DERIVED", "page": 0,
             "snippet": d["formula"], "speaker": "", "section": d.get("section", ""),
-            "note": d.get("note", ""), "inputs": refs, "shard": "DERIVED",
+            "note": d.get("note", ""), "inputs": refs, "shard": "DERIVED", "dec": dec,
         })
 
     # standardize + display

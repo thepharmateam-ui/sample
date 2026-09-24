@@ -114,8 +114,9 @@ def fmt_range(r):
             return f"Rs. {'-'.join(dict.fromkeys(parts))}bn"
         return f"Rs. {'-'.join(dict.fromkeys(f(x, 0) for x in mn))}mn"
     joined = "-".join(dict.fromkeys(f(x) for x in nums))
+    plus = "+" if re.search(r"\bplus\b|\+|upwards|over |north of|above|more than", low if (low := txt.lower()) else "") and len(nums) == 1 else ""
     if is_pct:
-        return joined + "%"
+        return joined + "%" + plus
     if is_bps:
         return joined + "bps"
     low = txt.lower()

@@ -58,7 +58,8 @@ In India, private-sector revenue grew {{CA-0419}} and {{CA-0332}} in 1QFY26 and 
 ### The guidance record
 
 Management gives explicit annual guidance and revisits it every quarter, so the record is easy to score.
-- **FY25:** delivered on revenue.
+- **FY22-FY25:** revenue guidance was met or beaten every year. The growth was built on a mix that routinely missed: domestic revenue fell short of guidance in FY23 and FY24, renal revenue missed in every year from FY22 to FY24, and US revenue targets slipped by years. <!-- CC digest A3; TR4Q23 p.2; TR4Q24 p.4 -->
+- **Management's method:** it describes starting 'with a moderate number' and revising after the first or second quarter. <!-- TR3Q24b p.7 -->
 - **FY26:**
   - Revenue guidance was cut from {{CA-0512}} to {{CA-0364|range}} in Nov-2025, then missed.
   - Renal and domestic guidance were missed by a wide margin.
@@ -66,6 +67,19 @@ Management gives explicit annual guidance and revisits it every quarter, so the 
 - **FY27 standalone:** the revenue guidance was widened from {{CA-0136|range}} in May-2026 to {{CA-0057|range}} in Aug-2026, while being described as maintained. <!-- TR4Q26 p.6; TR1Q27S p.4 -->
 
 We read these as signs that guidance is framed as a target to be managed toward rather than a forecast with a stated error band, so we weight management's quarterly commentary on drivers more heavily than the point guidance.
+
+::: table id="guidance_history" title="Revenue guidance was met every year from FY22 to FY25; domestic, renal and US targets were routinely missed, and FY26 missed on all of them"
+| Metric | FY22 | FY23 | FY24 | FY25 | FY26 |
+|---|---|---|---|---|---|
+| Revenue growth: guided | {{CC-0017|range}} | {{CC-0341|range}} | {{CC-0599|range}} (raised in-year) | {{CA-0690|range}} | {{CA-0512}}, cut to {{CA-0364|range}} |
+| Revenue growth: delivered | {{D-M-005}} (consolidated) | ~{{CC-0489|range}} | ~{{CC-0671|range}} standalone | {{CA-0491}} standalone | {{CA-0107}}; standalone ~{{CA-0093}} |
+| Domestic growth: guided | {{CC-0015|range}} | {{CC-0249|range}} | {{CC-0571|range}} | {{CA-0633|range}} | {{CA-0513|range}} |
+| Domestic growth: delivered | ~{{CC-0242}} | ~{{CC-0487|range}} | {{CC-0683}} | {{D-M-004}} | {{A-0265}} |
+| Renal revenue: guided | ~{{CC-0189|range}} (Feb-2022) | ~{{CC-0332|range}} | +{{CC-0502|range}} | {{WM-0009|range}} | +~{{CA-0499|range}} |
+| Renal revenue: delivered | ~{{CC-0333|range}} | ~{{CC-0504|range}} | ~{{CC-0716|range}} | {{CB-0487}} | +~{{CA-0166|range}} |
+| EBITDA margin: guided | {{CC-0169|range}} (cut twice) | ~{{CC-0259|range}} | {{CC-0549|range}} | +{{CA-0691|range}} | {{CA-0517|range}} |
+| EBITDA margin: delivered | ~{{CC-0236|range}} | {{CC-0786}} (consolidated) | ~{{CC-0675|range}} standalone | {{CA-0486}} | {{CA-0097}} standalone |
+:::
 
 ::: table id="guidance_scorecard" title="FY26 guidance was lowered once and still missed on revenue, domestic growth and renal; margin guidance was met"
 | Metric | First guidance (date) | Later revisions | Delivered |
