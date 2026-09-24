@@ -35,3 +35,9 @@ for _id, _per, _vit, _tot in [("D-M-025", "FY10", "B-0058", "B-0031"), ("D-M-026
                     "entity": "Polymed standalone", "period": _per,
                     "note": "our calculation: job work paid to Vitromed Healthcare as % of total job-work charges", "section": "A9"})
 DERIVED.append({"id": "D-M-033", "formula": "(A-0547+A-0549+A-0551)/A-0039*100", "unit": "%", "dec": 1, "metric": "vitromed_rpt_pct_consolidated_revenue", "entity": "Polymed", "period": "FY26", "note": "our calculation: all FY26 transactions with Vitromed Healthcare (job work, sales, purchases) as % of consolidated revenue", "section": "A9"})
+for _id, _f, _m in [("D-M-035", "A-0846", "infusion_therapy"), ("D-M-036", "A-0847", "dialysis"),
+                    ("D-M-037", "A-0848", "blood_management_and_collection"), ("D-M-038", "A-0849", "surgery_and_wound_drainage"),
+                    ("D-M-039", "A-0850", "urology"), ("D-M-040", "A-0851", "other"), ("D-M-041", "A-0870", "prefilled_flush_syringes")]:
+    DERIVED.append({"id": _id, "formula": f"{_f}/100*A-0350", "unit": "Rs mn", "dec": 0, "metric": f"implied_revenue_{_m}",
+                    "entity": "Polymed standalone", "period": "FY26",
+                    "note": "our calculation: BRSR share of standalone turnover x FY26 standalone revenue from operations", "section": "A1,A4"})

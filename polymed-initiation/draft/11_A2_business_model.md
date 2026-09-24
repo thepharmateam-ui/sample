@@ -138,7 +138,8 @@ Four patterns stand out.
 
 **Currency.** Polymed invoices exports mainly in euros and US dollars. It imports most raw materials, and management says borrowings are 'primarily U.S. Dollar denominated', so a weaker rupee helps on net. <!-- PD24 p.51 -->
 - **Unhedged exposure.** At 30-Jun-2024, unhedged foreign-currency exposure was {{D-0240}} against forward contracts of {{D-0241}}. <!-- PD24 p.88 -->
-- **Management's view.** It cited rupee depreciation as a partial offset to FY27 cost inflation, as '60% to 70% business is international'. <!-- TR4Q26 p.6 -->
+- **No forward cover at FY26 year-end.** At 31-Mar-2026 no forward contracts were outstanding, against a net unhedged US-dollar receivable of {{A-0544}}. FX gains of {{A-0487}} were booked in other income in FY26, below operating EBITDA, so the reported operating margin does not capture the full currency benefit. <!-- AR26 p.78, p.86 -->
+- **Management's view.** It cited rupee depreciation as a partial offset to FY27 cost inflation, since {{CA-0133|range}} of the business is international. <!-- TR4Q26 p.6 -->
 
 **Export incentives.** Export incentives (RoDTEP and drawback) were {{A-0272}} in FY26, well below the {{B-0296}} earned in FY19 under the earlier MEIS scheme. <!-- AR26 p.47; AR19 p.113 -->
 

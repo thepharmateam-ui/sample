@@ -23,7 +23,9 @@ Polymed reports revenue in five buckets:
 4. **Orthopaedics:** Citieffe, reported separately since its acquisition.
 5. **Others.**
 
-"Others" pools every other speciality: blood management, anaesthesia and respiratory, critical care, diagnostics, urology, gastroenterology, surgery and wound drainage, and the vascular-access and oncology products of Plan1Health. Management declined to break it out further. The MD said on the 4QFY26 call that the new lines are 'very new businesses' and 'we don't call out those numbers specifically because confidentially, we don't want to share what company is doing'. We therefore describe the "others" businesses qualitatively in Section A4 and do not estimate their revenue. <!-- TR4Q26 p.17 -->
+"Others" pools every other speciality: blood management, anaesthesia and respiratory, critical care, diagnostics, urology, gastroenterology, surgery and wound drainage, and the vascular-access and oncology products of Plan1Health. On calls, management has declined to break it out further. The MD said on the 4QFY26 call that the new lines are 'very new businesses' and 'we don't call out those numbers specifically because confidentially, we don't want to share what company is doing'. <!-- TR4Q26 p.17 -->
+
+The company's statutory sustainability report (BRSR) nonetheless gives a finer split of standalone turnover, which we use below and in Section A4. It does not estimate anything beyond what that report prints.
 
 ::: chart
 {"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to 53% of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion {{CB-0025}}, renal {{CB-0030}}, others {{CB-0035}}."}
@@ -31,7 +33,7 @@ Polymed reports revenue in five buckets:
 
 The mix shift has been fast:
 - **FY20 to FY26:** infusion's share fell from {{CB-0056}} to {{CB-0059}}.
-- **4QFY25 to 4QFY26:** management put infusion at 50% of revenue in 4QFY26 against 57% a year earlier. <!-- TR4Q26 p.5 -->
+- **4QFY25 to 4QFY26:** management put infusion at {{CA-0122}} of revenue in 4QFY26 against {{CA-0123}} a year earlier. <!-- TR4Q26 p.5 -->
 - **1QFY27, the first quarter with a full five-line split:**
   - infusion {{CB-0359}}
   - others {{CB-0363}}
@@ -45,6 +47,32 @@ Management frames this as de-risking from what it calls 'overdependence' on infu
 {"id":"mix_q","type":"share_hbar","title":"Acquisitions and new specialities cut infusion from 58% to 50% of quarterly revenue in one year","cats":["1QFY26","1QFY27"],"unit":"% of revenue","series":[{"name":"Infusion","facts":["CB-0364","CB-0359"]},{"name":"Renal","facts":["CB-0365","CB-0361"]},{"name":"Cardiology","facts":["CB-0366","CB-0362"]},{"name":"Orthopaedics","facts":["-","CB-0360"]},{"name":"Others","facts":["CB-0367","CB-0363"]}],"label_w":80,"note":"Shares as printed in the 1QFY27 presentation (rounded; export incentives account for the residual). Cardiology revenue rose from {{CA-0048}} to {{CA-0047}}, and orthopaedics contributed {{CB-0346}} in 1QFY27."}
 :::
 
+### The sustainability report gives the only finer product split
+
+Every listed Indian company must list, in its Business Responsibility and Sustainability Report, the products that make up 90% of turnover, with each product's share. Polymed's BRSR does this for the standalone company, which excludes the foreign subsidiaries, on a product classification broader than the one in its investor presentations. <!-- BRSR26 p.12; BRSR25 p.5 -->
+
+It gives the following for FY26:
+- **Blood management and blood collection:** {{A-0848}} of standalone turnover, or about {{D-M-037}} (our calculation). That makes it the third-largest line after infusion and dialysis.
+- **Surgery and wound drainage:** {{A-0849}}.
+- **Urology:** {{A-0850}}.
+- **Anaesthesia and respiratory:** a separate line at {{A-0899}} in FY25. It has no separate line in FY26, which suggests it was reclassified.
+
+A separate BRSR table on product life-cycle assessment shows that prefilled saline flush syringes (3, 5 and 10 mL) alone were {{A-0870}} of FY26 standalone turnover, about {{D-M-041}} (our calculation). That makes flush syringes one of the largest single product families after IV cannulas. <!-- BRSR26 p.27 -->
+
+::: table id="brsr_split" title="The BRSR split: blood management, surgery and urology are each material businesses, and flush syringes are ~10% of standalone turnover" note="Shares of standalone turnover as printed in the BRSR; rupee values are our calculation (share x standalone revenue from operations of {{A-0350}}). The BRSR's 'infusion therapy' is broader than the presentations' infusion segment: 'infusion' on the BRSR basis implies {{D-M-035}}, against {{A-0281}} for consolidated infusion in the annual report's segment table. Its dialysis share implies {{D-M-036}}, close to the {{A-0284}} reported for renal. Flush syringes sit within infusion therapy."
+| Product line (BRSR classification) | FY25 share | FY26 share | FY26 implied revenue (our calculation) |
+|---|---|---|---|
+| Infusion therapy | {{A-0894}} | {{A-0846}} | {{D-M-035}} |
+| of which prefilled flush syringes | – | {{A-0870}} | {{D-M-041}} |
+| Dialysis | {{A-0895}} | {{A-0847}} | {{D-M-036}} |
+| Blood management and blood collection | {{A-0896}} | {{A-0848}} | {{D-M-037}} |
+| Surgery and wound drainage | {{A-0897}} | {{A-0849}} | {{D-M-038}} |
+| Urology | {{A-0898}} | {{A-0850}} | {{D-M-039}} |
+| Anaesthesia and respiratory | {{A-0899}} | – | – |
+| Other | {{A-0900}} | {{A-0851}} | {{D-M-040}} |
+:::
+<!-- BRSR25 p.5; BRSR26 p.12, p.27; AR26 p.32, p.47 -->
+
 ### Two-thirds of revenue is earned outside India
 
 Polymed has always been an exporter: {{CB-0079}} of FY20 revenue came from outside India. International revenue was still {{CB-0084}} of FY26 revenue (and {{CB-0332}} in 1QFY27, lifted by the acquisitions).
@@ -52,7 +80,7 @@ Polymed has always been an exporter: {{CB-0079}} of FY20 revenue came from outsi
 - **Europe:** a CAGR of {{CB-0050}}, lifting its share from {{CB-0009}} to {{CB-0012}}.
 - **RoW:** Africa, West Asia, Latin America and the rest of Asia grew at {{CB-0055}}, and their share fell from {{CB-0010}} to {{CB-0013}}.
 
-The MD's stated long-run aim is 'between like 1/3 India and 2/3 RoW', roughly today's balance. <!-- TR4Q26 p.11 -->
+The MD's stated long-run aim is a mix of {{CA-0161|plain}}, roughly today's balance. <!-- TR4Q26 p.11 -->
 
 ::: chart
 {"id":"rev_geo","type":"stacked_column","title":"India and Europe have gained share from the rest of the world; each region now contributes about a third","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"India","facts":["CB-0041","CB-0042","CB-0043","CB-0044"]},{"name":"Europe","facts":["CB-0046","CB-0047","CB-0048","CB-0049"]},{"name":"Rest of world","facts":["CB-0051","CB-0052","CB-0053","CB-0054"]}],"totals":true,"note":"Same slide as the therapy split (1QFY27 presentation). The FY26 annual report shows RoW at {{A-0269}}, excluding other operating revenue, against {{CB-0054}} in the presentation."}
@@ -67,7 +95,7 @@ Company disclosure is good on:
 - acquisition contributions.
 
 It is thin on four things:
-1. **Product-level revenue** within "others".
+1. **Product-level revenue** within "others", beyond the standalone percentages in the BRSR. The BRSR excludes the subsidiaries and uses a broader definition of infusion than the presentations.
 2. **Customer concentration and the OEM/private-label share.** Section A2 sets out what the placement documents and rating reports disclose.
 3. **Country-level export revenue.** The US is the only country for which management gives a number: exports of {{CA-0078|range}} a year. <!-- TR1Q27S p.12 -->
 4. **Volume and price split by product.** Management has occasionally given total devices sold ({{CA-0564}} in 9MFY25, up {{WM-0006}} yoy against consolidated revenue growth of {{CA-0558}}) but not by line. <!-- TR3Q25 p.4, p.10 -->
