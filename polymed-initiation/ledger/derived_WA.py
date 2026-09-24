@@ -46,4 +46,4 @@ DERIVED.append({"id": "D-WA-028", "formula": "((CB-0344+CB-1524+CB-1522+CB-0862)
 
 # --- US import sourcing of catheters, cannulae and needles (HS 9018.39), UN Comtrade ---
 DERIVED.append({"id": "D-WA-029", "formula": "F-0180/F-0177*100", "unit": "%", "dec": 1, "metric": "import_share", "entity": "US imports HS 901839 from India", "segment": "infusion", "period": "CY2025", "note": "our calculation: US imports of HS 9018.39 from India / total US imports of HS 9018.39 (UN Comtrade)", "section": "A4.1"})
-DERIVED.append({"id": "D-WA-030", "formula": "F-0150/WA-0019", "unit": "USD", "dec": 2, "metric": "unit_value", "entity": "India HS 901831 (syringes) exports to USA", "segment": "infusion", "period": "CY2025", "note": "our calculation: export value / number of items (UN Comtrade)", "section": "A4.1"})
+DERIVED.append({"id": "D-WA-030", "formula": "F-0150/WA-0019*100", "unit": "US cents", "dec": 1, "metric": "unit_value", "entity": "India HS 901831 (syringes) exports to USA", "segment": "infusion", "period": "CY2025", "note": "our calculation: export value / number of items x 100 (UN Comtrade), US cents per syringe", "section": "A4.1"})

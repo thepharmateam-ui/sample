@@ -1,5 +1,3 @@
-# Appendices
-
 ## How to read this report {#how-to-read}
 
 **Scope.** This is an initiating-coverage report on the business and the industry. It has no earnings estimates, valuation, rating or target price. Where management has given guidance, it is reported as management's target and attributed to the call or presentation in which it was given. <!-- lint-ok -->

@@ -106,6 +106,7 @@ We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval f
 
 - **Class III.** Ports are Class III implants, the highest risk class in Europe. Management says Class III devices take "very much, much longer to register", often two to three years including clinical trials. <!-- TR1Q27S p.13; TR2021 p.10 -->
 - **Italian payback.** A 2015 Italian law requires device suppliers to pay the government when regional device spending exceeds annual ceilings; the Constitutional Court upheld it in Jul-2024. BD booked a {{E-0206}} accrual for it in FY24 and settled at {{E-0207|num}}% of invoiced amounts. Italian public spending on medical devices and services is about {{E-0384}} a year, according to the industry association Confindustria Dispositivi Medici. Plan1Health sells directly to Italian hospitals, so it is presumably exposed, but its exposure is [not disclosed]. <!-- BD_10K25 p.1; CDM_NUMERI25 p.1; TR1Q27S p.8 -->
+- **EU procurement.** Since Jun-2025 the EU has excluded Chinese bidders from public medical-device tenders worth {{F-0238}} or more (Section A4.1). For a direct seller to Italian hospitals such as Plan1Health, that removes low-cost rivals from the larger tenders (our view). <!-- EU_IPI2025_1197 p.12; TR1Q27S p.8 -->
 - **US.** Beyond Painfusor, Plan1Health has FDA submissions "under evaluation". <!-- DK4Q26 p.38 -->
 
 ### Growth and margin drivers, ranked

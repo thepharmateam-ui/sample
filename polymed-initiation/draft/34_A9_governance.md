@@ -22,7 +22,7 @@ None of these is hidden. Each is disclosed in the annual report, the placement d
 The operating company is still run by its founders:
 - **Himanshu Baid** (MD), who joined on 20-Sep-1996. <!-- AR10 p.15; AR16 pp.60-61 -->
 - **Rishi Baid** (JMD), formerly with Miles Pharma in the US. Both describe themselves as first-generation entrepreneurs. <!-- AR10 p.15; AR16 pp.60-61 -->
-- **Their parents** on the board: J.K. Baid as a non-executive director and Mukulika Baid as a non-executive director. <!-- AR26 p.53 -->
+- **Their father**, J.K. Baid, sits on the board as a non-executive director. Their mother, Mukulika Baid, stepped down from the board on 6-May-2025, the day Vishal Baid became an executive director. <!-- AR26 pp.52-53 -->
 
 The next generation is inside the business:
 - **Vishal Baid** is now an executive director, in charge of marketing, corporate finance and the Jaipur manufacturing operations. <!-- AR26 p.53; AGMN25 -->
@@ -57,7 +57,7 @@ The acquired businesses keep their own chief executives. <!-- DK1Q27 p.16 -->
 **The board.** At 31-Mar-2026 the board had {{WM-0051}} directors. Eight were non-executive, five of them independent, and one was an independent woman director. <!-- AR26 p.51 -->
 - **Chairman.** D.R. Mehta, a former SEBI chairman, has been on the board since 2005. He is now classified as a non-executive, non-independent director. <!-- AR26 p.53; PD24 p.183 -->
 - **Re-appointment.** Because he is older than {{WM-0055}}, the 31st AGM re-appointed him by special resolution. {{WM-0039}} of institutional votes were cast against, the highest dissent of any resolution at the meeting. <!-- PBN26 p.6 -->
-- **Balance of the board.** The four executive directors include three members of the promoter family. With the promoter parents and the Plan1 founder among the non-executives, the board has a slim independent balance by the standards of widely held companies. It still meets the one-third test that applies to a non-promoter non-executive chairman. <!-- AR26 p.51 -->
+- **Balance of the board.** The four executive directors include three members of the promoter family. With the promoters' father and the Plan1 founder among the non-executives, the board has a slim independent balance by the standards of widely held companies. It still meets the one-third test that applies to a non-promoter non-executive chairman. <!-- AR26 p.51 -->
 
 ### Shareholding: how the promoter group reached {{A-1279}}
 

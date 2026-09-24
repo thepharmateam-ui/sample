@@ -136,7 +136,7 @@ Q: Prefilled saline flush syringes were {{A-0870}} of FY26 standalone turnover. 
 Why: A large product family that management rarely discusses, and a possible beneficiary of US trade action against Chinese syringes (Sections A4.1 and B4).
 Context: Launched in Nov-2020; management claimed {{CC-0261|range}} of the Indian market in May-2022, and the BRSR implies about {{D-M-041}} of FY26 revenue (our calculation). <!-- DKFEB21 p.14; TR4Q22 p.5; BRSR26 p.27 -->
 Listen: Reassuring: US and European contracts with committed volumes, and the capacity to add lines. Concerning: flush syringes sold mainly as price-led tender volume.
-Follow-up: Do you make the syringe barrels and plungers in-house, and who supplies the saline?
+Follow-up: None of Polymed's FDA listings is a syringe: when will you file a US 510(k) for PolyFlush, and do you make barrels and plungers in-house?
 :::
 
 ::: q theme="Infusion"
@@ -171,6 +171,46 @@ Listen: Reassuring: a quantified cost advantage by process step. Concerning: par
 Follow-up: How has the gap moved since Chinese makers faced higher US duties?
 :::
 
+::: q theme="Infusion"
+Q: What were IV cannula revenue and volumes in FY24, FY25 and FY26, and how do they split between conventional, safety, blood-control and closed-system catheters?
+Why: The cannula is the anchor product but has no regular disclosure; the mix drives price per unit (Section A4.1).
+Context: The MD put cannulas at {{WA-0001}}-{{WA-0002}} of revenue in Jul-2024 and volumes at about {{CA-0188}} a year. <!-- TR1Q25; TR4Q26 p.17 -->
+Listen: Reassuring: a volume figure with a rising safety share. Concerning: conventional export volumes falling.
+Follow-up: Which cannula family grew fastest in FY26?
+:::
+
+::: q theme="Infusion"
+Q: What is the basis for the {{WA-0003}} global IV catheter share and the third-place ranking – volume or value, which competitors and which year?
+Why: A share claim that cannot be sourced weakens the scale argument (Section A8).
+Context: {{CA-0188}} a year at {{WA-0003}} implies a market of about {{D-WA-011}} (our calculation), far above the {{E-0355}} a year cited in a 2024 clinical-trial record. <!-- TR4Q26 p.17; CTG_NCT06727240 -->
+Listen: Reassuring: a named data source and a definition that includes or excludes China. Concerning: an internal estimate.
+Follow-up: Who are the two makers ranked above you?
+:::
+
+::: q theme="Infusion"
+Q: Why do annual infusion revenue figures sit below the sum of the four quarters, and why does the BRSR's infusion share imply a larger business than the annual report's segment table?
+Why: Growth rates and segment size depend on which classification is used (Sections A1 and A4.1).
+Context: The gap between the quarterly and annual infusion figures was {{D-WA-026}} in FY26; the BRSR implies {{D-WA-001}} against {{A-0281}} in the segment table (our calculations). <!-- BRSR26 p.12; AR26 p.47 -->
+Listen: Reassuring: a reconciliation and a stable definition. Concerning: products moved between segments without disclosure.
+Follow-up: Which products sit in infusion in the BRSR but in "others" in the presentations?
+:::
+
+::: q theme="Infusion"
+Q: What volumes and prices are the two US group purchasing organization contracts and the US distributor contract delivering, and how are they affected by the Section 301 duty?
+Why: US revenue has lagged targets since 2022 despite several clearances (Section A5).
+Context: Management said in Aug-2025 that it had signed contracts with two large GPOs and distributors; Indian goods have paid a {{F-0221}} Section 301 duty since 24-Jul-2026. <!-- TR1Q26 p.7; FR_301ACT_260728 p.7 -->
+Listen: Reassuring: repeat orders at prices close to Europe's. Concerning: one-off stocking orders.
+Follow-up: How many US hospitals now buy Polymed cannulas?
+:::
+
+::: q theme="Infusion"
+Q: What will the polymer-tubing project supported by the government's MIS-RID scheme make, when does it start, and which imports does it replace?
+Why: In-house tubing is a cost and supply-security lever for infusion, renal and vascular lines.
+Context: The project costs {{F-0017}}, with a grant of {{F-0018}}, according to a Lok Sabha answer. <!-- LSQ_AU1001_260724 p.9 -->
+Listen: Reassuring: a start-up date and a quantified saving. Concerning: an unfunded plan.
+Follow-up: What share of tubing is imported today?
+:::
+
 ### Vascular access and oncology
 
 ::: q theme="Vascular and oncology"
@@ -195,6 +235,30 @@ Why: Oncology is named in Vision 2030 but has no revenue target.
 Context: Revenue for the line is [not disclosed]; Plan1 is the only disclosed oncology business. <!-- AR26 p.10 -->
 Listen: Reassuring: a range built around ports and PICCs with clinical data. Concerning: a vague ambition.
 Follow-up: Who are the two competitors you meet most often in port tenders?
+:::
+
+::: q theme="Vascular and oncology"
+Q: Plan1Health's EBITDA margin has been described by management as {{CA-0374|range}}, but the company's slide shows {{CB-0104}} for CY24 and {{CB-0106}} for CY25. Which definition is right?
+Why: Plan1Health's record is used to justify the approach taken with later acquisitions (Section A4.2).
+Context: Management gave the higher figure on the 2QFY26 call. <!-- TR2Q26; DK1Q27 -->
+Listen: Reassuring: a reconciliation (for example before group charges). Concerning: no answer.
+Follow-up: What margin do you target for Plan1Health by FY30?
+:::
+
+::: q theme="Vascular and oncology"
+Q: Does Plan1Health carry any accrual for Italy's medical-device payback scheme, and what share of its sales goes to Italian public hospitals?
+Why: The payback can claw back part of past sales to Italian public hospitals; Plan1Health sells directly in Italy.
+Context: BD booked {{E-0206}} for the Italian payback in its FY24 accounts. <!-- BD_10K25 -->
+Listen: Reassuring: a quantified provision or a clear reason none is needed. Concerning: no assessment.
+Follow-up: Does Citieffe face the same exposure?
+:::
+
+::: q theme="Vascular and oncology"
+Q: Who is the large Class III OEM customer that Plan1Health supplies, and what share of Plan1Health's revenue does it represent?
+Why: Single-customer concentration inside a subsidiary.
+Context: Management describes Plan1Health as the sole approved supplier to a large OEM. <!-- DK4Q26; TR4Q26 -->
+Listen: Reassuring: a multi-year contract. Concerning: an annual purchase order.
+Follow-up: Does the OEM have a second source?
 :::
 
 ### Renal care
@@ -315,6 +379,22 @@ Listen: Reassuring: ENFit-compliant ranges ready. Concerning: legacy connectors 
 Follow-up: Who are your enteral customers outside India?
 :::
 
+::: q theme="Other lines"
+Q: What was critical-care revenue in FY26, did it grow the {{CA-0506|plain}} management hoped for, and how much of it overlaps with vascular access and infusion?
+Why: Critical care is a stated growth pillar with no disclosure (Section A4.6).
+Context: Management set the ambition on the 4QFY25 call. <!-- TR4Q25 -->
+Listen: Reassuring: a revenue figure and the number of ICU accounts. Concerning: the target dropped without comment.
+Follow-up: How many products does an average ICU account buy?
+:::
+
+::: q theme="Other lines"
+Q: How much do you sell in the US of Class I respiratory items such as suction catheters, circuits and masks, and how much of it is private label?
+Why: These items need no 510(k) and could scale faster than cleared products.
+Context: One FDA device listing at Jaipur, a suction catheter kit, carries the name of McKesson, a US distributor. <!-- FDAREG_POLY -->
+Listen: Reassuring: named private-label customers with volumes. Concerning: a one-off listing.
+Follow-up: Which other US distributors do you supply under their brands?
+:::
+
 ### Cardiology
 
 ::: q theme="Cardiology" priority="must"
@@ -425,6 +505,22 @@ Listen: Reassuring: named product categories and customers' regulatory filings. 
 Follow-up: Do CDMO customers fund tooling and validation?
 :::
 
+::: q theme="Customers and channel"
+Q: How do OEM and private-label margins compare with own-brand margins, and who are the largest OEM customers?
+Why: The OEM share and its margin gap are undisclosed but decide the value of the mix shift (Section A4.10).
+Context: Management put own brand at {{CC-0279}} and OEM at {{CC-0280}} in FY22, with a target of {{CC-0281|range}} own brand; CRISIL named "Atroge and Asept" among the big players Polymed supplies. <!-- TR4Q22 p.12; CR23 p.7 -->
+Listen: Reassuring: a narrow margin gap and diversified customers. Concerning: OEM priced near cost.
+Follow-up: Has the OEM share changed since FY22?
+:::
+
+::: q theme="Customers and channel"
+Q: How large is the components business – catheters, guidewires, introducers, stopcocks and tubing sold to other device makers – and who buys from it?
+Why: The size and customers of the business-to-business components line are not disclosed (Section A4.10).
+Context: The components catalogue lists the range, but revenue is [not disclosed]. <!-- CATCOMP24 -->
+Listen: Reassuring: a revenue range and repeat customers. Concerning: occasional sales.
+Follow-up: Does the components business overlap with PendraCare's OEM work?
+:::
+
 ### Competition
 
 ::: q theme="Competition" priority="must"
@@ -523,6 +619,70 @@ Why: Procurement rules support domestic makers in tenders; changes would move sh
 Context: Government business fell {{CA-0420|abs}} in 1QFY26. <!-- TR1Q26 p.5 -->
 Listen: Reassuring: government business that is competitive without preference. Concerning: reliance on preference.
 Follow-up: How long do government customers take to pay?
+:::
+
+::: q theme="Regulation and policy"
+Q: Which clearances make up the {{CB-0093}} US approvals cited in the 1QFY27 presentation, when the FDA database lists {{D-WE-001}} 510(k) records for the four group applicants?
+Why: A precise count by product is the basis for the US opportunity (Appendix).
+Context: The FDA database covers Poly Medicure, Citieffe, PendraCare and Plan1Health (our count). Management says {{CB-0094}} more approvals are in process. <!-- DK1Q27 p.11; FDA510K_POLY -->
+Listen: Reassuring: a list by K-number with launch status. Concerning: counts that mix families and submissions.
+Follow-up: Which approvals in the pipeline matter most for revenue?
+:::
+
+::: q theme="Regulation and policy"
+Q: How many 510(k) filings had to be redone after the FDA stopped accepting data from Indian laboratories, what did US retesting cost, and when do you expect the pending clearances?
+Why: US revenue depends on cleared devices; management said past work was "negated".
+Context: The MD described the retesting on the 2QFY26 call. <!-- TR2Q26 p.11 -->
+Listen: Reassuring: filing dates and expected clearances by product. Concerning: open-ended delays.
+Follow-up: Which US laboratory do you now use?
+:::
+
+::: q theme="Regulation and policy"
+Q: Why do the European product counts move between documents, and which products were dropped in the move from the directives to MDR?
+Why: Dropped products may explain part of the FY26 European slowdown.
+Context: The counts include {{CB-2118}} MDR-certified products (FY25) and about {{CA-0377}} with CE certification (Nov-2025). <!-- DKAGM30 p.3; TR2Q26 p.10 -->
+Listen: Reassuring: a reconciliation by product family. Concerning: revenue lost on dropped products.
+Follow-up: Which dropped products will you re-file?
+:::
+
+::: q theme="Regulation and policy"
+Q: Has the EU's exclusion of Chinese bidders from large public device tenders brought wins for your distributors or for Plan1Health?
+Why: A regulatory tailwind in Polymed's largest export region (Section B4).
+Context: Since Jun-2025 Chinese bidders are excluded from EU device tenders of {{F-0238}} or more, which covered about {{F-0240}} of EU public device procurement in 2017-2022. <!-- EU_IPI2025_1197 p.5, p.12 -->
+Listen: Reassuring: named tender wins. Concerning: no effect.
+Follow-up: Do Chinese makers now bid through non-Chinese distributors?
+:::
+
+::: q theme="Regulation and policy"
+Q: How many ANVISA registrations does Medyneo hold, and how many Polymed, PendraCare and Citieffe products will you register through it in FY27-FY28?
+Why: Brazilian registrations must be held by a local legal entity; Medyneo was bought for its licences.
+Context: Polymed paid {{A-1016}} for Medyneo; management says it saves {{CA-0143|range}} months in registrations. <!-- RS1Q27 p.5; TR4Q26 p.8 -->
+Listen: Reassuring: a registration schedule and first direct sales. Concerning: registrations still to be filed.
+Follow-up: What revenue does the new Brazil CEO target?
+:::
+
+::: q theme="Regulation and policy"
+Q: When do you expect Indian import registrations for PendraCare and Citieffe products, and which come first?
+Why: Cross-selling acquired products in India is part of the acquisition case.
+Context: Management said import registrations take {{CA-0084|range}} months. <!-- TR4Q26 p.3 -->
+Listen: Reassuring: filing dates and a product list. Concerning: no filings yet.
+Follow-up: Will you manufacture any of these products in India instead of importing them?
+:::
+
+::: q theme="Regulation and policy"
+Q: What happens to the Laiyang plant in China when its business licence expires in May-2027, and what does it sell under its Korean and European approvals?
+Why: The plant is shrinking, and management has said it might curtail or shut it (Section A5).
+Context: Laiyang's sales were {{B-0712}} in FY26; management raised the option of closure in Jul-2024. <!-- SUB26CN p.8, p.38; TR1Q25 p.6 -->
+Listen: Reassuring: a decision with transfer of approvals to India. Concerning: open-ended losses.
+Follow-up: Would closure trigger any write-off?
+:::
+
+::: q theme="Regulation and policy"
+Q: Which plants hold MDSAP certificates today, and in which countries have you used them to register products?
+Why: MDSAP audits can speed registrations in the US, Brazil, Canada, Australia and Japan.
+Context: Plant certificates by site are listed in the appendix. <!-- Appendix -->
+Listen: Reassuring: all export plants covered. Concerning: gaps at new plants.
+Follow-up: Will the new plants apply for MDSAP?
 :::
 
 ### Manufacturing, capacity and automation
@@ -765,6 +925,14 @@ Why: The sales force is being built out for new specialities.
 Context: Management added sales staff in India during FY26. <!-- TR1Q26 p.5; DK1Q27 p.5 -->
 Listen: Reassuring: revenue per representative by speciality. Concerning: headcount targets only.
 Follow-up: How long does a new representative take to break even?
+:::
+
+::: q theme="People"
+Q: Who runs Plan1Health and the China subsidiary today, and what is the basis of the management fees paid to Alessandro Balboni, who also sits on Polymed's board?
+Why: Subsidiary leadership and related payments to a board member (Section A9).
+Context: Balboni's fees were {{B-0638}} in FY24. <!-- AR24 p.140 -->
+Listen: Reassuring: a named succession plan and fees tied to targets. Concerning: fees without a defined service.
+Follow-up: Is Balboni's role changing after the acquisitions?
 :::
 
 ### Floor-walk observation checklist

@@ -93,6 +93,13 @@ d(56, "(A-0622+A-0719)/A-0385*100", "%", 0, "net_margin", "Ultra for Medical Pro
 d(57, "A-0649/A-0039*100", "%", 1, "revenue_share", "Polymed consolidated", "FY26", "sales of foreign subsidiaries / consolidated revenue from operations", "A5", "Foreign subsidiaries")
 d(58, "(A-0385/A-0816-1)*100", "%", 0, "revenue_growth", "Ultra for Medical Products (Egypt associate)", "CY23-CY25", "CY25 sales vs CY23 sales in Rs (Directors' Reports)", "A5", "Egypt")
 d(59, "(A-0380/A-0381-1)*100", "%", 0, "revenue_growth_yoy", "Plan1Health", "CY25", "CY25 turnover vs CY24 in Rs (Directors' Report)", "A5", "Italy")
+d(60, "(A-0649/A-0650-1)*100", "%", 0, "revenue_growth_yoy", "Polymed consolidated (foreign subsidiaries)", "FY26", "sales related to foreign subsidiaries FY26 vs FY25 (AR26 p.113)", "A5", "Foreign subsidiaries")
+d(61, "(A-0702/A-0703-1)*100", "%", 1, "revenue_growth_yoy", "Polymed consolidated", "FY26", "revenue from outside India (incl. foreign subsidiaries) FY26 vs FY25 (AR26 p.131)", "A5", "Outside India")
+d(62, "A-0649/A-0702*100", "%", 0, "revenue_share", "Polymed consolidated", "FY26", "sales of foreign subsidiaries / revenue from outside India (AR26 p.131)", "A5", "Outside India")
+d(63, "A-0568/A-0475*100", "%", 0, "export_share", "Polymed standalone", "FY25", "Europe share of standalone export sales FY25", "A5", "Europe")
+d(64, "A-0707/WC-0061", "x", 0, "non_current_assets_change", "Polymed consolidated", "FY26", "non-current assets outside India, 31-Mar-2026 vs 31-Mar-2025", "A5", "Outside India")
+d(65, "(A-0385/A-0386-1)*100", "%", 0, "revenue_growth_yoy", "Ultra for Medical Products (Egypt associate)", "CY25", "CY25 sales vs CY24 in Rs (Directors' Report)", "A5", "Egypt")
+d(66, "(CB-0311-CB-0314)/CB-0311*100", "%", 0, "revenue_share", "Polymed consolidated (PendraCare + Citieffe)", "1QFY27", "international revenue of the two acquisitions (reported less organic) / reported international revenue (DK1Q27 p.26)", "A5", "International")
 
 # ---------------------------------------------------------------- A6 manufacturing, capacity and R&D
 d(70, "CB-0082*1000", "mn units", 0, "installed_capacity", "Polymed consolidated", "FY26", "unit conversion of ~1.9bn units (DK1Q27 p.10)", "A6")

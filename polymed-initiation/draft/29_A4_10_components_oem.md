@@ -24,6 +24,8 @@ Component revenue | [not disclosed]
 
 Many of these items were in the components catalogue before Polymed listed them as branded cardiology products. The catalogue is therefore both a revenue line and a window into its capabilities. <!-- D digest A4.8; CATCOMP24 pp.5, 8-11 -->
 
+The government has approved a grant of {{F-0018}} towards a {{F-0017}} Polymed project to make polymer tubing components for infusion therapy, bloodlines and dialysis accessories and central venous catheters (Section A4.1). That should deepen the extruded-tubing capability behind both the finished products and the components line (our view). <!-- LSQ_AU1001_260724 p.9 -->
+
 **Private label.** Finished products sold under a customer's brand, mainly abroad. The only documentary trace in the US is an FDA device listing at Jaipur for a suction catheter kit under the proprietary name "McKesson", a US distributor. Management says the US business will run through GPOs and distributors, with Polymed's role "limited to manufacturing in India". <!-- FDAREG_POLY p.1; D digest A4.10; TR1Q25 p.4 -->
 
 **Contract design and manufacturing (CDMO).** In 1QFY26 Polymed signed two contracts, with a US company and a Hong Kong-headquartered company with large US operations. They cover new patented devices in vascular access and pain management, and 510(k) filings are in progress. Management expects revenue from FY27 and scale in "two, three years, four years". <!-- TR1Q26 pp.4, 12-13; DK1Q26 p.7 -->
@@ -67,7 +69,7 @@ We read Polymed's stance as pragmatic: own brand where it can build a franchise 
 ### Who else competes for OEM work
 
 - **Chinese suppliers** have long served the global majors. KDL, which ranks itself among China's ten largest exporters of polymer consumables, sells on OEM, ODM and own-brand terms and has long-term development and supply ties with several global device companies. <!-- KDL_AR25 p.23 -->
-- **Chinese private label carries risk for the buyer.** Jiangsu Caina made the syringes Cardinal Health sold in the US under its Monoject brand. The FDA found at least {{E-0279}} US complaints, sent a warning letter and in May-2024 told users to move away from Caina's syringes. <!-- FDA_WL_CAINA p.1; AHA_SYR p.1 -->
+- **Chinese private label carries risk for the buyer.** Jiangsu Caina made the syringes Cardinal Health sold in the US under its Monoject brand. The FDA found at least {{E-0279}} US complaints, sent a warning letter and by May-2024 was telling users to move away from Caina's syringes. <!-- FDA_WL_CAINA p.1; AHA_SYR p.1 -->
 - **Indian contract makers** are smaller. Angiplast offers CDMO and OEM services and makes components such as spikes, injection sites, connectors and clamps, and says it exports more than {{E-0386}} of its production. Lars Medicare calls itself a contract OEM supplier. Iscon Surgicals sold to OEMs as well as to government buyers. <!-- ANGIPLAST_WEB p.1; LARS_WEB p.1; BWR_ISCON p.2 -->
 - **The opening.** CRISIL says that pricing pressure and supply-chain problems during and after the pandemic have pushed OEMs to seek cost-competitive alternatives, making India an emerging hub for devices of high complexity and medium volume. <!-- PD24 p.141 -->
 
