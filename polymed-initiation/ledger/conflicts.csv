@@ -526,3 +526,5 @@ revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-000
 revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-0002,30,%,TR1Q25,16,management_statement,numeric high end of CA-0745; said on 24-Jul-2024 call
 revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-019,27.0,%,DERIVED,0,derived_ours,our calculation: EUR revenue CAGR from the company's acquisition slide
 revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-022,30.0,%,DERIVED,0,derived_ours,our calculation: rupee turnover CAGR from the directors' reports (includes currency effects)
+gross_margin,citieffe,,,cy25,%,D-WC-030,68.0,%,DERIVED,0,derived_ours,our calculation: gross profit / revenue as printed in DK1Q27 p.14
+gross_margin,citieffe,,,cy25,%,D-WC-031,94.0,%,DERIVED,0,derived_ours,our calculation: gross profit / revenue as printed in the 31st AGM deck (DKAGM31 p.17)

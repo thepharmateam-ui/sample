@@ -369,7 +369,7 @@ def slug(s):
     return s[:60] or "s"
 
 
-def add_heading_ids(h):
+def add_heading_ids(h, toc_levels=("1", "2")):
     seen = {}
     toc = []
 
@@ -382,7 +382,7 @@ def add_heading_ids(h):
             hid = f"{hid}-{seen[hid]}"
         else:
             seen[hid] = 1
-        if lvl in ("1", "2"):
+        if lvl in toc_levels:
             toc.append((int(lvl), hid, re.sub(r"<[^>]+>", "", inner)))
         attrs = re.sub(r'\s*id="[^"]+"', "", attrs)
         return f'<h{lvl} id="{hid}"{attrs}>{inner}</h{lvl}>'
@@ -446,6 +446,9 @@ def build(out_path, draft_files, companion=False):
     parts = []
     for f in draft_files:
         t = open(f).read()
+        if companion:  # the bank reads as a standalone document in the companion
+            t = t.replace("## C3 Plant-visit question bank {#c3}", "## The question bank {#c3}")
+            t = t.replace("This chapter turns the open issues in this report", "This bank turns the open issues in the initiation report")
         t = process_blocks(t)
         t = sub_tokens(t)
         parts.append(t)
@@ -461,7 +464,7 @@ def build(out_path, draft_files, companion=False):
     body = re.sub(r'<td>(\s*(?:[~+\-–]?\s*)?<span class="n"[^>]*>[^<]*</span>\s*)</td>', r'<td class="num">\1</td>', body)
     body = re.sub(r'<td>(\s*[~+\-]?[0-9][0-9,.]*%?\s*)</td>', r'<td class="num">\1</td>', body)
     body = align_numeric_columns(body)
-    body, toc = add_heading_ids(body)
+    body, toc = add_heading_ids(body, ("2", "3") if companion else ("1", "2"))
     toc_html = []
     for lvl, hid, txt in toc:
         toc_html.append(f'<li class="l{lvl}"><a href="#{hid}">{html.escape(txt)}</a></li>')
@@ -486,7 +489,7 @@ def main():
     build("report/Poly_Medicure_Initiating_Coverage.html", drafts)
     json.dump(list(USED.keys()), open("report/used_facts.json", "w"))
     json.dump(dict(EXH), open("report/exhibits.json", "w"))
-    qb = sorted(glob.glob("draft/companion/*.md"))
+    qb = sorted(glob.glob("draft/companion/*.md")) + sorted(glob.glob("draft/52_*.md"))
     if qb:
         build("report/Polymed_Plant_Visit_Question_Bank.html", qb, companion=True)
 

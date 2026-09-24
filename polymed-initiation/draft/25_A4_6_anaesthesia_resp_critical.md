@@ -73,7 +73,7 @@ Market data are thin and vendor-based. Research and Markets pages put the global
 The competitive set is consolidating:
 - **Teleflex** agreed in Dec-2025 to sell its Acute Care business to Intersurgical for {{E-0222}}, as part of a {{E-0223}} sale of its OEM unit and other divestitures. Acute Care covers airway management, anaesthesia, respiratory, humidification, oxygen therapy and regional anaesthesia. Teleflex had already sold respiratory lines to Medline in 2021. <!-- TFX_10K25 p.1 -->
 - **ICU Medical**, which bought Smiths Medical (Portex airway and tracheostomy products), reported Vital Care revenue of {{E-0212}} in CY25. That covers anaesthesia, respiratory, haemodynamic monitoring and regional anaesthesia, after most IV solutions moved to a joint venture. It names Intersurgical among its main Vital Care competitors. <!-- ICUI_10K25 p.1 -->
-- **BD** sells spinal and epidural needles and trays in its Medication Delivery Solutions unit. **B. Braun** cites regional anaesthesia as a growth driver of its Hospital Care division. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44 -->
+- **BD and B. Braun** are strong in regional anaesthesia: BD sells spinal and epidural needles and trays in its Medication Delivery Solutions unit, and B. Braun cites regional anaesthesia as a growth driver of its Hospital Care division. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44 -->
 - **Chinese makers** are registering the same basic items in Europe: KDL completed CE registration for {{WA-0016}} products in CY25, including suction, feeding and urinary catheters. <!-- KDL_AR25 p.21 -->
 
 In India, management says imports supply most of critical-care demand. CRISIL notes that Indian makers mostly produce basic items such as nasal oxygen cannulas, oxygen masks, ventilator circuits and mucus extractors, and that multinationals and imports dominate the consumables market. <!-- TR2Q26 p.14; PD24 p.132 -->
@@ -91,7 +91,7 @@ Polymed's position in the basic range rests on price and breadth within the same
 1. **Critical-care cross-selling in Indian private hospitals** (management target; our view: plausible but unmeasured). The levers are import substitution and clinical sales staff. It is measurable only through domestic growth. <!-- TR2Q26 p.5 -->
 2. **Surgical volumes and caesarean-heavy spinal-needle demand** (our view). This is the base-load driver of the anaesthesia range. <!-- D_product_glossary -->
 3. **Export of Class I items to the US** (our view: small). Polymed already lists them, and private label is one route. <!-- FDAREG_POLY p.1 -->
-4. **Margin** (our view). Anaesthesia and respiratory items are commodity-like, so we expect them to earn below the group average. Critical-care devices replace imports and management says they carry "a better margin". Neither margin is disclosed. <!-- TR1Q24 p.6 -->
+4. **Margin** (our view). Anaesthesia and respiratory items are commodity-like, and we read them as earning below the group average. Critical-care devices replace imports and management says they carry "a better margin". Neither margin is disclosed. <!-- TR1Q24 p.6 -->
 
 ### What to watch
 
