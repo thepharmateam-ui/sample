@@ -174,7 +174,13 @@ def display_ccy(x, ccy, mult, per="", printed=None):
             dp = len(str(printed).strip().split(".")[1]) if "." in str(printed) else 0
             body = f"{a / 1e6:,.{dp}f}mn"
         else:
-            body = f"{a / 1e6:,.2f}mn" if a < 1e7 else f"{a / 1e6:,.1f}mn"
+            v = a / 1e6
+            if abs(v - round(v)) < 1e-9:
+                body = f"{v:,.0f}mn"
+            elif abs(v * 10 - round(v * 10)) < 1e-9 or v >= 10:
+                body = f"{v:,.1f}mn"
+            else:
+                body = f"{v:,.2f}mn"
     elif a >= 1e3:
         body = f"{a / 1e3:,.0f}k" if a >= 1e5 else f"{fmt_num(round(a / 1e3, 1))}k"
     else:

@@ -52,12 +52,15 @@
   "CC-0873",
   "CB-0521",
   "CB-0891",
+  "F-0212",
   "CB-2573",
   "CB-2575",
   "CB-2576",
   "CB-2578",
   "B-0681",
   "A-0077",
+  "F-0092",
+  "F-0089",
   "CB-0105",
   "CB-0100",
   "CB-0106",
@@ -121,6 +124,40 @@
   "CC-0997",
   "A-0203",
   "A-0204",
+  "A-0130",
+  "A-0131",
+  "A-0132",
+  "A-0133",
+  "A-0134",
+  "A-0264",
+  "A-0263",
+  "A-0267",
+  "A-0266",
+  "A-0268",
+  "A-0270",
+  "A-0271",
+  "B-0714",
+  "B-0713",
+  "B-0712",
+  "B-0719",
+  "WC-0022",
+  "B-0718",
+  "B-0682",
+  "B-0729",
+  "CB-1100",
+  "CB-1095",
+  "CB-1096",
+  "CB-1101",
+  "CB-1102",
+  "CB-1103",
+  "CB-1105",
+  "CB-1107",
+  "CB-1108",
+  "CB-1109",
+  "CB-1110",
+  "CB-1099",
+  "CB-1112",
+  "B-0715",
   "A-0128",
   "A-0013",
   "B-0722",
@@ -129,12 +166,32 @@
   "A-0076",
   "A-0061",
   "A-0062",
+  "A-0010",
+  "A-0009",
+  "A-0137",
   "CB-1615",
-  "A-0263",
   "A-0015",
-  "A-0063"
+  "A-0063",
+  "CB-1106"
  ],
  "fail": [],
  "nosrc": [],
- "untraced": []
+ "untraced": [
+  [
+   "25-30%",
+   "[b2] se exports as down about a fifth in the US and up 25-30% elsewhere; the industry data "
+  ],
+  [
+   "16x",
+   "[b5] esult.       US syringe imports from India jumped 16x in   as imports from China fe"
+  ],
+  [
+   "60%",
+   "[b5] ness     Dialysis products       May-    Otsuka   60% of ICU Medical's IV-solutions"
+  ],
+  [
+   "(90%)",
+   "[b5] d orthopaedics       Sep-    Polymed   PendraCare (90%)     Guiding and diagnostic ca"
+  ]
+ ]
 }

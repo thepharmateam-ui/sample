@@ -121,3 +121,15 @@ d(79, "(A-0412/B-0315)**(1/7)*100-100", "%", 0, "r_and_d_expense_cagr", "Polymed
   "standalone R&D spend FY26 (AR26 Annexure-8) vs FY19 (AR19)", "A6")
 d(80, "(WC-0025/B-0619-1)*100", "%", 0, "ppe_additions_growth", "Polymed standalone", "FY24-FY26",
   "standalone PPE additions FY26 vs FY24", "A6")
+
+d(81, "D-0076+D-0085+D-0094+D-0103", "mn units", 0, "installed_capacity", "Polymed Faridabad plants (I-VI)", "FY24", "sum of the six Faridabad facilities in the chartered-engineer table (PD24 p.178)", "A6")
+d(82, "D-0077+D-0086+D-0095+D-0104", "mn units", 0, "production_volume", "Polymed Faridabad plants (I-VI)", "FY24", "sum of the six Faridabad facilities' production (PD24 p.178)", "A6")
+d(83, "(D-0077+D-0086+D-0095+D-0104)/(D-0076+D-0085+D-0094+D-0103)*100", "%", 1, "capacity_utilization", "Polymed Faridabad plants (I-VI)", "FY24", "Faridabad production / Faridabad capacity (PD24 p.178)", "A6")
+d(84, "A-0547/A-0506*100", "%", 0, "vitromed_share_of_job_work", "Polymed standalone", "FY26", "job work paid to Vitromed Healthcare / total job-work charges (AR26 p.79, p.88)", "A6")
+d(85, "D-0124/D-0151*100", "%", 0, "capacity_share", "Poly Medicure (Laiyang) China", "FY24", "China plant's share of group installed capacity in the chartered-engineer table (PD24 p.178)", "A6")
+d(86, "(D-0151/D-0154-1)*100", "%", 0, "installed_capacity_growth", "Polymed consolidated", "FY24", "installed capacity FY24 vs FY23 (PD24 p.178)", "A6")
+d(87, "(D-0152/D-0155-1)*100", "%", 0, "production_growth", "Polymed consolidated", "FY24", "production FY24 vs FY23 (PD24 p.178)", "A6")
+d(88, "A-0306/A-0304*100", "%", 0, "r_and_d_employee_cost_share", "Polymed consolidated", "FY26", "R&D employee cost / R&D expenses (AR26 p.48)", "A6")
+d(89, "A-0858+A-0859+A-0860", "count", 0, "standalone_workforce", "Polymed standalone", "as of 31-Mar-2026", "permanent employees + permanent workers + contract workers, BRSR26 p.13 (excludes five non-permanent employees)", "A6")
+d(90, "WC-0025/A-0350*100", "%", 0, "capex_intensity", "Polymed standalone", "FY26", "standalone PPE and intangible additions / standalone revenue from operations", "A6")
+d(91, "(A-0412/A-0413-1)*100", "%", 0, "r_and_d_expense_growth", "Polymed standalone", "FY26", "R&D spend FY26 vs FY25 (AR26 Annexure-8)", "A6")

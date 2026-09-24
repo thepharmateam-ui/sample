@@ -98,7 +98,8 @@ def main():
             expr = re.sub(r"([A-Z]{1,3})-(\d{4})", r"\1_\2", r["snippet"])
             try:
                 v = eval(expr, {"__builtins__": {}}, env)
-                if abs(round(v, 1) - float(r["value"])) > 0.051 * max(1, abs(v)) and abs(v - float(r["value"])) > 0.06:
+                dec = r.get("dec", 1) if r.get("dec") is not None else 1
+                if abs(round(v, dec) - float(r["value"])) > 0.5 * 10 ** (-dec) + 1e-9:
                     dfail.append((fid, v, r["value"]))
             except Exception as e:
                 dfail.append((fid, str(e), r["value"]))
@@ -118,6 +119,8 @@ def main():
         r"\b[A-Z][A-Z_]*\d+[A-Z0-9_]*\b|\bpp?\.\s?\d+(-\d+)?\b",   # document ids and page refs in citations
         r"\bForm \d+s?\b|\bHS( code)? ?\d{4,8}\b|\b\d+(\.\d+)?\s?(mL|ml|mm|cm|Fr|kV)\b|\bPhase[- ]\d\b",
         r"\b1Lattice\b|\b[Tt]op-?10\b|\bany 12 months\b|\b\d{1,2}-month\b|\bin 10 points\b|\bmore than \d+ days overdue\b|\bThe \d+ must-ask\b|\bAll \d+ questions\b|\bthe 10% disclosure\b",
+        r"\bChina\s?\+\s?1\b|\b[12]H\d{2}\b|\b100% export-oriented unit\b|\b100% EOU\b|\bST\.A\.R\. \d+\b",
+        r"\b\d{4}/\d{2,4}(/EU)?\b|\b\d{2,4}/\d{4}\b",           # regulation numbers, before years
         r"\b(19|20)\d{2}\b",                                   # years
     ]
 
