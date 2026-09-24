@@ -278,7 +278,7 @@ Differing values in other slides (restatement/reclassification):
 - Definition changes affect comparability:
   - From 2QFY26 decks, operating EBITDA includes the share of associate profit. FY25 EBITDA was 452.8 in DK4Q25 and 458.6 in DK4Q26; 4QFY25 was 119.5 and 121.9 [DK4Q25 p.13; DK4Q26 p.10]
   - PAT % is computed on total income from DK1Q26 onwards, but on revenue in DK3Q25/DK4Q25 [CB check]
-  - Several decks print "Total expenses" including COGS; DK1Q27 and DK3Q25 exclude it (ledger metrics `total_expenses_incl_cogs` / `opex_excl_cogs`)
+  - Several decks print "Total expenses" including COGS; DK1Q27 and DK3Q25 exclude it (ledger metrics `total_expenses_incl_cogs` / `opex_excl_cogs`) [DK4Q26 p.9; DK1Q27 p.24; DK3Q25 p.14]
 - Returns fell. Adjusted ROCE (ex-QIP cash) went from 23% (FY25) to 20% (Sep-25), 18% (Dec-25) and 16%* (FY26). ROE went from 18% to 13%* [DK2Q26 p.20; DK3Q26 p.14; DK4Q26 p.32]. Standalone ROIC went from 25.6% to 21.4% [DK4Q26 p.15]. The unadjusted FY25 ROCE was 15% [DKAGM30 p.24]
 - Working capital stretched (standalone). Debtor days rose from 78 to 98, inventory days from 136 to 152, and the cash conversion cycle from 183 to 215 days (FY25 to FY26) [DK4Q26 p.13]
 
@@ -355,7 +355,7 @@ Other printed values (earlier/later decks, different definitions):
 
 ### A4.1 Infusion therapy
 - The company claims to be the 3rd largest IV cannula maker globally [DK1Q27 p.7, p.9]; DKAGM31 softens this to "amongst the largest" [DKAGM31 p.12]. Infusion was the entry segment in 1997 [DK4Q26 p.21]
-- Infusion revenue as reported: FY25 1,012.4 and FY26 997.3 (-1.5%) [DK4Q26 p.12]; 1QFY27 259.2 (+11.1%) [DK1Q27 p.27]. See the A1 flag on annual versus quarterly classification
+- Infusion revenue as reported: FY25 1,012.4 and FY26 997.3 (-1.5%) [DK4Q26 p.12]; 1QFY27 259.2 (+11.1%) [DK1Q27 p.27]. See the A1 flag on annual versus quarterly classification [DK4Q26 p.12; DK3Q26 p.13]
 - 1QFY27 drivers: higher-value products and price hikes in India; international recovery despite Middle East sales falling 32% [DK1Q27 p.27]. Company-wide average price increase of ~4–5% in 1QFY27 versus 4QFY26 [DK1Q27 p.22]
 - Product examples: safety IV cannula, prefilled saline syringe, needle-free connectors, three-way stopcock, extension lines and disinfecting cap [DK1Q27 p.4, p.9]. The Panama catalogue shows the IV cannula range (14G–26G), the Nouvo safety closed IV catheter system (power-injector rated to 300 PSI) and a stopcock of Indian origin [DKNOV25 p.2, p.6, p.7, p.9]
 
@@ -391,7 +391,7 @@ Other printed values (earlier/later decks, different definitions):
 - 6 new products were launched in 1QFY27 across infusion therapy and critical care [DK1Q27 p.22]
 
 ### A4.7 Gastro, urology, surgery and wound
-- Products: enteral connectors and syringes, feeding bag, Ryle's/Levin's tubes, Foley catheters, urine bags, closed wound suction, thoracic drainage, decompressor needle and centesis catheter [DK2Q26 p.30; DKAGM30 p.18; DKAGM31 p.5]. No revenue disclosed
+- Products: enteral connectors and syringes, feeding bag, Ryle's/Levin's tubes, Foley catheters, urine bags, closed wound suction, thoracic drainage, decompressor needle and centesis catheter [DK2Q26 p.30; DKAGM30 p.18; DKAGM31 p.5]. No revenue disclosed [DK4Q26 p.12]
 
 ### A4.8 Cardiology and PendraCare
 - Timeline: entered cardiology in 2024 [DK1Q27 p.7]; DES approval received (Feb-2025) [DK3Q25 p.13]; DES commercially launched with 100+ patients by May-2025 [DK4Q25 p.12]
@@ -404,7 +404,7 @@ Other printed values (earlier/later decks, different definitions):
 - IVL and DEB approved by DCGI [DK3Q26 p.5]. DEB is commercialised and IVL is "soon launching" [DKAGM31 p.3]
 - PACIFIER registry (RisoR everolimus-eluting stent):
   - Design: 2,000 patients (India 1,960, Europe 40), 50 Indian sites plus 1 in Italy, 12-month enrolment, 24-month study [DK1Q26 p.8]
-  - Enrolled: 200+ (Feb-26), 650+ (May-26), 840+ (Aug-26) [DK3Q26 p.5; DK4Q26 p.7; DK1Q27 p.22]. DK4Q26 p.30 says "2000+ patients enrolled", which conflicts with p.7 of the same deck
+  - Enrolled: 200+ (Feb-26), 650+ (May-26), 840+ (Aug-26) [DK3Q26 p.5; DK4Q26 p.7; DK1Q27 p.22]. DK4Q26 p.30 says "2000+ patients enrolled", which conflicts with p.7 of the same deck [DK4Q26 p.30]
 - Cardiology revenue: 1QFY26 2.9 (restated) and 1QFY27 28.6, including PendraCare [DK1Q27 p.27]. Award: "Emerging Medical Devices Company of the Year in Cardiology" [DK3Q26 p.5]
 - PendraCare (Leek, NL; founded 2011):
   - Makes guiding and diagnostic catheters, semi-finished components (licensing) and braided-catheter CD/CM for OEMs [DKPEN p.11, p.13]
@@ -451,8 +451,8 @@ Other printed values (earlier/later decks, different definitions):
   - Mexico is covered through Citieffe's direct presence [DKCIT p.19]
   - Distributor catalogue work in Panama [DKNOV25 p.1]
 - UK: direct presence set up to use the India–UK FTA [DKAGM31 p.3]. South-East Asia: exhibitions in Thailand, Malaysia, Indonesia and Vietnam [DK2Q26 p.12]; go-direct plan covers Brazil, SEA and Europe [DK1Q27 p.11]
-- Entities: standalone (India plants) versus consolidated. Subsidiaries and associates: Plan1Health (Italy), PendraCare (NL, 90%), Citieffe/Medistream (Italy with US and Mexico subsidiaries), Poly Medicure (Laiyang) China, the Egypt JV (Assiut), PolyHealth Medical (US), Brazil (Medyneo) and the UK [DK2Q26 p.24; DKCIT p.12; DK4Q26 p.29, p.37]. Share of associate profit was 5.7 in FY26 [DK4Q26 p.10]; which entity is the associate is not stated in the decks
-- Organic versus acquired revenue: see Tables A1-5 and A1-5b
+- Entities: standalone (India plants) versus consolidated. Subsidiaries and associates: Plan1Health (Italy), PendraCare (NL, 90%), Citieffe/Medistream (Italy with US and Mexico subsidiaries), Poly Medicure (Laiyang) China, the Egypt JV (Assiut), PolyHealth Medical (US), Brazil (Medyneo) and the UK [DK2Q26 p.24; DKCIT p.12; DK4Q26 p.29, p.37]. Share of associate profit was 5.7 in FY26 [DK4Q26 p.10]; which entity is the associate is not stated in the decks [DK4Q26 p.10]
+- Organic versus acquired revenue: see Tables A1-5 and A1-5b [DK4Q26 p.5; DK1Q27 p.21, p.26]
 
 ## A6 Manufacturing and R&D
 
@@ -486,7 +486,7 @@ Other printed values (earlier/later decks, different definitions):
   - Nov-25: 14 facilities in 5 countries including Citieffe [DK2Q26 p.31]
   - May-26 onwards: 15 facilities in 5 countries, including Haridwar-2 and the R&D centre [DK4Q26 p.29; DK1Q27 p.4]
   - The "15 plants" count includes the R&D centre and counts Citieffe's two Bologna sites as one [DK4Q26 p.29]
-- Capacity went from ~1.0 bn units (FY20) to 1.7 bn+ (Feb-25), 1.8 bn+ (2025–May-26) and ~1.9 bn (FY26 per DK1Q27) [DK1Q27 p.9, p.10; DK3Q25 p.7; DK4Q26 p.18]. Plant area went from +63,000 to +95,000 sq m [DK1Q27 p.9, p.10]. No product-level capacity or Polymed utilisation is disclosed (see gaps)
+- Capacity went from ~1.0 bn units (FY20) to 1.7 bn+ (Feb-25), 1.8 bn+ (2025–May-26) and ~1.9 bn (FY26 per DK1Q27) [DK1Q27 p.9, p.10; DK3Q25 p.7; DK4Q26 p.18]. Plant area went from +63,000 to +95,000 sq m [DK1Q27 p.9, p.10]. No product-level capacity or Polymed utilisation is disclosed (see gaps) [DK4Q26 p.18]
 - Automation:
 
 | Date | Moulding machines | Moulds and dies | Assembly machines | Robots | Source |
@@ -500,7 +500,7 @@ Other printed values (earlier/later decks, different definitions):
 - Launches per year: FY22 14, FY23 17, FY24 19, FY25 35, FY26 35 [DK4Q26 p.30]. DK4Q25 p.12 says "over 30 in FY25 vs 19 in FY24". Quarterly: over 7 (1Q), 8 (2Q) and 19 in 9MFY26; 6 in 1QFY27 [DK1Q26 p.7; DK2Q26 p.6; DK3Q26 p.5; DK1Q27 p.22]. 100+ products are in the pipeline for the next 3–4 years; guidance is 25–30 launches a year [DK4Q26 p.30, p.40]
 - R&D:
   - Spend: 1.7% of sales, to double in 3–5 years [DK4Q26 p.37]. Expense Rs 29.9 cr consolidated in FY26 [DK4Q26 p.10]
-  - Team size: ~65 (Aug-25), ~80+ (Nov-25), ~100+ (Feb-26), ~90 / 90+ with 45+ engineers across India, Italy and NL (May/Aug-26) [DK1Q26 p.7; DK2Q26 p.6; DK3Q26 p.5; DK4Q26 p.30; DK1Q27 p.22]. The series is inconsistent
+  - Team size: ~65 (Aug-25), ~80+ (Nov-25), ~100+ (Feb-26), ~90 / 90+ with 45+ engineers across India, Italy and NL (May/Aug-26) [DK1Q26 p.7; DK2Q26 p.6; DK3Q26 p.5; DK4Q26 p.30; DK1Q27 p.22]. The series is inconsistent [DK4Q26 p.7]
 - Patents: 334 (Feb–Sep-25), 375 (Sep-25), 394 (Dec-25), 399 consolidated / 348 standalone (Mar-26), 399 (Jun-26); "390+ granted, 60 applications under review" [DK3Q25 p.7; DK2Q26 p.4; DK3Q26 p.4; DK4Q26 p.4, p.5, p.30; DK1Q27 p.21]
 - Capex: FY26 Rs 296 cr (Rs 308.4 cr consolidated cash capex; Rs 295.5 cr standalone) against a Rs 250 cr budget. 9MFY26 capex was Rs 234 cr; 1HFY26 cash capex Rs 157.3 cr [DK4Q26 p.7, p.14; DK1Q26 p.7; DK3Q26 p.5; DK2Q26 p.19]
 
@@ -596,7 +596,7 @@ Other printed values (earlier/later decks, different definitions):
   - A one-time subsidiary provision hit 4QFY26 [DK4Q26 p.5]
 - Balance-sheet risk: goodwill of Rs 273.8 cr; debt up to 341.6 [DKAGM31 p.20]. Standalone cash conversion cycle 215 days [DK4Q26 p.13]
 - Execution: Palwal and YEIDA plant timelines [DKAGM31 p.4]; PACIFIER enrolment (840 of 2,000 by Aug-26) [DK1Q27 p.22]; NCLAT appeal on the Himalayan Mineral Water liabilities [DK2Q26 p.19]
-- Disclosure quality: repeated restatements of segment and geography splits, changing EBITDA and PAT-margin definitions, and inconsistent ESG and R&D-headcount figures across decks (see register below)
+- Disclosure quality: repeated restatements of segment and geography splits, changing EBITDA and PAT-margin definitions, and inconsistent ESG and R&D-headcount figures across decks (see register below) [DK1Q27 p.19, p.22; DK4Q26 p.7, p.12]
 
 ## Restatements and conflicts register (all recorded in the ledger with cross-referencing notes)
 1. Annual vs quarterly therapy classification: FY25 and FY26 infusion are ~37–58 cr below the sum of the quarters [CB check] [DK4Q26 p.12; DK3Q26 p.13]
