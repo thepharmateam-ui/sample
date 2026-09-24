@@ -91,6 +91,7 @@ Page numbers are PDF pages from the text markers. PD24 printed page = PDF page -
   - Flow regulators: Polyflo Novo and Polytrol Micro.
   - Extension lines: high pressure (55 bar), low pressure and PVC-free.
   - Other items: Polyspike and Polyspike V-Plus vial access spikes, PolyFlush prefilled 0.9% NaCl syringes (gamma sterilized), Polyswab disinfecting cap (70% IPA, 7 days; D-0866), arterial blood-collection syringe, manifolds, obturator, T-type extension, transfer spike and universal cap.
+- **Bought-in items (PD21).** PD21's MD&A says purchases of stock-in-trade comprise "Safety scalp vein set and silicon rubber sleeve that are manufactured by our contract manufacturer, Vitromed Healthcare" [PD21 p.86]. PD24 no longer names scalp-vein sets in its stock-in-trade description [PD24 p.102].
 - **Competition.** The only named competitors are industry-wide lists: Hindustan Syringes & Medical Devices, 3M, Medtronic, J&J, BD, Abbott Vascular, Baxter, B. Braun, Healthium and others [PD24 p.181]. CRISIL names Hindustan Syringes, Lotus Surgical, B. Braun, BD and Poly Medicure as key consumables players [PD24 p.132]. Polymed filed a criminal complaint against B. Braun Medical (India) over a catheter patent registration, and the revision petition is pending [PD24 p.246].
 
 ## A4.2 Vascular access and oncology
@@ -108,6 +109,7 @@ Page numbers are PDF pages from the text markers. PD24 printed page = PDF page -
   - HealthPICC kits bundle third-party accessories: MicroCLAVE (ICU Medical) and Grip-Lok (TIDI) [CATEXP24 pp.19-20,38-47].
   - The website oncology page shows only "Plan1Health", safety Huber needle and Huber needle [WEB_ONCOLOGY p.1].
 - Plan1 Health was acquired in FY18 for Rs 3,417.79 lakh through Poly Medicure B.V. (D-0370) [PD24 p.76]. Its only US clearance is K111031 PAINFUSOR catheter (BSO, 2011) (D-0879) [FDA510K_P1H p.1].
+- **Traded, not made.** PD24's MD&A says purchases of stock-in-trade comprise "machines used for assembly of medical device components, and secureport PLP used in chemotherapy, among others", so at least the Secureport PLP port is a bought-in (traded) item at the reporting-entity level [PD24 p.102].
 
 ## A4.3 Renal (dialysis)
 
@@ -226,7 +228,7 @@ Page numbers are PDF pages from the text markers. PD24 printed page = PDF page -
 - **Components catalogue** ("Empowering Healthcare Innovation", PML-COMP. 11/2024) offers individual catheters (diagnostic, CVC, haemodialysis, mini-midline, midline, PICC, anaesthesia conduction), a stent, guidewires (nitinol straight and J, stainless steel, PTFE, hydrophilic, nasogastric-tube guidewire, guidewire advancer), introducer needles (standard, safety and Y with valve), tear-away introducers (3-9 Fr), stopcocks, flow regulators, T-connectors, extruded tube and dilators [CATCOMP24 pp.4-16]. This points to a B2B component and OEM offer, but no revenue is disclosed.
 - **Private label.** One FDA device listing at Jaipur (FEI 3018159714, suction catheter kit, product code PYG, created 27-Dec-2023) carries the proprietary name "McKesson", a US distributor. This is the only documentary sign of US private-label supply. It appears in the raw openFDA JSON (sources/json/fda_reg_polymedicure.json) and not in the text rendering [FDAREG_POLY p.1].
 - Other Faridabad listings include "Safety-Vac Sterile Connection Tube", "Safety Vac" and "Ultravak Set" as proprietary names [FDAREG_POLY p.1].
-- Neither PD24 nor PD21 discloses the OEM or private-label share of revenue (see gaps).
+- Neither PD24 nor PD21 discloses the OEM or private-label share of revenue (see gaps). Other shards carry management and deck figures that fill part of this gap (not D rows; cite their tokens): Polymed brand vs OEM 70:30 in FY21 and 72:28 in FY22 (CC-0277 to CC-0280, TR4Q22 p.12; CC-0871/CC-0872, DKMAY22 p.10; CC-0996/CC-0997, DKNOV20 p.14); exports about 75% branded and 25% white label with no white label in India (CC-0436, CC-0437, TR3Q23 p.9); CRISIL Ratings' own-brand "around 70-72%" in FY22 (B-0748, CRR2212 p.1); and PendraCare's CY24 split of 48% OEM and 52% own brand (CB-2501, CB-2502, DKPEN p.12). PendraCare "also provide[s] design, development and manufacturing services to other OEM's" and sells "semi-finished" guiding and diagnostic catheter parts [DKPEN pp.11,13].
 - **Outsourcing to Vitromed Healthcare** (promoter-group entity; see A6 and A9 for amounts) is job work under which Polymed supplies raw materials to Vitromed. It is not OEM selling [PD24 p.177].
 
 ## A5 Geography, exports and international presence
