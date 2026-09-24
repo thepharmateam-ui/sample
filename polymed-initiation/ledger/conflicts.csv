@@ -1,0 +1,29 @@
+metric,entity,segment,geography,period,unit_std,fact_id,value,unit,doc_id,page,basis,note
+product_launches,polymed consolidated,total,total,fy26,count,A-0007,30+,count,AR26,3,disclosed,[visual read] flywheel graphic (printed p.4)
+product_launches,polymed consolidated,total,total,fy26,count,A-0079,30+,count,AR26,8,disclosed,[visual read] MD's message
+product_launches,polymed consolidated,total,total,fy26,count,A-0125,35,count,AR26,14,disclosed,[visual read] Innovation page (printed p.27); bar chart also shows FY2026 35; MD letter says '30+'
+revenue,polymed consolidated,total,total,fy20,Rs mn,A-0087,7.0,Rs bn,AR26,9,disclosed,[visual read] 30-years story
+revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0036,687,Rs cr,DK1Q27,6,disclosed,consolidated ('# basis consolidated financial statements')
+revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0068,687,Rs cr,DK1Q27,8,disclosed,timeline label '2020'; FY basis presumed (2020/2026 values match FY20/FY26)
+revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0078,7.0,INR bn,DK1Q27,9,disclosed,printed '~INR 7.0 Bn'
+revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0427,687,Rs cr,DKAGM31,14,disclosed,printed '~INR 687 Cr' (DK1Q27 p.9 printed '~INR 7.0 Bn')
+ebitda,polymed consolidated,total,total,fy20,Rs mn,A-0088,1.6,Rs bn,AR26,9,disclosed,[visual read] 30-years story
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0069,166,Rs cr,DK1Q27,8,disclosed,timeline label '2020'; FY basis presumed
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0080,1.7,INR bn,DK1Q27,9,disclosed,operating EBITDA; printed '~INR 1.7 Bn'
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0428,166,Rs cr,DKAGM31,14,disclosed,operating EBITDA; printed '~INR 166 Cr'
+medtech_exports,us medtech exports,total,us,n.s. (bcg-cii aug-2025),USD bn,A-0156,55,USD bn,AR26,42,third_party,[visual read] MD&A chart; CONFLICT: MD&A text on same page says US exports 'approximately USD 75 billion'
+medtech_exports,us medtech exports,total,us,n.s. (bcg-cii aug-2025),USD bn,A-0157,75,USD bn,AR26,42,third_party,[visual read] MD&A text; CONFLICT with chart on same page (USA 55)
+medtech_exports,china medtech exports,total,china,n.s. (bcg-cii aug-2025),USD bn,A-0158,48,USD bn,AR26,42,third_party,"[visual read] MD&A text; CONFLICT with chart on same page (China 16, 5% share)"
+medtech_exports,china medtech exports,total,china,n.s. (bcg-cii aug-2025),USD bn,A-0159,16,USD bn,AR26,42,third_party,[visual read] MD&A chart; CONFLICT with text (USD 48 bn)
+ipo_size,polymed consolidated,total,india,1996,Rs mn,CB-0072,55,Rs lakh,DK1Q27,8,disclosed,p.9 states 'INR 5.5 Mn IPO in 1996'
+ipo_size,polymed consolidated,total,india,1996,Rs mn,CB-0423,5.4,Rs cr,DKAGM31,13,disclosed,"footnote: total IPO size, payable in 2 instalments of Rs 2.5/share on application and balance on allotment; CONFLICT with DK1Q27 p.8 'Rs 55 Lakhs'"
+solar_generation,polymed consolidated,total,india,n/s,MWh,CB-0180,3214,MWh,DK1Q27,19,disclosed,"printed 'approx.'; footnote: units tentative, DHBVN MEA not received; slide in 1QFY27 deck; period of measurement not stated"
+solar_generation,polymed consolidated,total,india,n/s,MWh,CB-0560,7871.17,MWh,DKAGM31,21,disclosed,footnote: Jul'26 solar units tentative (DHBVN MEA pending); cumulative period not stated
+employees_health_assessed,polymed consolidated,total,global,n/s,count,CB-0182,2239,count,DK1Q27,19,disclosed,slide in 1QFY27 deck; period of measurement not stated
+employees_health_assessed,polymed consolidated,total,global,n/s,count,CB-0558,2825,count,DKAGM31,21,disclosed,AGM deck Sep-2026; measurement period not stated
+employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-0183,28,count,DK1Q27,19,disclosed,slide in 1QFY27 deck; period of measurement not stated
+employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-0553,165,count,DKAGM31,21,disclosed,printed '165+'; AGM deck Sep-2026; measurement period not stated
+dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0009,700,count,RHP_NEPHRO,264,third_party,"F&S Nov-2025 report commissioned for Nephrocare RHP (2-Dec-2025); CY basis; conflicts with p.277 (~1,000 by 2010)"
+dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0034,1000,count,RHP_NEPHRO,277,third_party,F&S Nov-2025 report commissioned for Nephrocare RHP (2-Dec-2025); CY basis; conflicts with p.264 (700 in 2010)
+market_share,catheters and cannulae share of global surgical disposables,infusion,global,cy24,%,E-0084,32.2,%,DRHP_GSURG,198,third_party,"1Lattice report 29-Dec-2025 commissioned for G Surgiwear DRHP (30-Dec-2025); global=CY, India=FY; CONFLICT: p.199 says 36.0% (USD 39.4B)"
+market_share,catheters and cannulae share of global surgical disposables,infusion,global,cy24,%,E-0085,36.0,%,DRHP_GSURG,199,third_party,"1Lattice report 29-Dec-2025 commissioned for G Surgiwear DRHP (30-Dec-2025); global=CY, India=FY; conflicts with 32.2% on p.198"

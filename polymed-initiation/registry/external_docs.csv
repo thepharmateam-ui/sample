@@ -1,0 +1,14 @@
+doc_id,title,publisher,date,url,type,tier
+FDA510K_POLY,FDA 510(k) clearances – Poly Medicure,US FDA (openFDA),2026-09-24,"https://api.fda.gov/device/510k.json?search=applicant:""poly+medicure""",regulator,1
+FDA510K_CIT,FDA 510(k) clearances – Citieffe,US FDA (openFDA),2026-09-24,"https://api.fda.gov/device/510k.json?search=applicant:""citieffe""",regulator,1
+FDA510K_PEN,FDA 510(k) clearances – PendraCare,US FDA (openFDA),2026-09-24,"https://api.fda.gov/device/510k.json?search=applicant:""pendracare""",regulator,1
+FDA510K_P1H,FDA 510(k) clearances – Plan 1 Health,US FDA (openFDA),2026-09-24,"https://api.fda.gov/device/510k.json?search=applicant:""plan+1+health""",regulator,1
+FDAREG_POLY,FDA registration and listing – Poly Medicure,US FDA (openFDA),2026-09-24,"https://api.fda.gov/device/registrationlisting.json?search=registration.name:""poly+medicure""",regulator,1
+SCR_CONSO,screener.in POLYMED consolidated,screener.in,2026-09-24,https://www.screener.in/company/POLYMED/consolidated/,aggregator,5
+SCR_STANDALONE,screener.in POLYMED standalone,screener.in,2026-09-24,https://www.screener.in/company/POLYMED/,aggregator,5
+CRR2606,CRISIL rating rationale 24-Jun-2026,CRISIL Ratings,2026-06-24,https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_June%2024_%202026_RR_398158.html,rating,4
+CRR2503b,CRISIL rating rationale 31-Mar-2025,CRISIL Ratings,2025-03-31,https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_March%2031_%202025_RR_366440.html,rating,4
+CRR2503a,CRISIL rating rationale 29-Mar-2025,CRISIL Ratings,2025-03-29,https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_March%2029_%202025_RR_365000.html,rating,4
+CRR2402,CRISIL rating rationale 29-Feb-2024,CRISIL Ratings,2024-02-29,"https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_February%2029,%202024_RR_338548.html",rating,4
+CRR2302,CRISIL rating rationale 27-Feb-2023,CRISIL Ratings,2023-02-27,"https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_February%2027,%202023_RR_312808.html",rating,4
+CRR2212,CRISIL rating rationale 08-Dec-2022,CRISIL Ratings,2022-12-08,"https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/PolyMedicureLimited_December%2008,%202022_RR_300915.html",rating,4

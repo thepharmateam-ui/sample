@@ -1,0 +1,4 @@
+facts: 1203
+by shard: A=247, B=264, CB=560, E=132
+conflict rows: 28
+problems: 0
