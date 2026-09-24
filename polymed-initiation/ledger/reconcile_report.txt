@@ -1,4 +1,4 @@
-facts: 1203
-by shard: A=247, B=264, CB=560, E=132
-conflict rows: 28
+facts: 8489
+by shard: A=1278, B=851, CA=812, CB=3244, CC=1093, D=881, DERIVED=3, E=319, WM=8
+conflict rows: 521
 problems: 0

@@ -1,0 +1,75 @@
+# Part A – The business {#part-a}
+
+## A1 What Polymed sells and where the revenue comes from {#a1}
+
+Poly Medicure makes single-use medical devices: the cannulas, infusion sets, fistula needles, bloodlines, blood bags, catheters, tubes and drains that a hospital consumes in very large volumes and throws away after one patient.
+- **Scale.** It sells {{A-0001}} products across {{A-0002}} specialities, from {{A-0003}} plants in {{A-0004}} countries with ~{{CB-0082|plain}}bn units of annual capacity. The products reach {{A-0005}} countries through {{A-0011}} distributors. <!-- AR26 p.3; DK1Q27 p.10 -->
+- **Anchor product.** The IV cannula: Polymed describes itself as the third-largest maker globally, and the MD put its share at 'almost global 11%' on ~{{CA-0188}} a year. <!-- DK1Q27 p.7; TR4Q26 p.17 -->
+- **Unit economics.** Most devices sell for a few rupees: management cites price points of Rs. {{WM-0007|range}} per infusion device. It sold {{CA-0554}} devices in 3QFY25 alone. <!-- TR4Q26 p.18; TR3Q25 p.4 -->
+- **Scale of sales.** FY26 consolidated revenue was {{A-0039}}.
+
+The business model in one line: a very high-volume, low-price consumables business, built on in-house automation, that has earned group operating EBITDA margins in the mid-to-high twenties (Section A2). It is now adding higher-priced devices in cardiology, orthopaedics and oncology, where management says a single unit sells for thousands of rupees, sometimes above {{WM-0008}}. <!-- TR4Q26 p.18 -->
+
+::: chart
+{"id":"rev_long","type":"column","title":"Revenue has compounded from Rs. 100mn in FY00 to Rs. 18.8bn in FY26, with the steepest step-up after the 2021 fund-raise","cats":["FY00","FY10","FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Consolidated revenue","facts":["CB-0064","CB-0066","CB-0036","CB-0037","CB-0038","CB-0039"]}],"label_all":true,"note":"Management describes three phases: 'PolyMed 1.0', bootstrapped growth to FY20; 'PolyMed 2.0', FY21-FY26, after the first institutional fund-raise, a multifold capacity expansion and the first acquisitions; and 'PolyMed 3.0' ('Ascent') from FY27. Revenue CAGR was {{CB-0040}} over FY20-FY26 per the company."}
+:::
+
+### Five therapy lines are disclosed, two of them new
+
+Polymed reports revenue in five buckets:
+1. **Infusion therapy:** IV cannulas, infusion sets and accessories.
+2. **Renal:** dialysis consumables and machines.
+3. **Cardiology:** reported separately since the PendraCare acquisition.
+4. **Orthopaedics:** Citieffe, reported separately since its acquisition.
+5. **Others.**
+
+"Others" pools every other speciality: blood management, anaesthesia and respiratory, critical care, diagnostics, urology, gastroenterology, surgery and wound drainage, and the vascular-access and oncology products of Plan1Health. Management declined to break it out further. The MD said on the 4QFY26 call that the new lines are 'very new businesses' and 'we don't call out those numbers specifically because confidentially, we don't want to share what company is doing'. We therefore describe the "others" businesses qualitatively in Section A4 and do not estimate their revenue. <!-- TR4Q26 p.17 -->
+
+::: chart
+{"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to 53% of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion {{CB-0025}}, renal {{CB-0030}}, others {{CB-0035}}."}
+:::
+
+The mix shift has been fast:
+- **FY20 to FY26:** infusion's share fell from {{CB-0056}} to {{CB-0059}}.
+- **4QFY25 to 4QFY26:** management put infusion at 50% of revenue in 4QFY26 against 57% a year earlier. <!-- TR4Q26 p.5 -->
+- **1QFY27, the first quarter with a full five-line split:**
+  - infusion {{CB-0359}}
+  - others {{CB-0363}}
+  - orthopaedics {{CB-0360}}
+  - renal {{CB-0361}}
+  - cardiology {{CB-0362}}
+
+Management frames this as de-risking from what it calls 'overdependence' on infusion. The shift also moves revenue toward lines with higher gross margins but, for now, lower EBITDA margins (Section A2). <!-- TR1Q27S p.16 -->
+
+::: chart
+{"id":"mix_q","type":"share_hbar","title":"Acquisitions and new specialities cut infusion from 58% to 50% of quarterly revenue in one year","cats":["1QFY26","1QFY27"],"unit":"% of revenue","series":[{"name":"Infusion","facts":["CB-0364","CB-0359"]},{"name":"Renal","facts":["CB-0365","CB-0361"]},{"name":"Cardiology","facts":["CB-0366","CB-0362"]},{"name":"Orthopaedics","facts":["-","CB-0360"]},{"name":"Others","facts":["CB-0367","CB-0363"]}],"label_w":80,"note":"Shares as printed in the 1QFY27 presentation (rounded; export incentives account for the residual). Cardiology revenue rose from {{CA-0048}} to {{CA-0047}}, and orthopaedics contributed {{CB-0346}} in 1QFY27."}
+:::
+
+### Two-thirds of revenue is earned outside India
+
+Polymed has always been an exporter: {{CB-0079}} of FY20 revenue came from outside India. International revenue was still {{CB-0084}} of FY26 revenue (and {{CB-0332}} in 1QFY27, lifted by the acquisitions).
+- **Domestic:** India has been the fastest-growing region, with a company-stated FY20-FY26 CAGR of {{CB-0045}}. Its share rose from {{CB-0008}} to {{CB-0011}}.
+- **Europe:** a CAGR of {{CB-0050}}, lifting its share from {{CB-0009}} to {{CB-0012}}.
+- **RoW:** Africa, West Asia, Latin America and the rest of Asia grew at {{CB-0055}}, and their share fell from {{CB-0010}} to {{CB-0013}}.
+
+The MD's stated long-run aim is 'between like 1/3 India and 2/3 RoW', roughly today's balance. <!-- TR4Q26 p.11 -->
+
+::: chart
+{"id":"rev_geo","type":"stacked_column","title":"India and Europe have gained share from the rest of the world; each region now contributes about a third","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"India","facts":["CB-0041","CB-0042","CB-0043","CB-0044"]},{"name":"Europe","facts":["CB-0046","CB-0047","CB-0048","CB-0049"]},{"name":"Rest of world","facts":["CB-0051","CB-0052","CB-0053","CB-0054"]}],"totals":true,"note":"Same slide as the therapy split (1QFY27 presentation). The FY26 annual report shows RoW at {{A-0269}}, excluding other operating revenue, against {{CB-0054}} in the presentation."}
+:::
+
+### What the disclosure does and does not tell us
+
+Company disclosure is good on:
+- consolidated and standalone P&L by quarter;
+- domestic versus international revenue, with Europe and RoW;
+- the five therapy buckets;
+- acquisition contributions.
+
+It is thin on four things:
+1. **Product-level revenue** within "others".
+2. **Customer concentration and the OEM/private-label share.** Section A2 sets out what the placement documents and rating reports disclose.
+3. **Country-level export revenue.** The US is the only country for which management gives a number: exports of {{CA-0078|range}} a year. <!-- TR1Q27S p.12 -->
+4. **Volume and price split by product.** Management has occasionally given total devices sold ({{CA-0564}} in 9MFY25, up {{WM-0006}} yoy against consolidated revenue growth of {{CA-0558}}) but not by line. <!-- TR3Q25 p.4, p.10 -->
+
+These gaps shape the question bank in Part C.

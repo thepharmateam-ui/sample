@@ -82,6 +82,8 @@ UNIT_ALIASES = {
     "%": "%", "percent": "%", "pp": "pp", "bps": "bps",
     "x": "x", "days": "days", "count": "count", "units": "units", "pcs": "units", "pieces": "units",
     "mn units": "mn units", "mn pcs": "mn units", "million units": "mn units", "bn units": "bn units",
+    "mn pieces": "mn units", "million pieces": "mn units", "bn pieces": "bn units", "billion units": "bn units",
+    "cr units": "cr units", "crore units": "cr units", "cr pieces": "cr units", "lakh units": "lakh units",
     "text": "text",
 }
 
@@ -103,6 +105,10 @@ def standardize(value, unit):
         return x * 0.1, "Rs mn"
     if u == "Rs bn":
         return x * 1000.0, "Rs mn"
+    if u == "cr units":
+        return x * 10.0, "mn units"
+    if u == "lakh units":
+        return x * 0.1, "mn units"
     return x, u
 
 
@@ -154,6 +160,9 @@ def display(row):
         return f"${fmt_num(x)}k{plus}"
     if u == "USD":
         return f"${fmt_num(x)}{plus}"
+    if u in ("cr units", "lakh units"):
+        vs, _ = standardize(v, u)
+        return (f"{fmt_num(vs / 1000)}bn units{plus}" if vs >= 1000 else f"{fmt_num(vs)}mn units{plus}")
     if u == "mn units":
         return f"{fmt_num(x)}mn units{plus}"
     if u == "bn units":

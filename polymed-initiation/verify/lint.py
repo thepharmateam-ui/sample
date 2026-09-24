@@ -78,6 +78,8 @@ def main():
                     n_err += 1
             for pat, msg in WARN:
                 for m in re.finditer(pat, line):
+                    if msg.startswith("bold inside prose") and re.match(r"^\s*(?:[-*]|\d+[.)])?\s*$", line[:m.start()]):
+                        continue  # bold lead-in label at the start of a paragraph or list item
                     ctx = line[max(0, m.start() - 30): m.end() + 30]
                     if msg.startswith("scope check") and re.search(r"credit|acquisition|EV |enterprise value|deal", ctx, re.I):
                         continue

@@ -1,0 +1,108 @@
+## A3 The FY26 reset and the guidance record {#a3}
+
+FY26 broke a run of on-guidance delivery.
+- **Headline growth.** Consolidated revenue grew {{CA-0107}} to {{A-0039}}, against the {{CA-0512}} management guided in May-2025. Standalone revenue grew only {{CA-0093|approx}}.
+- **Organic growth.** Excluding the part-year contribution of PendraCare and Citieffe, consolidated revenue grew {{D-M-003}} (our calculation on the company's organic figure of {{CB-0577}}).
+- **The miss was in exports.** Domestic revenue grew {{A-0265}} (vs. {{CA-0513|range}} guided). International revenue grew {{A-0276}} including acquisitions but was 'flattish' on an organic basis, and management put 4QFY26 standalone exports at minus {{CA-0164|range}}. <!-- TR3Q26 p.16; TR4Q26 p.12 -->
+
+The contrast with FY25 frames the debate. That year standalone revenue grew {{CA-0491|approx}} against {{CA-0690|range}} guided, and management said it had 'very accurately' forecast revenue. <!-- TR4Q25 p.3 -->
+
+Two readings of FY26 are possible:
+1. an external shock layered on a destocking cycle in the export channel;
+2. evidence that the export franchise is more exposed to Chinese pricing, US tariffs and regulatory friction than the FY21-25 record suggested.
+
+The 1QFY27 print supports the first reading more than the second. Standalone revenue grew {{CB-0198}}, and Europe grew {{CB-0324}} organically on new customers. We nonetheless see three company-specific elements that matter for FY27-30:
+1. European certification and tender slippage;
+2. price competition in renal from Chinese dialysers imported duty-free via ASEAN;
+3. a guidance practice that moved targets without always acknowledging it.
+
+::: chart
+{"id":"q_rev","type":"column","title":"Consolidated revenue stalled in 1HFY26 and re-accelerated from 3QFY26, the later quarters helped by acquisitions","cats":["3QFY24","4QFY24","1QFY25","2QFY25","3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"scale":"bn","unit":"Rs bn","dec":2,"series":[{"name":"Consolidated revenue","facts":["CB-2894","CB-2590","CB-1978","CB-1628","CB-1332","CB-0705","CB-0254","CB-1627","CB-1331","CB-0704","CB-0253"]}],"label_last":true,"note":"PendraCare consolidated from 23-Sep-2025 and Citieffe from 7-Nov-2025. Of 4QFY26 revenue of {{CB-0704}}, {{CB-0575}} was organic; acquisitions contributed {{CB-0184}} in 1QFY27."}
+:::
+
+### What happened, quarter by quarter
+
+The reset ran in three phases:
+1. **Southern Europe slowed in 4QFY25.** Management linked this to 'supply chain disruption, maybe overstocking' and uncertainty over US tariffs. <!-- TR4Q25 p.8 -->
+2. **Europe contracted in 1HFY26:** {{CB-2038}} yoy in 1QFY26 and {{CB-1781}} in 2QFY26. Management gave these reasons: <!-- TR1Q26 p.5, p.9, p.14; TR2Q26 p.4, p.9, p.11 -->
+   - distributors cut inventory from four to five months of cover to two to three months;
+   - the reopening of the Suez route shortened transit from about two and a half months to about one month, releasing pipeline stock;
+   - Chinese product was redirected from the US into Europe;
+   - EU MDR certificate renewals came through only in Apr–Jun 2025.
+3. **Recovery from 3QFY26,** helped by the consolidation of the acquisitions. Europe grew {{CB-1491}} in 3QFY26 and {{CB-0838}} in 4QFY26 as reported. Management also cited National Health Service contracts in the UK delayed by one to one and a half years after the change of government, and products dropped during the MDR transition. <!-- TR3Q26 p.8, p.16 -->
+
+In India, private-sector revenue grew {{CA-0419}} and {{CA-0332}} in 1QFY26 and 2QFY26, while government business fell {{CA-0420|abs}} and {{CA-0333|abs}}. Management also pointed to a one-off inventory realignment at distributors around the September 2025 GST rate cut. <!-- TR2Q26 p.5, p.8 -->
+
+::: table id="q_table" title="Exports explain the FY26 slowdown: international revenue was flat in 1HFY26 while domestic revenue kept growing at mid-to-high teens" note="Growth rates as reported in each quarter's presentation. Later presentations reallocated some revenue between Europe and RoW, so levels in later decks can differ from the base used here. Organic growth for 1QFY27 excludes PendraCare and Citieffe."
+| Quarter | Consolidated revenue | yoy | Domestic | International | Europe | RoW |
+|---|---|---|---|---|---|---|
+| 1QFY26 | {{CB-0254}} | {{CB-1979|signed}} | {{CB-1964|signed}} | {{CB-2032}} | {{CB-2038}} | {{CB-2041|signed}} |
+| 2QFY26 | {{CB-1627}} | {{CB-1632|signed}} | {{CB-1587|signed}} | {{CB-1765|signed}} | {{CB-1781}} | {{CB-1789|signed}} |
+| 3QFY26 | {{CB-1331}} | {{CB-1336|signed}} | {{CB-1467|signed}} | {{CB-1475|signed}} | {{CB-1491|signed}} | {{CB-1499|signed}} |
+| 4QFY26 | {{CB-0704}} | {{CB-0708|signed}} | {{CB-0599|signed}} | {{CB-0600|signed}} | {{CB-0838|signed}} | {{CB-0844|signed}} |
+| 1QFY27 | {{CB-0253}} | {{CB-0255|signed}} | {{CB-0308|signed}} | {{CB-0313|signed}} | {{CB-0322|signed}} | {{CB-0327|signed}} |
+| 1QFY27 organic | {{CB-0318}} | {{CB-0319|signed}} | {{CB-0310|signed}} | {{CB-0315|signed}} | {{CB-0324|signed}} | {{CB-0329|signed}} |
+:::
+
+::: table id="q_reasons" title="Management attributed the slowdown to channel destocking, freight, tariffs and Chinese pricing, not to lost customers"
+| Quarter | Reasons management gave on the call |
+|---|---|
+| 4QFY25 | Southern Europe slowed on 'supply chain disruption, maybe overstocking'; uncertainty over US tariffs |
+| 1QFY26 | European distributors cut inventory cover from four to five months to two to three; Chinese product redirected from the US to Europe; EU MDR renewals arrived only in Apr–Jun 2025; US tariff at {{CA-0427}} |
+| 2QFY26 | Suez reopening cut transit from ~2.5 months to ~1 month and released pipeline stock; Chinese dumping; distributor inventory realignment around India's GST rate cut; government business down |
+| 3QFY26 | Freight costs and Chinese pricing in Europe; UK NHS contracts delayed 1-1.5 years; products dropped during the MDR transition; renal hit by duty-free ASEAN imports; government dialysis contracts delayed |
+| 4QFY26 | Standalone exports negative ex-acquisitions; West Asia logistics; ~{{CA-0120}} one-off provision in a subsidiary; raw material, wage and freight inflation |
+| 1QFY27 | Europe back on new customers; West Asia {{CA-0036}} with orders stuck at port; renal {{CA-0052}} as Polymed chose price over volume against Chinese dialysers |
+:::
+
+### The guidance record
+
+Management gives explicit annual guidance and revisits it every quarter, so the record is easy to score.
+- **FY25:** delivered on revenue.
+- **FY26:**
+  - Revenue guidance was cut from {{CA-0512}} to {{CA-0364|range}} in Nov-2025, then missed.
+  - Renal and domestic guidance were missed by a wide margin.
+  - 2HFY26 guidance was guided at 'more than 25%' above 1HFY26 in Nov-2025, restated in Feb-2026 as 'around 20% … as I mentioned in the previous call', and described in May-2026 as 'exactly delivered' at {{CA-0112}}. <!-- TR2Q26 p.6; TR3Q26 p.6; TR4Q26 p.5 -->
+- **FY27 standalone:** the revenue guidance was widened from {{CA-0136|range}} in May-2026 to {{CA-0057|range}} in Aug-2026, while being described as maintained. <!-- TR4Q26 p.6; TR1Q27S p.4 -->
+
+We read these as signs that guidance is framed as a target to be managed toward rather than a forecast with a stated error band, so we weight management's quarterly commentary on drivers more heavily than the point guidance.
+
+::: table id="guidance_scorecard" title="FY26 guidance was lowered once and still missed on revenue, domestic growth and renal; margin guidance was met"
+| Metric | First guidance (date) | Later revisions | Delivered |
+|---|---|---|---|
+| Consolidated revenue growth | {{CA-0512}} (May-2025) | {{CA-0364|range}} (Nov-2025) | {{CA-0107}} ({{D-M-003}} organic, our calculation) |
+| Domestic growth | {{CA-0513|range}} (May-2025) | {{CA-0444}} (Aug-2025); {{CA-0356|range}} (Nov-2025) | {{A-0265}} |
+| International growth | {{CA-0516|range}} (May-2025) | {{CA-0445|range}} (Aug-2025); {{CA-0357|range}} incl. acquisitions (Nov-2025) | {{A-0276}} incl. acquisitions; organic 'flattish' |
+| 2HFY26 revenue | {{CA-0362|range}}, 'more than 25%' above 1H (Nov-2025) | 'around 20%' above 1H (Feb-2026) | {{CA-0111}}, {{CA-0112}} above 1H |
+| Renal revenue | ~{{CA-0499|range}} growth (May-2025) | above {{CA-0344|range}} (Nov-2025); ~{{CA-0241|range}} (Feb-2026) | ~{{CA-0166|range}} growth |
+| Dialysis machines placed | {{CA-0501|range}} (May-2025) | ~{{CA-0239|range}} (Feb-2026) | ~{{CA-0088|range}} |
+| Standalone EBITDA margin | {{CA-0517|range}} (May-2025) | unchanged | {{CA-0097|approx}} |
+| Capex | ~{{CA-0529|range}} over two years (May-2025) | {{CA-0451|range}} for FY26 (Aug-2025) | {{CA-0127|approx}} |
+:::
+
+### What management is guiding for FY27 and FY30
+
+**FY27 guidance** (given 25-May-2026 and 'maintained' on 10-Aug-2026): <!-- TR4Q26 p.6-7; TR1Q27S p.4 -->
+- **Consolidated revenue:** {{CA-0135|range}}, including a full year of PendraCare and Citieffe. That implies {{D-M-001}}-{{D-M-002}} growth on FY26 (our calculation).
+- **Standalone revenue:** {{CA-0057|range}}, with domestic revenue growing {{CA-0058}} and international revenue {{CA-0059}}.
+- **EBITDA margin:** standalone {{CA-0139|range}}, consolidated {{CA-0140|range}}.
+- **Capex:** {{CA-0141|range}}.
+
+**Vision 2030** ('PolyMed 3.0'): double revenue by FY30. Management characterized the current business as 'around 80% organic … and 20% inorganic', and expects a similar split. The same call placed the organic contribution at ~14-15% a year. <!-- TR1Q27S p.2, p.7 -->
+
+The FY27 plan rests on four things:
+1. a recovery in Europe that 1QFY27 has begun to show;
+2. a normalization of West Asia shipping, which 1QFY27 has not;
+3. renal growth despite Chinese price pressure, which management is contesting through an anti-dumping petition;
+4. a full-year contribution from the acquired businesses, whose margins management puts below the group's.
+
+::: callout title="What would change our read" kind="debate"
+Evidence that FY26 was structural rather than cyclical would include three things:
+1. Organic export growth staying below ~10% once West Asia logistics normalize.
+2. Renal revenue declining for a second year without an anti-dumping duty.
+3. Receivable days staying above the FY26 level, which management attributed to 'better terms' extended to international customers. <!-- TR4Q26 p.12 -->
+
+Evidence that it was cyclical would be:
+- organic Europe growth holding in the high teens through FY27;
+- renal volumes recovering after a DGTR (Directorate General of Trade Remedies) determination.
+:::

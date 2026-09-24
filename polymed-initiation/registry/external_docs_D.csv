@@ -1,0 +1,15 @@
+doc_id,title,publisher,date,url,type,tier
+WEB_HOME,Polymed website homepage – product-category menu,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/,company_website,2
+WEB_INFUSION_THERAPY,Polymed website product category – Infusion Therapy,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/infusion-therapy/,company_website,2
+WEB_VASCULAR_ACCESS,Polymed website product category – Vascular Access,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/vascular-access/,company_website,2
+WEB_DIALYSIS,Polymed website product category – Dialysis & Renal Care,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/dialysis/,company_website,2
+WEB_TRANSFUSION_SYSTEM,Polymed website product category – Transfusion System,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/transfusion-system/,company_website,2
+WEB_ANAESTHESIA_RESPIRATORY_CARE,Polymed website product category – Anaesthesia & Respiratory Care,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/anaesthesia-respiratory-care/,company_website,2
+WEB_CRITICAL_CARE,Polymed website product category – Critical Care,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/critical-care/,company_website,2
+WEB_DIAGNOSTICS,Polymed website product category – Diagnostics,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/diagnostics/,company_website,2
+WEB_CARDIOLOGY,Polymed website product category – Cardiology,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/cardiology/,company_website,2
+WEB_ONCOLOGY,Polymed website product category – Oncology,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/oncology/,company_website,2
+WEB_GASTROENTEROLOGY,Polymed website product category – Gastroenterology,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/gastroenterology/,company_website,2
+WEB_UROLOGY,Polymed website product category – Urology,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/urology/,company_website,2
+WEB_SURGERY_AND_WOUND_DRAINAGE,Polymed website product category – Surgery and Wound Drainage,Poly Medicure (company website),2026-09-24,https://www.polymedicure.com/product-category/surgery-and-wound-drainage/,company_website,2
+WEBPROD_CARDIO,Polymed website product pages – cardiology products and Novocent Pro (13 pages),Poly Medicure (company website),2026-09-24,"https://www.polymedicure.com/product/{risor,serolin-pro,excedo-nc,excedo-sc,vasoguide,concath,ptfe-wire,aquareach,teravox,zinera-ptca,neofold-pro,sylera,novocent-pro}/",company_website,2

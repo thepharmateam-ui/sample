@@ -2,7 +2,7 @@
 
 ## How to read this report {#how-to-read}
 
-**Scope.** This is an initiating-coverage report on the business and the industry. It has no earnings estimates, valuation, rating or target price. Where management has given guidance, it is reported as management's target and attributed to the call or presentation in which it was given.
+**Scope.** This is an initiating-coverage report on the business and the industry. It has no earnings estimates, valuation, rating or target price. Where management has given guidance, it is reported as management's target and attributed to the call or presentation in which it was given. <!-- lint-ok -->
 
 **Every number is traceable.**
 - Each figure is drawn from a fact ledger built from company filings, presentations, call transcripts, rating-agency rationales, regulator texts and peer offer documents.
@@ -13,7 +13,7 @@
 **Conventions.**
 - Currency: rupee amounts are in Rs. mn and Rs. bn; company figures reported in crore or lakh are converted. <!-- lint-ok -->
 - Periods: fiscal years end on 31 March (FY26 = April 2025 to March 2026) and quarters are written 1QFY27. European and other overseas subsidiaries report on calendar years (CY25).
-- Growth is year-on-year (yoy) unless stated.
+- Growth is year-on-year (yoy) unless stated. <!-- lint-ok -->
 - Geography: "West Asia" refers to the region the company calls the Middle East. <!-- lint-ok -->
 - "Standalone" is Poly Medicure Ltd, the Indian listed entity. "Consolidated" adds the subsidiaries and the equity-accounted associate.
 

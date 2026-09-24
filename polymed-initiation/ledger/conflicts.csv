@@ -2,27 +2,520 @@ metric,entity,segment,geography,period,unit_std,fact_id,value,unit,doc_id,page,b
 product_launches,polymed consolidated,total,total,fy26,count,A-0007,30+,count,AR26,3,disclosed,[visual read] flywheel graphic (printed p.4)
 product_launches,polymed consolidated,total,total,fy26,count,A-0079,30+,count,AR26,8,disclosed,[visual read] MD's message
 product_launches,polymed consolidated,total,total,fy26,count,A-0125,35,count,AR26,14,disclosed,[visual read] Innovation page (printed p.27); bar chart also shows FY2026 35; MD letter says '30+'
+total_income,polymed consolidated,total,total,fy25,Rs mn,A-0019,1759.0,Rs cr,AR26,5,disclosed,[visual read] KPI page (printed p.8-9)
+total_income,polymed consolidated,total,total,fy25,Rs mn,A-0256,175895.9,Rs lakh,AR26,47,disclosed,[visual read] MD&A financial snapshot
+total_income,polymed consolidated,total,total,fy25,Rs mn,CB-2344,1670,Rs cr,DKCIT,10,disclosed,"[visual read] chart titled 'Total Income'; FY values equal revenue from operations (e.g. FY25 1,670) while Q1FY26 445 ≈ revenue + other income – labelling inconsistent"
+ebitda,polymed consolidated,total,total,fy25,Rs mn,A-0029,458.6,Rs cr,AR26,5,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy25,Rs mn,A-0045,45856.6,Rs lakh,AR26,6,disclosed,[visual read]
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CA-0487,451,Rs cr,TR4Q25,3,management_statement,
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CB-0471,459,Rs cr,DKAGM31,18,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CB-0755,458.6,Rs cr,DK4Q26,10,reported,operating EBITDA excl. other income; FY26 excludes acquisition-related expenses Rs 9.7 cr; 4QFY26 hit by acquisition consolidation and one-time regulatory & employee cost provisions in a subsidiary
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CB-1142,459,Rs cr,DK4Q26,32,disclosed,[visual read] operating EBITDA; margin legend shown but margin values not labelled on slide
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CB-2345,453,Rs cr,DKCIT,10,disclosed,"[visual read] 'EBITDA#' (footnote not reproduced); differs from operating EBITDA in later decks (FY22 216, FY23 267, FY24 361, FY25 458.6/459)"
+ebitda,polymed consolidated,total,total,fy25,Rs mn,CB-2632,452.8,Rs cr,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda_margin,polymed consolidated,total,total,fy25,%,A-0030,27.5,%,AR26,5,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy25,%,B-0739,28.8,%,CRR2606,1,third_party,CRISIL operating margin
+ebitda_margin,polymed consolidated,total,total,fy25,%,CA-0270,27.5,%,TR3Q26,11,management_statement,approx. - printed 'close to 27.5'; HB: FY26 guide set below FY25 actual because acquisitions were being worked on
+ebitda_margin,polymed consolidated,total,total,fy25,%,CA-0486,27.1,%,TR4Q25,3,management_statement,from 26% in FY24; TR3Q26 p.11 HB recalls FY25 'close to 27.5%'
+ebitda_margin,polymed consolidated,total,total,fy25,%,CB-0472,27.5,%,DKAGM31,18,disclosed,[visual read] operating EBITDA margin
+ebitda_margin,polymed consolidated,total,total,fy25,%,CB-0761,27.5,%,DK4Q26,10,reported,operating EBITDA excl. other income
+ebitda_margin,polymed consolidated,total,total,fy25,%,CB-2346,27,%,DKCIT,10,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy25,%,CB-2638,27.1,%,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda_margin,polymed consolidated,total,total,fy24,%,A-0031,26.2,%,AR26,5,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy24,%,CB-0159,26.2,%,DK1Q27,15,disclosed,[visual read] operating EBITDA margin
+ebitda_margin,polymed consolidated,total,total,fy24,%,CB-0465,26.2,%,DKAGM31,18,disclosed,[visual read] operating EBITDA margin
+ebitda_margin,polymed consolidated,total,total,fy24,%,CB-2338,26,%,DKCIT,10,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy24,%,CB-2639,26.0,%,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda_margin,polymed consolidated,total,total,fy24,%,CC-0744,30.49,%,DKJUL24,18,disclosed,broad EBITDA
+ebitda_margin,polymed consolidated,total,total,fy23,%,A-0032,24.0,%,AR26,5,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy23,%,B-0790,25.8,%,CRR2402,1,third_party,
+ebitda_margin,polymed consolidated,total,total,fy23,%,CB-0458,23.9,%,DKAGM31,18,disclosed,[visual read] operating EBITDA margin
+ebitda_margin,polymed consolidated,total,total,fy23,%,CB-2330,24,%,DKCIT,10,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy23,%,CC-0743,27.21,%,DKJUL24,18,disclosed,broad EBITDA; DK2Q24 p.10: 24.16%
+ebitda_margin,polymed consolidated,total,total,fy23,%,CC-0786,24.16,%,DK2Q24,10,disclosed,vs FY23 guidance ~25% (May-2022)
+ebitda_margin,polymed consolidated,total,total,fy22,%,A-0033,23.3,%,AR26,5,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy22,%,B-0762,24.8,%,CR23,10,third_party,"FY21 28.7, FY20 25.8 (CRISIL-adjusted)"
+ebitda_margin,polymed consolidated,total,total,fy22,%,CB-0152,23.4,%,DK1Q27,15,disclosed,[visual read] operating EBITDA margin
+ebitda_margin,polymed consolidated,total,total,fy22,%,CB-2322,23,%,DKCIT,10,disclosed,[visual read]
+ebitda_margin,polymed consolidated,total,total,fy22,%,CC-0742,27.46,%,DKJUL24,18,disclosed,broad EBITDA; DK2Q24 p.10: 23.09%
+ebitda_margin,polymed consolidated,total,total,fy22,%,CC-0785,23.09,%,DK2Q24,10,disclosed,vs FY22 guidance 17-18% revenue / >25% then 24.5-25% EBITDA
+roe,polymed consolidated,total,total,fy25,%,A-0038,18.5,%,AR26,5,disclosed,[visual read] adjusted definition as above
+roe,polymed consolidated,total,total,fy25,%,CB-1146,18,%,DK4Q26,32,disclosed,[visual read] '*' adjusted as for RoCE
+roe,polymed consolidated,total,total,fy25,%,CB-1566,18,%,DK3Q26,14,disclosed,[visual read]; FY25 ROE marked '*' (adjusted)
+roe,polymed consolidated,total,total,fy25,%,CB-1909,18,%,DK2Q26,20,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy25,%,CB-2074,18,%,DK1Q26,18,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy25,%,CB-2301,16,%,DKAGM30,24,disclosed,[visual read] PAT/average equity; FY25 16% vs adjusted 18%* elsewhere; entity not stated
+roe,polymed consolidated,total,total,fy25,%,CB-2351,18,%,DKCIT,10,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy26,Rs mn,A-0048,32073.0,Rs lakh,AR26,6,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy26,Rs mn,A-0075,321,Rs cr,AR26,8,disclosed,[visual read] MD's message
+pat,polymed consolidated,total,total,fy26,Rs mn,A-0625,32072.99,Rs lakh,AR26,98,reported,consolidated incl. NCI
+pat,polymed consolidated,total,total,fy26,Rs mn,B-0736,344.5,Rs cr,CRR2606,1,third_party,CRISIL KFI
+pat,polymed consolidated,total,total,fy26,Rs mn,CB-0167,321,Rs cr,DK1Q27,15,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy26,Rs mn,CB-0480,321,Rs cr,DKAGM31,18,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy26,Rs mn,CB-0800,320.7,Rs cr,DK4Q26,10,reported,
+pat,polymed consolidated,total,total,fy26,Rs mn,CB-1149,321,Rs cr,DK4Q26,32,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,A-0049,33855.7,Rs lakh,AR26,6,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,B-0737,228.2,Rs cr,CRR2606,1,third_party,as printed; inconsistent with printed FY25 PAT margin 20.18% on 1675.8 (implies ~338) - likely typo in CRISIL table; verify against FY25 AR
+pat,polymed consolidated,total,total,fy25,Rs mn,CA-0489,338.6,Rs cr,TR4Q25,3,management_statement,from Rs258cr in FY24
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-0473,339,Rs cr,DKAGM31,18,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-0801,338.6,Rs cr,DK4Q26,10,reported,
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-1143,339,Rs cr,DK4Q26,32,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-2194,338.6,Rs cr,DKAGM30,20,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-2347,339,Rs cr,DKCIT,10,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy25,Rs mn,CB-2670,338.6,Rs cr,DK4Q25,13,reported,
+roce,polymed consolidated,total,total,fy26,%,A-0061,16.4,%,AR26,6,disclosed,"[visual read] *** EBIT excl. unutilised QIP funds' treasury income, acquisition-related costs and one-time items; capital employed excl. unutilised QIP funds"
+roce,polymed consolidated,total,total,fy26,%,A-0341,16.4,%,AR26,48,disclosed,[visual read] numerator printed as PAT in table but footnote says EBIT
+roce,polymed consolidated,total,total,fy26,%,CB-1151,16,%,DK4Q26,32,disclosed,"[visual read] '*' excludes Aug-2024 QIP amount, QIP treasury income, labour code impact and acquisition cost; FY26 lower due to partial-period consolidation of acquisitions and high capex"
+roce,polymed consolidated,total,total,fy25,%,A-0062,23.5,%,AR26,6,disclosed,[visual read] adjusted definition
+roce,polymed consolidated,total,total,fy25,%,CB-1145,23,%,DK4Q26,32,disclosed,"[visual read] '*' excludes Aug-2024 QIP amount, QIP treasury income, labour code impact and acquisition cost; FY26 lower due to partial-period consolidation of acquisitions and high capex"
+roce,polymed consolidated,total,total,fy25,%,CB-1565,23,%,DK3Q26,14,disclosed,[visual read]
+roce,polymed consolidated,total,total,fy25,%,CB-1908,23,%,DK2Q26,20,disclosed,[visual read] '*' excl. Aug-2024 QIP amount & its treasury income; '**' trailing 12 months
+roce,polymed consolidated,total,total,fy25,%,CB-2073,23,%,DK1Q26,18,disclosed,[visual read] '*' excl. Aug-2024 QIP & treasury income; '**' TTM
+roce,polymed consolidated,total,total,fy25,%,CB-2300,15,%,DKAGM30,24,disclosed,[visual read] unadjusted: EBIT/(equity + total debt + DTL); CONFLICT with adjusted ROCE 19%/23%/23%* in other decks; entity (consolidated/standalone) not stated
+roce,polymed consolidated,total,total,fy25,%,CB-2350,23,%,DKCIT,10,disclosed,[visual read] FY25 '*' excl. Aug-2024 QIP & treasury income
 revenue,polymed consolidated,total,total,fy20,Rs mn,A-0087,7.0,Rs bn,AR26,9,disclosed,[visual read] 30-years story
+revenue,polymed consolidated,total,total,fy20,Rs mn,B-0362,68723.9,Rs lakh,AR20,34,reported,
+revenue,polymed consolidated,total,total,fy20,Rs mn,B-0597,687.24,Rs cr,AR24,4,disclosed,"[visual read] consolidated KPI chart FY20-FY24: 687.24, 786.47, 923.06, 1,115.23, 1,375.79"
+revenue,polymed consolidated,total,total,fy20,Rs mn,B-0760,688,Rs cr,CR23,10,third_party,CRISIL-adjusted
 revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0036,687,Rs cr,DK1Q27,6,disclosed,consolidated ('# basis consolidated financial statements')
 revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0068,687,Rs cr,DK1Q27,8,disclosed,timeline label '2020'; FY basis presumed (2020/2026 values match FY20/FY26)
 revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0078,7.0,INR bn,DK1Q27,9,disclosed,printed '~INR 7.0 Bn'
-revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0427,687,Rs cr,DKAGM31,14,disclosed,printed '~INR 687 Cr' (DK1Q27 p.9 printed '~INR 7.0 Bn')
+revenue,polymed consolidated,total,total,fy20,Rs mn,CB-0433,687,Rs cr,DKAGM31,14,disclosed,printed '~INR 687 Cr' (DK1Q27 p.9 printed '~INR 7.0 Bn')
+revenue,polymed consolidated,total,total,fy20,Rs mn,CC-0911,687.24,Rs cr,DKMAY22,15,disclosed,consolidated ('* All subsidiaries'); values in text layer; series order checked on rendered slide; value in text layer
+revenue,polymed consolidated,total,total,fy20,Rs mn,CC-1031,687,Rs cr,DKJUN20,3,disclosed,
+revenue,polymed consolidated,total,total,fy20,Rs mn,D-0554,6872.39,Rs mn,PD21,125,reported,revenue from operations
 ebitda,polymed consolidated,total,total,fy20,Rs mn,A-0088,1.6,Rs bn,AR26,9,disclosed,[visual read] 30-years story
+ebitda,polymed consolidated,total,total,fy20,Rs mn,B-0363,18456.54,Rs lakh,AR20,34,reported,"incl. other income 1,846.34"
 ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0069,166,Rs cr,DK1Q27,8,disclosed,timeline label '2020'; FY basis presumed
 ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0080,1.7,INR bn,DK1Q27,9,disclosed,operating EBITDA; printed '~INR 1.7 Bn'
-ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0428,166,Rs cr,DKAGM31,14,disclosed,operating EBITDA; printed '~INR 166 Cr'
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CB-0434,166,Rs cr,DKAGM31,14,disclosed,operating EBITDA; printed '~INR 166 Cr'
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CC-0912,163.96,Rs cr,DKMAY22,15,disclosed,consolidated ('* All subsidiaries'); values in text layer; series order checked on rendered slide; value in text layer
+ebitda,polymed consolidated,total,total,fy20,Rs mn,CC-1044,163.96,Rs cr,DKJUN20,12,disclosed,series order checked on rendered slide; value in text layer
 medtech_exports,us medtech exports,total,us,n.s. (bcg-cii aug-2025),USD bn,A-0156,55,USD bn,AR26,42,third_party,[visual read] MD&A chart; CONFLICT: MD&A text on same page says US exports 'approximately USD 75 billion'
 medtech_exports,us medtech exports,total,us,n.s. (bcg-cii aug-2025),USD bn,A-0157,75,USD bn,AR26,42,third_party,[visual read] MD&A text; CONFLICT with chart on same page (USA 55)
 medtech_exports,china medtech exports,total,china,n.s. (bcg-cii aug-2025),USD bn,A-0158,48,USD bn,AR26,42,third_party,"[visual read] MD&A text; CONFLICT with chart on same page (China 16, 5% share)"
 medtech_exports,china medtech exports,total,china,n.s. (bcg-cii aug-2025),USD bn,A-0159,16,USD bn,AR26,42,third_party,[visual read] MD&A chart; CONFLICT with text (USD 48 bn)
+current_liabilities,polymed consolidated,total,total,as of 31-mar-2026,Rs mn,A-0262,57552.2,Rs lakh,AR26,47,disclosed,"[visual read] FY25 37,006.9"
+current_liabilities,polymed consolidated,total,total,as of 31-mar-2026,Rs mn,CB-0555,279.2,Rs cr,DKAGM31,20,reported,consolidated balance sheet summary; shown in brackets (deduction)
+revenue_growth_yoy,polymed consolidated,total,india,fy26,%,A-0265,19.6,%,AR26,47,disclosed,[visual read] text: 'aided by import-substitution demand and the Company's widening hospital presence'
+revenue_growth_yoy,polymed consolidated,total,india,fy26,%,CA-0108,20,%,TR4Q26,5,management_statement,approx. - printed 'around 20'
+revenue_growth_yoy,polymed consolidated,total,india,fy26,%,CB-0601,19.6,%,DK4Q26,7,reported,
+revenue_growth_yoy,polymed consolidated,total,india,fy26,%,CB-0821,19.6,%,DK4Q26,11,reported,
+r_and_d_expense,polymed consolidated,total,total,fy25,Rs mn,A-0305,2402.5,Rs lakh,AR26,48,disclosed,[visual read]
+r_and_d_expense,polymed consolidated,total,total,fy25,Rs mn,A-0798,2457.11,Rs lakh,AR25,62,disclosed,"AR25 MD&A; restated to 2,402.49 in AR26 (54.62 depreciation regrouped)"
+r_and_d_expense,polymed consolidated,total,total,fy25,Rs mn,CB-0735,24.0,Rs cr,DK4Q26,10,reported,
+r_and_d_expense,polymed consolidated,total,total,fy25,Rs mn,CB-2619,24.6,Rs cr,DK4Q25,13,reported,
+other_expenses,polymed consolidated,total,total,fy26,Rs mn,A-0308,40400.0,Rs lakh,AR26,48,disclosed,[visual read]
+other_expenses,polymed consolidated,total,total,fy26,Rs mn,A-0621,40399.97,Rs lakh,AR26,98,reported,consolidated; includes acquisition-related costs (not in exceptional line of P&L)
+other_expenses,polymed consolidated,total,total,fy26,Rs mn,CB-0740,394.3,Rs cr,DK4Q26,10,reported,
+r_and_d_pct_revenue,polymed consolidated,total,total,fy26,%,A-0343,1.59,%,AR26,49,disclosed,[visual read] MD&A risk table (printed p.96); entity basis (standalone vs consolidated) not stated
+r_and_d_pct_revenue,polymed consolidated,total,total,fy26,%,CB-1091,1.7,%,DK4Q26,37,disclosed,'currently' as of May-2026
+investment_in_associate,"ultra for medical products (ultra med), egypt (associate)",total,egypt,as of 31-mar-2026,Rs mn,A-0401,88.67,Rs lakh,AR26,40,reported,Annexure-3
+investment_in_associate,"ultra for medical products (ultra med), egypt (associate)",total,egypt,as of 31-mar-2026,Rs mn,A-0637,1517.79,Rs lakh,AR26,97,reported,equity-accounted carrying value
+r_and_d_expense,polymed standalone,total,total,fy25,Rs mn,A-0413,2457.11,Rs lakh,AR26,51,reported,"Annexure-8; CONFLICT: MD&A (AR26 p.48) gives FY25 R&D expense Rs 2,402.5 lakh"
+r_and_d_expense,polymed standalone,total,total,fy25,Rs mn,A-0449,2398.84,Rs lakh,AR26,64,reported,"standalone P&L; Annexure-8 shows FY25 2,457.11"
+r_and_d_expense,polymed standalone,total,total,fy25,Rs mn,CB-0639,24.0,Rs cr,DK4Q26,9,reported,
+r_and_d_expense,polymed standalone,total,total,fy25,Rs mn,CB-2714,24.5,Rs cr,DK4Q25,14,reported,
+cash_and_equivalents,polymed standalone,total,total,as of 31-mar-2026,Rs mn,A-0460,593.81,Rs lakh,AR26,63,reported,"standalone BS; other bank balances 3,664.18 (FY25 14,264.45)"
+cash_and_equivalents,polymed standalone,total,total,as of 31-mar-2026,Rs mn,CB-0568,796.8,Rs cr,DK4Q26,4,disclosed,
+cash_and_equivalents,polymed standalone,total,total,as of 31-mar-2026,Rs mn,CB-0914,796.8,Rs cr,DK4Q26,13,reported,"standalone balance sheet; consolidated columns on same slide identical to DKAGM31 p.20; **includes investments, other bank balances and bank deposits"
+inventory_raw_material,polymed standalone,total,total,as of 31-mar-2026,Rs mn,A-0496,16043.01,Rs lakh,AR26,78,reported,standalone RM inventory (note 27)
+inventory_raw_material,polymed standalone,total,total,as of 31-mar-2026,Rs mn,A-0590,18039.35,Rs lakh,AR26,70,reported,standalone note 9 (incl. packing materials)
+dividend_paid,polymed standalone,total,total,fy26,Rs mn,A-0546,3546.4,Rs lakh,AR26,87,reported,"final dividend for FY25 paid in FY26; proposed FY26 dividend outgo approx. Rs 3,547.58 lakh"
+dividend_paid,polymed standalone,total,total,fy26,Rs mn,CB-0976,-35.4,Rs cr,DK4Q26,14,disclosed,"cash flow summary 'drawn to reflect business performance, not necessarily in line with GAAP'; negative = outflow (printed in brackets)"
+capex,polymed consolidated,total,total,fy26,Rs mn,A-0630,-30839.19,Rs lakh,AR26,99,reported,"consolidated cash flow; outflow in parentheses; FY25 (33,102.54)"
+capex,polymed consolidated,total,total,fy26,Rs mn,CA-0127,296,Rs cr,TR4Q26,5,management_statement,approx. - printed 'around 296'; repeated p.7 'Last year was INR296 crores'
+capex,polymed consolidated,total,total,fy26,Rs mn,CB-0603,296,Rs cr,DK4Q26,7,disclosed,p.14 cash flow shows capex 308.4 consolidated / 295.5 standalone
+cash_and_equivalents,polymed consolidated,total,total,as of 31-mar-2026,Rs mn,A-0640,5122.82,Rs lakh,AR26,97,reported,"consolidated BS; other bank balances 3,664.18; current investments 73,915.74"
+cash_and_equivalents,polymed consolidated,total,total,as of 31-mar-2026,Rs mn,CB-0551,842.2,Rs cr,DKAGM31,20,reported,"consolidated balance sheet summary; **includes investments, other bank balances and bank deposits (current & non-current)"
+revenue_growth_yoy,polymed consolidated,total,total,fy25,%,A-0739,21,%,AR25,21,disclosed,AR25 MD letter
+revenue_growth_yoy,polymed consolidated,total,total,fy25,%,A-0795,21.37,%,AR25,62,disclosed,"AR25 MD&A; drivers: IV cannula, prefilled syringes, blood bags"
+revenue_growth_yoy,polymed consolidated,total,total,fy25,%,CA-0485,21.5,%,TR4Q25,3,management_statement,approx. - printed 'around 21.5'
+revenue_growth_yoy,polymed consolidated,total,total,fy25,%,CB-2594,21.4,%,DK4Q25,13,reported,consolidated
+market_size,india medtech market,total,india,fy25,USD bn,A-0758,15.33,USD bn,AR25,54,third_party,AR25 MD&A; source not named on page (EY analysis cited on p.57)
+market_size,india medtech market,total,india,fy25,USD bn,CB-0411,16,USD bn,DKAGM31,9,third_party,printed '~USD 16 Bn'; Source: BCG & CII 'Unlocking India for the World in MedTech' (Aug 2025); BCG–KIHT 'Poised for Takeoff: MedTech in India' (May 2026)
+roce,polymed standalone,total,total,fy26,%,A-0777,13.72,%,AR26,94,reported,standalone unadjusted ROCE (EBIT/capital employed)
+roce,polymed standalone,total,total,fy26,%,CB-0569,17.4,%,DK4Q26,4,disclosed,ROCE = EBIT/avg capital employed; capital employed excl. remaining QIP funds; EBIT excl. treasury income and one-time Labour Code impact
+roe,polymed standalone,total,total,fy25,%,A-0783,15.77,%,AR25,151,reported,AR25; FY24 18.70%
+roe,polymed standalone,total,total,fy25,%,CB-2862,18.3,%,DK4Q25,17,disclosed,[visual read] standalone
+roce,polymed standalone,total,total,fy25,%,A-0784,15.32,%,AR25,151,reported,AR25; FY24 20.94%
+roce,polymed standalone,total,total,fy25,%,CB-2572,23.4,%,DK4Q25,10,disclosed,excl. Aug-2024 QIP amount & treasury income; standalone
+roce,polymed standalone,total,total,fy25,%,CB-2581,23.4,%,DK4Q25,11,disclosed,excl. Aug-2024 QIP amount & treasury income; standalone
+roce,polymed standalone,total,total,fy25,%,CB-2861,23.4,%,DK4Q25,17,disclosed,[visual read] standalone; FY25 excl. Aug-2024 QIP & treasury income
+pat,polymed consolidated,total,total,fy24,Rs mn,A-0810,25825.97,Rs lakh,AR25,36,reported,"AR25 Directors' Report; standalone FY24 25,172.34"
+pat,polymed consolidated,total,total,fy24,Rs mn,B-0596,25825.97,Rs lakh,AR24,49,reported,incl. share of associate 252.68
+pat,polymed consolidated,total,total,fy24,Rs mn,B-0599,258.25,Rs cr,AR24,4,disclosed,[visual read] KPI chart FY20-FY24 PAT
+pat,polymed consolidated,total,total,fy24,Rs mn,B-0795,266.89,Rs cr,CRR2503a,1,third_party,"AR24 consolidated PAT 25,825.97 lakh; CRISIL figure differs (adjusted)"
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-0160,258,Rs cr,DK1Q27,15,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-0466,258,Rs cr,DKAGM31,18,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-1137,258,Rs cr,DK4Q26,32,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-2190,258.2,Rs cr,DKAGM30,20,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-2339,258,Rs cr,DKCIT,10,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-2671,258.3,Rs cr,DK4Q25,13,reported,
+pat,polymed consolidated,total,total,fy24,Rs mn,CB-3166,258.26,Rs cr,DK2Q25,3,disclosed,
+pat,polymed consolidated,total,total,fy24,Rs mn,CC-0679,258,Rs cr,TR4Q24,4,management_statement,stated 20-May-2024 (4QFY24 call)
+pat,polymed consolidated,total,total,fy24,Rs mn,CC-0746,258.26,Rs cr,DKJUL24,18,disclosed,FY22/FY23 PAT% labels (17.28%/15.87%) equal DK2Q24 p.10's FY21/FY22 labels - possible label shift
+r_and_d_expense,polymed standalone,total,total,fy24,Rs mn,A-0817,1944.23,Rs lakh,AR25,69,reported,AR25 Annexure-8; capital R&D nil
+r_and_d_expense,polymed standalone,total,total,fy24,Rs mn,B-0617,1892.63,Rs lakh,AR24,121,reported,
+r_and_d_expense,polymed standalone,total,total,fy24,Rs mn,CB-2715,19.4,Rs cr,DK4Q25,14,reported,
+r_and_d_expense,polymed standalone,total,total,3qfy26,Rs mn,A-0947,612.64,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+r_and_d_expense,polymed standalone,total,total,3qfy26,Rs mn,A-1060,500.07,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed standalone,total,total,3qfy26,Rs mn,CB-1249,5.0,Rs cr,DK3Q26,10,reported,
+r_and_d_expense,polymed standalone,total,total,4qfy25,Rs mn,A-0948,645.8,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+r_and_d_expense,polymed standalone,total,total,4qfy25,Rs mn,CB-0637,6.5,Rs cr,DK4Q26,9,reported,
+r_and_d_expense,polymed standalone,total,total,4qfy25,Rs mn,CB-2712,6.6,Rs cr,DK4Q25,14,reported,
+r_and_d_expense,polymed consolidated,total,total,3qfy26,Rs mn,A-0950,708.39,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+r_and_d_expense,polymed consolidated,total,total,3qfy26,Rs mn,A-1064,595.82,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed consolidated,total,total,3qfy26,Rs mn,CB-1368,6.0,Rs cr,DK3Q26,11,reported,
+r_and_d_expense,polymed consolidated,total,total,4qfy25,Rs mn,A-0951,647.7,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+r_and_d_expense,polymed consolidated,total,total,4qfy25,Rs mn,CB-0733,6.5,Rs cr,DK4Q26,10,reported,
+r_and_d_expense,polymed consolidated,total,total,4qfy25,Rs mn,CB-2617,6.6,Rs cr,DK4Q25,13,reported,
+finance_cost,polymed standalone,total,total,4qfy25,Rs mn,A-0954,216.65,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+finance_cost,polymed standalone,total,total,4qfy25,Rs mn,CB-0675,2.2,Rs cr,DK4Q26,9,reported,
+finance_cost,polymed standalone,total,total,4qfy25,Rs mn,CB-2745,2.2,Rs cr,DK4Q25,14,reported,
+other_expenses,polymed consolidated,total,total,3qfy26,Rs mn,A-0968,10555.1,Rs lakh,RS4Q26,4,reported,"[visual read] RS4Q26 results table (OCR text garbled); columns: SA Q4FY26, SA Q3FY26, SA Q4FY25 | CONS Q4FY26, CONS Q3FY26, CONS Q4FY25"
+other_expenses,polymed consolidated,total,total,3qfy26,Rs mn,A-1080,10555.1,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+other_expenses,polymed consolidated,total,total,3qfy26,Rs mn,CB-1373,99.1,Rs cr,DK3Q26,11,reported,
+employee_cost,polymed standalone,total,total,3qfy25,Rs mn,A-1053,7112.62,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+employee_cost,polymed standalone,total,total,3qfy25,Rs mn,CB-1243,71.1,Rs cr,DK3Q26,10,reported,
+employee_cost,polymed standalone,total,total,3qfy25,Rs mn,CB-3005,72.8,Rs cr,DK3Q25,15,reported,3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+employee_cost,polymed standalone,total,total,9mfy25,Rs mn,A-1055,20810.48,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+employee_cost,polymed standalone,total,total,9mfy25,Rs mn,CB-1246,208.1,Rs cr,DK3Q26,10,reported,
+employee_cost,polymed standalone,total,total,9mfy25,Rs mn,CB-3007,212.2,Rs cr,DK3Q25,15,reported,3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+employee_cost,polymed consolidated,total,total,3qfy25,Rs mn,A-1057,7622.67,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+employee_cost,polymed consolidated,total,total,3qfy25,Rs mn,CB-1361,76.2,Rs cr,DK3Q26,11,reported,includes acquired subsidiaries
+employee_cost,polymed consolidated,total,total,3qfy25,Rs mn,CB-2913,77.9,Rs cr,DK3Q25,14,reported,DK3Q26 p.11 restates 3QFY25 to 76.2 and 9MFY25 to 222.6
+employee_cost,polymed consolidated,total,total,9mfy25,Rs mn,A-1059,22264.13,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+employee_cost,polymed consolidated,total,total,9mfy25,Rs mn,CB-1364,222.6,Rs cr,DK3Q26,11,reported,includes acquired subsidiaries
+employee_cost,polymed consolidated,total,total,9mfy25,Rs mn,CB-2915,226.8,Rs cr,DK3Q25,14,reported,DK3Q26 p.11 restates 3QFY25 to 76.2 and 9MFY25 to 222.6
+r_and_d_expense,polymed standalone,total,total,3qfy25,Rs mn,A-1061,584.78,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed standalone,total,total,3qfy25,Rs mn,CB-1250,5.8,Rs cr,DK3Q26,10,reported,
+r_and_d_expense,polymed standalone,total,total,3qfy25,Rs mn,CB-3011,4.0,Rs cr,DK3Q25,15,reported,3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+r_and_d_expense,polymed standalone,total,total,9mfy25,Rs mn,A-1063,1793.74,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed standalone,total,total,9mfy25,Rs mn,CB-1253,17.9,Rs cr,DK3Q26,10,reported,
+r_and_d_expense,polymed standalone,total,total,9mfy25,Rs mn,CB-3013,13.3,Rs cr,DK3Q25,15,reported,3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+r_and_d_expense,polymed consolidated,total,total,3qfy25,Rs mn,A-1065,585.3,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed consolidated,total,total,3qfy25,Rs mn,CB-1369,5.9,Rs cr,DK3Q26,11,reported,
+r_and_d_expense,polymed consolidated,total,total,3qfy25,Rs mn,CB-2919,4.0,Rs cr,DK3Q25,14,reported,DK3Q26 p.11 restates 3QFY25 R&D to 5.9 and 9MFY25 to 18.0 (reclassification)
+r_and_d_expense,polymed consolidated,total,total,9mfy25,Rs mn,A-1067,1795.48,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+r_and_d_expense,polymed consolidated,total,total,9mfy25,Rs mn,CB-1372,18.0,Rs cr,DK3Q26,11,reported,
+r_and_d_expense,polymed consolidated,total,total,9mfy25,Rs mn,CB-2921,13.3,Rs cr,DK3Q25,14,reported,DK3Q26 p.11 restates 3QFY25 R&D to 5.9 and 9MFY25 to 18.0 (reclassification)
+other_expenses,polymed consolidated,total,total,9mfy26,Rs mn,A-1082,29093.14,Rs lakh,RS3Q26,3,reported,"[visual read] RS3Q26 table; columns used: SA Q3FY26, SA Q3FY25, SA 9MFY26, SA 9MFY25 | CONS Q3FY26, CONS Q3FY25, CONS 9MFY26, CONS 9MFY25; Q3FY26 as originally reported (RS4Q26 later shows reclassified employee/R&D/D&A for Q3FY26)"
+other_expenses,polymed consolidated,total,total,9mfy26,Rs mn,CB-1376,281.2,Rs cr,DK3Q26,11,reported,
+other_expenses,polymed consolidated,total,total,2qfy26,Rs mn,A-1167,9690.62,Rs lakh,RS2Q26,2,reported,"[visual read] RS2Q26 table (OCR text layer garbled); columns used: SA Q2FY26, SA Q2FY25, SA H1FY26, SA H1FY25 | CONS Q2FY26, CONS Q2FY25, CONS H1FY26, CONS H1FY25"
+other_expenses,polymed consolidated,total,total,2qfy26,Rs mn,CB-1375,93.7,Rs cr,DK3Q26,11,reported,
+other_expenses,polymed consolidated,total,total,2qfy26,Rs mn,CB-1670,93.7,Rs cr,DK2Q26,15,reported,
+other_expenses,polymed consolidated,total,total,1hfy26,Rs mn,A-1169,18538.04,Rs lakh,RS2Q26,2,reported,"[visual read] RS2Q26 table (OCR text layer garbled); columns used: SA Q2FY26, SA Q2FY25, SA H1FY26, SA H1FY25 | CONS Q2FY26, CONS Q2FY25, CONS H1FY26, CONS H1FY25"
+other_expenses,polymed consolidated,total,total,1hfy26,Rs mn,CB-1673,182.2,Rs cr,DK2Q26,15,reported,
+revenue,polymed standalone,total,total,1qfy25,Rs mn,A-1192,36742.47,Rs lakh,RS1Q26,3,reported,"[visual read] RS1Q26 table; columns used: SA Q1FY26, SA Q1FY25 | CONS Q1FY26, CONS Q1FY25; NB RS2Q26 comparative shows Q1FY26 other income SA 4,152.26 / CONS 4,211.80 (different from 4,109.55 / 4,169.09 here and in RS1Q27)"
+revenue,polymed standalone,total,total,1qfy25,Rs mn,CC-0768,384,Rs cr,DKJUL24,22,disclosed,highest quarterly net sales
+r_and_d_expense,polymed standalone,total,total,1qfy26,Rs mn,A-1211,665.9,Rs lakh,RS1Q26,3,reported,"[visual read] RS1Q26 table; columns used: SA Q1FY26, SA Q1FY25 | CONS Q1FY26, CONS Q1FY25; NB RS2Q26 comparative shows Q1FY26 other income SA 4,152.26 / CONS 4,211.80 (different from 4,109.55 / 4,169.09 here and in RS1Q27)"
+r_and_d_expense,polymed standalone,total,total,1qfy26,Rs mn,CB-0220,7.3,Rs cr,DK1Q27,24,reported,
+r_and_d_expense,polymed consolidated,total,total,1qfy26,Rs mn,A-1213,668.05,Rs lakh,RS1Q26,3,reported,"[visual read] RS1Q26 table; columns used: SA Q1FY26, SA Q1FY25 | CONS Q1FY26, CONS Q1FY25; NB RS2Q26 comparative shows Q1FY26 other income SA 4,152.26 / CONS 4,211.80 (different from 4,109.55 / 4,169.09 here and in RS1Q27)"
+r_and_d_expense,polymed consolidated,total,total,1qfy26,Rs mn,CB-0268,7.3,Rs cr,DK1Q27,25,reported,
+r_and_d_expense,polymed consolidated,total,total,1qfy26,Rs mn,CB-1665,6.7,Rs cr,DK2Q26,15,reported,1QFY26 shown as 6.7 here vs 7.3 in DK1Q27 p.25 (reclassified)
+r_and_d_expense,polymed consolidated,total,total,1qfy26,Rs mn,CB-1991,6.7,Rs cr,DK1Q26,15,reported,restated to 7.3 in DK1Q27 p.25
+r_and_d_expense,polymed consolidated,total,total,1qfy25,Rs mn,A-1214,556.81,Rs lakh,RS1Q26,3,reported,"[visual read] RS1Q26 table; columns used: SA Q1FY26, SA Q1FY25 | CONS Q1FY26, CONS Q1FY25; NB RS2Q26 comparative shows Q1FY26 other income SA 4,152.26 / CONS 4,211.80 (different from 4,109.55 / 4,169.09 here and in RS1Q27)"
+r_and_d_expense,polymed consolidated,total,total,1qfy25,Rs mn,CB-1992,5.6,Rs cr,DK1Q26,15,reported,restated to 7.3 in DK1Q27 p.25
+r_and_d_expense,polymed consolidated,total,total,1qfy25,Rs mn,D-0205,412.0,Rs lakh,PD24,46,disclosed,"MD&A p.87 gives 412.05; investor decks may report a different R&D figure (definition, e.g. incl. capex, not stated here)"
+ebitda,polymed consolidated,total,total,fy16,Rs mn,B-0176,9404.19,Rs lakh,AR16,21,reported,incl. other income
+ebitda,polymed consolidated,total,total,fy16,Rs mn,CC-1043,85.78,Rs cr,DKJUN20,12,disclosed,series order checked on rendered slide; value in text layer; DK2019 p.10 shows FY16 EBITDA 94.04
+ebitda,polymed consolidated,total,total,fy16,Rs mn,CC-1073,94.04,Rs cr,DK2019,10,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKJUN20 p.12 FY16 EBITDA 85.78 (definition differs)
+ebitda,polymed consolidated,total,total,fy19,Rs mn,B-0279,14911.73,Rs lakh,AR19,33,reported,"incl. other income 1,826.71"
+ebitda,polymed consolidated,total,total,fy19,Rs mn,CC-1017,129.45,Rs cr,DKNOV20,21,disclosed,series order checked on rendered slide; value in text layer; DK2019 p.10 shows 149.12
+ebitda,polymed consolidated,total,total,fy19,Rs mn,CC-1076,149.12,Rs cr,DK2019,10,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKNOV20/DKJUN20 129.45
+ebitda,polymed consolidated,total,total,fy18,Rs mn,B-0280,13596.03,Rs lakh,AR19,33,reported,
+ebitda,polymed consolidated,total,total,fy18,Rs mn,CC-1016,120.34,Rs cr,DKNOV20,21,disclosed,series order checked on rendered slide; value in text layer; DK2019 p.10 shows 135.96
+ebitda,polymed consolidated,total,total,fy18,Rs mn,CC-1075,135.96,Rs cr,DK2019,10,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKNOV20/DKJUN20 120.34
+pat,polymed consolidated,total,total,fy19,Rs mn,B-0281,6539.9,Rs lakh,AR19,33,reported,directors' report table (before share of associate?); KPI chart shows 65.40 cr
+pat,polymed consolidated,total,total,fy19,Rs mn,B-0365,6679.78,Rs lakh,AR20,34,reported,"FY19 comparative in AR20 includes share of associate (139.88); AR19 directors' report table showed 6,539.90 before associate share"
+ebitda,polymed consolidated,total,total,fy17,Rs mn,B-0286,105.66,Rs cr,AR19,5,disclosed,[visual read] consolidated KPI chart
+ebitda,polymed consolidated,total,total,fy17,Rs mn,CC-1015,91.72,Rs cr,DKNOV20,21,disclosed,series order checked on rendered slide; value in text layer; DK2019 p.10 shows FY17 EBITDA 105.66
+ebitda,polymed consolidated,total,total,fy17,Rs mn,CC-1074,105.66,Rs cr,DK2019,10,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKNOV20/DKJUN20 91.72
+revenue,ultra for medical products (egypt associate),total,egypt,cy18,Rs mn,B-0355,7532.73,Rs lakh,AR19,34,disclosed,
+revenue,ultra for medical products (egypt associate),total,egypt,cy18,Rs mn,B-0408,7225.69,Rs lakh,AR20,35,disclosed,"conflict: AR19 p.34 gives CY18 sales 7,532.73 lakh (likely FX translation)"
+ebitda,polymed standalone,total,total,fy20,Rs mn,B-0359,17872.27,Rs lakh,AR20,34,reported,incl. other income 1858.38
+ebitda,polymed standalone,total,total,fy20,Rs mn,CC-0886,160.14,Rs cr,DKMAY22,12,disclosed,
+ebitda,polymed standalone,total,total,fy21,Rs mn,B-0411,22760.91,Rs lakh,AR21,31,reported,directors' report; incl. other income 1928.82
+ebitda,polymed standalone,total,total,fy21,Rs mn,CC-0887,208.3,Rs cr,DKMAY22,12,disclosed,
+ebitda,polymed consolidated,total,total,fy21,Rs mn,B-0415,23608.78,Rs lakh,AR21,31,reported,incl. other income 1841.50
+ebitda,polymed consolidated,total,total,fy21,Rs mn,B-0476,23277.71,Rs lakh,AR22,26,reported,"FY21 restated in AR22; AR21 p.31 reported 23,608.78"
+ebitda,polymed consolidated,total,total,fy21,Rs mn,CC-0781,214.34,Rs cr,DK2Q24,10,disclosed,operating EBITDA (excl. other income per p.11 layout)
+ebitda,polymed standalone,total,total,fy22,Rs mn,B-0471,25086.22,Rs lakh,AR22,26,reported,"directors' report table; incl. other income 3,872.87"
+ebitda,polymed standalone,total,total,fy22,Rs mn,CC-0888,212.13,Rs cr,DKMAY22,12,disclosed,
+ebitda,polymed consolidated,total,total,fy22,Rs mn,B-0475,25100.46,Rs lakh,AR22,26,reported,"incl. other income 3,790.25"
+ebitda,polymed consolidated,total,total,fy22,Rs mn,B-0761,229,Rs cr,CR23,10,third_party,"CRISIL-adjusted OPBDIT; FY21 226, FY20 177"
+ebitda,polymed consolidated,total,total,fy22,Rs mn,CB-0151,216,Rs cr,DK1Q27,15,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy22,Rs mn,CB-2321,213,Rs cr,DKCIT,10,disclosed,"[visual read] 'EBITDA#' (footnote not reproduced); differs from operating EBITDA in later decks (FY22 216, FY23 267, FY24 361, FY25 458.6/459)"
+ebitda,polymed consolidated,total,total,fy22,Rs mn,CC-0739,253.45,Rs cr,DKJUL24,18,disclosed,broad EBITDA (appears to include other income and share of associates): DK2Q24 p.10 shows FY22 EBITDA 213.10 (23.09%)
+ebitda,polymed consolidated,total,total,fy22,Rs mn,CC-0782,213.1,Rs cr,DK2Q24,10,disclosed,conflicts with DKJUL24 p.18 FY22 EBITDA 253.45 (broad definition)
+fx_earnings,polymed standalone,total,total,fy22,Rs mn,B-0484,53697.0,Rs lakh,AR22,52,disclosed,
+fx_earnings,polymed standalone,total,total,fy22,Rs mn,B-0545,57433.2,Rs lakh,AR23,48,disclosed,"conflict: AR22 p.52 reported FY22 FX earned 53,697.00"
+ebitda,polymed consolidated,total,total,fy23,Rs mn,B-0537,30157.01,Rs lakh,AR23,21,reported,"incl. other income 3,618.54"
+ebitda,polymed consolidated,total,total,fy23,Rs mn,B-0595,30349.68,Rs lakh,AR24,49,reported,"FY23 restated in AR24; AR23 p.21 reported 30,157.01"
+ebitda,polymed consolidated,total,total,fy23,Rs mn,CB-0457,267,Rs cr,DKAGM31,18,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy23,Rs mn,CB-1130,267,Rs cr,DK4Q26,32,disclosed,[visual read] operating EBITDA; margin legend shown but margin values not labelled on slide
+ebitda,polymed consolidated,total,total,fy23,Rs mn,CB-2329,265,Rs cr,DKCIT,10,disclosed,"[visual read] 'EBITDA#' (footnote not reproduced); differs from operating EBITDA in later decks (FY22 216, FY23 267, FY24 361, FY25 458.6/459)"
+ebitda,polymed consolidated,total,total,fy23,Rs mn,CC-0740,303.5,Rs cr,DKJUL24,18,disclosed,DK2Q24 p.10/p.11 show FY23 EBITDA 269.38 (24.16%) with Other Income 32.19 and share of associates 1.93 listed separately
+ebitda,polymed consolidated,total,total,fy23,Rs mn,CC-0783,269.38,Rs cr,DK2Q24,10,disclosed,conflicts with DKJUL24 p.18 FY23 EBITDA 303.50
+pat,polymed consolidated,total,total,fy23,Rs mn,B-0538,17928.25,Rs lakh,AR23,21,reported,incl. share of associate 192.67
+pat,polymed consolidated,total,total,fy23,Rs mn,B-0793,178.9,Rs cr,CRR2402,1,third_party,CRR2503a shows FY23 PAT 177.84
+pat,polymed consolidated,total,total,fy23,Rs mn,CB-0459,179,Rs cr,DKAGM31,18,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy23,Rs mn,CB-1131,176,Rs cr,DK4Q26,32,disclosed,[visual read]; CONFLICT: FY23 PAT shown as 176 here vs 179 in DKAGM31 p.18 / 179.2 in DKAGM30 p.20
+pat,polymed consolidated,total,total,fy23,Rs mn,CB-2186,179.2,Rs cr,DKAGM30,20,disclosed,[visual read]; FY23 PAT printed 179.2 here/179 in DKAGM31 but 176 in DK4Q26 p.32
+pat,polymed consolidated,total,total,fy23,Rs mn,CB-2331,179,Rs cr,DKCIT,10,disclosed,[visual read]
+pat,polymed consolidated,total,total,fy23,Rs mn,CB-3159,179.28,Rs cr,DK2Q25,3,disclosed,
+pat,polymed consolidated,total,total,fy23,Rs mn,CC-0792,179.28,Rs cr,DK2Q24,10,disclosed,
+ebitda,polymed standalone,total,total,fy24,Rs mn,B-0590,40768.66,Rs lakh,AR24,49,reported,directors' report; incl. other income 5817.67
+ebitda,polymed standalone,total,total,fy24,Rs mn,CB-2728,349.0,Rs cr,DK4Q25,14,reported,standalone EBITDA as originally reported; DK4Q26 p.9 restates 4QFY25 to 116.2 and FY25 to 445.9
+ebitda,polymed standalone,total,total,fy24,Rs mn,CC-0673,407,Rs cr,TR4Q24,4,management_statement,stated 20-May-2024 (4QFY24 call); 'total EBITDA' (appears to include other income)
+ebitda,polymed consolidated,total,total,fy24,Rs mn,B-0594,41949.65,Rs lakh,AR24,49,reported,"incl. other income 5,874.81"
+ebitda,polymed consolidated,total,total,fy24,Rs mn,B-0598,419.49,Rs cr,AR24,4,disclosed,"[visual read] KPI chart FY20-FY24 EBITDA 184.57, 236.09, 253.45, 303.50, 419.49; FY22 253.45 vs AR22 directors' report 25,100.46 lakh (restated)"
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CA-0488,357.7,Rs cr,TR4Q25,3,management_statement,
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CB-0158,361,Rs cr,DK1Q27,15,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CB-0464,361,Rs cr,DKAGM31,18,disclosed,[visual read] operating EBITDA
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CB-1136,361,Rs cr,DK4Q26,32,disclosed,[visual read] operating EBITDA; margin legend shown but margin values not labelled on slide
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CB-2337,358,Rs cr,DKCIT,10,disclosed,"[visual read] 'EBITDA#' (footnote not reproduced); differs from operating EBITDA in later decks (FY22 216, FY23 267, FY24 361, FY25 458.6/459)"
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CB-2633,357.7,Rs cr,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CC-0678,419,Rs cr,TR4Q24,4,management_statement,"stated 20-May-2024 (4QFY24 call); broad EBITDA definition (DKJUL24 p.18: 419.50, 30.49%)"
+ebitda,polymed consolidated,total,total,fy24,Rs mn,CC-0741,419.5,Rs cr,DKJUL24,18,disclosed,broad definition; TR4Q24 p.4: standalone operating EBITDA ~26%+
+revenue_share,polymed consolidated,infusion therapy,total,fy23,text,B-0744,69%,text,CRR2606,1,third_party,conflict: CRR2402 gives ~67% for FY23
+revenue_share,polymed consolidated,infusion therapy,total,fy23,text,B-0746,~67%,text,CRR2402,1,third_party,conflict: CRR2606 says 69% for FY23
+ebitda_margin,polymed consolidated,total,total,fy21,%,B-0763,28.7,%,CR23,10,third_party,
+ebitda_margin,polymed consolidated,total,total,fy21,%,CC-0784,27.26,%,DK2Q24,10,disclosed,
+ebitda_margin,polymed consolidated,total,total,fy20,%,B-0764,25.8,%,CR23,10,third_party,
+ebitda_margin,polymed consolidated,total,total,fy20,%,CB-0081,24.1,%,DK1Q27,9,disclosed,printed '~24.1%'
+roce,polymed consolidated,total,total,fy22,%,B-0769,17.0,%,CR23,10,third_party,"FY21 22.3, FY20 25.7"
+roce,polymed consolidated,total,total,fy22,%,CB-2326,17,%,DKCIT,10,disclosed,[visual read] FY25 '*' excl. Aug-2024 QIP & treasury income
+roce,polymed consolidated,total,total,fy22,%,CB-3206,14.05,%,DK2Q25,5,disclosed,[visual read] first chart titled 'ROCE'; '*' without QIP; entity/definition not stated; differs from ROCE series in later decks
+roce,polymed consolidated,total,total,fy22,%,CC-0757,14.05,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer; DKMAY22 p.14 same FY22 value
+receivable_days,polymed consolidated,total,total,fy22,days,B-0773,85,days,CR23,10,third_party,
+receivable_days,polymed consolidated,total,total,fy22,days,D-0254,80,days,PD24,54,disclosed,Company-computed; CRISIL rating document CR23 gives a different FY22 figure (definitional difference)
+receivable_days,polymed consolidated,total,total,fy20,days,B-0775,74,days,CR23,10,third_party,
+receivable_days,polymed consolidated,total,total,fy20,days,D-0777,70,days,PD21,49,disclosed,
+interest_coverage,polymed consolidated,total,total,fy22,x,B-0788,37.22,x,CRR2212,1,third_party,CR23 table shows 39.83
+interest_coverage,polymed consolidated,total,total,fy22,x,CC-0847,64.53,x,DKMAY23,18,disclosed,deck cover dated 'May 2024' (registry date 2023-05-11 appears wrong; content includes FY2024 and 31-Mar-2024 data); labelled 'Interest Service'; series order checked on rendered slide; value in text layer
+interest_coverage,polymed consolidated,total,total,fy22,x,CC-0905,64.53,x,DKMAY22,14,disclosed,series order checked on rendered slide; value in text layer
+interest_coverage,polymed consolidated,total,total,fy24,x,B-0796,26.1,x,CRR2503a,1,third_party,FY23 26.72
+interest_coverage,polymed consolidated,total,total,fy24,x,CC-0849,37.56,x,DKMAY23,18,disclosed,deck cover dated 'May 2024' (registry date 2023-05-11 appears wrong; content includes FY2024 and 31-Mar-2024 data); series order checked on rendered slide; value in text layer
+employee_cost_growth_yoy,polymed standalone,total,total,1qfy27,%,CA-0023,29,%,TR1Q27S,3,management_statement,"'almost by 29%'; drivers: Haryana minimum wage, headcount, FY27 increments"
+employee_cost_growth_yoy,polymed standalone,total,total,1qfy27,%,CB-0218,28.5,%,DK1Q27,24,reported,
+patents_granted,polymed consolidated,total,global,aug-2026,count,CA-0081,399,count,TR1Q27S,15,management_statement,granted vs filed not specified
+patents_granted,polymed consolidated,total,global,aug-2026,count,CB-0006,390,count,DK1Q27,4,disclosed,printed '390+'
+revenue_growth_yoy,polymed standalone,total,total,fy26,%,CA-0093,4,%,TR4Q26,4,management_statement,approx. - printed 'around 4'; low growth due to 'tough external environment ... mainly impacted from international revenue'
+revenue_growth_yoy,polymed standalone,total,total,fy26,%,CB-0613,3.8,%,DK4Q26,9,reported,standalone
+gross_margin_change_yoy,polymed standalone,total,total,fy26,bps,CA-0096,128,bps,TR4Q26,4,management_statement,approx. - printed 'around 128'
+gross_margin_change_yoy,polymed standalone,total,total,fy26,bps,CB-0571,130,bps,DK4Q26,4,disclosed,p.9 table shows 128bps
+gross_margin_change_yoy,polymed standalone,total,total,fy26,bps,CB-0629,128.0,bps,DK4Q26,9,reported,
+revenue_growth_yoy,polymed consolidated,total,international,fy26,%,CA-0109,9,%,TR4Q26,5,management_statement,approx. - printed 'about 9'; includes acquisitions 'at the gross level'
+revenue_growth_yoy,polymed consolidated,total,international,fy26,%,CB-0602,9.3,%,DK4Q26,7,reported,
+revenue_growth_yoy,polymed consolidated,total,international,fy26,%,CB-0827,9.3,%,DK4Q26,11,reported,
+revenue_growth_yoy,polymed consolidated,total,international,4qfy26,%,CA-0118,19,%,TR4Q26,5,management_statement,approx. - printed 'around 19'; incl. acquisitions; HB p.12: exports ex acquisitions 'minus 3% or 4%'
+revenue_growth_yoy,polymed consolidated,total,international,4qfy26,%,CB-0600,19.4,%,DK4Q26,7,reported,
+revenue_growth_yoy,polymed consolidated,total,international,4qfy26,%,CB-0826,19.4,%,DK4Q26,11,reported,
+revenue_share,polymed consolidated,infusion,total,4qfy26,%,CA-0122,50,%,TR4Q26,5,management_statement,"analyst (Girish Jain, p.17) repeats it as '52%' - not confirmed by management"
+revenue_share,polymed consolidated,infusion,total,4qfy26,%,CB-0882,48,%,DK4Q26,12,disclosed,[visual read] stacked bar; chart mistitled 'Revenue Mix- Domestic & International' but legend shows segments
+revenue_growth_yoy,polymed consolidated,total,india,9mfy26,%,CA-0218,18,%,TR3Q26,4,management_statement,
+revenue_growth_yoy,polymed consolidated,total,india,9mfy26,%,CB-1469,17.6,%,DK3Q26,12,reported,
+revenue_share,polymed consolidated,total,india,3qfy26,%,CA-0224,32,%,TR3Q26,4,management_statement,
+revenue_share,polymed consolidated,total,india,3qfy26,%,CB-1502,31,%,DK3Q26,12,disclosed,[visual read] stacked bar
+revenue_growth_qoq,polymed consolidated,renal,total,3qfy26,%,CA-0235,2,%,TR3Q26,5,management_statement,approx. - printed 'around 2'
+revenue_growth_qoq,polymed consolidated,renal,total,3qfy26,%,CB-1536,1.3,%,DK3Q26,13,reported,
+revenue_growth_qoq,polymed consolidated,total,europe,2qfy26,%,CA-0340,5,%,TR2Q26,4,management_statement,approx. - printed 'around 5'
+revenue_growth_qoq,polymed consolidated,total,europe,2qfy26,%,CB-1782,4.5,%,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8)
+revenue_growth_yoy,polymed consolidated,total,row,2qfy26,%,CA-0341,13,%,TR2Q26,5,management_statement,"approx. - printed 'around 13'; 'Y-o-Y basis sequentially' as spoken; efforts in South Asia, Africa, Middle East"
+revenue_growth_yoy,polymed consolidated,total,row,2qfy26,%,CB-1789,13.3,%,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8); RoW excl. other operating revenue
+revenue_growth_yoy,polymed consolidated,total,total,1qfy26,%,CA-0408,5,%,TR1Q26,4,management_statement,approx. - printed 'around 5'
+revenue_growth_yoy,polymed consolidated,total,total,1qfy26,%,CB-1979,4.8,%,DK1Q26,15,reported,consolidated
+ebitda_margin,polymed consolidated,total,total,1qfy26,%,CA-0413,26.3,%,TR1Q26,4,management_statement,HB p.17: 'EBITDA margin only dropped by 70 bps'
+ebitda_margin,polymed consolidated,total,total,1qfy26,%,CB-0281,26.7,%,DK1Q27,25,reported,operating EBITDA excl. other income
+ebitda_margin,polymed consolidated,total,total,1qfy26,%,CB-1695,26.5,%,DK2Q26,15,reported,operating EBITDA excl. other income
+ebitda_margin,polymed consolidated,total,total,1qfy26,%,CB-2002,26.3,%,DK1Q26,15,reported,operating EBITDA as originally reported (excludes share of associate here); restated to 107.0 in DK2Q26 and 107.6 in DK1Q27
+ebitda_margin,polymed consolidated,total,total,1qfy26,%,CB-2354,26,%,DKCIT,10,disclosed,[visual read]
+revenue_growth_yoy,polymed consolidated,total,international,1qfy26,%,CA-0425,-1,%,TR1Q26,5,management_statement,printed as 'dip of 1%'
+revenue_growth_yoy,polymed consolidated,total,international,1qfy26,%,CB-2032,-0.9,%,DK1Q26,16,reported,
+revenue,polymed consolidated,total,row,1qfy26,Rs mn,CA-0428,142,Rs cr,TR1Q26,5,management_statement,
+revenue,polymed consolidated,total,row,1qfy26,Rs mn,CB-0326,144.8,Rs cr,DK1Q27,26,reported,
+revenue,polymed consolidated,total,row,1qfy26,Rs mn,CB-1786,141.8,Rs cr,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8); RoW excl. other operating revenue
+revenue,polymed consolidated,total,row,1qfy26,Rs mn,CB-2039,141.8,Rs cr,DK1Q26,16,reported,RESTATED in DK1Q27 p.26: 1QFY26 RoW 144.8
+revenue_growth_yoy,polymed consolidated,total,row,1qfy26,%,CA-0429,5,%,TR1Q26,5,management_statement,
+revenue_growth_yoy,polymed consolidated,total,row,1qfy26,%,CB-2041,5.3,%,DK1Q26,16,reported,RESTATED in DK1Q27 p.26: 1QFY26 RoW 144.8
+revenue,polymed consolidated,renal,total,1qfy26,Rs mn,CA-0431,44,Rs cr,TR1Q26,5,management_statement,approx. - printed 'almost 44'; NB: TR2Q26 gives 1HFY26 renal ~Rs88cr and 2QFY26 Rs44cr - consistent
+revenue,polymed consolidated,renal,total,1qfy26,Rs mn,CB-0348,44.9,Rs cr,DK1Q27,27,reported,domestic renal hit by Chinese pricing pressure
+revenue,polymed consolidated,renal,total,1qfy26,Rs mn,CB-1824,43.5,Rs cr,DK2Q26,17,reported,"3-way split as originally reported; RESTATED in DK1Q27 p.27 (1QFY26 infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+revenue,polymed consolidated,renal,total,1qfy26,Rs mn,CB-2053,43.5,Rs cr,DK1Q26,17,reported,"ORIGINAL 3-way split; RESTATED in DK1Q27 p.27 (1QFY26: infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+ebitda,polymed consolidated,total,total,4qfy25,Rs mn,CA-0479,119.5,Rs cr,TR4Q25,3,management_statement,
+ebitda,polymed consolidated,total,total,4qfy25,Rs mn,CB-0753,121.9,Rs cr,DK4Q26,10,reported,operating EBITDA excl. other income; FY26 excludes acquisition-related expenses Rs 9.7 cr; 4QFY26 hit by acquisition consolidation and one-time regulatory & employee cost provisions in a subsidiary
+ebitda,polymed consolidated,total,total,4qfy25,Rs mn,CB-2630,119.5,Rs cr,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda_margin,polymed consolidated,total,total,4qfy25,%,CA-0481,27.1,%,TR4Q25,3,management_statement,from 25.5% in 4QFY24
+ebitda_margin,polymed consolidated,total,total,4qfy25,%,CB-0759,27.6,%,DK4Q26,10,reported,operating EBITDA excl. other income
+ebitda_margin,polymed consolidated,total,total,4qfy25,%,CB-2636,27.1,%,DK4Q25,13,reported,"EBITDA as originally reported (excl. other income and excl. associate share); restated in DK4Q26 p.10 (4QFY25 121.9, FY25 458.6)"
+ebitda_margin_change_yoy,polymed consolidated,total,total,3qfy25,bps,CA-0549,65,bps,TR3Q25,3,management_statement,approx. - printed 'around 65'
+ebitda_margin_change_yoy,polymed consolidated,total,total,3qfy25,bps,CB-2983,63,bps,DK3Q25,11,reported,[visual read] summary tile
+revenue,polymed consolidated,total,row,fy26,Rs mn,CB-0054,696,Rs cr,DK1Q27,6,disclosed,Geographical Revenue Mix table; consolidated; [CB check] multi-year table RoW appears to include other operating revenue/export incentives (DK4Q26 p.11: FY26 RoW 683.2 + other op. rev. 13.3; FY25 613.5 + 12.6)
+revenue,polymed consolidated,total,row,fy26,Rs mn,CB-0519,696,Rs cr,DKAGM31,19,disclosed,Geographical Revenue Mix; consolidated; [CB check] multi-year table RoW appears to include other operating revenue/export incentives (DK4Q26 p.11: FY26 RoW 683.2 + other op. rev. 13.3; FY25 613.5 + 12.6)
+revenue,polymed consolidated,total,row,fy26,Rs mn,CB-0842,683.2,Rs cr,DK4Q26,11,reported,"RoW here excludes other operating revenue (export incentives), shown separately"
+revenue,polymed consolidated,total,row,fy26,Rs mn,CB-1189,696,Rs cr,DK4Q26,33,disclosed,identical to DKAGM31 p.19; RoW here includes other operating revenue (cf. p.11 RoW FY26 683.2 + 13.3)
+revenue_share,polymed consolidated,infusion,total,fy20,%,CB-0056,68,%,DK1Q27,6,disclosed,[visual read] stacked bar 'Portfolio Mix' FY2020 vs FY2026
+revenue_share,polymed consolidated,infusion,total,fy20,%,CB-0386,68,%,DK1Q27,9,disclosed,printed '~68%'
+revenue_share,polymed consolidated,infusion,total,fy20,%,CC-0965,70,%,DKFEB21,13,disclosed,"'Sales By Product Category (FY20)'; [visual read] pie/label mapping from rendered slide; value present in text layer; differs from DKJUN20 p.15 split (infusion 71%, renal 4%, anaesthesia 3%, others 8%)"
+revenue_share,polymed consolidated,others,total,fy20,%,CB-0058,28,%,DK1Q27,6,disclosed,[visual read] stacked bar 'Portfolio Mix' FY2020 vs FY2026
+revenue_share,polymed consolidated,others,total,fy20,%,CC-0970,9,%,DKFEB21,13,disclosed,"'Sales By Product Category (FY20)'; [visual read] pie/label mapping from rendered slide; value present in text layer; differs from DKJUN20 p.15 split (infusion 71%, renal 4%, anaesthesia 3%, others 8%)"
 ipo_size,polymed consolidated,total,india,1996,Rs mn,CB-0072,55,Rs lakh,DK1Q27,8,disclosed,p.9 states 'INR 5.5 Mn IPO in 1996'
-ipo_size,polymed consolidated,total,india,1996,Rs mn,CB-0423,5.4,Rs cr,DKAGM31,13,disclosed,"footnote: total IPO size, payable in 2 instalments of Rs 2.5/share on application and balance on allotment; CONFLICT with DK1Q27 p.8 'Rs 55 Lakhs'"
+ipo_size,polymed consolidated,total,india,1996,Rs mn,CB-0429,5.4,Rs cr,DKAGM31,13,disclosed,"footnote: total IPO size, payable in 2 instalments of Rs 2.5/share on application and balance on allotment; CONFLICT with DK1Q27 p.8 'Rs 55 Lakhs'"
+pat_margin,polymed consolidated,total,total,fy22,%,CB-0154,15.2,%,DK1Q27,15,disclosed,[visual read] margin as printed; basis not stated (does not equal PAT/revenue from ops); [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,fy22,%,CB-2324,16,%,DKCIT,10,disclosed,[visual read]
+pat_margin,polymed consolidated,total,total,fy22,%,CB-3153,17.28,%,DK2Q25,3,disclosed,margin % as printed; FY22/FY23 PBT% and PAT% labels appear transposed/inconsistent with the printed absolute values
+pat_margin,polymed consolidated,total,total,fy24,%,CB-0161,18.0,%,DK1Q27,15,disclosed,[visual read] margin as printed; basis not stated (does not equal PAT/revenue from ops); [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,fy24,%,CB-0467,18.0,%,DKAGM31,18,disclosed,[visual read] margin basis not stated
+pat_margin,polymed consolidated,total,total,fy24,%,CB-2340,19,%,DKCIT,10,disclosed,[visual read]
+pat_margin,polymed consolidated,total,total,fy24,%,CB-2677,18.8,%,DK4Q25,13,reported,as printed (DK4Q26 shows FY25 PAT% 19.2% on a different base); [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+pat_margin,polymed consolidated,total,total,fy24,%,CB-3167,18.77,%,DK2Q25,3,disclosed,margin % as printed
+pat_margin,polymed consolidated,total,total,fy24,%,CC-0747,18.77,%,DKJUL24,18,disclosed,
 solar_generation,polymed consolidated,total,india,n/s,MWh,CB-0180,3214,MWh,DK1Q27,19,disclosed,"printed 'approx.'; footnote: units tentative, DHBVN MEA not received; slide in 1QFY27 deck; period of measurement not stated"
-solar_generation,polymed consolidated,total,india,n/s,MWh,CB-0560,7871.17,MWh,DKAGM31,21,disclosed,footnote: Jul'26 solar units tentative (DHBVN MEA pending); cumulative period not stated
+solar_generation,polymed consolidated,total,india,n/s,MWh,CB-0566,7871.17,MWh,DKAGM31,21,disclosed,footnote: Jul'26 solar units tentative (DHBVN MEA pending); cumulative period not stated
 employees_health_assessed,polymed consolidated,total,global,n/s,count,CB-0182,2239,count,DK1Q27,19,disclosed,slide in 1QFY27 deck; period of measurement not stated
-employees_health_assessed,polymed consolidated,total,global,n/s,count,CB-0558,2825,count,DKAGM31,21,disclosed,AGM deck Sep-2026; measurement period not stated
+employees_health_assessed,polymed consolidated,total,global,n/s,count,CB-0564,2825,count,DKAGM31,21,disclosed,AGM deck Sep-2026; measurement period not stated
 employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-0183,28,count,DK1Q27,19,disclosed,slide in 1QFY27 deck; period of measurement not stated
-employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-0553,165,count,DKAGM31,21,disclosed,printed '165+'; AGM deck Sep-2026; measurement period not stated
+employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-0559,165,count,DKAGM31,21,disclosed,printed '165+'; AGM deck Sep-2026; measurement period not stated
+employees_health_checkup,polymed consolidated,total,global,n/s,count,CB-2105,180,count,DK1Q26,32,disclosed,
+revenue,polymed consolidated,total,europe,1qfy26,Rs mn,CB-0321,130.3,Rs cr,DK1Q27,26,reported,
+revenue,polymed consolidated,total,europe,1qfy26,Rs mn,CB-1778,133.3,Rs cr,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8)
+revenue,polymed consolidated,total,europe,1qfy26,Rs mn,CB-2036,133.3,Rs cr,DK1Q26,16,reported,RESTATED in DK1Q27 p.26: 1QFY26 Europe 130.3
+revenue,polymed consolidated,infusion,total,1qfy26,Rs mn,CB-0344,233.3,Rs cr,DK1Q27,27,reported,
+revenue,polymed consolidated,infusion,total,1qfy26,Rs mn,CB-1816,251.8,Rs cr,DK2Q26,17,reported,"3-way split as originally reported; RESTATED in DK1Q27 p.27 (1QFY26 infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+revenue,polymed consolidated,infusion,total,1qfy26,Rs mn,CB-2050,251.8,Rs cr,DK1Q26,17,reported,"ORIGINAL 3-way split; RESTATED in DK1Q27 p.27 (1QFY26: infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+revenue,polymed consolidated,others,total,1qfy26,Rs mn,CB-0354,119.7,Rs cr,DK1Q27,27,reported,"residual 'Others' (critical care, blood, etc.); cardiology/orthopaedics now shown separately"
+revenue,polymed consolidated,others,total,1qfy26,Rs mn,CB-1832,107.9,Rs cr,DK2Q26,17,reported,"3-way split as originally reported; RESTATED in DK1Q27 p.27 (1QFY26 infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+revenue,polymed consolidated,others,total,1qfy26,Rs mn,CB-2056,107.9,Rs cr,DK1Q26,17,reported,"ORIGINAL 3-way split; RESTATED in DK1Q27 p.27 (1QFY26: infusion 233.3, renal 44.9, cardiology 2.9, others 119.7)"
+revenue_share,polymed consolidated,infusion,total,1qfy26,%,CB-0364,58,%,DK1Q27,27,disclosed,[visual read] stacked bar; *Excluding Export Incentive
+revenue_share,polymed consolidated,infusion,total,1qfy26,%,CB-1844,62,%,DK2Q26,17,disclosed,[visual read] stacked bar
+revenue_share,polymed consolidated,infusion,total,1qfy26,%,CB-2059,63,%,DK1Q26,17,disclosed,[visual read]; DK2Q26 p.17 shows 1QFY26 as 62/11/27
+revenue_share,polymed consolidated,others,total,1qfy26,%,CB-0367,30,%,DK1Q27,27,disclosed,[visual read] stacked bar; *Excluding Export Incentive
+revenue_share,polymed consolidated,others,total,1qfy26,%,CB-1846,27,%,DK2Q26,17,disclosed,[visual read] stacked bar
+revenue_share,polymed consolidated,others,total,1qfy26,%,CB-2061,26,%,DK1Q26,17,disclosed,[visual read]; DK2Q26 p.17 shows 1QFY26 as 62/11/27
+equity_raised,polymed consolidated,total,india,1996,Rs mn,CB-0387,5.5,INR mn,DK1Q27,9,disclosed,CONFLICT: DKAGM31 p.13/p.14 restate IPO as ~Rs 5.4 crore / ~INR 54 mn
+equity_raised,polymed consolidated,total,india,1996,Rs mn,CB-0432,54,INR mn,DKAGM31,14,disclosed,CONFLICT with DK1Q27 p.9 'equity infusion of INR 5.5mn'; footnote on IPO instalments
+ebitda_margin_change,plan1health,total,total,post-acquisition,bps,CB-0445,670,bps,DKAGM31,17,disclosed,printed '~670 bp'; CONFLICT with DK1Q27 p.12 '+970 BPS' (spans may differ)
+ebitda_margin_change,plan1health,total,total,post-acquisition,bps,CB-1045,600,bps,DK4Q26,22,disclosed,"printed '~600 bps' ('margins', type not stated); CONFLICT: DKAGM31 p.17 '~670 bp', DK1Q27 p.12 '+970 BPS'"
+pat_margin,polymed consolidated,total,total,fy23,%,CB-0460,15.6,%,DKAGM31,18,disclosed,[visual read] margin basis not stated
+pat_margin,polymed consolidated,total,total,fy23,%,CB-2332,16,%,DKCIT,10,disclosed,[visual read]
+pat_margin,polymed consolidated,total,total,fy23,%,CB-3160,15.87,%,DK2Q25,3,disclosed,margin % as printed; FY22/FY23 PBT% and PAT% labels appear transposed/inconsistent with the printed absolute values
+pat_margin,polymed consolidated,total,total,fy25,%,CB-0474,19.2,%,DKAGM31,18,disclosed,[visual read] margin basis not stated
+pat_margin,polymed consolidated,total,total,fy25,%,CB-0807,19.2,%,DK4Q26,10,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,fy25,%,CB-2348,20,%,DKCIT,10,disclosed,[visual read]
+pat_margin,polymed consolidated,total,total,fy25,%,CB-2676,20.3,%,DK4Q25,13,reported,as printed (DK4Q26 shows FY25 PAT% 19.2% on a different base); [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+revenue,polymed consolidated,total,row,fy25,Rs mn,CB-0518,626,Rs cr,DKAGM31,19,disclosed,Geographical Revenue Mix; consolidated; [CB check] multi-year table RoW appears to include other operating revenue/export incentives (DK4Q26 p.11: FY26 RoW 683.2 + other op. rev. 13.3; FY25 613.5 + 12.6)
+revenue,polymed consolidated,total,row,fy25,Rs mn,CB-0843,613.5,Rs cr,DK4Q26,11,reported,"RoW here excludes other operating revenue (export incentives), shown separately"
+revenue,polymed consolidated,total,row,fy25,Rs mn,CB-1188,626,Rs cr,DK4Q26,33,disclosed,identical to DKAGM31 p.19; RoW here includes other operating revenue (cf. p.11 RoW FY26 683.2 + 13.3)
+current_liabilities,polymed consolidated,total,total,as of 31-mar-2025,Rs mn,CB-0556,190.6,Rs cr,DKAGM31,20,reported,"consolidated balance sheet summary; shown in brackets (deduction); 31-Mar-2025 comparative RESTATED vs DKAGM30 p.23 / DK2Q26 p.18 (e.g. consolidated cash 1,227.7, current assets 704.5, current liabilities 185.7)"
+current_liabilities,polymed consolidated,total,total,as of 31-mar-2025,Rs mn,CB-1877,185.7,Rs cr,DK2Q26,18,reported,"consolidated; 31-Mar-2025 comparatives differ slightly from DK4Q26 p.13 (e.g. cash 1,227.7 vs 1,226.9; current assets 704.5 vs 710.3); original 31-Mar-2025 figure; restated in DKAGM31 p.20 / DK4Q26 p.13"
+current_liabilities,polymed consolidated,total,total,as of 31-mar-2025,Rs mn,CB-2290,185.7,Rs cr,DKAGM30,23,reported,"[visual read] column mapping; Standalone Mar-25, Mar-24, Consolidated Mar-25, Mar-24; FY25 standalone figures differ slightly from DK4Q26 p.13 (e.g. cash 1,219.6 vs 1,218.8); original 31-Mar-2025 figure; restated in DKAGM31 p.20 / DK4Q26 p.13"
+ebitda_growth_yoy,polymed standalone,total,total,fy26,%,CB-0573,0.1,%,DK4Q26,4,disclosed,[visual read] chart arrow; p.9 table shows 0.0%
+ebitda_growth_yoy,polymed standalone,total,total,fy26,%,CB-0655,0.0,%,DK4Q26,9,reported,operating EBITDA excl. other income
+pat_margin,polymed standalone,total,total,4qfy25,%,CB-0695,19.5,%,DK4Q26,9,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed standalone,total,total,4qfy25,%,CB-2765,20.6,%,DK4Q25,14,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+pat_margin,polymed standalone,total,total,fy25,%,CB-0697,19.6,%,DK4Q26,9,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed standalone,total,total,fy25,%,CB-2767,20.7,%,DK4Q25,14,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+pat_margin,polymed consolidated,total,total,4qfy25,%,CB-0805,19.7,%,DK4Q26,10,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,4qfy25,%,CB-2674,20.8,%,DK4Q25,13,reported,as printed (DK4Q26 shows FY25 PAT% 19.2% on a different base); [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+current_liabilities,polymed standalone,total,total,as of 31-mar-2025,Rs mn,CB-0919,170.0,Rs cr,DK4Q26,13,reported,"standalone balance sheet; consolidated columns on same slide identical to DKAGM31 p.20; 31-Mar-2025 comparative RESTATED vs DKAGM30 p.23 / DK2Q26 p.18 (e.g. consolidated cash 1,227.7, current assets 704.5, current liabilities 185.7)"
+current_liabilities,polymed standalone,total,total,as of 31-mar-2025,Rs mn,CB-2288,165.1,Rs cr,DKAGM30,23,reported,"[visual read] column mapping; Standalone Mar-25, Mar-24, Consolidated Mar-25, Mar-24; FY25 standalone figures differ slightly from DK4Q26 p.13 (e.g. cash 1,219.6 vs 1,218.8); original 31-Mar-2025 figure; restated in DKAGM31 p.20 / DK4Q26 p.13"
+product_launches,polymed consolidated,total,global,fy25,count,CB-1082,35,count,DK4Q26,30,disclosed,[visual read] bar chart; CONFLICT: FY25 launches 35 per DK4Q26 p.30 chart vs 'over 30'/'30+' in DK4Q25 p.12 and DKAGM30 p.3
+product_launches,polymed consolidated,total,global,fy25,count,CB-2123,30,count,DKAGM30,3,disclosed,printed 'over 30+'; DK4Q26 p.30 shows 35 for FY25; CONFLICT: FY25 launches 35 per DK4Q26 p.30 chart vs 'over 30'/'30+' in DK4Q25 p.12 and DKAGM30 p.3
+product_launches,polymed consolidated,total,global,fy25,count,CB-2586,30,count,DK4Q25,12,disclosed,printed 'over 30'; DK4Q26 p.30 chart shows 35 for FY25; CONFLICT: FY25 launches 35 per DK4Q26 p.30 chart vs 'over 30'/'30+' in DK4Q25 p.12 and DKAGM30 p.3
+roce,polymed consolidated,total,total,fy23,%,CB-1133,19,%,DK4Q26,32,disclosed,"[visual read] '*' excludes Aug-2024 QIP amount, QIP treasury income, labour code impact and acquisition cost; FY26 lower due to partial-period consolidation of acquisitions and high capex"
+roce,polymed consolidated,total,total,fy23,%,CB-1561,19,%,DK3Q26,14,disclosed,[visual read]
+roce,polymed consolidated,total,total,fy23,%,CB-1904,19,%,DK2Q26,20,disclosed,[visual read] '*' excl. Aug-2024 QIP amount & its treasury income; '**' trailing 12 months
+roce,polymed consolidated,total,total,fy23,%,CB-2069,19,%,DK1Q26,18,disclosed,[visual read] '*' excl. Aug-2024 QIP & treasury income; '**' TTM
+roce,polymed consolidated,total,total,fy23,%,CB-2296,17,%,DKAGM30,24,disclosed,[visual read] unadjusted: EBIT/(equity + total debt + DTL); CONFLICT with adjusted ROCE 19%/23%/23%* in other decks; entity (consolidated/standalone) not stated
+roce,polymed consolidated,total,total,fy23,%,CB-2334,19,%,DKCIT,10,disclosed,[visual read] FY25 '*' excl. Aug-2024 QIP & treasury income
+roce,polymed consolidated,total,total,fy23,%,CB-3207,17.48,%,DK2Q25,5,disclosed,[visual read] first chart titled 'ROCE'; '*' without QIP; entity/definition not stated; differs from ROCE series in later decks
+roce,polymed consolidated,total,total,fy23,%,CC-0758,17.48,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer
+roe,polymed consolidated,total,total,fy23,%,CB-1134,15,%,DK4Q26,32,disclosed,[visual read] '*' adjusted as for RoCE
+roe,polymed consolidated,total,total,fy23,%,CB-1562,15,%,DK3Q26,14,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy23,%,CB-1905,15,%,DK2Q26,20,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy23,%,CB-2070,15,%,DK1Q26,18,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy23,%,CB-2297,15,%,DKAGM30,24,disclosed,[visual read] PAT/average equity; FY25 16% vs adjusted 18%* elsewhere; entity not stated
+roe,polymed consolidated,total,total,fy23,%,CB-2335,15,%,DKCIT,10,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy23,%,CC-0761,14.51,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer
+roce,polymed consolidated,total,total,fy24,%,CB-1139,23,%,DK4Q26,32,disclosed,"[visual read] '*' excludes Aug-2024 QIP amount, QIP treasury income, labour code impact and acquisition cost; FY26 lower due to partial-period consolidation of acquisitions and high capex"
+roce,polymed consolidated,total,total,fy24,%,CB-1563,23,%,DK3Q26,14,disclosed,[visual read]
+roce,polymed consolidated,total,total,fy24,%,CB-1906,23,%,DK2Q26,20,disclosed,[visual read] '*' excl. Aug-2024 QIP amount & its treasury income; '**' trailing 12 months
+roce,polymed consolidated,total,total,fy24,%,CB-2071,23,%,DK1Q26,18,disclosed,[visual read] '*' excl. Aug-2024 QIP & treasury income; '**' TTM
+roce,polymed consolidated,total,total,fy24,%,CB-2298,21,%,DKAGM30,24,disclosed,[visual read] unadjusted: EBIT/(equity + total debt + DTL); CONFLICT with adjusted ROCE 19%/23%/23%* in other decks; entity (consolidated/standalone) not stated
+roce,polymed consolidated,total,total,fy24,%,CB-2342,23,%,DKCIT,10,disclosed,[visual read] FY25 '*' excl. Aug-2024 QIP & treasury income
+roce,polymed consolidated,total,total,fy24,%,CB-3208,20.94,%,DK2Q25,5,disclosed,[visual read] first chart titled 'ROCE'; '*' without QIP; entity/definition not stated; differs from ROCE series in later decks
+roce,polymed consolidated,total,total,fy24,%,CC-0759,20.94,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer; p.22 of same deck says 'ROCE at 21.91 %'
+roe,polymed consolidated,total,total,fy24,%,CB-1140,19,%,DK4Q26,32,disclosed,[visual read] '*' adjusted as for RoCE
+roe,polymed consolidated,total,total,fy24,%,CB-1564,19,%,DK3Q26,14,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy24,%,CB-1907,19,%,DK2Q26,20,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy24,%,CB-2072,19,%,DK1Q26,18,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy24,%,CB-2299,19,%,DKAGM30,24,disclosed,[visual read] PAT/average equity; FY25 16% vs adjusted 18%* elsewhere; entity not stated
+roe,polymed consolidated,total,total,fy24,%,CB-2343,19,%,DKCIT,10,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy24,%,CC-0762,17.26,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer
+roce,polymed consolidated,total,total,ttm dec-2025,%,CB-1199,18.3,%,DK3Q26,4,disclosed,"EBIT excl. remaining QIP funds & treasury income, acquisition costs, one-time Labour Code impact; trailing 12 months"
+roce,polymed consolidated,total,total,ttm dec-2025,%,CB-1567,18,%,DK3Q26,14,disclosed,"[visual read]; '**' EBIT ex-treasury income from QIP funds, acquisition costs, Labour Code; 12-month annualised"
+pat_margin,polymed standalone,total,total,3qfy25,%,CB-1319,19.7,%,DK3Q26,10,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed standalone,total,total,3qfy25,%,CB-3061,20.7,%,DK3Q25,15,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10); 3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+pat_margin,polymed standalone,total,total,9mfy25,%,CB-1322,19.6,%,DK3Q26,10,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed standalone,total,total,9mfy25,%,CB-3063,20.7,%,DK3Q25,15,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10); 3QFY25/9MFY25 standalone figures restated in DK3Q26 p.10 (employee 71.1/208.1; R&D 5.8/17.9)
+pat_margin,polymed consolidated,total,total,3qfy25,%,CB-1450,19.1,%,DK3Q26,11,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,3qfy25,%,CB-2975,20.1,%,DK3Q25,14,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+pat_margin,polymed consolidated,total,total,9mfy25,%,CB-1453,19.1,%,DK3Q26,11,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,9mfy25,%,CB-2977,20.1,%,DK3Q25,14,reported,as printed; [CB check] consistent with PAT / revenue from operations; later decks (DK1Q26 onwards) print PAT % on a total-income base (e.g. 4QFY25 consolidated 20.8% here vs 19.7% in DK4Q26 p.10)
+revenue,polymed consolidated,other_operating_revenue,total,2qfy26,Rs mn,CB-1480,2.6,Rs cr,DK3Q26,12,reported,export incentives
+revenue,polymed consolidated,other_operating_revenue,total,2qfy26,Rs mn,CB-1768,2.8,Rs cr,DK2Q26,16,reported,upper block of slide; geographic block shows 2.6 / 3.1 for 2QFY26 / 2QFY25 – internal inconsistency
+revenue,polymed consolidated,other_operating_revenue,total,2qfy26,Rs mn,CB-1792,2.6,Rs cr,DK2Q26,16,reported,geographic block of slide; upper block shows 2.8 – internal inconsistency
+revenue,polymed consolidated,total,europe,2qfy26,Rs mn,CB-1488,131.8,Rs cr,DK3Q26,12,reported,"2QFY26 RESTATED vs DK2Q26 p.16 (Europe 139.3, RoW 161.1 as first reported)"
+revenue,polymed consolidated,total,europe,2qfy26,Rs mn,CB-1776,139.3,Rs cr,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8)
+revenue,polymed consolidated,total,row,2qfy26,Rs mn,CB-1496,168.5,Rs cr,DK3Q26,12,reported,"excl. other operating revenue; 2QFY26 RESTATED vs DK2Q26 p.16 (Europe 139.3, RoW 161.1 as first reported)"
+revenue,polymed consolidated,total,row,2qfy26,Rs mn,CB-1784,161.1,Rs cr,DK2Q26,16,reported,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8); RoW excl. other operating revenue
+revenue_share,polymed consolidated,total,row,2qfy26,%,CB-1513,36,%,DK3Q26,12,disclosed,[visual read] stacked bar
+revenue_share,polymed consolidated,total,row,2qfy26,%,CB-1797,37,%,DK2Q26,16,disclosed,2QFY26 column RESTATED in DK3Q26 p.12 (Europe 139.3 -> 131.8; RoW 161.1 -> 168.5); 1QFY26 column RESTATED in DK1Q27 p.26 (Europe 133.3 -> 130.3; RoW 141.8 -> 144.8); RoW excl. other operating revenue
+pat_margin,polymed consolidated,total,total,1hfy25,%,CB-1743,19.0,%,DK2Q26,15,reported,as printed; [CB check] consistent with PAT / total income (revenue + other income); DK3Q25/DK4Q25 used revenue from operations as base
+pat_margin,polymed consolidated,total,total,1hfy25,%,CB-3174,20.07,%,DK2Q25,3,disclosed,margin % as printed
+revenue,polymed consolidated,other_operating_revenue,total,2qfy25,Rs mn,CB-1769,3.3,Rs cr,DK2Q26,16,reported,upper block of slide; geographic block shows 2.6 / 3.1 for 2QFY26 / 2QFY25 – internal inconsistency
+revenue,polymed consolidated,other_operating_revenue,total,2qfy25,Rs mn,CB-1793,3.1,Rs cr,DK2Q26,16,reported,geographic block; upper block shows 3.3
+roce,polymed consolidated,total,total,ttm jun-2025,%,CB-1957,22.4,%,DK1Q26,5,disclosed,excl. Aug-2024 QIP amount and treasury income; trailing 12 months
+roce,polymed consolidated,total,total,ttm jun-2025,%,CB-2075,22,%,DK1Q26,18,disclosed,[visual read] '*' excl. Aug-2024 QIP & treasury income; '**' TTM
+roce,polymed consolidated,total,total,ttm jun-2025,%,CB-2357,22,%,DKCIT,10,disclosed,[visual read] FY25 '*' excl. Aug-2024 QIP & treasury income
+total_income,polymed consolidated,total,total,fy22,Rs mn,CB-2320,923,Rs cr,DKCIT,10,disclosed,"[visual read] chart titled 'Total Income'; FY values equal revenue from operations (e.g. FY25 1,670) while Q1FY26 445 ≈ revenue + other income – labelling inconsistent"
+total_income,polymed consolidated,total,total,fy22,Rs mn,CC-0235,960,Rs cr,TR4Q22,2,management_statement,stated 25-May-2022 (4QFY22 call); DKMAY22 p.15 consolidated revenue FY22 923.06
+roe,polymed consolidated,total,total,fy22,%,CB-2327,14,%,DKCIT,10,disclosed,[visual read]
+roe,polymed consolidated,total,total,fy22,%,CC-0760,13.56,%,DKJUL24,20,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKMAY22 p.14 FY22 ROE 9.96%
+roe,polymed consolidated,total,total,fy22,%,CC-0910,9.96,%,DKMAY22,14,disclosed,series order checked on rendered slide; value in text layer; conflicts with 13.56% for FY22 in DKJUL24 p.20 / DKMAY23 p.18
+r_and_d_expense,polymed consolidated,total,total,fy24,Rs mn,CB-2620,19.4,Rs cr,DK4Q25,13,reported,
+r_and_d_expense,polymed consolidated,total,total,fy24,Rs mn,D-0206,1896.0,Rs lakh,PD24,46,disclosed,"MD&A p.87 gives 1,896.02; investor decks may report a different R&D figure (definition not stated)"
+revenue_cagr,polymed consolidated,total,total,fy22-fy24,%,CB-3175,22,%,DK2Q25,3,disclosed,
+revenue_cagr,polymed consolidated,total,total,fy22-fy24,%,CC-0738,22,%,DKJUL24,18,disclosed,as printed by company
+revenue_cagr,polymed consolidated,total,total,fy22-fy24,%,D-0020,20.49,%,PD24,168,disclosed,"CAGR computed in the document (FY22 Rs 92,306.26 lakh to FY24 Rs 1,37,579.63 lakh); investor decks round differently"
+revenue_by_geography,polymed (unspecified),total,exports,1qfy23,Rs mn,CC-0307,163,Rs cr,TR1Q23,5,management_statement,stated 5-Aug-2022 (1QFY23 call); TR1Q24 p.3 cites 1QFY23 exports as Rs.154 crores (conflict)
+revenue_by_geography,polymed (unspecified),total,exports,1qfy23,Rs mn,CC-0546,154,Rs cr,TR1Q24,3,management_statement,stated 8-Aug-2023 (1QFY24 call); conflicts with INR 163 crore (TR1Q23 p.5)
+rm_cost,polymed consolidated,total,total,fy23,Rs mn,CC-0793,398.89,Rs cr,DK2Q24,11,disclosed,column mapping (FY2022-23 | Q2 2023-24 | Q1 2023-24 | Q2 2022-23) checked on rendered slide [visual read]; slide titled 'Financial Performance Q2 FY 2023' (sic); consolidated (FY23 revenue 1115.23)
+rm_cost,polymed consolidated,total,total,fy23,Rs mn,D-0169,42431.15,Rs lakh,PD24,179,disclosed,"Text prints the period order as ""Fiscals 2024, 2022, 2023""; assigned FY23 because the paired % (38.05%) matches FY23 in MD&A p.88 and the p.47 table (FY23 42,431.20) - consolidated basis; standalone figures in decks will differ"
+roe,polymed consolidated,total,total,fy20,%,CC-0908,17.19,%,DKMAY22,14,disclosed,series order checked on rendered slide; value in text layer; conflicts with DKNOV20 p.22 FY20 ROE 24.04%
+roe,polymed consolidated,total,total,fy20,%,CC-1025,24.04,%,DKNOV20,22,disclosed,"series order checked on rendered slide; value in text layer; conflicts with DKMAY22 p.14 FY20 ROE 17.19%; FY17 23.46%, FY18 24.51%, FY19 22.29%, 1HFY21 29.44%"
+revenue_cagr,polymed consolidated,total,total,fy18-fy20,%,CC-0927,15,%,DKFEB21,3,disclosed,p.21 shows 14.7%
+revenue_cagr,polymed consolidated,total,total,fy18-fy20,%,CC-0976,14.7,%,DKFEB21,21,disclosed,"series order checked on rendered slide; value in text layer; revenue 14.7%, PBT 13.9%, PAT 16.5% (FY18-FY20)"
+revenue_cagr,polymed consolidated,total,total,fy18-fy20,%,D-0556,14.78,%,PD21,125,disclosed,computed in the document
+pat_cagr,polymed consolidated,total,total,fy18-fy20,%,CC-0937,17,%,DKFEB21,6,disclosed,[visual read] pie/label mapping from rendered slide; value present in text layer; value 17% in text layer; p.21 shows 16.5%
+pat_cagr,polymed consolidated,total,total,fy18-fy20,%,CC-0977,16.5,%,DKFEB21,21,disclosed,series order checked on rendered slide; value in text layer
+revenue,polymed consolidated,total,total,9mfy21,Rs mn,CC-0973,544.87,Rs cr,DKFEB21,21,disclosed,series order checked on rendered slide; value in text layer
+revenue,polymed consolidated,total,total,9mfy21,Rs mn,D-0555,5735.11,Rs mn,PD21,125,reported,"consolidated revenue from operations, nine months ended 31-Dec-2020 (PD21 business chapter is on consolidated basis); standalone figures differ"
+distributors_count,polymed consolidated,total,overseas,1qfy25,count,D-0007,260,count,PD24,167,disclosed,Conflict: risk factor 8 (PD24 p.46) gives 240 for the three months ended 30-Jun-2024
+distributors_count,polymed consolidated,total,overseas,1qfy25,count,D-0204,240,count,PD24,46,disclosed,Conflict: Business chapter (PD24 p.167/p.170) gives 260 for the three months ended 30-Jun-2024
+product_verticals_count,polymed consolidated,total,total,as of 30-jun-2024,count,D-0023,11,count,PD24,168,disclosed,"Conflict: p.173 says ""broadly divided into 13 product verticals""; the p.168 list itself names 13 verticals"
+product_verticals_count,polymed consolidated,total,total,as of 30-jun-2024,count,D-0024,13,count,PD24,173,disclosed,"Conflict with ""11 product verticals"" on p.168"
+capacity_utilization,polymed consolidated,total,total,fy24,%,D-0153,70.46,%,PD24,178,disclosed,"PD24 capacity table (Units in lacs), certified by Asheesh Mittal, Chartered Engineer, 18-Aug-2024; table heading says ""Licensed /Installed Capacity""; the lead-in says ""all our manufacturing facilities located in India"" but rows include China, Italy and Egypt. Conflict: PD24 MD&A p.89 states capacity utilization of 85.07% (FY22), 87.96% (FY23), 80.66% (FY24)"
+capacity_utilization,polymed consolidated,total,total,fy24,%,D-0160,80.66,%,PD24,89,disclosed,Conflict: capacity table PD24 p.178 gives 70.46% (FY24); MD&A basis not stated
+capacity_utilization,polymed consolidated,total,total,fy24,%,D-0163,70.46,%,PD24,58,disclosed,Risk factor 36; same as table p.178; conflicts with MD&A p.89 (80.66%)
+capacity_utilization,polymed consolidated,total,total,fy23,%,D-0156,80.06,%,PD24,178,disclosed,"PD24 capacity table (Units in lacs), certified by Asheesh Mittal, Chartered Engineer, 18-Aug-2024; table heading says ""Licensed /Installed Capacity""; the lead-in says ""all our manufacturing facilities located in India"" but rows include China, Italy and Egypt. Conflict: PD24 MD&A p.89 states capacity utilization of 85.07% (FY22), 87.96% (FY23), 80.66% (FY24)"
+capacity_utilization,polymed consolidated,total,total,fy23,%,D-0161,87.96,%,PD24,89,disclosed,Conflict: capacity table PD24 p.178 gives 80.06% (FY23)
+capacity_utilization,polymed consolidated,total,total,fy22,%,D-0159,78.16,%,PD24,178,disclosed,"PD24 capacity table (Units in lacs), certified by Asheesh Mittal, Chartered Engineer, 18-Aug-2024; table heading says ""Licensed /Installed Capacity""; the lead-in says ""all our manufacturing facilities located in India"" but rows include China, Italy and Egypt. Conflict: PD24 MD&A p.89 states capacity utilization of 85.07% (FY22), 87.96% (FY23), 80.66% (FY24)"
+capacity_utilization,polymed consolidated,total,total,fy22,%,D-0162,85.07,%,PD24,89,disclosed,Conflict: capacity table PD24 p.178 gives 78.16% (FY22)
+import_dependence,india medtech market,total,india,fy24,%,D-0384,~70,%,PD24,128,third_party,"CRISIL MI&A report ""Market Assessment of Medical Device Industry in India"" dated 19-Aug-2024 (commissioned by Polymed), as reproduced in PD24 [vendor estimate]. Conflicts within the same chapter: ""~80%"" (p.134) and ""70-75%"" (p.139) - definitions differ"
+import_dependence,india medtech market,total,india,fy24,%,D-0392,~80,%,PD24,134,third_party,"CRISIL MI&A report ""Market Assessment of Medical Device Industry in India"" dated 19-Aug-2024 (commissioned by Polymed), as reproduced in PD24 [vendor estimate]; see also ~70% (p.128) and 70-75% (p.139)"
 dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0009,700,count,RHP_NEPHRO,264,third_party,"F&S Nov-2025 report commissioned for Nephrocare RHP (2-Dec-2025); CY basis; conflicts with p.277 (~1,000 by 2010)"
 dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0034,1000,count,RHP_NEPHRO,277,third_party,F&S Nov-2025 report commissioned for Nephrocare RHP (2-Dec-2025); CY basis; conflicts with p.264 (700 in 2010)
 market_share,catheters and cannulae share of global surgical disposables,infusion,global,cy24,%,E-0084,32.2,%,DRHP_GSURG,198,third_party,"1Lattice report 29-Dec-2025 commissioned for G Surgiwear DRHP (30-Dec-2025); global=CY, India=FY; CONFLICT: p.199 says 36.0% (USD 39.4B)"

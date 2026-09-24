@@ -17,6 +17,7 @@ The reader is an institutional investor or the analyst themselves. They want to 
   - `|signed` adds `+`.
   - `|num` prints the bare number.
   - `|plain` prints the value exactly as the source printed it.
+  - `|range` renders a printed range or approximate text value in house style, e.g. "around 30% to 32%" becomes "30-32%" and "Rs. 1,080 to 1,090 crores" becomes "Rs. 10.8-10.9bn".
   - Combine them with commas: `{{CB-0024|bn,approx}}`.
 - **Numbers you need but the ledger lacks:**
   - If the source contains the number, add the row to `ledger/shards/W<X>.jsonl` where X is your letter (WA, WB, WC, WD; fact ids `WA-0001`…) (your own shard, schema in `ledger/SCHEMA.md`) with its doc and page, then run `python3 build/reconcile.py`.

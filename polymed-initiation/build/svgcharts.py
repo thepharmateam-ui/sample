@@ -113,7 +113,7 @@ def column_chart(cats, series, unit="", stacked=False, dec=1, height=300, label_
         cx = pad_l + band * j
         out.append(f'<text class="tick" x="{cx + band / 2:.2f}" y="{height - pad_b + 18}" text-anchor="middle">{escape(str(c))}</text>')
         if stacked:
-            bw = min(24 if n_c > 8 else 30, band * 0.56)
+            bw = min(24, band * 0.56)
             bw = min(bw, 24) if n_c > 12 else bw
             x = cx + (band - bw) / 2
             acc_p, acc_n = 0.0, 0.0
@@ -164,7 +164,7 @@ def hbar_chart(cats, series, unit="", stacked=False, dec=1, row_h=30, label=True
     """Horizontal bars; share=True draws 100% stacked bars (values are shares in %)."""
     n_c, n_s = len(cats), len(series)
     colors = colors or [f"var(--s{i % 8 + 1})" for i in range(n_s)]
-    pad_l, pad_r, pad_t, pad_b = label_w, 56, 12, 26
+    pad_l, pad_r, pad_t, pad_b = label_w, 56, 24, 26
     height = pad_t + pad_b + row_h * n_c
     pw = W - pad_l - pad_r
     if share:
@@ -182,8 +182,8 @@ def hbar_chart(cats, series, unit="", stacked=False, dec=1, row_h=30, label=True
         cls = "base" if t == 0 else "grid"
         out.append(f'<line class="{cls}" x1="{x:.2f}" x2="{x:.2f}" y1="{pad_t}" y2="{height - pad_b}"/>')
         out.append(f'<text class="tick" x="{x:.2f}" y="{height - pad_b + 16}" text-anchor="middle">{fmt_tick(t)}</text>')
-    if unit:
-        out.append(f'<text class="unit" x="{W - pad_r + 4}" y="{height - pad_b + 16}" text-anchor="start">{escape(unit)}</text>')
+    if unit and not share:
+        out.append(f'<text class="unit" x="{W - pad_r}" y="{pad_t - 8}" text-anchor="end">{escape(unit)}</text>')
     for j, c in enumerate(cats):
         y = pad_t + row_h * j
         bh = min(18, row_h * 0.6)
@@ -202,7 +202,7 @@ def hbar_chart(cats, series, unit="", stacked=False, dec=1, row_h=30, label=True
                 tip = s.get("tips", [None] * n_c)[j] or f"{c} · {s['name']}: {fmt_tick(v, dec)}{'%' if share else ''}"
                 out.append(f'<path d="{path}" fill="{colors[i]}" class="mark" data-tip="{escape(tip)}"><title>{escape(tip)}</title></path>')
                 if share and (x1 - x0) > 34:
-                    out.append(f'<text class="inlbl" x="{(x0 + x1) / 2:.2f}" y="{by + bh / 2 + 4:.2f}" text-anchor="middle">{fmt_tick(v, 0)}%</text>')
+                    out.append(f'<text class="inlbl on{i % 8 + 1}" x="{(x0 + x1) / 2:.2f}" y="{by + bh / 2 + 4:.2f}" text-anchor="middle">{fmt_tick(v, 0)}%</text>')
         else:
             for i, s in enumerate(series):
                 v = s["values"][j]

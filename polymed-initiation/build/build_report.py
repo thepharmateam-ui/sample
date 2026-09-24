@@ -45,7 +45,7 @@ def tooltip(r):
             x = FACTS.get(ref)
             if x:
                 parts.append(f"{x['display']} ({doc_label(x)}, p.{x['page']})")
-        return "Our calculation: " + r.get("snippet", "") + (" | inputs: " + "; ".join(parts) if parts else "")
+        return "Our calculation: " + r.get("snippet", "") + ("; inputs: " + "; ".join(parts) if parts else "")
     pg = r.get("page")
     loc = f"slide/page {pg}" if str(pg) not in ("", "0", "1") or r["doc_id"].startswith(("DK", "RS", "AR", "PD")) else ""
     base = f"{doc_label(r)}" + (f" ({r['doc_date']})" if r.get("doc_date") else "") + (f", {loc}" if loc else "")
@@ -84,7 +84,47 @@ def fmt_fact(fid, fmt=""):
             disp = f"{r['value']} {r['unit']}".strip()
         elif f == "plain":
             disp = str(r["value"])
-    return f'<span class="n" title="{html.escape(tooltip(r))}">{html.escape(disp)}</span>'
+        elif f == "range":
+            disp = fmt_range(r)
+    tip = html.escape(tooltip(r)).replace("|", "&#124;")
+    return f'<span class="n" title="{tip}">{html.escape(disp)}</span>'
+
+
+def fmt_range(r):
+    """Render a printed range/approximate text value in house style: '30-32%', 'Rs. 10.8-10.9bn', '5-10%'."""
+    txt = str(r["value"])
+    nums = [float(x.replace(",", "")) for x in re.findall(r"\d[\d,]*\.?\d*", txt)]
+    if not nums:
+        return r["display"]
+    unit = r.get("unit", "")
+    is_cr = "crore" in txt.lower() or unit.lower() in ("rs cr", "inr cr")
+    is_pct = "%" in txt or unit == "%"
+    is_bps = "bps" in txt.lower() or unit == "bps"
+    def f(x, dec=None):
+        if dec is None:
+            dec = 0 if abs(x - round(x)) < 1e-9 else 1
+        return f"{x:,.{dec}f}"
+    if is_cr:
+        mn = [x * 10 for x in nums]
+        if max(mn) >= 1000:
+            def fb(x):
+                v = x / 1000
+                return f"{v:,.1f}" if abs(v * 10 - round(v * 10)) < 1e-6 else f"{v:,.2f}"
+            parts = [fb(x) for x in mn]
+            return f"Rs. {'-'.join(dict.fromkeys(parts))}bn"
+        return f"Rs. {'-'.join(dict.fromkeys(f(x, 0) for x in mn))}mn"
+    joined = "-".join(dict.fromkeys(f(x) for x in nums))
+    if is_pct:
+        return joined + "%"
+    if is_bps:
+        return joined + "bps"
+    low = txt.lower()
+    scale = "bn" if ("billion" in low or " bn" in low) else ("mn" if ("million" in low or " mn" in low or "mn" in unit.lower()) else "")
+    if unit.upper().startswith("USD") or "usd" in low or "$" in txt:
+        return "$" + joined + (scale or "mn")
+    if unit.upper().startswith("EUR") or "eur" in low or "€" in txt:
+        return "€" + joined + (scale or "mn")
+    return joined
 
 
 TOKEN = re.compile(r"\{\{([A-Z]{1,3}(?:-[0-9A-Za-z_]+)+)(?:\|([a-z,]+))?\}\}")
@@ -182,8 +222,30 @@ def render_chart(spec):
             f'{sources_line(all_fids, spec.get("src_extra", ""))}{table}</figure>')
 
 
+LIST_RE = re.compile(r"^(\s*)([-*]|\d+[.)])\s+")
+
+
+def fix_lists(text):
+    """Insert the blank line Python-Markdown needs before a list, and normalise nested indents to 4 spaces."""
+    out, prev = [], ""
+    for line in text.split("\n"):
+        m = LIST_RE.match(line)
+        if m:
+            ind = len(m.group(1).expandtabs(4))
+            if 0 < ind < 4:
+                line = "    " + line.lstrip()
+            elif 4 < ind < 8:
+                line = "        " + line.lstrip()
+            pm = LIST_RE.match(prev)
+            if prev.strip() and not pm and not prev.lstrip().startswith(("|", "<", ":::")) and not prev.startswith("    "):
+                out.append("")
+        out.append(line)
+        prev = line
+    return "\n".join(out)
+
+
 def md(text):
-    return markdown.markdown(text, extensions=["tables", "attr_list", "sane_lists", "md_in_html"])
+    return markdown.markdown(fix_lists(text), extensions=["tables", "attr_list", "sane_lists", "md_in_html"])
 
 
 def render_table_block(attrs, body):
