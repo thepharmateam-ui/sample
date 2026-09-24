@@ -3,11 +3,11 @@
 ::: snapshot title="Cardiology at a glance"
 Revenue 1QFY27 | {{CB-0350}}, {{CB-0362}} of consolidated revenue (vs {{CB-0351}} and {{CB-0366}} in 1QFY26), up {{CB-0352}} yoy on the PendraCare consolidation
 What it includes | India-made drug-eluting stents (DES), balloons, catheters, guidewires and cath-lab accessories; PendraCare (Leek, Netherlands) from 23 Sep 2025
-FY26 revenue | [not disclosed]; the MD put FY26 stent sales at Rs. {{CA-0175|range}}; PendraCare added {{A-0693}} after acquisition
+FY26 revenue | [not disclosed]; the MD put FY26 stent sales at {{WC-0046|range}}; PendraCare added {{A-0693}} after acquisition
 Stents implanted | ~{{D-WC-002}} cumulative by Jul-2026 since the Mar-2025 launch (our unit conversion of the company's figure)
-Clinical evidence | PACIFIER DES registry: {{CB-0192}}+ of {{CB-1970}} patients enrolled by Aug-2026
+Clinical evidence | PACIFIER DES registry: {{CB-0192|num}}+ of {{CB-1970|num}} patients enrolled by Aug-2026
 PendraCare deal | An enterprise value of {{CB-2530}} (press release) to {{CB-0111}} (1QFY27 deck), {{CB-2489}} CY24 EBITDA (company); CY25 EBITDA ~{{CB-0121}}
-Management target | Rs. {{CA-0660|range}} of cardiology revenue by 2030 and {{CA-0667|range}} of the business within five years (Oct-2024)
+Management target | {{CA-0660|range}} of cardiology revenue by 2030 and {{CA-0667|range}} of the business within five years (Oct-2024)
 Not disclosed | The split between PendraCare and the India business, revenue by product, segment margins
 :::
 
@@ -21,7 +21,7 @@ A coronary angioplasty (percutaneous coronary intervention, PCI) consumes a bask
 - **Treatment:** semi-compliant balloons to open the narrowing, a stent to hold it open, and non-compliant balloons to expand the stent fully.
 - **Accessories:** an inflation device, a Y-connector valve and a manifold, often sold together as a kit.
 
-A diagnostic angiogram needs diagnostic catheters and wires only. A DEB delivers drug to the vessel wall without leaving a stent, and IVL cracks calcified plaque before a stent is placed. The unit of demand is therefore the procedure. Management estimates that India performs ~{{WC-0035}} angioplasties a year with ~{{WC-0034}} stents, or {{WC-0036|range}} stents per patient. It puts annual sales at ~{{WC-0037}} for DEBs and ~{{WC-0038}} for IVL. <!-- TR3Q26 p.9 -->
+A diagnostic angiogram needs diagnostic catheters and wires only. A DEB delivers drug to the vessel wall without leaving a stent, and IVL cracks calcified plaque before a stent is placed. The unit of demand is therefore the procedure. Management estimates that India performs ~{{WC-0035}} angioplasties a year and uses ~{{WC-0034}} of coronary stents, or {{WC-0036|range}} stents per patient. It puts annual sales at ~{{WC-0037}} for DEBs and ~{{WC-0038}} for IVL. <!-- TR3Q26 p.9 -->
 
 ### Polymed's range: a full cath-lab basket, built in two years
 
@@ -49,13 +49,13 @@ Who makes which device is [not disclosed]. No legal manufacturer is printed on a
 {"id":"card_stents","type":"column","title":"Cumulative DES implants by Jul-2026 were well short of what management had planned for FY26 alone","cats":["May-2025","Sep-2025","Nov-2025","Apr-2026","Jul-2026"],"unit":"stents implanted since launch (cumulative)","dec":0,"series":[{"name":"Cumulative stents","facts":["CB-2583","CB-2122","CB-1584","D-WC-001","D-WC-002"]}],"label_all":true,"note":"May-2025 counts patients implanted rather than stents. The Apr-2026 and Jul-2026 points are our unit conversions of the rounded thousands the company printed. Management planned to deploy close to {{CA-0466}} in FY26 (Aug-2025 call)."}
 :::
 
-Cumulative deployments reached ~{{D-WC-001}} by 30 Apr 2026, so FY26 volumes were roughly half of the close to {{CA-0466}} management planned in Aug-2025. Management says the stent is a small business, worth Rs. {{CA-0175|range}} of FY26 revenue. It uses the stent as a door-opener for diagnostic catheters, guidewires and balloons. The stent is still sold mainly outside the top-tier hospitals, which management says it has not yet entered. <!-- TR1Q26 p.13; TR4Q26 p.4, p.14; TR3Q25 p.7, p.9; TR2Q26 p.5, p.14-15 -->
+Cumulative deployments reached ~{{D-WC-001}} by 30 Apr 2026, so FY26 volumes were roughly half of the close to {{CA-0466}} management planned in Aug-2025. Management says the stent is a small business, worth {{WC-0046|range}} of FY26 revenue. It uses the stent as a door-opener for diagnostic catheters, guidewires and balloons. The stent is still sold mainly outside the top-tier hospitals, which management says it has not yet entered. <!-- TR1Q26 p.13; TR4Q26 p.4, p.14; TR3Q25 p.7, p.9; TR2Q26 p.5, p.14-15 -->
 
 **The PACIFIER registry** is the evidence base for taking the RisoR stent abroad.
-- **Design:** {{CB-1970}} patients ({{CB-1972}} in India and {{CB-1971}} in Europe) at {{CB-1975}} Indian sites and one in Italy, with imaging sub-studies of {{CB-1973}} (QCA) and {{CB-1974}} (OCT) patients, over {{CB-1976}}. It is an open-label, single-arm registry, which management describes as post-market evaluation in India and "pre-market readiness" for Europe. <!-- DK1Q26 p.8; TR1Q26 p.5-6 -->
-- **Enrolment:** {{CB-1203}}+ patients by Feb-2026, {{CB-0598}}+ by May-2026 and {{CB-0192}}+ by Aug-2026, against a target of full enrolment by end-FY27. The design had assumed a one-year enrolment window. <!-- DK3Q26 p.5; DK4Q26 p.7; DK1Q27 p.22; DK1Q26 p.8 -->
+- **Design:** {{CB-1970|num}} patients ({{CB-1972|num}} in India and {{CB-1971|num}} in Europe) at {{CB-1975}} Indian sites and one in Italy, with imaging sub-studies of {{CB-1973|num}} (QCA) and {{CB-1974|num}} (OCT) patients, over {{CB-1976}}. It is an open-label, single-arm registry, which management describes as post-market evaluation in India and "pre-market readiness" for Europe. <!-- DK1Q26 p.8; TR1Q26 p.5-6 -->
+- **Enrolment:** {{CB-1203|num}}+ patients by Feb-2026, {{CB-0598|num}}+ by May-2026 and {{CB-0192|num}}+ by Aug-2026, against a target of full enrolment by end-FY27. The design had assumed a one-year enrolment window. <!-- DK3Q26 p.5; DK4Q26 p.7; DK1Q27 p.22; DK1Q26 p.8 -->
 - **Our arithmetic:** at the Feb-Aug 2026 pace of ~{{D-WC-012}} patients a month, the remaining {{D-WC-011}} take ~{{D-WC-013}}, which runs past end-FY27 (our calculation). Data follow at least a year after the last implant, and management says Class III implants take {{WC-0043|range}} years to win approval in global markets. We therefore do not expect European sales of the RisoR stent before FY29. <!-- TR2Q26 p.14-15; TR3Q26 p.8-9 -->
-- **Disclosure quality:** the 4QFY26 deck printed {{CB-1089}}+ patients enrolled on one slide and {{CB-0598}}+ on another. <!-- DK4Q26 p.7, p.30 -->
+- **Disclosure quality:** the 4QFY26 deck printed {{CB-1089|num}}+ patients enrolled on one slide and {{CB-0598|num}}+ on another. <!-- DK4Q26 p.7, p.30 -->
 
 ### PendraCare: what Polymed bought, and what has happened since
 
@@ -91,7 +91,7 @@ Cumulative deployments reached ~{{D-WC-001}} by 30 Apr 2026, so FY26 volumes wer
 
 Four points stand out.
 1. **The CY25 collapse.** Revenue fell {{D-WC-003|abs}} and EBITDA margin went from {{D-WC-004}} to {{D-WC-005}} (our calculations; the AGM deck prints CY25 gross profit of {{CB-0449}}, not ~{{CB-0120}}). The company has not explained the fall. On the 1QFY27 call management pointed to an "over-indexed" exposure to West Asia of {{CA-0071}}. It said the business is "currently not growing", has withheld FY27 guidance for it and has not disclosed its 1QFY27 growth. <!-- TR1Q27S p.11; TR4Q26 p.16; DKAGM31 p.17 -->
-2. **The post-deal accounts are worse than the deck.** Over the roughly six months after the deal, Risor's consolidated revenue of {{B-0690}} did not cover costs, and employee cost alone ate {{D-WC-009}} of it. EBITDA was {{D-WC-008}} and the net loss {{B-0692}} (our calculation from the unaudited accounts). Risor was set up with {{WC-0042}} of share capital and funded by the Poly Medicure BV loan, so the loss turned its equity negative. In the consolidated accounts, PendraCare added {{A-0693}} of revenue and a pre-tax loss of {{A-0694}}. <!-- SUB26RIS p.1-2; AR26 p.122 -->
+2. **The post-deal accounts are worse than the deck.** Over the roughly six months after the deal, Risor's consolidated revenue of {{B-0690}} did not cover costs, and employee cost alone ate {{D-WC-009}} of it. EBITDA was a loss of {{D-WC-008|abs}} and the net loss {{B-0692|abs}} (our calculation from the unaudited accounts). Risor was set up with {{WC-0042}} of share capital and funded by the Poly Medicure BV loan, so the loss turned its equity negative. In the consolidated accounts, PendraCare added {{A-0693}} of revenue and a pre-tax loss of {{A-0694|abs}}. <!-- SUB26RIS p.1-2; AR26 p.122 -->
 3. **Targets are far from delivery.** Management promised {{CB-2506}} of annual EBITDA synergies within three to four years, and revenue of close to {{CA-0812|range}} by 2030 including new neuro and structural-heart products. CY25 EBITDA of ~{{CB-0121}} makes both look distant. <!-- DKPEN p.15; TRPEN p.7; DK2Q26 p.8 -->
 4. **Housekeeping conflicts.** The EV is printed as {{CB-2530}}, ~{{CB-2143}} and {{CB-0111}} in different documents. Risor's incorporation date is 29 Aug 2025 in the annual report but 4 Nov 2025 in Poly Medicure BV's notes, after the Sep-2025 loan to it. <!-- PRPEN p.1; DKAGM30 p.7; DK1Q27 p.13; AR26 p.33; SUB26BV p.9 -->
 
@@ -142,14 +142,14 @@ Globally, Frost & Sullivan's report for Integris sizes interventional cardiology
 
 ### Regulation
 - **India:** DES and bare-metal stents sit under NPPA ceiling prices. Other cath-lab devices do not, but their MRPs are subject to the annual price-increase limit that DPCO Para 20 sets for notified devices (Section B3). <!-- DRHP_SMT p.178; PD24 p.41 -->
-- **Europe and the US:** management says approvals for implantable devices take years and that EU MDR has made them "extremely challenging". It called PendraCare's CE and FDA clearances the main reason to buy rather than build. Polymed's own cardiology devices have no US 510(k); the four in the group belong to PendraCare. <!-- TRPEN p.3-4, p.6; TR3Q26 p.8-9; FDA510K_POLY p.1; FDA510K_PEN p.1 -->
+- **Europe and the US:** management says approvals for implantable devices take years and that EU MDR has made them "extremely challenging". It called PendraCare's CE and FDA clearances the main reason to buy rather than build. Polymed's own cardiology devices have no US 510(k); the group's cardiology clearances all belong to PendraCare. <!-- TRPEN p.3-4, p.6; TR3Q26 p.8-9; FDA510K_POLY p.1; FDA510K_PEN p.1 -->
 
 ### Capacity and supply chain
-- **India:** cardiology capacity will move to a new plant on a {{A-0083}} plot in the YEIDA Medical Devices Park near the new Noida airport, where commercial production is guided for 1QFY28 (Section A6). <!-- AR26 p.8; TR1Q27S p.15-16; DKAGM31 p.4 -->
+- **India:** cardiology capacity will move to a new plant on a plot of {{A-0083}} in the YEIDA Medical Devices Park near the new Noida airport, where commercial production is guided for 1QFY28 (Section A6). <!-- AR26 p.8; TR1Q27S p.15-16; DKAGM31 p.4 -->
 - **Netherlands:** PendraCare runs at about half its capacity, and management puts both acquired businesses at {{CA-0244|range}} of capacity. <!-- TRPEN p.2; TR3Q26 p.5 -->
 
 ### Growth drivers, ranked
-1. **DEB and IVL (management target, FY27 onward).** These products are import substitutes priced above {{WC-0039}}, sold into a market of ~{{WC-0037}} DEBs and ~{{WC-0038}} IVLs a year that management expects to multiply. We rank this first because the ASP is high and India has few local suppliers, though Integris is ahead in IVL. <!-- TR3Q26 p.6, p.9; DRHP_INTEG p.233 -->
+1. **DEB and IVL (management target, FY27 onward).** These products are import substitutes priced above {{WC-0039}}, sold into a market of ~{{WC-0037}} of DEBs and ~{{WC-0038}} of IVL systems a year that management expects to multiply. We rank this first because the ASP is high and India has few local suppliers, though Integris is ahead in IVL. <!-- TR3Q26 p.6, p.9; DRHP_INTEG p.233 -->
 2. **Basket pull-through (our view).** A catheter, wire, balloon and kit accompany every stent. Winning top-tier hospitals would lift revenue per procedure more than stent volume would.
 3. **PendraCare in the US and as a contract maker (management target, FY27).** The guiding catheter is cleared and sales are expected from FY27. This depends on the OEM partner, which is not named. <!-- DK4Q26 p.38 -->
 4. **RisoR abroad (our view, FY29 at the earliest).** This depends on completing PACIFIER, a year of follow-up and a European approval.
@@ -166,10 +166,10 @@ Globally, Frost & Sullivan's report for Integris sizes interventional cardiology
 ::: table id="card_watch" title="Cardiology: what to watch"
 | KPI or risk | Why it matters | Latest datapoint | Where disclosed |
 |---|---|---|---|
-| Cardiology revenue | First separately disclosed line; tests the Rs. {{CA-0660|range}} target for 2030 | {{CB-0350}} in 1QFY27 | Quarterly deck, from 1QFY27 |
+| Cardiology revenue | First separately disclosed line; tests the {{CA-0660|range}} target for 2030 | {{CB-0350}} in 1QFY27 | Quarterly deck, from 1QFY27 |
 | PendraCare revenue and EBITDA | Tests whether the {{CB-2506}} synergy target is still alive | ~{{CB-0121}} EBITDA in CY25 | Acquisition slides; subsidiary accounts (annual) |
 | Stent deployments | FY26 volumes were about half of plan | ~{{D-WC-002}} cumulative by Jul-2026 | Decks, irregularly |
-| PACIFIER enrolment | Gates European filing of the RisoR stent | {{CB-0192}}+ of {{CB-1970}} (Aug-2026) | Decks |
+| PACIFIER enrolment | Gates European filing of the RisoR stent | {{CB-0192|num}}+ of {{CB-1970|num}} patients (Aug-2026) | Decks |
 | DEB and IVL launch | Highest-ASP products in the line | DEB on sale; IVL pending (Sep-2026) | AGM deck; calls |
 | PendraCare US sales | First US revenue for the cardiology line | Guiding catheter cleared; sales expected in FY27 | Decks |
 | Earn-out and buyout of the remaining {{CB-2491}} | Adds to the deal cost; price set on calendar 2029 EBITDA | Contingent consideration {{A-0688}} | Annual report, business-combination note |

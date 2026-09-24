@@ -49,8 +49,8 @@ In India, private-sector revenue grew {{CA-0419}} and {{CA-0332}} in 1QFY26 and 
 |---|---|
 | 4QFY25 | Southern Europe slowed on 'supply chain disruption, maybe overstocking'; uncertainty over US tariffs |
 | 1QFY26 | European distributors cut inventory cover from four to five months to two to three; Chinese product redirected from the US to Europe; EU MDR renewals arrived only in Apr–Jun 2025; US tariff at {{CA-0427}} |
-| 2QFY26 | Suez reopening cut transit from ~2.5 months to ~1 month and released pipeline stock; Chinese dumping; distributor inventory realignment around India's GST rate cut; government business down |
-| 3QFY26 | Freight costs and Chinese pricing in Europe; UK NHS contracts delayed 1-1.5 years; products dropped during the MDR transition; renal hit by duty-free ASEAN imports; government dialysis contracts delayed |
+| 2QFY26 | Suez reopening cut transit times ({{CA-0375|plain}}) and released pipeline stock; Chinese dumping; distributor inventory realignment around India's GST rate cut; government business down |
+| 3QFY26 | Freight costs and Chinese pricing in Europe; UK NHS contracts delayed {{CA-0290|range}} years; products dropped during the MDR transition; renal hit by duty-free ASEAN imports; government dialysis contracts delayed |
 | 4QFY26 | Standalone exports negative ex-acquisitions; West Asia logistics; ~{{CA-0120}} one-off provision in a subsidiary; raw material, wage and freight inflation |
 | 1QFY27 | Europe back on new customers; West Asia {{CA-0036}} with orders stuck at port; renal {{CA-0052}} as Polymed chose price over volume against Chinese dialysers |
 :::
@@ -63,7 +63,7 @@ Management gives explicit annual guidance and revisits it every quarter, so the 
 - **FY26:**
   - Revenue guidance was cut from {{CA-0512}} to {{CA-0364|range}} in Nov-2025, then missed.
   - Renal and domestic guidance were missed by a wide margin.
-  - 2HFY26 guidance was guided at 'more than 25%' above 1HFY26 in Nov-2025, restated in Feb-2026 as 'around 20% … as I mentioned in the previous call', and described in May-2026 as 'exactly delivered' at {{CA-0112}}. <!-- TR2Q26 p.6; TR3Q26 p.6; TR4Q26 p.5 -->
+  - 2HFY26 revenue was guided at {{WM-0067|range}} above 1HFY26 in Nov-2025, restated in Feb-2026 as {{CA-0251|range}} ('as I mentioned in the previous call'), and described in May-2026 as 'exactly delivered' at {{CA-0112}}. <!-- TR2Q26 p.6; TR3Q26 p.6; TR4Q26 p.5 -->
 - **FY27 standalone:** the revenue guidance was widened from {{CA-0136|range}} in May-2026 to {{CA-0057|range}} in Aug-2026, while being described as maintained. <!-- TR4Q26 p.6; TR1Q27S p.4 -->
 
 We read these as signs that guidance is framed as a target to be managed toward rather than a forecast with a stated error band, so we weight management's quarterly commentary on drivers more heavily than the point guidance.
@@ -87,7 +87,7 @@ We read these as signs that guidance is framed as a target to be managed toward 
 | Consolidated revenue growth | {{CA-0512}} (May-2025) | {{CA-0364|range}} (Nov-2025) | {{CA-0107}} ({{D-M-003}} organic, our calculation) |
 | Domestic growth | {{CA-0513|range}} (May-2025) | {{CA-0444}} (Aug-2025); {{CA-0356|range}} (Nov-2025) | {{A-0265}} |
 | International growth | {{CA-0516|range}} (May-2025) | {{CA-0445|range}} (Aug-2025); {{CA-0357|range}} incl. acquisitions (Nov-2025) | {{A-0276}} incl. acquisitions; organic 'flattish' |
-| 2HFY26 revenue | {{CA-0362|range}}, 'more than 25%' above 1H (Nov-2025) | 'around 20%' above 1H (Feb-2026) | {{CA-0111}}, {{CA-0112}} above 1H |
+| 2HFY26 revenue | {{CA-0362|range}}, {{WM-0067|range}} above 1H (Nov-2025) | {{CA-0251|range}} above 1H (Feb-2026) | {{CA-0111}}, {{CA-0112}} above 1H |
 | Renal revenue | ~{{CA-0499|range}} growth (May-2025) | above {{CA-0344|range}} (Nov-2025); ~{{CA-0241|range}} (Feb-2026) | ~{{CA-0166|range}} growth |
 | Dialysis machines placed | {{CA-0501|range}} (May-2025) | ~{{CA-0239|range}} (Feb-2026) | ~{{CA-0088|range}} |
 | Standalone EBITDA margin | {{CA-0517|range}} (May-2025) | unchanged | {{CA-0097|approx}} |
@@ -102,7 +102,7 @@ We read these as signs that guidance is framed as a target to be managed toward 
 - **EBITDA margin:** standalone {{CA-0139|range}}, consolidated {{CA-0140|range}}.
 - **Capex:** {{CA-0141|range}}.
 
-**Vision 2030** ('PolyMed 3.0'): double revenue by FY30. Management characterized the current business as 'around 80% organic … and 20% inorganic', and expects a similar split. The same call placed the organic contribution at ~14-15% a year. <!-- TR1Q27S p.2, p.7 -->
+**Vision 2030** ('PolyMed 3.0'): double revenue by FY30. Management characterized the current business as {{CA-0007|plain}}, and expects a similar split. An analyst on the same call worked this out as about {{WM-0065|range}} a year organic and {{WM-0066|range}} from acquisitions, which the MD described as 'a trajectory basically'. <!-- TR1Q27S p.2, p.7 -->
 
 The FY27 plan rests on four things:
 1. a recovery in Europe that 1QFY27 has begun to show;
@@ -112,7 +112,7 @@ The FY27 plan rests on four things:
 
 ::: callout title="What would change our read" kind="debate"
 Evidence that FY26 was structural rather than cyclical would include three things:
-1. Organic export growth staying below ~10% once West Asia logistics normalize.
+1. Organic export growth staying in single digits once West Asia logistics normalize.
 2. Renal revenue declining for a second year without an anti-dumping duty.
 3. Receivable days staying above the FY26 level, which management attributed to 'better terms' extended to international customers. <!-- TR4Q26 p.12 -->
 

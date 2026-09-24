@@ -32,7 +32,7 @@ The acquisitions and the stated plan to double R&D spend are attempts to fix the
    MDR has raised the cost of staying in Europe, which works against smaller suppliers (Section B4).
 5. **Distribution reach.**
    - {{A-0011}} distributors and {{CB-0018}} direct-sales representatives. <!-- AR26 p.3; DK1Q27 p.5 -->
-   - No customer accounts for 10% of revenue, and the top-10 customers were {{D-0223}} of FY24 revenue. <!-- AR26 p.92; PD24 p.50 -->
+   - No customer reaches the 10% disclosure threshold, and the top-10 customers were {{D-0223}} of FY24 revenue. <!-- AR26 p.92; PD24 p.50 -->
 6. **A steady launch cadence.**
    - About {{CA-0086}} new products in FY26, {{A-0006}} patents granted and a pipeline of {{A-0128}} products. <!-- TR4Q26 p.4; AR26 p.3, p.14 -->
 

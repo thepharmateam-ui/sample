@@ -67,6 +67,9 @@ d(31, "CB-0451/CB-0450*100", "%", 0, "gross_margin", "Citieffe", "CY25",
 d(32, "B-0705/B-0704*100", "%", 0, "debt_to_equity", "Medistream SA consolidated (Citieffe)", "as of 31-Dec-2025",
   "interest-bearing financial liabilities / total equity", "A4.9")
 
+d(33, "WC-0050/B-0706*100", "%", 0, "allowance_coverage_overdue", "Medistream SA consolidated (Citieffe)", "as of 31-Dec-2025",
+  "expected-credit-loss allowance / receivables over 120 days (SUB26MEDC p.16)", "A4.9")
+
 # ---------------------------------------------------------------- A5 geographies and entities
 d(40, "(A-0567/A-0568-1)*100", "%", 1, "revenue_growth_yoy", "Polymed standalone", "FY26", "standalone export sales to Europe FY26 vs FY25 (AR26 note 43)", "A5", "Europe")
 d(41, "(A-0569/A-0570-1)*100", "%", 1, "revenue_growth_yoy", "Polymed standalone", "FY26", "standalone export sales to the Americas FY26 vs FY25", "A5", "Americas")

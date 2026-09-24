@@ -21,4 +21,4 @@ Management interviews can be tested against people and data outside the company.
 | 14 | Competitor filings (BD, B. Braun, Terumo, Nipro, Weigao, KDL, Indian peers) | Segment growth, pricing commentary and capacity moves in infusion and dialysis | Industry structure (B2) |
 :::
 
-We would prioritize checks 1, 2 and 7: they test the two biggest swing factors, European exports and renal pricing, with evidence management cannot shape.
+We would prioritize the European distributor checks, the dialysis-chain checks and the dialyser import data: they test the two biggest swing factors, European exports and renal pricing, with evidence management cannot shape.

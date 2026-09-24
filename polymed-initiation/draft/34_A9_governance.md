@@ -50,7 +50,7 @@ The acquired businesses keep their own chief executives. <!-- DK1Q27 p.16 -->
 | Rahul Gautam | President, Strategy and Corporate Development | Leads M&A and integration |
 | Alessandro Balboni | CEO Plan1 Health; non-executive director of Polymed | Ex-CEO Delta Med and Paul Hartmann Italy |
 | Pascal Govi | CEO Citieffe | CEO since 2019; retained on STI/LTIP after the acquisition |
-| Sander Hartman | CEO PendraCare | Holds the 10% not acquired; the stake is to be bought in 2030 on CY29 EBITDA |
+| Sander Hartman | CEO PendraCare | Holds the stake Polymed did not acquire, which is to be bought in 2030 on CY29 EBITDA |
 :::
 <!-- AR10 p.15; AR16 pp.60-61; AR22 p.109; AR26 pp.53-55; AGMN25 p.10; DK1Q27 pp.16-17, p.22; TR1Q27S p.2, p.10; DKNOV20 p.9; TRCIT pp.4-5, p.12; DKPEN p.11 -->
 
@@ -59,11 +59,11 @@ The acquired businesses keep their own chief executives. <!-- DK1Q27 p.16 -->
 - **Re-appointment.** Because he is older than {{WM-0055}}, the 31st AGM re-appointed him by special resolution. {{WM-0039}} of institutional votes were cast against, the highest dissent of any resolution at the meeting. <!-- PBN26 p.6 -->
 - **Balance of the board.** The four executive directors include three members of the promoter family. With the promoter parents and the Plan1 founder among the non-executives, the board has a slim independent balance by the standards of widely held companies. It still meets the one-third test that applies to a non-promoter non-executive chairman. <!-- AR26 p.51 -->
 
-### Shareholding: how the promoter group reached 62%
+### Shareholding: how the promoter group reached {{A-1279}}
 
 The promoter group's reported holding has swung between {{B-0518}} and {{D-0334}} over five years with almost no change in the family's own shareholdings. The swings are almost entirely the result of two reclassifications:
 - **Zetta Matrix Consulting LLP.** It held {{WM-0021}} in FY20 as a public shareholder and was moved into the promoter group in FY23. <!-- AR20 p.112; AR23 p.81 -->
-- **Ezekiel Global Business Solutions LLP.** It held {{WM-0020}} in FY20 and was listed as a non-promoter shareholder above 5% through 31-Mar-2024. By 30-Jun-2024 it was inside the promoter group. <!-- AR20 p.112; AR24 p.111; AR26 p.74; PD24 p.197 -->
+- **Ezekiel Global Business Solutions LLP.** It held {{WM-0020}} in FY20 and was listed as a major non-promoter shareholder through 31-Mar-2024. By 30-Jun-2024 it was inside the promoter group. <!-- AR20 p.112; AR24 p.111; AR26 p.74; PD24 p.197 -->
 
 The arithmetic ties exactly:
 - The reported promoter holding at 31-Mar-2024 plus Ezekiel's then-public stake is {{D-M-019}} (our calculation). That is the promoter-group figure the placement document reported at 30-Jun-2024 ({{D-0334}}), weeks before the Aug-2024 QIP. <!-- PD24 p.197 -->
@@ -89,7 +89,7 @@ Promoter shares carried no pledge at 30-Jun-2024. <!-- PD24 p.197 -->
 
 Over time Vitromed's share of total job work has eased, but the rupee amount has grown {{D-M-024}} since FY10 (our calculation).
 
-::: table id="vitromed" title="Vitromed's share of job work has eased from ~95% to ~84%, but payments to it have grown 8x since FY10"
+::: table id="vitromed" title="Vitromed's share of job work has eased from ~95% to ~84%, but payments to it have grown eightfold since FY10"
 | | FY10 | FY13 | FY16 | FY19 | FY22 | FY24 | FY25 | FY26 |
 |---|---|---|---|---|---|---|---|---|
 | Job work paid to Vitromed | {{B-0058}} | {{B-0141}} | {{B-0249}} | {{B-0332}} | {{B-0505}} | {{B-0634}} | {{A-0548}} | {{A-0547}} |
@@ -189,7 +189,7 @@ Its stated M&A criteria are unchanged:
 | Deal | Closed | What was bought | Price | Latest performance | Detail |
 |---|---|---|---|---|---|
 | Plan1 Health, Italy | Jun-2018 and Mar-2019 | Vascular access and oncology devices (ports, PICCs, midlines); Amaro plant | Investment {{B-0347}}; goodwill {{B-0673}} | Revenue {{B-0723}} (CY23) to {{B-0722}} (CY25); net profit {{B-0725}} (CY25) | A4.2 |
-| PendraCare and Wellinq, Netherlands (90%) | Sep-2025 | Guiding and diagnostic catheters; cardiology R&D | {{B-0836}} upfront; contingent consideration {{A-0688}} | Contribution from 22-Sep-2025 to 31-Mar-2026: revenue {{A-0693}}, pre-tax loss {{A-0694|abs}} | A4.8 |
+| PendraCare and Wellinq, Netherlands ({{A-0100}}) | Sep-2025 | Guiding and diagnostic catheters; cardiology R&D | {{B-0836}} upfront; contingent consideration {{A-0688}} | Contribution from 22-Sep-2025 to 31-Mar-2026: revenue {{A-0693}}, pre-tax loss {{A-0694|abs}} | A4.8 |
 | Citieffe (via Medistream SA), Italy, US, Mexico | Nov-2025 | Trauma implants and external fixators | {{B-0667}} ({{B-0838}}); goodwill {{B-0668}} | Contribution from 6-Nov-2025: revenue {{A-0683}}, pre-tax loss {{A-0684|abs}}. CY25 statutory accounts: revenue {{B-0697}}, net loss {{B-0699}} incl. an FX loss; debt {{B-0705}} | A4.9 |
 | Medyneo, Brazil | 1QFY27 | Dormant company holding ANVISA and import licences | {{A-1016}} | Pre-operational; management says it saves {{CA-0143|range}} months in registrations | A5 |
 | Himalayan Mineral Water, India | 2QFY26 | Company bought under an insolvency resolution plan to secure land next to the Haridwar site | {{A-0581}} | NCLAT appeal pending on past statutory liabilities | A6 |

@@ -388,7 +388,7 @@ Follow-up: What did the cancelled Latin American tender teach you about pricing?
 ::: q theme="Customers and channel" priority="must"
 Q: What share of revenue is OEM or private label today, who are the largest OEM customers by product line, and what are the contract terms – tenor, exclusivity and price resets?
 Why: OEM supply gives volume but ties pricing to a few buyers; the split is not disclosed (Section A4.10).
-Context: Management put the OEM/private-label share at {{CC-0280}} in FY22; top-10 customers were {{D-0223}} of FY24 revenue; no customer reached 10% in FY26. <!-- TR4Q22 p.12; PD24 p.50; AR26 p.92 -->
+Context: Management put the OEM/private-label share at {{CC-0280}} in FY22; top-10 customers were {{D-0223}} of FY24 revenue; no customer reached the 10% disclosure threshold in FY26. <!-- TR4Q22 p.12; PD24 p.50; AR26 p.92 -->
 Listen: Reassuring: diversified OEM customers on multi-year contracts. Concerning: one or two global customers with annual price resets.
 Follow-up: Are any OEM customers also competitors in your own-brand markets?
 :::
@@ -698,7 +698,7 @@ Q: Who owns and controls Ezekiel Global Business Solutions and Zetta Matrix Cons
 Why: The reclassifications lifted reported promoter holding and narrowed the effective float (Section A9).
 Context: They held {{WM-0020}} and {{WM-0021}} in FY20 as public shareholders; the promoter group now holds {{A-1279}}. <!-- AR20 p.112; MGT7_26 p.3 -->
 Listen: Reassuring: a clear explanation matching the regulatory definition of promoter group. Concerning: evasion.
-Follow-up: Do any other shareholders above 1% have links to the promoter family?
+Follow-up: Do any other significant shareholders have links to the promoter family?
 :::
 
 ::: q theme="Governance"

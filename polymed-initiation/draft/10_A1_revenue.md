@@ -4,7 +4,7 @@
 
 Poly Medicure makes single-use medical devices: the cannulas, infusion sets, fistula needles, bloodlines, blood bags, catheters, tubes and drains that a hospital consumes in very large volumes and throws away after one patient.
 - **Scale.** It sells {{A-0001}} products across {{A-0002}} specialities, from {{A-0003}} plants in {{A-0004}} countries with ~{{CB-0082|plain}}bn units of annual capacity. The products reach {{A-0005}} countries through {{A-0011}} distributors. <!-- AR26 p.3; DK1Q27 p.10 -->
-- **Anchor product.** The IV cannula: Polymed describes itself as the third-largest maker globally, and the MD put its share at 'almost global 11%' on ~{{CA-0188}} a year. <!-- DK1Q27 p.7; TR4Q26 p.17 -->
+- **Anchor product.** The IV cannula: Polymed describes itself as the third-largest maker globally, and the MD put its global share at almost {{CA-0187|range}} on ~{{CA-0188}} a year. <!-- DK1Q27 p.7; TR4Q26 p.17 -->
 - **Unit economics.** Most devices sell for a few rupees: management cites price points of Rs. {{WM-0007|range}} per infusion device. It sold {{CA-0554}} devices in 3QFY25 alone. <!-- TR4Q26 p.18; TR3Q25 p.4 -->
 - **Scale of sales.** FY26 consolidated revenue was {{A-0039}}.
 
@@ -28,7 +28,7 @@ Polymed reports revenue in five buckets:
 The company's statutory sustainability report (BRSR) nonetheless gives a finer split of standalone turnover, which we use below and in Section A4. It does not estimate anything beyond what that report prints.
 
 ::: chart
-{"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to 53% of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion {{CB-0025}}, renal {{CB-0030}}, others {{CB-0035}}."}
+{"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to about half of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion {{CB-0025}}, renal {{CB-0030}}, others {{CB-0035}}."}
 :::
 
 The mix shift has been fast:
@@ -49,7 +49,7 @@ Management frames this as de-risking from what it calls 'overdependence' on infu
 
 ### The sustainability report gives the only finer product split
 
-Every listed Indian company must list, in its Business Responsibility and Sustainability Report, the products that make up 90% of turnover, with each product's share. Polymed's BRSR does this for the standalone company, which excludes the foreign subsidiaries, on a product classification broader than the one in its investor presentations. <!-- BRSR26 p.12; BRSR25 p.5 -->
+Every listed Indian company must list, in its Business Responsibility and Sustainability Report, its main products with each one's share of turnover. Polymed's BRSR does this for the standalone company, which excludes the foreign subsidiaries, on a product classification broader than the one in its investor presentations. <!-- BRSR26 p.12; BRSR25 p.5 -->
 
 It gives the following for FY26:
 - **Blood management and blood collection:** {{A-0848}} of standalone turnover, or about {{D-M-037}} (our calculation). That makes it the third-largest line after infusion and dialysis.
@@ -57,7 +57,7 @@ It gives the following for FY26:
 - **Urology:** {{A-0850}}.
 - **Anaesthesia and respiratory:** a separate line at {{A-0899}} in FY25. It has no separate line in FY26, which suggests it was reclassified.
 
-A separate BRSR table on product life-cycle assessment shows that prefilled saline flush syringes (3, 5 and 10 mL) alone were {{A-0870}} of FY26 standalone turnover, about {{D-M-041}} (our calculation). That makes flush syringes one of the largest single product families after IV cannulas. <!-- BRSR26 p.27 -->
+A separate BRSR table on product life-cycle assessment shows that prefilled saline flush syringes (3 mL, 5 mL and 10 mL) alone were {{A-0870}} of FY26 standalone turnover, about {{D-M-041}} (our calculation). That makes flush syringes one of the largest single product families after IV cannulas. <!-- BRSR26 p.27 -->
 
 ::: table id="brsr_split" title="The BRSR split: blood management, surgery and urology are each material businesses, and flush syringes are ~10% of standalone turnover" note="Shares of standalone turnover as printed in the BRSR; rupee values are our calculation (share x standalone revenue from operations of {{A-0350}}). The BRSR's 'infusion therapy' is broader than the presentations' infusion segment: 'infusion' on the BRSR basis implies {{D-M-035}}, against {{A-0281}} for consolidated infusion in the annual report's segment table. Its dialysis share implies {{D-M-036}}, close to the {{A-0284}} reported for renal. Flush syringes sit within infusion therapy."
 | Product line (BRSR classification) | FY25 share | FY26 share | FY26 implied revenue (our calculation) |

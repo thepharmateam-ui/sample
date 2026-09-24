@@ -81,17 +81,17 @@ The main outsourced stage is job work. {{D-M-007}} of it went to Vitromed Health
 
 **Brand versus OEM.**
 - **Split.** About {{CC-0871}} of FY22 revenue was sold under the PolyMed brand and {{CC-0872}} as OEM or private label. Exports ran at ~{{CC-0435|range}} own brand, and management describes India as entirely branded. <!-- DKMAY22 p.10; TR3Q23 p.9 -->
-- **Target.** The stated aim was to move 'as close to 80%' own brand. <!-- TR4Q22 p.12 -->
+- **Target.** The stated aim was to move as close to {{WM-0064|range}} own brand. <!-- TR4Q22 p.12 -->
 - **Buyers.** The OEM customers are not named. CRISIL's 2023 report says Polymed supplies 'other big players'. <!-- CR23 p.7 -->
 
 **Concentration is low.**
 - **Top ten customers:** {{D-0225}} of FY22 revenue, {{D-0223}} in FY24 and {{D-0222}} in 1QFY25.
 - **Largest customer:** between {{D-0233}} and {{D-0230}}.
-- **Threshold:** no customer has reached 10% of revenue in any year since FY19.
+- **Threshold:** no customer has reached the single-customer disclosure threshold in any year since FY19.
 
 The top customers are unnamed. Given the distributor model, they are presumably distributors. <!-- PD24 p.50, p.323; AR24 p.145 -->
 
-::: table id="customer_conc" title="No customer is above 10% of revenue; the top ten account for about 30%, mostly distributors"
+::: table id="customer_conc" title="No single customer reaches the disclosure threshold; the top ten account for under a third of revenue, mostly distributors"
 | | FY22 | FY23 | FY24 | 1QFY25 |
 |---|---|---|---|---|
 | Top-10 customers, % of revenue | {{D-0225}} | {{D-0224}} | {{D-0223}} | {{D-0222}} |
@@ -130,7 +130,7 @@ Four patterns stand out.
    - Two features make Polymed exposed: {{D-0243}} of materials were imported in FY23, and the company holds ~{{CA-0130|range}} months of raw-material cover. A crude spike therefore reaches the P&L one to two quarters later, and price increases follow with a further lag. This is the sequence management described for FY27. <!-- PD24 p.88; TR4Q26 p.6 -->
 2. **Employee cost is the next pressure point.** At {{D-CS-employee_cost-FY26}} of FY26 revenue it is Polymed's second-largest cost. Haryana's minimum wage rose {{CA-0024}} from 1-Apr-2026, and standalone employee cost rose {{CA-0023}} yoy in 1QFY27. Management's answer is more automation. <!-- TR1Q27S p.3; TR4Q26 p.7 -->
 3. **Job work has fallen steadily** from {{D-CS-job_work-FY13}} to {{D-CS-job_work-FY26}} of revenue as in-house automation took over labour-intensive steps. This is the clearest evidence in the accounts of the automation strategy at work.
-4. **Freight is now a visible cost.** It was below 1% of revenue for a decade and reached {{D-CS-freight-FY26}} in FY26. Management says logistics costs have risen 'substantially 2, 3 times in the last 6 months'. <!-- TR1Q27S p.8 -->
+4. **Freight is now a visible cost.** It ran at {{D-CS-freight-FY19}}-{{D-CS-freight-FY24}} of standalone revenue over FY19-FY24 and reached {{D-CS-freight-FY26}} in FY26 (our calculation). Management says logistics costs have risen {{CA-0067|range}} times in the last six months. <!-- TR1Q27S p.8 -->
 
 ::: chart
 {"id":"op_margin","type":"line","title":"Standalone operating EBITDA margin has moved in a 20-28% band, with raw-material cycles setting the dips","cats":["FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of revenue","dec":1,"ymin":15,"series":[{"name":"Operating EBITDA margin","facts":["D-CS-opebitda-FY13","D-CS-opebitda-FY16","D-CS-opebitda-FY19","D-CS-opebitda-FY20","D-CS-opebitda-FY21","D-CS-opebitda-FY22","D-CS-opebitda-FY23","D-CS-opebitda-FY24","D-CS-opebitda-FY25","D-CS-opebitda-FY26"]},{"name":"Materials consumed","facts":["D-CS-rm_cost-FY13","D-CS-rm_cost-FY16","D-CS-rm_cost-FY19","D-CS-rm_cost-FY20","D-CS-rm_cost-FY21","D-CS-rm_cost-FY22","D-CS-rm_cost-FY23","D-CS-rm_cost-FY24","D-CS-rm_cost-FY25","D-CS-rm_cost-FY26"]}],"note":"Our calculation from standalone financial statements. FY21 margin benefited from pandemic-period demand."}
@@ -145,9 +145,9 @@ Four patterns stand out.
 
 ### Working capital: a long cycle by design
 
-Exporting through distributors across 100+ countries ties up capital.
+Exporting through distributors across {{A-0005}} countries ties up capital.
 - **Receivables.** Days fell from {{D-0254}} in FY22 to {{D-0252}} in FY24. <!-- PD24 p.54 -->
 - **Inventory cover.** Raw-material cover is ~{{CA-0130|range}} months. <!-- TR4Q26 p.6 -->
-- **Cash conversion cycle.** On the definition in the company's presentation, the standalone cycle lengthened from {{CB-0935}} in FY25 to {{CB-0934}} in FY26. Management quotes ~140 days on its own measure. <!-- DK4Q26 p.13; TR1Q27S p.14 -->
+- **Cash conversion cycle.** On the definition in the company's presentation, the standalone cycle lengthened from {{CB-0935}} in FY25 to {{CB-0934}} in FY26. Management quotes {{CA-0079}} on its own measure. <!-- DK4Q26 p.13; TR1Q27S p.14 -->
 
 Management attributes the FY26 rise in receivables to 'better terms' extended to international customers to hold volumes, and said it expects the receivable cycle to stay 'similar' in FY27. We treat receivable days as a leading indicator of distributor stress: a further rise alongside weak export growth would point to channel stuffing rather than a demand recovery. <!-- TR4Q26 p.12 -->
