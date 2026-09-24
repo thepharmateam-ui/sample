@@ -114,29 +114,41 @@ def fmt_range(r):
     if not nums:
         return r["display"]
     unit = r.get("unit", "")
-    is_cr = "crore" in txt.lower() or unit.lower() in ("rs cr", "inr cr")
+    low = txt.lower()
     is_pct = "%" in txt or unit == "%"
-    is_bps = "bps" in txt.lower() or unit == "bps"
+    is_bps = "bps" in low or unit == "bps"
     def f(x, dec=None):
         if dec is None:
             dec = 0 if abs(x - round(x)) < 1e-9 else 1
         return f"{x:,.{dec}f}"
-    if is_cr:
-        mn = [x * 10 for x in nums]
-        if max(mn) >= 1000:
-            def fb(x):
-                v = x / 1000
-                return f"{v:,.1f}" if abs(v * 10 - round(v * 10)) < 1e-6 else f"{v:,.2f}"
-            parts = [fb(x) for x in mn]
-            return f"Rs. {'-'.join(dict.fromkeys(parts))}bn"
-        return f"Rs. {'-'.join(dict.fromkeys(f(x, 0) for x in mn))}mn"
+    ul = unit.lower()
+    mult = None
+    if "crore" in low or ul in ("rs cr", "inr cr"):
+        mult = 10.0
+    elif "lakh" in low or ul in ("rs lakh", "inr lakh"):
+        mult = 0.1
+    elif ul in ("rs mn", "inr mn"):
+        mult = 1.0
+    elif ul in ("rs bn", "inr bn"):
+        mult = 1000.0
+    if mult is not None:
+        mn = [x * mult for x in nums]
+        approx = "~" if re.search(r"approx|around|about|close to|nearly|almost|roughly", low) else ""
+        plus = "+" if len(nums) == 1 and re.search(r"\bover\b|more than|above|north of|\bplus\b|upwards|\+", low) else ""
+        if max(abs(x) for x in mn) >= 1000:
+            vals = [x / 1000 for x in mn]
+            if len(vals) > 1 and all(abs(v - round(v)) < 1e-9 for v in vals):
+                parts = [f"{v:,.0f}" for v in vals]  # Rs. 23-24bn
+            else:
+                parts = [f"{v:,.1f}" if abs(v * 10 - round(v * 10)) < 1e-6 else f"{v:,.2f}" for v in vals]
+            return f"{approx}Rs. {'-'.join(dict.fromkeys(parts))}bn{plus}"
+        return f"{approx}Rs. {'-'.join(dict.fromkeys(f(x, 0) for x in mn))}mn{plus}"
     joined = "-".join(dict.fromkeys(f(x) for x in nums))
-    plus = "+" if re.search(r"\bplus\b|\+|upwards|over |north of|above|more than", low if (low := txt.lower()) else "") and len(nums) == 1 else ""
+    plus = "+" if re.search(r"\bplus\b|\+|upwards|over |north of|above|more than", low) and len(nums) == 1 else ""
     if is_pct:
         return joined + "%" + plus
     if is_bps:
         return joined + "bps"
-    low = txt.lower()
     scale = "bn" if ("billion" in low or " bn" in low) else ("mn" if ("million" in low or " mn" in low or "mn" in unit.lower()) else "")
     if unit.upper().startswith("USD") or "usd" in low or "$" in txt:
         return "$" + joined + (scale or "mn")

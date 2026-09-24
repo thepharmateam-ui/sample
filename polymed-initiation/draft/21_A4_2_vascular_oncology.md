@@ -1,12 +1,12 @@
 ## A4.2 Vascular access and oncology (Plan1Health) {#a4-2}
 
-Vascular access and oncology cover the catheters that stay in for days to months rather than hours: central venous catheters, PICCs, midlines, arterial lines, implantable chemotherapy ports and the Huber needles used to reach them. They sell for many times the price of a peripheral cannula and need clinicians trained to place them. Polymed's route in was Plan1Health, a small Italian port and PICC maker bought in 2018-19, whose turnover has since roughly tripled in euro terms. Group revenue for the line is [not disclosed]: it sits in "others", and management declines to break oncology out. <!-- TR4Q26 p.17; DK1Q27 p.12 -->
+Vascular access and oncology cover the catheters that stay in for days to months rather than hours: central venous catheters, PICCs, midlines, arterial lines, implantable chemotherapy ports and the Huber needles used to reach them. They sell for many times the price of a peripheral cannula and need clinicians trained to place them. Polymed's route in was Plan1Health, a small Italian port and PICC maker bought in two tranches in 2018 and 2019, whose turnover has roughly tripled in euro terms since 2020. Group revenue for the line is [not disclosed]: it sits in "others", and management declines to break oncology out. <!-- TR4Q26 p.17; DK1Q27 p.12 -->
 
 ::: snapshot title="Vascular access and oncology at a glance"
 Revenue | [not disclosed] at group level (inside "others"); last split FY20: oncology {{D-0577}} ({{D-0578}} of product sales), central venous catheters {{D-0633}} ({{D-0634}})
 Plan1Health revenue CY25 | {{A-0380}} ({{CB-0105}}), about {{D-WA-020}} of group revenue (our calculation; calendar vs. fiscal year)
 Plan1Health growth | {{D-WA-019}} euro revenue CAGR over CY20-CY25 (our calculation); company EBITDA margin {{CB-0100}} in CY20 to {{CB-0106}} in CY25
-Deal | 100% for an enterprise value of ~{{CB-0098}}, paid in two tranches (Jun-2018 and Mar-2019)
+Deal | {{CB-0097}} for an enterprise value of ~{{CB-0098}}, paid in two tranches (Jun-2018 and Mar-2019)
 Approvals | Whole Plan1Health portfolio approved in Europe; one US 510(k) (Painfusor catheter, 2011)
 What is disclosed | Plan1Health turnover (directors' report) and EBITDA margin (company slide); no group revenue for vascular access or oncology
 :::
@@ -60,7 +60,7 @@ The margin record is less clear, as [[EXREF:p1h_fin]] shows. Management has desc
 | Revenue, euros (company slide; CY23 statutory) | {{CB-0099}} | {{CB-0101}} | {{B-0723}} | {{CB-0103}} | {{CB-0105}} |
 | Turnover, rupees (directors' report) | {{WA-0011}} | {{WA-0013}} | {{A-0814}} | {{A-0381}} | {{A-0380}} |
 | EBITDA margin (company slide) | {{CB-0100}} | {{CB-0102}} | – | {{CB-0104}} | {{CB-0106}} |
-| EBITDA margin (management on calls) | – | – | – | {{CC-0702}} (FY24) | {{CA-0374}} (Nov-2025) |
+| EBITDA margin, management on calls (FY24; Nov-2025) | – | – | – | {{CC-0702|range}} | {{CA-0374|range}} |
 | EBIT margin, statutory (our calculation) | – | – | – | – | {{D-WA-021}} |
 | Net profit, statutory | – | – | {{B-0726}} | – | {{B-0725}} |
 :::
@@ -79,7 +79,7 @@ Management lists oncology among the five focus areas for the next five years, wi
 
 The Indian plan has four strands:
 - **Local manufacture.** Oncology products are sold in India through the critical-care team. Products "currently made in Italy" are to be moved to India, where management says demand is {{CA-0664|range}} imported. <!-- TR4Q25 p.4; TR2Q25 p.8 -->
-- **Higher-class devices.** Chemoports, a Class III implantable, have been launched in India. Management frames this as a shift from short-term devices to "longer term use devices ... class 3", with competition mostly from multinationals and "a couple of good Indian companies also like Meril". <!-- TR3Q25 p.11 -->
+- **Higher-class devices.** Chemoports, a Class III implantable, have been launched in India. Management frames this as a shift from short-term devices to "longer term use devices" in Class III, with competition mostly from multinationals and "a couple of good Indian companies also like Meril". <!-- TR3Q25 p.11 -->
 - **Public cancer care.** The government is setting up standalone specialty oncology (day-care) centres: {{WA-0014}} in FY26 and {{WA-0015}} over three years, on management's account. <!-- TR2Q26 p.5; TR4Q25 p.4 -->
 - **New products.** Recent launches include neonatal PICCs of {{CB-0394}} ("one of the first" made in India), an antimicrobial CVC, tear-away introducers, midlines, PICC-ports and a safety Huber needle. <!-- DKAGM31 pp.3, 5; DK4Q26 p.30 -->
 
@@ -124,7 +124,7 @@ We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval f
 | Plan1Health turnover | The only revenue measure for this line | {{A-0380}} (CY25) | Directors' report, annual |
 | Plan1Health EBITDA margin | Tests the "P1H playbook" used to justify later deals | {{CB-0106}} (CY25, company slide) | Presentations |
 | Port and PICC launches in India | Import substitution needs local manufacture and approval | Chemoports and neonatal PICCs launched | Calls and AGM deck |
-| EU MDR approvals for new oncology and neonatal products | Unlocks tender access in Europe | Filed early 2025; approvals expected in CY2026 | Calls |
+| EU MDR approvals for new oncology and neonatal products | Unlocks tender access in Europe | Filed early 2025; approvals expected in 2026 | Calls |
 | Italian payback exposure | Could claw back revenue from public hospitals | [not disclosed] | Not disclosed |
 | Group oncology revenue | Management declines to disclose | [not disclosed] | Not disclosed |
 :::
@@ -133,6 +133,6 @@ We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval f
 **Open questions for management** (also in the question bank):
 - oncology and vascular-access revenue at group level;
 - which Plan1Health products are made in Italy, bought in, or being moved to India;
-- the definition behind the "16-17%" EBITDA margin quoted for Plan1Health;
+- the definition behind management's higher EBITDA margin figures for Plan1Health;
 - any Italian payback accruals;
 - the identity and terms of the Class III OEM customer.

@@ -57,7 +57,7 @@ The Vitromed Healthcare relationship runs the other way. Polymed pays this promo
 
 ### Why it matters: margins, stickiness and concentration
 
-1. **Margins.** Private label usually sells below own-brand prices because the customer carries the brand and the selling cost, but Polymed does not disclose the gap. Management put export EBITDA at {{CC-0460|range}} in Feb-2023, against {{CC-0461|range}} for India. Since exports carry nearly all the private label, the mix does not appear to have hurt export margins, but this cannot be tested. <!-- TR3Q23 p.16 -->
+1. **Margins.** Private label usually sells below own-brand prices because the customer carries the brand and the selling cost, but Polymed does not disclose the gap. Management put export EBITDA at {{CC-0460|range}} in Feb-2023, against {{CC-0461|range}} for India (as transcribed, the answer sits inside the analyst's turn). Since exports carry nearly all the private label, the mix does not appear to have hurt export margins, but this cannot be tested. <!-- TR3Q23 p.16 -->
 2. **Stickiness.** OEM supply is embedded in the customer's regulatory file: changing a component supplier means re-validation and often re-registration. Management says most of its customer relationships outside India run {{CA-0159|range}} years and that it has "hardly lost any large customer". <!-- TR4Q26 p.11; D_product_glossary -->
 3. **Concentration.** OEM revenue follows a few customers' production schedules. At group level concentration is low: the top ten customers were {{D-0223}} of FY24 revenue and no single customer reached a tenth of sales (Section A2). The OEM customers are not named, so their weight within the top ten is [not disclosed]. <!-- PD24 p.50; AR24 p.145 -->
 4. **Strategic value.** In Dec-2025 Teleflex agreed to sell its OEM business, which makes catheters, extrusions, introducers and guidewire-type components for other device makers, to Montagu and Kohlberg for about {{E-0223}}. That shows the OEM model can stand as a business in its own right. Polymed's components catalogue covers many of the same categories at a far smaller scale. India's CDMO opportunity is small today ({{A-0203}} in 2025, per a study cited in the FY26 annual report) and is projected at {{A-0204}} by 2035. <!-- TFX_10K25 p.1; AR26 p.44 -->
@@ -73,7 +73,7 @@ We read Polymed's stance as pragmatic: own brand where it can build a franchise 
 | CDMO contract revenue | First test of design-and-manufacture income | Revenue expected from FY27 | Calls |
 | US private-label volumes | Main route into US GPOs | One FDA listing under a distributor's name | FDA listings |
 | PendraCare and Plan1Health OEM customers | Concentration inside the acquired businesses | PendraCare {{CB-2501}} OEM (CY24) | Acquisition decks |
-| Component revenue | Size of the B2B components business | [not disclosed] | Not disclosed |
+| Component revenue | Size of the business-to-business components line | [not disclosed] | Not disclosed |
 :::
 
 **Open questions for management** (also in the question bank):

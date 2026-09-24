@@ -44,8 +44,8 @@ Two points on how the range is used.
 | FY19 | Revenue (share) | {{D-0583}} ({{D-0584}}) | Placement document, Feb-2021 |
 | FY20 | Revenue (share) | {{D-0585}} ({{D-0586}}) | Placement document, Feb-2021 |
 | 9MFY21 | Revenue (share) | {{D-0587}} ({{D-0588}}) | Placement document, Feb-2021 |
-| FY20 | Share of sales | {{CC-0968}} | QIP deck |
-| FY22 (presumed) | Share of sales | {{CC-0876}} | May-2022 deck (visual read) |
+| FY20 | Share of sales | {{CC-0968}} of sales | QIP deck |
+| FY22 (presumed) | Share of sales | {{CC-0876}} of sales | May-2022 deck (visual read) |
 | FY25 | Share of standalone turnover | {{A-0899}}, ~{{D-WA-004}} (our calculation) | BRSR FY25 |
 | FY26 | Share of standalone turnover | Not listed | BRSR FY26 |
 | Any year | Critical care revenue | [not disclosed] | – |

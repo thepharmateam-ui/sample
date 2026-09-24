@@ -210,7 +210,7 @@ Follow-up: Which customers switched to Chinese dialysers, and have any come back
 ::: q theme="Renal" priority="must"
 Q: What is the annual consumables pull-through per installed dialysis machine – bloodlines, fistula needles and dialysers – and what share of machines is sold outright versus placed against consumable commitments?
 Why: The razor-and-blade logic is the case for the machine business; placement terms decide its capital intensity.
-Context: Polymed placed {{CA-0088}} machines in FY26 against {{CA-0501|range}} guided, taking the installed base to about {{CA-0089}}. It had bid for {{CA-0273|range}} machines by Feb-2026. <!-- TR4Q26 p.4; TR4Q25 p.4; TR3Q26 p.11 -->
+Context: Polymed placed {{CA-0088|num}} machines in FY26 against {{CA-0501|range}} guided, taking the installed base to about {{CA-0089|num}} machines. It had bid for {{CA-0273|range}} machines by Feb-2026. <!-- TR4Q26 p.4; TR4Q25 p.4; TR3Q26 p.11 -->
 Listen: Reassuring: contractual consumable commitments and measured pull-through per machine. Concerning: machines sold at low margins without consumable lock-in.
 Follow-up: How many service engineers support the installed base, and what uptime do you commit to?
 :::
@@ -334,7 +334,7 @@ Follow-up: Do those customers compete with Polymed's own cardiology range?
 :::
 
 ::: q theme="Cardiology"
-Q: You had deployed about {{WM-0057}} stents cumulatively by Jul-2026, against {{CA-0466}} targeted for FY26 alone. What limits adoption: hospital listings, price caps or clinical data?
+Q: You had deployed about {{WM-0057|num}} stents cumulatively by Jul-2026, against {{CA-0466|num}} targeted for FY26 alone. What limits adoption: hospital listings, price caps or clinical data?
 Why: Stents are the first in-house cardiology product; adoption shows whether Polymed can sell into cath labs.
 Context: The PACIFIER registry had enrolled {{CB-0192}} of a planned {{CB-0063}} by Aug-2026, and the YEIDA plant targets commercial production from 1QFY28. <!-- DK1Q27 p.7, p.22; TR1Q26 p.13; DKAGM31 p.4 -->
 Listen: Reassuring: named hospital systems and a clinical-data plan. Concerning: low uptake explained only by timing.
