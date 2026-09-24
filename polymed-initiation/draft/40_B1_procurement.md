@@ -56,7 +56,7 @@ Payment is the other constraint. Management linked its cash conversion cycle of 
 
 ### China: volume-based procurement sets the floor
 
-China buys most hospital consumables through provincial alliances and national VBP rounds, which trade a guaranteed volume for a large price cut. China ran {{E-0285}} VBP projects for consumables in 2025, covering syringes, IV cannulas, vacuum blood-collection tubes and infusion sets among others. The first national round, for coronary stents, cut their price by {{F-0248}}, to about {{E-0174}}. An EU investigation found that {{WD-0019}} of Chinese public tenders for devices contain explicit or implicit bars on imported products. <!-- KDL_AR25 pp.17, 21; NHC_VBP_2011 p.1; DRHP_SMT p.178; EU_IPI2025_1197 p.6 -->
+China buys a growing share of hospital consumables through provincial alliances and national VBP rounds, which trade a guaranteed volume for a large price cut. China ran {{E-0285}} VBP projects for consumables in 2025, covering syringes, IV cannulas, vacuum blood-collection tubes and infusion sets among others. The first national round, for coronary stents, cut their price by {{F-0248}}, to about {{E-0174}}. An EU investigation found that {{WD-0019}} of Chinese public tenders for devices contain explicit or implicit bars on imported products. <!-- KDL_AR25 pp.17, 21; NHC_VBP_2011 p.1; DRHP_SMT p.178; EU_IPI2025_1197 p.6 -->
 
 Polymed barely sells in China, so VBP matters to it only indirectly: the winners use the capacity VBP builds "to attack overseas markets", Polymed's markets among them (Section B2). <!-- SANXIN_AR25 p.34 -->
 

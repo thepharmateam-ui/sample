@@ -126,7 +126,7 @@ Follow-up: Which single assumption carries the most risk in FY27 guidance?
 ::: q theme="Infusion" priority="must"
 Q: What share of your IV cannula volume is safety-engineered today in each region, and what price premium does a safety cannula carry over a conventional one?
 Why: The shift to safety cannulas is the main price and margin lever in the largest line (Section A4.1).
-Context: Polymed is the world's third-largest IV cannula maker, with about {{CA-0187|range}} global share and {{CA-0188}} a year. <!-- TR4Q26 p.17; DK1Q27 p.7 -->
+Context: Polymed is the world's third-largest IV cannula maker, with about {{CA-0187|range}} global share and {{CA-0188}} a year. Vendor estimates of the safety share of the IV-catheter market range from {{E-0361}} to {{E-0358}}. <!-- TR4Q26 p.17; DK1Q27 p.7; VND_FMI_PIVC p.1; VND_PMR_PIVC p.1 -->
 Listen: Reassuring: rising safety mix with a stable premium, and passive designs that you own. Concerning: safety cannulas priced at parity to win tenders.
 Follow-up: Which safety designs (passive or active) are growing fastest, and do you hold the patents?
 :::
@@ -268,7 +268,7 @@ Q: Management says Chinese dialysers enter India duty-free, paying {{WM-0060}} G
 Why: Dialyser pricing sets renal margins and the payback on the PLI-backed capacity (Section A4.3).
 Context: Polymed filed the petition (initiated 25-Jun-2026) and claims an injury margin of {{CA-0053}}. It told DGTR that the domestic industry made financial and cash losses and a negative return on capital in CY25. Renal revenue grew {{CA-0052}} yoy in 1QFY27 as Polymed chose price over volume. <!-- DGTR_DIAL_INIT p.1, p.4; TR4Q26 p.15; TR1Q27S p.3, p.4 -->
 Listen: Reassuring: cost-down plans that close the gap without duties. Concerning: a strategy that depends on the trade remedy.
-Follow-up: Which customers switched to Chinese dialysers, and have any come back?
+Follow-up: What duty would restore dialyser profitability, and how large were the losses the petition describes?
 :::
 
 ::: q theme="Renal" priority="must"
@@ -340,7 +340,7 @@ Follow-up: What is your share of blood bags in India?
 ::: q theme="Blood and diagnostics"
 Q: Where are you on DEHP-free blood bags, given the EU REACH sunset for DEHP in medical devices, and is there a price premium?
 Why: DEHP substitution is a regulatory transition that favours makers with validated alternatives (Section B5).
-Context: Polymed sold {{A-0803}} of PVC-free products in FY25. <!-- AR25 p.65 -->
+Context: Polymed sold {{A-0803}} of PVC-free products in FY25; DEHP's latest application date for medical devices in the EU is {{F-0243}}. <!-- AR25 p.65; EU_REACH2023_2482 p.4 -->
 Listen: Reassuring: validated DEHP-free bags with European approvals. Concerning: no plan before the deadline.
 Follow-up: Which plasticizer have you chosen, and who supplies it?
 :::
@@ -627,6 +627,22 @@ Listen: Reassuring: a cost position that competes without trade protection. Conc
 Follow-up: Would you consider a plant outside India?
 :::
 
+::: q theme="Competition"
+Q: Where do Romsons, Healthium and Hindustan Syringes compete most directly with Polymed, and has trade pricing in India changed since they raised private capital?
+Why: Private capital gives domestic rivals money for capacity, acquisitions and exports (Section B2).
+Context: Romsons (backed by Temasek) reported an EBITDA margin of {{E-0102}} in FY24; Healthium (owned by KKR) had revenue of {{E-0304}} in FY25. <!-- DRHP_GSURG p.219; ICRA_HEAL p.4 -->
+Listen: Reassuring: product-level differentiation and stable prices. Concerning: price cuts in cannulas, syringes or urology.
+Follow-up: Which Indian rival is investing most in automation?
+:::
+
+::: q theme="Competition"
+Q: Have US or European device makers moved syringe, cannula or component sourcing from China to Polymed since the FDA's syringe alerts and the Section 301 increases?
+Why: A shift of OEM sourcing away from China is a potential tailwind (Sections A4.10 and B5).
+Context: US syringe imports from India rose {{D-WD-016}} in 2025 (our calculation), while imports from China fell; Polymed's FDA listings include no syringe. <!-- F_CT_USA_M_901831_2025 p.1; FDAREG_POLY -->
+Listen: Reassuring: named OEM or CDMO programmes. Concerning: no inbound demand.
+Follow-up: What would you need to supply syringes to the US under a customer's clearance?
+:::
+
 ### Industry, regulation and policy
 
 ::: q theme="Regulation and policy" priority="must"
@@ -634,7 +650,7 @@ Q: What share of domestic revenue is sold through the trade channel at MRP, what
 Why: India is weighing a cap on trade margins for medical devices; the exposure depends on the channel mix and MRP headroom (Section B3).
 Context: A press report of a Maharashtra FDA survey named a Polymed IV set bought at {{F-0083}} against an MRP of {{F-0084}}, a mark-up of {{F-0082}}. The Parliamentary Standing Committee on Health recommended capping the gap between landing price and MRP at {{F-0073}} in Aug-2026, and the Health Minister ordered a review. Domestic revenue was {{A-0263}} in FY26. <!-- FPJ_MAHFDA_2609 p.1; PIB_PSC176_2608 p.1; AR26 p.47 -->
 Listen: Reassuring: modest trade margins and hospital-led pricing. Concerning: MRPs set well above realized prices.
-Follow-up: Would you reset MRPs ahead of a cap?
+Follow-up: What share of domestic revenue is billed to patients at MRP, as against package rates, chain contracts or tenders – and would you reset MRPs ahead of a cap?
 :::
 
 ::: q theme="Regulation and policy" priority="must"
@@ -642,7 +658,7 @@ Q: With the US tariff on Indian devices at {{CA-0077}} and higher US duties on C
 Why: US trade policy is the largest external swing factor for the export thesis (Section B4).
 Context: The duty on Indian HS 9018 goods rose to {{F-0212}} plus a further {{F-0213}} in Aug-2025, fell to nil after the Supreme Court's IEEPA ruling of 20-Feb-2026, and is now a {{F-0221}} Section 301 duty from 24-Jul-2026. Chinese syringes and needles pay {{F-0204}} under Section 301. US syringe imports from India (all makers) rose from {{F-0175}} in 2024 to {{F-0176}} in 2025, while imports from China fell. <!-- FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; SCOTUS_IEEPA_260220 p.2; FR_301ACT_260728 p.7; FR_301MOD_240918 p.9; F_CT_USA_M_901831_2025 p.1 -->
 Listen: Reassuring: product-by-product US plans. Concerning: US ambitions contingent on tariff outcomes.
-Follow-up: Do US customers ask you to hold inventory in the US?
+Follow-up: Commerce had {{F-0260}} to report on Section 232. Are you considering US-side packaging, assembly or sourcing to qualify for any exemption?
 :::
 
 ::: q theme="Regulation and policy"
@@ -656,7 +672,7 @@ Follow-up: Which products are closest to their price ceilings?
 ::: q theme="Regulation and policy"
 Q: Which notified bodies certify your products under EU MDR, and how many certificates expire before the 2027-28 transition deadlines?
 Why: Certificate continuity is a gate for European revenue.
-Context: See the MDR question above; the full-range MDR status is in Section B4. <!-- DKAGM30 p.3 -->
+Context: Legacy certificates under the old directives are valid to {{F-0230}} for higher-risk classes and {{F-0231}} for others, under Regulation (EU) 2023/607. <!-- EU_REG2023_607 p.4 -->
 Listen: Reassuring: all legacy certificates covered by applications. Concerning: products at risk of lapse.
 Follow-up: Do you use more than one notified body?
 :::
@@ -747,6 +763,30 @@ Why: MDSAP audits can speed registrations in the US, Brazil, Canada, Australia a
 Context: Plant certificates by site are listed in the appendix. <!-- Appendix -->
 Listen: Reassuring: all export plants covered. Concerning: gaps at new plants.
 Follow-up: Will the new plants apply for MDSAP?
+:::
+
+::: q theme="Regulation and policy"
+Q: If NPPA caps trade margins on IV sets, syringes and catheters, would you cut MRPs, change distributor terms or accept lower ex-factory prices – and what have you told the Department of Pharmaceuticals in the consultations?
+Why: Who absorbs a cap – the channel or the manufacturer – decides the impact on Polymed (Section B3).
+Context: The Health Minister directed a review of trade margins in Sep-2026; the Parliamentary committee proposed limiting the landing-price-to-MRP gap to {{F-0073}}. <!-- PIB_PSC176_2608 p.1 -->
+Listen: Reassuring: modest ex-factory impact because distributors carry most of the margin. Concerning: a plan to protect distributor margins at the company's expense.
+Follow-up: Does your industry association support caps based on ex-factory or landed prices?
+:::
+
+::: q theme="Regulation and policy"
+Q: What is the government share of domestic revenue today, what are receivable days on state contracts, and does the move away from government business extend to lines reserved for local suppliers?
+Why: Government tenders are won on price and paid slowly (Section B1).
+Context: Management targets a domestic mix of {{CA-0223|plain}}. <!-- TR3Q26 p.4 -->
+Listen: Reassuring: selective participation with prompt payers. Concerning: exit from lines where Polymed has a reserved advantage.
+Follow-up: Do PMNDP dialysis operators count as government customers?
+:::
+
+::: q theme="Customers and channel"
+Q: What share of domestic revenue now comes from corporate hospital chains and organized dialysis chains, and what is your share of their spend on your categories?
+Why: Chains are the fastest-growing and most price-transparent part of the Indian channel (Section B1).
+Context: Management put chain revenue at {{CC-0519|range}} in FY23 and its share of wallet at {{CA-0384|range}} in Nov-2025. <!-- TR4Q23 p.9; TR2Q26 p.13 -->
+Listen: Reassuring: wallet share rising with new categories. Concerning: chains consolidating purchases on price.
+Follow-up: Which chain is your largest customer?
 :::
 
 ### Manufacturing, capacity and automation
