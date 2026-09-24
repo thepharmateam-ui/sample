@@ -48,6 +48,8 @@ def value_forms(v):
         x = float(str(v).replace(",", "").replace("+", "").replace("~", "").replace("%", ""))
         forms |= {norm(f"{x:.1f}"), norm(f"{x:.2f}"), norm(f"{x:,.0f}") if abs(x - round(x)) < 1e-9 else norm(f"{x}"),
                   norm(f"{x:,.1f}"), norm(f"{x:,.2f}")}
+        if x < 0 and abs(x) >= 1000 and abs(x - round(x)) < 1e-9:  # (1.211) European grouping in brackets
+            forms |= {norm(f"({int(round(abs(x))):,})".replace(",", ".")), norm(f"{int(round(abs(x))):,}".replace(",", "."))}
         if x < 0:  # accounts print negatives in brackets
             forms |= {norm(f"({abs(x):,.0f})"), norm(f"{abs(x):,.0f}"), norm(str(int(round(abs(x))))) if abs(x - round(x)) < 1e-9 else norm(f"{abs(x)}")}
         if abs(x - round(x)) < 1e-9:

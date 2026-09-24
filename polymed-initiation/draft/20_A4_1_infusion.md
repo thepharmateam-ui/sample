@@ -142,7 +142,7 @@ Four points follow:
 - **Regional price gaps are wide.** The same BD device sells for roughly three times its European price in the US and a quarter of it in Africa (management's example). Polymed's move into the US is therefore a move into a higher price tier, not just more volume. <!-- TR3Q23 p.15 -->
 - **Price increases lag costs.** Increases reach customers annually or at contract renewal, and in FY22 they reached only ~{{CC-0524|range}} of customers. The FY27 increase of {{CA-0132|range}} compares with ~{{CA-0129}} crude-linked raw-material inflation. <!-- TR4Q23 p.12; AR26 p.85; TR4Q26 p.6 -->
 - **Rebates are rising.** Standalone rebates and discounts rose to {{A-0479}} in FY26 from {{A-0480}} in FY25 and {{A-0824}} in FY24. <!-- AR26 p.77; AR25 p.119 -->
-- **The incumbents' pricing is mixed.** Price contributed {{E-0197}} to BD's FY25 revenue growth, and BD blames "the entry into the market of low-cost manufacturers" and buying concentrated in GPOs. B. Braun's Hospital Care division did raise prices in 2025, and Terumo's price increases added {{E-0253}} to operating profit, more than offsetting a {{E-0254|abs}} hit from US tariffs. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44; TERUMO_FY25 p.7 -->
+- **The incumbents' pricing is mixed.** Price contributed {{E-0197}} to BD's FY25 revenue growth, and BD blames "the entry into the market of low-cost manufacturers" and buying concentrated in GPOs. B. Braun's Hospital Care division did raise prices in 2025, and in the year to Mar-2026 Terumo's price increases added {{E-0253}} to operating profit, more than offsetting a {{E-0254|abs}} hit from US tariffs. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44; TERUMO_FY25 p.7 -->
 
 In India, Para 20 of DPCO 2013 caps annual MRP increases on notified devices at {{D-0185}} (Section B3). <!-- PD24 p.41 -->
 
@@ -161,14 +161,16 @@ The US is the largest market for safety and closed-system catheters and the high
 | K252513 | Polywin Safety and Polywin Safety Adva, full size range | Apr-2026 |
 | US revenue target | {{CC-0273}} in four to five years; {{CC-0527}} in three to four years; {{CC-0638}} a year by FY28; {{CA-0386|range}} "pipeline" on a three-year basis | May-2022; May-2023; Feb-2024; Nov-2025 |
 | US revenue achieved | {{CC-0444}} (Feb-2023); {{CA-0636|range}} expected for FY25; below {{CA-0448|range}} in FY26; {{CA-0078|range}} expected for FY27 | Calls |
-| US tariff on Indian goods, per management | {{CA-0675}} (Oct-2024); {{CA-0427}} (Aug-2025); cut to {{CA-0254}} (Feb-2026); {{CA-0077}} (Aug-2026) | Calls |
+| US tariff on Indian goods, per management | {{CA-0675}} (Oct-2024); {{CA-0427}} (Aug-2025); {{CA-0254}} announced (Feb-2026); {{CA-0077}} (Aug-2026) | Calls |
 :::
 <!-- FDA510K_POLY p.1; TR4Q22 p.9; TR4Q23 p.14; TR3Q24b p.7; TR2Q26 p.14; TR3Q23 p.14; TR2Q25 p.3; TR1Q26 p.7; TR1Q27S p.12; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6 -->
 
 The US effort has been slower than planned at every stage:
 - **Approvals.** 510(k) filings went in mid-2021. The FDA then asked for extra biocompatibility and genotoxicity testing, and in Nov-2025 management said the FDA had "started disapproving Indian lab results", forcing re-tests in the US. <!-- TR2Q23 p.9; TR3Q23 p.10; TR2Q26 p.11 -->
 - **Contracts.** A contract with a large US distributor, signed in Aug-2022, was worth ~{{CC-0324}} over five years for one product category. Contracts with two large GPOs and distributors followed. <!-- TR1Q23 p.12; TR1Q26 p.7 -->
-- **Tariffs.** The Aug-2025 US tariff on India was "completely untenable" and put customers on hold. After the cut in Feb-2026 management was "reinitiating conversations" with contracted customers. Section B4 sets out the legal path. <!-- TR2Q26 p.11; TR3Q26 p.6 -->
+- **Tariffs.** The Aug-2025 US tariff on India was "completely untenable" and put customers on hold. After the cut announced in Feb-2026 management was "reinitiating conversations" with contracted customers. Section B4 sets out the legal path. <!-- TR2Q26 p.11; TR3Q26 p.6 -->
+- **The channel.** GPOs buy for more than {{E-0379}} in the US (industry-body figure). ICU Medical warns that large rivals win "full-line" contracts to supply all of a hospital's or GPO's infusion needs, and that long-term fixed-price contracts stop it passing on cost increases; it paid {{E-0217}} in incremental US tariffs in 2025. A GPO contract gives access, not volume, since members "may choose to purchase from our competitors". <!-- HSCA_HOME p.1; ICUI_10K25 p.1 -->
+- **The next tariff risk.** BD and ICU Medical both flag the Section 232 national-security investigation into imports of medical consumables and equipment, opened in Sep-2025, as a source of further tariffs whatever the country of origin. <!-- BD_10K25 p.1; ICUI_10K25 p.1 -->
 - **Scale.** The US subsidiary PolyHealth Medical booked only {{B-0681}} of revenue in FY26. US sales run mainly as exports from India to distributors and GPOs, and management calls US exposure "not very big". <!-- SUB26US p.2; TR1Q27S p.12 -->
 
 We see the US as an option on the safety and closed-system range rather than a driver of FY27 revenue. The evidence to watch is repeat GPO orders at US prices, not new clearances.
@@ -216,7 +218,7 @@ Polymed's differentiation, on management's account, is design (the group holds {
 
 ### Regulation and policy specific to infusion
 
-- **Sharps safety.** The EU sharps-injury directive and US needlestick legislation make safety-engineered catheters the default purchase in those markets. In India adoption is rising in private hospitals, and each hospital that converts moves from a conventional to a safety cannula at a higher price. <!-- D_product_glossary; VND_PMR_PIVC p.1 -->
+- **Sharps safety.** The EU sharps-injury directive and US needlestick legislation make safety-engineered catheters the default purchase in those markets. In India adoption is rising in private hospitals, and each hospital that converts moves from a conventional to a safety cannula at a higher price. CRISIL lists safety IV cannulas and safety vein sets among the safety devices now used in Indian infusion therapy. <!-- D_product_glossary; VND_PMR_PIVC p.1; PD24 p.137 -->
 - **EU MDR** has raised the cost and time of keeping each catheter variant on the market. Management said in May-2022 that a CE mark took {{CC-0264}} months, against six to twelve before. <!-- TR4Q22 pp.5-6; TR3Q26 p.8 -->
 - **US.** The 510(k) route applies, and the FDA now expects testing in US labs. Tariffs are set out in Section B4. <!-- TR2Q26 p.11 -->
 - **India.** Price increases on notified devices are capped at {{D-0185}} a year. Class A/B licensing has applied since Oct-2022 and Class C/D since Oct-2023, which management says has cut unregulated imports. <!-- PD24 p.41; TR2Q23 p.3; TR1Q25 p.10 -->
@@ -241,7 +243,7 @@ At group level:
 2. **Europe restocking and new customers** (management target; timing FY27). The evidence is 1QFY27 organic Europe growth of {{CA-0032}}. Management expects new customers from Apr-2026, MDR approvals and NHS contracts to add to it. <!-- TR1Q27S p.3; TR3Q26 p.8 -->
 3. **Flush syringes, connectors and caps** (our view). These are consumed several times per catheter, sell at higher prices in the US and Europe, and let Polymed sell a bundle rather than a cannula. The flush syringe is already ~{{D-WA-003}} of standalone revenue (our calculation).
 4. **US safety catheters** (management target; our view: an option, FY28 at the earliest). The US tier prices several times above Europe. Tariffs, the FDA testing issue and GPO ramp-up have delayed every US target since 2022. <!-- TR3Q23 p.15; TR2Q26 p.11 -->
-5. **China-plus-one sourcing** (our view: two-sided). US measures against Chinese syringes help. Chinese makers redirecting product to Europe and emerging markets hurt, as FY26 showed.
+5. **China-plus-one sourcing** (our view: two-sided). The cost case is real: hourly manufacturing wages are below {{E-0184}} in India against {{E-0185}} in China (Frost & Sullivan), and 1Lattice reports that "many companies are moving manufacturing from China to India". US measures against Chinese syringes help. Chinese makers redirecting product to Europe and emerging markets hurt, as FY26 showed, and some are now producing outside China: Weigao's Indonesian joint venture is due to start local manufacturing in the second half of 2026. <!-- DRHP_SMT p.185; DRHP_GSURG p.176; WEIGAO_IR26 p.34 -->
 
 ### Margin drivers, ranked
 

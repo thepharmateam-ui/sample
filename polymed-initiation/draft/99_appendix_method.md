@@ -17,7 +17,18 @@
 - Geography: "West Asia" refers to the region the company calls the Middle East. <!-- lint-ok -->
 - "Standalone" is Poly Medicure Ltd, the Indian listed entity. "Consolidated" adds the subsidiaries and the equity-accounted associate.
 
-**What we do not know.** Polymed discloses revenue for five therapy lines (infusion, renal, cardiology, orthopaedics and "others"). It does not disclose revenue for blood management, anaesthesia and respiratory, diagnostics, urology, gastroenterology, surgery or oncology. We do not estimate these splits. Where a line's size matters to the argument, we say it is not disclosed and list the question in the plant-visit question bank.
+**What we do not know.**
+- **Presentations.** They disclose revenue for five therapy lines: infusion, renal, cardiology, orthopaedics and "others".
+- **The BRSR.** The statutory Business Responsibility and Sustainability Report adds the share of standalone turnover for:
+  - blood management and collection;
+  - surgery and wound drainage;
+  - urology;
+  - anaesthesia and respiratory, in FY25;
+  - prefilled flush syringes.
+
+  We convert these shares to rupees as our calculation.
+- **Not disclosed.** Diagnostics, gastroenterology and oncology are not broken out, and nothing is split at the consolidated level.
+- **Our approach.** We do not estimate splits beyond these disclosures. Where a line's size matters to the argument, we say it is not disclosed and list the question in the plant-visit question bank.
 
 ## Sources {#sources}
 

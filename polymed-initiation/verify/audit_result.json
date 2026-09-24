@@ -134,20 +134,7 @@
   "A-0015",
   "A-0063"
  ],
- "fail": [
-  [
-   "B-0699",
-   "value '-1211' not found on SUB26MEDC p.6"
-  ],
-  [
-   "B-0701",
-   "value '-2131' not found on SUB26MEDC p.6"
-  ],
-  [
-   "B-0700",
-   "value '-1340' not found on SUB26MEDC p.6"
-  ]
- ],
+ "fail": [],
  "nosrc": [],
  "untraced": []
 }
