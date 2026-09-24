@@ -158,8 +158,19 @@
   "CB-1099",
   "CB-1112",
   "B-0715",
-  "A-0128",
+  "A-0344",
+  "CB-1083",
+  "CB-1079",
+  "CB-1080",
+  "CB-1081",
+  "CB-1082",
   "A-0013",
+  "A-0342",
+  "A-0016",
+  "A-0302",
+  "A-0306",
+  "A-0236",
+  "A-0128",
   "B-0722",
   "A-0064",
   "A-1017",
@@ -169,6 +180,18 @@
   "A-0010",
   "A-0009",
   "A-0137",
+  "A-0192",
+  "A-0195",
+  "A-0196",
+  "A-0186",
+  "A-0187",
+  "A-0180",
+  "A-0181",
+  "A-0248",
+  "A-0249",
+  "A-0222",
+  "A-0179",
+  "A-0197",
   "CB-1615",
   "A-0015",
   "A-0063",
@@ -176,22 +199,5 @@
  ],
  "fail": [],
  "nosrc": [],
- "untraced": [
-  [
-   "25-30%",
-   "[b2] se exports as down about a fifth in the US and up 25-30% elsewhere; the industry data "
-  ],
-  [
-   "16x",
-   "[b5] esult.       US syringe imports from India jumped 16x in   as imports from China fe"
-  ],
-  [
-   "60%",
-   "[b5] ness     Dialysis products       May-    Otsuka   60% of ICU Medical's IV-solutions"
-  ],
-  [
-   "(90%)",
-   "[b5] d orthopaedics       Sep-    Polymed   PendraCare (90%)     Guiding and diagnostic ca"
-  ]
- ]
+ "untraced": []
 }

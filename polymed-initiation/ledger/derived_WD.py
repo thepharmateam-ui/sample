@@ -10,7 +10,7 @@ _M = "our calculation: competitor revenue x RBI reference rate (13-Dec-2025) / P
 DERIVED.append({"id": "D-WD-002", "formula": "E-0196*WD-0023/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "BD", "period": "FY25 vs FY26", "note": _M, "section": "B2"})
 DERIVED.append({"id": "D-WD-003", "formula": "E-0198*WD-0023/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "BD Medication Delivery Solutions", "period": "FY25 vs FY26", "note": _M, "section": "B2"})
 DERIVED.append({"id": "D-WD-004", "formula": "E-0241*WD-0024/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "B. Braun", "period": "CY25 vs FY26", "note": _M, "section": "B2"})
-DERIVED.append({"id": "D-WD-005", "formula": "E-0209*WD-0023/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "ICU Medical Consumables", "period": "CY25 vs FY26", "note": _M, "section": "B2"})
+DERIVED.append({"id": "D-WD-005", "formula": "E-0209*WD-0023/A-0039", "unit": "x", "dec": 1, "metric": "revenue_multiple_of_polymed", "entity": "ICU Medical Consumables", "period": "CY25 vs FY26", "note": _M, "section": "B2"})
 DERIVED.append({"id": "D-WD-006", "formula": "E-0239*WD-0024/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "Fresenius Medical Care Care Enablement", "period": "CY25 vs FY26", "note": _M, "section": "B2"})
 DERIVED.append({"id": "D-WD-007", "formula": "E-0220/1000*WD-0023/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "Teleflex (continuing)", "period": "CY25 vs FY26", "note": _M + "; Teleflex reported in USD thousand", "section": "B2"})
 DERIVED.append({"id": "D-WD-008", "formula": "E-0378*WD-0023/A-0039", "unit": "x", "dec": 0, "metric": "revenue_multiple_of_polymed", "entity": "Baxter Infusion Therapies & Technologies", "period": "CY25 vs FY26", "note": _M, "section": "B2"})
@@ -25,3 +25,11 @@ DERIVED.append({"id": "D-WD-013", "formula": "F-0174/1000000", "unit": "USD mn",
 DERIVED.append({"id": "D-WD-014", "formula": "F-0175/1000000", "unit": "USD mn", "dec": 2, "metric": "us_imports", "entity": "US imports HS 901831 (syringes) from India", "period": "CY2024", "note": _S, "section": "B5"})
 DERIVED.append({"id": "D-WD-015", "formula": "F-0176/1000000", "unit": "USD mn", "dec": 1, "metric": "us_imports", "entity": "US imports HS 901831 (syringes) from India", "period": "CY2025", "note": _S, "section": "B5"})
 DERIVED.append({"id": "D-WD-016", "formula": "F-0176/F-0175", "unit": "x", "dec": 0, "metric": "growth_multiple", "entity": "US imports HS 901831 (syringes) from India", "period": "CY2025 vs CY2024", "note": "our calculation: 2025 value / 2024 value", "section": "B5"})
+
+# --- B3: India's device imports as a multiple of exports, Apr-Feb FY26 (EPCMD)
+DERIVED.append({"id": "D-WD-017", "formula": "F-0050/F-0046", "unit": "x", "dec": 1, "metric": "imports_to_exports", "entity": "India medical devices", "period": "11MFY26 (Apr-Feb)", "note": "our calculation: imports / exports, EPCMD data", "section": "B3"})
+
+# --- B4: India's exports of HS 901839 (needles, catheters, cannulae) by destination, CY2025, UN Comtrade US$ scaled to US$ mn
+_C = "our calculation: UN Comtrade value in US$ divided by 1,000,000"
+for _i, (_fid, _geo) in enumerate([("F-0137", "US"), ("F-0138", "Brazil"), ("F-0139", "UAE"), ("F-0140", "Turkiye"), ("F-0141", "Russia"), ("F-0142", "Germany"), ("F-0143", "France"), ("F-0144", "Saudi Arabia"), ("F-0134", "World")]):
+    DERIVED.append({"id": f"D-WD-{18 + _i:03d}", "formula": f"{_fid}/1000000", "unit": "USD mn", "dec": 1, "metric": "exports", "entity": f"India HS 901839 exports to {_geo}", "geography": _geo, "period": "CY2025", "note": _C, "section": "B4"})

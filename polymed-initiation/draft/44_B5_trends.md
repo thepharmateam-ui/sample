@@ -10,7 +10,7 @@ Nine structural trends will shape disposables over the rest of the decade. Most 
 | EtO under pressure; gamma in-house | ~{{E-0381}} of US sterile devices use EtO; tighter US EPA rules | Captive gamma plant cuts lead time and dependence on contract sterilizers | Positive |
 | Closed systems and needle-free access | BD and ICU Medical sell connectors, caps and closed systems as a package | Value shifts from the catheter to the system; Polymed has the parts but not pumps | Mixed |
 | Home dialysis and single-use dialysers | Home therapies {{E-0228}} of patients worldwide (Fresenius); PD below {{E-0015}} in F&S's markets; India's parliamentary panel backs home PD | PD would shift demand from haemodialysis consumables to PD kits; single use would multiply dialyser volumes | Mixed |
-| Automation and labour cost | Hourly wage below {{E-0184}} in India against {{E-0185}} in China and {{WD-0017}} in the US | The labour edge is large but shrinking in weight as automation rises | Positive, eroding |
+| Automation and labour cost | Wages below {{E-0184}} in India, against {{E-0185}} in China and {{WD-0017}} in the US | The labour edge is large but shrinking in weight as automation rises | Positive, eroding |
 | China+1 and reshoring | US syringe imports from India up {{D-WD-016}} in 2025 while those from China fell (our calculation) | Openings in the US and with OEMs, so far mostly in syringes | Positive, slow |
 | EU MDR supplier attrition | {{F-0236}} notified bodies; legacy deadlines to 2027-2028; products dropped in transition | Fewer, larger bidders in EU tenders; Polymed has paid the entry cost | Positive |
 | Consolidation and M&A | Teleflex, Baxter and BD reshaping; KKR, ADIA, Warburg Pincus and Temasek funding Indian rivals | Divested lines may source from low-cost makers; rivals gain capital | Mixed |
@@ -29,7 +29,7 @@ How far conversion has gone is uncertain. Two market-research vendors put the sa
 
 DEHP is the plasticizer that makes PVC flexible in blood bags, bloodlines and infusion tubing. Under Regulation (EU) 2023/2482, its use in medical devices has a latest application date of {{F-0243}} and a sunset date of {{F-0242}}, after which it needs an authorization. ICU Medical lists demand for "more environmentally friendly products" and "materials of concern" among the factors it competes on, and Fresenius has cut the material in its bloodlines. HLL, which claims a dominant share of India's blood-bag market, sells PVC bags. <!-- EU_REACH2023_2482 pp.1, 4; ICUI_10K25 p.1; FMC_20F25 p.1; HLL_BISPR p.1 -->
 
-Polymed sold {{A-0803}} PVC-free products in FY25, {{WD-0025}} of the finished goods it sold, and aims to develop PVC-free versions for at least {{WD-0016}} of its portfolio by 2035. Its catalogue already includes blood bags with TOTM plasticizer for platelet storage, a DEHP- and PVC-free burette set, PVC-free extension lines and a DEHP-free Ryle's tube. <!-- AR25 p.65; BRSR26 p.20; CATDOM25 pp.13, 16, 25, 32 -->
+Polymed sold {{A-0803}} of PVC-free products in FY25, {{WD-0025}} of the finished goods it sold, and aims to develop PVC-free versions for at least {{WD-0016}} of its portfolio by 2035. Its catalogue already includes blood bags with TOTM plasticizer for platelet storage, a DEHP- and PVC-free burette set, PVC-free extension lines and a DEHP-free Ryle's tube. <!-- AR25 p.65; BRSR26 p.20; CATDOM25 pp.13, 16, 25, 32 -->
 
 **What it means for Polymed.** The unit share is high because many of its products, such as cannulas, contain no PVC in the first place; the harder part is the PVC-based lines in blood management, renal and infusion tubing that it sells into Europe. We see the EU deadline as a moderate positive: it raises the cost of staying in the EU market for PVC-based rivals, but alternative plasticizers cost more and must be revalidated product by product.
 
@@ -64,7 +64,7 @@ The other shift is to single use. Nipro expects Asian dialyser sales to grow on 
 
 ### Automation and labour cost
 
-F&S puts India's average hourly manufacturing wage below {{E-0184}}, against {{E-0185}} in China, {{WD-0017}} in the US and {{WD-0018}} in Europe, and India's manufacturing and R&D costs about {{E-0186|range}} below those of the US and Europe. <!-- DRHP_SMT p.185 -->
+F&S puts India's average hourly manufacturing wage below {{E-0184}}, against {{E-0185}} in China, {{WD-0017}} in the US and {{WD-0018}} in Europe, and India's manufacturing and R&D costs about {{E-0186|plain}}% below those of the US and Europe. <!-- DRHP_SMT p.185 -->
 
 Polymed pairs that labour-cost edge with automation: {{CB-1077}} automatic assembly machines and {{CB-1078}} robots in May-2026, against {{D-0166}} assembly machines in Jun-2024. Its workforce data show why: permanent-worker attrition was {{A-0862}} in FY26, and {{A-0874}} of permanent workers were paid the minimum wage. Chinese rivals are automating too: KDL reports pushing scale expansion, automation and intelligent upgrading at each of its four manufacturing bases. <!-- DK4Q26 p.29; PD24 p.179; BRSR26 pp.14, 41; KDL_AR25 p.19 -->
 
@@ -75,7 +75,7 @@ Polymed pairs that labour-cost edge with automation: {{CB-1077}} automatic assem
 US policy has pushed buyers away from Chinese syringes. The FDA advised providers in 2024 to use syringes "not manufactured in China, if possible", and the US raised its Section 301 tariff on Chinese syringes and needles to {{F-0204}} from Sep-2024 (Section B4). US syringe imports show the result. <!-- FDA_SYRINGE_CHINA p.1; FR_301MOD_240918 p.9 -->
 
 ::: chart
-{"id":"b5_syringes","type":"column","title":"US syringe imports from India jumped 16x in 2025 as imports from China fell a quarter, though India is still a small supplier","cats":["2023","2024","2025"],"unit":"US$ mn","dec":1,"series":[{"name":"From China","facts":["D-WD-010","D-WD-011","D-WD-012"]},{"name":"From India","facts":["D-WD-013","D-WD-014","D-WD-015"]}],"label_all":true,"note":"US imports under HS 901831 (syringes), UN Comtrade, calendar years; values converted from US dollars to US$ mn (our calculation). Total US syringe imports were {{F-0170}} in 2025. India's own trade statistics put syringe exports to the US at {{F-0187}} in FY26, out of {{F-0186}} to all markets."}
+{"id":"b5_syringes","type":"column","title":"US syringe imports from India multiplied in 2025 as imports from China fell, though India is still a small supplier","cats":["2023","2024","2025"],"unit":"US$ mn","dec":1,"series":[{"name":"From China","facts":["D-WD-010","D-WD-011","D-WD-012"]},{"name":"From India","facts":["D-WD-013","D-WD-014","D-WD-015"]}],"label_all":true,"note":"US imports under HS 901831 (syringes), UN Comtrade, calendar years; values converted from US dollars to US$ mn (our calculation). Total US syringe imports were {{F-0170}} in 2025. India's own trade statistics put syringe exports to the US at {{F-0187}} in FY26, out of {{F-0186}} to all markets."}
 :::
 
 Other evidence points the same way, but slowly:
@@ -94,7 +94,7 @@ Attrition is visible in the evidence:
 - Polymed "had to drop many products initially" during the transition, and management said in May-2022 that a CE mark now took {{CC-0264}} months. <!-- TR3Q26 p.8; TR4Q22 pp.5-6 -->
 - Translumina's German unit had its CE certificate suspended by its notified body for five months from Oct-2024. <!-- DRHP_INTEG p.42 -->
 
-Polymed has paid the entry cost: all its plants are certified under the MDR for their full range, and it had ~{{CA-0377|num}} CE-certified products in Nov-2025, with ~{{CA-0376|num}} more filed for approval in 2026. The Dec-2025 proposal to simplify the MDR would remove the five-year limit on certificates and, by the Commission's estimate, save more than {{F-0234}} a year (Section B4). <!-- AR26 p.35; TR2Q26 p.10; EU_COM2025_1023 p.1 -->
+Polymed has paid the entry cost: all its plants are certified under the MDR for their full range, and it had ~{{CA-0377|num}} CE-certified products in Nov-2025, with ~{{CA-0376|num}} more filed for approval in 2026. The Dec-2025 proposal to simplify the MDR would remove the five-year limit on certificates and, by the Commission's estimate, save {{F-0234}} a year (Section B4). <!-- AR26 p.35; TR2Q26 p.10; EU_COM2025_1023 p.1 -->
 
 **What it means for Polymed.** The MDR has thinned the field of small suppliers in European tenders, and the acquisitions of PendraCare and Citieffe bought MDR-certified European manufacturing. The simplification lowers costs for all incumbents, including smaller rivals, so we see the moat widening less from here than it did in 2021-2025.
 
@@ -104,19 +104,19 @@ Polymed has paid the entry cost: all its plants are certified under the MDR for 
 | Date | Buyer | Target | Value | What moved |
 |---|---|---|---|---|
 | Sep-2024 | BD | Edwards Lifesciences' critical care | {{E-0208}} | Haemodynamic monitoring |
-| 2024 | KKR | Healthium, from Apax | EV {{E-0146}} | Indian surgical consumables |
+| 2024 (announced) | KKR | Healthium, from Apax | EV {{E-0146}} | Indian surgical consumables |
 | Jan-2025 | Carlyle | Vantive, Baxter's kidney-care business | {{E-0377}} | Dialysis products |
-| May-2025 | Otsuka | 60% of ICU Medical's IV-solutions joint venture | {{E-0216}} | IV solutions |
+| May-2025 | Otsuka | Majority stake in ICU Medical's IV-solutions joint venture | {{E-0216}} | IV solutions |
 | Jun-2025 | Teleflex | BIOTRONIK's vascular intervention business | {{E-0221}} | Balloons, stents, catheters |
 | Jul-2025 | ADIA | Minority stake in Meril | {{E-0147}} | Indian cardiology and orthopaedics |
-| Sep-2025 | Polymed | PendraCare (90%) | {{B-0836}} | Guiding and diagnostic catheters |
+| Sep-2025 | Polymed | PendraCare ({{A-0100}}) | {{B-0836}} | Guiding and diagnostic catheters |
 | Nov-2025 | Polymed | Citieffe (via Medistream) | {{B-0838}} | Trauma implants |
 | Dec-2025 (signed) | Intersurgical | Teleflex acute care and interventional urology | {{E-0222}} | Anaesthesia, respiratory, urology |
 | Dec-2025 (signed) | Montagu and Kohlberg | Teleflex OEM business | {{E-0223}} | Contract manufacturing of catheters and components |
 | Dec-2025 | Healthium | Controlling stake in an advanced-surgery device maker (first tranche) | {{E-0307}} | Surgical devices |
 | Sep-2026 | Temasek | Minority stake in Romsons | [not disclosed] | Indian disposables |
 :::
-<!-- BD_10K25 p.1; DRHP_INTEG p.216; BAX_10K25 p.1; ICUI_10K25 p.1; TFX_10K25 p.1; MA_2509 p.8; MA_2512 p.8; ICRA_HEAL p.3; MB_ROMSONS p.1 -->
+<!-- BD_10K25 p.1; DRHP_INTEG p.216; BAX_10K25 p.1; ICUI_10K25 p.1; TFX_10K25 p.1; AR26 p.12; MA_2509 p.8; MA_2512 p.8; ICRA_HEAL p.3; MB_ROMSONS p.1 -->
 
 Two patterns stand out. The US majors are selling low-growth consumables and contract-manufacturing units (Teleflex's acute care and OEM businesses, Baxter's kidney care) to specialists and private equity, while buying higher-growth technology (BD's critical care, Teleflex's vascular intervention). In India, F&S counts {{E-0148}} MedTech private-equity deals since 2017, and the latest have funded Polymed's closest domestic rivals. <!-- TFX_10K25 p.1; BAX_10K25 p.1; BD_10K25 p.1; DRHP_INTEG p.216 -->
 

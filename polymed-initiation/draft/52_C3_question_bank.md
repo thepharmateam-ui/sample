@@ -437,6 +437,22 @@ Listen: Reassuring: a target rebuilt after PendraCare. Concerning: the same numb
 Follow-up: How will you compete with Meril, SMT and Translumina in India?
 :::
 
+::: q theme="Cardiology"
+Q: How many stents, drug-eluting balloons and IVL units did you sell in FY26, at what realized prices, and how much of cardiology revenue is PendraCare versus India?
+Why: Cardiology revenue is disclosed only in total (Section A4.8).
+Context: Management cited prices for drug-eluting balloons and IVL of about {{WC-0039}}. <!-- TR3Q26 p.6 -->
+Listen: Reassuring: volumes by product with stable prices. Concerning: growth only from PendraCare's consolidation.
+Follow-up: How does your realized stent price compare with the NPPA ceiling?
+:::
+
+::: q theme="Cardiology"
+Q: When will the PACIFIER registry's one-year follow-up support a European filing for your stent, and which notified body will review it?
+Why: The registry gates exports of Polymed's own stent.
+Context: Enrolment was {{CA-0091|plain}} in May-2026 and {{CB-0192}} by Aug-2026. <!-- TR4Q26 p.4; DK1Q27 p.22 -->
+Listen: Reassuring: a filing date. Concerning: no European plan.
+Follow-up: Will you publish the registry data?
+:::
+
 ### Orthopaedics
 
 ::: q theme="Orthopaedics" priority="must"
@@ -461,6 +477,14 @@ Why: The US is the largest orthopaedics market and the hardest to enter.
 Context: Citieffe ranks second in Italy and Mexico with about {{CB-0139}} share. <!-- TR4Q26 p.8; DK1Q27 p.14 -->
 Listen: Reassuring: focused trauma niches with surgeon relationships. Concerning: head-on competition with the majors.
 Follow-up: What did the cancelled Latin American tender teach you about pricing?
+:::
+
+::: q theme="Orthopaedics"
+Q: How is Citieffe growing in calendar 2026 in euros, and has the cancelled Latin American tender been replaced?
+Why: Management guides growth for Citieffe in FY27; tenders drive lumpy revenue.
+Context: Management guided {{CA-0183|range}} growth for Citieffe in FY27 in euros. <!-- TR4Q26 p.16 -->
+Listen: Reassuring: a tender pipeline in Mexico and Latin America. Concerning: reliance on Italy.
+Follow-up: Which US states is Citieffe entering?
 :::
 
 ### Customers and channel
@@ -519,6 +543,46 @@ Why: The size and customers of the business-to-business components line are not 
 Context: The components catalogue lists the range, but revenue is [not disclosed]. <!-- CATCOMP24 -->
 Listen: Reassuring: a revenue range and repeat customers. Concerning: occasional sales.
 Follow-up: Does the components business overlap with PendraCare's OEM work?
+:::
+
+::: q theme="Customers and channel"
+Q: What are revenue and growth for your top ten export countries, and which countries account for most of European revenue?
+Why: Only regional splits are disclosed; country concentration drives risk (Section A5).
+Context: The UK alone was {{CA-0518|range}} of revenue in FY25, per management. <!-- TR4Q25 p.6 -->
+Listen: Reassuring: a diversified country list. Concerning: dependence on a few distributors in two or three countries.
+Follow-up: How many NHS contracts did you win in the 2026 cycle?
+:::
+
+::: q theme="Customers and channel"
+Q: Which European market will be your next direct-sales market, when, and with what headcount and first-year cost?
+Why: Direct selling raises margin but adds fixed cost (Section A5).
+Context: Management has said it plans direct presence in more European countries, following Italy. <!-- TR4Q26 -->
+Listen: Reassuring: a country, a date and a payback plan. Concerning: an open-ended plan.
+Follow-up: Will you buy distributors to go direct?
+:::
+
+::: q theme="Customers and channel"
+Q: The US revenue target of {{CA-0386|range}} has been rolled forward since 2024. What is the new timeline, and which products carry it?
+Why: A repeatedly deferred target tests the US strategy (Section A5).
+Context: US exports are running at {{CA-0078|range}} a year. <!-- TR2Q26 p.14; TR1Q27S p.12 -->
+Listen: Reassuring: product-level volumes from GPO contracts. Concerning: the target restated without a plan.
+Follow-up: Do you need a US warehouse or US-based distribution?
+:::
+
+::: q theme="Customers and channel"
+Q: Which subsidiary booked the one-off provision of about {{CA-0120}} in 4QFY26, and what was it for?
+Why: Management described it in different ways on the call (Section A5).
+Context: The provision hit 4QFY26 consolidated margins. <!-- TR4Q26 p.5 -->
+Listen: Reassuring: a named, non-recurring item. Concerning: a recurring cost in an acquired business.
+Follow-up: Are further provisions expected as integration proceeds?
+:::
+
+::: q theme="Customers and channel"
+Q: What does the Egyptian associate Ultra for Medical Products make, how much do you sell to it, and would you raise the stake?
+Why: A profitable {{A-0717}} associate that serves Africa (Section A5).
+Context: Its CY25 revenue was {{A-0385}}, and it paid Polymed {{A-0557}} in FY26. <!-- AR26 p.33, p.88, p.134 -->
+Listen: Reassuring: a clear strategic role. Concerning: a legacy holding without a plan.
+Follow-up: Does the associate compete with Polymed in any export market?
 :::
 
 ### Competition
@@ -690,9 +754,9 @@ Follow-up: Will the new plants apply for MDSAP?
 ::: q theme="Manufacturing" priority="must"
 Q: What are capacity and utilization by product line and plant today, and which lines are the bottleneck?
 Why: Utilization decides operating leverage and the timing of new capex (Section A6).
-Context: Installed capacity is {{A-0015}} units a year; management put utilization at {{CA-0173|range}} in May-2026, against {{CA-0738|range}} in Jul-2024. <!-- AR26 p.3; TR4Q26 p.14; TR1Q25 p.12 -->
+Context: Installed capacity is {{WM-0063}} a year. Management put utilization at {{CA-0173|range}} in May-2026, against {{CA-0738|range}} in Jul-2024. The Aug-2024 placement document gave FY24 utilization of {{D-0153}} in its chartered engineer's table but {{D-0160}} in its management discussion. <!-- AR26 p.3; TR4Q26 p.14; TR1Q25 p.12; PD24 p.89, p.178 -->
 Listen: Reassuring: data by line with a clear bottleneck. Concerning: only a blended figure.
-Follow-up: Which line would you expand first if demand surprised?
+Follow-up: How is a "unit" of capacity defined, and on how many shifts and days is the group figure computed?
 :::
 
 ::: q theme="Manufacturing" priority="must"
@@ -700,7 +764,7 @@ Q: You run {{CB-1077}} automatic assembly machines and {{CB-1078}} robots. What 
 Why: Automation is the answer to wage inflation and the basis of the cost moat (Sections A2 and A8).
 Context: The count rose from {{D-0166}} machines in Jun-2024. Haryana's minimum wage rose {{CA-0024}} from 1-Apr-2026. <!-- DK4Q26 p.29; PD24 p.179; TR1Q27S p.3 -->
 Listen: Reassuring: measured labour productivity by line. Concerning: automation counts without output metrics.
-Follow-up: What is the payback on an automated line at the new wage levels?
+Follow-up: The count of automatic assembly machines went from {{CB-2103}} (Aug-2025) to {{CB-1945}} (Nov-2025). Was the definition changed, or were that many machines commissioned in three months?
 :::
 
 ::: q theme="Manufacturing"
@@ -722,7 +786,7 @@ Follow-up: Who supplies stainless-steel tubing?
 ::: q theme="Manufacturing"
 Q: How many injection-moulding machines do you run, what cavitation do your key moulds use, and how quickly can you change over?
 Why: Moulding throughput and flexibility set the cost per part.
-Context: The QIP earmarked {{D-0362}} for injection-moulding machines. <!-- PD24 p.75 -->
+Context: Polymed reports {{CB-1076}} moulds and dies; the QIP earmarked {{D-0362}} for injection-moulding machines. <!-- DK4Q26 p.29; PD24 p.75 -->
 Listen: Reassuring: high-cavity moulds and fast changeovers. Concerning: ageing machines.
 Follow-up: How much tool-room capacity is free?
 :::
@@ -759,12 +823,76 @@ Listen: Reassuring: identified space. Concerning: every expansion needs a new si
 Follow-up: What ISO class do your cannula lines run in?
 :::
 
+::: q theme="Manufacturing"
+Q: Which product families does each Indian unit make, and which products are made at only one site?
+Why: Single-site products are an operational risk, and the product mix decides which plants carry the Haryana wage increase (Section A6).
+Context: The annual report numbers the plants as Units I-IX; the only plant-level capacity data (the Aug-2024 placement document) use a different numbering. <!-- AR26; PD24 p.178 -->
+Listen: Reassuring: a unit-by-product matrix with dual sourcing for the largest lines. Concerning: dialysers or flush syringes made at a single site.
+Follow-up: Which unit is the 2023 diagnostics plant?
+:::
+
+::: q theme="Manufacturing"
+Q: Is the export-oriented Unit II in Faridabad the only plant making product for the US, and when did the FDA last inspect it?
+Why: US revenue depends on one registered site (Sections A5 and A6).
+Context: All the FDA-cleared safety IV catheters are listed under Unit II's establishment number; the Jaipur SEZ holds a private-label listing. <!-- FDAREG_POLY -->
+Listen: Reassuring: a recent clean inspection and a second US-registered line planned. Concerning: no inspection history.
+Follow-up: Will the new plants register with the FDA?
+:::
+
+::: q theme="Manufacturing"
+Q: How much dialyser, bloodline and fistula-needle capacity is installed, how much does Palwal add and when, and is capacity planned around single use or reuse?
+Why: Management has said renal is the capacity that runs out first (Section A4.3).
+Context: The installed base is about {{CA-0089|num}} machines; single use was {{CA-0642|range}} of the Indian market in Oct-2024. <!-- TR4Q26 p.4; TR2Q25 p.4 -->
+Listen: Reassuring: capacity plans tied to machine placements. Concerning: capacity added ahead of volumes.
+Follow-up: What dialyser volume makes the renal plant break even?
+:::
+
+::: q theme="Manufacturing"
+Q: What are capacity and utilization at Amaro (Plan1Health) and Bologna (Citieffe), and which processes will move to Indian plants?
+Why: Both acquisitions run below capacity; moving processes to India is the main margin synergy (Sections A4.2 and A4.9).
+Context: Citieffe's plant runs at about {{CA-0756}} of capacity. <!-- TRCIT p.4 -->
+Listen: Reassuring: a transfer list with regulatory approval dates. Concerning: transfers without a timetable.
+Follow-up: What happens to headcount at Bologna and at PendraCare's Dutch sites?
+:::
+
+::: q theme="Manufacturing"
+Q: Which polymers and components are imported and from where, and how much inventory cover did you hold through the polymer price spike and the end of the customs-duty waiver?
+Why: Materials are the largest cost; pass-through runs with a lag (Section A2).
+Context: Basic customs duty on polypropylene, PVC and polycarbonate was cut to {{F-0100}} from 2-Apr-2026 to 15-Jul-2026. <!-- CUSNOT12_2026 p.4; CUSNOT22_2026 p.2 -->
+Listen: Reassuring: diversified suppliers and contractual pass-through. Concerning: spot buying.
+Follow-up: What share of polymer purchases comes from Indian producers?
+:::
+
+::: q theme="Manufacturing"
+Q: Why did contract workers fall from {{A-0877}} to {{A-0860}} in FY26 while permanent headcount rose – automation, lower volume or reclassification?
+Why: Contract labour is a large part of the shop floor; the change bears on costs and on the Labour Codes (Section A6).
+Context: The Labour Codes added a one-time provision of {{A-0363}} in FY26. <!-- BRSR26 p.13, p.41; AR26 p.32 -->
+Listen: Reassuring: automation replacing contract labour. Concerning: work moved to job workers.
+Follow-up: What is the full-year FY27 cost of the Haryana wage increase?
+:::
+
+::: q theme="Manufacturing"
+Q: How is FY27 capex split between Palwal, YEIDA, the second phase of gamma sterilization, automation and maintenance?
+Why: Capex intensity and phasing decide when new capacity reaches the P&L.
+Context: FY27 capex guidance is {{CA-0063|range}}, against {{CA-0127}} in FY26. <!-- TR1Q27S p.4; TR4Q26 p.5 -->
+Listen: Reassuring: a plant-by-plant schedule and maintenance capex level. Concerning: capex set by availability of QIP money.
+Follow-up: What is maintenance capex?
+:::
+
+::: q theme="Manufacturing"
+Q: Of the {{A-0128}} products in the pipeline, how many are Class C or D or implantable, how many need clinical data, and in which markets will they be filed?
+Why: Launch counts do not show the value of the pipeline (Section A6).
+Context: Management said {{CA-0086}} were launched in FY26, of which about {{CA-0087}} by the standalone company. <!-- AR26 p.14; TR4Q26 p.4 -->
+Listen: Reassuring: higher-class products with filing dates. Concerning: range extensions only.
+Follow-up: Which launch of the last two years has sold best?
+:::
+
 ### Quality and sterilization
 
 ::: q theme="Quality and sterilization" priority="must"
 Q: What share of your volume is sterilized with ethylene oxide (EtO) and what share with gamma, how much capacity does the in-house gamma facility add, and what does it save per unit and in lead time?
 Why: Sterilization is a cost, a lead-time and a regulatory issue; the US EPA's EtO rules have tightened (Section B5).
-Context: Polymed commissioned a gamma sterilization facility in 2025, and PolyFlush syringes are gamma-sterilized. <!-- DK2Q26 p.24; CATDOM25 -->
+Context: Polymed commissioned a gamma sterilization facility in 2025; management described a capacity path {{CA-0452|plain}}. PolyFlush syringes are gamma-sterilized. <!-- DK2Q26 p.24; TR1Q26 p.7; CATDOM25 -->
 Listen: Reassuring: in-house gamma lowering cost and cycle time. Concerning: dependence on third-party EtO sterilizers.
 Follow-up: What does sterilization cost as a share of product cost?
 :::

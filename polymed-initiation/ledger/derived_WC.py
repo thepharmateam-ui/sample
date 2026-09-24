@@ -133,3 +133,4 @@ d(88, "A-0306/A-0304*100", "%", 0, "r_and_d_employee_cost_share", "Polymed conso
 d(89, "A-0858+A-0859+A-0860", "count", 0, "standalone_workforce", "Polymed standalone", "as of 31-Mar-2026", "permanent employees + permanent workers + contract workers, BRSR26 p.13 (excludes five non-permanent employees)", "A6")
 d(90, "WC-0025/A-0350*100", "%", 0, "capex_intensity", "Polymed standalone", "FY26", "standalone PPE and intangible additions / standalone revenue from operations", "A6")
 d(91, "(A-0412/A-0413-1)*100", "%", 0, "r_and_d_expense_growth", "Polymed standalone", "FY26", "R&D spend FY26 vs FY25 (AR26 Annexure-8)", "A6")
+d(92, "(D-0076+D-0085+D-0094+D-0103)/D-0151*100", "%", 0, "capacity_share", "Polymed Faridabad plants (I-VI)", "FY24", "Faridabad facilities share of group installed capacity (PD24 p.178)", "A6")

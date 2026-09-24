@@ -106,7 +106,7 @@ Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of
 - **Buyers:** trauma surgeons and hospitals. Citieffe's own sales teams cover Italy, the US and Mexico, alongside {{CB-1104}} distributors in Europe and {{CB-0137}}+ key opinion leaders worldwide. <!-- DK4Q26 p.39; DK1Q27 p.14 -->
 - **US:** Citieffe sells to trauma centres through independent agents rather than group purchasing contracts. Management ruled out selling Polymed's consumables through the orthopaedic reps. <!-- TRCIT p.10-11 -->
 - **Tenders:** in Italian and Latin American public tenders a bidder often needs a full portfolio, which is the main argument for adding plates. <!-- TRCIT p.5-7 -->
-- **Prices:** [not disclosed]; management declined to give product prices. The company says gross margin is above {{CA-0777|range}}, while the 1QFY27 deck implies {{D-WC-030}} (our calculation). <!-- TRCIT p.6, p.9; DK1Q27 p.14 -->
+- **Prices:** [not disclosed]; management declined to give product prices. Management put gross margin at {{CA-0777|range}} at the deal, while the 1QFY27 deck implies {{D-WC-030}} (our calculation). <!-- TRCIT p.6, p.9; DK1Q27 p.14 -->
 
 ### Competition
 - **Multinationals:** Stryker, DePuy Synthes, Zimmer Biomet, Smith+Nephew, Medtronic and Arthrex lead worldwide and in India's premium segment. <!-- DKCIT p.13; DRHP_GSURG p.195 -->
