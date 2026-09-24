@@ -1,12 +1,12 @@
 ## A4.1 Infusion therapy {#a4-1}
 
-Infusion is where Polymed started in 1997, where it still earns half its revenue, and where its claim to global scale rests: management says it makes ~{{CA-0188}} IV catheters a year and ranks third in the world. The line is really six product families sold into one clinical workflow, from the cannula in the vein to the flush syringe that keeps it open, and two of them, the IV cannula and the prefilled flush syringe, are the only ones for which the company has ever given a number. <!-- DK4Q26 p.21; TR4Q26 p.17; DK1Q27 p.7 -->
+Infusion is where Polymed started in 1997, where it still earns half its revenue, and where its claim to global scale rests: management says it makes ~{{CA-0188|num}}mn IV catheters a year and ranks third in the world. The line is really six product families sold into one clinical workflow, from the cannula in the vein to the flush syringe that keeps it open, and two of them, the IV cannula and the prefilled flush syringe, are the only ones for which the company has ever given a number. <!-- DK4Q26 p.21; TR4Q26 p.17; DK1Q27 p.7 -->
 
 ::: snapshot title="Infusion therapy at a glance"
 Revenue FY26 | {{A-0281}} consolidated, {{A-0283}} yoy; {{CB-0059}} of group revenue (vs. {{CB-0056}} in FY20)
 Revenue 1QFY27 | {{CB-0343}}, {{CB-0345|signed}} yoy; {{CB-0359}} of revenue
 Growth | {{CB-0025}} CAGR over FY20-FY26 and {{CB-0490}} over FY23-FY26 (company figures)
-IV cannula | {{CA-0745}} of revenue (Jul-2024, management); ~{{CA-0188}} a year; ~{{CA-0187}} global share (company claim)
+IV cannula | {{CA-0745|range}} of revenue (Jul-2024, management); ~{{CA-0188|num}}mn pieces a year; almost {{WA-0003}} global share (company claim)
 Prefilled flush syringes | {{A-0870}} of FY26 standalone turnover, ~{{D-WA-003}} (our calculation)
 Price points | Rs. {{WM-0007|range}} per device (management)
 US | {{D-0876}} FDA 510(k) clearances, all infusion; US revenue of {{CA-0078|range}} expected in FY27
@@ -27,7 +27,7 @@ The unit of demand differs by item. It is one cannula per insertion attempt, one
 ::: table id="inf_parts" title="Infusion spans six product families; the company quantifies only the IV cannula and the flush syringe"
 | Product family | What it does | Unit of demand | Polymed brands | What Polymed discloses |
 |---|---|---|---|---|
-| IV cannulas: conventional, safety, blood-control, closed-system | Short catheter left in a peripheral vein for fluids, drugs, blood and contrast | One per insertion attempt; re-sited on failure or by protocol | Polyflon, Polyflex, Polywin, Polycan, Polypen, Polyneo, Neonovo, Polycath; safety Polysafety, Polysafety Pro, Polywin Safety, Polyguard+, Polyshield; blood-control Polysafety BC; closed Nouvo Safety Set | {{CA-0745}} of revenue (Jul-2024); ~{{CA-0188}} a year |
+| IV cannulas: conventional, safety, blood-control, closed-system | Short catheter left in a peripheral vein for fluids, drugs, blood and contrast | One per insertion attempt; re-sited on failure or by protocol | Polyflon, Polyflex, Polywin, Polycan, Polypen, Polyneo, Neonovo, Polycath; safety Polysafety, Polysafety Pro, Polywin Safety, Polyguard+, Polyshield; blood-control Polysafety BC; closed Nouvo Safety Set | {{CA-0745|range}} of revenue (Jul-2024); ~{{CA-0188|num}}mn pieces a year |
 | Prefilled saline flush syringes | Flush catheters before and after doses; keep idle lines open | Several per catheter per day | PolyFlush | {{A-0870}} of FY26 standalone turnover (BRSR) |
 | Administration, burette and flow-regulator sets | Carry fluid from bag or bottle to the cannula; control rate | One per IV line, replaced at protocol intervals | Polyfusion, Novofusion, Autofusion, Microfusion, Photofusion, Oncofusion; Polyvol, Polypedia; Polyflo Novo | [not disclosed] |
 | Stopcocks, extension lines, manifolds | Let several infusions share one access; extend and protect the line | One or more per line; heavy use in ICU and theatre | Polyway, Polyway Pro, Polyway Pro Click; high- and low-pressure lines | [not disclosed] |
@@ -49,26 +49,26 @@ Quick-flashback "Adva" needles, which show blood as soon as the tip enters the v
 **Why volume keeps growing.** Up to {{WA-0010}} of hospitalized patients receive a peripheral catheter, and published failure rates run as high as {{WA-0009}}, from phlebitis, infiltration, occlusion and dislodgement. Each failure means a new insertion, so cannula volume rises with admissions, day-care and emergency visits and with how often hospitals re-site. Better catheters that fail less reduce units per patient but command higher prices. <!-- CTG_NCT06727240 p.1; D_product_glossary -->
 
 **Scale and position.** Management's claim has firmed over time:
-- "amongst the top five" IV cannula makers in the world (Oct-2019 deck), then "top three" from Oct-2020; <!-- DK2019 p.4; DKNOV20 p.8; AR22 p.47 -->
-- "almost 10%" of global volume (Jul-2024), then "almost global 11%" on ~{{CA-0188}} pieces (May-2026); <!-- TR1Q25 p.16; TR4Q26 p.17 -->
+- "{{CC-1069}}" IV cannula makers in the world (Oct-2019 deck), then "{{CC-0988}}" from Oct-2020; <!-- DK2019 p.4; DKNOV20 p.8; AR22 p.47 -->
+- {{CA-0746}} of global volume (Jul-2024), then almost {{WA-0003}} on ~{{CA-0188|num}}mn pieces (May-2026); <!-- TR1Q25 p.16; TR4Q26 p.17 -->
 - the third-largest maker globally in the Aug-2026 deck, though the Sep-2026 AGM deck says only "amongst the largest". <!-- DK1Q27 p.7; DKAGM31 p.12 -->
 
-No third party verifies the ranking. The two management figures imply a world market of ~{{D-WA-011}} a year (our calculation). That is far above the "around 1.5 billion" PIVCs sold a year quoted in a 2024 clinical-trial record ({{E-0355}}). We think the higher figure is more plausible: B. Braun alone says its Penang site makes over {{WA-0004}} catheters a year and that it has produced {{WA-0005}} IV catheters since 1984. But the gap is wide enough that the share claim should be treated as indicative. <!-- CTG_NCT06727240 p.1; BBRAUN_AR25 p.11 -->
+No third party verifies the ranking. The two management figures imply a world market of ~{{D-WA-011}} a year (our calculation). That is far above the {{E-0355}} a year quoted in a 2024 clinical-trial record. We think the higher figure is more plausible: B. Braun alone says its Penang site makes over {{WA-0004|num}}mn catheters a year and that it has produced {{WA-0005|num}}bn IV catheters since 1984. But the gap is wide enough that the share claim should be treated as indicative. <!-- CTG_NCT06727240 p.1; BBRAUN_AR25 p.11 -->
 
 **Revenue.** The cannula is the only infusion product with a stated revenue share:
-- **Now:** "Between 25% to 30%" of revenue (Jul-2024). On FY24 revenue that is {{D-WA-007}}-{{D-WA-008}}, or {{D-WA-009}}-{{D-WA-010}} of infusion revenue (our calculation). <!-- TR1Q25 p.16 -->
+- **Now:** {{CA-0745|range}} of revenue, in the MD's words (Jul-2024). On FY24 revenue that is between {{D-WA-007}} and {{D-WA-008}}, or {{D-WA-009}} to {{D-WA-010}} of infusion revenue (our calculation). <!-- TR1Q25 p.16 -->
 - **History:** under the old Schedule VI the standalone accounts itemized IV cannula sales: {{B-0090}} in FY12, {{B-0089}} in FY13, {{B-0180}} in FY15 and {{B-0179}} in FY16. On our calculation the share of standalone revenue fell from {{D-WA-012}} in FY12 to {{D-WA-015}} in FY16. <!-- AR13 p.49; AR16 p.94 -->
-- **CRISIL's figure:** CRISIL Ratings put the "IV cannula segment" at {{B-0747}} of FY22 revenue. That is close to the whole infusion segment's share ({{D-0216}} of FY22 revenue from operations in the placement document), so we read it as infusion, not the cannula alone, and use management's 25-30%. <!-- CRR2212 p.1; CR23 p.6; PD24 p.49 -->
+- **CRISIL's figure:** CRISIL Ratings put the "IV cannula segment" at {{B-0747}} of FY22 revenue. That is close to the whole infusion segment's share ({{D-0216}} of FY22 revenue from operations in the placement document), so we read it as infusion, not the cannula alone, and use management's {{CA-0745|range}}. <!-- CRR2212 p.1; CR23 p.6; PD24 p.49 -->
 
-**Unit economics.** Standalone Polymed sold {{CB-2573}} devices in FY25 ({{CB-2575|signed}} yoy) for average revenue of {{D-WA-016}} per device, against {{D-WA-017}} in FY24 (our calculation). Management's ~{{CA-0188}} cannulas would be roughly {{D-WA-018}} of those units (our calculation; the two figures are a year apart). The five largest products, which the company does not name, earned {{CB-2576}} in FY25, {{CB-2578|signed}} yoy. <!-- DK4Q25 p.11; TR4Q26 p.17 -->
+**Unit economics.** Standalone Polymed sold {{CB-2573}} in FY25 ({{CB-2575|signed}} yoy) for average revenue of {{D-WA-016}} per device, against {{D-WA-017}} in FY24 (our calculation). Management's ~{{CA-0188|num}}mn cannulas would be roughly {{D-WA-018}} of those units (our calculation; the two figures are a year apart). The five largest products, which the company does not name, earned {{CB-2576}} in FY25, {{CB-2578|signed}} yoy. <!-- DK4Q25 p.11; TR4Q26 p.17 -->
 
 ### Prefilled flush syringes: a second product family of renal-sized scale
 
-The 2026 BRSR disclosed, in its life-cycle-assessment table, that PolyFlush prefilled saline syringes earned {{A-0870}} of FY26 standalone turnover. That is ~{{D-WA-003}} (our calculation), close to the whole renal business ({{A-0284}} consolidated). It makes the flush syringe Polymed's largest product family after the cannula on the disclosed evidence. <!-- BRSR26 p.27; AR26 p.47 -->
+The FY26 BRSR disclosed, in its life-cycle-assessment table, that PolyFlush prefilled saline syringes earned {{A-0870}} of FY26 standalone turnover. That is ~{{D-WA-003}} (our calculation), close to the whole renal business ({{A-0284}} consolidated). It makes the flush syringe Polymed's largest product family after the cannula on the disclosed evidence. <!-- BRSR26 p.27; AR26 p.47 -->
 
-- **Product.** Ready-to-use syringes of normal saline in three fill sizes, all on a 10ml-diameter barrel so that injection pressure stays low enough not to damage catheters. Single-sterile and sterile-field versions are offered, and the product is gamma sterilized. <!-- CATDOM25 p.9; CATEXP24 p.34; D_product_glossary --> <!-- lint-ok -->
-- **Unit of demand.** One flush before and after each intermittent dose plus scheduled flushes of idle lines, so several per catheter per day. Use is heaviest in US and European hospitals and home infusion, and lower in India, where nurses still draw saline by hand. <!-- D_product_glossary -->
-- **History.** Launched in Nov-2020. By May-2022 management called Polymed the only Indian manufacturer, with BD the only importer, and claimed ~{{CC-0261}} of the Indian market. Exports had begun by Feb-2022. Management named prefilled syringes as a driver of product-sales and export growth in FY24 and FY25. <!-- DKFEB21 p.14; TR4Q22 p.5; TR3Q22 p.21; PD24 pp.106-107; AR25 p.62 -->
+- **Product.** Ready-to-use syringes of normal saline in three fill sizes, all on the barrel diameter of the largest size, so that injection pressure stays low enough not to damage catheters. Single-sterile and sterile-field versions are offered, and the product is gamma sterilized. <!-- CATDOM25 p.9; CATEXP24 p.34; D_product_glossary -->
+- **Unit of demand.** One flush before and after each intermittent dose plus scheduled flushes of idle lines, so several per catheter per day. Use is heaviest in US and European hospitals and home infusion; Indian adoption is lower. <!-- D_product_glossary -->
+- **History.** Launched in Nov-2020. By May-2022 management called Polymed the only Indian manufacturer, with BD the only importer, and claimed ~{{CC-0261|range}} of the Indian market. Exports had begun by Feb-2022. Management named prefilled syringes as a driver of product-sales and export growth in FY24 and FY25. <!-- DKFEB21 p.14; TR4Q22 p.5; TR3Q22 p.21; PD24 pp.106-107; AR25 p.62 -->
 - **Competition.** BD sells prefilled flush syringes within its Medication Delivery Solutions unit ({{E-0198}} revenue in FY25). In China, Weigao's flush-syringe prices fell sharply after the latest volume-based procurement round, one reason its group gross margin fell to {{E-0276}} in 1H2026. We read this as a risk that Chinese flush syringes seek export markets, as Chinese makers have done in other disposables. <!-- BD_10K25 p.1; WEIGAO_IR26 pp.21-22; WEIGAO_AR25 p.13 -->
 - **US access.** None of Polymed's {{D-0876}} US 510(k)s covers the flush syringe, so the US market is not yet open to it. In the US, Chinese syringes (HS 901831) have faced higher Section 301 duties since 2024 and FDA import alerts since May-2024. <!-- FDA510K_POLY p.1; MTD_SYR p.1 -->
 
@@ -86,7 +86,7 @@ These are sold with the cannula and follow its channel, but their demand drivers
 | | FY12 | FY16 | FY18 | FY20 | FY22 | FY23 | FY24 | FY25 | FY26 |
 |---|---|---|---|---|---|---|---|---|---|
 | IV cannula sales, standalone | {{B-0090}} | {{B-0179}} | – | – | – | – | – | – | – |
-| IV cannula, % of standalone revenue (our calculation) | {{D-WA-012}} | {{D-WA-015}} | – | – | – | – | {{WA-0001}}-{{WA-0002}} (group, management) | – | – |
+| IV cannula, % of revenue (FY12-FY16 our calculation, standalone; FY24 management, Jul-2024) | {{D-WA-012}} | {{D-WA-015}} | – | – | – | – | {{CA-0745|range}} | – | – |
 | Infusion revenue, consolidated (deck) | – | – | – | {{CB-0021}} | {{CB-0022}} | {{CB-0486}} | {{CB-0023}} | {{CB-0865}} | {{CB-0864}} |
 | Infusion revenue, placement-document product table | – | – | {{D-0569}} | {{D-0573}} | {{D-0043}} | {{D-0041}} | {{D-0039}} | – | – |
 | Infusion, % of revenue (deck) | – | – | – | {{CB-0056}} | {{CC-0873}} | {{CB-0521}} | – | {{CB-0891}} | {{CB-0059}} |
@@ -108,16 +108,16 @@ Three measurement issues matter for anyone modelling this line:
 {"id":"inf_q","type":"column","title":"Quarterly infusion revenue has moved sideways for two years; the 1QFY27 pick-up came from India","cats":["1QFY25","2QFY25","3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"scale":"bn","unit":"Rs bn","dec":2,"series":[{"name":"Infusion revenue, consolidated","facts":["CB-2051","CB-1815","CB-1523","CB-0863","CB-0344","CB-1524","CB-1522","CB-0862","CB-0343"]}],"label_all":true,"note":"As reported in each quarter's presentation; 1QFY26 as restated in the 1QFY27 deck (originally {{CB-1816}}). Growth yoy: {{CB-1819}} in 2QFY26, {{CB-1527|signed}} in 3QFY26, {{CB-0866|signed}} in 4QFY26 and {{CB-0345|signed}} in 1QFY27. Infusion was {{CB-0364}} of revenue in 1QFY26 and {{CB-0359}} in 1QFY27."}
 :::
 
-**Where it is sold.** Infusion is overwhelmingly an export business. Management put it at {{CC-0420}} of export revenue in Feb-2023 and ~{{CC-0512|range}} for FY23, against {{CC-0513|range}} of domestic revenue. That makes the line more exposed to European and US conditions than the group's {{CA-0380}} export share suggests. Standalone export sales to Europe fell from {{A-0568}} in FY25 to {{A-0567}} in FY26 and to the Americas from {{A-0570}} to {{A-0569}}, while Asia rose from {{A-0572}} to {{A-0571}}. <!-- TR3Q23 p.6; TR4Q23 p.7; TR2Q26 p.12; AR26 p.92 -->
+**Where it is sold.** Infusion is overwhelmingly an export business. Management put it at {{CC-0420}} of export revenue in Feb-2023 and ~{{CC-0512|range}} for FY23, against ~{{CC-0513|range}} of domestic revenue. That makes the line more exposed to European and US conditions than the group's {{CA-0380}} export share suggests. Standalone export sales to Europe fell from {{A-0568}} in FY25 to {{A-0567}} in FY26 and to the Americas from {{A-0570}} to {{A-0569}}, while Asia rose from {{A-0572}} to {{A-0571}}. <!-- TR3Q23 p.6; TR4Q23 p.7; TR2Q26 p.12; AR26 p.92 -->
 
 ### Customers, channel and pricing
 
 **Who buys.** Abroad, every sale goes through distributors, several with national exclusivity. They supply hospitals directly or through tenders and purchasing groups. <!-- AR25 p.61; PD24 p.46; CR23 p.7 -->
-- **Europe:** Polymed wins on a wider basket per distributor and on price. Management estimates the gap to multinationals at "maybe 20%, 25%". Six countries (UK, France, Italy, Germany, Spain and the Nordics or Sweden) carry most of the business. <!-- TR1Q25 p.15; TR3Q22 p.6; TR4Q24 p.13 -->
-- **UK:** the NHS buys ~{{CA-0460}} of UK volumes. Polymed bid for {{CA-0461}} new product categories, mostly vascular, in the 2026 cycle, but management says NHS contracts slipped {{CA-0290}} after the change of government. <!-- TR1Q26 pp.10-11; TR3Q26 p.16 -->
-- **India:** a direct sales force and distributors reach ~8,000 hospitals, and infusion is sold under the Polymed brand only. Management expects hospital-chain consolidation to carry its products into merged chains. <!-- AR25 p.61; TR3Q23 p.9; TR4Q25 p.8 -->
+- **Europe:** Polymed wins on a wider basket per distributor and on price; management puts the price gap between Indian makers and multinationals at {{CA-0743|range}}. Six countries (UK, France, Italy, Germany, Spain and Sweden) produced {{CC-0183}} of export revenue in Feb-2022. <!-- TR1Q25 p.15; TR3Q22 p.6 -->
+- **UK:** the NHS buys ~{{CA-0460}} of UK volumes. Polymed bid for {{CA-0461|range}} new product categories, mostly vascular, in the 2026 cycle, but management says NHS contracts slipped by {{CA-0290|range}} years after the change of government. <!-- TR1Q26 pp.10-11; TR3Q26 p.16 -->
+- **India:** a direct sales force and distributors reach {{A-0790}} hospitals, and all Indian sales are under the Polymed brand. Management expects hospital-chain consolidation to carry its products into merged chains. <!-- AR25 p.61; TR3Q23 p.9; TR4Q25 p.8 -->
 
-**Own brand versus private label.** About a quarter of exports were white label in Feb-2023, and India none. The US business is being built through GPOs and distributors that "will be placing the product directly into the market", with Polymed's role "limited to manufacturing in India" (Section A4.10). <!-- TR3Q23 p.9; TR1Q25 p.4 -->
+**Own brand versus private label.** {{CC-0436}} of exports were white label in Feb-2023, and none of India's sales. The US business is being built through GPOs and distributors that "will be placing the product directly into the market", with Polymed's role "limited to manufacturing in India" (Section A4.10). <!-- TR3Q23 p.9; TR1Q25 p.4 -->
 
 **Pricing.** Infusion devices sell at Rs. {{WM-0007|range}} each. Price is set against the multinationals above and the Chinese below, as [[EXREF:inf_price]] shows. <!-- TR4Q26 p.18 -->
 
@@ -126,13 +126,13 @@ Three measurement issues matter for anyone modelling this line:
 |---|---|---|
 | Polymed infusion device price points | Rs. {{WM-0007|range}} | MD, May-2026 |
 | Polymed discount to BD and B. Braun | {{CC-0450}} | MD, Feb-2023 |
-| Indian makers' discount to multinationals | {{CA-0743}} | MD, Jul-2024 |
-| Chinese discount to other suppliers | {{CC-0659}} | MD, Feb-2024 |
-| Discount to China that Polymed says it needs to win on price alone | {{CA-0275}} | MD, Feb-2026 |
-| BD price for the same product: Europe / US and Japan / Africa | {{CC-0451}} / {{CC-0452}} / {{CC-0453}} | MD's example, Feb-2023 |
+| Indian makers' discount to multinationals | {{CA-0743|range}} | MD, Jul-2024 |
+| Chinese discount to other suppliers | {{CC-0659|range}} | MD, Feb-2024 |
+| Discount to China that Polymed says it needs to win on price alone | {{CA-0275|range}} | MD, Feb-2026 |
+| BD price for the same product: Europe / US and Japan / Africa | {{CC-0451}} / {{CC-0452}} / ${{CC-0453|plain}} | MD's example, Feb-2023 |
 | Price increase taken in FY22 (most customers) | {{CC-0271}}; Europe {{CC-0140}} | Calls, Nov-2021 and May-2022 |
-| Typical annual price increase | {{CA-0598}} | MD, Feb-2025 |
-| Price increase for FY27 raw-material inflation | {{CA-0132}} | MD, May-2026 |
+| Typical annual price increase | {{CA-0598|range}} | MD, Feb-2025 |
+| Price increase for FY27 raw-material inflation | {{CA-0132|range}} | MD, May-2026 |
 | Average price increase, 1QFY27 vs. 4QFY26 | {{CB-0187}} | 1QFY27 deck |
 :::
 <!-- TR4Q26 p.18; TR3Q23 p.15; TR1Q25 p.15; TR3Q24b p.15; TR3Q26 p.12; TR2Q22 p.10; TR4Q22 p.8; TR3Q25 p.9; TR4Q26 p.6; DK1Q27 p.22 -->
@@ -142,7 +142,7 @@ Three points follow:
 - **Price increases lag costs.** Increases reach customers annually or at contract renewal, and in FY22 they reached only ~{{CC-0524|range}} of customers. The FY27 increase of {{CA-0132|range}} compares with ~{{CA-0129}} crude-linked raw-material inflation. <!-- TR4Q23 p.12; AR26 p.85; TR4Q26 p.6 -->
 - **Rebates are rising.** Standalone rebates and discounts rose to {{A-0479}} in FY26 from {{A-0480}} in FY25 and {{A-0824}} in FY24. <!-- AR26 p.77; AR25 p.119 -->
 
-In India, Para 20 of DPCO 2013 caps MRP increases on notified devices at {{D-0185}} in any 12 months (Section B3). <!-- PD24 p.41 --> <!-- lint-ok -->
+In India, Para 20 of DPCO 2013 caps annual MRP increases on notified devices at {{D-0185}} (Section B3). <!-- PD24 p.41 -->
 
 ### The US: six clearances, small revenue, a moving tariff
 
@@ -157,11 +157,11 @@ The US is the largest market for safety and closed-system catheters and the high
 | K232234 | Nouvo Safety Set (closed IV catheter system) | 15 Mar 2024 |
 | K252677 | Polyshield safety IV catheters | 5 Nov 2025 |
 | K252513 | Polywin Safety and Polywin Safety Adva, full size range | 1 Apr 2026 |
-| US revenue target | {{CC-0273}} in four to five years; later {{CA-0637}} over three to four years; then {{CA-0386}} "pipeline" on a three-year basis | May 2022; Oct 2024; Nov 2025 |
-| US revenue achieved | ~{{CC-0182}} (Feb-2022); over {{CC-0444}} (Feb-2023); {{CA-0636}} expected for FY25; below {{CA-0448}} in FY26; {{CA-0078}} expected for FY27 | Calls |
+| US revenue target | {{CC-0273}} in four to five years; {{CC-0527}} in three to four years; {{CC-0638}} a year by FY28; {{CA-0386|range}} "pipeline" on a three-year basis | May 2022; May 2023; Feb 2024; Nov 2025 |
+| US revenue achieved | {{CC-0444}} (Feb-2023); {{CA-0636|range}} expected for FY25; below {{CA-0448|range}} in FY26; {{CA-0078|range}} expected for FY27 | Calls |
 | US tariff on Indian goods, per management | {{CA-0675}} (Oct-2024); {{CA-0427}} (Aug-2025); cut to {{CA-0254}} (Feb-2026); {{CA-0077}} (Aug-2026) | Calls |
 :::
-<!-- FDA510K_POLY p.1; TR4Q22 p.9; TR2Q25 p.3; TR2Q26 p.14; TR3Q22 p.6; TR3Q23 p.14; TR1Q26 p.7; TR1Q27S p.12; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6 -->
+<!-- FDA510K_POLY p.1; TR4Q22 p.9; TR4Q23 p.14; TR3Q24b p.7; TR2Q26 p.14; TR3Q23 p.14; TR2Q25 p.3; TR1Q26 p.7; TR1Q27S p.12; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6 -->
 
 The US effort has been slower than planned at every stage:
 - **Approvals.** 510(k) filings went in mid-2021. The FDA then asked for extra biocompatibility and genotoxicity testing, and in Nov-2025 management said the FDA had "started disapproving Indian lab results", forcing re-tests in the US. <!-- TR2Q23 p.9; TR3Q23 p.10; TR2Q26 p.11 -->
@@ -175,11 +175,11 @@ We see the US as an option on the safety and closed-system range rather than a d
 
 Europe is Polymed's largest infusion market and the source of the FY26 slowdown (Section A3).
 - **The downturn.** Distributors cut inventory from four to five months of cover to two to three, and shorter transit after the reopening of the Suez route released more stock. <!-- TR1Q26 p.9; TR2Q26 p.9 -->
-- **The recovery.** Organic European revenue grew {{CA-0032}} in 1QFY27. Management attributes this to {{CA-0293}} new customers from Apr-2026, "mainly infusion", and to existing customers restocking. <!-- TR1Q27S p.3; TR3Q26 p.8 -->
-- **MDR.** The MDR cost Polymed products during the transition: "we had to drop many products initially". It now has ~{{CA-0377}} CE-certified products, {{CA-0376}} new filings for approval in 2026 and ~{{CA-0066}} more awaiting CE marking. Every Polymed plant is certified under the EU MDR for its full range. <!-- TR3Q26 p.8; TR2Q26 p.10; TR1Q27S p.9; AR26 p.35 -->
-- **UK.** The UK was {{CA-0518}} of revenue in FY25. The India-UK trade agreement cuts UK import duty on most of Polymed's products from ~{{CA-0459|range}} to near zero. <!-- TR4Q25 pp.6-7; TR1Q26 p.10 -->
+- **The recovery.** Organic European revenue grew {{CA-0032}} in 1QFY27. Management attributes this to new customers, {{CA-0293|range}} of them from Apr-2026 and mainly in infusion, and to existing customers restocking. <!-- TR1Q27S p.3; TR3Q26 p.8; TR4Q26 pp.8-9 -->
+- **MDR.** The MDR cost Polymed products during the transition: "we had to drop many products initially". It now has ~{{CA-0377|num}} CE-certified products, {{CA-0376|num}} new products filed for approval in 2026 and ~{{CA-0066|num}} more awaiting CE marking. Every Polymed plant is certified under the EU MDR for its full range. <!-- TR3Q26 p.8; TR2Q26 p.10; TR1Q27S p.9; AR26 p.35 -->
+- **UK.** The UK was {{CA-0518|range}} of revenue in FY25. The India-UK trade agreement cuts UK import duty on most of Polymed's products from ~{{CA-0459|range}} to near zero. <!-- TR4Q25 pp.6-7; TR1Q26 p.10 -->
 
-Outside Europe, infusion sells through distributors in Latin America, Africa, Asia and West Asia. There the price discipline of Chinese competitors is strongest, and currency and logistics set the pace. West Asia revenue fell {{CA-0036}} in 1QFY27 because orders could not be shipped. <!-- TR3Q24b p.14; TR1Q27S p.3 -->
+Outside Europe, infusion sells through distributors in Latin America, Africa, Asia and West Asia, where currency and logistics set the pace. B. Braun reports stiffer competition in Latin America and Chinese share gains in ASEAN. West Asia revenue fell {{CA-0036|abs}} in 1QFY27 because orders could not be shipped. <!-- TR3Q24b p.14; BBRAUN_AR25 p.42, p.44; TR1Q27S p.3 -->
 
 ### Market and competition
 
@@ -188,32 +188,32 @@ Outside Europe, infusion sells through distributors in Latin America, Africa, As
 - {{E-0357}} in 2026 (Persistence Market Research);
 - {{E-0360}} in 2026 (Future Market Insights).
 
-They disagree on how much of it is already safety-engineered, from {{E-0361}} (FMI) to {{E-0358}} (Persistence). Persistence puts North America at {{E-0359}} of the market. All three name BD, B. Braun and Smiths Medical (now ICU Medical) as the largest suppliers, with Terumo, Teleflex, Vygon and Nipro behind them. We treat these as ranges, not facts. <!-- VND_RNM_PIVC p.1; VND_PMR_PIVC p.1; VND_FMI_PIVC p.1 -->
+They disagree on how much of it is already safety-engineered, from {{E-0361}} (FMI) to {{E-0358}} (Persistence). Persistence puts North America at {{E-0359}} of the market. FMI names BD, B. Braun and Smiths (now part of ICU Medical) as the largest suppliers, and the reports list Terumo, Teleflex, Vygon and Nipro among the others. We treat these as ranges, not facts. <!-- VND_RNM_PIVC p.1; VND_PMR_PIVC p.1; VND_FMI_PIVC p.1 -->
 
 ::: table id="inf_comp" title="Polymed competes with three global leaders many times its size, Chinese exporters with a cost edge, and Indian makers far smaller in cannulas"
 | Company | Relevant range | Scale indicator | Where it meets Polymed |
 |---|---|---|---|
 | BD (US) | Conventional and safety PIVCs, flush syringes, needle-free connectors, disinfecting caps | Medication Delivery Solutions revenue {{E-0198}} (FY25), of which US {{E-0199}} | US GPOs, Europe, India (BD India revenue {{E-0344}} in FY23) |
-| B. Braun (Germany) | Introcan Safety catheters, infusion sets, stopcocks | Hospital Care revenue {{E-0242}} (CY25); Penang site over {{WA-0004}} catheters a year | Europe, India (B. Braun India revenue {{E-0345}} in FY23) |
+| B. Braun (Germany) | Introcan Safety catheters, infusion systems and supplies | Hospital Care revenue {{E-0242}} (CY25); Penang site over {{WA-0004|num}}mn catheters a year | Europe, India (B. Braun India revenue {{E-0345}} in FY23) |
 | ICU Medical, incl. Smiths Medical (US) | Jelco PIVCs, Clave connectors, disinfecting caps | Consumables revenue {{E-0209}} (CY25) | US, Europe |
-| Terumo, Nipro (Japan); Teleflex (US); Vygon (France) | PIVCs, infusion and specialty vascular access | Named by vendor reports as the next tier | Europe, Asia, US |
+| Terumo, Nipro (Japan); Teleflex (US); Vygon | PIVCs, infusion and specialty vascular access | Named by vendor reports among the leading suppliers | Europe, Asia, US |
 | Weigao, KDL (China) | Syringes, IV catheters, infusion sets, flush syringes | Weigao medical-device revenue RMB {{E-0269|num}}k (CY25); KDL exports {{D-WA-024}} of revenue (our calculation) | Europe, Latin America, Asia, Africa on price |
-| Hindustan Syringes & Medical Devices, Romsons, others (India) | Syringes, IV cannulas, disposables | HMD revenue {{E-0343}} (FY23), IV cannula capacity {{E-0301}}; Romsons revenue {{E-0100}} (FY24) | Indian trade and tenders; some exports |
+| Hindustan Syringes & Medical Devices, Romsons, others (India) | Syringes, IV cannulas, disposables | HMD revenue {{E-0343}} (FY23) and a plant built for {{E-0301|num}}mn IV cannulas a year; Romsons revenue {{E-0100}} (FY24) | Indian trade and tenders; some exports |
 :::
 <!-- BD_10K25 p.1; BBRAUN_AR25 p.11, p.43; ICUI_10K25 p.1; VND_FMI_PIVC p.1; VND_PMR_PIVC p.1; WEIGAO_AR25 p.17; KDL_AR25 pp.21, 24-25; PD24 p.165; HMD_INFRA p.1; DRHP_GSURG p.219 -->
 
 We draw four points from the competitor evidence.
-1. **The global leaders are integrated systems sellers.** BD and ICU Medical sell catheters with pumps, connectors and caps, and win US GPO contracts on breadth. ICU Medical says it can now offer "a one-stop shop" and "more flexible competitive pricing". Polymed's closed-system and blood-control catheters, needle-free connectors and flush syringes are its answer to the breadth problem. Its lack of pumps is a gap. <!-- ICUI_10K25 p.1; BD_10K25 p.1 -->
-2. **Chinese makers are shifting to exports.** KDL's core products (syringes, IV catheters, blood tubes, infusion sets) are now in provincial volume-based procurement at home. Its export gross margin was {{WA-0007}} against {{WA-0008}} in China. Weigao lifted overseas sales to {{E-0268}} of revenue. B. Braun reports that in ASEAN "Chinese manufacturers expanded their market shares". Management says Chinese device exports fell ~20% in the US but grew 25-30% elsewhere. <!-- KDL_AR25 pp.21, 25; WEIGAO_AR25 p.7; BBRAUN_AR25 p.42; TR3Q26 p.5 -->
+1. **The global leaders are integrated systems sellers.** BD and ICU Medical sell catheters with pumps, connectors and caps and compete for US GPO contracts across the whole portfolio. ICU Medical says it can now offer "a one-stop shop" and "more flexible competitive pricing". Polymed's closed-system and blood-control catheters, needle-free connectors and flush syringes are its answer to the breadth problem. Its lack of pumps is a gap. <!-- ICUI_10K25 p.1; BD_10K25 p.1 -->
+2. **Chinese makers are shifting to exports.** KDL's core products (syringes, IV catheters, blood tubes, infusion sets) are now in provincial volume-based procurement at home. Its export gross margin was {{WA-0007}} against {{WA-0008}} in China. Weigao lifted overseas sales to {{E-0268}} of revenue. B. Braun reports that in ASEAN "Chinese manufacturers expanded their market shares". Management describes Chinese device exports as "{{CA-0232|plain}}". <!-- KDL_AR25 pp.21, 25; WEIGAO_AR25 p.7; BBRAUN_AR25 p.42; TR3Q26 p.5 -->
 3. **US policy now disadvantages Chinese syringes.** The FDA told US providers in 2024 to move away from plastic syringes made by four Chinese firms, including KDL, and the US raised Section 301 duties on Chinese syringes and needles. Indian suppliers benefit, although management says US buyers have favoured Vietnam, Thailand, Malaysia and Indonesia so far. <!-- MTD_SYR p.1; AHA_SYR p.1; TR2Q26 p.14 -->
-4. **Indian competitors are syringe-heavy.** Hindustan Syringes' newest plant was built for {{E-0301}} IV cannulas a year, against Polymed's ~{{CA-0188}}. CRISIL names Hindustan Syringes, Lotus Surgical, B. Braun and BD with Polymed as the key consumables players in India. <!-- HMD_INFRA p.1; PD24 p.132 -->
+4. **Indian competitors are syringe-heavy.** Hindustan Syringes' newest plant was built for {{E-0301|num}}mn IV cannulas a year, against Polymed's ~{{CA-0188|num}}mn. CRISIL names Hindustan Syringes, Lotus Surgical, B. Braun and BD with Polymed as the key consumables players in India. <!-- HMD_INFRA p.1; PD24 p.132 -->
 
-Polymed's differentiation, on management's account, is design (it holds ~390 patents across the group; "A lot of companies do copy our products"), MDR and FDA approvals that most Indian peers lack, and a cost base 15-25% below the multinationals. In 2024 Polymed was pursuing a criminal complaint against B. Braun Medical (India) over a catheter patent. <!-- AR26 p.8; TR1Q27S p.15; TR3Q23 p.15; PD24 p.246 --> <!-- lint-ok -->
+Polymed's differentiation, on management's account, is design (the group holds {{A-0077}} granted patents; "A lot of companies do copy our products"), MDR and FDA approvals that most Indian peers lack, and prices {{CC-0450}} below BD and B. Braun. In 2024 Polymed was pursuing a criminal complaint against B. Braun Medical (India) over a catheter patent. <!-- AR26 p.8; TR1Q27S p.15; TR3Q23 p.15; PD24 p.246 -->
 
 ### Regulation and policy specific to infusion
 
-- **Sharps safety.** The EU sharps directive (2010/32/EU) and US needlestick legislation make safety-engineered catheters the default purchase in those markets. Indian adoption is voluntary and led by private hospitals, so each Indian hospital that converts moves from a conventional to a safety cannula at a higher price. <!-- D_product_glossary; VND_PMR_PIVC p.1 -->
-- **EU MDR** has raised the cost and time of keeping each catheter variant on the market. Management says a CE mark now takes 18-24 months against 6-12 before. <!-- TR4Q22 pp.5-6; TR3Q26 p.8 --> <!-- lint-ok -->
+- **Sharps safety.** The EU sharps directive (2010/32/EU) and US needlestick legislation make safety-engineered catheters the default purchase in those markets. In India adoption is rising in private hospitals, and each hospital that converts moves from a conventional to a safety cannula at a higher price. <!-- D_product_glossary; VND_PMR_PIVC p.1 -->
+- **EU MDR** has raised the cost and time of keeping each catheter variant on the market. Management said in May-2022 that a CE mark took {{CC-0264}} months, against six to twelve before. <!-- TR4Q22 pp.5-6; TR3Q26 p.8 -->
 - **US.** The 510(k) route applies, and the FDA now expects testing in US labs. Tariffs are set out in Section B4. <!-- TR2Q26 p.11 -->
 - **India.** Price increases on notified devices are capped at {{D-0185}} a year. Class A/B licensing has applied since Oct-2022 and Class C/D since Oct-2023, which management says has cut unregulated imports. <!-- PD24 p.41; TR2Q23 p.3; TR1Q25 p.10 -->
 
@@ -229,21 +229,21 @@ The FDA listings for its safety IV catheters are all at a Faridabad establishmen
 At group level:
 - **Capacity** rose from ~{{CB-0076}} in FY20 to ~{{CB-0082}} in FY26. Management put utilization of the post-2021 capacity at {{CA-0173|range}} in May-2026. <!-- DK1Q27 pp.9-10; TR4Q26 p.14 -->
 - **New plant:** the Palwal plant, due around Mar-2027, adds infusion capacity alongside orthopaedics and transfusion. <!-- TR1Q27S p.15 -->
-- **Materials:** the key inputs are plastic granules, fluoropolymer catheter tubing and stainless-steel needle tube, mostly imported and bought on purchase orders (Section A2). Whether Polymed grinds needles in-house is [not disclosed]. <!-- PD24 pp.48, 179-180; AR26 p.85 -->
+- **Materials:** the key inputs are plastic granules, FEP compound for catheter tubing and stainless-steel needle tube, mostly imported and bought on purchase orders (Section A2). Whether Polymed grinds needles in-house is [not disclosed]. <!-- PD24 pp.48, 179-180; PD21 pp.44-45; AR26 p.85 -->
 
 ### Growth drivers, ranked
 
-1. **India conversion and reach** (management target; our view: most visible). Domestic infusion grew "20% plus" in 1QFY27, with private hospitals (~90% of domestic revenue) growing while Polymed exits low-margin government tenders. The levers are corporate-chain contracts, a larger clinical sales force and conversion to safety and closed catheters at higher prices. <!-- TR1Q27S p.6; TR3Q26 p.4 -->
+1. **India conversion and reach** (management target; our view: most visible). Domestic infusion grew {{CA-0045}} in 1QFY27, with private hospitals ({{CA-0219}} of domestic revenue) growing while Polymed exits low-margin government tenders. The levers are corporate-chain contracts, a larger clinical sales force and conversion to safety and closed catheters at higher prices. <!-- TR1Q27S p.6; TR3Q26 p.4; TR1Q26 pp.4-5 -->
 2. **Europe restocking and new customers** (management target; timing FY27). The evidence is 1QFY27 organic Europe growth of {{CA-0032}}. Management expects new customers from Apr-2026, MDR approvals and NHS contracts to add to it. <!-- TR1Q27S p.3; TR3Q26 p.8 -->
-3. **Flush syringes, connectors and caps** (our view). These are consumed several times per catheter, sell at higher prices in the US and Europe, and let Polymed sell a bundle rather than a cannula. The flush syringe is already ~{{D-WA-003}} of revenue (our calculation).
+3. **Flush syringes, connectors and caps** (our view). These are consumed several times per catheter, sell at higher prices in the US and Europe, and let Polymed sell a bundle rather than a cannula. The flush syringe is already ~{{D-WA-003}} of standalone revenue (our calculation).
 4. **US safety catheters** (management target; our view: an option, FY28 at the earliest). The US tier prices several times above Europe. Tariffs, the FDA testing issue and GPO ramp-up have delayed every US target since 2022. <!-- TR3Q23 p.15; TR2Q26 p.11 -->
 5. **China+1 sourcing** (our view: two-sided). US measures against Chinese syringes help. Chinese makers redirecting product to Europe and emerging markets hurt, as FY26 showed.
 
 ### Margin drivers, ranked
 
-Polymed does not disclose infusion's margin. Management says exports earn "slightly higher" margins than India, and export EBITDA was described as "30% plus" in Feb-2023. Infusion is the most exported line, so it is probably the group's highest-margin line, but that is our inference. <!-- TR4Q25 p.10; TR3Q23 p.16 -->
+Polymed does not disclose infusion's margin. Management says exports earn "slightly higher" margins than India; in Feb-2023 it put export EBITDA at {{CC-0460|range}} against {{CC-0461|range}} for India. Infusion is the most exported line, so it is probably the group's highest-margin line, but that is our inference. <!-- TR4Q25 p.10; TR3Q23 p.16 -->
 1. **Automation.** Assembly machines rose from {{CB-2103}}+ (Aug-2025 deck) to {{CB-1077}}+ (May-2026), and job work fell as a share of revenue (Section A2). Management's stated answer to Haryana's wage increase is "more automation". <!-- DK1Q26 p.30; DK4Q26 p.29; TR4Q26 p.7 -->
-2. **In-house gamma sterilization.** It replaces outsourced ethylene-oxide sterilization, and management cites both quality control and savings. Capacity is going from {{CA-0452|range}}. <!-- TR1Q25 p.3; TR1Q26 p.7 -->
+2. **In-house gamma sterilization.** It replaces outsourced ethylene-oxide sterilization, and management cites both quality control and savings. Capacity is going {{CA-0452|plain}}. <!-- TR1Q25 p.3; TR1Q26 p.7 -->
 3. **Mix.** Safety, blood-control and closed catheters, flush syringes and connectors earn more per unit than a conventional cannula. Average revenue per device slipped from {{D-WA-017}} to {{D-WA-016}} in FY25 (our calculation), so the mix gain is not yet visible in group numbers.
 4. **Raw materials and freight** (the main risk). Plastics are crude-linked and priced with a lag. Freight rose sharply in FY26 even though export prices are quoted ex-factory. <!-- AR26 p.85; TR3Q24b p.15; TR1Q27S p.8 -->
 
@@ -254,14 +254,14 @@ Polymed does not disclose infusion's margin. Management says exports earn "sligh
 |---|---|---|---|
 | Infusion revenue growth, quarterly | Tests whether FY26 was destocking or share loss | {{CB-0345|signed}} in 1QFY27 | Quarterly presentation |
 | Organic Europe growth | Largest infusion market; new customers from Apr-2026 | {{CA-0032}} in 1QFY27 | Quarterly presentation and call |
-| Domestic infusion growth | Conversion to safety and closed catheters in private hospitals | "20% plus" in 1QFY27 | Call only |
-| IV cannula revenue and volume | The anchor product has no regular disclosure | {{CA-0745}} of revenue (Jul-2024); ~{{CA-0188}} a year | Calls, ad hoc |
+| Domestic infusion growth | Conversion to safety and closed catheters in private hospitals | {{CA-0045}} in 1QFY27 | Call only |
+| IV cannula revenue and volume | The anchor product has no regular disclosure | {{CA-0745|range}} of revenue (Jul-2024); ~{{CA-0188|num}}mn pieces a year | Calls, ad hoc |
 | Flush-syringe share of turnover | Second-largest product family; Chinese price pressure | {{A-0870}} (FY26) | BRSR, annual |
-| US revenue and GPO orders | Test of the safety-catheter strategy | {{CA-0078}} expected in FY27 | Calls |
+| US revenue and GPO orders | Test of the safety-catheter strategy | {{CA-0078|range}} expected in FY27 | Calls |
 | US tariff on Indian goods | Sets the price gap to Vietnam, Malaysia and Mexico | {{CA-0077}} (Aug-2026) | Calls; Federal Register |
 | Price increases vs. raw-material inflation | Margin protection with a lag | {{CB-0187}} in 1QFY27 | Presentation |
 | Rebates and discounts | Early sign of price competition | {{A-0479}} (FY26) | Annual report |
-| Annual vs. quarterly infusion classification | Distorts growth by ~1pp | Gap of {{D-WA-026}} in FY26 (our calculation) | Presentations |
+| Annual vs. quarterly infusion classification | Distorts reported growth | Gap of {{D-WA-026}} in FY26 (our calculation) | Presentations |
 :::
 
 **Open questions for management** (also in the question bank):

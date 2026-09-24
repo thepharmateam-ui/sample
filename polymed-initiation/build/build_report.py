@@ -284,7 +284,51 @@ def parse_attrs(s):
     return dict(re.findall(r'(\w+)="([^"]*)"', s))
 
 
-BLOCK = re.compile(r"^:::\s*(chart|table|callout|snapshot)([^\n]*)\n(.*?)^:::\s*$", re.S | re.M)
+BLOCK = re.compile(r"^:::\s*(chart|table|callout|snapshot|q)([^\n]*)\n(.*?)^:::\s*$", re.S | re.M)
+QS = []  # question-bank entries collected during a build: (num, id, theme, priority, text)
+QFIELDS = [("why", "Why it matters"), ("context", "Our context"), ("listen", "Listen for"), ("follow-up", "Follow-up")]
+
+
+def render_question(attrs, body):
+    """A question-bank card: 'Q:', 'Why:', 'Context:', 'Listen:', 'Follow-up:' lines."""
+    fields, cur = {}, None
+    for line in body.strip().splitlines():
+        m = re.match(r"^(Q|Why|Context|Listen|Follow-up):\s*(.*)$", line.strip(), re.I)
+        if m:
+            cur = m.group(1).lower()
+            fields[cur] = m.group(2)
+        elif cur and line.strip():
+            fields[cur] += " " + line.strip()
+    num = len(QS) + 1
+    qid = f"Q{num:02d}"
+    pri = attrs.get("priority", "")
+    theme = attrs.get("theme", "")
+    QS.append((num, qid, theme, pri, fields.get("q", "")))
+    tags = (f'<span class="tag must">Must-ask</span>' if pri == "must" else '<span class="tag">If time permits</span>')
+    tags += f'<span class="tag">{html.escape(theme)}</span>' if theme else ""
+    dl = "".join(f"<dt>{lab}</dt><dd>{md(sub_tokens(fields[k]))[3:-4]}</dd>" for k, lab in QFIELDS if fields.get(k))
+    return (f'<div class="qblock{" must" if pri == "must" else ""}" id="q-{qid}"><p class="qh"><span class="qid">{qid}</span>{tags}</p>'
+            f'<p class="q">{md(sub_tokens(fields.get("q", "")))[3:-4]}</p><dl class="qd">{dl}</dl>'
+            f'<div class="qnotes" aria-hidden="true"></div></div>')
+
+
+def question_index():
+    """Must-ask list and theme index, generated from the cards in this build."""
+    must = [q for q in QS if q[3] == "must"]
+    rows = "".join(f'<tr><td><a href="#q-{qid}">{qid}</a></td><td>{html.escape(th)}</td><td>{md(sub_tokens(t))[3:-4]}</td></tr>'
+                   for _, qid, th, _, t in must)
+    themes = OrderedDict()
+    for _, qid, th, pri, _ in QS:
+        themes.setdefault(th, []).append((qid, pri))
+    def links(v):
+        return ", ".join('<a href="#q-%s">%s</a>' % (q, q) for q, _ in v)
+    trows = "".join(
+        f'<tr><td>{html.escape(th)}</td><td class="num">{len(v)}</td><td class="num">{sum(1 for _, p in v if p == "must")}</td>'
+        f'<td>{links(v)}</td></tr>' for th, v in themes.items())
+    return (f'<div class="qindex"><h4>The {len(must)} must-ask questions for a short meeting</h4>'
+            f'<div class="tw"><table class="data"><thead><tr><th>No.</th><th>Theme</th><th>Question</th></tr></thead><tbody>{rows}</tbody></table></div>'
+            f'<h4>All {len(QS)} questions by theme</h4><div class="tw"><table class="data"><thead><tr><th>Theme</th><th class="num">Questions</th>'
+            f'<th class="num">Must-ask</th><th>Numbers</th></tr></thead><tbody>{trows}</tbody></table></div></div>')
 
 
 def process_blocks(text):
@@ -305,6 +349,8 @@ def process_blocks(text):
             t = attrs.get("title", "")
             return (f'\n\n<aside class="callout {k}">' + (f"<p class=\"ct\">{html.escape(t)}</p>" if t else "")
                     + md(sub_tokens(body)) + "</aside>\n\n")
+        if kind == "q":
+            return "\n\n" + render_question(attrs, body) + "\n\n"
         if kind == "snapshot":
             items = []
             for line in body.strip().splitlines():
@@ -396,6 +442,7 @@ def bibliography():
 def build(out_path, draft_files, companion=False):
     USED.clear()
     EXH.clear()
+    QS.clear()
     parts = []
     for f in draft_files:
         t = open(f).read()
@@ -407,6 +454,8 @@ def build(out_path, draft_files, companion=False):
     # exhibit cross references
     body = re.sub(r"\[\[EXREF:([\w-]+)\]\]",
                   lambda m: f'<a href="#exh-{m.group(1)}">Exhibit {EXH.get(m.group(1), "?")}</a>', body)
+    if "[[QINDEX]]" in body:
+        body = body.replace("<p>[[QINDEX]]</p>", question_index()).replace("[[QINDEX]]", question_index())
     if "[[BIBLIOGRAPHY]]" in body or "<p>[[BIBLIOGRAPHY]]</p>" in body:
         body = body.replace("<p>[[BIBLIOGRAPHY]]</p>", bibliography()).replace("[[BIBLIOGRAPHY]]", bibliography())
     body = re.sub(r'<td>(\s*(?:[~+\-–]?\s*)?<span class="n"[^>]*>[^<]*</span>\s*)</td>', r'<td class="num">\1</td>', body)
