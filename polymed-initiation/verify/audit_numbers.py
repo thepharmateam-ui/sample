@@ -120,6 +120,7 @@ def main():
         r"\bForm \d+s?\b|\bHS( code)? ?\d{4,8}\b|\b\d+(\.\d+)?\s?(mL|ml|mm|cm|Fr|kV)\b|\bPhase[- ]\d\b",
         r"\b1Lattice\b|\b[Tt]op-?10\b|\bany 12 months\b|\b\d{1,2}-month\b|\bin 10 points\b|\bmore than \d+ days overdue\b|\bThe \d+ must-ask\b|\bAll \d+ questions\b|\bthe 10% disclosure\b",
         r"\bChina\s?\+\s?1\b|\b[12]H\d{2}\b|\b100% export-oriented unit\b|\b100% EOU\b|\bST\.A\.R\. \d+\b",
+        r"\b[Tt]ier-[1-3]\b|\b7Med\b|\b20-F\b|\b360iResearch\b",   # city tiers, company and form names
         r"\b\d{4}/\d{2,4}(/EU)?\b|\b\d{2,4}/\d{4}\b",           # regulation numbers, before years
         r"\b(19|20)\d{2}\b",                                   # years
     ]

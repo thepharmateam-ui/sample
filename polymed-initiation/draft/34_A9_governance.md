@@ -1,21 +1,21 @@
 ## A9 Management, governance and capital allocation {#a9}
 
-Polymed is a founder-run company. The Baid brothers built it, still run it, and with their family and affiliated entities hold {{A-1279}} of the equity. <!-- MGT7_26 p.3 -->
+Polymed is a founder-run company. The Baid brothers built it and still run it, and the reported promoter group, which now includes two LLPs reclassified from the public category, holds {{A-1279}} of the equity. <!-- MGT7_26 p.3; AR26 p.74 -->
 
-The record has real strengths:
+The strengths:
 - clean audit reports, with no auditor qualification in the five years to FY24; <!-- PD24 pp.246-248 -->
 - a CRISIL rating of AA-/Positive; <!-- CR26 p.2 -->
 - a net cash balance sheet;
 - two QIPs that institutions absorbed.
 
-It also carries a set of governance features that we think any investor should diligence before underwriting the FY30 plan:
-1. **Job work with a promoter firm.** {{A-0547}} of FY26 job work went to Vitromed Healthcare, a partnership of promoter-family members. That was {{D-M-006}} of all job-work charges.
+Against these, we see five governance features that an investor should diligence before underwriting the FY30 plan:
+1. **Job work with a promoter firm.** {{A-0547}} of FY26 job work went to Vitromed Healthcare, a partnership of promoter-family members. That was {{D-M-006}} of all job-work charges (our calculation).
 2. **A promoter group enlarged by reclassification.** The reported holding moved from {{B-0518}} to {{A-1279}} after two LLPs that had been counted as public shareholders were reclassified. Neither step involved a purchase of shares.
 3. **Promoter-family pay.** It equalled {{D-M-021}} of standalone PAT in FY26 (our calculation), and the MD earned {{WM-0036}} the median employee.
-4. **Slow deployment of the Aug-2024 QIP.** Only {{D-M-014}} of the capex scheduled for deployment by FY26 was spent, and the monitoring agency flagged that part of the idle money sat in hybrid mutual funds and a PMS.
+4. **Slow deployment of the Aug-2024 QIP.** Only {{D-M-014}} of the capex scheduled for deployment by FY26 was spent (our calculation), and the monitoring agency flagged that part of the idle money sat in hybrid mutual funds and a PMS.
 5. **A mixed early record for the FY26 acquisitions.** PendraCare contributed a pre-tax loss of {{A-0694|abs}} in its first six months under Polymed, while Citieffe was close to breakeven after closing.
 
-None of these is hidden. Each is disclosed in the annual report, the placement documents or the monitoring-agency reports. None has drawn material institutional dissent: no resolution at the 31st AGM had more than {{WM-0039}} of institutional votes against it. <!-- PBN26 pp.3-7 -->
+None of these is hidden. Each is disclosed in the annual report, the placement documents or the monitoring-agency reports. Institutions have not voted against the board in any number: no resolution at the 31st AGM drew more than {{WM-0039}} of institutional votes against, although none of the five items above was itself put to a vote. <!-- PBN26 pp.3-7 -->
 
 ### Who runs Polymed
 
@@ -67,7 +67,7 @@ The promoter group's reported holding has swung between {{B-0518}} and {{D-0334}
 
 The arithmetic ties exactly:
 - The reported promoter holding at 31-Mar-2024 plus Ezekiel's then-public stake is {{D-M-019}} (our calculation). That is the promoter-group figure the placement document reported at 30-Jun-2024 ({{D-0334}}), weeks before the Aug-2024 QIP. <!-- PD24 p.197 -->
-- In FY20 the reported promoter group and the two LLPs together held {{D-M-017}}. In FY22 they held {{D-M-018}}. The fall between those years is the dilution from the Feb-2021 QIP.
+- In FY20 the reported promoter group and the two LLPs together held {{D-M-017}}. In FY22 they held {{D-M-018}}. We attribute the fall between those years to dilution from the Feb-2021 QIP.
 
 ::: chart
 {"id":"promoter_reclass","type":"stacked_column","title":"The promoter group rose from 45% to 62% by reclassifying two LLPs; the combined block barely moved outside QIP dilution","cats":["FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of equity","series":[{"name":"Promoter group as reported","facts":["B-0397","B-0462","B-0518","B-0579","B-0645","A-1300","A-1279"]},{"name":"Ezekiel Global LLP while classified as public","facts":["WM-0020","WM-0022","WM-0024","WM-0026","WM-0027","-","-"]},{"name":"Zetta Matrix LLP while classified as public","facts":["WM-0021","WM-0023","WM-0025","-","-","-","-"]}],"totals":true,"note":"Year-end (31 March) holdings. Zetta Matrix held {{B-0580}} inside the promoter group at 31-Mar-2023 and Ezekiel Global {{WM-0018}} at 31-Mar-2025. The FY25 decline reflects dilution from the Aug-2024 QIP."}
@@ -82,10 +82,10 @@ Promoter shares carried no pledge at 30-Jun-2024. <!-- PD24 p.197 -->
 
 ### Related parties: Vitromed and the family trust
 
-**Vitromed Healthcare** is a Jaipur partnership of J.K. Baid, Rishi Baid, Vishal Baid and Polycure Martech Ltd, a company owned by directors and their relatives. <!-- AR16 p.13, p.19 -->
+**Vitromed Healthcare** is a Jaipur partnership of J.K. Baid, Rishi Baid, Vishal Baid and Polycure Martech Ltd, a company owned by directors and their relatives, according to the FY16 annual report; the FY26 report lists it among enterprises over which key management personnel and their relatives exercise significant influence. <!-- AR16 p.13, p.19; AR26 p.87 -->
 - **Its role.** It has been Polymed's main job-worker since at least FY09. It makes products and components from raw materials that Polymed supplies. It is not an OEM supplier. <!-- AR10 p.41; PD24 p.177 -->
 - **Products.** The Feb-2021 placement document named safety scalp-vein sets and silicone rubber sleeves among its products. <!-- PD21 p.86 -->
-- **Two-way trade.** Vitromed also buys goods from Polymed, so money flows in both directions.
+- **Two-way trade.** Vitromed also buys goods from Polymed, so money flows in both directions. <!-- AR26 p.88 -->
 
 Over time Vitromed's share of total job work has eased, but the rupee amount has grown {{D-M-024}} since FY10 (our calculation).
 
@@ -190,7 +190,7 @@ Its stated M&A criteria are unchanged:
 |---|---|---|---|---|---|
 | Plan1 Health, Italy | Jun-2018 and Mar-2019 | Vascular access and oncology devices (ports, PICCs, midlines); Amaro plant | Investment {{B-0347}}; goodwill {{B-0673}} | Revenue {{B-0723}} (CY23) to {{B-0722}} (CY25); net profit {{B-0725}} (CY25) | A4.2 |
 | PendraCare and Wellinq, Netherlands ({{A-0100}}) | Sep-2025 | Guiding and diagnostic catheters; cardiology R&D | {{B-0836}} upfront; contingent consideration {{A-0688}} | Contribution from 22-Sep-2025 to 31-Mar-2026: revenue {{A-0693}}, pre-tax loss {{A-0694|abs}} | A4.8 |
-| Citieffe (via Medistream SA), Italy, US, Mexico | Nov-2025 | Trauma implants and external fixators | {{B-0667}} ({{B-0838}}); goodwill {{B-0668}} | Contribution from 6-Nov-2025: revenue {{A-0683}}, pre-tax loss {{A-0684|abs}}. CY25 statutory accounts: revenue {{B-0697}}, net loss {{B-0699}} incl. an FX loss; debt {{B-0705}} | A4.9 |
+| Citieffe (via Medistream SA), Italy, US, Mexico | Nov-2025 | Trauma implants and external fixators | {{B-0667}} for the shares in Poly Medicure BV's accounts; total outlay of {{B-0838}} per the monitoring agency; goodwill {{B-0668}} | Contribution from 6-Nov-2025: revenue {{A-0683}}, pre-tax loss {{A-0684|abs}}. CY25 statutory accounts: revenue {{B-0697}}, net loss {{B-0699|abs}} incl. an FX loss; debt {{B-0705}} | A4.9 |
 | Medyneo, Brazil | 1QFY27 | Dormant company holding ANVISA and import licences | {{A-1016}} | Pre-operational; management says it saves {{CA-0143|range}} months in registrations | A5 |
 | Himalayan Mineral Water, India | 2QFY26 | Company bought under an insolvency resolution plan to secure land next to the Haridwar site | {{A-0581}} | NCLAT appeal pending on past statutory liabilities | A6 |
 | AMPIN C&I Power Two, India | FY26 | {{A-0387}} stake in a captive solar project | [not disclosed] | {{A-0064}} commissioned Nov-2025 | A6 |
@@ -200,8 +200,8 @@ Its stated M&A criteria are unchanged:
 **Cash and payout.** Polymed ended FY26 with net cash of {{A-0322|range}} and liquidity of {{A-0076|range}}. <!-- AR26 p.8, p.48 -->
 - **Other income.** Other income is a large part of profit: it was {{D-M-023}} of consolidated PBT in FY26 (our calculation). At the standalone level it included realized and unrealized mutual-fund gains of {{A-0485}} and {{A-0486}} and FX gains of {{A-0487}}. <!-- AR26 p.47, p.78 -->
 - **Payout.** The dividend was {{A-0376}} a share, a payout of {{D-M-022}} of consolidated PAT (our calculation). <!-- AR26 p.33 -->
-- **Management's rationale.** It justified the lower payout by heavy capex and M&A opportunities. <!-- TR4Q25 p.16 -->
-- **Returns.** Consolidated ROCE fell to {{A-0061}} in FY26 from {{A-0062}}, as the QIP cash and the acquisitions entered the base. <!-- AR26 p.6 -->
+- **Management's rationale.** In May-2025 it justified a lower payout by heavy capex and M&A opportunities. <!-- TR4Q25 p.16 -->
+- **Returns.** Consolidated ROCE fell to {{A-0061}} in FY26 from {{A-0062}} on the company's adjusted definition, which already excludes unutilized QIP money from capital employed; we infer that the acquisitions entering the capital base, with their low early profits, explain most of the fall. <!-- AR26 p.6 -->
 
 We see capital allocation, rather than the operating franchise, as the swing factor for returns through FY28:
 - the unspent plant capex at YEIDA, Palwal and Haridwar;
@@ -217,7 +217,7 @@ We see capital allocation, rather than the operating franchise, as the swing fac
 
 **Credit.** CRISIL moved the outlook to Positive in Jun-2026. <!-- CR26 p.2 -->
 - **Upgrade trigger:** revenue above {{WM-0046}} with an operating margin of {{WM-0047}}.
-- **Downgrade trigger:** a sustained margin below {{WM-0048}}, or larger-than-expected capex or acquisitions. <!-- CRRR2606 p.1 -->
+- **Downgrade trigger:** a sustained margin below {{WM-0048}}, or larger-than-expected capex or acquisitions. <!-- CRR2606 p.1 -->
 
 ::: table id="litigation" title="Disclosed litigation and contingent items are small relative to the business; one large tax notice has dropped out of the list without explanation"
 | Matter | Status | Amount | Source |
@@ -230,12 +230,12 @@ We see capital allocation, rather than the operating franchise, as the swing fac
 | Raigad drugs inspector complaint on a three-way stopcock (2012) | Stayed by the Bombay High Court in 2014; pending before the District and Sessions Court | – | PD24 p.246 |
 | Polymed's criminal complaint against B. Braun Medical (India) over a catheter patent | Revision petition pending | – | PD24 p.246 |
 | Himalayan Mineral Water: past statutory liabilities | Appeal pending before NCLAT | – | DK2Q26 p.19 |
-| Corporate guarantee for a PendraCare International overdraft | Disclosed in the notes; the Directors' Report annexure says no guarantees were given | {{A-0530}} | AR26 p.40, p.85 |
+| Corporate guarantee for a PendraCare International overdraft | Disclosed in the notes; the Directors' Report annexure says no guarantees were given | {{A-0530}} outstanding under the guarantee | AR26 p.40, p.85 |
 :::
 
 Total contingent liabilities listed in the FY26 annual report were {{D-M-016}} (our calculation), against {{D-0273}} at 31-Mar-2024. <!-- AR26 p.84; PD24 p.58 -->
 
-The difference is the {{D-0269}} CGST show-cause notice. The disclosures do not say whether it was settled, dropped or reclassified, so we list it as a question for management.
+Most of the difference is the {{D-0269}} CGST show-cause notice. The disclosures do not say whether it was settled, dropped or reclassified, so we list it as a question for management.
 
 ### What to watch
 

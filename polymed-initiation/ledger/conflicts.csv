@@ -530,7 +530,13 @@ regulatory_timeline_days,"draft medical devices (amendment) rules, 2026 (g.s.r. 
 regulatory_timeline_days,"draft medical devices (amendment) rules, 2026 (g.s.r. 515(e))",class b,india,draft 23-jun-2026,days,F-0060,15,days,GSR515E_2026,1,third_party,
 revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-0001,25,%,TR1Q25,16,management_statement,numeric low end of CA-0745; said on 24-Jul-2024 call
 revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-0002,30,%,TR1Q25,16,management_statement,numeric high end of CA-0745; said on 24-Jul-2024 call
+machine_sales_visibility,polymed consolidated,renal,india,fy26 (feb-2026),units,WM-0068,450,units,TR3Q26,11,management_statement,lower end of FY26 machine visibility
+machine_sales_visibility,polymed consolidated,renal,india,fy26 (feb-2026),units,WM-0069,470,units,TR3Q26,11,management_statement,upper end of FY26 machine visibility
+consumables_contract_term,"fresenius, nipro (india)",renal,india,feb-2026,years,WM-0071,5,years,TR3Q26,11,management_statement,lower end of MNC consumables contract term
+consumables_contract_term,"fresenius, nipro (india)",renal,india,feb-2026,years,WM-0072,7,years,TR3Q26,11,management_statement,upper end of MNC consumables contract term
 revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-019,27.0,%,DERIVED,0,derived_ours,our calculation: EUR revenue CAGR from the company's acquisition slide
 revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-022,30.0,%,DERIVED,0,derived_ours,our calculation: rupee turnover CAGR from the directors' reports (includes currency effects)
+asp,india,renal,,may-2023,Rs mn,D-WB-055,0.5,Rs mn,DERIVED,0,derived_ours,our calculation: MD's low-end machine price in Rs mn
+asp,india,renal,,may-2023,Rs mn,D-WB-056,0.6,Rs mn,DERIVED,0,derived_ours,our calculation: MD's high-end machine price in Rs mn
 gross_margin,citieffe,,,cy25,%,D-WC-030,68.0,%,DERIVED,0,derived_ours,our calculation: gross profit / revenue as printed in DK1Q27 p.14
 gross_margin,citieffe,,,cy25,%,D-WC-031,94.0,%,DERIVED,0,derived_ours,our calculation: gross profit / revenue as printed in the 31st AGM deck (DKAGM31 p.17)

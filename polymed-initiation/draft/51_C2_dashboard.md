@@ -14,9 +14,9 @@ Each KPI below tests a driver from Section A7 or a risk from Section C1. The lat
 | Mix | Infusion share of revenue | {{CB-0359}} | Presentation; quarterly | Pace of diversification without infusion stalling |
 | Infusion | Infusion revenue growth | {{CB-0345}} | Presentation; quarterly | Safety-cannula and flush-syringe growth |
 | Renal | Renal revenue growth | {{CB-0349}} | Presentation; quarterly | Anti-dumping outcome; price versus volume |
-| Renal | Dialysis machines placed; installed base | {{CA-0088}} in FY26; base {{CA-0089}} | Call; quarterly | Consumable pull-through per machine |
+| Renal | Dialysis machines placed; installed base | ~{{CA-0088}} in FY26; base ~{{CA-0089}} | Call; quarterly | Consumable pull-through per machine |
 | Cardiology | Cardiology revenue | {{CB-0350}} | Presentation; quarterly | PendraCare margin path; stent adoption |
-| Cardiology | Cumulative stents deployed | {{WM-0057}} (Jul-2026) | Presentation; quarterly | Adoption rate versus target |
+| Cardiology | Cumulative stents deployed | over {{WM-0057}} (Jul-2026) | Presentation; quarterly | Adoption rate versus target |
 | Orthopaedics | Orthopaedics revenue | {{CB-0346}} | Presentation; quarterly | Growth at the low double digits management targets; margins |
 | Margins | Consolidated gross margin | {{CB-0261}} | Presentation; quarterly | Raw-material pass-through; mix |
 | Margins | Standalone EBITDA margin | {{CB-0230}} | Presentation; quarterly | Within management's {{CA-0019|range}} FY27 band |
@@ -26,7 +26,7 @@ Each KPI below tests a driver from Section A7 or a risk from Section C1. The lat
 | Capital | QIP-2024 capex deployed | {{A-0584}} by 31-Mar-2026 | Monitoring-agency report; quarterly | Plant capex catching up with schedule |
 | Governance | Job work paid to Vitromed | {{A-0547}} (FY26) | Annual report; annual | Declining share of job work |
 :::
-<!-- DK1Q27 pp.2, 24-27; TR1Q27S p.3; TR4Q26 p.4; DK4Q26 p.13; AR26 p.88, p.94 -->
+<!-- DK1Q27 pp.2, 22, 24-27; TR1Q27S p.3; TR4Q26 p.4; DK4Q26 p.13; AR26 p.88, p.94 -->
 
 **Events to track outside the quarterly cycle:**
 - DGTR's findings in the dialyser anti-dumping case;

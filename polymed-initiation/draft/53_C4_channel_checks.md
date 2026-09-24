@@ -1,6 +1,6 @@
 ## C4 Channel checks to run {#c4}
 
-Management interviews can be tested against people and data outside the company. The checks below map to the drivers and gaps in this report. They are ordered by how much each would change our understanding.
+Management interviews can be tested against people and data outside the company. The checks below map to the drivers and gaps in this report, interviews first and public data after; our priorities are set out below the table.
 
 ::: table id="channel_checks" title="Channel checks: distributors, dialysis chains, hospital buyers and public databases can test the main open questions"
 | # | Who or what | What to ask or look for | What it tests |
