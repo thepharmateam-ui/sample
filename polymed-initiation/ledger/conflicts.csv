@@ -522,3 +522,7 @@ dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0009,700,
 dialysis_clinics_count,india dialysis clinics,renal,india,2010,count,E-0034,1000,count,RHP_NEPHRO,277,third_party,F&S Nov-2025 report commissioned for Nephrocare RHP (2-Dec-2025); CY basis; conflicts with p.264 (700 in 2010)
 market_share,catheters and cannulae share of global surgical disposables,infusion,global,cy24,%,E-0084,32.2,%,DRHP_GSURG,198,third_party,"1Lattice report 29-Dec-2025 commissioned for G Surgiwear DRHP (30-Dec-2025); global=CY, India=FY; CONFLICT: p.199 says 36.0% (USD 39.4B)"
 market_share,catheters and cannulae share of global surgical disposables,infusion,global,cy24,%,E-0085,36.0,%,DRHP_GSURG,199,third_party,"1Lattice report 29-Dec-2025 commissioned for G Surgiwear DRHP (30-Dec-2025); global=CY, India=FY; conflicts with 32.2% on p.198"
+revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-0001,25,%,TR1Q25,16,management_statement,numeric low end of CA-0745; said on 24-Jul-2024 call
+revenue_share,polymed consolidated,infusion (iv cannula),total,jul-2024,%,WA-0002,30,%,TR1Q25,16,management_statement,numeric high end of CA-0745; said on 24-Jul-2024 call
+revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-019,27.0,%,DERIVED,0,derived_ours,our calculation: EUR revenue CAGR from the company's acquisition slide
+revenue_cagr,plan1health,vascular_access,,cy20-cy25,%,D-WA-022,30.0,%,DERIVED,0,derived_ours,our calculation: rupee turnover CAGR from the directors' reports (includes currency effects)

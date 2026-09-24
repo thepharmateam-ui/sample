@@ -47,6 +47,9 @@ def to_float(v):
     if isinstance(v, (int, float)):
         return float(v)
     s = str(v).strip()
+    s = s.replace("\u2019", "").replace("'", "")  # Swiss thousands separators 13'509'871.08
+    if re.fullmatch(r"-?\d{1,3}(\.\d{3}){2,}", s):  # European grouping 10.514.702
+        s = s.replace(".", "")
     s2 = s.replace(",", "").replace("~", "").replace("+", "").replace("%", "").strip()
     neg = s2.startswith("(") and s2.endswith(")")
     s2 = s2.strip("()")
@@ -123,11 +126,83 @@ def display_money_rs_mn(x, approx=False):
     return f"{t}{sign}Rs. {a:,.1f}mn"
 
 
+CCY_SYM = {"EUR": "€", "USD": "$", "GBP": "£", "CHF": "CHF ", "RMB": "RMB ", "CNY": "RMB ", "BRL": "BRL ", "JPY": "JPY "}
+CCY_MULT = {"": 1.0, "k": 1e3, "thousand": 1e3, "'000": 1e3, "000": 1e3, "mn": 1e6, "m": 1e6, "million": 1e6,
+            "100 mn": 1e8, "100m": 1e8, "bn": 1e9, "billion": 1e9, "tn": 1e12, "trillion": 1e12}
+
+
+def parse_ccy_unit(u):
+    """'EUR mn' -> ('EUR', 1e6, ''); 'USD/ton' -> ('USD', 1, '/ton'); '100M JPY' -> ('JPY', 1e8, '')."""
+    u0 = (u or "").strip()
+    m = re.fullmatch(r"100M\s+([A-Z]{3})", u0)
+    if m:
+        return m.group(1), 1e8, ""
+    m = re.fullmatch(r"(EUR|USD|GBP|CHF|RMB|CNY|BRL|JPY)\s*(k|thousand|'000|000|mn|m|million|100 mn|bn|billion|tn|trillion)?\s*(/.*|per .*)?", u0, re.I)
+    if not m:
+        return None
+    ccy = m.group(1).upper()
+    mult = CCY_MULT.get((m.group(2) or "").lower(), 1.0)
+    per = (m.group(3) or "").strip()
+    if per.startswith("per "):
+        per = " " + per
+    return ccy, mult, per
+
+
+def display_ccy(x, ccy, mult, per="", printed=None):
+    sym = CCY_SYM.get(ccy, ccy + " ")
+    amt = x * mult
+    sign = "-" if amt < 0 else ""
+    a = abs(amt)
+    if per:  # a price per unit: keep the printed precision
+        return f"{sign}{sym}{fmt_num(a)}{per}"
+    printed_ok = printed is not None and re.fullmatch(r"-?[\d,]+(\.\d{1,2})?", str(printed).strip())
+    if a >= 1e12:
+        body = f"{a / 1e12:,.1f}tn"
+    elif a >= 1e9:
+        if mult == 1e9 and printed_ok:
+            dp = len(str(printed).strip().split(".")[1]) if "." in str(printed) else 0
+            body = f"{a / 1e9:,.{dp}f}bn"
+        else:
+            body = f"{a / 1e9:,.1f}bn"
+    elif a >= 1e6:
+        if mult == 1e6 and printed is not None and re.fullmatch(r"-?[\d,]+(\.\d{1,2})?", str(printed).strip()):
+            # a figure already printed in mn keeps its printed precision (EUR 11mn, EUR 3.2mn, EUR 14.58mn)
+            dp = len(str(printed).strip().split(".")[1]) if "." in str(printed) else 0
+            body = f"{a / 1e6:,.{dp}f}mn"
+        else:
+            body = f"{a / 1e6:,.2f}mn" if a < 1e7 else f"{a / 1e6:,.1f}mn"
+    elif a >= 1e3:
+        body = f"{a / 1e3:,.0f}k" if a >= 1e5 else f"{fmt_num(round(a / 1e3, 1))}k"
+    else:
+        body = fmt_num(a)
+    return f"{sign}{sym}{body}"
+
+
+def display_ccy_text(v, ccy, mult, per=""):
+    """Printed text values in a currency unit: '<100', 'approximately 180', '81-85'."""
+    sym = CCY_SYM.get(ccy, ccy + " ")
+    suffix = {1.0: "", 1e3: "k", 1e6: "mn", 1e8: "00mn", 1e9: "bn", 1e12: "tn"}.get(mult, "")
+    s = str(v).strip()
+    m = re.fullmatch(r"(?i)(approximately|approx\.?|around|about|nearly|close to|~)?\s*(<|>|less than|more than|over|above|under)?\s*([\d.,]+)\s*(?:-|to)?\s*([\d.,]+)?\s*(\+)?", s)
+    if not m:
+        return f"{s} ({ccy}{(' ' + suffix) if suffix else ''}{per})"
+    approx = "~" if m.group(1) else ""
+    rel = {"less than": "<", "under": "<", "more than": ">", "over": ">", "above": ">"}.get((m.group(2) or "").lower(), m.group(2) or "")
+    lo, hi, plus = m.group(3), m.group(4), m.group(5) or ""
+    rng = f"{lo}-{hi}" if hi else lo
+    return f"{approx}{rel}{sym}{rng}{suffix}{plus}{per}"
+
+
 def display(row):
     """House-style display string for a fact."""
     v, u = row["value"], norm_unit(row["unit"])
     x = to_float(v)
     approx = str(v).strip().startswith("~") or "[vendor estimate]" in (row.get("note") or "") and False
+    if re.fullmatch(r"Rs per (EUR|USD)", u) and x is not None:
+        return f"Rs. {fmt_num(x)}/{CCY_SYM[u[-3:]].strip()}"
+    pc = parse_ccy_unit(row["unit"]) if u not in ("Rs cr", "Rs lakh", "Rs mn", "Rs bn", "Rs") else None
+    if pc and u != "text" and x is None:
+        return display_ccy_text(v, *pc)
     if u == "text" or x is None:
         # text or a printed range such as "25-27" -> keep as printed with unit
         s = str(v).strip()
@@ -141,11 +216,15 @@ def display(row):
         vs, _ = standardize(v, u)
         return display_money_rs_mn(vs, approx) + plus
     if u == "Rs":
+        if abs(x) >= 1e6:  # rupee amounts printed in full (e.g. Rs 2,50,25,820) -> Rs. mn / bn
+            return display_money_rs_mn(x / 1e6, approx) + plus
         return ("~" if approx else "") + f"Rs. {fmt_num(x)}" + plus
     if u == "%":
         if row.get("dec") is not None:
             return f"{x:,.{row['dec']}f}%"
         return f"{str(v).strip().rstrip('%')}%" if not isinstance(v, (int, float)) else f"{fmt_num(x, None if abs(x) < 100 else 0)}%"
+    if pc:
+        return display_ccy(x, pc[0], pc[1], pc[2], printed=v) + plus
     if u == "EUR mn":
         return f"€{fmt_num(x)}mn{plus}"
     if u == "EUR bn":
@@ -219,10 +298,18 @@ def main():
     derived_defs = []
     for dp in sorted(glob.glob("ledger/derived*.py")):
         ns = {"DERIVED": []}
-        exec(open(dp).read(), ns)
+        try:
+            exec(open(dp).read(), ns)
+        except Exception as e:  # one broken file must not stop the others
+            problems.append(f"{dp} failed to load: {e}")
+            continue
         derived_defs += ns.get("DERIVED", [])
     byid = {r["fact_id"]: r for r in rows}
     for d in derived_defs:
+        if d.get("id") in seen:
+            problems.append(f"duplicate derived id {d.get('id')}")
+            continue
+        seen.add(d.get("id"))
         refs = re.findall(r"\b[A-Z]{1,3}-\d{4}\b", d["formula"])
         env, ok = {}, True
         for ref in refs:
@@ -282,21 +369,24 @@ def main():
             for x in g:
                 conflicts.append([*key, x["fact_id"], x["value"], x["unit"], x["doc_id"], x["page"], x["basis"], x.get("note", "")])
 
-    with open("ledger/facts.jsonl", "w") as fh:
+    with open("ledger/facts.jsonl.tmp", "w") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     cols = ["fact_id", "metric", "entity", "segment", "geography", "period", "value", "unit", "value_std", "unit_std",
             "display", "basis", "doc_id", "page", "tier", "section", "speaker", "snippet", "note", "shard"]
-    with open("ledger/facts.csv", "w", newline="") as fh:
+    with open("ledger/facts.csv.tmp", "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(cols)
         for r in rows:
             w.writerow([r.get(c, "") for c in cols])
-    with open("ledger/conflicts.csv", "w", newline="") as fh:
+    with open("ledger/conflicts.csv.tmp", "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["metric", "entity", "segment", "geography", "period", "unit_std", "fact_id", "value", "unit",
                     "doc_id", "page", "basis", "note"])
         w.writerows(conflicts)
+    # atomic swap so concurrent readers (the build, other agents) never see a half-written file
+    for f in ("ledger/facts.jsonl", "ledger/facts.csv", "ledger/conflicts.csv"):
+        os.replace(f + ".tmp", f)
     by_shard = defaultdict(int)
     for r in rows:
         by_shard[r["shard"]] += 1
@@ -307,4 +397,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import fcntl
+    with open("ledger/.reconcile.lock", "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        main()

@@ -3,3 +3,5 @@ sources/
 __pycache__/
 node_modules/
 *.pyc
+ledger/.reconcile.lock
+*.tmp

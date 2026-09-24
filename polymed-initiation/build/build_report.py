@@ -26,11 +26,28 @@ EXH = OrderedDict()           # exhibit id -> number
 PENDING_EXREF = []
 
 
+DOCS = {}
+
+
 def load_facts():
     with open("ledger/facts.jsonl") as fh:
         for line in fh:
             r = json.loads(line)
             FACTS[r["fact_id"]] = r
+    import csv, glob as _glob
+    for f in sorted(_glob.glob("registry/*.csv")):
+        if os.path.basename(f) in ("wp_pdf_inventory.csv", "text_stats.csv"):
+            continue
+        with open(f, newline="") as fh:
+            for row in csv.DictReader(fh):
+                did = (row.get("doc_id") or "").strip()
+                if did:
+                    DOCS[did] = (row.get("title") or did).strip()
+
+
+def docs_in_comment(c):
+    """Doc ids cited in an HTML comment such as '<!-- AR26 p.88; PD24 pp.1-3 -->'."""
+    return [d for d in re.findall(r"\b([A-Z][A-Z0-9_]*[A-Z0-9])\b", c) if d in DOCS]
 
 
 def doc_label(r):
@@ -135,8 +152,10 @@ def sub_tokens(text):
     return TOKEN.sub(lambda m: fmt_fact(m.group(1), m.group(2) or ""), text)
 
 
-def sources_line(fids, extra=""):
+def sources_line(fids, extra="", cited=()):
     docs = OrderedDict()
+    for d in cited:
+        docs[DOCS.get(d, d)] = True
     for f in fids:
         r = FACTS.get(f)
         if not r:
@@ -220,7 +239,7 @@ def render_chart(spec):
     note = f'<p class="note">{sub_tokens(html.escape(spec["note"], quote=False))}</p>' if spec.get("note") else ""
     return (f'<figure class="exh" id="exh-{eid}"><figcaption><span class="exn">Exhibit {n}:</span> '
             f'{html.escape(spec["title"])}</figcaption><div class="plot">{svg}</div>{note}'
-            f'{sources_line(all_fids, spec.get("src_extra", ""))}{table}</figure>')
+            f'{sources_line(all_fids, spec.get("src_extra", ""), spec.get("_cited", []))}{table}</figure>')
 
 
 LIST_RE = re.compile(r"^(\s*)([-*]|\d+[.)])\s+")
@@ -258,7 +277,7 @@ def render_table_block(attrs, body):
     note = f'<p class="note">{sub_tokens(html.escape(attrs["note"], quote=False))}</p>' if attrs.get("note") else ""
     return (f'<figure class="exh" id="exh-{eid}"><figcaption><span class="exn">Exhibit {n}:</span> '
             f'{html.escape(attrs.get("title", ""))}</figcaption>{inner}{note}'
-            f'{sources_line([f for f, _ in fids], attrs.get("src_extra", ""))}</figure>')
+            f'{sources_line([f for f, _ in fids], attrs.get("src_extra", ""), attrs.get("_cited", []))}</figure>')
 
 
 def parse_attrs(s):
@@ -272,10 +291,14 @@ def process_blocks(text):
     def rep(m):
         kind, attrs_s, body = m.group(1), m.group(2), m.group(3)
         attrs = parse_attrs(attrs_s)
+        nxt = re.match(r"[ \t]*\n?[ \t]*<!--(.*?)-->", m.string[m.end():], re.S)
+        cited = docs_in_comment(nxt.group(1)) if nxt else []
         if kind == "chart":
             spec = json.loads(body)
+            spec["_cited"] = cited
             return "\n\n" + render_chart(spec) + "\n\n"
         if kind == "table":
+            attrs["_cited"] = cited
             return "\n\n" + render_table_block(attrs, body) + "\n\n"
         if kind == "callout":
             k = attrs.get("kind", "note")
