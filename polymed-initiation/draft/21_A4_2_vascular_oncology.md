@@ -41,10 +41,10 @@ The unit economics differ from infusion. A port patient generates a Huber needle
 - **The purchase:** Poly Medicure B.V. paid {{B-0672|plain}}, booking goodwill of {{B-0673}}. That is why Polymed's documents date the deal both FY18 ({{D-0370}}, placement document) and 2019 (enterprise value ~{{CB-0098}}, company slide). <!-- SUB26BV p.8; PD24 p.76; DK1Q27 p.12 -->
 - **Scale:** it had {{B-0728}} employees in CY25. <!-- SUB26P1IT p.19 -->
 
-**What it makes.** Management describes Plan1Health as a maker of long-term infusion devices, oncology products and "an innovative pain-control device", and as "a Class III implantables specialist and sole approved supplier to one of the largest OEMs for Class III implants" (Section A4.10). <!-- DK1Q27 p.12; DKAGM31 p.17 -->
+**What it makes.** Polymed's slides describe Plan1Health as an "integrated developer & seller of long-term infusion devices, oncology products and an innovative pain-control device", a "specialist in long-term implantables" and the "sole approved supplier for one of the largest OEM for Class III implants" (Section A4.10). <!-- DK1Q27 p.12; DKAGM31 p.17 -->
 - **Europe:** it sells through {{CB-1111}}+ distributors, with its whole portfolio of four categories approved. <!-- DK4Q26 p.39 -->
 - **US:** its only clearance is the Painfusor catheter (K111031, 2011), which the company describes as an approval held for an OEM. <!-- FDA510K_P1H p.1; DK4Q26 p.38 -->
-- **Italy:** it gives the group its only direct sales operation in Europe. <!-- TR1Q27S p.8 -->
+- **Italy:** it sells through distributors, like the rest of its European business; the group's direct sales presence in Italy, its only direct market in Europe, belongs to Citieffe (Section A4.9). Plan1Health's stated plan is more Italian and EU tenders and new device launches in Italy. <!-- DK4Q26 p.39; TR1Q27S p.8 -->
 
 ::: chart
 {"id":"p1h_rev","type":"column","title":"Plan1Health's turnover has risen every year since 2020, with the steepest gains after 2022","cats":["CY18","CY19","CY20","CY21","CY22","CY23","CY24","CY25"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Plan1Health turnover","facts":["B-0403","B-0402","WA-0011","WA-0012","WA-0013","A-0814","A-0381","A-0380"]}],"label_all":true,"note":"Calendar years, rupee turnover as stated in Polymed's directors' reports, so the series includes currency effects. Rupee CAGR over CY20-CY25 was {{D-WA-022}} and euro CAGR {{D-WA-019}} (our calculations). Polymed bought the company in two tranches in Jun-2018 and Mar-2019."}
@@ -52,7 +52,7 @@ The unit economics differ from infusion. A port patient generates a Huber needle
 
 **Growth and margins.** Plan1Health's revenue fell {{CC-0109|abs}} in the COVID year, then grew {{CC-0254}} (FY22), ~{{CC-0618|range}} (9MFY24) and {{CC-0701|range}} (FY24). Management said it was still growing {{CA-0303|range}} in Feb-2026. <!-- TR2Q22 p.3; TR4Q22 p.4; TR3Q24b p.4; TR4Q24 p.8; TR3Q26 p.19 -->
 
-The margin record is less clear, as [[EXREF:p1h_fin]] shows. Management has described the EBITDA margin as "{{CC-0702}}" for FY24 and "{{CA-0374}}" in Nov-2025, yet its own acquisition slide shows {{CB-0104}} for CY24 and {{CB-0106}} for CY25. The statutory Italian accounts give an EBIT margin of {{D-WA-021}} in CY25 (our calculation) and net profit of {{B-0725}}. We use the slide figures, which fit the statutory EBIT, and treat the higher figures as management rounding or a different definition. <!-- TR4Q24 p.8; TR2Q26 p.9; DK1Q27 p.12; SUB26P1IT pp.3-4 -->
+The margin record is less clear, as [[EXREF:p1h_fin]] shows. Management has put the EBITDA margin at {{CC-0702|range}} for FY24 and {{CA-0374|range}} in Nov-2025, yet its own acquisition slide shows {{CB-0104}} for CY24 and {{CB-0106}} for CY25. The statutory Italian accounts give an EBIT margin of {{D-WA-021}} in CY25 (our calculation) and net profit of {{B-0725}}. We use the slide figures, which fit the statutory EBIT, and treat the higher figures as management rounding or a different definition. <!-- TR4Q24 p.8; TR2Q26 p.9; DK1Q27 p.12; SUB26P1IT pp.3-4 -->
 
 ::: table id="p1h_fin" title="Plan1Health: revenue has tripled in euros since 2020; management's margin claims run ahead of the company's own slide"
 | | CY20 | CY22 | CY23 | CY24 | CY25 |
@@ -70,15 +70,15 @@ The company's own slides also disagree on the margin gain since the acquisition:
 
 **Links with the parent.**
 - **Trade:** Polymed sold goods worth {{A-0553}} to Plan1Health in FY26. <!-- AR26 p.88 -->
-- **Management:** Plan1Health's founder and chief executive, Alessandro Balboni, also runs Polymed's EMEA business and sits on its board as a non-independent director. He was paid management fees of {{A-0563}} in FY26 (Section A9). <!-- DKNOV20 p.9; DK2Q24 pp.7-8; AR26 p.89 -->
+- **Management:** Plan1Health's chief executive, Alessandro Balboni (formerly chief executive of Delta Med SpA and Paul Hartmann SpA), also runs Polymed's EMEA business and sits on its board as a non-independent director. He was paid management fees of {{A-0563}} in FY26 (Section A9). <!-- DKNOV20 p.9; DK2Q24 pp.7-8; AR26 p.89 -->
 - **The "P1H playbook":** management presents Plan1Health as the model for PendraCare and Citieffe: faster launches, manufacturing moved to India to cut cost, direct sales, wider distribution and joint R&D. <!-- DK1Q27 pp.11-12; AR26 p.10 -->
 
 ### Oncology in Vision 2030 and in India
 
-Management lists oncology among the five focus areas for the next five years, with orthopaedics, cardiology, neonatology and renal care, because these carry higher gross margins than infusion. <!-- TR4Q26 p.10 -->
+Management lists oncology among the five focus areas for the next five years, with orthopaedics, cardiology, neonatology and renal care, and says the shift "helps us to even get a better gross margin". <!-- TR4Q26 p.10 -->
 
 The Indian plan has four strands:
-- **Local manufacture.** Oncology products are sold in India through the critical-care team. Products "currently made in Italy" are to be moved to India, where management says demand is {{CA-0664|range}} imported. <!-- TR4Q25 p.4; TR2Q25 p.8 -->
+- **Local manufacture.** Oncology products are sold in India through the critical-care team. Management says "a lot of products which we are making in Italy today" will be shifted to India, where it says demand is {{CA-0664|range}} imported. <!-- TR4Q25 p.4; TR2Q25 p.8 -->
 - **Higher-class devices.** Chemoports, a Class III implantable, have been launched in India. Management frames this as a shift from short-term devices to "longer term use devices" in Class III, with competition mostly from multinationals and "a couple of good Indian companies also like Meril". <!-- TR3Q25 p.11 -->
 - **Public cancer care.** The government is setting up standalone specialty oncology (day-care) centres: {{WA-0014}} in FY26 and {{WA-0015}} over three years, on management's account. <!-- TR2Q26 p.5; TR4Q25 p.4 -->
 - **New products.** Recent launches include neonatal PICCs of {{CB-0394}} ("one of the first" made in India), an antimicrobial CVC, tear-away introducers, midlines, PICC-ports and a safety Huber needle. <!-- DKAGM31 pp.3, 5; DK4Q26 p.30 -->
@@ -95,7 +95,7 @@ Their company lists put B. Braun, BD, Cook Medical, AngioDynamics, Smiths Medica
 
 The large competitors are:
 - **BD:** ports sit within its Peripheral Intervention unit ({{E-0203}} revenue in FY25), and PICCs and midlines within Medication Delivery Solutions. <!-- BD_10K25 p.1 -->
-- **Teleflex:** its Arrow-branded vascular catheters generated {{E-0218}} in CY25. <!-- TFX_10K25 p.1 -->
+- **Teleflex:** its Vascular product category, mainly Arrow-branded catheters plus tip-positioning and intraosseous systems, generated {{E-0218}} in CY25. <!-- TFX_10K25 p.1 -->
 - **ICU Medical:** it sells Port-A-Cath ports, PowerWand midlines and Deltec Gripper non-coring needles within a consumables business of {{E-0209}}. <!-- ICUI_10K25 p.1 -->
 
 In India, management names multinationals and Meril as the competitors in oncology implants. <!-- TR3Q25 p.11 -->
@@ -105,17 +105,17 @@ We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval f
 ### Regulation specific to the line
 
 - **Class III.** Ports are Class III implants, the highest risk class in Europe. Management says Class III devices take "very much, much longer to register", often two to three years including clinical trials. <!-- TR1Q27S p.13; TR2021 p.10 -->
-- **Italian payback.** A 2015 Italian law requires device suppliers to pay the government when regional device spending exceeds annual ceilings; the Constitutional Court upheld it in Jul-2024. BD booked a {{E-0206}} accrual for it in FY24 and settled at {{E-0207|num}}% of invoiced amounts. Italian public spending on medical devices and services is about {{E-0384}} a year, according to the industry association Confindustria Dispositivi Medici. Plan1Health sells directly to Italian hospitals, so it is presumably exposed, but its exposure is [not disclosed]. <!-- BD_10K25 p.1; CDM_NUMERI25 p.1; TR1Q27S p.8 -->
-- **EU procurement.** Since Jun-2025 the EU has excluded Chinese bidders from public medical-device tenders worth {{F-0238}} or more (Section A4.1). For a direct seller to Italian hospitals such as Plan1Health, that removes low-cost rivals from the larger tenders (our view). <!-- EU_IPI2025_1197 p.12; TR1Q27S p.8 -->
-- **US.** Beyond Painfusor, Plan1Health has FDA submissions "under evaluation". <!-- DK4Q26 p.38 -->
+- **Italian payback.** A 2015 Italian law requires device suppliers to pay the government when regional device spending exceeds annual ceilings; the Constitutional Court upheld it in Jul-2024. BD booked a {{E-0206}} accrual for it in FY24 and settled its 2015-2018 obligations at {{E-0207|num}}% of invoiced amounts under a Jun-2025 decree. Italian public spending on medical devices and services is about {{E-0384}} a year, according to the industry association Confindustria Dispositivi Medici (2025 edition of its sector figures). Plan1Health plans to bid in more Italian tenders and Citieffe sells direct in Italy, so we infer some group exposure; it is [not disclosed]. <!-- BD_10K25 p.1; CDM_NUMERI25 p.1; DK4Q26 p.39 -->
+- **EU procurement.** Since Jun-2025 the EU has excluded Chinese bidders from public medical-device tenders worth {{F-0238}} or more (Section A4.1). For Plan1Health, which plans to bid in more Italian and EU tenders, that removes Chinese rivals from the larger ones (our view). <!-- EU_IPI2025_1197 p.12; DK4Q26 p.39 -->
+- **US.** Beyond Painfusor, Plan1Health is "evaluating product submissions for FDA approvals"; no filing has been disclosed. <!-- DK4Q26 p.38 -->
 
 ### Growth and margin drivers, ranked
 
 1. **India import substitution in ports and PICCs** (management target; our view: largest long-run lever). The drivers are chemotherapy volumes, the day-care cancer centres and hospitals preferring local suppliers as insurance spreads. Timing depends on moving Plan1Health products to Indian manufacture and approval. <!-- TR2Q25 p.8; TR2Q26 p.5; TR4Q26 p.10 -->
-2. **Plan1Health's European growth** (management: {{CA-0303|range}} a year). The levers are the new MDR filings for oncology, neonatal and pain products and cross-selling Polymed products through Plan1Health in Italy. <!-- TR3Q26 p.19; TR2Q26 pp.9-10 -->
+2. **Plan1Health's European growth** (management: {{CA-0303|range}} a year). The company's stated levers are more tenders in Italy and other EU markets and new device launches in Italy; Plan1Health has {{CB-1112}} product in the European approval pipeline. <!-- TR3Q26 p.19; DK4Q26 p.39 -->
 3. **Recurring consumables per port** (our view). Huber needles and maintenance items follow the installed base of ports.
-4. **Margin: scale and Indian manufacturing** (company target). The company-reported EBITDA margin rose from {{CB-0100}} to {{CB-0106}} as revenue tripled. Management expects moving labour-heavy processes to India to add more. <!-- DK1Q27 p.12 -->
-5. **Risk: Italian payback and tender pricing** (our view). This offsets part of the gain.
+4. **Margin: scale and Indian manufacturing** (company target). The company-reported EBITDA margin rose from {{CB-0100}} to {{CB-0106}} as revenue tripled. The company lists using India manufacturing to reduce cost among the "repeatable plays" already run at Plan1Health, and management plans to shift "a lot of" the products made in Italy to India. <!-- DK1Q27 p.12; TR2Q25 p.8 -->
+5. **Risk: Italian payback and tender pricing** (our view). These could offset part of the gain; the exposure is [not disclosed].
 
 ### What to watch
 

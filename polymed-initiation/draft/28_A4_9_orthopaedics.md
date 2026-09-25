@@ -2,7 +2,7 @@
 
 ::: snapshot title="Orthopaedics at a glance"
 Revenue 1QFY27 | {{CB-0346}}, {{CB-0360}} of consolidated revenue, in the first full quarter of consolidation
-FY26 contribution | {{A-0683}} of revenue and a pre-tax loss of {{A-0684|abs}} from 7 Nov 2025 (annual report)
+FY26 contribution | {{A-0683}} of revenue and a pre-tax loss of {{A-0684|abs}} from acquisition to 31 Mar 2026 (annual report)
 Citieffe CY25 | Revenue {{CB-0450}} and EBITDA ~{{CB-0143}} (company); IFRS net loss {{B-0699|abs}}
 Deal | An enterprise value of {{A-0117}}, {{A-0118}} CY24 EBITDA (company); closed 6 Nov 2025
 Products | Trauma and extremity fixation: intramedullary nails, external fixators, screws, a wrist plate and a navigation system; {{D-0877}} US 510(k)s
@@ -11,7 +11,7 @@ Management targets | Revenue growth of {{CA-0183|range}} in euros in FY27; reven
 Not disclosed | Citieffe's 1QFY27 growth and margin, revenue by product, prices
 :::
 
-Citieffe gives Polymed a complete trauma-implant franchise with its own brand, EU MDR and US clearances and direct sales teams in three countries. What it does not yet give is growth or profit. Revenue was flat in CY25 and the group made an IFRS net loss. It carries interest-bearing debt about equal to its equity, and {{D-WC-024}} of its receivables are more than {{WC-0053}} old. The investment case rests on three steps management has yet to take: 1) adding plates, 2) building a larger US sales team, and 3) moving part of production to India.
+Citieffe gives Polymed a trauma-implant franchise (nails, fixators and screws, but only one plate) with its own brand, EU MDR and US clearances and direct sales teams in three countries. What it does not yet give is growth or profit. Revenue was flat in CY25 and the group made an IFRS net loss. It carries interest-bearing debt about equal to its equity, and {{D-WC-024}} of its receivables are more than {{WC-0053}} old. The growth plan rests on three steps management has yet to take: 1) adding plates, 2) building a larger US sales team, and 3) moving part of production to India.
 
 ### What it is and how it is used
 
@@ -35,7 +35,7 @@ The unit of demand is the fracture: one nail and its locking screws per long-bon
 :::
 <!-- FDA510K_CIT p.1; DKCIT p.12, p.20; DKAGM30 p.6 -->
 
-- **Company:** Citieffe was founded near Bologna in 1962 and has been run since 2019 by CEO Pascal Govi, who has {{CB-2132}} of experience. It holds {{CB-2360}} patents, has an R&D team of {{CB-2467}} spending ~{{CB-2466}} of revenue, and launches {{CB-2473}} products a year. It reports a very low defect rate. <!-- DKCIT p.12, p.15-16, p.18; DKAGM30 p.4 -->
+- **Company:** Citieffe was founded near Bologna in 1962. Its CEO, Pascal Govi, joined in 2019 and has more than {{CB-2132}} of work experience. It holds {{CB-2360}} patents, has an R&D team of {{CB-2467}} spending ~{{CB-2466}} of revenue, and launches {{CB-2473}} products a year. It reports a very low defect rate. <!-- DKCIT p.12, p.15-16, p.18; DKAGM30 p.4 -->
 - **Position:** it is the number-two independent player in Italy with a share of ~{{CB-2464}} excluding plates, and one of the top players in Mexico with ~{{CB-2465}} excluding plates and low-cost products. Both are company estimates. <!-- DKCIT p.15 -->
 - **Reach:** ~{{CB-2460}} of sales come from the three countries where it sells direct: Italy, the US and Mexico. It sells in {{A-0121}} countries in total. The distributor count is printed as {{CB-0130}}+ in the 1QFY27 deck but {{A-0119}} in the annual report. <!-- DKCIT p.15; PRCIT p.2; DK1Q27 p.14; AR26 p.12 -->
 
@@ -84,7 +84,7 @@ Five points stand out.
 4. **Receivables are stretched.** {{D-WC-024}} of gross receivables were more than {{WC-0053}} old at Dec-2025, up from {{D-WC-025}} a year earlier. The loss allowance covers only {{D-WC-033}} of that overdue book (our calculations). Management says the acquired European businesses carry longer receivable cycles. <!-- SUB26MEDC p.16; AR26 p.48 -->
 5. **Debt stays with the business.** Interest-bearing debt of {{B-0705}} equals about {{D-WC-032}} of equity (our calculation), backed partly by SIMEST and export-credit agency guarantees. Management puts the core loan at ~{{CA-0075}}, repaid at {{CA-0076|range}} a year. Italian overdrafts carry rates up to double digits. <!-- SUB26MEDC p.5, p.19; TR1Q27S p.11; AR26 p.110, p.112 -->
 
-Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of {{A-0684|abs}} between 7 Nov 2025 and 31 Mar 2026, and {{CA-0163|range}} of 4QFY26 revenue. Management blamed part of the acquired businesses' {{CA-0168|range}} EBITDA drag in 4QFY26 on Citieffe "selling certain low-margin products". <!-- AR26 p.121; TR4Q26 p.11, p.13 -->
+Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of {{A-0684|abs}} from the 6 Nov 2025 closing (annual report business-combination note; the MD&A and decks consolidate from 7 Nov) to 31 Mar 2026, and {{CA-0163|range}} of 4QFY26 revenue. Management blamed part of the acquired businesses' {{CA-0168|range}} EBITDA drag in 4QFY26 on Citieffe "selling certain low-margin products". <!-- AR26 p.121, p.47; TR4Q26 p.11, p.13 -->
 
 ::: chart
 {"id":"ortho_geo","type":"share_hbar","title":"About half of Citieffe's sales are European; the US, where prices are several times Europe's, is a small share","cats":["CY24","CY25"],"unit":"% of Citieffe sales","series":[{"name":"Europe","facts":["CB-2461","CB-0146"]},{"name":"North America (CY24) / US (CY25)","facts":["CB-2462","CB-0147"]},{"name":"Rest of world","facts":["CB-2463","CB-0148"]}],"label_w":90,"note":"CY24 shares as printed in the acquisition deck sum to less than the whole, and its North America includes Mexico. The CY25 split shows the US alone, so Mexico sits in the rest of the world. The company puts US prices at {{CB-0145}} Europe's."}
@@ -98,7 +98,7 @@ Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of
 :::
 <!-- DKCIT p.13-14 -->
 
-- **Global:** the acquisition deck puts orthopaedics at {{CB-2379}} in 2024, growing {{CB-2393}} a year to 2028. Trauma and extremities is the largest and fastest-growing segment at {{CB-2380}}, growing {{CB-2399}} a year to {{CB-2387}} by 2028. Internal fixators are {{CB-2447}} of the segment and external fixators {{CB-2448}}, and the US is {{CB-2400}} of the orthopaedic market. Plates are {{CA-0781}} of the trauma market. These are vendor estimates quoted by the company. <!-- DKCIT p.13-14; TRCIT p.7 -->
+- **Global:** the acquisition deck puts orthopaedics at {{CB-2379}} in 2024, growing {{CB-2393}} a year to 2028. Trauma and extremities is the largest and fastest-growing segment at {{CB-2380}}, growing {{CB-2399}} a year to {{CB-2387}} by 2028. Internal fixators are {{CB-2447}} of the segment and external fixators {{CB-2448}}, and the US is {{CB-2400}} of the orthopaedic market. Management puts plates at {{CA-0781}} of the trauma market. The other figures are vendor estimates quoted by the company. <!-- DKCIT p.13-14; TRCIT p.7 -->
 - **India:** the research firm engaged for G Surgiwear's DRHP (Dec-2025) values India's orthopaedic device market at {{E-0099}} in FY25, rising to {{WC-0032}} by FY30 ({{WC-0033}} a year), of which implants are {{E-0082}}. India is about {{CB-2404}} of the global market. These are vendor estimates. <!-- DRHP_GSURG p.183, p.190, p.207; DKCIT p.13 -->
 - **Import dependence is disputed.** CRISIL put implants at {{D-0456}} imported in FY24, while management says {{WC-0054|range}} of orthopaedic implants are now made in India. <!-- PD24 p.140; TR1Q26 p.16 -->
 
@@ -106,13 +106,13 @@ Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of
 - **Buyers:** trauma surgeons and hospitals. Citieffe's own sales teams cover Italy, the US and Mexico, alongside {{CB-1104}} distributors in Europe and {{CB-0137}}+ key opinion leaders worldwide. <!-- DK4Q26 p.39; DK1Q27 p.14 -->
 - **US:** Citieffe sells to trauma centres through independent agents rather than group purchasing contracts. Management ruled out selling Polymed's consumables through the orthopaedic reps. <!-- TRCIT p.10-11 -->
 - **Tenders:** in Italian and Latin American public tenders a bidder often needs a full portfolio, which is the main argument for adding plates. <!-- TRCIT p.5-7 -->
-- **Prices:** [not disclosed]; management declined to give product prices. Management put gross margin at {{CA-0777|range}} at the deal, while the 1QFY27 deck implies {{D-WC-030}} (our calculation). <!-- TRCIT p.6, p.9; DK1Q27 p.14 -->
+- **Prices:** [not disclosed]; management declined to give product prices. Management put gross margin at {{CA-0777|range}} at the deal, and the Sep-2026 AGM deck prints CY25 gross profit of {{CB-0451}} on revenue of {{CB-0450}}, while the 1QFY27 deck's figures imply {{D-WC-030}} (our calculation). The two company decks disagree. <!-- TRCIT p.6, p.9; DKAGM31 p.17; DK1Q27 p.14 -->
 
 ### Competition
 - **Multinationals:** Stryker, DePuy Synthes, Zimmer Biomet, Smith+Nephew, Medtronic and Arthrex lead worldwide and in India's premium segment. <!-- DKCIT p.13; DRHP_GSURG p.195 -->
 - **Indian makers:** Meril, Sharma Orthopaedic, Narang Medical, Biorad Medisys and Bonetech sell cost-effective trauma, joint and spine implants. <!-- DRHP_GSURG p.195 -->
 - **Management's view:** India has "a fairly large base of manufacturers" in trauma, and Zydus's recent French acquisition is mainly knee implants. <!-- TRCIT p.7 -->
-- **Citieffe's edge:** Citieffe competes on design (its patents, navigation for nailing) and on a low complaint rate rather than on price, and it has no plates to offer in tenders. <!-- DKCIT p.16, p.18 -->
+- **Citieffe's edge:** on the company's account, Citieffe competes on design (its patents, navigation for nailing) and a low complaint rate; it has no plates to offer in tenders. <!-- DKCIT p.16, p.18 -->
 
 ### Regulation
 The whole Citieffe portfolio is certified under EU MDR. Its products are Class IIb in Europe and Class II in the US. Registration in India's import regime takes {{CA-0084|range}} months, according to management. India capped the MRPs of coronary stents and knee implants in 2017; trauma implants were not named in that order. <!-- DKCIT p.12, p.21; TRCIT p.4; TR4Q26 p.3; PD24 p.152 -->
@@ -131,10 +131,10 @@ The whole Citieffe portfolio is certified under EU MDR. Its products are Class I
 4. **Recovery of the cancelled tender (our view).** CY26 revenue should get a lift if the Latin American tender is re-awarded. <!-- TR4Q26 p.17 -->
 5. **Joint replacement (management plan, medium term).** Spine is not in the stated plan. <!-- DKCIT p.20 -->
 
-Management's aim is to double the business within five years, to {{WC-0047|range}}, "without any significant capex". That requires a growth rate well above the current pace. <!-- TRCIT p.5, p.9 -->
+Management's aim is to "double the business" within five years "without any significant capex", although the figure it gave on the same call, {{WC-0047|range}}, is less than double CY24 revenue of {{CB-2511}}. Either requires a growth rate well above the current pace. <!-- TRCIT p.5, p.8, p.9; PRCIT p.2 -->
 
 ### Margin drivers, ranked
-1. **India manufacturing.** Management says the acquired businesses run at {{CA-0171|range}} EBITDA and can reach {{CA-0172|range}} within two to three years, through India engineering, global procurement and moving labour-intensive steps to India. <!-- TR4Q26 p.18 -->
+1. **India manufacturing.** Management says the acquired businesses run at {{CA-0171|range}} EBITDA and can reach {{CA-0172|range}} within two to three years, through India engineering, global procurement and shipping some manufacturing to India once approvals allow. <!-- TR4Q26 p.18 -->
 2. **Geographic mix.** Each extra point of US sales carries prices several times Europe's.
 3. **Product mix.** Low-margin product sales hurt 4QFY26. <!-- TR4Q26 p.13 -->
 4. **Currency and financing.** Currency swings on the US and Mexican units, and interest on {{B-0705}} of debt, sit below EBITDA but drove the CY25 loss.

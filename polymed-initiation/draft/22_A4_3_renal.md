@@ -1,6 +1,6 @@
 ## A4.3 Renal care {#a4-3}
 
-Renal is Polymed's second line and, until FY26, its fastest-growing one: a full haemodialysis consumables basket plus an Indian-made machine, sold into a market where the only other local dialyser plant is an export unit and where pricing is set by Chinese imports that enter duty-free through South-East Asia. The line's next leg depends on two things outside Polymed's control, a trade-remedy ruling and public dialysis tenders, and on one inside it, turning a small installed base of machines into consumables pull-through.
+Renal is Polymed's second line and, until FY26, its fastest-growing one: a full haemodialysis consumables basket plus an Indian-made machine, sold into a market where the only other local dialyser plant is an export unit and where, management says, pricing is set by Chinese imports that enter duty-free through South-East Asia. The line's next leg depends on two things outside Polymed's control, a trade-remedy ruling and public dialysis tenders, and on one inside it, turning a small installed base of machines into consumables pull-through.
 
 ::: snapshot title="Renal care at a glance"
 Revenue FY26 | {{CB-0870}} ({{CB-0873|signed}} yoy), {{CB-0889}} of consolidated revenue
@@ -14,7 +14,7 @@ What is disclosed | Annual and quarterly renal revenue, machines placed; no spli
 
 ### What it is and how it is used: one session, one set of consumables
 
-In haemodialysis the patient's blood is pumped from an arteriovenous fistula in the arm through a dialyser, where toxins and excess water cross a hollow-fibre membrane into dialysate that the machine prepares from purified water and concentrates, and back into the vein. Each three-to-five-hour session uses: <!-- RHP_NEPHRO p.334; D_product_glossary A4.3 -->
+In haemodialysis the patient's blood is pumped from an arteriovenous fistula in the arm through a dialyser, where toxins and excess water cross a hollow-fibre membrane into dialysate that the machine prepares from purified water and concentrates, and back into the vein. Each session, typically three to four hours, uses: <!-- RHP_NEPHRO p.268, p.334; D_product_glossary A4.3 -->
 - **a pair of AV fistula needles** (arterial and venous), always single use, the cleanest per-session consumable;
 - **one bloodline set** and usually two transducer protectors;
 - **one dialyser**, which Indian centres commonly reprocess and reuse for the same patient;
@@ -22,13 +22,13 @@ In haemodialysis the patient's blood is pumped from an arteriovenous fistula in 
 
 Temporary access (acute kidney injury, or while a fistula matures) uses a haemodialysis catheter kit, and acute bedside peritoneal dialysis uses a stiff PD catheter set. A machine is a one-off sale that then runs three to four treatments a day, which is why management describes machines as only ~{{CC-0575}} of renal revenue and consumables as the rest. <!-- TR1Q24 p.9, p.14 -->
 
-**The unit of demand is the session.** Frost & Sullivan (Nov-2025, via the NephroPlus prospectus) puts India's in-clinic treatments at {{E-0057|plain}}mn in 2024, rising to {{E-0058|plain}}mn by 2029 ({{D-WB-058}} CAGR, our calculation), for {{E-0020|plain}}mn patients. In-clinic haemodialysis is more than {{WB-0029}} of all dialysis in India, and only {{E-0046}} of patients are dialysed three times a week, against the two to three sessions a week that is typical. At a single-use pair per session, 2024 treatments imply ~{{D-WB-057}} fistula needles a year (our calculation). <!-- RHP_NEPHRO p.278-279, p.285-286 -->
+**The unit of demand is the session.** Frost & Sullivan (Nov-2025, via the NephroPlus prospectus) puts India's in-clinic treatments at {{E-0057|plain}}mn in 2024, rising to {{E-0058|plain}}mn by 2029 ({{D-WB-058}} CAGR, our calculation), for {{E-0020|plain}}mn patients. In-clinic haemodialysis is more than {{WB-0029}} of all dialysis in India, and only {{E-0046}} of patients are dialysed three times a week, the standard requirement. At a single-use pair per session, 2024 treatments imply ~{{D-WB-057|num}}mn fistula needles a year (our calculation). <!-- RHP_NEPHRO p.268, p.278-279, p.285-286 -->
 
 **Dialyser demand is sessions divided by reuse, and reuse is the swing factor.**
 - The MD described reuse ranging from single use to ten times in Mumbai centres, {{WM-0070}} on average and a single-use share of only {{CC-0590|range}} (both Aug-2023). The industry benchmark is a Fresenius dialyser reused seven times. <!-- TR3Q23 p.12; TR1Q24 p.14; TR2Q23 p.6 -->
 - By Oct-2024 he put single use at {{CA-0642|range}} of the market (from {{WB-0047}} when Polymed entered), heading to {{CA-0643|range}} in two to three years. That would raise dialyser consumption without a single extra session. <!-- TR2Q25 p.4 -->
 - Against that, the largest chain, NephroPlus, reprocesses dialysers for the same patient with its own patented Renova system, and CDSCO says it has received no complaints about reuse of single-use devices in five years. <!-- RHP_NEPHRO p.333; LSQ_AU1086_260724 p.2 -->
-- Management sized Indian consumption at {{WB-0048}} to {{D-WB-054}} dialysers a year (Feb-2023). <!-- TR3Q23 p.12 -->
+- Management sized Indian consumption at {{WB-0048|num}}-{{D-WB-054|num}}mn dialysers a year (Feb-2023). <!-- TR3Q23 p.12 -->
 
 ### Polymed's portfolio and position
 
@@ -43,13 +43,13 @@ Polymed makes every item in the session except concentrates, under its own brand
 **How the line was built.**
 - Fistula needles, bloodlines, HD catheters and PD sets were already in the FY16 range. The company dates its renal entry to 2018 and launched its dialyser in FY19; it describes itself as the first Indian company to make dialysers indigenously, a claim CRISIL repeats. <!-- AR16 p.6; DK4Q26 p.21; AR19 p.11; AR24 p.71; PD24 p.131 -->
 - The machine came in two steps. Polymed first resold an imported machine from Jul-2020, and haemodialysis machines appear among traded goods in the placement document; the whole traded line, which also held blood-collection tubes, was only {{WB-0037}} in FY22. <!-- DKFEB21 p.14; TR4Q22 p.7; PD24 p.110 -->
-- Its own machine came out of clinical trials with assembly starting in Aug-2022. Local content rose from ~{{CC-0617|range}} to more than {{CC-0616|range}} by Feb-2024, with circuit boards moved from Taiwanese and Korean suppliers to Bangalore, and the MD says it was the first dialysis machine to receive BIS certification. <!-- TR1Q23 p.6; TR3Q24b p.3; CC digest A4.3; TR4Q24 p.6 -->
+- Its own machine came out of clinical trials with assembly starting in Aug-2022. Local content rose from ~{{CC-0617|range}} to {{CC-0616|range}} by Feb-2024, with circuit boards moved from Taiwanese and Korean suppliers to Bangalore, and the MD says it was the first dialysis machine to receive BIS certification. <!-- TR1Q23 p.6; TR3Q24b p.3; CC digest A4.3; TR4Q24 p.6 -->
 - In the pipeline: an HDF (haemodiafiltration) machine made in India, targeted for mid-to-end 2026, {{CA-0532|range}} further renal products, and a pain-reducing needle technology. <!-- TR1Q26 p.11-12; TR4Q25 p.11; TR2Q25 p.4 -->
 
 **Capacity and service.**
-- Renal capacity was tripled over FY22 ({{CC-0072}} per the plan), with dialysis capacity at the IMT Faridabad plant "almost double" by May-2022. A further "tripling" was planned from FY25, after Polymed said in Oct-2024 that it was "short of products right now". Capacity was to "almost double" again by end-FY26. <!-- TR1Q22 p.3; TR4Q22 p.18; TR4Q24 p.12; TR2Q25 p.6; TR1Q26 p.5 -->
+- Management planned in Jul-2021 to raise renal capacity to {{CC-0072}} its Apr-2021 level by Mar-2022; by May-2022 it described dialysis capacity at the IMT Faridabad plant as "almost double". A further "tripling" was planned from FY25, after Polymed said in Oct-2024 that it was "short of products right now". Capacity was to "almost double" again by end-FY26. <!-- TR1Q22 p.3; TR4Q22 p.18; TR4Q24 p.12; TR2Q25 p.6; TR1Q26 p.5 -->
 - The PLI project at Faridabad is shown as commissioned, with {{F-0016}} invested against {{F-0015}} committed. A separate government grant of {{F-0018}} supports a {{F-0017}} project for polymer tubing components, including bloodline and dialysis accessories. <!-- LSQ_AU1001_260724 p.7, p.9 -->
-- Service is the differentiator management stresses: {{CA-0527|range}}+ engineers, each able to cover {{WB-0036}} machines, and a three-year warranty followed by service contracts. There is "no significant service revenue". <!-- TR4Q25 p.9; TR1Q26 p.18-19 -->
+- Service is the differentiator management stresses: {{CA-0527|range}} engineers, each able to cover {{WB-0036}} machines, and a three-year warranty followed by service contracts. Management says "we don't have any significant service revenue". <!-- TR4Q25 p.9; TR1Q26 p.18-19 -->
 
 ### Revenue: nineteen-fold in eight years, then a stall
 
@@ -66,24 +66,24 @@ Renal revenue rose from {{D-0621}} in FY18 to {{CB-0870}} in FY26, {{D-WB-012}} 
 {"id":"renal_rev","type":"column","title":"Renal revenue compounded from a small base to FY25, then growth halved in FY26","cats":["FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"scale":"bn","unit":"Rs bn","dec":2,"series":[{"name":"Renal revenue","facts":["D-0621","D-0623","D-0625","-","D-0059","D-0057","D-0055","CB-0871","CB-0870"]}],"label_all":true,"note":"FY18-FY24 from the product tables of the two placement documents (dialysis vertical); FY25-FY26 from the 4QFY26 presentation. FY21 was not disclosed in a filing; the MD put it at {{CC-0083|range}}. The company's own FY20-FY26 CAGR is {{CB-0030}}. BRSR cross-check: dialysis was {{A-0847}} of FY26 standalone turnover, or {{D-WB-001}} (our calculation), against {{A-0284}} in the annual report."}
 :::
 
-The quarterly run-rate shows where the growth went. Revenue held between {{CB-1822}} and {{CB-0348}} in each of the first three quarters of FY26, jumped {{D-WB-013}} qoq in 4QFY26 (our calculation) and fell back to {{CB-0347}} in 1QFY27. The four FY26 quarters as last reported sum to {{D-WB-062}} (our calculation), slightly above the annual {{CB-0870}}, because the 1QFY27 deck restated 1QFY26 from {{CB-2053}} to {{CB-0348}}.
+The quarterly run-rate shows where the growth went. Revenue held between {{CB-1822}} and {{CB-0348}} in each of the first three quarters of FY26, jumped {{D-WB-013}} qoq in 4QFY26 (our calculation) and fell back to {{CB-0347}} in 1QFY27. The four FY26 quarters as last reported sum to {{D-WB-062|mn}} (our calculation), slightly above the annual {{CB-0870|mn}}, because the 1QFY27 deck restated 1QFY26 from {{CB-2053}} to {{CB-0348}}.
 
 ::: chart
-{"id":"renal_q","type":"column","title":"Quarterly renal revenue has been flat since 1QFY26 apart from a 4QFY26 spike, and fell in 1QFY27","cats":["1QFY25","2QFY25","3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Renal revenue","facts":["CB-2054","CB-1823","CB-1531","CB-0869","CB-0348","CB-1822","CB-1530","CB-0868","CB-0347"]}],"label_all":true,"note":"Consolidated, as reported in the following year's presentation for each quarter; 1QFY26 as restated in the 1QFY27 deck (first reported at {{CB-2053}}). Year-on-year growth: {{CB-2055}} in 1QFY26, {{CB-1827}} in 2QFY26, {{CB-1535}} in 3QFY26, {{CB-0872}} in 4QFY26 and {{CB-0349}} in 1QFY27."}
+{"id":"renal_q","type":"column","title":"Quarterly renal revenue has been flat since 1QFY26 apart from a 4QFY26 spike, and fell in 1QFY27","cats":["1QFY25","2QFY25","3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Renal revenue","facts":["CB-2054","CB-1823","CB-1531","CB-0869","CB-0348","CB-1822","CB-1530","CB-0868","CB-0347"]}],"label_all":true,"note":"Consolidated, as reported in the FY26 quarterly presentations (FY25 quarters as their comparatives); 1QFY26 as restated in the 1QFY27 deck (first reported at {{CB-2053}}). Year-on-year growth: {{CB-2055}} in 1QFY26, {{CB-1827}} in 2QFY26, {{CB-1535}} in 3QFY26, {{CB-0872}} in 4QFY26 and {{CB-0349}} in 1QFY27."}
 :::
 
 **The guidance record.** Renal has been the least reliable line in Polymed's guidance (Section A3). Revenue targets were cut in four of the five years from FY23 to FY27, and machine targets were cut in every year from FY24 to FY26. The one beat, FY25, followed the start of device licensing.
 
-::: table id="renal_guidance" title="Renal guidance was cut in four of the five years from FY23 to FY27, and FY25 was the only year it was beaten" note="Growth rates and amounts as stated by management on the calls; delivered revenue from the placement document (FY23, FY24) and presentations (FY25, FY26). Management's annual machine statements for FY22-FY24 (~{{CC-0311|range}}, ~{{CC-0514|range}} and ~{{CC-0690|range}}) sum to more than the 'earlier base' of {{CA-0670}} it cited for Mar-2024 on the 2QFY25 call; the series from FY25 onward reconciles with the installed base of over {{CA-0502|range}} (May-2025), ~{{CB-0597}} (Mar-2026) and ~{{CB-0194}} (Aug-2026)."
+::: table id="renal_guidance" title="Renal guidance was cut in four of the five years from FY23 to FY27, and FY25 was the only year it was beaten" note="Growth rates and amounts as stated by management on the calls; delivered revenue from the placement document (FY23, FY24) and presentations (FY25, FY26). Management's annual machine statements for FY22-FY24 (~{{CC-0311|range}}, ~{{CC-0514|range}} and ~{{CC-0690|range}}) sum to more than the 'earlier base' of {{CA-0670}} it cited for Mar-2024 on the 2QFY25 call; the series from FY25 onward reconciles with the installed base of {{CA-0502|range}} (May-2025), ~{{CB-0597}} (Mar-2026) and ~{{CB-0194}} (Aug-2026)."
 | | First guidance | Later revisions | Delivered |
 |---|---|---|---|
-| FY23 revenue | {{CC-0411|range}} growth; ~{{CC-0332|range}} (Aug-2022) | {{CC-0412|range}} (Feb-2023) | {{D-0057}} ({{D-WB-059}}, our calculation); MD: ~{{CC-0495|range}} |
+| FY23 revenue | {{CC-0411|range}} growth; {{CC-0332|range}} (Aug-2022) | {{CC-0412|range}} (Feb-2023) | {{D-0057}} ({{D-WB-059}}, our calculation); MD: ~{{CC-0495|range}} |
 | FY23 machines | {{CC-0312}} (Aug-2022) | – | ~{{CC-0514|range}} |
-| FY24 revenue | {{CC-0502|range}} growth (May-2023) | {{CC-0556|range}} (Aug-2023); ~{{CC-0614|range}} (Feb-2024) | {{D-0055}} ({{D-WB-060}}, our calculation) |
+| FY24 revenue | {{CC-0502|range}} growth (May-2023) | {{CC-0556|range}} (Aug-2023); {{CC-0614|range}} (Feb-2024) | {{D-0055}} ({{D-WB-060}}, our calculation) |
 | FY24 machines | ~{{CC-0373|range}} (Nov-2022) | ~{{CC-0498|range}} (May-2023); {{CC-0642|range}} (Feb-2024) | ~{{CC-0690|range}} |
 | FY25 revenue | ~{{CC-0689|range}} growth (May-2024); {{WM-0009|range}} (Jul-2024) | {{CA-0639|range}} (Oct-2024) | {{CB-0871}} ({{CB-2232}} standalone) |
-| FY25 machines | Over {{CC-0691|range}} (May-2024) | {{CA-0699|range}} (Jul-2024); {{CA-0669|range}} (Oct-2024); {{CA-0595|range}} (Feb-2025) | Over {{CA-0503|range}} |
-| FY26 revenue | ~{{CA-0499|range}} growth (May-2025) | {{CA-0344|range}} (Nov-2025); ~{{CA-0241|range}} (Feb-2026) | {{CB-0870}} ({{CB-0873|signed}}); MD: '{{CA-0166|plain}}' |
+| FY25 machines | {{CC-0691|range}} (May-2024) | {{CA-0699|range}} (Jul-2024); {{CA-0669|range}} (Oct-2024); {{CA-0595|range}} (Feb-2025) | {{CA-0503|range}} |
+| FY26 revenue | ~{{CA-0499|range}} growth (May-2025) | {{CA-0344|range}} (Nov-2025); {{CA-0241|range}} (Feb-2026) | {{CB-0870}} ({{CB-0873|signed}}); MD: '{{CA-0166|plain}}' |
 | FY26 machines | {{CA-0501|range}} (May-2025) | {{CA-0239}} (Feb-2026) | {{CB-0596}} |
 | FY27 revenue | {{CA-0151|range}} (May-2026; earlier ambition {{CA-0150|range}}) | '{{CA-0070|plain}}' (Aug-2026) | 1QFY27: {{CB-0349}} |
 | FY27 machines | +{{CA-0167}} (May-2026) | – | – |
@@ -96,11 +96,11 @@ The machine is the entry ticket to a dialysis unit's consumables, but Polymed's 
 - **The MNC model.** Fresenius and Nipro "place machines in the hospital" and then supply consumables under contracts of {{WM-0071|num}} to {{WM-0072}}, which their balance sheets allow. <!-- TR3Q26 p.11 -->
 - **Polymed's model.** Polymed sells the machine outright, for ~Rs. {{D-WB-055|num}}-{{D-WB-056|num}}mn per unit (May-2023), priced {{CC-0313|range}} below MNC machines, and relies on service and local content to win the consumables. <!-- TR3Q26 p.11; TR4Q23 p.17; TR1Q23 p.6 -->
 
-Polymed's ~{{CB-0194}} machines are only {{D-WB-014}} of India's ~{{E-0043}} (our calculation on F&S's installed base). Management's ~{{CA-0242}} share claim therefore implies that most of its dialysers, bloodlines and needles go into other brands' machines. Dialysers and needles are not machine-specific, so we read the installed base as a door-opener rather than a lock-in. <!-- RHP_NEPHRO p.279; TR3Q26 p.5 -->
+Polymed's ~{{CB-0194|num}} machines are only {{D-WB-014}} of India's ~{{E-0043}} (our calculation on F&S's installed base). Management's ~{{CA-0242}} share claim therefore implies that most of its dialysers, bloodlines and needles go into other brands' machines. Dialysers and needles are not machine-specific, so we read the installed base as a door-opener rather than a lock-in. <!-- RHP_NEPHRO p.279; TR3Q26 p.5 -->
 
 The scale gap is wide. Fresenius and Nipro have "installations of over {{CA-0526|range}} machines" in India, and the MD has put Fresenius alone at {{CC-0376|range}}-{{CC-0465|range}} of India's installed base. NephroPlus alone ran {{WB-0024}} machines in Sep-2025, having added {{D-WB-049}} since Mar-2023 (our calculation), more than Polymed's entire installed base. <!-- TR4Q25 p.9; TR2Q23 p.10; TR3Q23 p.18; RHP_NEPHRO p.311 -->
 
-The FY26 shortfall against the machine target came from tenders. Management said that "certain government contracts are delayed", that it had bid for more than {{CA-0273|range}} machines, and that its current visibility for FY26 was {{WM-0068}} machines ("it can be {{WM-0069|num}} also"), with the rest likely to slip into FY27 "because of budgeting issues". <!-- TR3Q26 p.11 -->
+The FY26 shortfall against the machine target came from tenders. Management said that "certain government contracts are delayed", that it had bid for {{CA-0273|range}} machines, and that its current visibility for FY26 was {{WM-0068|num}} machines ("it can be {{WM-0069|num}} also"), with the rest likely to slip into FY27 "because of budgeting issues". <!-- TR3Q26 p.11 -->
 
 ### Market: India's dialysis is growing fast, but through public programmes and price-driven chains
 
@@ -109,7 +109,7 @@ The FY26 shortfall against the machine target came from tenders. Management said
 - It has ~{{E-0008}} dialysis clinics, more than {{WB-0030}} of them private, and ~{{E-0043}} machines against a stated need of more than {{E-0044}}.
 - The organized chains hold ~{{E-0056}} of a services market of {{E-0054}} (2024) that F&S expects to reach {{E-0055}} by 2029.
 
-The MD's own sizing was ~{{CC-0040|range}} in May-2021, {{CC-0041}} of it imported. By May-2023 he put the market at {{CC-0534|range}}, of which consumables were {{CC-0531|range}} and machines {{CC-0533|range}}, on {{CC-0195|range}} machine sales a year. He put industry growth at ~{{CA-0537|range}} in May-2025. <!-- RHP_NEPHRO p.264, p.278-279, p.281, p.285; TR2021 p.8; TR4Q23 p.17; TR3Q22 p.13; TR4Q25 p.12 -->
+The MD's own sizing was {{CC-0040|range}} in May-2021, {{CC-0041}} of it imported. By May-2023 he put the market at {{CC-0534|range}}, of which consumables were {{CC-0531|range}} and machines {{CC-0533|range}}, on {{CC-0195|range}} machine sales a year. He put industry growth at ~{{CA-0537|range}} in May-2025. <!-- RHP_NEPHRO p.264, p.278-279, p.281, p.285; TR2021 p.8; TR4Q23 p.17; TR3Q22 p.13; TR4Q25 p.12 -->
 
 **Public money sets the price.** Management estimates that {{WB-0044|range}} of patients are treated in government-funded centres, and the programmes pay per session: <!-- TR3Q26 p.11 -->
 - **PMNDP.** The Pradhan Mantri National Dialysis Programme, launched in 2016, runs {{F-0113}} centres with {{F-0114}} haemodialysis machines in {{F-0112}} districts (dashboard, Sep-2026). Those machines are {{D-WB-015}} of F&S's national installed base (our calculation; different dates). Annual sessions rose from {{F-0076}} to {{F-0077}} in five years. <!-- PMNDP_DASH p.1; PIB_PSC176_2608 p.1 -->
@@ -132,8 +132,8 @@ Polymed counts NephroPlus and DCDC among its customers, which makes the chains b
 **Global context.** Fresenius Medical Care's 20-F (CY25) gives the frame:
 - {{E-0224|plain}}mn patients worldwide, growing {{E-0225|range}}% a year, {{E-0227}} of them on in-centre haemodialysis;
 - a global dialysis market of {{E-0229}}, of which {{E-0230}} is products;
-- ~{{E-0232}} dialysers sold a year, {{E-0233}} of them made by Fresenius;
-- {{E-0234}} haemodialysis machines installed in 2025, ~{{WB-0052}} of them by Fresenius. <!-- FMC_20F25 p.1 -->
+- ~{{E-0232|num}}mn dialysers sold a year, {{E-0233}} of them made by Fresenius;
+- {{E-0234|num}} haemodialysis machines installed in 2025, ~{{WB-0052}} of them by Fresenius. <!-- FMC_20F25 p.1 -->
 
 Vendor estimates put the global dialyser market at {{E-0363}} (IMARC, 2025) and haemodialysis catheters at {{E-0370}} (360iResearch, 2026). <!-- VND_RNM_DIALYZER p.1; VND_RNM_HDCATH p.1 -->
 
@@ -191,12 +191,12 @@ We read this as consistent with management's account of Chinese product being re
 **Device regulation and reimbursement.**
 - Dialysis machines are Class C devices under the Medical Devices Rules 2017. Licensing of Class C/D devices began in Oct-2023, which management credits for ending unregulated parallel imports. <!-- RHP_NEPHRO p.280; F digest B3.1; TR1Q25 p.10 -->
 - The HDF machine faces a reimbursement ceiling: PM-JAY pays a flat per-session rate, so management expects HDF only in private centres, ~{{CA-0464|range}} of the market. <!-- TR1Q26 p.11 -->
-- The Parliamentary Standing Committee's CKD report recommends home peritoneal dialysis as first-line therapy. We would watch this, because Polymed's PD range is acute-care only. <!-- PIB_PSC176_2608 p.1 -->
+- The Parliamentary Standing Committee's CKD report (its 177th, Aug-2026) recommends promoting peritoneal dialysis as "the preferred first-line renal replacement therapy for clinically suitable patients". We would watch this, because Polymed's PD range is acute-care only. <!-- PIB_PSC176_2608 p.1 -->
 
 ### Company-specific growth drivers, ranked
 
 1. **Consumables pull-through from a larger installed base** (management target; timing FY27-FY28).
-   - Management plans a {{CA-0167}} rise in machine sales in FY27 and has a tender pipeline of more than {{CA-0273|range}} machines.
+   - Management plans a {{CA-0167}} rise in machine sales in FY27 and has a tender pipeline of {{CA-0273|range}} machines.
    - It has hired a renal head from Nipro, Fresenius and DaVita to work the chains and distributors. <!-- TR4Q26 p.13; TR3Q26 p.11; DK1Q27 p.22; TR1Q27S p.2, p.10 -->
    - Our view: the lever is conversion of PPP and chain tenders, where lumpy timing produced the FY26 miss.
 2. **A trade-remedy duty on Chinese and Malaysian dialysers** (event-driven; management expects a decision by end-2026).
@@ -210,7 +210,7 @@ We read this as consistent with management's account of Chinese product being re
 
 1. **Price, set by imports.** The DGTR summary of Polymed's own injury claim describes losses, cash losses and negative ROCE on dialysers in CY25. That conflicts with the MD's May-2025 statement that renal was "not a loss making … the operating margin is positive" with PAT expected by end-FY26. The two cover different scopes (dialysers only versus the whole renal line) and periods, and we do not reconcile them. Management chose price over volume in 1QFY27. <!-- DGTR_DIAL_INIT p.4; TR4Q25 p.13-14; TR1Q27S p.3-4 -->
 2. **Duty inversion on inputs.** Import content has fallen below {{CC-0516|range}}, but the {{WB-0045}} customs duty and {{WB-0046}} GST on inputs weigh against duty-free imports. <!-- TR4Q23 p.7; TR4Q26 p.15 -->
-3. **Utilization.** Capacity has doubled more than once since FY22 while revenue has been flat for five quarters. We infer under-absorption of plant and of the fixed service network until volumes recover.
+3. **Utilization.** On management's statements, renal capacity has been doubled or tripled more than once since FY22, while revenue has been flat for five quarters. We infer under-absorption of plant and of the fixed service network until volumes recover.
 4. **Mix.** Machines, ~{{CC-0575}} of renal revenue, are sold outright with no significant service income, and management declines to give product margins. <!-- TR1Q24 p.9; TR1Q26 p.13, p.19 -->
 5. **Incentives.** PLI has paid nothing so far; its remaining upside is capped at {{F-0014}} over the scheme life and needs thresholds that renal has not met.
 

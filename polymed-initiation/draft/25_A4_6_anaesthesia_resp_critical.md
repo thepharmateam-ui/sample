@@ -57,12 +57,12 @@ The FY26 BRSR drops the anaesthesia and respiratory line. Its FY25 share ({{A-08
 ### Critical care: the growth project
 
 Management's account of critical care has moved:
-- **Launch date.** The FY26 annual report dates entry to 2019. The placement document calls it a division launched in FY23, and the FY25 call says "started FY25". <!-- AR26 p.11; PD24 p.167; TR4Q25 p.4 -->
+- **Launch date.** The FY26 annual report dates entry to 2019. The placement document says the critical care division was launched in FY23, and on the May-2025 call the MD described the division as having "just started last year". <!-- AR26 p.11; PD24 p.167; TR4Q25 p.4 -->
 - **Scale claims.** By Nov-2025 Polymed had launched {{CA-0351}} critical-care products in a year and was present in {{CA-0352}} hospitals, including top-tier chains. {{CB-0190}} new products were launched across infusion and critical care in 1QFY27. <!-- TR2Q26 p.5; DK1Q27 p.22 -->
-- **Targets.** In Aug-2023 management aimed for {{CC-0569|range}} of critical-care revenue in three to four years "at a better margin". In May-2025 it hoped the segment would grow "{{CA-0506}}" in FY26. Neither outcome has been disclosed. <!-- TR1Q24 p.6; TR4Q25 p.4 -->
-- **Investment.** Polymed added {{CA-0540}} people across cardiology and critical care in FY25, "with little contribution yet". <!-- TR4Q25 p.14 -->
+- **Targets.** In Aug-2023 management aimed for {{CC-0569|range}} of critical-care revenue in three to four years, saying the segment "definitely has a better margin". In May-2025 it hoped the segment would grow "{{CA-0506}}" in FY26. Neither outcome has been disclosed. <!-- TR1Q24 p.6; TR4Q25 p.4 -->
+- **Investment.** Polymed added {{CA-0540}} people across cardiology and critical care in FY25, whose "contribution is very less" so far, in the MD's words. <!-- TR4Q25 p.14 -->
 
-**Why management likes the segment.** It argues that critical care has few global competitors ("{{CA-0388|plain}}"). Indian demand is almost entirely imported ({{CA-0664|range}}, Oct-2024), and ICU patients consume many devices each: management put ICU beds at ~{{CC-0087}} of hospital beds. The segment is also the channel for oncology products (Section A4.2). <!-- TR2Q26 p.14; TR2Q25 p.8; TR1Q22 p.11; TR4Q25 p.4 -->
+**Why management likes the segment.** It argues that critical care has few global competitors ("{{CA-0388|plain}}"). Indian demand is largely imported ({{CA-0664|range}}, Oct-2024), and ICU patients consume many devices each: management put ICU beds at ~{{CC-0087}} of hospital beds (Jul-2021). The segment is also the channel for oncology products (Section A4.2). <!-- TR2Q26 p.14; TR2Q25 p.8; TR1Q22 p.11; TR4Q25 p.4 -->
 
 We read critical care as a cross-selling engine for devices Polymed already makes, sold by clinically trained staff, rather than a new product category. Its success should therefore show up in the domestic "others" line and in private-hospital growth, not in a separately reported number.
 
@@ -71,13 +71,13 @@ We read critical care as a cross-selling engine for devices Polymed already make
 Market data are thin and vendor-based. Research and Markets pages put the global endotracheal-tube market at {{E-0374}} in 2026 and anaesthesia face masks at {{E-0375}} in 2025 (vendor estimates). <!-- VND_RNM_ETT p.1; VND_RNM_ANMASK p.1 -->
 
 The multinationals are consolidating, and Chinese makers are widening their ranges:
-- **Teleflex** agreed in Dec-2025 to sell its Acute Care business to Intersurgical for {{E-0222}}, as part of a {{E-0223}} sale of its OEM unit and other divestitures. Acute Care covers airway management, anaesthesia, respiratory, humidification, oxygen therapy and regional anaesthesia. Teleflex had already sold respiratory lines to Medline in 2021. <!-- TFX_10K25 p.1 -->
+- **Teleflex** agreed in Dec-2025 to sell its Acute Care and Interventional Urology businesses to Intersurgical for {{E-0222}}, alongside a separate {{E-0223}} sale of its OEM unit to Montagu and Kohlberg. Acute Care covers airway management, anaesthesia, respiratory, humidification, oxygen therapy and regional anaesthesia. Teleflex had already sold respiratory lines to Medline in 2021. <!-- TFX_10K25 p.1 -->
 - **ICU Medical**, which bought Smiths Medical (Portex airway and tracheostomy products), reported Vital Care revenue of {{E-0212}} in CY25. That covers anaesthesia, respiratory, haemodynamic monitoring and regional anaesthesia, after most IV solutions moved to a joint venture. It names Intersurgical among its main Vital Care competitors. <!-- ICUI_10K25 p.1 -->
 - **BD and B. Braun** are strong in regional anaesthesia: BD sells spinal and epidural needles and trays in its Medication Delivery Solutions unit, and B. Braun cites regional anaesthesia as a growth driver of its Hospital Care division. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44 -->
 - **BD in critical care.** In Sep-2024 BD bought Edwards Lifesciences' Critical Care group for {{E-0208}} and renamed it Advanced Patient Monitoring. Its range includes arterial pressure monitoring products and pulmonary artery catheters, so the largest infusion competitor now also sells the monitoring systems that Polymed's arterial cannulas and catheters connect to. <!-- BD_10K25 p.1 -->
 - **Chinese makers** are registering the same basic items in Europe: KDL completed CE registration for {{WA-0016}} products in CY25, including suction, feeding and urinary catheters. <!-- KDL_AR25 p.21 -->
 
-In India, management says imports supply most of critical-care demand. CRISIL notes that Indian makers mostly produce basic items such as nasal oxygen cannulas, oxygen masks, ventilator circuits and mucus extractors, and that multinationals and imports dominate the consumables market. <!-- TR2Q26 p.14; PD24 p.132 -->
+In India, management says imports supply most of critical-care demand. CRISIL notes that Indian makers mostly produce basic items such as nasal oxygen cannulas, oxygen masks, ventilator circuits and mucus extractors, and that multinationals and imports dominate the consumables market, although the same report puts imports at only {{E-0323}} of consumables sales. <!-- TR2Q26 p.14; PD24 p.132, p.134 -->
 
 Two domestic rivals show the competition in that basic range. Romsons sells anaesthesia, respiratory, urology and transfusion disposables; 1Lattice puts its FY24 revenue at {{E-0100}} and its EBITDA margin at {{E-0102}}, and Temasek took a minority stake in it in Sep-2026. Angiplast makes nasal oxygen cannulas and oxygen and nebulizer masks and says it exports more than {{E-0386}} of its output. <!-- DRHP_GSURG pp.211, 219; MB_ROMSONS p.1; ANGIPLAST_WEB p.1 -->
 
@@ -86,7 +86,7 @@ Polymed's position in the basic range rests on price and breadth within the same
 ### Regulation specific to the line
 
 - **US.** Polymed's FDA device listings include Class I respiratory and airway items that need no 510(k): tracheobronchial suction catheters and a suction catheter kit (Jaipur), nasal oxygen cannula, breathing circuit, oropharyngeal airway, and oxygen and venturi masks (Faridabad). These can be sold in the US without clearance. The suction catheter kit is listed under the proprietary name "McKesson", a US distributor, which points to private-label supply (Section A4.10). <!-- FDAREG_POLY p.1; D digest A4.10 -->
-- **India pricing.** In 2014 the NPPA alleged that Polymed charged {{D-0796}} above the maximum price on spinal needles. It demanded {{D-0794}}, of which {{D-0795}} was paid under protest. The contingent liability ({{A-0844}}) was shown in the FY25 accounts as since disposed of. The Maharashtra FDA survey reported in Sep-2026, which named a Polymed IV set, also found a nebuliser marked up {{F-0087}} (maker not named); the consultation on trade margins ordered that month would cover respiratory consumables too (Section A4.1). <!-- PD21 p.205; AR25 p.133; FPJ_MAHFDA_2609 p.1; MB_MRP_2609 p.1 -->
+- **India pricing.** In 2014 the NPPA alleged that Polymed charged {{D-0796}} above the maximum price on spinal needles. It demanded {{D-0794}}, of which {{D-0795}} was paid under protest. The contingent liability ({{A-0844}}) was shown in the FY25 accounts as since disposed of. The Maharashtra FDA survey reported in Sep-2026, which named a Polymed IV set, also found a Nebplus-brand nebuliser, a brand not in Polymed's catalogues, marked up {{F-0087}}; the consultation on trade margins ordered that month would cover respiratory consumables too (Section A4.1). <!-- PD21 p.205; AR25 p.133; FPJ_MAHFDA_2609 p.1; CATDOM25 pp.19-22; MB_MRP_2609 p.1 -->
 - **Europe.** Most of the range is low-risk under the MDR, but re-certification of each variant still costs time. Management said Polymed had to drop products during the MDR transition (Section A4.1). <!-- TR3Q26 p.8 -->
 
 ### Growth and margin drivers, ranked
@@ -111,5 +111,5 @@ Polymed's position in the basic range rests on price and breadth within the same
 **Open questions for management** (also in the question bank):
 - where the anaesthesia and respiratory line went in the FY26 BRSR;
 - critical-care revenue, and how it overlaps with vascular access;
-- whether the FY26 "two and a half times" growth ambition for critical care was met;
+- whether the FY26 ambition for critical care to grow "{{CA-0506}}" was met;
 - US private-label volumes of Class I respiratory items.
