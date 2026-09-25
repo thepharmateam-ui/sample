@@ -24,6 +24,7 @@ FACTS = {}
 USED = OrderedDict()          # fact_id -> True (order of first use)
 EXH = OrderedDict()           # exhibit id -> number
 PENDING_EXREF = []
+RISKS = []                    # (risk no., short name, likelihood, impact) parsed from the risk register table
 
 
 DOCS = {}
@@ -181,8 +182,8 @@ def sources_line(fids, extra="", cited=()):
             docs["our calculation"] = True
         else:
             docs[doc_label(r)] = True
-    names = "; ".join(docs.keys())
-    return f'<p class="src">Source: {html.escape(names)}{("; " + html.escape(extra)) if extra else ""}; Avendus Spark Research</p>'
+    parts = [html.escape(n) for n in docs.keys()] + ([html.escape(extra)] if extra else []) + ["Avendus Spark Research"]
+    return f'<p class="src">Source: {"; ".join(parts)}</p>'
 
 
 def exh_number(eid):
@@ -281,8 +282,53 @@ def md(text):
     return markdown.markdown(fix_lists(text), extensions=["tables", "attr_list", "sane_lists", "md_in_html"])
 
 
+def parse_risk_register(body):
+    """Collect (no., risk, likelihood, impact) from the register's markdown table; grades read 'H / M'."""
+    rows = [r for r in body.strip().splitlines() if r.strip().startswith("|")]
+    def cells_of(r):  # split on table pipes, not on the pipes inside {{FACT|fmt}} tokens
+        return [c.strip() for c in re.split(r"\|(?![^{]*\}\})", r.strip().strip("|"))]
+    head = [c.lower() for c in cells_of(rows[0])]
+    gi = next(i for i, c in enumerate(head) if c.startswith("likelihood"))
+    RISKS.clear()
+    for r in rows[2:]:
+        cells = cells_of(r)
+        m = re.match(r"^([HML])\s*/\s*([HML])$", cells[gi])
+        if m:
+            RISKS.append((cells[0], cells[1], m.group(1), m.group(2)))
+
+
+def render_riskgrid(attrs):
+    """Likelihood x impact heat grid built from the parsed risk register, so the two cannot diverge."""
+    eid = attrs.get("id", "risk_heat")
+    n = exh_number(eid)
+    lv = {"H": 3, "M": 2, "L": 1}
+    names = {"H": "High", "M": "Medium", "L": "Low"}
+    tiers = {1: ("t1", "Low"), 2: ("t1", "Low"), 3: ("t2", "Moderate"), 4: ("t2", "Moderate"), 6: ("t3", "Elevated"), 9: ("t4", "High")}
+    rows = []
+    for li in "HML":
+        cells = [f'<th scope="row">{names[li]}</th>']
+        for im in "LMH":
+            cls, word = tiers[lv[li] * lv[im]]
+            items = [f'<li><b>{html.escape(no)}</b> {html.escape(name)}</li>' for no, name, l, i in RISKS if l == li and i == im]
+            body = f'<ul>{"".join(items)}</ul>' if items else '<p class="none">–</p>'
+            cells.append(f'<td class="{cls}"><span class="tier">{word}</span>{body}</td>')
+        rows.append(f'<tr>{"".join(cells)}</tr>')
+    table = ('<div class="tw"><table class="riskgrid"><thead><tr><th scope="col">Likelihood ↓ / impact →</th>'
+             + "".join(f'<th scope="col">{names[im]}</th>' for im in "LMH") + '</tr></thead><tbody>'
+             + "".join(rows) + '</tbody></table></div>')
+    legend = ('<p class="rglegend" aria-hidden="true">' + "".join(
+        f'<span><i class="{c}"></i>{w}</span>' for c, w in (("t1", "Low"), ("t2", "Moderate"), ("t3", "Elevated"), ("t4", "High")))
+        + '</p>')
+    note = f'<p class="note">{sub_tokens(html.escape(attrs["note"], quote=False))}</p>' if attrs.get("note") else ""
+    return (f'<figure class="exh" id="exh-{eid}"><figcaption><span class="exn">Exhibit {n}:</span> '
+            f'{html.escape(attrs.get("title", ""))}</figcaption>{legend}{table}{note}'
+            f'{sources_line([], "", attrs.get("_cited", []))}</figure>')
+
+
 def render_table_block(attrs, body):
     eid = attrs.get("id") or f"t{len(EXH) + 1}"
+    if eid == "risk_register":
+        parse_risk_register(body)
     n = exh_number(eid)
     fids = TOKEN.findall(body)
     inner = md(sub_tokens(body))
@@ -297,7 +343,7 @@ def parse_attrs(s):
     return dict(re.findall(r'(\w+)="([^"]*)"', s))
 
 
-BLOCK = re.compile(r"^:::\s*(chart|table|callout|snapshot|q)([^\n]*)\n(.*?)^:::\s*$", re.S | re.M)
+BLOCK = re.compile(r"^:::\s*(chart|table|callout|snapshot|q|riskgrid)([^\n]*)\n(.*?)^:::\s*$", re.S | re.M)
 QS = []  # question-bank entries collected during a build: (num, id, theme, priority, text)
 QFIELDS = [("why", "Why it matters"), ("context", "Our context"), ("listen", "Listen for"), ("follow-up", "Follow-up")]
 
@@ -364,6 +410,9 @@ def process_blocks(text):
                     + md(sub_tokens(body)) + "</aside>\n\n")
         if kind == "q":
             return "\n\n" + render_question(attrs, body) + "\n\n"
+        if kind == "riskgrid":
+            attrs["_cited"] = cited
+            return "\n\n" + render_riskgrid(attrs) + "\n\n"
         if kind == "snapshot":
             items = []
             for line in body.strip().splitlines():
@@ -452,7 +501,8 @@ def bibliography():
             '</tr></thead><tbody>' + "".join(rows) + "</tbody></table></div>")
 
 
-def build(out_path, draft_files, companion=False):
+def render_body(draft_files, companion=False):
+    """Render the drafts to one HTML body; returns (body, toc). Resets exhibit, fact and question state."""
     USED.clear()
     EXH.clear()
     QS.clear()
@@ -478,16 +528,30 @@ def build(out_path, draft_files, companion=False):
     body = re.sub(r'<td>(\s*[~+\-]?[0-9][0-9,.]*%?\s*)</td>', r'<td class="num">\1</td>', body)
     body = align_numeric_columns(body)
     body, toc = add_heading_ids(body, ("2", "3") if companion else ("1", "2"))
-    toc_html = []
-    for lvl, hid, txt in toc:
-        toc_html.append(f'<li class="l{lvl}"><a href="#{hid}">{html.escape(html.unescape(txt))}</a></li>')
+    return body, toc
+
+
+def wrap_page(body, toc_html, title, pagetitle=None, companion=False, brand=None, sitelinks="", nav_top="", nav_bottom=""):
     tpl = open("build/template.html").read()
-    title = "Polymed Plant Visit Questions" if companion else "Poly Medicure Initiating Coverage"
-    page = (tpl.replace("{{TITLE}}", title)
-               .replace("{{TOC}}", "".join(toc_html))
+    return (tpl.replace("{{PAGETITLE}}", html.escape(pagetitle or title))
+               .replace("{{BRAND}}", brand or html.escape(title))
+               .replace("{{SITELINKS}}", sitelinks)
+               .replace("{{TOC}}", toc_html)
+               .replace("{{PAGENAV_TOP}}", nav_top)
+               .replace("{{PAGENAV_BOTTOM}}", nav_bottom)
                .replace("{{BODY}}", body)
                .replace("{{AS_OF}}", AS_OF)
                .replace("{{BODYCLASS}}", "companion" if companion else "report"))
+
+
+def toc_list(toc):
+    return "".join(f'<li class="l{lvl}"><a href="#{hid}">{html.escape(html.unescape(txt))}</a></li>' for lvl, hid, txt in toc)
+
+
+def build(out_path, draft_files, companion=False):
+    body, toc = render_body(draft_files, companion)
+    title = "Polymed Plant Visit Questions" if companion else "Poly Medicure Initiating Coverage"
+    page = wrap_page(body, toc_list(toc), title, companion=companion)
     open(out_path, "w").write(page)
     unknown = re.findall(r"\{\{[^}]+\}\}", body)
     print(f"built {out_path}: {len(page)/1e6:.2f}MB, exhibits={len(EXH)}, facts used={len(USED)}, "
@@ -495,16 +559,171 @@ def build(out_path, draft_files, companion=False):
     return page
 
 
+# ---------------------------------------------------------------- multipage site
+REPORT_TITLE = "Poly Medicure Initiating Coverage"
+HEAD_RE = re.compile(r'<h([123]) id="([^"]+)"[^>]*>(.*?)</h\1>', re.S)
+SUBPAGED = {"c3"}  # chapters split further at h3 (the question bank)
+
+
+def strip_tags(x):
+    return html.unescape(re.sub(r"<[^>]+>", "", x)).strip()
+
+
+def split_pages(body):
+    """Cut the rendered body into pages: home (before the first part), one page per h2 chapter (a part's h1
+    opens its first chapter), and one page per h3 inside the chapters in SUBPAGED."""
+    heads = [(m.start(), int(m.group(1)), m.group(2), strip_tags(m.group(3))) for m in HEAD_RE.finditer(body)]
+    pages = [{"file": "index.html", "id": "home", "title": "Summary, key facts and debates", "part": None,
+              "parent": None, "start": 0}]
+    part, pending, chapter = None, None, None
+    for pos, lvl, hid, txt in heads:
+        if lvl == 1:
+            part, pending = txt, pos
+        elif lvl == 2 and part is None:
+            continue  # the front section's headings stay on the home page
+        elif lvl == 2:
+            pages.append({"file": f"{hid}.html", "id": hid, "title": txt, "part": part, "parent": None,
+                          "start": pending if pending is not None else pos})
+            pending, chapter = None, hid
+        elif lvl == 3 and chapter in SUBPAGED:
+            base = f"{chapter}-{slug(txt)}"  # named from the title, so no heading-id de-duplication suffix
+            name, k = base, 2
+            while any(p["file"] == f"{name}.html" for p in pages):
+                name, k = f"{base}-{k}", k + 1
+            pages.append({"file": f"{name}.html", "id": hid, "title": txt, "part": part,
+                          "parent": chapter, "start": pos})
+    for i, p in enumerate(pages):
+        p["html"] = body[p["start"]: pages[i + 1]["start"] if i + 1 < len(pages) else len(body)]
+    return pages
+
+
+def site_toc(pages, cur):
+    cur_group = cur["parent"] or cur["id"]
+    def sections(p):  # in-page section links for the current page (home: its h2s; chapters: their h3s)
+        lvl = "2" if p["file"] == "index.html" else "3"
+        if p["id"] in SUBPAGED or p["parent"]:
+            return []
+        return [f'<li class="l3"><a href="#{hid}">{html.escape(strip_tags(t))}</a></li>'
+                for l, hid, t in re.findall(r'<h([23]) id="([^"]+)"[^>]*>(.*?)</h\1>', p["html"], re.S) if l == lvl]
+    home_act = ' class="active"' if cur["file"] == "index.html" else ""
+    out = [f'<li class="l2"><a href="index.html"{home_act}>{html.escape(pages[0]["title"])}</a></li>']
+    if cur["file"] == "index.html":
+        out += sections(cur)
+    seen_parts = set()
+    for p in pages[1:]:
+        if p["part"] and p["part"] not in seen_parts:
+            seen_parts.add(p["part"])
+            out.append(f'<li class="l1"><a href="{p["file"]}">{html.escape(p["part"])}</a></li>')
+        if p["parent"]:
+            if p["parent"] != cur_group:
+                continue
+            lvl = "l3"
+        else:
+            lvl = "l2"
+        act = ' class="active"' if p["file"] == cur["file"] else ""
+        out.append(f'<li class="{lvl}"><a href="{p["file"]}"{act}>{html.escape(p["title"])}</a></li>')
+        if p["file"] == cur["file"]:
+            out += sections(p)
+    return "".join(out)
+
+
+def page_label(p):
+    return f'Question bank: {p["title"]}' if p["parent"] == "c3" else p["title"]
+
+
+def page_nav(pages, i, where):
+    prev = pages[i - 1] if i > 0 else None
+    nxt = pages[i + 1] if i + 1 < len(pages) else None
+    a = (f'<a class="prev" href="{prev["file"]}"><span>Previous</span>{html.escape(page_label(prev))}</a>' if prev
+         else '<span></span>')
+    b = (f'<a class="next" href="{nxt["file"]}"><span>Next</span>{html.escape(page_label(nxt))}</a>' if nxt
+         else '<span></span>')
+    return f'<nav class="pagenav {where}" aria-label="Chapter navigation">{a}{b}</nav>'
+
+
+def directory(pages):
+    """The home page's chapter directory: every page, grouped by part, with links."""
+    groups = OrderedDict()
+    for p in pages[1:]:
+        if p["parent"]:
+            continue
+        groups.setdefault(p["part"] or "", []).append(p)
+    out = ['<section class="dirx" id="chapters"><h2>Chapters</h2>',
+           '<p class="lead">Each chapter is its own page. Use the contents list or the Previous and Next links to move '
+           'between them. <a href="full-report.html">The full report on one page</a> is best for printing or searching '
+           'the whole text; <a href="Polymed_Plant_Visit_Question_Bank.html">the plant-visit question bank</a> is laid '
+           'out for printing and taking to the meeting.</p><div class="dirgrid">']
+    for part, ps in groups.items():
+        items = "".join(f'<li><a href="{p["file"]}">{html.escape(p["title"])}</a></li>' for p in ps)
+        out.append(f'<div class="dircol"><p class="dirpart">{html.escape(part)}</p><ol>{items}</ol></div>')
+    out.append("</div></section>")
+    return "".join(out)
+
+
+def build_site(out_dir, body):
+    """Write one self-contained page per chapter into out_dir, with cross-page links rewritten."""
+    os.makedirs(out_dir, exist_ok=True)
+    pages = split_pages(body)
+    id_map = {}
+    for p in pages:
+        for hid in re.findall(r'\bid="([^"]+)"', p["html"]):
+            id_map.setdefault(hid, p["file"])
+    for p in pages:
+        f = p["file"]
+
+        def rep(m, f=f):
+            target = m.group(1)
+            dest = id_map.get(target)
+            if dest is None or dest == f:
+                return m.group(0)
+            return f'href="{dest}#{target}"'
+        p["html"] = re.sub(r'href="#([^"]+)"', rep, p["html"])
+    pages[0]["html"] += directory(pages)
+    brand = f'<a href="index.html">{html.escape(REPORT_TITLE)}</a>'
+    links = ('<ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li>'
+             '<li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>')
+    for i, p in enumerate(pages):
+        page = wrap_page(p["html"], site_toc(pages, p), REPORT_TITLE,
+                         pagetitle=f'{page_label(p)} · {REPORT_TITLE}' if i else REPORT_TITLE,
+                         brand=brand, sitelinks=links,
+                         nav_top=page_nav(pages, i, "top") if i else "", nav_bottom=page_nav(pages, i, "bottom"))
+        open(os.path.join(out_dir, p["file"]), "w").write(page)
+    print(f"built site {out_dir}: {len(pages)} pages")
+    return pages
+
+
+def zip_site(out_dir, zip_path, folder="Poly_Medicure_Initiating_Coverage"):
+    import zipfile
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+        for name in sorted(os.listdir(out_dir)):
+            z.write(os.path.join(out_dir, name), f"{folder}/{name}")
+    print(f"zipped {zip_path}: {os.path.getsize(zip_path)/1e6:.2f}MB")
+
+
 def main():
+    import shutil
     load_facts()
     drafts = sorted(glob.glob("draft/*.md"))
     os.makedirs("report", exist_ok=True)
-    build("report/Poly_Medicure_Initiating_Coverage.html", drafts)
+    full = "report/Poly_Medicure_Initiating_Coverage.html"
+    body, toc = render_body(drafts)
+    page = wrap_page(body, toc_list(toc), REPORT_TITLE)
+    open(full, "w").write(page)
+    unknown = re.findall(r"\{\{[^}]+\}\}", body)
+    print(f"built {full}: {len(page)/1e6:.2f}MB, exhibits={len(EXH)}, facts used={len(USED)}, "
+          f"unresolved tokens={len(unknown)}")
     json.dump(list(USED.keys()), open("report/used_facts.json", "w"))
     json.dump(dict(EXH), open("report/exhibits.json", "w"))
+    site = "report/site"
+    if os.path.isdir(site):
+        shutil.rmtree(site)
+    build_site(site, body)
+    shutil.copy(full, os.path.join(site, "full-report.html"))
     qb = sorted(glob.glob("draft/companion/*.md")) + sorted(glob.glob("draft/52_*.md"))
     if qb:
         build("report/Polymed_Plant_Visit_Question_Bank.html", qb, companion=True)
+        shutil.copy("report/Polymed_Plant_Visit_Question_Bank.html", os.path.join(site, "Polymed_Plant_Visit_Question_Bank.html"))
+    zip_site(site, "report/Poly_Medicure_Initiating_Coverage_site.zip")
 
 
 if __name__ == "__main__":
