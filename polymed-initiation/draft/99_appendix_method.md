@@ -25,7 +25,7 @@
   - prefilled flush syringes.
 
   We convert these shares to rupees as our calculation.
-- **Not disclosed.** Diagnostics, gastroenterology and oncology are not broken out, and nothing is split at the consolidated level.
+- **Not disclosed.** Diagnostics (bundled with blood bags in the BRSR), gastroenterology and oncology are not broken out, and nothing is split at the consolidated level. Revenue for every product line was last given in the Feb-2021 placement document (to 9MFY21); the Aug-2024 placement document gives infusion, blood management and collection, and dialysis to 1QFY25, with the rest as 'others'. <!-- PD21 p.130; PD24 p.173 -->
 - **Our approach.** We do not estimate splits beyond these disclosures. Where a line's size matters to the argument, we say it is not disclosed and list the question in the plant-visit question bank.
 
 ## Sources {#sources}

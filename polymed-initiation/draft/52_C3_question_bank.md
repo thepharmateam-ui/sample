@@ -385,6 +385,62 @@ Listen: Reassuring: private-lab contracts and a cost advantage. Concerning: pres
 Follow-up: Do you sell tubes and needles as a system to laboratories?
 :::
 
+::: q theme="Blood and diagnostics"
+Q: The BRSR put blood management and collection at {{A-0896}} of FY25 standalone turnover, while the Aug-2024 placement document showed {{D-0048}} of consolidated product sales for FY24. What moved into the line, and can you restate its history on one basis?
+Why: On our calculation the BRSR implies a line ~{{D-WF-011}} the size shown a year earlier, so every growth rate for blood depends on the basis (Section A4.4).
+Context: In Feb-2025 the MD described each category outside infusion and renal as {{WF-0019}} of revenue. <!-- BRSR25 p.5; PD24 p.173; TR3Q25 p.17 -->
+Listen: Reassuring: a named reclassification and a restated series. Concerning: no explanation for a step change of this size.
+Follow-up: How did bags, administration sets and collection tubes each move in FY26, when the BRSR implies a {{D-WB-009}} change for the line (our calculation)?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: What share of blood-bag sales goes to government and charitable blood banks through tenders, to private blood banks and to exports, and how have tender prices moved over the past three years?
+Why: Public buying and incumbent capacity set prices: HLL Lifecare can make {{E-0319}}, and Terumo Penpol made {{E-0311}} in 2018 (Section A4.4).
+Context: Blood transfusion apparatus is one of {{F-0092}} device lines reserved for Class-I local suppliers in public tenders, and the government's illustrative supplier list names Polymed. <!-- HLL_AFT p.1; BT_TERUMOBCT p.1; PPP_MD_GUIDE21 p.1; PPP_MD_LC21B p.10 -->
+Listen: Reassuring: a rising private and export mix at stable tender prices. Concerning: dependence on state tenders at falling prices.
+Follow-up: Do tenders now ask for BIS certification to ISO 3826, which HLL received first in Aug-2023, and do your bags hold it?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: What is your blood-bag capacity today, in bag systems a year, and its utilization, and how much will Palwal add at Phase-1 (Mar-2027) and Phase-2 (Dec-2027)?
+Why: Management plans to double transfusion capacity but has never given a unit figure; utilization decides whether the new capacity helps or dilutes margins.
+Context: The MD said in Aug-2025 that transfusion capacity would double at Palwal, a plant he now describes as focused on orthopaedics and transfusion. <!-- TR1Q26 p.18; TR1Q27S p.15; DKAGM31 p.4 -->
+Listen: Reassuring: a capacity number with tender or export demand to fill it. Concerning: capacity added ahead of visible demand.
+Follow-up: Will Palwal bring PVC film extrusion or anticoagulant preparation in-house?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: What share of the bag systems you sell are triple to quintuple, SAGM, top-and-bottom or leuko-filtered, and how does realization per system compare with single and double bags?
+Why: Component separation is the main structural lever for bag makers: lower-middle-income countries separate {{WF-0008}} of their blood against {{WF-0009}} in high-income countries (WHO).
+Context: Polymed's catalogues cover every configuration from single to quintuple systems, with in-line leuko-depletion filters and platelet bags. <!-- WHO_BLOOD p.1; CATDOM25 pp.31-33 -->
+Listen: Reassuring: a rising share of multi-bag and filtered systems at a premium that holds in tenders. Concerning: sales concentrated in single and double bags.
+Follow-up: What happened to the blood-bank equipment plans the MD outlined in Feb-2022?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: Which blood-collection products are still bought in, and what are the capacity and utilization of the Faridabad diagnostics plant that started production in 1QFY24?
+Why: The Aug-2024 placement document named collection tubes among traded goods for FY22-FY24; own manufacture should carry a better margin (Section A4.5).
+Context: Consolidated traded-goods sales fell to {{WG-0002}} in FY26, with the items not named. Under the IVD PLI Polymed committed {{CC-0917}} of investment over FY22-FY28. <!-- PD24 p.107, p.110; AR26 p.113; TR3Q22 p.4; DKMAY22 p.18 -->
+Listen: Reassuring: tubes and needles made in-house, with a capacity figure. Concerning: continued reliance on bought-in tubes.
+Follow-up: How much of the committed PLI investment has been spent?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: What incentive has Polymed claimed or received under the IVD PLI for FY25 and FY26, and which products generate the eligible sales?
+Why: The incentive for FY24 is the only pointer to the line's scale since FY22: {{WG-0006|approx}} implies ~{{D-WG-004}} of eligible incremental sales (our calculation).
+Context: The scheme pays {{CC-0176}} on incremental sales of approved IVD products, which include blood-collection tubes, viral transport media and rapid tests. <!-- TR2Q25 p.6; TR3Q22 p.4; DOP_PPO24 p.17 -->
+Listen: Reassuring: claims rising year by year on tube sales. Concerning: claims falling, or driven by COVID-era kits.
+Follow-up: Are the rapid tests and RNA extraction kit approved under the scheme still sold?
+:::
+
+::: q theme="Blood and diagnostics"
+Q: Which laboratory chains, hospitals and government buyers take your blood-collection tubes, and how concentrated is the business?
+Why: Chains are consolidating laboratory testing, which concentrates buying power (Section A4.5).
+Context: The MD named Thyrocare, Metropolis, Dr. Lal PathLabs, SRL and Pathkind as customers in May-2021 and added Vijay Diagnostics in Feb-2022. <!-- TR2021 p.14; TR3Q22 p.14 -->
+Listen: Reassuring: multi-year contracts with the large chains. Concerning: sales to a few chains on short tenders.
+Follow-up: Do you export tubes, and which IVD registrations (EU IVDR, Saudi SFDA) do you hold or plan?
+:::
+
 ### Anaesthesia, critical care, urology and surgery
 
 ::: q theme="Other lines"
@@ -406,9 +462,9 @@ Follow-up: Which product in these lines would you add capacity for first?
 ::: q theme="Other lines"
 Q: In enteral feeding and gastro products, what exposure do you have to the ENFit connector transition in export markets?
 Why: A regulatory product change that can shift share between suppliers.
-Context: Revenue is [not disclosed]; enteral products sit within "others" and are not listed separately in the BRSR. <!-- BRSR26 p.12 -->
-Listen: Reassuring: ENFit-compliant ranges ready. Concerning: legacy connectors in export ranges.
-Follow-up: Who are your enteral customers outside India?
+Context: The Oct-2024 export catalogue lists enteral-connector versions of the infant, Ryle's and Levin's tubes, and the Sep-2026 AGM deck shows a Ryle's tube, feeding bag and syringe with enteral connector among recent launches, but no Polymed document names the ENFit standard. Revenue is [not disclosed]. <!-- CATEXP24 pp.79-80; DKAGM31 p.5; BRSR26 p.12 -->
+Listen: Reassuring: named conformity to the enteral part of ISO 80369 and registrations in Europe. Concerning: connector versions sold without stated conformity.
+Follow-up: When will the connector range reach India, and at what price premium over funnel-end tubes?
 :::
 
 ::: q theme="Other lines"
@@ -425,6 +481,30 @@ Why: These items need no 510(k) and could scale faster than cleared products.
 Context: One FDA device listing at Jaipur, a suction catheter kit, carries the name of McKesson, a US distributor. <!-- FDAREG_POLY -->
 Listen: Reassuring: named private-label customers with volumes. Concerning: a one-off listing.
 Follow-up: Which other US distributors do you supply under their brands?
+:::
+
+::: q theme="Other lines"
+Q: On the BRSR, surgery and wound drainage fell {{D-WB-010|abs}} and urology {{D-WB-011|abs}} in FY26 (our calculation), while standalone revenue grew {{CB-0613|signed}}. Was that volume, price, the exit from government tenders or products reclassified into other lines?
+Why: These are the largest lines outside infusion, renal and blood with a recurring size disclosure (Section A4.7).
+Context: Surgery's standalone BRSR figure alone was {{D-WH-014}} of FY25 consolidated revenue (our calculation), above the {{WH-0001}} the MD described for each smaller category in Feb-2025. <!-- BRSR25 p.5; BRSR26 p.12; DK4Q26 p.9; TR3Q25 p.17 -->
+Listen: Reassuring: a deliberate exit from low-price tenders, or products moved into critical care. Concerning: share lost to local or Chinese makers.
+Follow-up: What was gastroenterology revenue in FY26? It was last disclosed at {{D-0603}} for 9MFY21.
+:::
+
+::: q theme="Other lines"
+Q: Do you plan all-silicone, three-way, hydrophilic or antimicrobial catheters, or will urology stay with silicone-coated latex Foleys and PVC catheters?
+Why: A vendor report lists infection concerns as a restraint on the Foley market and antimicrobial catheters as its growth segment, where Polymed has no product (Section A4.7).
+Context: In Jul-2024 the MD named urology as a possible adjacency from renal; in Aug-2026 he ruled out entering new therapies "substantially in the next few years". <!-- VND_RNM_FOLEY p.1; CATDOM25 pp.23-24; TR1Q25 p.14; TR1Q27S p.13 -->
+Listen: Reassuring: a pipeline with dates, or a clear choice to stay in volume products. Concerning: no view on the premium segments.
+Follow-up: Which closed-system drainage products (urimeters, bags with sampling ports) sell into ICUs through the critical-care division?
+:::
+
+::: q theme="Other lines"
+Q: Were any urology, gastroenterology or surgery products among those you dropped in Europe during the transition to the MDR, and have they been re-certified?
+Why: Management said Polymed "had to drop many products" in the transition; low-priced lines are the likeliest casualties.
+Context: The FY26 BRSR implies lower standalone sales in surgery and urology (our calculation). <!-- TR3Q26 p.8; BRSR26 p.12 -->
+Listen: Reassuring: a list of lapsed certificates with re-launch dates. Concerning: ranges withdrawn from Europe for good.
+Follow-up: How much European revenue did the dropped products carry?
 :::
 
 ### Cardiology
@@ -512,9 +592,9 @@ Follow-up: What did the cancelled Latin American tender teach you about pricing?
 :::
 
 ::: q theme="Orthopaedics"
-Q: How is Citieffe growing in calendar 2026 in euros, and has the cancelled Latin American tender been replaced?
-Why: Management guides growth for Citieffe in FY27; tenders drive lumpy revenue.
-Context: Management guided {{CA-0183|range}} growth for Citieffe in FY27 in euros. <!-- TR4Q26 p.16 -->
+Q: In Aug-2026 management described Citieffe as growing at "{{CA-0072|plain}}", against FY27 guidance of {{CA-0183|range}} growth in euros. What closes the gap – new geographies, the plate launch, tenders or price – and has the cancelled Latin American tender been replaced?
+Why: Tenders make Citieffe's revenue lumpy, and the guidance needs faster growth than the pace management described (Section A4.9).
+Context: Management gave the FY27 guidance in May-2026 and the growth remark on the 1QFY27 call. <!-- TR4Q26 p.16; TR1Q27S p.11 -->
 Listen: Reassuring: a tender pipeline in Mexico and Latin America. Concerning: reliance on Italy.
 Follow-up: Which US states is Citieffe entering?
 :::
@@ -1155,7 +1235,9 @@ Things to observe on a plant tour rather than ask. Tick them off and compare wit
 | ☐ | Raw-material stores | Polymer grades and suppliers' names; months of cover | Import dependence and cost exposure |
 | ☐ | Dialyser line | Spinning of hollow fibres (in-house or imported); potting; testing | Renal cost position |
 | ☐ | Dialysis machine assembly | Imported modules; test bays; service spares | Local content and service readiness |
-| ☐ | Blood-bag line | Film extrusion; bag welding; anticoagulant filling; DEHP-free materials | Renal and blood capability |
+| ☐ | Blood-bag line | Film extrusion or bought-in film reels; bag welding; anticoagulant filling; plasticizer labels on film stock | Blood-bag cost position and readiness for DEHP-free bags |
+| ☐ | Blood-collection tube line | PET tube moulding; vacuum and additive dosing; labelling; any imported tubes in stores | Whether tubes are made in-house (Section A4.5) |
+| ☐ | Drains, urine bags and feeding tubes | Which plant and lines make them; extrusion shared with infusion tubing | How much capacity the smaller ranges use |
 | ☐ | Certifications on display | ISO 13485, CE/MDR, MDSAP and FDA registrations by plant | Market access by plant |
 | ☐ | Construction sites | Progress at new plants; equipment on site | Credibility of capex timelines |
 | ☐ | Workforce | Share of contract labour; women on the line; training rooms | Labour model and attrition risk |

@@ -185,7 +185,7 @@ Its stated M&A criteria are unchanged:
 - technology and regulatory approvals in adjacencies chosen by disease burden: renal, cardiology, critical care, oncology and orthopaedics;
 - buying time, because organic development takes {{WM-0056|range}} years. <!-- TR2Q25 p.10, p.12; TR3Q26 p.12 -->
 
-::: table id="deals" title="Acquisition scorecard: Plan1 has worked; PendraCare and Citieffe started life under Polymed with losses"
+::: table id="deals" title="Acquisition scorecard: Plan1 has worked; PendraCare and Citieffe started life under Polymed with losses" note="Contribution figures are from the FY26 annual report's business-combination note, which dates the acquisitions 22-Sep-2025 (PendraCare) and 6-Nov-2025 (Citieffe); the investor presentations, and other sections of this report, use the consolidation dates of 23-Sep-2025 and 7-Nov-2025."
 | Deal | Closed | What was bought | Price | Latest performance | Detail |
 |---|---|---|---|---|---|
 | Plan1 Health, Italy | Jun-2018 and Mar-2019 | Vascular access and oncology devices (ports, PICCs, midlines); Amaro plant | Investment {{B-0347}}; goodwill {{B-0673}} | Revenue {{B-0723}} (CY23) to {{B-0722}} (CY25); net profit {{B-0725}} (CY25) | A4.2 |

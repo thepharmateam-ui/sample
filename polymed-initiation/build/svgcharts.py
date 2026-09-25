@@ -107,7 +107,7 @@ def column_chart(cats, series, unit="", stacked=False, dec=1, height=300, label_
         out.append(f'<line class="{cls}" x1="{pad_l}" x2="{W - pad_r}" y1="{y:.2f}" y2="{y:.2f}"/>')
         out.append(f'<text class="tick" x="{pad_l - 6}" y="{y + 4:.2f}" text-anchor="end">{fmt_tick(t)}</text>')
     if unit:
-        out.append(f'<text class="unit" x="{pad_l - 6}" y="{pad_t - 9}" text-anchor="end">{escape(unit)}</text>')
+        out.append(f'<text class="unit" x="2" y="{pad_t - 9}" text-anchor="start">{escape(unit)}</text>')
     y0 = sy(0)
     for j, c in enumerate(cats):
         cx = pad_l + band * j
@@ -237,7 +237,7 @@ def line_chart(cats, series, unit="", dec=1, height=280, label_end=True, ymin=No
         out.append(f'<line class="{"base" if t == ticks[0] else "grid"}" x1="{pad_l}" x2="{W - pad_r}" y1="{y:.2f}" y2="{y:.2f}"/>')
         out.append(f'<text class="tick" x="{pad_l - 6}" y="{y + 4:.2f}" text-anchor="end">{fmt_tick(t)}</text>')
     if unit:
-        out.append(f'<text class="unit" x="{pad_l - 6}" y="{pad_t - 9}" text-anchor="end">{escape(unit)}</text>')
+        out.append(f'<text class="unit" x="2" y="{pad_t - 9}" text-anchor="start">{escape(unit)}</text>')
     step = max(1, math.ceil(n_c / 12))
     for j, c in enumerate(cats):
         if j % step == 0 or j == n_c - 1:
