@@ -48,11 +48,16 @@ The MD calls the US "a very high price market". <!-- TR3Q23 p.15 --> Devices tha
 <!-- FDA510K_POLY p.1; FDA510K_P1H p.1; FDA510K_PEN p.1; FDA510K_CIT p.1 -->
 
 What the list shows:
-- **The count.** The FDA database holds {{D-WE-001}} 510(k) records for the four applicants, {{D-WE-002}} more than the {{CB-0093}} US approvals the company cites (our calculation). <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1; DK1Q27 p.11 -->
-- **Reconciling the two.** The May-2026 deck splits the company's count into {{CB-1095}} for Polymed, {{CB-1097}} for Citieffe and {{CB-1099}} for Plan1Health, and says only that PendraCare's guiding catheter is approved. <!-- DK4Q26 p.38 --> Polymed's and Citieffe's figures equal their Traditional submissions in the table, so we read the company's count as leaving out Special 510(k)s and PendraCare's clearances. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; DK4Q26 p.38 -->
+- **The count.** The FDA database holds more 510(k) records for the four applicants than the US approvals the company cites ([[EXREF:appr_us_counts]]). <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1; DK1Q27 p.11 -->
+- **Reconciling the two.** The May-2026 deck splits the company's count by entity and says only that PendraCare's guiding catheter is approved ([[EXREF:appr_us_counts]]). <!-- DK4Q26 p.38 --> Polymed's and Citieffe's figures equal their Traditional submissions in the table, so we read the company's count as leaving out Special 510(k)s and PendraCare's clearances. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; DK4Q26 p.38 -->
 - **Recent additions.** Since Apr 2025 the group has added the Primum guiding catheter, the Estremo fibular nail, Special 510(k)s for the Polyshield catheter and the Polywin Safety size range, and PendraCare's SimplGuide introducer. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1 -->
 - **A testing setback.** In Nov 2025 the MD said the FDA had stopped accepting test results from Indian laboratories, so Polymed had to retest its products in the US: "all work we have done in the past was negated". <!-- TR2Q26 p.11 --> The Aug-2026 deck still showed {{CB-0094}} US approvals in the pipeline. <!-- DK1Q27 p.11 -->
 - **The quality rule.** From 2 Feb 2026 the FDA's device quality rule incorporates ISO 13485 by reference, the standard to which every Indian plant was certified at the Aug-2024 placement. <!-- FR_QMSR_240202 p.1; PD24 pp.174-176 -->
+
+::: chart
+{"id":"appr_us_counts","type":"column","title":"The FDA database holds more 510(k)s than the company counts: 6 against 4 for Polymed, 11 against 10 for Citieffe, and PendraCare's 4 are not counted","cats":["Poly Medicure","Citieffe","PendraCare","Plan1Health"],"unit":"510(k) clearances","dec":0,"label_all":true,"height":250,"series":[{"name":"Company count (May-2026 presentation)","facts":["CB-1095","CB-1097","-","CB-1099"]},{"name":"FDA 510(k) database (Sep-2026)","facts":["D-0876","D-0877","D-0878","D-0879"]}],"note":"Company counts by entity from the May-2026 presentation, which says only that PendraCare's guiding catheter is approved; the Aug-2026 presentation gives the group total as {{CB-0093}}. FDA records from the openFDA 510(k) database, retrieved 24 Sep 2026: {{D-WE-001}} in all, {{D-WE-002}} more than the company's total (our calculation)."}
+:::
+<!-- DK4Q26 p.38; DK1Q27 p.11; FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1 -->
 
 ### United States: establishment registration and device listing
 

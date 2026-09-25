@@ -20,7 +20,7 @@ Citieffe makes implants that hold broken bones in place while they heal. <!-- D_
 - **External fixators:** frames outside the limb, attached to bone by pins, for open or complex fractures and limb reconstruction.
 - **Screws and plates:** cannulated screws for fractures such as the femoral neck, and plates for fractures such as the wrist.
 
-The unit of demand is the fracture: one nail and its locking screws per long-bone fracture, or one frame per complex fracture. The pins and screws are single use, while frame parts are re-used in some markets. Implant sets usually reach hospitals on consignment with instrument trays, and the navigation system is placed with hospitals to support nail sales. Trauma surgery cannot be postponed. Industry data in the acquisition deck show the trauma and extremities market fell {{CB-2445|abs}} in the Covid year, against {{CB-2446|abs}} for orthopaedics as a whole. <!-- D_product_glossary; DKCIT p.14 -->
+The unit of demand is the fracture: one nail and its locking screws per long-bone fracture, or one frame per complex fracture. The pins and screws are single use, while frame parts are re-used in some markets. Implant sets usually reach hospitals on consignment with instrument trays, and the navigation system is placed with hospitals to support nail sales. Trauma surgery cannot be postponed, which the acquisition deck gives as the reason the trauma and extremities market fell less than orthopaedics as a whole in the Covid year ([[EXREF:ortho_te]]). <!-- D_product_glossary; DKCIT p.14 -->
 
 ### Citieffe's portfolio and position
 
@@ -98,6 +98,11 @@ Inside Polymed, Citieffe contributed {{A-0683}} of revenue and a pre-tax loss of
 :::
 <!-- DKCIT p.13-14 -->
 
+::: chart
+{"id":"ortho_te","type":"column","title":"The global trauma and extremities market fell only 6% in the Covid year and has grown every year since, to ~$12bn in 2024","cats":["CY18","CY19","CY20","CY21","CY22","CY23","CY24E"],"unit":"US$ bn","dec":1,"series":[{"name":"Trauma and extremities market","facts":["CB-2412","CB-2415","CB-2418","CB-2421","CB-2424","CB-2427","CB-2430"]}],"label_all":true,"note":"Industry reports cited in the Citieffe acquisition deck (Sep-2025) [vendor estimate]; 2024 is an estimate; the deck's projections to 2028 are omitted. In 2024 trauma was {{CB-2431}} and extremities {{CB-2432}}. The segment fell {{CB-2445|abs}} in 2020 vs {{CB-2446|abs}} for all orthopaedics; orthopaedics {{CB-2379}} in 2024."}
+:::
+<!-- DKCIT p.13-14 -->
+
 - **Global:** the acquisition deck puts orthopaedics at {{CB-2379}} in 2024, growing {{CB-2393}} a year to 2028. Trauma and extremities is the largest and fastest-growing segment at {{CB-2380}}, growing {{CB-2399}} a year to {{CB-2387}} by 2028. Internal fixators are {{CB-2447}} of the segment and external fixators {{CB-2448}}, and the US is {{CB-2400}} of the orthopaedic market. Management puts plates at {{CA-0781}} of the trauma market. The other figures are vendor estimates quoted by the company. <!-- DKCIT p.13-14; TRCIT p.7 -->
 - **India:** the research firm engaged for G Surgiwear's DRHP (Dec-2025) values India's orthopaedic device market at {{E-0099}} in FY25, rising to {{WC-0032}} by FY30 ({{WC-0033}} a year), of which implants are {{E-0082}}. India is about {{CB-2404}} of the global market. These are vendor estimates. <!-- DRHP_GSURG p.183, p.190, p.207; DKCIT p.13 -->
 - **Import dependence is disputed.** CRISIL put implants at {{D-0456}} imported in FY24, while management says {{WC-0054|range}} of orthopaedic implants are now made in India. <!-- PD24 p.140; TR1Q26 p.16 -->
@@ -134,7 +139,7 @@ The whole Citieffe portfolio is certified under EU MDR. Its products are Class I
 Management's aim is to "double the business" within five years "without any significant capex", although the figure it gave on the same call, {{WC-0047|range}}, is less than double CY24 revenue of {{CB-2511}}. Either requires a growth rate well above the current pace. <!-- TRCIT p.5, p.8, p.9; PRCIT p.2 -->
 
 ### Margin drivers, ranked
-1. **India manufacturing.** Management says the acquired businesses run at {{CA-0171|range}} EBITDA and can reach {{CA-0172|range}} within two to three years, through India engineering, global procurement and shipping some manufacturing to India once approvals allow. <!-- TR4Q26 p.18 -->
+1. **India manufacturing.** Management says the acquired businesses run at {{CA-0171|range}} EBITDA and can reach {{CA-0172|range}} within two to three years, through India engineering, global procurement and shipping some manufacturing to India once approvals allow ([[EXREF:acq_margin]] compares the three acquisitions' margins). <!-- TR4Q26 p.18 -->
 2. **Geographic mix.** Each extra point of US sales carries prices several times Europe's.
 3. **Product mix.** Low-margin product sales hurt 4QFY26. <!-- TR4Q26 p.13 -->
 4. **Currency and financing.** Currency swings on the US and Mexican units, and interest on {{B-0705}} of debt, sit below EBITDA but drove the CY25 loss.

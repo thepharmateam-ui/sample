@@ -52,21 +52,24 @@ The unit economics differ from infusion. A port patient generates a Huber needle
 
 **Growth and margins.** Plan1Health's revenue fell {{CC-0109|abs}} in the COVID year, then grew {{CC-0254}} (FY22), ~{{CC-0618|range}} (9MFY24) and {{CC-0701|range}} (FY24). Management said it was still growing {{CA-0303|range}} in Feb-2026. <!-- TR2Q22 p.3; TR4Q22 p.4; TR3Q24b p.4; TR4Q24 p.8; TR3Q26 p.19 -->
 
-The margin record is less clear, as [[EXREF:p1h_fin]] shows. Management has put the EBITDA margin at {{CC-0702|range}} for FY24 and {{CA-0374|range}} in Nov-2025, yet its own acquisition slide shows {{CB-0104}} for CY24 and {{CB-0106}} for CY25. The statutory Italian accounts give an EBIT margin of {{D-WA-021}} in CY25 (our calculation) and net profit of {{B-0725}}. We use the slide figures, which fit the statutory EBIT, and treat the higher figures as management rounding or a different definition. <!-- TR4Q24 p.8; TR2Q26 p.9; DK1Q27 p.12; SUB26P1IT pp.3-4 -->
+The margin record is less clear, as [[EXREF:p1h_fin]] and [[EXREF:p1h_ebitda]] show. Management has put the EBITDA margin at {{CC-0702|range}} for FY24 and {{CA-0374|range}} in Nov-2025, yet its own acquisition slide shows {{CB-0104}} for CY24 and {{CB-0106}} for CY25. The statutory Italian accounts give an EBIT margin of {{D-WA-021}} in CY25 (our calculation) and net profit of {{B-0725}}. We use the slide figures, which fit the statutory EBIT, and treat the higher figures as management rounding or a different definition. <!-- TR4Q24 p.8; TR2Q26 p.9; DK1Q27 p.12; SUB26P1IT pp.3-4 -->
 
-::: table id="p1h_fin" title="Plan1Health: revenue has tripled in euros since 2020; management's margin claims run ahead of the company's own slide"
+::: table id="p1h_fin" title="Plan1Health: the statutory accounts support a lower margin than management cites on its calls"
 | | CY20 | CY22 | CY23 | CY24 | CY25 |
 |---|---|---|---|---|---|
-| Revenue, euros (company slide; CY23 statutory) | {{CB-0099}} | {{CB-0101}} | {{B-0723}} | {{CB-0103}} | {{CB-0105}} |
 | Turnover, rupees (directors' report) | {{WA-0011}} | {{WA-0013}} | {{A-0814}} | {{A-0381}} | {{A-0380}} |
-| EBITDA margin (company slide) | {{CB-0100}} | {{CB-0102}} | – | {{CB-0104}} | {{CB-0106}} |
 | EBITDA margin, management on calls (FY24; Nov-2025) | – | – | – | {{CC-0702|range}} | {{CA-0374|range}} |
 | EBIT margin, statutory (our calculation) | – | – | – | – | {{D-WA-021}} |
 | Net profit, statutory | – | – | {{B-0726}} | – | {{B-0725}} |
 :::
-<!-- DK1Q27 p.12; SUB25P1IT pp.3-4; SUB26P1IT pp.3-4; AR21 p.32; AR23 p.21; AR25 p.37; AR26 p.33; TR4Q24 p.8; TR2Q26 p.9 -->
+<!-- SUB25P1IT pp.3-4; SUB26P1IT pp.3-4; AR21 p.32; AR23 p.21; AR25 p.37; AR26 p.33; TR4Q24 p.8; TR2Q26 p.9 -->
 
-The company's own slides also disagree on the margin gain since the acquisition: {{CB-0109}} (1QFY27 deck), ~{{CB-0445}} (Sep-2026 AGM deck) and ~{{CB-1045}} (4QFY26 deck). The 1QFY27 deck also claims {{CB-0107}} revenue and {{CB-0108}} EBITDA growth since 2020. <!-- DK1Q27 p.12; DKAGM31 p.17; DK4Q26 p.22 -->
+::: chart
+{"id":"p1h_ebitda","type":"column","title":"On the company's own slide, Plan1Health's EBITDA rose almost twelvefold from CY20 to CY25 while revenue tripled","cats":["CY20","CY22","CY24","CY25"],"unit":"EUR '000","dec":0,"series":[{"name":"Revenue (company slide)","facts":["CB-0099","CB-0101","CB-0103","CB-0105"]},{"name":"EBITDA, revenue x slide margin (our calculation)","facts":["D-WA-048","D-WA-049","D-WA-050","D-WA-051"]}],"label_all":true,"note":"1QFY27 presentation; CY21 and CY23 not shown (statutory CY23 revenue {{B-0723}}). Printed margins {{CB-0100}}, {{CB-0102}}, {{CB-0104}}, {{CB-0106}}; the slide claims {{CB-0107}} revenue and {{CB-0108}} EBITDA since 2020. Statutory CY25: EBIT {{B-0724}} ({{D-WA-021}} margin), net profit {{B-0725}}. Management's call figures of {{CC-0702|range}} (FY24) and {{CA-0374|range}} (Nov-2025) are higher."}
+:::
+<!-- DK1Q27 p.12; SUB25P1IT p.3; SUB26P1IT pp.3-4; TR4Q24 p.8; TR2Q26 p.9 -->
+
+The company's own slides also disagree on the margin gain since the acquisition: {{CB-0109}} (1QFY27 deck), ~{{CB-0445}} (Sep-2026 AGM deck) and ~{{CB-1045}} (4QFY26 deck). <!-- DK1Q27 p.12; DKAGM31 p.17; DK4Q26 p.22 -->
 
 **Links with the parent.**
 - **Trade:** Polymed sold goods worth {{A-0553}} to Plan1Health in FY26. <!-- AR26 p.88 -->
@@ -114,7 +117,7 @@ We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval f
 1. **India import substitution in ports and PICCs** (management target; our view: largest long-run lever). The drivers are chemotherapy volumes, the day-care cancer centres and hospitals preferring local suppliers as insurance spreads. Timing depends on moving Plan1Health products to Indian manufacture and approval. <!-- TR2Q25 p.8; TR2Q26 p.5; TR4Q26 p.10 -->
 2. **Plan1Health's European growth** (management: {{CA-0303|range}} a year). The company's stated levers are more tenders in Italy and other EU markets and new device launches in Italy; Plan1Health has {{CB-1112}} product in the European approval pipeline. <!-- TR3Q26 p.19; DK4Q26 p.39 -->
 3. **Recurring consumables per port** (our view). Huber needles and maintenance items follow the installed base of ports.
-4. **Margin: scale and Indian manufacturing** (company target). The company-reported EBITDA margin rose from {{CB-0100}} to {{CB-0106}} as revenue tripled. The company lists using India manufacturing to reduce cost among the "repeatable plays" already run at Plan1Health, and management plans to shift "a lot of" the products made in Italy to India. <!-- DK1Q27 p.12; TR2Q25 p.8 -->
+4. **Margin: scale and Indian manufacturing** (company target). The company-reported EBITDA margin rose as revenue tripled ([[EXREF:p1h_ebitda]]; [[EXREF:acq_margin]] sets it beside the later acquisitions). The company lists using India manufacturing to reduce cost among the "repeatable plays" already run at Plan1Health, and management plans to shift "a lot of" the products made in Italy to India. <!-- DK1Q27 p.12; TR2Q25 p.8 -->
 5. **Risk: Italian payback and tender pricing** (our view). These could offset part of the gain; the exposure is [not disclosed].
 
 ### What to watch

@@ -15,16 +15,25 @@ Component revenue | [not disclosed]
 
 ### What Polymed offers other device makers
 
-**Components.** The Nov-2024 components catalogue ("Empowering Healthcare Innovation") offers parts that another manufacturer can assemble, pack and sterilize under its own name: <!-- CATCOMP24 pp.4-16 -->
-- **catheters:** diagnostic, CVC, haemodialysis, midline, mini-midline, PICC and anaesthesia conduction;
-- **a coronary stent:** cobalt-chromium with a biodegradable polymer, sirolimus or everolimus;
-- **guidewires:** nitinol straight and J-tip, stainless steel, PTFE-coated, hydrophilic, a nasogastric-tube guidewire and a guidewire advancer;
-- **access parts:** introducer needles (standard, safety and Y with valve), tear-away introducers and dilators;
-- **infusion parts:** Polyway stopcocks, flow regulators, T-connectors, and extruded tubing (radio-opaque, PVC-free, polyurethane, co-extruded).
+**Components.** The Nov-2024 components catalogue ("Empowering Healthcare Innovation") offers parts that another manufacturer can assemble, pack and sterilize under its own name ([[EXREF:oem_catalogue]]). <!-- CATCOMP24 pp.4-16 -->
 
-Many of these items were in the components catalogue before Polymed listed them as branded cardiology products. The catalogue is therefore both a revenue line and a window into its capabilities. <!-- D digest A4.8; CATCOMP24 pp.5, 8-11 -->
+::: table id="oem_catalogue" title="Nearly every component Polymed sells to other device makers also appears in its own branded range, from stopcocks to a drug-eluting stent"
+| Component category (Nov-2024 catalogue) | Polymed-branded equivalent | Section |
+|---|---|---|
+| Diagnostic catheters | Concath | A4.8 |
+| CVC catheters | Polymed CVC (one to four lumens), Novocent range | A4.2 |
+| Haemodialysis catheters | Haemocent and Haemocent Pro kits | A4.3 |
+| Midline, mini-midline, PICC | Poly Lead midlines; Polymed PICC and neonatal PICC kits | A4.2 |
+| Anaesthesia conduction catheter | Epidural kit (launched FY26-FY27) | A4.6 |
+| Cobalt-chromium stent with a biodegradable polymer, sirolimus or everolimus | Serolin Pro and RisoR DES (on sale from Mar-2025) | A4.8 |
+| Guidewires: PTFE-coated, hydrophilic, nitinol (straight and J-tip), stainless steel, nasogastric-tube; a guidewire advancer | Filoflex (PTFE-coated), Aquareach (hydrophilic); nitinol wires inside the branded CVC, PICC, midline and haemodialysis-catheter kits | A4.8; A4.2 |
+| Introducer needles (standard, safety, Y with valve), tear-away introducers, dilators | Introducer needles inside the branded catheter kits; tear-away introducers among recent launches | A4.2 |
+| Stopcocks, flow regulators, T-connectors | Polyway stopcocks, Polyflo Novo, extension lines | A4.1 |
+| Extruded tubing: radio-opaque, PVC-free, polyurethane, co-extruded | In-house; a {{F-0017}} tubing project with a {{F-0018}} MIS-RID grant | A4.1 |
+:::
+<!-- CATCOMP24 pp.4-16; CATDOM25 pp.10-12, pp.17-18, p.29; WEB_CARDIOLOGY p.1; DKAGM31 pp.3, 5; D_product_glossary; LSQ_AU1001_260724 p.9 -->
 
-The government has approved a grant of {{F-0018}} towards a {{F-0017}} Polymed project to make polymer tubing components for infusion therapy, bloodlines and dialysis accessories and central venous catheters (Section A4.1). That should deepen the extruded-tubing capability behind both the finished products and the components line (our view). <!-- LSQ_AU1001_260724 p.9 -->
+Many of these items were in the components catalogue before Polymed listed them as branded cardiology products. The catalogue is therefore both a revenue line and a window into its capabilities, and the grant-backed project for infusion, bloodline, dialysis and CVC tubing (Section A4.1) should deepen the extruded-tubing capability behind both (our view). <!-- D digest A4.8; CATCOMP24 pp.5, 8-11; LSQ_AU1001_260724 p.9 -->
 
 **Private label.** Finished products sold under a customer's brand, mainly abroad. The only documentary trace in the US is an FDA device listing at Jaipur for a suction catheter kit under the proprietary name "McKesson", a US distributor. Management says the US business will run through GPOs and distributors, with Polymed's role "limited to manufacturing in India". <!-- FDAREG_POLY p.1; D digest A4.10; TR1Q25 p.4 -->
 
@@ -34,18 +43,10 @@ The government has approved a grant of {{F-0018}} towards a {{F-0017}} Polymed p
 
 ### The evidence on OEM and private label
 
-::: table id="oem_share" title="Private label has been roughly a quarter to a third of sales, mostly in exports, and management's target is to shrink it"
-| Date | Measure | Own brand | OEM or private label | Source |
-|---|---|---|---|---|
-| Oct-2020 | Share of sales (deck) | {{CC-0996}} | {{CC-0997}} | Investor deck |
-| FY21 | Share of sales (management) | {{CC-0277}} | {{CC-0278}} | 4QFY22 call |
-| FY22 | Share of sales (management and deck) | {{CC-0279}} | {{CC-0280}} | 4QFY22 call; May-2022 deck |
-| FY22 | Own-brand share (CRISIL Ratings) | {{B-0748}} | – | CRISIL rationale, Dec-2022 |
-| FY23-FY24 | Own-brand share (CRISIL Ratings) | {{B-0749}} | – | CRISIL rationale, Feb-2024 |
-| Feb-2023 | Exports only | ~{{CC-0435|range}} | {{CC-0436}} | 3QFY23 call |
-| Feb-2023 | India only | – | {{CC-0437}} | 3QFY23 call |
-| May-2022 | Management target | "{{CC-0281}}" | – | 4QFY22 call |
-| CY24 | PendraCare (acquired 2025) | {{CB-2502}} | {{CB-2501}} | Acquisition deck |
+The company has split its sales between own brand and private label only a handful of times, the last in Feb-2023, and management's target is to shrink the private-label share ([[EXREF:oem_mix]]). <!-- TR4Q22 p.12; TR3Q23 p.9 -->
+
+::: chart
+{"id":"oem_mix","type":"share_hbar","title":"Private label was about 30% of Polymed's sales in FY21-FY22 and a quarter of exports, with none in India; PendraCare sold almost half its output to OEMs","cats":["Polymed, Oct-2020 deck","Polymed, FY21","Polymed, FY22","Polymed exports, Feb-2023","Polymed India, Feb-2023","PendraCare, CY24"],"unit":"% of sales","series":[{"name":"Own brand","facts":["CC-0996","CC-0277","CC-0279","D-WA-054","D-WA-055","CB-2502"]},{"name":"OEM and private label","facts":["CC-0997","CC-0278","CC-0280","CC-0436","CC-0437","CB-2501"]}],"label_w":190,"note":"FY21-FY22 as stated by the MD (4QFY22 call); the May-2022 deck shows {{CC-0871}}:{{CC-0872}}. Export and India own-brand shares are our calculation, the complement of the white-label share given in Feb-2023 (exports '{{CC-0435}}' branded). CRISIL Ratings: own brand ~{{B-0748|range}} in FY22 and ~{{B-0749|range}} in FY23-FY24. Management targets own brand '{{CC-0281}}' (May-2022). PendraCare CY24 is pre-acquisition. No group split has been given since Feb-2023."}
 :::
 <!-- DKNOV20 p.14; TR4Q22 p.12; DKMAY22 p.10; CRR2212 p.1; CRR2402 p.1; TR3Q23 p.9; DKPEN p.12 -->
 
@@ -55,7 +56,7 @@ Other sources add detail:
 - **By market.** Europe "is more favoured towards own branded", while the US leans to white label. <!-- TR3Q23 p.9, p.18 -->
 - **The acquisitions** raise the OEM share. PendraCare makes semi-finished guiding and diagnostic catheter parts, licenses end-product finalization and does contract development and manufacturing of braided catheters for {{CB-0123}} large OEMs, with relationships of {{CA-0788}}. Plan1Health is the "sole approved supplier for one of the largest OEM for Class III implants". <!-- DKPEN pp.11-13; TRPEN p.2; DK1Q27 pp.12-13 -->
 
-The Vitromed Healthcare relationship runs the other way. Polymed pays this promoter-owned firm to make products on job work from Polymed's raw materials; it is not a customer. It is covered in Section A9. <!-- PD24 p.177 -->
+The Vitromed Healthcare relationship runs mainly the other way. Polymed pays this promoter-owned firm to make products on job work from Polymed's raw materials ({{A-0547}} in FY26), but Vitromed is also a customer: Polymed sold it goods worth {{A-0549}} in FY26 and {{A-0550}} in FY25. It is covered in Section A9. <!-- PD24 p.177; AR26 p.88 -->
 
 ### Why it matters: margins, stickiness and concentration
 

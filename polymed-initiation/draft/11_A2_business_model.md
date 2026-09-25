@@ -39,7 +39,7 @@ The shift into cardiology and orthopaedics changes the unit economics: managemen
 
 Management has occasionally split growth into price and volume, and the 3QFY25 and 4QFY25 presentations printed the number of devices sold, which we set against standalone revenue ([[EXREF:vol_price]]). The counts do not reconcile across periods, so we read them as indicative. <!-- TR4Q22 p.10; TR3Q25 p.4, p.10; DK3Q25 p.11-12; DK4Q25 p.10-11 -->
 
-::: table id="vol_price" title="Units drove FY25 growth: devices sold rose 25% against 22.5% standalone revenue growth, and revenue per device slipped from Rs. 11.4 to Rs. 11.2" note="Devices sold as printed in the 3QFY25 and 4QFY25 presentations (standalone, printed in crore units); no later counts are in our sources. The 9MFY25 and 4QFY25 counts add up to less than the FY25 total, and likewise for FY24 ({{CB-2881|num}}mn in 9MFY24 and {{CB-2565|num}}mn in 4QFY24 against {{CB-2574|num}}mn for the year); we have not been able to reconcile them. Revenue per device is standalone revenue from operations over devices sold (our calculation). For FY22 the MD put volume at ~{{CC-0275}} and price at ~{{CC-0274}} of growth."
+::: table id="vol_price" title="Units drove FY25 growth: devices sold rose 25% against 22.5% standalone revenue growth, and revenue per device slipped from Rs. 11.4 to Rs. 11.2" note="Devices sold as printed in the 3QFY25 and 4QFY25 presentations (standalone), shown here in mn units; no later counts are in our sources. The 9MFY25 and 4QFY25 counts add up to less than the FY25 total, and likewise for FY24 ({{CB-2881|num}}mn in 9MFY24 and {{CB-2565|num}}mn in 4QFY24 against {{CB-2574|num}}mn for the year); we have not been able to reconcile them. Revenue per device is standalone revenue from operations over devices sold (our calculation). For FY22 the MD put volume at ~{{CC-0275}} and price at ~{{CC-0274}} of growth."
 | Period | Devices sold (mn units) | Growth in devices sold | Standalone revenue growth | Revenue per device |
 |---|---|---|---|---|
 | 3QFY25 | {{CB-2876|num}} | {{CB-2878}} | {{CB-2989}} | – |
@@ -164,9 +164,21 @@ We draw four patterns from the table.
 
 ### Working capital: a long cycle by design
 
-Exporting through distributors across {{A-0005}} countries ties up capital.
-- **Receivables.** Days fell from {{D-0254}} in FY22 to {{D-0252}} in FY24. <!-- PD24 p.54 -->
-- **Inventory cover.** Raw-material cover is ~{{CA-0130|range}} months. <!-- TR4Q26 p.6 -->
-- **Cash conversion cycle.** On the definition in the company's presentation, the standalone cycle lengthened from {{CB-0935}} in FY25 to {{CB-0934}} in FY26. Management quotes {{CA-0079}} on its own measure. <!-- DK4Q26 p.13; TR1Q27S p.14 -->
+Exporting through distributors across {{A-0005}} countries ties up capital, and raw-material cover alone is ~{{CA-0130|range}} months. <!-- TR4Q26 p.6 --> Receivable days eased up to FY24, then rose sharply in FY26 on the company's standalone measure, lengthening the cash cycle ([[EXREF:wc_days]]).
+
+::: table id="wc_days" title="Receivable days had eased to 73 by FY24; on the company's standalone measure they jumped to 98 in FY26 and the cash cycle lengthened by a month" note="Definitions differ by source and should not be spliced: the Feb-2021 placement document gives an 'average debtor cycle' ({{D-0778}} for 9MFY21), the Aug-2024 document 'trade receivables days', CRISIL its rating ratios and the company a standalone 'trade working capital' slide. Management quotes {{CA-0079}} for its own measure of the cash cycle at Mar-2026."
+| Measure | Basis and source | FY18 | FY19 | FY20 | FY21 | FY22 | FY23 | FY24 | FY25 | FY26 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Receivable days | Consolidated; placement documents | {{D-0775|num}} | {{D-0776|num}} | {{D-0777|num}} | – | {{D-0254|num}} | {{D-0253|num}} | {{D-0252|num}} | – | – |
+| Receivable days | Consolidated; CRISIL | – | – | {{B-0775|num}} | {{B-0774|num}} | {{B-0773|num}} | – | – | – | – |
+| Inventory days | Consolidated; CRISIL | – | – | {{B-0778|num}} | {{B-0777|num}} | {{B-0776|num}} | – | – | – | – |
+| Creditor days | Consolidated; CRISIL | – | – | {{B-0781|num}} | {{B-0780|num}} | {{B-0779|num}} | – | – | – | – |
+| Debtor days | Standalone; company | – | – | – | – | – | – | – | {{CB-0929|num}} | {{CB-0928|num}} |
+| Inventory days | Standalone; company | – | – | – | – | – | – | – | {{CB-0931|num}} | {{CB-0930|num}} |
+| Creditor days | Standalone; company | – | – | – | – | – | – | – | {{CB-0933|num}} | {{CB-0932|num}} |
+| Cash conversion cycle, days | Standalone; company | – | – | – | – | – | – | – | {{CB-0935|num}} | {{CB-0934|num}} |
+| Receivables turnover (times) | Consolidated; annual report | – | – | – | – | – | – | – | {{A-0337|num}} | {{A-0336|num}} |
+:::
+<!-- PD21 p.49; PD24 p.54; CR23 p.10; DK4Q26 p.13; AR26 p.48; TR1Q27S p.14 -->
 
 Management attributes the FY26 rise in receivables to 'better terms' extended to international customers to drive growth and retain them, and said it expects the receivable cycle to stay 'similar' in FY27. We treat receivable days as a leading indicator of distributor stress: a further rise alongside weak export growth would point to channel stuffing rather than a demand recovery. <!-- TR4Q26 p.12 -->

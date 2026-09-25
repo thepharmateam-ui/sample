@@ -61,10 +61,19 @@ Besides traded goods, [[EXREF:dx_disclosure]] lists every figure given. The PLI 
 
 ### Competition
 
-- **BD.** Polymed's MD calls vacuum tubes "vacutainers". BD has an FDA warning letter open on Specimen Management and from Oct-2025 reports it in a new Medical Essentials segment with its infusion consumables, which we read as treating blood collection as a consumables business, as Polymed does. <!-- TR3Q22 p.14; BD_10K25 p.1 -->
-- **Other multinationals.** Nipro sells Neotube vacuum tubes; Greiner Bio-One, Sarstedt and Terumo are among the suppliers 360iResearch profiles, with no filed data on their tube sales or Indian presence. <!-- NIPRO_FY25 p.22; VND_RNM_BCT p.1 -->
-- **HMD** (Hindustan Syringes & Medical Devices), also in Faridabad, sells its Vaku range of evacuated tubes, needles, winged sets and holders, developed with Israel's Estar Technology; Dispovan is its syringe brand. <!-- HMD_WEB p.1 -->
-- **Chinese makers.** KDL won every category of vacuum tubes and blood-collection needles in a Liaoning-led provincial alliance tender in CY25, and CE-registered venous blood-collection containers among {{WA-0016}} products. Weigao's blood-management line, which bundles collection with storage and separation, sold {{E-0270}} in CY25. <!-- KDL_AR25 p.21; WEIGAO_AR25 p.17; WEIGAO_IR26 p.21 -->
+::: table id="dx_comp" title="Polymed's collection range meets BD's $1.9bn specimen unit at the top and a Faridabad neighbour and Chinese tender winners below; none discloses Indian tube sales"
+| Competitor | Where it meets Polymed | Scale and position |
+|---|---|---|
+| BD (US) | Vacutainer tubes, needles, wingsets, blood-gas devices; reported in Medical Essentials from Oct-2025 | Specimen Management {{E-0202}} (FY Sep-2025), up {{WG-0011}}; FDA warning letter open |
+| Nipro (Japan) | Neotube vacuum tubes | Group revenue {{E-0264}}; tube sales [not disclosed] |
+| Greiner Bio-One, Sarstedt, Terumo | Tubes and collection systems | Profiled by 360iResearch; no filed data on tube sales or Indian presence |
+| HMD, Hindustan Syringes & Medical Devices (India, Faridabad) | Vaku evacuated tubes, needles, winged sets and holders, developed with Estar Technology (Israel); Dispovan is its syringe brand | Operating income {{D-0501}} (FY23, CRISIL); exports {{E-0349}} |
+| KDL (China) | Vacuum tubes, blood-collection needles | Won every tube and needle category in a Liaoning-led provincial alliance tender (CY25); {{WA-0016}} CE registrations incl. venous blood-collection containers; revenue {{E-0280}} |
+| Weigao (China) | Collection bundled with storage and separation | Blood management {{E-0270}} (CY25), up {{WF-0017}} |
+:::
+<!-- BD_10K25 p.1; NIPRO_FY25 p.22, p.26; VND_RNM_BCT p.1; HMD_WEB p.1; PD24 pp.165-166; KDL_AR25 p.21, p.24; WEIGAO_AR25 p.17; WEIGAO_IR26 p.21 -->
+
+BD's move of Specimen Management into Medical Essentials, alongside its infusion consumables, reads to us as treating blood collection as a consumables business, as Polymed does; Polymed's MD calls vacuum tubes "vacutainers". <!-- TR3Q22 p.14; BD_10K25 p.1 -->
 
 Against them Polymed offers local manufacture, public-procurement preference and a full collection basket, but claims no market share. <!-- DOP_PPO24 p.17; CATDOM25 p.30 -->
 

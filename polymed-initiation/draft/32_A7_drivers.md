@@ -28,12 +28,17 @@ Neither is a forecast. The ranking reflects how much each driver can move group 
 
 The standalone business earned an operating EBITDA margin of {{D-CS-opebitda-FY26}} in FY26 (our calculation), and management guides {{CA-0019|range}} for FY27. <!-- AR26 p.8; TR1Q27S p.3 -->
 
-The consolidated margin is lower, at {{CB-0280}} in 1QFY27 against {{CB-0230}} standalone, which management attributes to the lower margins of the subsidiaries. <!-- DK1Q27 pp.24-25; TR4Q26 p.7 -->
+The consolidated margin has run below the standalone margin since 3QFY26, the first quarter with both acquisitions, which management attributes to the lower margins of the subsidiaries ([[EXREF:q_margin]]). <!-- DK1Q27 pp.24-25; TR4Q26 p.7 -->
+
+::: chart
+{"id":"q_margin","type":"line","title":"The standalone margin held at 26.5-28% through the acquisitions; the consolidated margin fell to 21% in 4QFY26 and was back only to 24% in 1QFY27","cats":["3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"unit":"Operating EBITDA margin, %","dec":1,"ymin":15,"series":[{"name":"Standalone","facts":["CB-1273","CB-0657","CB-0231","CB-1274","CB-1272","CB-0656","CB-0230"]},{"name":"Consolidated","facts":["CB-1399","CB-0759","CB-0281","CB-1693","CB-1398","CB-0758","CB-0280"]}],"note":"Operating EBITDA excluding other income, each quarter as last shown in the presentations (so 4QFY25 consolidated is the restated figure, against {{CB-2636}} first reported). The presentations exclude acquisition-related expenses from 2QFY26 and 3QFY26 operating EBITDA; 4QFY26 includes the ~{{CA-0120}} of one-off provisions management booked in a foreign subsidiary. In 1QFY27 consolidated gross margin was {{CB-0261}} against {{CB-0213}} standalone: the acquired businesses add gross margin but not yet EBITDA margin."}
+:::
+<!-- DK3Q26 p.4, p.10-11; DK2Q26 p.4, p.15; DK4Q25 p.13; DK4Q26 p.9-10; DK1Q27 pp.24-25; TR4Q26 p.5 -->
 
 ::: table id="margin_drivers" title="Margin drivers: mix and acquired-business margins dominate; materials, labour and freight are the cost swings; automation is the main offset"
 | Rank | Driver | Direction | Mechanism | Evidence | Section |
 |---|---|---|---|---|---|
-| 1 | Mix and acquired-business margins | + gross, − EBITDA for now | The acquired cardiology and orthopaedics businesses carry higher gross margins but, while sub-scale, lower EBITDA margins (management) | Consolidated gross margin rose {{CA-0039}} yoy to {{CB-0261}} in 1QFY27, helped also by price increases and an inventory gain, while consolidated EBITDA margin was {{CB-0280}} | A1, A4.8, A4.9 |
+| 1 | Mix and acquired-business margins | + gross, − EBITDA for now | The acquired cardiology and orthopaedics businesses carry higher gross margins but, while sub-scale, lower EBITDA margins (management) | Consolidated gross margin rose {{CA-0039}} yoy to {{CB-0261}} in 1QFY27, helped also by price increases and an inventory gain, while consolidated EBITDA margin stayed below standalone ([[EXREF:q_margin]]) | A1, A4.8, A4.9 |
 | 2 | Raw materials and the pass-through lag | ± | Polymers and components are mostly imported; price changes pass through with a lag | Materials consumed were {{D-CS-rm_cost-FY26}} of standalone revenue in FY26 (our calculation) | A2 |
 | 3 | Labour cost and automation | − wages, + automation | Minimum-wage increases against automation and yield gains | Haryana minimum wage up {{CA-0024}} from Apr-2026; employee cost {{D-CS-employee_cost-FY26}} of standalone revenue; {{CB-1077}} automatic assembly machines | A2, A6 |
 | 4 | Utilization and operating leverage | + | Fixed costs spread over rising volumes; new plants dilute at first | Utilization of post-2021 capacity at {{CA-0173|range}} | A6 |

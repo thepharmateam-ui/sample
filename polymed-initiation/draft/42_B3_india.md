@@ -126,8 +126,8 @@ India is also a sizeable exporter, and consumables are its largest export catego
 ::: table id="b3_duty" title="In renal, taxes favour the importer: finished dialysers enter at 0% duty and 5% GST while Polymed pays duty on materials and 18% GST on inputs, per management" note="Management's rates are as stated on the calls (dialysers and inputs, May-2026; non-FTA duty, May-2023 and Feb-2022). CRISIL's GST range of {{E-0339}} across devices (FY24) predates the Sep-2025 cut."
 | Levy or rule | Rate | Basis |
 |---|---|---|
-| Duty and GST on Chinese dialysers imported through ASEAN | "{{CA-0178}}" | Management |
-| Customs duty on dialysis products outside a free-trade agreement | {{CC-0523}}, raised from nil in the Feb-2022 budget | Management |
+| Duty and GST on Chinese dialysers imported through ASEAN, in the MD's words | {{CA-0178}} | Management |
+| Customs duty on dialysis products outside a free-trade agreement, raised from nil in the Feb-2022 budget | {{CC-0523}} | Management |
 | Health cess on imports under HS 9018 to HS 9022 | {{F-0099}} | Statute (Finance Act 2020) |
 | Customs duty on Polymed's raw materials | {{WM-0062}} | Management |
 | GST on finished dialysers | {{WM-0060}} | Management |

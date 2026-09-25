@@ -42,11 +42,16 @@ We read the acquisitions and the stated plan to double R&D spend as attempts to 
 {"id":"peer_margin","type":"hbar","title":"Polymed's EBITDA margin sits with the best Indian device makers and well above the Indian arms of global majors","cats":["Polymed, standalone (FY26)","Polymed, consolidated (FY26)","Romsons (FY24)","Meril (FY24)","B. Braun Group (CY25)","Hindustan Syringes (FY23)","Healthium (FY25)","BD India (FY23)","B. Braun India (FY23)"],"unit":"EBITDA margin, %","dec":1,"series":[{"name":"EBITDA margin","facts":["A-0074","A-0028","E-0102","E-0105","E-0249","E-0347","E-0305","E-0348","E-0354"]}],"note":"Periods differ, as labelled. Peer margins come from offer documents, rating rationales and annual reports on each company's own EBITDA definition; Polymed's are operating EBITDA excluding other income. Treat the comparison as indicative."}
 :::
 
+::: chart
+{"id":"peer_export","type":"hbar","title":"Polymed earns more of its revenue abroad than any Indian or Chinese peer with reported figures; only the privately held Angiplast claims a higher export share","cats":["Polymed, consolidated (FY26)","Healthium (FY25)","Shanghai Kindly (CY25)","Weigao (CY25)","B. Braun India (FY23)","Hindustan Syringes (FY23)","BD India (FY23)"],"unit":"% of revenue from outside the home market","dec":1,"label_w":200,"series":[{"name":"Share of revenue from outside the home market","facts":["CB-0084","E-0306","D-WA-024","E-0268","E-0351","E-0349","E-0350"]}],"note":"Periods and definitions differ, as labelled: Polymed's 'international business' includes the foreign subsidiaries (the BRSR gives {{A-0857}} for standalone exports); Healthium per ICRA; KDL our calculation from its annual report; Weigao's overseas share; the Indian arms of BD and B. Braun and HMD per CRISIL in the Aug-2024 placement document. Not shown: Angiplast, a private Ahmedabad maker, says on its website that it exports more than {{E-0386}} of its production (Section B2). Indicative only."}
+:::
+<!-- DK1Q27 p.10; BRSR26 p.13; ICRA_HEAL p.2; KDL_AR25 pp.24-25; WEIGAO_AR25 p.7; PD24 p.166; ANGIPLAST_WEB p.1 -->
+
 ### Where it is vulnerable
 
 1. **Pricing power is limited.**
    - CRISIL notes that India's low-cost image "limits the company's ability to command a premium". <!-- CR23 p.7 -->
-   - In Europe, Polymed competes with Chinese makers of similar cost and larger scale. Weigao alone had revenue of {{E-0265}} in CY25, {{E-0268}} of it overseas. <!-- WEIGAO_AR25 p.7, p.16 -->
+   - In Europe, Polymed competes with Chinese makers of similar cost and larger scale. Weigao alone had revenue of {{E-0265}} in CY25, a year in which its overseas share rose ([[EXREF:peer_export]]). <!-- WEIGAO_AR25 p.7, p.16 -->
    - FY26 showed how quickly redirected Chinese volume can reach European tenders (Section A3).
 2. **R&D depth.**
    - R&D spending is {{A-0343}} of revenue, and we read the pipeline as broad but mostly incremental. <!-- AR26 p.49 -->
@@ -81,7 +86,7 @@ We read the acquisitions and the stated plan to double R&D spend as attempts to 
 ### What would strengthen or erode the advantage
 
 **Strengthen:**
-- automation keeping employee cost flat as a share of revenue despite wage inflation;
+- automation keeping employee cost flat as a share of revenue despite wage inflation ([[EXREF:labour_cost]]);
 - the new plants lowering unit costs in renal and syringes;
 - FDA clearances and US contracts;
 - MDR-driven exits by smaller European suppliers;

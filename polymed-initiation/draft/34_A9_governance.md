@@ -75,8 +75,13 @@ The arithmetic ties exactly:
 
 The documents we reviewed disclose neither who controls the two LLPs nor why they were reclassified. We therefore do not infer control. We do note three consequences:
 - The public float is {{A-1281}}. <!-- MGT7_26 p.3 -->
-- Public institutions held about {{D-M-015}} at the AGM record date (our calculation). <!-- PBN26 p.5 -->
+- Public institutions held about {{D-M-015}} at the AGM record date (our calculation), with domestic mutual funds buying as foreign portfolio investors sold ([[EXREF:inst_holding]]). <!-- PBN26 p.5 -->
 - The effective free float is narrower than the pre-FY23 shareholding pattern implied.
+
+::: chart
+{"id":"inst_holding","type":"line","title":"Foreign portfolio investors have halved their stake in a year to under 6%, while domestic mutual funds have more than doubled theirs since 2023 to nearly 10%","cats":["Sep-2023","Jun-2024","Jun-2025","Sep-2025","Dec-2025","Mar-2026","Jun-2026"],"unit":"% of equity","dec":1,"series":[{"name":"Foreign portfolio investors","facts":["CC-0834","D-0340","CB-2081","CB-1916","CB-1571","CB-1013","CB-0370"]},{"name":"Mutual funds","facts":["CC-0833","D-0338","CB-2078","CB-1913","CB-1570","CB-1012","CB-0369"]}],"note":"Quarter-end holdings as shown in the investor presentations; Jun-2024 from the Aug-2024 placement document, before the QIP (institutions went from {{CB-3239}} to {{CB-3240}} on the QIP). Dates are unevenly spaced. Insurance companies held {{CB-0371}} and AIFs {{CB-0372}} at Jun-2026, against {{D-0341}} and {{D-0339}} at Jun-2024."}
+:::
+<!-- DK2Q24 p.16; PD24 p.198; DK1Q26 p.19; DK2Q26 p.21; DK3Q26 p.15; DK4Q26 p.16; DK1Q27 p.28; DK2Q25 p.8 -->
 
 Promoter shares carried no pledge at 30-Jun-2024. <!-- PD24 p.197 -->
 
@@ -87,13 +92,16 @@ Promoter shares carried no pledge at 30-Jun-2024. <!-- PD24 p.197 -->
 - **Products.** The Feb-2021 placement document named safety scalp-vein sets and silicone rubber sleeves among its products. <!-- PD21 p.86 -->
 - **Two-way trade.** Vitromed also buys goods from Polymed, so money flows in both directions. <!-- AR26 p.88 -->
 
-Over time Vitromed's share of total job work has eased, but the rupee amount has grown {{D-M-024}} since FY10 (our calculation).
+Over time Vitromed's share of total job work has eased, but the rupee amount paid to it has grown ([[EXREF:vitromed_hist]]).
 
-::: table id="vitromed" title="Vitromed's share of job work has eased from ~95% to ~84%, but payments to it have grown eightfold since FY10"
+::: chart
+{"id":"vitromed_hist","type":"stacked_column","title":"Vitromed still receives five-sixths of Polymed's job work, and payments to it rose eightfold over FY10-FY26","cats":["FY10","FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Paid to Vitromed","facts":["B-0058","B-0141","B-0249","B-0332","B-0390","B-0452","B-0505","B-0569","B-0634","A-0548","A-0547"]},{"name":"Other job workers","facts":["D-WI-028","D-WI-029","D-WI-030","D-WI-031","D-WI-032","D-WI-033","D-WI-034","D-WI-035","D-WI-036","D-WI-037","D-WI-038"]}],"totals":true,"note":"Standalone job-work charges and the related-party note; other job workers is the total less Vitromed (our calculation), and the figure above each column is total job work. Vitromed's share was {{D-M-025}} in FY10 and {{D-M-006}} in FY26, and payments to it rose {{D-M-024}} over the period (our calculations)."}
+:::
+<!-- AR10 p.36, p.41; AR13 p.51, p.54; AR16 p.95, p.99; AR19 p.117, p.136; AR20 p.121, p.142; AR21 p.114, p.137; AR22 p.92, p.109; AR23 p.91, p.108; AR24 p.121, p.139; AR26 p.79, p.88 -->
+
+::: table id="vitromed" title="Vitromed's share of Polymed's job work has eased from ~95% to ~84%; money also flows back through Polymed's sales to it"
 | | FY10 | FY13 | FY16 | FY19 | FY22 | FY24 | FY25 | FY26 |
 |---|---|---|---|---|---|---|---|---|
-| Job work paid to Vitromed | {{B-0058}} | {{B-0141}} | {{B-0249}} | {{B-0332}} | {{B-0505}} | {{B-0634}} | {{A-0548}} | {{A-0547}} |
-| Total job-work charges | {{B-0031}} | {{B-0119}} | {{B-0204}} | {{B-0308}} | {{B-0489}} | {{B-0613}} | {{A-0507}} | {{A-0506}} |
 | Vitromed share of job work | {{D-M-025}} | {{D-M-026}} | {{D-M-027}} | {{D-M-028}} | {{D-M-031}} | {{D-M-007}} | {{D-M-013}} | {{D-M-006}} |
 | Sales by Polymed to Vitromed | {{B-0060}} | {{B-0143}} | {{B-0251}} | {{B-0334}} | {{B-0506}} | {{B-0635}} | {{A-0550}} | {{A-0549}} |
 :::
@@ -132,6 +140,13 @@ The ratio of the MD's pay to the median employee rose from {{WM-0028}} in FY16 t
 {"id":"md_pay_ratio","type":"column","title":"The MD's pay rose from 161x to 579x the median employee over FY16-FY25 before easing in FY26","cats":["FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"x median employee pay","series":[{"name":"MD pay / median employee pay","facts":["WM-0028","WM-0029","WM-0030","WM-0031","WM-0032","WM-0033","WM-0034","WM-0035","WM-0036"]}],"label_last":true,"note":"Ratios as printed in each year's annual report (Rule 5(1) disclosure). FY17-FY18 not reviewed."}
 :::
 
+Against profit, the two MDs' pay has been far steadier, which we read as the profit-linked commission at work ([[EXREF:md_pay_pat]]).
+
+::: chart
+{"id":"md_pay_pat","type":"line","title":"The two promoter MDs' pay has moved with profit, at 13-15% of standalone PAT in most years since FY13, before dropping to 10.6% in FY26","cats":["FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of standalone PAT","dec":1,"series":[{"name":"MD + JMD pay","facts":["D-WI-008","D-WI-009","D-WI-010","D-WI-011","D-WI-012","D-WI-013","D-WI-014","D-WI-015","D-M-009","D-M-008"]}],"note":"Our calculation: remuneration including commission of Himanshu Baid (MD) and Rishi Baid (JMD; an executive director before FY20) from the related-party notes, over standalone profit after tax. Commission is capped at {{WM-0054}} of Section 198 profits for each (Aug-2024 placement document). In FY26 the MD received {{A-0427}} and the JMD {{A-0428}}."}
+:::
+<!-- AR13 p.9, p.54; AR16 p.21, p.99; AR19 p.33, p.136; AR20 p.101, p.143; AR21 p.94, p.137; AR22 p.71, p.109; AR23 p.69, p.108; AR24 p.100, p.139; AR25 p.52; AR26 p.32, p.55; PD24 p.189 -->
+
 ::: table id="pay_fy26" title="Promoter-family pay equalled ~15% of standalone profit after tax in FY26"
 | Person | Role | FY25 | FY26 | Ratio to median, FY26 |
 |---|---|---|---|---|
@@ -140,7 +155,6 @@ The ratio of the MD's pay to the median employee rose from {{WM-0028}} in FY16 t
 | Vishal Baid | Executive Director | – | {{A-0429}} | {{A-0407|plain}} |
 | Pankaj Kumar Gupta | Executive Director (from Aug-2025) | – | {{A-0430}} | {{A-0408|plain}} |
 | Dhruv, Arham and Aaryaman Baid | Employees, promoter family | – | {{A-0562}} | – |
-| MD + JMD as % of standalone PAT | | {{D-M-009}} | {{D-M-008}} | |
 | Promoter family as % of standalone PAT | | – | {{D-M-021}} | |
 | Four executive directors as % of standalone PBT | | – | {{D-M-010}} | |
 :::
@@ -156,8 +170,7 @@ We read the scheme as a retention tool for the professional layer, since the pro
 
 **QIP-2021 was deployed as planned.** It raised {{B-0446}} in Feb-2021 with general objects and was fully used by 31-Mar-2023, {{B-0566}} of it on capex. <!-- AR21 p.32; AR23 p.116 -->
 
-**QIP-2024 is running behind on capex.** The Aug-2024 QIP raised {{D-0344}} at {{D-0342}} a share. Its objects were capex for new plants, inorganic growth and general corporate purposes. <!-- PD24 p.1, p.72 -->
-- **The acquisition money went first,** to PendraCare and Citieffe.
+**QIP-2024 is running behind on capex.** The Aug-2024 QIP raised {{D-0344}} at {{D-0342}} a share. Its objects were capex for new plants, inorganic growth and general corporate purposes; the acquisition money went out first ([[EXREF:qip24_pace]]). <!-- PD24 p.1, p.72 -->
 - **The capex money lagged.** By 31-Mar-2026, {{A-0584}} had been spent on capex against {{B-0828}} scheduled for deployment by FY26. <!-- MA_2603 p.11 -->
 - **Reason given.** The company attributed the delay to moving the Jaipur SEZ project to the Medical Device Park on the Yamuna Expressway (YEIDA), and rescheduled the spend to FY27-28. <!-- MA_2603 p.11 -->
 - **Idle money.** Unutilized proceeds were {{A-0586}} at 31-Mar-2026 and {{A-1017}} at 30-Jun-2026. <!-- AR26 p.94; RS1Q27 p.5 -->
@@ -172,6 +185,11 @@ We read the scheme as a retention tool for the professional layer, since the pro
 :::
 <!-- PD24 p.72; MA_2603 pp.5-11; AR26 p.94 -->
 
+::: chart
+{"id":"qip24_pace","type":"column","title":"Half the Aug-2024 QIP had been used by Mar-2026, mostly on the two acquisitions and general purposes; plant capex had drawn only Rs. 620mn","cats":["Dec-2024","Jun-2025","Sep-2025","Dec-2025","Mar-2026"],"scale":"bn","unit":"Rs bn, cumulative","dec":1,"series":[{"name":"QIP-2024 proceeds used","facts":["B-0822","B-0824","B-0823","B-0825","B-0826"]},{"name":"of which plant capex","facts":["-","-","-","A-1106","A-0584"]}],"label_all":true,"note":"Monitoring-agency reports and quarterly results, against net proceeds of {{B-0816}}; {{D-WI-039}} had been used by 31-Mar-2026 (our calculation). The Sep-2025 step includes the PendraCare consideration ({{A-1305}}); the inorganic object of {{B-0818}} was fully used by Dec-2025. Plant capex was {{D-WC-075}} of its {{B-0817}} object, against {{B-0828}} scheduled by FY26. Capex used before Dec-2025 is not shown."}
+:::
+<!-- MA_2412 p.7; MA_2509 p.8; MA_2512 p.8; MA_2603 pp.5-11; RS2Q26 p.5; RS3Q26 p.5; AR26 p.94 -->
+
 The monitoring agency's 4QFY26 report added a sharper point:
 - It flagged that {{B-0830}} of unutilized proceeds had been placed in hybrid mutual funds with equity exposure (market value {{B-0831}}), and that {{B-0833}} was in a Nuvama absolute-return PMS. <!-- MA_2603 p.4, p.10 -->
 - It called the hybrid-fund placement "not in line with the disclosures made by the Company in the Placement Document". <!-- MA_2603 p.4 -->
@@ -179,7 +197,7 @@ The monitoring agency's 4QFY26 report added a sharper point:
 
 We view the amount as small, but the episode is a data point on treasury discipline.
 
-**Acquisitions.** The acquisition record is short and mixed. Plan1 has grown into a profitable if small business. PendraCare lost money in its first six months under Polymed. Citieffe was close to breakeven after closing, although its CY25 statutory accounts show a net loss driven by an FX loss. Integration of both is only beginning. Management has said it wants to "pause and absorb". <!-- TRCIT pp.11-12 -->
+**Acquisitions.** The acquisition record is short and mixed. Plan1 has grown into a profitable if small business ([[EXREF:acq_margin]]). PendraCare lost money in its first six months under Polymed. Citieffe was close to breakeven after closing, although its CY25 statutory accounts show a net loss driven by an FX loss. Integration of both is only beginning. Management has said it wants to "pause and absorb". <!-- TRCIT pp.11-12 -->
 
 Its stated M&A criteria are unchanged:
 - technology and regulatory approvals in adjacencies chosen by disease burden: renal, cardiology, critical care, oncology and orthopaedics;
@@ -197,11 +215,21 @@ Its stated M&A criteria are unchanged:
 :::
 <!-- SUB26BV pp.8-10; AR19 p.203; SUB25P1IT p.3; SUB26P1IT pp.3-4; MA_2509 p.8; MA_2512 p.8; AR26 p.33, p.93, p.121; SUB26RIS p.2; SUB26MEDC pp.6, 19; RS1Q27 p.5; TR4Q26 pp.3-4; DK2Q26 p.19; DK4Q26 p.41 -->
 
+::: chart
+{"id":"acq_margin","type":"column","title":"The 'P1H playbook' took Plan1Health's margin from 4% to 13% in five years; PendraCare's fell to 1% in CY25 while Citieffe's held at 18%","cats":["CY20","CY22","CY24","CY25"],"unit":"EBITDA margin, %","dec":1,"series":[{"name":"Plan1Health (company slide)","facts":["CB-0100","CB-0102","CB-0104","CB-0106"]},{"name":"PendraCare (company figures)","facts":["-","-","D-WC-004","D-WC-005"]},{"name":"Citieffe (company, excl. one-offs)","facts":["-","-","D-WC-026","D-WC-027"]}],"label_all":true,"note":"PendraCare consolidated from 23-Sep-2025 and Citieffe from 7-Nov-2025, so CY24 is pre-deal. PendraCare CY24 is pro forma; CY25 margins are our calculation from the 1QFY27 deck's rounded figures. Citieffe on IFRS: {{D-WC-023}} (CY24), {{D-WC-022}} (CY25). Management puts the two new businesses at {{CA-0171|range}} and targets {{CA-0172|range}} in two to three years. Sections A4.2 (Plan1Health), A4.8 (PendraCare) and A4.9 (Citieffe) discuss each business."}
+:::
+<!-- DK1Q27 pp.11-14; DKPEN p.11; PRCIT p.2; SUB26MEDC p.6; TR4Q26 p.18 -->
+
 **Cash and payout.** Polymed ended FY26 with net cash of {{A-0322|range}} and liquidity of {{A-0076|range}}. <!-- AR26 p.8, p.48 -->
-- **Other income.** Other income is a large part of profit: it was {{D-M-023}} of consolidated PBT in FY26 (our calculation). At the standalone level it included realized and unrealized mutual-fund gains of {{A-0485}} and {{A-0486}} and FX gains of {{A-0487}}. <!-- AR26 p.47, p.78 -->
+- **Other income.** Other income is a large part of profit: it was {{D-M-023}} of consolidated PBT in FY26 (our calculation), and its share of standalone PBT has risen ([[EXREF:oi_pbt]]). <!-- AR26 p.47, p.78 -->
 - **Payout.** The dividend was {{A-0376}} a share, a payout of {{D-M-022}} of consolidated PAT (our calculation). <!-- AR26 p.33 -->
 - **Management's rationale.** In May-2025 it justified a lower payout by heavy capex and M&A opportunities. <!-- TR4Q25 p.16 -->
 - **Returns.** Consolidated ROCE fell to {{A-0061}} in FY26 from {{A-0062}} on the company's adjusted definition, which already excludes unutilized QIP money from capital employed; we infer that the acquisitions entering the capital base, with their low early profits, explain most of the fall. <!-- AR26 p.6 -->
+
+::: chart
+{"id":"oi_pbt","type":"column","title":"Other income rose to 27% of standalone pre-tax profit in FY26, from 11-20% in FY20-FY25, as treasury and currency gains grew","cats":["FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of standalone PBT","dec":1,"series":[{"name":"Other income as % of PBT","facts":["D-WI-016","D-WI-017","D-WI-018","-","D-WI-019","D-WI-020","D-WI-021"]}],"label_all":true,"note":"Our calculation from standalone other income and profit before tax; FY23 standalone PBT is not in our sources. In FY26 realized and unrealized mutual-fund gains ({{A-0485}}, {{A-0486}}) and FX gains ({{A-0487}}) made up {{D-WI-022}} of standalone other income. On a consolidated basis other income was {{D-M-023}} of PBT."}
+:::
+<!-- AR20 p.34; AR21 p.94; AR22 p.71; AR24 p.100; DKMAY22 p.12; DK4Q25 p.14; AR26 p.32, p.78 -->
 
 We see capital allocation, rather than the operating franchise, as the swing factor for returns through FY28:
 - the unspent plant capex at YEIDA, Palwal and Haridwar;

@@ -84,7 +84,7 @@ Other evidence points the same way, but slowly:
 - **Chinese response.** Chinese makers are localizing abroad: Weigao's Indonesian joint venture starts production in 2H26. China's drug regulator has also issued rules on export sales certificates, effective 1-May-2026, which KDL says will support device exports. <!-- WEIGAO_IR26 p.34; KDL_AR25 p.17 -->
 - **Supply security.** Hurricane Helene's damage to a competitor's US IV-solutions plant in 2024 caused a national IV-fluid shortage, and B. Braun raised its inventory coverage to {{WD-0027|num}} weeks in 2025 "to ensure supply security". We would expect buyers that were short of product to be more willing to qualify a second source. <!-- ICUI_10K25 p.1; BBRAUN_AR25 p.43 -->
 
-**What it means for Polymed.** China+1 is real in syringes and slow in cannulas. We see it as a multi-year opening in the US and with OEMs that source from Asia, which depends on US tariffs on India staying below those on China (Section B4) and on Polymed winning GPO volume.
+**What it means for Polymed.** China+1 is real in syringes and slow in cannulas: in 2025 India still supplied only a small share of US imports of needles, catheters and cannulas (Section A4.1, [[EXREF:inf_us_imports]]). <!-- F_CT_USA_M_901839_2025 p.1 --> We see it as a multi-year opening in the US and with OEMs that source from Asia, which depends on US tariffs on India staying below those on China (Section B4) and on Polymed winning GPO volume.
 
 ### EU MDR and supplier attrition
 

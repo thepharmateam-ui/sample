@@ -1,6 +1,6 @@
 ## A5 Geographies and legal entities {#a5}
 
-Polymed is an Indian exporter first and a multinational second. {{CB-0084}} of FY26 revenue was earned outside India, yet only {{D-WC-057}} came from foreign subsidiaries (our calculation). The rest was shipped from the Indian plants to distributors abroad. FY26 split the two apart: the holding company's own exports fell {{D-WC-045|abs}}, while the subsidiaries' sales rose {{D-WC-060}} as PendraCare and Citieffe were consolidated (our calculation). We therefore treat international revenue as two businesses with different drivers:
+Polymed is an Indian exporter first and a multinational second. {{CB-0084}} of FY26 revenue was earned outside India, yet only {{D-WC-057}} came from foreign subsidiaries (our calculation). The rest was shipped from the Indian plants to distributors abroad. FY26 split the two apart: the holding company's own exports fell while the subsidiaries' sales jumped as PendraCare and Citieffe were consolidated ([[EXREF:geo_hist]]). We therefore treat international revenue as two businesses with different drivers:
 1. Indian-made disposables sold through distributors, which move with distributor stocking, tenders, product approvals, freight and Chinese pricing;
 2. acquired European device makers that sell partly direct to surgeons and hospitals, which move with clinical relationships, tender calendars and the euro.
 
@@ -20,6 +20,11 @@ Not disclosed | Revenue by country; West Asia, US and Latin America revenue in r
 The annual report gives two views that together show where FY26 went wrong and where it went right.
 - **Consolidated regions.** Revenue is split into India, Europe and the rest of the world (RoW) in the MD&A and the presentations.
 - **The holding company's exports.** The consolidated notes split Poly Medicure Ltd's export sales into five regions and add the foreign subsidiaries' sales as a separate line.
+
+::: chart
+{"id":"geo_hist","type":"stacked_column","title":"Exports from the Indian plants more than doubled over FY21-FY25 and then fell 3% in FY26; the subsidiaries' sales tripled with the acquisitions","cats":["FY21","FY22","FY23","FY24","FY25","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"India","facts":["B-0419","D-0287","D-0279","D-0278","A-0473","A-0647"]},{"name":"Exports from India","facts":["B-0420","D-0288","D-0282","D-0281","A-0475","A-0648"]},{"name":"Foreign subsidiaries","facts":["B-0421","D-0289","D-0285","D-0284","A-0650","A-0649"]}],"totals":true,"note":"Sale of products by customer location, from the consolidated revenue notes (FY22-FY24 as reproduced in the Aug-2024 placement document). Excludes other operating revenue such as export incentives, so totals fall short of revenue from operations. FY25 domestic and export sales are from the standalone note, which the consolidated note matches. FY21 exports are after intra-group eliminations ({{B-0420|mn}}, against {{B-0418|mn}} in the standalone accounts). In FY26 exports fell {{D-WC-045|abs}} while the subsidiaries' sales rose {{D-WC-060}} (our calculations)."}
+:::
+<!-- AR21 p.111, p.176; PD24 p.107, p.110; AR26 p.77, p.113 -->
 
 ::: chart
 {"id":"geo_outside","type":"stacked_column","title":"Revenue outside India grew 9% in FY26 only because the new subsidiaries were added; exports from the Indian plants fell in Europe and the Americas","cats":["FY25","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Europe (exports)","facts":["A-0568","A-0567"]},{"name":"Americas (exports)","facts":["A-0570","A-0569"]},{"name":"Asia (exports)","facts":["A-0572","A-0571"]},{"name":"Africa (exports)","facts":["A-0574","A-0573"]},{"name":"Others (exports)","facts":["A-0576","A-0575"]},{"name":"Foreign subsidiaries","facts":["A-0650","A-0649"]}],"totals":true,"label_all":false,"note":"Revenue from outside India, AR26 geographic note: Poly Medicure Ltd's export sales by destination plus 'sales related to foreign subsidiaries'. Total outside India rose {{D-WC-061}} to {{A-0702}}. Holding-company exports fell {{D-WC-045|abs}}: Europe {{D-WC-040}}, Americas {{D-WC-041}}, Asia {{D-WC-042|signed}}, Africa {{D-WC-043}}, others {{D-WC-044}}. Foreign subsidiaries were {{D-WC-062}} of revenue outside India in FY26 (all our calculations)."}
@@ -125,17 +130,18 @@ The reasons it is still small, as management describes them:
 2. **Channel.** Polymed supplies through {{CB-1100}} distributors and GPO contracts ('two large GPOs and distributors'); 'our job is limited to manufacturing in India'. The FDA listing of a suction catheter kit at the Jaipur plant under the name of McKesson, a US distributor, is the only public sign of private-label supply. <!-- DK4Q26 p.38; TR1Q26 p.7; TR1Q25 p.6; FDAREG_POLY p.1 -->
 3. **Tariffs.** The US was 'a red flag because of ... tariff situation', which 'delayed our launch to the U.S. market quite a lot'. <!-- TR4Q26 p.10 -->
 
-::: table id="us_tariff" title="US duty on Indian medical consumables went from zero to 50% in August 2025 and is back to 10%; Polymed paused US customer talks while it lasted" note="Duty on Indian-origin HS 9018 consumables, from the Federal Register and White House documents in the F digest; Section B4 sets out the full chronology. A Section 232 investigation into medical consumables, opened on 2 Sep 2025, could add duty on top."
+::: table id="us_tariff" title="US duty on Indian medical consumables rose from a 10% baseline to 50% in August 2025 and is back to 10%; Polymed paused US customer talks while it lasted" note="Duty on Indian-origin HS 9018 consumables, from the Federal Register and White House documents in the F digest; Section B4 sets out the full chronology. A Section 232 investigation into medical consumables, opened on 2 Sep 2025, could add duty on top."
 | From | US measure | Duty on Indian medical consumables | Management's comment at the time |
 |---|---|---|---|
 | Standing | Most-favoured-nation rate | {{F-0227}} | 'Current tariffs are {{CA-0675}} from India' (Oct-2024) |
+| 5 Apr 2025 | Baseline reciprocal tariff, all origins | {{WD-0055}} | – |
 | 7 Aug 2025 | Reciprocal tariff | {{F-0212}} | – |
 | 27 Aug 2025 | Additional duty (Russian oil) | +{{F-0213}} | {{CA-0427}} is 'unsustainable for exports from India' (Aug-2025) |
 | 7 Feb 2026 | Additional duty withdrawn; reciprocal rate of {{F-0215}} announced but not implemented | {{F-0212}} | 'Reinitiating conversations with our customers' after the cut to {{CA-0254}} (Feb-2026) |
 | 24 Feb 2026 | Supreme Court ends IEEPA duties; Section 122 surcharge | {{F-0218}} | – |
 | 24 Jul 2026 | Section 301 action | {{F-0221}} | 'The duty is only {{CA-0077}}' (Aug-2026) |
 :::
-<!-- F_HTS_9018 p.1; FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; FR_EORUS_260211 p.1; WH_USIND_JS_2602 p.1; SCOTUS_IEEPA_260220 p.2; FR_S122_260225 p.3; FR_301ACT_260728 p.7; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6; TR1Q27S p.12 -->
+<!-- F_HTS_9018 p.1; FR_EO14257_250407 p.5; FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; FR_EORUS_260211 p.1; WH_USIND_JS_2602 p.1; SCOTUS_IEEPA_260220 p.2; FR_S122_260225 p.3; FR_301ACT_260728 p.7; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6; TR1Q27S p.12 -->
 
 The acquisitions give Polymed its first direct US presence. Citieffe sells to US trauma centres through its own reps and commissioned agents, not GPO contracts; the US was {{CB-0147}} of its CY25 sales, and management points to US orthopaedic prices of {{CB-0145}}x Europe's. PendraCare's guiding catheter is cleared and management expects US sales to start in FY27. <!-- TRCIT p.10-11; DK1Q27 p.14; DK4Q26 p.38 -->
 
@@ -183,9 +189,25 @@ Ultra for Medical Products (Ultra Med) runs a plant of {{B-0376}} in Assiut maki
 
 India produced {{A-0263}} of revenue in FY26, up {{A-0265}}, the fastest of the three regions. Management is deliberately shrinking government business in India. <!-- AR26 p.47 -->
 - **Private vs government.** Private customers were ~{{CA-0219}} of domestic revenue in 3QFY26 and grew {{CA-0220}}. Government business ({{CA-0221|range}}) fell {{CA-0222|abs}}. Management's reasons are late state payments and tenders that do not reward quality. The target is {{WC-0064|range}} private and {{WC-0065|range}} government. <!-- TR3Q26 p.4; TR4Q25 p.13 -->
-- **Coverage.** Polymed reaches ~{{CA-0298}} hospitals, against the ~{{CA-0533}} larger Indian hospitals that management counts as addressable. The MD put coverage at 'one-third of the hospital[s]' in Feb-2025 and wallet share in covered hospitals at {{CA-0384|range}} in Nov-2025, having said below {{WC-0066|range}} earlier. <!-- TR3Q26 p.17; TR4Q25 p.11; TR3Q25 p.13; TR2Q26 p.13 -->
-- **Channel.** {{CB-1116}}+ distributors in India and the group's {{A-0012}} direct reps. Management plans {{CB-1115}}+ sales hires in FY27, uses ~{{CA-0681|range}} of revenue a year per rep as a benchmark, and has ~{{CA-0301|range}} clinical staff in India. Indranil Mukherjee (ex-B. Braun and Translumina) joined in 2026 as CEO for India and Asia-Pacific. The MD says 'you can see Polymed products in every top private chain in the country'. <!-- DK4Q26 p.40; AR26 p.3; TR2Q25 p.14; TR3Q26 p.18; DK1Q27 p.22 -->
+- **Coverage.** Hospital reach has not grown since late 2023 and remains well short of the larger Indian hospitals that management counts as addressable ([[EXREF:india_channel]]). The MD put coverage at 'one-third of the hospital[s]' in Feb-2025 and wallet share in covered hospitals at {{CA-0384|range}} in Nov-2025, having said below {{WC-0066|range}} earlier. <!-- TR3Q26 p.17; TR4Q25 p.11; TR3Q25 p.13; TR2Q26 p.13 -->
+- **Channel.** The sales force and the Indian distributor network have kept growing ([[EXREF:india_channel]]). Management uses ~{{CA-0681|range}} of revenue a year per rep as a benchmark and has ~{{CA-0301|range}} clinical staff in India. Indranil Mukherjee (ex-B. Braun and Translumina) joined in 2026 as CEO for India and Asia-Pacific. The MD says 'you can see Polymed products in every top private chain in the country'. <!-- DK4Q26 p.40; AR26 p.3; TR2Q25 p.14; TR3Q26 p.18; DK1Q27 p.22 -->
 - **Policy.** The GST cut on devices ({{F-0096}} from 22 Sep 2025) lowered end prices, though management linked a 2QFY26 domestic slowdown to channel inventory adjusting to it. The larger risk is trade-margin regulation. A Maharashtra FDA survey in Sep-2026 cited a Polymed IV set bought at {{F-0083}} with an MRP of {{F-0084}}, and a parliamentary committee has recommended capping the gap between landing price and MRP at {{F-0073}} (Section B3). <!-- PIB_GSTHEALTH_2509 p.2; TR2Q26 p.8; FPJ_MAHFDA_2609 p.1; PIB_PSC176_2608 p.1 -->
+
+::: table id="india_channel" title="The sales force has more than doubled since 2019 and Indian distributors are up by half since FY22, but hospital reach has stayed at about 8,000 since late 2023" note="Company counts, most printed with a '+'. Sales associates and hospitals are for India unless the note column says otherwise; distributor counts marked FY22-FY24 are fiscal year-end figures from the Aug-2024 placement document. Management counts ~{{CA-0533}} larger Indian hospitals as addressable and plans {{CB-1115}}+ sales hires in FY27."
+| As of | Sales associates | Distributors in India | Hospitals reached | Note |
+|---|---|---|---|---|
+| Oct-2019 | {{CC-1067}} | – | {{CC-1066}} | Presentation |
+| May-2022 | {{CC-0864}} | {{D-0203}} | {{CC-0863}} | FY22 distributors |
+| Nov-2023 | {{CC-0769}} | {{D-0202}} | {{CC-0777}} | Group sales staff; FY23 distributors |
+| Jun-2024 | {{D-0036}} | {{D-0201}} | {{D-0006}} | FY24 distributors |
+| Feb-2025 | {{CB-2868}} | {{CB-2869}} | – | Presentation |
+| May-2025 | {{CB-2555}} | {{CB-2556}} | – | Presentation |
+| Aug-2025 | {{CB-2090}} | {{CB-2091}} | – | Presentation |
+| Feb-2026 | – | – | {{CA-0298}} | Management, on a call |
+| May-2026 | {{CB-1028}} | {{CB-1116}} | – | Group sales staff |
+| Aug-2026 | {{CB-0018}} | – | – | Reps in India, US, Italy, Mexico |
+:::
+<!-- DK2019 p.4; DKMAY22 p.8; DK2Q24 p.4; PD24 p.46, p.167, p.170; DK3Q25 p.6; DK4Q25 p.5; DK1Q26 p.21; TR3Q26 p.17; DK4Q26 p.18, p.40; DK1Q27 p.5; TR4Q25 p.11 -->
 
 ### Company-specific drivers by region, ranked
 

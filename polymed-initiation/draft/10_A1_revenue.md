@@ -11,7 +11,7 @@ Poly Medicure makes single-use medical devices: the cannulas, infusion sets, fis
 The business model in one line: a very high-volume, low-price consumables business, built on in-house automation, that earned a consolidated operating EBITDA margin of {{A-0028}} in FY26 ({{A-0030}} in FY25; Section A2). It is now adding higher-priced devices in cardiology and orthopaedics, where management says a single unit sells for thousands of rupees, sometimes above {{WM-0008}}, and in oncology through Plan1Health. <!-- AR26 p.5; TR4Q26 p.18 -->
 
 ::: chart
-{"id":"rev_long","type":"column","title":"Revenue has compounded from Rs. 100mn in FY00 to Rs. 18.8bn in FY26, with the steepest step-up after the 2021 fund-raise","cats":["FY00","FY10","FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Consolidated revenue","facts":["CB-0064","CB-0066","CB-0036","CB-0037","CB-0038","CB-0039"]}],"label_all":true,"note":"Management describes three phases: 'PolyMed 1.0', bootstrapped growth to FY20; 'PolyMed 2.0', FY21-FY26, after the first institutional fund-raise, a multifold capacity expansion and the first acquisitions; and 'PolyMed 3.0' ('Ascent') from FY27. Revenue CAGR was {{CB-0040}} over FY20-FY26 per the company."}
+{"id":"rev_long","type":"column","title":"Revenue has compounded from Rs. 100mn in FY00 to Rs. 18.8bn in FY26, with the steepest step-up after the 2021 fund-raise","cats":["FY00","FY10","FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Consolidated revenue","facts":["CB-0064","CB-0066","CB-0036","CB-0037","CB-0038","CB-0039"]}],"label_all":true,"note":"Management describes three phases: 'PolyMed 1.0', bootstrapped growth to FY20; 'PolyMed 2.0', FY21-FY26, after the first institutional fund-raise, a multifold capacity expansion and the first acquisitions; and 'PolyMed 3.0' ('Ascent') from FY27. The company-stated FY20-FY26 CAGRs by line and region are in [[EXREF:front_cagr]]."}
 :::
 
 ### Five therapy lines are disclosed, two of them new
@@ -28,7 +28,7 @@ Polymed reports revenue in five buckets:
 The company's statutory sustainability report (BRSR) nonetheless gives a finer split of standalone turnover, which we use below and in Section A4. We do not estimate anything beyond what that report prints.
 
 ::: chart
-{"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to about half of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion {{CB-0025}}, renal {{CB-0030}}, others {{CB-0035}}."}
+{"id":"rev_therapy","type":"stacked_column","title":"Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to about half of FY26 revenue","cats":["FY20","FY22","FY24","FY26"],"scale":"bn","unit":"Rs bn","dec":1,"series":[{"name":"Infusion","facts":["CB-0021","CB-0022","CB-0023","CB-0024"]},{"name":"Renal","facts":["CB-0026","CB-0027","CB-0028","CB-0029"]},{"name":"Others (incl. acquisitions)","facts":["CB-0031","CB-0032","CB-0033","CB-0034"]}],"totals":true,"note":"All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed {{CB-0576}} of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company-stated FY20-FY26 CAGRs for each line are in [[EXREF:front_cagr]]."}
 :::
 
 The mix shift has been fast:
@@ -75,10 +75,10 @@ A separate BRSR table on product life-cycle assessment shows that prefilled sali
 
 ### Two-thirds of revenue is earned outside India
 
-Polymed has always been an exporter: {{CB-0079|approx}} of FY20 revenue came from outside India. International revenue was still {{CB-0084|approx}} of FY26 revenue (and {{CB-0332}} in 1QFY27, lifted by the acquisitions).
-- **Domestic:** India has been the fastest-growing region, with a company-stated FY20-FY26 CAGR of {{CB-0045}}. Its share rose from {{CB-0008}} to {{CB-0011}}.
-- **Europe:** a CAGR of {{CB-0050}}, lifting its share from {{CB-0009}} to {{CB-0012}}.
-- **RoW:** Africa, West Asia, the Americas and the rest of Asia grew at a {{CB-0055}} CAGR, and their share fell from {{CB-0010}} to {{CB-0013}}.
+Polymed has always been an exporter: {{CB-0079|approx}} of FY20 revenue came from outside India. International revenue was still {{CB-0084|approx}} of FY26 revenue (and {{CB-0332}} in 1QFY27, lifted by the acquisitions). India has been the fastest-growing region since FY20 and the rest of the world the slowest, on the company's CAGRs ([[EXREF:front_cagr]]); the shares moved accordingly:
+- **Domestic:** India's share rose from {{CB-0008}} to {{CB-0011}}.
+- **Europe:** its share rose from {{CB-0009}} to {{CB-0012}}.
+- **RoW:** Africa, West Asia, the Americas and the rest of Asia; their combined share fell from {{CB-0010}} to {{CB-0013}}.
 
 The MD's stated long-run aim is a mix of {{CA-0161|plain}}, roughly today's balance. <!-- TR4Q26 p.11 -->
 
@@ -98,6 +98,6 @@ It is thin on four things:
 1. **Product-level revenue** within "others", beyond the standalone percentages in the BRSR. The BRSR excludes the subsidiaries and uses a broader definition of infusion than the presentations.
 2. **Customer concentration and the OEM/private-label share.** Section A2 sets out what the placement documents and rating reports disclose.
 3. **Country-level export revenue.** The US is the only country for which management gives a number: it expects exports there of {{CA-0078|range}} in FY27. <!-- TR1Q27S p.12 -->
-4. **Volume and price split by product.** Management has occasionally given total devices sold ({{CA-0564}} in 9MFY25, up {{WM-0006}} yoy against consolidated revenue growth of {{CA-0558}}) but not by line. <!-- TR3Q25 p.4, p.10 -->
+4. **Volume and price split by product.** Management has occasionally given total devices sold ([[EXREF:vol_price]]) but not by line. <!-- TR3Q25 p.4, p.10 -->
 
 These gaps shape the question bank in Part C.

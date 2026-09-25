@@ -55,9 +55,9 @@ The range is Ryle's (nasogastric) and Levin's tubes, Novofeed infant feeding tub
 
 ### Urology: catheters and bags without the premium materials
 
-Polymed sells two-way Foley balloon catheters of "silicone elastomer bonded with latex rubber"; PVC Nelaton, female and rectal catheters; urine bags (the Polyuro Premium with a T-type bottom outlet and sampling port, the Deluxe and Echo, leg and paediatric bags); the Polyurimeter measured-volume meter; and TUR and irrigation sets. The catalogues list no all-silicone, three-way, hydrophilic or antimicrobial catheter and no suprapubic set. Each catheterization episode uses a catheter and a bag or meter, changed when full or at protocol intervals. <!-- CATDOM25 pp.23-24; CATEXP24 pp.83-86; WEB_UROLOGY p.1; D_product_glossary A4.7 -->
+Polymed sells two-way Foley balloon catheters of "silicone elastomer bonded with latex rubber"; PVC Nelaton, female and rectal catheters; urine bags (the Polyuro Premium with a T-type bottom outlet and sampling port, the Deluxe and Echo, leg and paediatric bags); the Polyurimeter measured-volume meter; and TUR and irrigation sets. Each catheterization episode uses a catheter and a bag or meter, changed when full or at protocol intervals. <!-- CATDOM25 pp.23-24; CATEXP24 pp.83-86; WEB_UROLOGY p.1; D_product_glossary A4.7 -->
 
-**CAUTI and the closed-system upgrade.** Grand View Research lists concerns over catheter-associated urinary tract infection (CAUTI) as a restraint on the Foley market and "rising demand for antimicrobial catheters" as a driver. Of its segments (latex, silicone-elastomer-coated, all-silicone, hydrophilic-coated, silver-alloy-coated), Polymed competes only in coated latex, outside the antimicrobial segment the vendor sees growing. Its part in the closed-system upgrade is on the drainage side: bags with needle-free sampling ports and optional air filters, and a urimeter whose sampling port "maintains closed system, reduces the chance of Urinary Tract Infection". <!-- VND_RNM_FOLEY p.1; CATEXP24 pp.84-85 -->
+**CAUTI and the closed-system upgrade.** Grand View Research lists concerns over catheter-associated urinary tract infection (CAUTI) as a restraint on the Foley market and "rising demand for antimicrobial catheters" as a driver. Polymed's part in the closed-system upgrade is on the drainage side ([[EXREF:gus_premium]]): bags with needle-free sampling ports and optional air filters, and a urimeter whose sampling port "maintains closed system, reduces the chance of Urinary Tract Infection". <!-- VND_RNM_FOLEY p.1; CATEXP24 pp.84-85 -->
 
 **Market.** Grand View (Jun-2026, a vendor estimate) values the global Foley market at {{E-0371}} in 2025, rising to {{WH-0003}} by 2033, a {{WH-0004}} CAGR from 2026. IMARC puts intermittent catheters, where Polymed has only PVC Nelaton catheters, at {{E-0372}} (also a vendor estimate). Frost & Sullivan's 2021 data in Healthium's prospectus gave Coloplast {{E-0131}} of UK urology consumables and Coloplast with BD {{E-0132}} (FY21), while cheaper independents gained: Healthium's Clinisupplies took its UK collection-device share from {{WH-0012}} to {{WH-0011}} in FY19-FY21. <!-- VND_RNM_FOLEY p.1; VND_RNM_ICATH p.1; DRHP_HEAL pp.137-139 -->
 
@@ -67,7 +67,19 @@ Polymed sells two-way Foley balloon catheters of "silicone elastomer bonded with
 
 The range covers closed wound suction (Polyvac bellows units, the spring-loaded Novovac and the 50 ml Neovac for minor and plastic surgery), Ultravak high-pressure vacuum bottles and Redon drains, Polyseal under-water-seal chest drainage with Ultra Cath Novo thoracic catheters, Polysuction Yankauer sets and an abdominal drainage set. The 30th AGM deck (Sep-2025) listed a decompressor needle and a centesis catheter as recent launches; no skin staplers or sutures are listed. Each operation that needs a drain uses one set, and each chest-drain insertion one catheter and seal system. <!-- CATDOM25 pp.26-27; CATEXP24 pp.66-70, 90; WEB_SURGERY_AND_WOUND_DRAINAGE p.1; DKAGM30 p.18; D_product_glossary A4.7 -->
 
-Future Market Insights (Aug-2025, a vendor estimate) sizes surgical drainage devices at {{E-0395}} in 2025, growing {{WH-0008}} a year to {{WH-0007}} by 2035; active drains are {{WH-0009}} of the market and thoracic and cardiovascular surgery {{WH-0010}}, both segments Polymed serves. In India, CRISIL (commissioned by Polymed, Aug-2024; a vendor estimate) puts general and plastic surgery at {{D-0440}} of the device market in FY24, growing {{D-0441}} a year to FY28, and 1Lattice counts ~{{E-0077|num}}mn surgical procedures in FY25. <!-- VND_FMI_DRAIN p.1; PD24 p.138; DRHP_GSURG p.183 -->
+Future Market Insights (Aug-2025, a vendor estimate) sizes surgical drainage devices at {{E-0395}} in 2025, growing {{WH-0008}} a year to {{WH-0007}} by 2035, and Polymed serves its largest segments ([[EXREF:gus_premium]]). In India, CRISIL (commissioned by Polymed, Aug-2024; a vendor estimate) puts general and plastic surgery at {{D-0440}} of the device market in FY24, growing {{D-0441}} a year to FY28, and 1Lattice counts ~{{E-0077|num}}mn surgical procedures in FY25. <!-- VND_FMI_DRAIN p.1; PD24 p.138; DRHP_GSURG p.183 -->
+
+::: table id="gus_premium" title="Polymed covers the drainage segments FMI sees as largest but none of the premium urinary catheters; enteral connectors are its one upgrade under way"
+| Line | Where the market is upgrading | Polymed's offer | Gap |
+|---|---|---|---|
+| Foley catheters | All-silicone, hydrophilic, silver-alloy/antimicrobial (Grand View cites CAUTI) | Two-way silicone-elastomer-coated latex only | No all-silicone, three-way, hydrophilic or antimicrobial; no suprapubic set |
+| Intermittent catheters | Hydrophilic and pre-lubricated designs "gaining popularity", though uncoated catheters still dominate (IMARC) | PVC Nelaton, female, rectal | No hydrophilic range |
+| Urine collection | Closed systems with needle-free sampling | Polyuro Premium; Polyurimeter with closed sampling port | Covered |
+| Enteral feeding | ISO 80369 (ENFit-type) connectors | Export catalogue range; Indian launches in the Sep-2026 AGM deck | Conformity [not disclosed]; absent from Oct-2025 domestic catalogue |
+| Wound drainage | Active drains, {{WH-0009}} of FMI's market | Polyvac, Novovac, Neovac, Ultravak, Redon | Covered |
+| Chest drainage | Thoracic and cardiovascular, {{WH-0010}} of FMI's market | Polyseal, Ultra Cath Novo | Covered |
+:::
+<!-- VND_RNM_FOLEY p.1; VND_RNM_ICATH p.1; VND_RNM_ENTERAL p.1; VND_FMI_DRAIN p.1; CATDOM25 pp.23-27; CATEXP24 pp.66-70, pp.79-86; DKAGM31 p.5 -->
 
 ### Competition: MNC specialists above, many Indian and Chinese makers below
 
@@ -106,7 +118,7 @@ No customer, channel or price data are disclosed for these lines, sold through t
 
 1. **Price competition.** These are commodity items with many local makers, Chinese makers such as KDL are registering the same products in Europe, and Grand View lists "pricing pressure and competitive tendering" as a challenge for Foley makers. <!-- VND_RNM_FOLEY p.1 -->
 2. **Raw materials.** PVC compounds, latex and silicone: Polymed imported {{D-0245}} of its raw-material needs in 1QFY25, management cited a ~{{CA-0129}} rise in raw-material costs in early FY27, and price increases lag. <!-- PD24 p.88; TR4Q26 p.6 -->
-3. **Mix.** Polymed is absent from the premium catheter segments; enteral-connector versions are its only mix upgrade here.
+3. **Mix.** Limited: enteral-connector versions are the only premium upgrade under way ([[EXREF:gus_premium]]).
 4. **Channel.** Leaving lower-priced government tenders helps margin but costs volume in all three lines.
 
 Margins for these lines are [not disclosed]; asked which products earn more, the MD replied, "you are asking the secret recipe for my business?". Romsons, whose range overlaps in urology, earned an EBITDA margin of {{E-0102}} on {{E-0100}} of revenue across its whole range in FY24, which suggests these categories can pay at scale. <!-- TR4Q25 p.12; DRHP_GSURG p.219 -->

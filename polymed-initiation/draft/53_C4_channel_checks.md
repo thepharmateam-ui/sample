@@ -11,7 +11,7 @@ Management interviews can be tested against people and data outside the company.
 | 4 | Interventional cardiologists | Experience with Polymed stents and PendraCare catheters; price versus Meril, SMT and MNCs | Cardiology adoption (A4.8) |
 | 5 | Orthopaedic surgeons and distributors in Italy and Mexico | Citieffe product preference; tender dynamics | Orthopaedics growth and pricing (A4.9) |
 | 6 | Blood banks and NACO-linked buyers | Blood-bag sourcing, DEHP-free demand, tender prices | Blood-management line (A4.4) |
-| 7 | Indian import data for dialysers (HS code 901839), by origin | Import volumes and unit values from China and Malaysia | Scale of the dumping problem (A4.3, B3) |
+| 7 | Indian import data for dialysers (HS code 90189031), by origin | Import volumes and unit values from China and Malaysia | Scale of the dumping problem (A4.3, B3) |
 | 8 | US FDA databases: 510(k), registration and listing, recalls, Form 483s, import alerts | New clearances, listed OEM customers, inspection history | US readiness and quality (A5, B4) |
 | 9 | EU tender portals (TED) and national tender sites | Awards to Polymed and to Chinese bidders; price per unit | European pricing and win rates (A4.1, B1) |
 | 10 | Indian procurement portals (GeM, state medical corporations) | Rate contracts for cannulas, blood bags and dialysis consumables | Government pricing (B1) |

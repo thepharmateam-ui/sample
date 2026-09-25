@@ -40,27 +40,42 @@ Two points on how the range is used.
 ::: table id="arc_disclosure" title="Anaesthesia and respiratory has been a small, steady share of sales on every disclosure since FY18; critical care has never been quantified"
 | Period | Measure | Anaesthesia and respiratory | Source |
 |---|---|---|---|
-| FY18 | Revenue (share of product sales) | {{D-0581}} ({{D-0582}}) | Placement document, Feb-2021 |
-| FY19 | Revenue (share) | {{D-0583}} ({{D-0584}}) | Placement document, Feb-2021 |
-| FY20 | Revenue (share) | {{D-0585}} ({{D-0586}}) | Placement document, Feb-2021 |
-| 9MFY21 | Revenue (share) | {{D-0587}} ({{D-0588}}) | Placement document, Feb-2021 |
+| FY18 | Share of product sales | {{D-0582}} | Placement document, Feb-2021 |
+| FY19 | Share of product sales | {{D-0584}} | Placement document, Feb-2021 |
+| FY20 | Share of product sales | {{D-0586}} | Placement document, Feb-2021 |
+| 9MFY21 | Share of product sales | {{D-0588}} | Placement document, Feb-2021 |
 | FY20 | Share of sales | {{CC-0968}} of sales | QIP deck |
 | FY22 (presumed) | Share of sales | {{CC-0876}} of sales | May-2022 deck (visual read) |
-| FY25 | Share of standalone turnover | {{A-0899}}, ~{{D-WA-004}} (our calculation) | BRSR FY25 |
+| FY25 | Share of standalone turnover | {{A-0899}} | BRSR FY25 |
 | FY26 | Share of standalone turnover | Not listed | BRSR FY26 |
 | Any year | Critical care revenue | [not disclosed] | – |
 :::
 <!-- PD21 p.130; DKFEB21 p.13; DKMAY22 p.10; BRSR25 p.5; BRSR26 p.12 -->
 
-The FY26 BRSR drops the anaesthesia and respiratory line. Its FY25 share ({{A-0899}}) is close to the rise in the infusion share, from {{A-0894}} to {{A-0846}}, which suggests the line was folded into infusion. That is our inference; the company has not said so. The bases also differ: the placement-document series is consolidated product sales, the BRSR is standalone turnover. The two show a business that has grown roughly in line with the group rather than faster than it. <!-- BRSR25 p.5; BRSR26 p.12; PD21 p.130 -->
+The FY26 BRSR drops the anaesthesia and respiratory line. Its FY25 share ({{A-0899}}) is close to the rise in the infusion share, from {{A-0894}} to {{A-0846}}, which suggests the line was folded into infusion. That is our inference; the company has not said so. The bases also differ: the placement-document series is consolidated product sales, the BRSR is standalone turnover. On both, the business has grown more slowly than the group ([[EXREF:arc_rev]]). <!-- BRSR25 p.5; BRSR26 p.12; PD21 p.130 -->
+
+::: chart
+{"id":"arc_rev","type":"column","title":"Anaesthesia and respiratory revenue has grown more slowly than the company on each comparable basis since FY18","cats":["FY18","FY19","FY20","FY21-FY24","FY25"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Placement document, consolidated product sales","facts":["D-0581","D-0583","D-0585","-","-"]},{"name":"BRSR share x standalone revenue (our calculation)","facts":["-","-","-","-","D-WA-004"]}],"label_all":true,"note":"FY18-FY20 from the Feb-2021 placement document (9MFY21: {{D-0587}}). FY25 = BRSR share of {{A-0899}} x standalone revenue of {{A-0351}}; the halves are on different bases and the FY26 BRSR drops the line. CAGR FY18-FY20 {{D-WA-052}} vs {{D-WH-004}} for all product sales; FY20-FY25 the line grew {{D-WA-053}} vs {{D-WH-013}} for the company on the same mixed bases (our calculations)."}
+:::
+<!-- PD21 p.130; BRSR25 p.5; AR26 p.32 -->
 
 ### Critical care: the growth project
 
-Management's account of critical care has moved:
-- **Launch date.** The FY26 annual report dates entry to 2019. The placement document says the critical care division was launched in FY23, and on the May-2025 call the MD described the division as having "just started last year". <!-- AR26 p.11; PD24 p.167; TR4Q25 p.4 -->
-- **Scale claims.** By Nov-2025 Polymed had launched {{CA-0351}} critical-care products in a year and was present in {{CA-0352}} hospitals, including top-tier chains. {{CB-0190}} new products were launched across infusion and critical care in 1QFY27. <!-- TR2Q26 p.5; DK1Q27 p.22 -->
-- **Targets.** In Aug-2023 management aimed for {{CC-0569|range}} of critical-care revenue in three to four years, saying the segment "definitely has a better margin". In May-2025 it hoped the segment would grow "{{CA-0506}}" in FY26. Neither outcome has been disclosed. <!-- TR1Q24 p.6; TR4Q25 p.4 -->
-- **Investment.** Polymed added {{CA-0540}} people across cardiology and critical care in FY25, whose "contribution is very less" so far, in the MD's words. <!-- TR4Q25 p.14 -->
+Management's account of critical care has moved. The FY26 annual report dates entry to 2019. The placement document says the critical care division was launched in FY23, and on the May-2025 call the MD described the division as having "just started last year". <!-- AR26 p.11; PD24 p.167; TR4Q25 p.4 --> Since then management has reported launches, hires and hospitals reached but no revenue, so neither its Aug-2023 ambition nor its hope for FY26 growth can be checked ([[EXREF:arc_cc]]).
+
+::: table id="arc_cc" title="Critical care: management has reported launches, hires and hospitals reached, but no revenue against its Rs. 0.75-1.0bn ambition" note="As stated on each call; hires are shared with oncology or cardiology, and the 1QFY27 launch count includes infusion."
+| Date | Launches and reach | People added | Revenue ambition or outcome |
+|---|---|---|---|
+| Aug-2023 (1QFY24 call) | {{CC-0562|range}} launches planned for FY24 | – | {{CC-0569|range}} in three to four years ("just making a guess"); the segment "definitely has a better margin" |
+| Feb-2024 (3QFY24 call) | Soft launch completed | ~{{CC-0622|range}}, with cardiology | – |
+| Jul-2024 (1QFY25 call) | "{{CA-0707|plain}}" (critical care and cardiology) | – | – |
+| Feb-2025 (3QFY25 call) | – | ~{{CA-0574}}, with oncology | – |
+| May-2025 (4QFY25 call) | – | {{CA-0540}} in FY25, with cardiology; "contribution is very less" | Growth of "{{CA-0506}}" hoped for FY26 |
+| Aug-2025 (1QFY26 call) | {{CA-0441}} products launched over the previous year | – | – |
+| Nov-2025 (2QFY26 call) | {{CA-0351}} products launched in a year; {{CA-0352}} hospitals, including large hospital chains | – | – |
+| Aug-2026 (1QFY27 deck) | {{CB-0190}} launches across infusion and critical care | – | FY26 outcome [not disclosed] |
+:::
+<!-- TR1Q24 p.4, p.6; TR3Q24b p.4; TR1Q25 p.3; TR3Q25 p.5; TR4Q25 p.4, p.14; TR1Q26 p.6; TR2Q26 p.5, p.14; DK1Q27 p.22 -->
 
 **Why management likes the segment.** It argues that critical care has few global competitors ("{{CA-0388|plain}}"). Indian demand is largely imported ({{CA-0664|range}}, Oct-2024), and ICU patients consume many devices each: management put ICU beds at ~{{CC-0087}} of hospital beds (Jul-2021). The segment is also the channel for oncology products (Section A4.2). <!-- TR2Q26 p.14; TR2Q25 p.8; TR1Q22 p.11; TR4Q25 p.4 -->
 
