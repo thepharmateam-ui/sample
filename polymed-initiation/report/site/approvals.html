@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Regulatory approvals by market · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html" class="active">Regulatory approvals by market</a></li><li class="l3"><a href="#united-states-510-k-clearances">United States: 510(k) clearances</a></li><li class="l3"><a href="#united-states-establishment-registration-and-device-listing">United States: establishment registration and device listing</a></li><li class="l3"><a href="#european-union-mdr-and-ce-marking">European Union: MDR and CE marking</a></li><li class="l3"><a href="#plant-quality-certificates-iso-13485-mdsap-and-korea-gmp">Plant quality certificates: ISO 13485, MDSAP and Korea GMP</a></li><li class="l3"><a href="#other-markets">Other markets</a></li><li class="l3"><a href="#what-to-watch-13">What to watch</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="glossary.html"><span>Previous</span>Product glossary: what each device is and how it is used</a><a class="next" href="people.html"><span>Next</span>Board and key management</a></nav>
+<h2 id="approvals">Regulatory approvals by market</h2>
+<p>Approvals decide where Polymed can sell, and they are slow to obtain. The company says its products are registered in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">100+</span> countries and that it employs <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">200+</span> quality and regulatory professionals. <!-- AR26 p.3 --> Management said in May 2022 that a CE mark had come to take <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">18-24</span> months, and in May 2026 it put the time saved by buying a Brazilian company with licences in hand at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">18-24</span> months. <!-- TR4Q22 p.6; TR4Q26 p.8 --> This appendix lists the approvals we could verify in regulator databases and company filings, market by market.</p>
+<figure class="exh" id="exh-appr_summary"><figcaption><span class="exn">Exhibit 139:</span> The group's approvals are deepest in Europe; its US and Brazilian footholds came largely with the acquisitions</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Market</th>
+<th>Route to market</th>
+<th>What the group holds</th>
+<th>Latest datapoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>European Union</td>
+<td>CE mark under the EU Medical Device Regulation (MDR), issued after a notified-body review</td>
+<td>All Polymed manufacturing sites certified under MDR for the entire range (company statement); Citieffe's portfolio fully MDR-certified; PendraCare products approved under the directives and MDR</td>
+<td>Polymed <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approvals and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> in the pipeline (May 2026)</td>
+</tr>
+<tr>
+<td>United States</td>
+<td>510(k) clearance, plus establishment registration and device listing</td>
+<td>Safety IV catheters, IV sets and a closed IV system (Polymed); trauma nails, screws, plates and fixators (Citieffe); guiding catheters and an introducer (PendraCare); a pain-management catheter (Plan1Health)</td>
+<td><span class="n" title="Our calculation: D-0876+D-0877+D-0878+D-0879; inputs: 6 (FDA 510(k) clearances – Poly Medicure, p.1); 11 (FDA 510(k) clearances – Citieffe, p.1); 4 (FDA 510(k) clearances – PendraCare, p.1); 1 (FDA 510(k) clearances – Plan 1 Health, p.1)">22</span> 510(k) records in the FDA database; the company counts <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">15</span> approvals, with <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">11-13</span> in the pipeline (Aug 2026)</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>ANVISA notification or registration, held by a legal entity in Brazil</td>
+<td>ANVISA shown among Polymed's certifications; PendraCare products registered with ANVISA; Medyneo, bought for its ANVISA and import licences</td>
+<td>Number of registrations [not disclosed]</td>
+</tr>
+<tr>
+<td>MDSAP markets (Brazil, US, Australia)</td>
+<td>A single audit programme recognized by several regulators</td>
+<td>MDSAP certificates for Faridabad III and IV and Jaipur I and II</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Korea</td>
+<td>Korea GMP certificate from the Ministry of Food and Drug Safety</td>
+<td>China plant certified as compliant; PendraCare products registered with the Korean regulator</td>
+<td>–</td>
+</tr>
+<tr>
+<td>China</td>
+<td>Registration with the national regulator (CFDA)</td>
+<td>PendraCare products registered</td>
+<td>–</td>
+</tr>
+<tr>
+<td>India</td>
+<td>CDSCO licence under the Medical Devices Rules</td>
+<td>Licence for the drug-eluting stent; gamma sterilization plant licensed for Class A and B devices</td>
+<td>Import registrations take <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">6-9</span> months (management)</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; Investor presentation 4QFY26; Investor deck 1QFY27; FDA 510(k) clearances – Poly Medicure; FDA 510(k) clearances – Citieffe; FDA 510(k) clearances – PendraCare; FDA 510(k) clearances – Plan 1 Health; Citieffe acquisition presentation; PendraCare acquisition call script (4 Sep 2025); PendraCare acquisition press release; PendraCare acquisition presentation; ANVISA Resolução RDC nº 751, de 15 de setembro de 2022 (Diário Oficial da União); 4QFY26 earnings call transcript; QIP Placement Document Aug 2024; 1QFY23 earnings call transcript; 2QFY23 earnings call transcript; 3QFY25 earnings call transcript; 1QFY26 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- AR26 p.15, p.35; DK4Q26 p.38, p.39; DK1Q27 p.11; FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1; DKCIT p.12, p.21; TRPEN p.3; PRPEN p.1; DKPEN p.11; ANVISA_RDC751 p.1; TR4Q26 p.3, p.8; PD24 p.26, pp.175-176; TR1Q23 p.4; TR2Q23 p.3; TR3Q25 p.4; TR1Q26 p.7 -->
+<h3 id="united-states-510-k-clearances">United States: 510(k) clearances</h3>
+<p>The MD calls the US "a very high price market". <!-- TR3Q23 p.15 --> Devices that need FDA clearance reach it through the 510(k) route, in which the FDA finds a device substantially equivalent to one already on the market; every decision in the table below is of that kind. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1 --> Polymed's own clearances are all infusion devices and all date from 2023 onwards; the older clearances came with Plan1Health, PendraCare and Citieffe.</p>
+<figure class="exh" id="exh-appr_510k"><figcaption><span class="exn">Exhibit 140:</span> Most of the group's US clearances came with the acquisitions; Polymed's own are infusion devices cleared since 2023</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>K-number</th>
+<th>Decision date</th>
+<th>Device (FDA name)</th>
+<th>Applicant</th>
+<th>Submission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K220312</td>
+<td>12 Apr 2023</td>
+<td>Polyfusion IV Administration Sets</td>
+<td>Poly Medicure</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K230616</td>
+<td>5 May 2023</td>
+<td>Polyguard and Polyshield Safety IV Catheters</td>
+<td>Poly Medicure</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K231401</td>
+<td>21 Sep 2023</td>
+<td>Polysafety BC, Polysafety BC Adva, Polywin Safety, Polywin Safety Adva</td>
+<td>Poly Medicure</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K232234</td>
+<td>15 Mar 2024</td>
+<td>Nouvo Safety Set</td>
+<td>Poly Medicure</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K252677</td>
+<td>5 Nov 2025</td>
+<td>Polyshield Safety IV Catheters</td>
+<td>Poly Medicure</td>
+<td>Special</td>
+</tr>
+<tr>
+<td>K252513</td>
+<td>1 Apr 2026</td>
+<td>Polywin Safety and Polywin Safety Adva, 14G-26G sizes</td>
+<td>Poly Medicure</td>
+<td>Special</td>
+</tr>
+<tr>
+<td>K111031</td>
+<td>8 Jul 2011</td>
+<td>Painfusor Catheter</td>
+<td>Plan1Health</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K120585</td>
+<td>8 Aug 2012</td>
+<td>Convey Guiding Catheter</td>
+<td>PendraCare</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K132197</td>
+<td>12 Aug 2013</td>
+<td>Convey 7F and 8F Guiding Catheters</td>
+<td>PendraCare</td>
+<td>Special</td>
+</tr>
+<tr>
+<td>K250972</td>
+<td>29 Jun 2025</td>
+<td>Primum Hydrophilic Guiding Catheter</td>
+<td>PendraCare</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K261242</td>
+<td>25 Jun 2026</td>
+<td>SimplGuide (catheter introducer)</td>
+<td>PendraCare</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K113387</td>
+<td>15 Mar 2012</td>
+<td>Citieffe Titanium Nailing System</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K113384</td>
+<td>1 May 2012</td>
+<td>External Fixator ST.A.R. 90 F4</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K113388</td>
+<td>5 Jun 2012</td>
+<td>Citieffe Titanium Cannulated Screw</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K131005</td>
+<td>25 Jun 2013</td>
+<td>EBA2 Femoral Nailing System</td>
+<td>Citieffe</td>
+<td>Special</td>
+</tr>
+<tr>
+<td>K132363</td>
+<td>16 Jan 2014</td>
+<td>Dolphix External Fixation System</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K150661</td>
+<td>7 Jul 2015</td>
+<td>ST.A.R. 90 F4 External Fixation Screws with Hydroxyapatite</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K163323</td>
+<td>20 Mar 2017</td>
+<td>Dolphix External Fixation System, MR Conditional</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K180150</td>
+<td>2 Aug 2018</td>
+<td>PL8 Wrist Reconstruction Plate</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K181540</td>
+<td>16 Jan 2019</td>
+<td>Estremo Citieffe Nailing System</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K183666</td>
+<td>14 Nov 2019</td>
+<td>EBA One Nailing System</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+<tr>
+<td>K250197</td>
+<td>17 Oct 2025</td>
+<td>Estremo Fibular Nail</td>
+<td>Citieffe</td>
+<td>Traditional</td>
+</tr>
+</tbody>
+</table></div><p class="note">Decision dates, device names and submission types as recorded in the FDA 510(k) database (openFDA, retrieved 24 Sep 2026); applicant names shortened. A Special 510(k) is the FDA route for changes to a device the same maker has already cleared (general description). All decisions: substantially equivalent.</p><p class="src">Source: FDA 510(k) clearances – Poly Medicure; FDA 510(k) clearances – Plan 1 Health; FDA 510(k) clearances – PendraCare; FDA 510(k) clearances – Citieffe; Avendus Spark Research</p></figure>
+<!-- FDA510K_POLY p.1; FDA510K_P1H p.1; FDA510K_PEN p.1; FDA510K_CIT p.1 -->
+<p>What the list shows:</p>
+<ul>
+<li><strong>The count.</strong> The FDA database holds <span class="n" title="Our calculation: D-0876+D-0877+D-0878+D-0879; inputs: 6 (FDA 510(k) clearances – Poly Medicure, p.1); 11 (FDA 510(k) clearances – Citieffe, p.1); 4 (FDA 510(k) clearances – PendraCare, p.1); 1 (FDA 510(k) clearances – Plan 1 Health, p.1)">22</span> 510(k) records for the four applicants, <span class="n" title="Our calculation: D-0876+D-0877+D-0878+D-0879-CB-0093; inputs: 6 (FDA 510(k) clearances – Poly Medicure, p.1); 11 (FDA 510(k) clearances – Citieffe, p.1); 4 (FDA 510(k) clearances – PendraCare, p.1); 1 (FDA 510(k) clearances – Plan 1 Health, p.1); 15 (Investor deck 1QFY27, p.11)">7</span> more than the <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">15</span> US approvals the company cites (our calculation). <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1; DK1Q27 p.11 --></li>
+<li><strong>Reconciling the two.</strong> The May-2026 deck splits the company's count into <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">4</span> for Polymed, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">10</span> for Citieffe and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">1</span> for Plan1Health, and says only that PendraCare's guiding catheter is approved. <!-- DK4Q26 p.38 --> Polymed's and Citieffe's figures equal their Traditional submissions in the table, so we read the company's count as leaving out Special 510(k)s and PendraCare's clearances. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; DK4Q26 p.38 --></li>
+<li><strong>Recent additions.</strong> Since Apr 2025 the group has added the Primum guiding catheter, the Estremo fibular nail, Special 510(k)s for the Polyshield catheter and the Polywin Safety size range, and PendraCare's SimplGuide introducer. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1 --></li>
+<li><strong>A testing setback.</strong> In Nov 2025 the MD said the FDA had stopped accepting test results from Indian laboratories, so Polymed had to retest its products in the US: "all work we have done in the past was negated". <!-- TR2Q26 p.11 --> The Aug-2026 deck still showed <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">11-13</span> US approvals in the pipeline. <!-- DK1Q27 p.11 --></li>
+<li><strong>The quality rule.</strong> From 2 Feb 2026 the FDA's device quality rule incorporates ISO 13485 by reference, the standard to which every Indian plant was certified at the Aug-2024 placement. <!-- FR_QMSR_240202 p.1; PD24 pp.174-176 --></li>
+</ul>
+<h3 id="united-states-establishment-registration-and-device-listing">United States: establishment registration and device listing</h3>
+<p>The registration and listing records show which Polymed plants are registered with the FDA, which devices each is set up to ship to the US, and, through proprietary names, some of the private-label supply. <!-- FDAREG_POLY p.1 --></p>
+<figure class="exh" id="exh-appr_listing"><figcaption><span class="exn">Exhibit 141:</span> Polymed's FDA listings are mostly low-risk Class I devices; its cleared IV catheters are listed at the main Faridabad site</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Establishment</th>
+<th>Class II listings</th>
+<th>Class I listings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faridabad, HSIIDC industrial area (earliest listing Feb 2017)</td>
+<td>Short-term intravascular catheters (FOZ), linked to K230616, K231401 and K252677; non-electrical urine flow meter (FFG)</td>
+<td>Irrigation catheter (GBX); absorbent-tipped applicator (KXG); catheter accessories (KGZ), "Safety-Vac Sterile Connection Tube"; nasal oxygen cannula (CAT); breathing circuit (CAI); oropharyngeal airway (CAE); portable suction apparatus (GCY), "Safety Vac" and "Ultravak Set"; leg urine bag (FAQ); venturi mask (BYF); oxygen mask (BYG)</td>
+</tr>
+<tr>
+<td>Jaipur, Mahindra World City SEZ</td>
+<td>Vacuum blood-collection tube (KDQ)</td>
+<td>Tracheobronchial suction catheter (BSY); suction catheter kit (PYG), "McKesson"; operating-room scrub brush (GEC)</td>
+</tr>
+<tr>
+<td>Faridabad, IMT (listing created 3 Dec 2025)</td>
+<td>–</td>
+<td>Disposable aspiration and injection needle (GAA)</td>
+</tr>
+</tbody>
+</table></div><p class="note">Device classes and FDA product codes as listed; proprietary names in quotation marks where the listing gives one.</p><p class="src">Source: FDA registration and listing – Poly Medicure; Avendus Spark Research</p></figure>
+<!-- FDAREG_POLY p.1 -->
+<p>The records show:</p>
+<ul>
+<li><strong>A clean record.</strong> The database holds <span class="n" title="Source: FDA registration and listing – Poly Medicure (2026-09-24)">19</span> listings under the Polymed name, and openFDA returned <span class="n" title="Source: FDA registration and listing – Poly Medicure (2026-09-24)">0</span> recall or enforcement records for the company. <!-- FDAREG_POLY p.1 --></li>
+<li><strong>Private label.</strong> The suction catheter kit listed at Jaipur carries the proprietary name "McKesson", which the MD has named among the large US distributors and purchasing organizations; we read it as private-label supply. <!-- FDAREG_POLY p.1; TR4Q23 p.16 --></li>
+<li><strong>Two clearances without a listing under the Polymed name.</strong> The Polyfusion IV sets (K220312) and the Nouvo Safety Set (K232234) do not appear in the listings retrieved under the Polymed name, while the listing for the Polyshield catheter cleared under K252677 was created on 10 Sep 2026. We could not tell whether the first two are listed under another firm's registration or not yet shipped, and we add the point to our questions. <!-- FDAREG_POLY p.1; FDA510K_POLY p.1 --></li>
+</ul>
+<h3 id="european-union-mdr-and-ce-marking">European Union: MDR and CE marking</h3>
+<p>Europe produced <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">32%</span> of FY26 revenue, and a device sold there needs a CE mark. <!-- DK1Q27 p.4; PD21 p.38 --> Depending on its risk class, the maker must involve an independent notified body before it can affix the mark. When the Medical Device Regulation, EU Regulation 2017/745, took effect on 26 May 2021, the number of designated notified bodies was very low, which the European Commission says created bottlenecks in pre-market certification. <!-- EU_COM2025_1023 p.1 --> Management said in Feb 2026 that Polymed "had to drop many products initially in the bargain because it was taking a long time to get the approvals". <!-- TR3Q26 p.8 --></p>
+<figure class="exh" id="exh-appr_eu"><figcaption><span class="exn">Exhibit 142:</span> Polymed and Citieffe say their whole ranges are MDR-certified; the European pipeline is mostly in new specialities</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Entity</th>
+<th>EU status</th>
+<th>Certifier named in filings</th>
+<th>Pipeline (May 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polymed (Indian plants)</td>
+<td>All sites certified under MDR for the entire range; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approvals</td>
+<td>TÜV SÜD Product Service for EC and EN ISO 13485 certificates (Aug 2024); earlier DNV for the CE mark (FY13)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> products; <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 9 · management guidance; Himanshu Baid, MD">25</span> in the CE-marking pipeline by Aug 2026</td>
+</tr>
+<tr>
+<td>Plan1Health (Amaro, Italy)</td>
+<td>Whole portfolio approved</td>
+<td>DEKRA Certification for EC and EN ISO 13485</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">1</span> product</td>
+</tr>
+<tr>
+<td>Citieffe (Bologna, Italy)</td>
+<td>Whole portfolio (<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+ products) MDR-certified</td>
+<td>Not disclosed</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">10</span>+ products</td>
+</tr>
+<tr>
+<td>PendraCare (Leek, Netherlands)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">2</span> approvals; products approved under the directives and MDR</td>
+<td>Not disclosed</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">3</span> products</td>
+</tr>
+<tr>
+<td>China plant (Laiyang)</td>
+<td>EC certificate</td>
+<td>TÜV Rheinland LGA Products (Feb 2021)</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Egypt associate (Assiut)</td>
+<td>EC certificate</td>
+<td>SGS United Kingdom</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; Investor presentation 4QFY26; QIP Placement Document Aug 2024; Annual Report FY13; Annual Report FY23; QIP Placement Document Feb 2021; Citieffe acquisition presentation; Citieffe acquisition call transcript (25 Sep 2025); PendraCare acquisition call script (4 Sep 2025); PendraCare acquisition press release; 1QFY27 earnings call (Aug 10 2026); Avendus Spark Research</p></figure>
+<!-- AR26 p.10, p.35; DK4Q26 p.39; PD24 p.27, pp.174-176, p.180; AR13 p.10; AR23 p.24; PD21 p.133; DKCIT p.12; TRCIT p.4; TRPEN p.3; PRPEN p.1; TR1Q27S p.9 -->
+<p>The FY26 annual report does not name the notified body behind the MDR certificates. <!-- AR26 p.35 --> The company's EU product count has not moved in a straight line, and the counts are not on a consistent basis: "medical device products" certified in one deck, "approved" products in another and an approximate figure on a call. None of the disclosures says whether a product is a family, a code or a certificate.</p>
+<figure class="exh" id="exh-appr_eu_timeline"><figcaption><span class="exn">Exhibit 143:</span> Polymed's EU product count moved around as products were dropped in the switch to MDR and new specialities were filed</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date</th>
+<th>What the company said</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jun 2020</td>
+<td>All products CE certified under the directives</td>
+<td>Corporate presentation</td>
+</tr>
+<tr>
+<td>May 2022</td>
+<td>A CE mark now takes <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">18-24</span> months</td>
+<td>4QFY22 call</td>
+</tr>
+<tr>
+<td>Feb 2023</td>
+<td>MDR applications filed for <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 4 · Himanshu Baid, MD">more than 70</span> products</td>
+<td>3QFY23 call</td>
+</tr>
+<tr>
+<td>Sep 2025</td>
+<td>EU MDR certification received for <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> products in FY25</td>
+<td>30th AGM presentation</td>
+</tr>
+<tr>
+<td>Nov 2025</td>
+<td>Close to <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · Himanshu Baid, MD">75</span> products CE-certified; about <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · management guidance; Himanshu Baid, MD">20</span> new ones expected to be CE-marked in CY26</td>
+<td>2QFY26 call</td>
+</tr>
+<tr>
+<td>Feb 2026</td>
+<td>Many products dropped in the move to MDR; another <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 8 · management guidance; Himanshu Baid, MD">15</span> MDR approvals hoped for within months</td>
+<td>3QFY26 call</td>
+</tr>
+<tr>
+<td>May 2026</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approvals and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> in the pipeline</td>
+<td>4QFY26 presentation</td>
+</tr>
+<tr>
+<td>Aug 2026</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 9 · management guidance; Himanshu Baid, MD">25</span> products in the CE-marking pipeline; <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">30</span>+ new products under registration in Europe</td>
+<td>1QFY27 call and presentation</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Corporate presentation Jun 2020; 4QFY22 earnings call transcript; 3QFY23 earnings call transcript; 30th AGM presentation; 2QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); Investor presentation 4QFY26; 1QFY27 earnings call (Aug 10 2026); Investor deck 1QFY27; Avendus Spark Research</p></figure>
+<!-- DKJUN20 p.20; TR4Q22 p.6; TR3Q23 p.4; DKAGM30 p.3; TR2Q26 p.10; TR3Q26 p.8; DK4Q26 p.39; TR1Q27S p.9; DK1Q27 p.11 -->
+<p>The transition rules set the deadline for any directive-era certificates still in use:</p>
+<ul>
+<li><strong>Transition.</strong> Under EU Regulation 2023/607, devices certified under the old directives may stay on the market until 31 Dec 2027 for class III and implantable class IIb devices and until 31 Dec 2028 for other classes, provided the maker had applied for MDR certification by 26 May 2024 and signed with a notified body by 26 Sep 2024. <!-- EU_REG2023_607 p.4 --></li>
+<li><strong>Revision.</strong> The Commission proposed a targeted revision of the MDR in Dec 2025, and the European Parliament's health committee began work on it on 14 Jul 2026. <!-- EU_COM2025_1023 p.1; DSV_MDR_2607 p.1 --></li>
+<li><strong>The acquired makers.</strong> Citieffe says its whole portfolio is already certified under MDR, while PendraCare's products carry a mix of directive and MDR approvals; PendraCare's acquisition call described EU approvals as "extremely challenging" to obtain under MDR. <!-- TRCIT p.4; TRPEN p.3 --></li>
+</ul>
+<h3 id="plant-quality-certificates-iso-13485-mdsap-and-korea-gmp">Plant quality certificates: ISO 13485, MDSAP and Korea GMP</h3>
+<p>ISO 13485 is the device quality-system standard that the FDA's quality rule incorporates from 2 Feb 2026. <!-- FR_QMSR_240202 p.1 --> MDSAP certification covers Brazil, the US and Australia, and the MD said it "fast tracks our registration process". <!-- TR1Q23 p.4 --></p>
+<figure class="exh" id="exh-appr_plants"><figcaption><span class="exn">Exhibit 144:</span> Every Indian plant held EN ISO 13485 from TÜV SÜD at the 2024 placement; MDSAP covers Faridabad III and IV and the Jaipur plants</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Plant</th>
+<th>Started</th>
+<th>EN ISO 13485</th>
+<th>EC certificate</th>
+<th>Other certificates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faridabad I</td>
+<td>FY97</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 9001 (DNV)</td>
+</tr>
+<tr>
+<td>Faridabad II</td>
+<td>FY04</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 9001 (DNV)</td>
+</tr>
+<tr>
+<td>Faridabad III</td>
+<td>FY19</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 14001, MDSAP (TÜV SÜD)</td>
+</tr>
+<tr>
+<td>Faridabad IV</td>
+<td>FY24</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 14001, MDSAP (TÜV SÜD)</td>
+</tr>
+<tr>
+<td>Faridabad V</td>
+<td>FY24</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 9001 (DNV); US FDA 510(k)</td>
+</tr>
+<tr>
+<td>Faridabad VI</td>
+<td>FY23</td>
+<td>TÜV SÜD</td>
+<td>–</td>
+<td>ISO 9001 (DNV)</td>
+</tr>
+<tr>
+<td>Haridwar</td>
+<td>FY08</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 9001 (DNV)</td>
+</tr>
+<tr>
+<td>Jaipur I and II (SEZ)</td>
+<td>FY15 and FY21</td>
+<td>TÜV SÜD</td>
+<td>TÜV SÜD</td>
+<td>ISO 14001, MDSAP (TÜV SÜD)</td>
+</tr>
+<tr>
+<td>Haridwar, new plant</td>
+<td>FY26</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>ISO 9001</td>
+</tr>
+<tr>
+<td>Gamma sterilization facility, Haryana</td>
+<td>FY26</td>
+<td>Yes</td>
+<td>–</td>
+<td>Licence from AERB</td>
+</tr>
+<tr>
+<td>Laiyang, China</td>
+<td>FY10</td>
+<td>TÜV Rheinland (Feb 2021)</td>
+<td>TÜV Rheinland (Feb 2021)</td>
+<td>Korea GMP (Ministry of Food and Drug Safety)</td>
+</tr>
+<tr>
+<td>Amaro, Italy (Plan1Health)</td>
+<td>FY19</td>
+<td>DEKRA</td>
+<td>DEKRA</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Assiut, Egypt (associate)</td>
+<td>FY04</td>
+<td>–</td>
+<td>SGS United Kingdom</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Leek, Netherlands (PendraCare)</td>
+<td>Acquired Sep 2025</td>
+<td>ISO 13485</td>
+<td>–</td>
+<td>Described by the company as FDA-approved manufacturing</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: QIP Placement Document Aug 2024; QIP Placement Document Feb 2021; Annual Report FY26; PendraCare acquisition presentation; PendraCare acquisition call script (4 Sep 2025); Avendus Spark Research</p></figure>
+<!-- PD24 p.26, pp.174-176; PD21 p.133; AR26 p.15; DKPEN p.14; TRPEN p.2 -->
+<p>Plant names follow the Aug-2024 placement document. The certificates for the FY26 facilities, the new Haridwar plant and the gamma sterilization facility, come from the FY26 annual report; Citieffe's plant certificates are not disclosed. <!-- PD24 pp.174-176; AR26 p.15 --> By the company's count, <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 19">~70%</span> of its facilities held ISO 14001 in Aug 2026. <!-- DK1Q27 p.19 --></p>
+<h3 id="other-markets">Other markets</h3>
+<figure class="exh" id="exh-appr_other"><figcaption><span class="exn">Exhibit 145:</span> Beyond Europe and the US, approvals are spread thinly, and in Brazil the regulatory access was bought rather than built</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Market</th>
+<th>What the group holds</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brazil (ANVISA)</td>
+<td>ANVISA among the certifications Polymed displays; PendraCare products registered with ANVISA; Polymed Brazil bought Medyneo, a company with ANVISA and import licences but no operations, for <span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 3.4mn</span> with effect from Apr 2026; a CEO for Brazil joined on 1 Aug 2026</td>
+<td>Brazilian registrations must be held by a legal entity in Brazil, a manufacturer or importer; management said Medyneo saves <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">18-24</span> months in getting the business running</td>
+</tr>
+<tr>
+<td>Korea (MFDS)</td>
+<td>China plant certified as compliant with Korea GMP; PendraCare products registered with the KFDA</td>
+<td>The China plant is small (FY26 revenue <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 112mn</span>), and management said in Jul 2024 that it might curtail or shut it down</td>
+</tr>
+<tr>
+<td>China</td>
+<td>PendraCare products registered with the CFDA; the China subsidiary's business licence runs to 23 May 2027 and is being extended</td>
+<td>The only Chinese product registrations disclosed belong to PendraCare</td>
+</tr>
+<tr>
+<td>India (CDSCO)</td>
+<td>CDSCO licence for the drug-eluting stent (Feb 2025); gamma sterilization plant licensed for Class A and B devices, with C and D awaited (Aug 2025); CDSCO approval being sought to sell PendraCare and Citieffe products in India (Aug 2026)</td>
+<td>Import registrations take <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">6-9</span> months, and management expects cross-selling of the acquired products in India to show from the next financial year</td>
+</tr>
+<tr>
+<td>Rest of world</td>
+<td>Group registrations in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">100+</span> countries; PendraCare in more than <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 22">60</span> countries; Citieffe in <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 22">25</span>+ countries, including the US and Latin America</td>
+<td>The acquired companies bring registrations that Polymed plans to use for cross-selling in both directions</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; PendraCare acquisition presentation; PendraCare acquisition press release; Board outcome and results 1QFY27; 4QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); ANVISA Resolução RDC nº 751, de 15 de setembro de 2022 (Diário Oficial da União); QIP Placement Document Aug 2024; 1QFY25 earnings call transcript; Poly Medicure (Laiyang) China FY26 accounts; 3QFY25 earnings call transcript; 1QFY26 earnings call transcript; Investor presentation 4QFY26; Avendus Spark Research</p></figure>
+<!-- AR26 p.15, p.33; DKPEN p.11; PRPEN p.1; RS1Q27 p.5; TR4Q26 p.3, p.8; TR1Q27S p.2, p.6; ANVISA_RDC751 p.1; PD24 p.26; TR1Q25 p.6; SUB26CN p.38; TR3Q25 p.4; TR1Q26 p.7; AR26 p.3; DK4Q26 p.22 -->
+<h3 id="what-to-watch-13">What to watch</h3>
+<figure class="exh" id="exh-appr_watch"><figcaption><span class="exn">Exhibit 146:</span> Regulatory watch-list: US clearances and listings, the EU pipeline, and the first Brazilian and Indian approvals for acquired products</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New 510(k) clearances</td>
+<td>US sales need cleared devices, and retesting in US laboratories delayed filings</td>
+<td>Latest: K261242 (PendraCare, 25 Jun 2026); <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">11-13</span> in the pipeline (Aug 2026)</td>
+<td>FDA 510(k) database; investor presentations</td>
+</tr>
+<tr>
+<td>US listings for cleared Polymed devices</td>
+<td>Shows which cleared products are set up to ship</td>
+<td>Polyshield listed on 10 Sep 2026; K220312 and K232234 not found under the Polymed name</td>
+<td>FDA registration and listing database</td>
+</tr>
+<tr>
+<td>EU approvals and pipeline</td>
+<td>New specialities need MDR certificates before they can be sold or tendered in Europe</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approved and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> in the pipeline (May 2026)</td>
+<td>Investor presentations</td>
+</tr>
+<tr>
+<td>Basis of the EU and US counts</td>
+<td>The EU count has moved between decks and the US count differs from the FDA database</td>
+<td><span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> (FY25), <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> (May 2026); <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">15</span> vs <span class="n" title="Our calculation: D-0876+D-0877+D-0878+D-0879; inputs: 6 (FDA 510(k) clearances – Poly Medicure, p.1); 11 (FDA 510(k) clearances – Citieffe, p.1); 4 (FDA 510(k) clearances – PendraCare, p.1); 1 (FDA 510(k) clearances – Plan 1 Health, p.1)">22</span> records</td>
+<td>Investor presentations; FDA database</td>
+</tr>
+<tr>
+<td>Brazil start-up</td>
+<td>Direct sales depend on Medyneo's licences and new registrations</td>
+<td>CEO Brazil joined 1 Aug 2026</td>
+<td>Calls; annual report</td>
+</tr>
+<tr>
+<td>CDSCO approvals for acquired products</td>
+<td>Needed before cross-selling in India</td>
+<td>Approval process under way (Aug 2026)</td>
+<td>Calls</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: FDA 510(k) clearances – PendraCare; Investor deck 1QFY27; FDA registration and listing – Poly Medicure; Investor presentation 4QFY26; 30th AGM presentation; 1QFY27 earnings call (Aug 10 2026); 2QFY26 earnings call transcript; FDA 510(k) clearances – Poly Medicure; FDA 510(k) clearances – Citieffe; FDA 510(k) clearances – Plan 1 Health; our calculation; Avendus Spark Research</p></figure>
+<!-- FDA510K_PEN p.1; DK1Q27 p.11; FDAREG_POLY p.1; DK4Q26 p.39; DKAGM30 p.3; TR1Q27S p.2, p.6; TR2Q26 p.11, p.13 -->
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="glossary.html"><span>Previous</span>Product glossary: what each device is and how it is used</a><a class="next" href="people.html"><span>Next</span>Board and key management</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

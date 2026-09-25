@@ -131,11 +131,16 @@ Prices of disposables move through six mechanisms. Section A4.1 sets out Polymed
 |---|---|---|
 | Annual list-price increases | Price lists reset once a year or at contract renewal; contracts may allow increases on large raw-material moves | Polymed typically takes {{CA-0598|range}} a year in India; {{CA-0132|range}} in early FY27 and an average {{CB-0187}} in 1QFY27 over 4QFY26; in May-2023 the MD said it had raised prices for only ~{{CC-0524|range}} of customers during the raw-material spike |
 | Incumbents' pricing | Global majors raise prices where contracts allow and give ground where GPOs and low-cost entrants push | Price contributed {{E-0197}} to BD's FY25 growth; Terumo's pricing added {{E-0253}} to operating profit, against a {{E-0254|abs}} US tariff hit; B. Braun, Nipro and Baxter raised prices |
-| Rebates and discounts | Volume rebates to distributors and chains | Polymed's standalone rebates and discounts rose to {{A-0479}} in FY26 from {{A-0480}} |
+| Rebates and discounts | Volume rebates to distributors and chains | Polymed's standalone rebates and discounts have risen for two years but remain a small fraction of revenue ([[EXREF:b1_rebates]]) |
 | Tenders and procurement rounds | Lowest-price awards; volume-for-price rounds | India's government tenders go to the lowest bidder; China ran {{E-0285}} consumables VBP projects in 2025; EU tenders use price or price-quality awards |
 | Price controls and reimbursement | Statutory caps, trade-margin caps, fixed package rates, payback | India caps MRP increases at {{D-0185}} a year and drug-eluting stents at Rs. {{E-0171|num}}; PM-JAY pays Rs. {{E-0052|num}} per dialysis session; Italy's payback settled at ~{{E-0207|plain}}% of invoices |
 | Low-cost entrants | Indian and Chinese makers price below the majors | Polymed {{CC-0450}} below BD and B. Braun (MD, 2023); Indian makers {{CA-0743|range}} below multinationals (MD, 2024); Chinese dialysis products ~{{CC-0522|range}} below Polymed (MD, 2023) |
 :::
 <!-- TR3Q25 p.9; TR4Q26 p.6; DK1Q27 p.22; TR4Q23 p.12; BD_10K25 p.1; TERUMO_FY25 p.7; BBRAUN_AR25 p.44; NIPRO_FY25 pp.3-4; BAX_10K25 p.1; AR26 p.77; TR2Q26 p.11; KDL_AR25 p.17; EU_IPI2025_1197 p.7; PD24 p.41; DRHP_SMT p.178; RHP_NEPHRO p.284; TR3Q23 p.15; TR1Q25 p.15; TR4Q23 p.11 -->
+
+::: chart
+{"id":"b1_rebates","type":"column","title":"Polymed's rebates and discounts rose to Rs. 116mn in FY26 from Rs. 73mn in FY25, still under 1% of standalone revenue","cats":["FY24","FY25","FY26"],"scale":"mn","unit":"Rs mn","dec":0,"label_all":true,"series":[{"name":"Rebates and discounts, standalone","facts":["A-0824","A-0480","A-0479"]}],"note":"Variable consideration deducted from the gross contract price in the revenue note of the standalone accounts (FY24 from the FY25 annual report). As a share of standalone revenue from operations: {{D-WX-030}} in FY24, {{D-WX-031}} in FY25 and {{D-WX-032}} in FY26 (our calculation)."}
+:::
+<!-- AR26 p.77; AR25 p.119 -->
 
 We see pricing in disposables as a slow ratchet: small annual increases, passed on only partly and with a lag, and bounded by tenders, reimbursement and cheaper imports. For Polymed the direction of travel is set less by its list prices than by its channel mix. The more it sells to private chains and export distributors on negotiated terms, and the less through lowest-price tenders and MRP-led trade, the less exposed it is to India's price-policy debate (Section B3).

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.2 Vascular access and oncology (Plan1Health) · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html" class="active">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l3"><a href="#what-the-line-includes-and-how-it-is-used">What the line includes and how it is used</a></li><li class="l3"><a href="#plan1health-the-italian-base">Plan1Health: the Italian base</a></li><li class="l3"><a href="#oncology-in-vision-2030-and-in-india">Oncology in Vision 2030 and in India</a></li><li class="l3"><a href="#market-and-competition-2">Market and competition</a></li><li class="l3"><a href="#regulation-specific-to-the-line">Regulation specific to the line</a></li><li class="l3"><a href="#growth-and-margin-drivers-ranked">Growth and margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-2">What to watch</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-1.html"><span>Previous</span>A4.1 Infusion therapy</a><a class="next" href="a4-3.html"><span>Next</span>A4.3 Renal care</a></nav>
+<h2 id="a4-2">A4.2 Vascular access and oncology (Plan1Health)</h2>
+<p>Vascular access and oncology cover the catheters that stay in for days to months rather than hours: central venous catheters, PICCs, midlines, arterial lines, implantable chemotherapy ports and the Huber needles used to reach them. They sell for many times the price of a peripheral cannula and need clinicians trained to place them. Polymed's route in was Plan1Health, a small Italian port and PICC maker bought in two tranches in 2018 and 2019, whose turnover has roughly tripled in euro terms since 2020. Group revenue for the line is [not disclosed]: it sits in "others", and management declines to break oncology out. <!-- TR4Q26 p.17; DK1Q27 p.12 --></p>
+<section class="snapshot"><p class="ct">Vascular access and oncology at a glance</p><dl><div><dt>Revenue</dt><dd>[not disclosed] at group level (inside "others"); last split FY20: oncology <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 286mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.3%</span> of product sales), central venous catheters <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 128mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">1.9%</span>)</dd></div><div><dt>Plan1Health revenue CY25</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.1bn</span> (<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€10.5mn</span>), about <span class="n" title="Our calculation: A-0380/A-0039*100; inputs: Rs. 1.1bn (Annual Report FY26, p.33); Rs. 18.8bn (Annual Report FY26, p.6)">5.6%</span> of group revenue (our calculation; calendar vs. fiscal year)</dd></div><div><dt>Plan1Health growth</dt><dd><span class="n" title="Our calculation: ((CB-0105/CB-0099)**(1/5)-1)*100; inputs: €10.5mn (Investor deck 1QFY27, p.12); €3.24mn (Investor deck 1QFY27, p.12)">27%</span> euro revenue CAGR over CY20-CY25 (our calculation); company EBITDA margin <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">3.7%</span> in CY20 to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">13.4%</span> in CY25</dd></div><div><dt>Deal</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">100%</span> for an enterprise value of ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€4.2mn</span>, paid in two tranches (Jun-2018 and Mar-2019)</dd></div><div><dt>Approvals</dt><dd>Whole Plan1Health portfolio approved in Europe; one US 510(k) (Painfusor catheter, 2011)</dd></div><div><dt>What is disclosed</dt><dd>Plan1Health turnover (directors' report) and EBITDA margin (company slide); no group revenue for vascular access or oncology</dd></div></dl></section>
+<!-- PD21 p.130; AR26 p.33; DK1Q27 p.12; SUB26BV p.8; DK4Q26 pp.38-39; FDA510K_P1H p.1 -->
+<h3 id="what-the-line-includes-and-how-it-is-used">What the line includes and how it is used</h3>
+<figure class="exh" id="exh-va_products"><figcaption><span class="exn">Exhibit 24:</span> Longer-dwell catheters and ports carry more value per patient than cannulas and recur through needles and maintenance items</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>Clinical use</th>
+<th>Dwell and unit of demand</th>
+<th>Polymed brands</th>
+<th>Where made or sourced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Central venous catheter (CVC) kits</td>
+<td>Drugs, vasopressors and nutrition through a large central vein; pressure measurement</td>
+<td>Days to weeks; one kit per insertion, driven by ICU admissions and major surgery</td>
+<td>Polymed CVC (one to four lumens), Novocent, Novocent Protekt, Novocent Pro</td>
+<td>India</td>
+</tr>
+<tr>
+<td>PICCs and PICC-ports</td>
+<td>Chemotherapy, long antibiotic courses, nutrition, frequent sampling</td>
+<td>Weeks to months; one kit per treatment course</td>
+<td>HealthPICC (Plan1Health); Polymed PICC kits; neonatal PICCs of <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 3">1Fr &amp; 2Fr</span></td>
+<td>Italy and India</td>
+</tr>
+<tr>
+<td>Midlines and mini-midlines</td>
+<td>Peripheral therapy for days to weeks without repeated cannulation</td>
+<td>One per course</td>
+<td>Poly Lead OTN and OTW; HealthMID</td>
+<td>India and Italy</td>
+</tr>
+<tr>
+<td>Arterial cannulas and catheters</td>
+<td>Beat-to-beat blood pressure and arterial sampling in ICU and theatre</td>
+<td>One per monitored episode; pulls through pressure lines and blood-gas syringes</td>
+<td>Art-Can, Art-Can Safety, Art-Cath</td>
+<td>India</td>
+</tr>
+<tr>
+<td>Implantable ports (chemoports)</td>
+<td>Chemotherapy over months under the skin of the chest or arm</td>
+<td>One per patient course, months to years</td>
+<td>Healthport and Secureport: titanium and plastic, low-profile and power-injectable</td>
+<td>Italy; Secureport PLP partly bought in</td>
+</tr>
+<tr>
+<td>Huber and safety Huber needles</td>
+<td>Non-coring access to the port septum</td>
+<td>One per port access; recurs with every chemotherapy cycle</td>
+<td>Polygrip, safety Huber needle</td>
+<td>India</td>
+</tr>
+<tr>
+<td>Pain-management catheters</td>
+<td>Continuous local anaesthetic after surgery</td>
+<td>One per surgical patient</td>
+<td>Painfusor</td>
+<td>Italy</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; 31st AGM presentation; QIP Placement Document Aug 2024; FDA 510(k) clearances – Plan 1 Health; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.10-12, pp.17-18; CATEXP24 pp.14-21, pp.38-47; D_product_glossary; DKAGM31 p.3; PD24 pp.102, 173-174; FDA510K_P1H p.1 -->
+<p>Specifications show how the line is positioned:</p>
+<ul>
+<li><strong>Ports</strong> tolerate up to <span class="n" title="Source: Product catalogue export Oct 2024 (2024-10-25), slide/page 39">2,000</span> punctures with a 22G Huber needle. Power versions are rated to <span class="n" title="Source: Product catalogue export Oct 2024 (2024-10-25), slide/page 41">5 ml/s</span> for CT contrast. <!-- CATEXP24 pp.39, 41 --></li>
+<li><strong>HealthPICC kits</strong> bundle accessories from other makers: a MicroCLAVE connector from ICU Medical and a Grip-Lok securement device from TIDI. <!-- CATEXP24 pp.19-20 --></li>
+<li><strong>The Secureport PLP port</strong> was listed among purchased stock-in-trade in the 2024 placement document. At least part of the port range is therefore traded rather than made at the reporting level. <!-- PD24 p.102 --></li>
+</ul>
+<p>The unit economics differ from infusion. A port patient generates a Huber needle for every chemotherapy cycle and maintenance items for the life of the port, so the installed base of ports drives recurring volume. <!-- D_product_glossary --></p>
+<h3 id="plan1health-the-italian-base">Plan1Health: the Italian base</h3>
+<p><strong>History.</strong></p>
+<ul>
+<li><strong>The company:</strong> Plan1Health, of Amaro in north-east Italy, dates from 1995 on Polymed's slides. The 2024 placement document says it was incorporated in 1990. <!-- DK1Q27 p.12; PD24 pp.194-195 --></li>
+<li><strong>The purchase:</strong> Poly Medicure B.V. paid <span class="n nl" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 8">EUR 3,468,600 and EUR 761,400 on 18 June 2018 and 6 March 2019</span>, booking goodwill of <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 8">€3.83mn</span>. That is why Polymed's documents date the deal both FY18 (<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 76">Rs. 342mn</span>, placement document) and 2019 (enterprise value ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€4.2mn</span>, company slide). <!-- SUB26BV p.8; PD24 p.76; DK1Q27 p.12 --></li>
+<li><strong>Scale:</strong> it had <span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 19">31</span> employees in CY25. <!-- SUB26P1IT p.19 --></li>
+</ul>
+<p><strong>What it makes.</strong> Polymed's slides describe Plan1Health as an "integrated developer &amp; seller of long-term infusion devices, oncology products and an innovative pain-control device", a "specialist in long-term implantables" and the "sole approved supplier for one of the largest OEM for Class III implants" (Section A4.10). <!-- DK1Q27 p.12; DKAGM31 p.17 --></p>
+<ul>
+<li><strong>Europe:</strong> it sells through <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+ distributors, with its whole portfolio of four categories approved. <!-- DK4Q26 p.39 --></li>
+<li><strong>US:</strong> its only clearance is the Painfusor catheter (K111031, 2011), which the company describes as an approval held for an OEM. <!-- FDA510K_P1H p.1; DK4Q26 p.38 --></li>
+<li><strong>Italy:</strong> it sells through distributors, like the rest of its European business; the group's direct sales presence in Italy, its only direct market in Europe, belongs to Citieffe (Section A4.9). Plan1Health's stated plan is more Italian and EU tenders and new device launches in Italy. <!-- DK4Q26 p.39; TR1Q27S p.8 --></li>
+</ul>
+<figure class="exh" id="exh-p1h_rev"><figcaption><span class="exn">Exhibit 25:</span> Plan1Health's turnover has risen every year since 2020, with the steepest gains after 2022</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">250</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">500</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">750</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">1,000</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">1,250</text><text class="unit" text-anchor="start" x="2" y="13">Rs mn</text><text class="tick" text-anchor="middle" x="89.88" y="284">CY18</text><path class="mark" d="M77.88,266.00V243.65Q77.88,239.65 81.88,239.65H97.88Q101.88,239.65 101.88,243.65V266.00Z" data-tip="CY18 · Plan1Health turnover: Rs. 135mn" fill="var(--s1)"><title>CY18 · Plan1Health turnover: Rs. 135mn</title></path><text class="val" text-anchor="middle" x="89.88" y="233.65">135</text><text class="tick" text-anchor="middle" x="177.62" y="284">CY19</text><path class="mark" d="M165.62,266.00V214.45Q165.62,210.45 169.62,210.45H185.62Q189.62,210.45 189.62,214.45V266.00Z" data-tip="CY19 · Plan1Health turnover: Rs. 285mn" fill="var(--s1)"><title>CY19 · Plan1Health turnover: Rs. 285mn</title></path><text class="val" text-anchor="middle" x="177.62" y="204.45">285</text><text class="tick" text-anchor="middle" x="265.38" y="284">CY20</text><path class="mark" d="M253.38,266.00V215.11Q253.38,211.11 257.38,211.11H273.38Q277.38,211.11 277.38,215.11V266.00Z" data-tip="CY20 · Plan1Health turnover: Rs. 281mn" fill="var(--s1)"><title>CY20 · Plan1Health turnover: Rs. 281mn</title></path><text class="val" text-anchor="middle" x="265.38" y="205.11">281</text><text class="tick" text-anchor="middle" x="353.12" y="284">CY21</text><path class="mark" d="M341.12,266.00V203.78Q341.12,199.78 345.12,199.78H361.12Q365.12,199.78 365.12,203.78V266.00Z" data-tip="CY21 · Plan1Health turnover: Rs. 339mn" fill="var(--s1)"><title>CY21 · Plan1Health turnover: Rs. 339mn</title></path><text class="val" text-anchor="middle" x="353.12" y="193.78">339</text><text class="tick" text-anchor="middle" x="440.88" y="284">CY22</text><path class="mark" d="M428.88,266.00V187.58Q428.88,183.58 432.88,183.58H448.88Q452.88,183.58 452.88,187.58V266.00Z" data-tip="CY22 · Plan1Health turnover: Rs. 422mn" fill="var(--s1)"><title>CY22 · Plan1Health turnover: Rs. 422mn</title></path><text class="val" text-anchor="middle" x="440.88" y="177.58">422</text><text class="tick" text-anchor="middle" x="528.62" y="284">CY23</text><path class="mark" d="M516.62,266.00V143.37Q516.62,139.37 520.62,139.37H536.62Q540.62,139.37 540.62,143.37V266.00Z" data-tip="CY23 · Plan1Health turnover: Rs. 649mn" fill="var(--s1)"><title>CY23 · Plan1Health turnover: Rs. 649mn</title></path><text class="val" text-anchor="middle" x="528.62" y="133.37">649</text><text class="tick" text-anchor="middle" x="616.38" y="284">CY24</text><path class="mark" d="M604.38,266.00V125.68Q604.38,121.68 608.38,121.68H624.38Q628.38,121.68 628.38,125.68V266.00Z" data-tip="CY24 · Plan1Health turnover: Rs. 739mn" fill="var(--s1)"><title>CY24 · Plan1Health turnover: Rs. 739mn</title></path><text class="val" text-anchor="middle" x="616.38" y="115.68">739</text><text class="tick" text-anchor="middle" x="704.12" y="284">CY25</text><path class="mark" d="M692.12,266.00V64.16Q692.12,60.16 696.12,60.16H712.12Q716.12,60.16 716.12,64.16V266.00Z" data-tip="CY25 · Plan1Health turnover: Rs. 1.1bn" fill="var(--s1)"><title>CY25 · Plan1Health turnover: Rs. 1.1bn</title></path><text class="val" text-anchor="middle" x="704.12" y="54.16">1,054</text></svg></div><p class="note">Calendar years, rupee turnover as stated in Polymed's directors' reports, so the series includes currency effects. Rupee CAGR over CY20-CY25 was <span class="n" title="Our calculation: ((A-0380/WA-0011)**(1/5)-1)*100; inputs: Rs. 1.1bn (Annual Report FY26, p.33); Rs. 281mn (Annual Report FY21, p.32)">30%</span> and euro CAGR <span class="n" title="Our calculation: ((CB-0105/CB-0099)**(1/5)-1)*100; inputs: €10.5mn (Investor deck 1QFY27, p.12); €3.24mn (Investor deck 1QFY27, p.12)">27%</span> (our calculations). Polymed bought the company in two tranches in Jun-2018 and Mar-2019.</p><p class="src">Source: Annual Report FY20; Annual Report FY21; Annual Report FY22; Annual Report FY23; Annual Report FY25; Annual Report FY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">CY18</th><th class="num">CY19</th><th class="num">CY20</th><th class="num">CY21</th><th class="num">CY22</th><th class="num">CY23</th><th class="num">CY24</th><th class="num">CY25</th></tr></thead><tbody><tr><th scope="row">Plan1Health turnover</th><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 35">Rs. 135mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 35">Rs. 285mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 32">Rs. 281mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 26">Rs. 339mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 21">Rs. 422mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 649mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 739mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.1bn</span></td></tr></tbody></table></div></details></figure>
+<p><strong>Growth and margins.</strong> Plan1Health's revenue fell <span class="n" title="Source: 2QFY22 earnings call transcript (2022-12-01), slide/page 3 · Himanshu Baid, MD">5%</span> in the COVID year, then grew <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 4 · Himanshu Baid, MD">30%</span> (FY22), ~<span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 4 · Himanshu Baid, MD">50%</span> (9MFY24) and <span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 8 · Himanshu Baid, MD">40%+</span> (FY24). Management said it was still growing <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 19 · Himanshu Baid, MD">30-35%</span> in Feb-2026. <!-- TR2Q22 p.3; TR4Q22 p.4; TR3Q24b p.4; TR4Q24 p.8; TR3Q26 p.19 --></p>
+<p>The margin record is less clear, as <a href="#exh-p1h_fin">Exhibit 26</a> shows. Management has put the EBITDA margin at <span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 8 · Himanshu Baid, MD">16-17%</span> for FY24 and <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">16-17%</span> in Nov-2025, yet its own acquisition slide shows <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">10.9%</span> for CY24 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">13.4%</span> for CY25. The statutory Italian accounts give an EBIT margin of <span class="n" title="Our calculation: B-0724/B-0722*100; inputs: €1.07mn (Plan1 Health srl FY26 accounts, p.3); €10.5mn (Plan1 Health srl FY26 accounts, p.3)">10.2%</span> in CY25 (our calculation) and net profit of <span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 4">€681k</span>. We use the slide figures, which fit the statutory EBIT, and treat the higher figures as management rounding or a different definition. <!-- TR4Q24 p.8; TR2Q26 p.9; DK1Q27 p.12; SUB26P1IT pp.3-4 --></p>
+<figure class="exh" id="exh-p1h_fin"><figcaption><span class="exn">Exhibit 26:</span> Plan1Health: revenue has tripled in euros since 2020; management's margin claims run ahead of the company's own slide</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th></th>
+<th>CY20</th>
+<th>CY22</th>
+<th>CY23</th>
+<th class="num">CY24</th>
+<th class="num">CY25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue, euros (company slide; CY23 statutory)</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€3.24mn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€4.83mn</span></td>
+<td class="num"><span class="n" title="Source: Plan1 Health srl 2024 accounts (2025-09-19), slide/page 3">€7.25mn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€8.11mn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">€10.5mn</span></td>
+</tr>
+<tr>
+<td>Turnover, rupees (directors' report)</td>
+<td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 32">Rs. 281mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 21">Rs. 422mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 649mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 739mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.1bn</span></td>
+</tr>
+<tr>
+<td>EBITDA margin (company slide)</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">3.7%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">3.8%</span></td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">10.9%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">13.4%</span></td>
+</tr>
+<tr>
+<td>EBITDA margin, management on calls (FY24; Nov-2025)</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 8 · Himanshu Baid, MD">16-17%</span></td>
+<td class="num"><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">16-17%</span></td>
+</tr>
+<tr>
+<td>EBIT margin, statutory (our calculation)</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Our calculation: B-0724/B-0722*100; inputs: €1.07mn (Plan1 Health srl FY26 accounts, p.3); €10.5mn (Plan1 Health srl FY26 accounts, p.3)">10.2%</span></td>
+</tr>
+<tr>
+<td>Net profit, statutory</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Plan1 Health srl 2024 accounts (2025-09-19), slide/page 4">€615k</span></td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 4">€681k</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; Plan1 Health srl 2024 accounts; Plan1 Health srl FY26 accounts; Annual Report FY21; Annual Report FY23; Annual Report FY25; Annual Report FY26; 4QFY24 earnings call transcript; 2QFY26 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- DK1Q27 p.12; SUB25P1IT pp.3-4; SUB26P1IT pp.3-4; AR21 p.32; AR23 p.21; AR25 p.37; AR26 p.33; TR4Q24 p.8; TR2Q26 p.9 -->
+<p>The company's own slides also disagree on the margin gain since the acquisition: <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">970bps</span> (1QFY27 deck), ~<span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">670bps</span> (Sep-2026 AGM deck) and ~<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 22">600bps</span> (4QFY26 deck). The 1QFY27 deck also claims <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">3.2x</span> revenue and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">11.8x</span> EBITDA growth since 2020. <!-- DK1Q27 p.12; DKAGM31 p.17; DK4Q26 p.22 --></p>
+<p><strong>Links with the parent.</strong></p>
+<ul>
+<li><strong>Trade:</strong> Polymed sold goods worth <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 147mn</span> to Plan1Health in FY26. <!-- AR26 p.88 --></li>
+<li><strong>Management:</strong> Plan1Health's chief executive, Alessandro Balboni (formerly chief executive of Delta Med SpA and Paul Hartmann SpA), also runs Polymed's EMEA business and sits on its board as a non-independent director. He was paid management fees of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 89">Rs. 29mn</span> in FY26 (Section A9). <!-- DKNOV20 p.9; DK2Q24 pp.7-8; AR26 p.89 --></li>
+<li><strong>The "P1H playbook":</strong> management presents Plan1Health as the model for PendraCare and Citieffe: faster launches, manufacturing moved to India to cut cost, direct sales, wider distribution and joint R&amp;D. <!-- DK1Q27 pp.11-12; AR26 p.10 --></li>
+</ul>
+<h3 id="oncology-in-vision-2030-and-in-india">Oncology in Vision 2030 and in India</h3>
+<p>Management lists oncology among the five focus areas for the next five years, with orthopaedics, cardiology, neonatology and renal care, and says the shift "helps us to even get a better gross margin". <!-- TR4Q26 p.10 --></p>
+<p>The Indian plan has four strands:</p>
+<ul>
+<li><strong>Local manufacture.</strong> Oncology products are sold in India through the critical-care team. Management says "a lot of products which we are making in Italy today" will be shifted to India, where it says demand is <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 8 · Himanshu Baid, MD">80-90%</span> imported. <!-- TR4Q25 p.4; TR2Q25 p.8 --></li>
+<li><strong>Higher-class devices.</strong> Chemoports, a Class III implantable, have been launched in India. Management frames this as a shift from short-term devices to "longer term use devices" in Class III, with competition mostly from multinationals and "a couple of good Indian companies also like Meril". <!-- TR3Q25 p.11 --></li>
+<li><strong>Public cancer care.</strong> The government is setting up standalone specialty oncology (day-care) centres: <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">200</span> in FY26 and <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">700</span> over three years, on management's account. <!-- TR2Q26 p.5; TR4Q25 p.4 --></li>
+<li><strong>New products.</strong> Recent launches include neonatal PICCs of <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 3">1Fr &amp; 2Fr</span> ("one of the first" made in India), an antimicrobial CVC, tear-away introducers, midlines, PICC-ports and a safety Huber needle. <!-- DKAGM31 pp.3, 5; DK4Q26 p.30 --></li>
+</ul>
+<h3 id="market-and-competition-2">Market and competition</h3>
+<p>Commercial research firms (vendor estimates, used as indications only) put these global markets at:</p>
+<ul>
+<li>implantable ports: <span class="n" title="Source: Implantable Ports – Global Strategic Business Report (Market Glass) – Research and Markets product page (2026-09) · third-party estimate">$1.4bn</span> in 2025;</li>
+<li>PICCs: <span class="n" title="Source: Peripherally Inserted Central Catheter Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$1.43bn</span> in 2026;</li>
+<li>central venous catheters: <span class="n" title="Source: Central Venous Catheters Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$3.07bn</span> in 2026;</li>
+<li>catheter introducer sheaths: <span class="n" title="Source: Catheter Introducer Sheaths Market Size &amp; Forecast to 2030 (Grand View Research) – Research and Markets product page (2024-11) · third-party estimate">$1.93bn</span> by 2030.</li>
+</ul>
+<p>Their company lists put B. Braun, BD, Cook Medical, AngioDynamics, Smiths Medical and Teleflex in ports and PICCs. Poly Medicure is listed among PICC and CVC suppliers. <!-- VND_RNM_PORTS p.1; VND_RNM_PICC p.1; VND_RNM_CVC p.1; VND_RNM_SHEATH p.1 --></p>
+<p>The large competitors are:</p>
+<ul>
+<li><strong>BD:</strong> ports sit within its Peripheral Intervention unit (<span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$2.0bn</span> revenue in FY25), and PICCs and midlines within Medication Delivery Solutions. <!-- BD_10K25 p.1 --></li>
+<li><strong>Teleflex:</strong> its Vascular product category, mainly Arrow-branded catheters plus tip-positioning and intraosseous systems, generated <span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$917.7mn</span> in CY25. <!-- TFX_10K25 p.1 --></li>
+<li><strong>ICU Medical:</strong> it sells Port-A-Cath ports, PowerWand midlines and Deltec Gripper non-coring needles within a consumables business of <span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">$1.1bn</span>. <!-- ICUI_10K25 p.1 --></li>
+</ul>
+<p>In India, management names multinationals and Meril as the competitors in oncology implants. <!-- TR3Q25 p.11 --></p>
+<p>We see Plan1Health's advantage as regulatory, not scale. It holds MDR approval for its whole portfolio and supplies a Class III OEM, and management says each country registration takes two to three years. Polymed's contribution is lower-cost manufacturing and a distribution network in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">125+</span> countries. <!-- DK4Q26 p.39; DK1Q27 p.12; TR2021 p.10; TR3Q24b p.11; AR26 p.3 --></p>
+<h3 id="regulation-specific-to-the-line">Regulation specific to the line</h3>
+<ul>
+<li><strong>Class III.</strong> Ports are Class III implants, the highest risk class in Europe. Management says Class III devices take "very much, much longer to register", often two to three years including clinical trials. <!-- TR1Q27S p.13; TR2021 p.10 --></li>
+<li><strong>Italian payback.</strong> A 2015 Italian law requires device suppliers to pay the government when regional device spending exceeds annual ceilings; the Constitutional Court upheld it in Jul-2024. BD booked a <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$62mn</span> accrual for it in FY24 and settled its 2015-2018 obligations at <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">25</span>% of invoiced amounts under a Jun-2025 decree. Italian public spending on medical devices and services is about <span class="n" title="Source: Confindustria Dispositivi Medici – Il settore dei dispositivi medici in numeri 2025 (read via WebFetch) (2025)">€10bn</span> a year, according to the industry association Confindustria Dispositivi Medici (2025 edition of its sector figures). Plan1Health plans to bid in more Italian tenders and Citieffe sells direct in Italy, so we infer some group exposure; it is [not disclosed]. <!-- BD_10K25 p.1; CDM_NUMERI25 p.1; DK4Q26 p.39 --></li>
+<li><strong>EU procurement.</strong> Since Jun-2025 the EU has excluded Chinese bidders from public medical-device tenders worth <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 12">€5mn</span> or more (Section A4.1). For Plan1Health, which plans to bid in more Italian and EU tenders, that removes Chinese rivals from the larger ones (our view). <!-- EU_IPI2025_1197 p.12; DK4Q26 p.39 --></li>
+<li><strong>US.</strong> Beyond Painfusor, Plan1Health is "evaluating product submissions for FDA approvals"; no filing has been disclosed. <!-- DK4Q26 p.38 --></li>
+</ul>
+<h3 id="growth-and-margin-drivers-ranked">Growth and margin drivers, ranked</h3>
+<ol>
+<li><strong>India import substitution in ports and PICCs</strong> (management target; our view: largest long-run lever). The drivers are chemotherapy volumes, the day-care cancer centres and hospitals preferring local suppliers as insurance spreads. Timing depends on moving Plan1Health products to Indian manufacture and approval. <!-- TR2Q25 p.8; TR2Q26 p.5; TR4Q26 p.10 --></li>
+<li><strong>Plan1Health's European growth</strong> (management: <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 19 · Himanshu Baid, MD">30-35%</span> a year). The company's stated levers are more tenders in Italy and other EU markets and new device launches in Italy; Plan1Health has <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">1</span> product in the European approval pipeline. <!-- TR3Q26 p.19; DK4Q26 p.39 --></li>
+<li><strong>Recurring consumables per port</strong> (our view). Huber needles and maintenance items follow the installed base of ports.</li>
+<li><strong>Margin: scale and Indian manufacturing</strong> (company target). The company-reported EBITDA margin rose from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">3.7%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">13.4%</span> as revenue tripled. The company lists using India manufacturing to reduce cost among the "repeatable plays" already run at Plan1Health, and management plans to shift "a lot of" the products made in Italy to India. <!-- DK1Q27 p.12; TR2Q25 p.8 --></li>
+<li><strong>Risk: Italian payback and tender pricing</strong> (our view). These could offset part of the gain; the exposure is [not disclosed].</li>
+</ol>
+<h3 id="what-to-watch-2">What to watch</h3>
+<figure class="exh" id="exh-va_watch"><figcaption><span class="exn">Exhibit 27:</span> Vascular access and oncology: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plan1Health turnover</td>
+<td>The only revenue measure for this line</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.1bn</span> (CY25)</td>
+<td>Directors' report, annual</td>
+</tr>
+<tr>
+<td>Plan1Health EBITDA margin</td>
+<td>Tests the "P1H playbook" used to justify later deals</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 12">13.4%</span> (CY25, company slide)</td>
+<td>Presentations</td>
+</tr>
+<tr>
+<td>Port and PICC launches in India</td>
+<td>Import substitution needs local manufacture and approval</td>
+<td>Chemoports and neonatal PICCs launched</td>
+<td>Calls and AGM deck</td>
+</tr>
+<tr>
+<td>EU MDR approvals for new oncology and neonatal products</td>
+<td>Unlocks tender access in Europe</td>
+<td>Filed early 2025; approvals expected in 2026</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Italian payback exposure</td>
+<td>Could claw back revenue from public hospitals</td>
+<td>[not disclosed]</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>Group oncology revenue</td>
+<td>Management declines to disclose</td>
+<td>[not disclosed]</td>
+<td>Not disclosed</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; Investor deck 1QFY27; 3QFY25 earnings call transcript; 31st AGM presentation; 2QFY26 earnings call transcript; 4QFY26 earnings call transcript; Avendus Spark Research</p></figure>
+<!-- AR26 p.33; DK1Q27 p.12; TR3Q25 p.11; DKAGM31 p.3; TR2Q26 pp.9-10; TR4Q26 p.17 -->
+<p><strong>Open questions for management</strong> (also in the question bank):</p>
+<ul>
+<li>oncology and vascular-access revenue at group level;</li>
+<li>which Plan1Health products are made in Italy, bought in, or being moved to India;</li>
+<li>the definition behind management's higher EBITDA margin figures for Plan1Health;</li>
+<li>any Italian payback accruals;</li>
+<li>the identity and terms of the Class III OEM customer.</li>
+</ul>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-1.html"><span>Previous</span>A4.1 Infusion therapy</a><a class="next" href="a4-3.html"><span>Next</span>A4.3 Renal care</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

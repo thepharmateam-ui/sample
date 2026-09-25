@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.7 Gastroenterology, urology, surgery and wound drainage · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html" class="active">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l3"><a href="#what-is-disclosed-a-five-year-gap-then-two-brsr-shares-a-yea">What is disclosed: a five-year gap, then two BRSR shares a year</a></li><li class="l3"><a href="#gastroenterology-and-enteral-feeding-small-but-the-one-range">Gastroenterology and enteral feeding: small, but the one range being upgraded</a></li><li class="l3"><a href="#urology-catheters-and-bags-without-the-premium-materials">Urology: catheters and bags without the premium materials</a></li><li class="l3"><a href="#surgery-and-wound-drainage-the-largest-of-the-three">Surgery and wound drainage: the largest of the three</a></li><li class="l3"><a href="#competition-mnc-specialists-above-many-indian-and-chinese-ma">Competition: MNC specialists above, many Indian and Chinese makers below</a></li><li class="l3"><a href="#customers-channel-pricing-and-regulation">Customers, channel, pricing and regulation</a></li><li class="l3"><a href="#company-specific-growth-drivers-ranked-3">Company-specific growth drivers, ranked</a></li><li class="l3"><a href="#company-specific-margin-drivers-ranked-3">Company-specific margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-7">What to watch</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-6.html"><span>Previous</span>A4.6 Anaesthesia, respiratory and critical care</a><a class="next" href="a4-8.html"><span>Next</span>A4.8 Cardiology</a></nav>
+<h2 id="a4-7">A4.7 Gastroenterology, urology, surgery and wound drainage</h2>
+<p>These are three of Polymed's oldest ranges (feeding tubes, urine bags and catheters, and wound and chest drains), and their product lists in the FY16 annual report and the Aug-2024 placement document are the same. Surgery and wound drainage and urology together were <span class="n" title="Our calculation: A-0849+A-0850; inputs: 5.3% (BRSR FY26, p.12); 3.0% (BRSR FY26, p.12)">8.3%</span> of FY26 standalone turnover, ~<span class="n" title="Our calculation: (A-0849+A-0850)/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.4bn</span> (our calculation); gastroenterology is not shown separately. None is among the MD's focus areas (orthopaedics, cardiology, neonatology, oncology and renal care); he says Polymed has "not covered" urology or gastroenterology as therapies, and small segments such as surgery are "clubbed under the General category". On our calculation both reported lines shrank in FY26 while standalone revenue grew. The one upgrade under way is in enteral feeding. <!-- AR16 p.6; PD24 p.173; BRSR26 p.12; TR4Q26 p.10; TR2Q26 p.12; TR4Q25 p.12 --></p>
+<section class="snapshot"><p class="ct">Gastroenterology, urology, surgery and wound drainage at a glance</p><dl><div><dt>Revenue FY26 (standalone, our calculation)</dt><dd>Surgery and wound drainage ~<span class="n" title="Our calculation: A-0849/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 889mn</span> (<span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span> of turnover); urology ~<span class="n" title="Our calculation: A-0850/100*A-0350; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 497mn</span> (<span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span>); gastroenterology [not disclosed]</dd></div><div><dt>Growth FY26 (our calculation)</dt><dd>Surgery <span class="n" title="Our calculation: A-0849*A-0350/(A-0897*A-0351)*100-100; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-2.1%</span>, urology <span class="n" title="Our calculation: A-0850*A-0350/(A-0898*A-0351)*100-100; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-5.7%</span>, against standalone revenue growth of <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 9">+3.8%</span></dd></div><div><dt>Last full split</dt><dd>FY20: surgery <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 289mn</span>, urology <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 255mn</span>, gastroenterology <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 44mn</span>; together <span class="n" title="Our calculation: D-0594+D-0602+D-0618; inputs: 3.8% (QIP Placement Document Feb 2021, p.130); 0.7% (QIP Placement Document Feb 2021, p.130); 4.3% (QIP Placement Document Feb 2021, p.130)">8.8%</span> of product sales</dd></div><div><dt>Management stance</dt><dd>Therapies "not covered"; nothing new "substantially in the next few years"; urology and gastro named only as possible adjacencies (Jul-2024)</dd></div><div><dt>Vendor market sizes</dt><dd>Foley catheters <span class="n" title="Source: Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page (2026-06) · third-party estimate">$1.9bn</span> (2025); enteral feeding devices <span class="n" title="Source: Enteral Feeding Devices Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$3.18bn</span> (2026); surgical drainage devices <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">$1.7bn</span> (2025); none for India</dd></div><div><dt>What is disclosed</dt><dd>Two BRSR shares of standalone turnover a year; no quarterly revenue, volumes, prices or margins; no gastroenterology figure since 9MFY21</dd></div></dl></section>
+<!-- BRSR25 p.5; BRSR26 p.12; DK4Q26 p.9; PD21 p.130; TR2Q26 p.12; TR1Q27S pp.13-14; TR1Q25 p.14; VND_RNM_FOLEY p.1; VND_RNM_ENTERAL p.1; VND_FMI_DRAIN p.1 -->
+<h3 id="what-is-disclosed-a-five-year-gap-then-two-brsr-shares-a-yea">What is disclosed: a five-year gap, then two BRSR shares a year</h3>
+<p>The Feb-2021 placement document is the only source with rupee revenue for all three lines (<a href="#exh-gus_rev">Exhibit 45</a>, <a href="#exh-gus_disclosure">Exhibit 46</a>). Over FY18-FY20 surgery and wound drainage compounded at <span class="n" title="Our calculation: ((D-0617/D-0613)**(1/2)-1)*100; inputs: Rs. 289mn (QIP Placement Document Feb 2021, p.130); Rs. 248mn (QIP Placement Document Feb 2021, p.130)">8.1%</span> a year, urology at <span class="n" title="Our calculation: ((D-0593/D-0589)**(1/2)-1)*100; inputs: Rs. 255mn (QIP Placement Document Feb 2021, p.130); Rs. 201mn (QIP Placement Document Feb 2021, p.130)">12.6%</span> and gastroenterology at <span class="n" title="Our calculation: ((D-0601/D-0597)**(1/2)-1)*100; inputs: Rs. 44mn (QIP Placement Document Feb 2021, p.130); Rs. 34mn (QIP Placement Document Feb 2021, p.130)">13.3%</span>, all below the <span class="n" title="Our calculation: ((D-0655/D-0653)**(1/2)-1)*100; inputs: Rs. 6.7bn (QIP Placement Document Feb 2021, p.130); Rs. 5.1bn (QIP Placement Document Feb 2021, p.130)">14.7%</span> of total product sales (our calculation). Investor decks gave rounded shares until May-2022; since then the three lines sit inside "others", and the MD called such figures "confidential" in May-2025. <!-- PD21 p.130; DK2019 p.13; DKFEB21 p.13; DKMAY22 p.10; TR4Q25 p.12 --></p>
+<p>The BRSR restarted the series for the standalone company:</p>
+<ul>
+<li><strong>FY26.</strong> Surgery and wound drainage fell from <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">5.7%</span> of turnover to <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span>, and urology from <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">3.3%</span> to <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span>. That implies <span class="n" title="Our calculation: A-0897/100*A-0351; inputs: 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 908mn</span> falling to <span class="n" title="Our calculation: A-0849/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 889mn</span> (<span class="n" title="Our calculation: A-0849*A-0350/(A-0897*A-0351)*100-100; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-2.1%</span>) and <span class="n" title="Our calculation: A-0898/100*A-0351; inputs: 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 527mn</span> to <span class="n" title="Our calculation: A-0850/100*A-0350; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 497mn</span> (<span class="n" title="Our calculation: A-0850*A-0350/(A-0898*A-0351)*100-100; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-5.7%</span>), our calculation. With blood management (Section A4.4), the three named lines outside infusion and dialysis were <span class="n" title="Our calculation: (A-0848+A-0849+A-0850); inputs: 9.5% (BRSR FY26, p.12); 5.3% (BRSR FY26, p.12); 3.0% (BRSR FY26, p.12)">17.9%</span> of FY26 turnover (our calculation).</li>
+<li><strong>Across the gap.</strong> Surgery's share rose from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.3%</span> of product sales in FY20 to <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">5.7%</span> of standalone turnover in FY25, its revenue up <span class="n" title="Our calculation: A-0897/100*A-0351/D-0617; inputs: 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32); Rs. 289mn (QIP Placement Document Feb 2021, p.130)">3.1x</span> against <span class="n" title="Our calculation: A-0351/D-0655; inputs: Rs. 16.0bn (Annual Report FY26, p.32); Rs. 6.7bn (QIP Placement Document Feb 2021, p.130)">2.4x</span> for the company on the same mixed bases; urology's share slipped from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.8%</span> to <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">3.3%</span>, its revenue up <span class="n" title="Our calculation: A-0898/100*A-0351/D-0593; inputs: 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32); Rs. 255mn (QIP Placement Document Feb 2021, p.130)">2.1x</span> (our calculation). Surgery outgrew the company; urology lagged it.</li>
+<li><strong>Gastroenterology</strong> is not listed. The residual "other" line, where we would expect it, was <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">1.0%</span> of FY26 turnover.</li>
+</ul>
+<p>The MD's Feb-2025 remark that each of the <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 17 · Himanshu Baid, MD">5-6</span> categories outside infusion and renal is "<span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 17 · Himanshu Baid, MD">under 5%</span>" of revenue does not fit surgery, whose standalone BRSR figure alone was <span class="n" title="Our calculation: A-0897/100*A-0351/A-0040*100; inputs: 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32); Rs. 16.7bn (Annual Report FY26, p.6)">5.4%</span> of FY25 consolidated revenue (our calculation); the BRSR category may be broader than management's. <!-- BRSR25 p.5; BRSR26 p.12; AR26 p.6, p.32; DK4Q26 p.9; TR3Q25 p.17 --></p>
+<figure class="exh" id="exh-gus_rev"><figcaption><span class="exn">Exhibit 45:</span> Surgery outgrew urology after FY20, but both lines shrank in FY26 while standalone revenue grew</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Surgery and wound drainage</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Urology</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Gastroenterology</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">200</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">400</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">600</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">800</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">1,000</text><text class="unit" text-anchor="start" x="2" y="13">Rs mn</text><text class="tick" text-anchor="middle" x="104.50" y="284">FY18</text><path class="mark" d="M66.50,266.00V209.53Q66.50,205.53 70.50,205.53H86.50Q90.50,205.53 90.50,209.53V266.00Z" data-tip="FY18 · Surgery and wound drainage: Rs. 248mn" fill="var(--s1)"><title>FY18 · Surgery and wound drainage: Rs. 248mn</title></path><text class="val" text-anchor="middle" x="78.50" y="199.53">248</text><path class="mark" d="M92.50,266.00V220.86Q92.50,216.86 96.50,216.86H112.50Q116.50,216.86 116.50,220.86V266.00Z" data-tip="FY18 · Urology: Rs. 201mn" fill="var(--s2)"><title>FY18 · Urology: Rs. 201mn</title></path><text class="val" text-anchor="middle" x="104.50" y="210.86">201</text><path class="mark" d="M118.50,266.00V261.66Q118.50,257.66 122.50,257.66H138.50Q142.50,257.66 142.50,261.66V266.00Z" data-tip="FY18 · Gastroenterology: Rs. 34mn" fill="var(--s3)"><title>FY18 · Gastroenterology: Rs. 34mn</title></path><text class="val" text-anchor="middle" x="130.50" y="251.66">34</text><text class="tick" text-anchor="middle" x="221.50" y="284">FY19</text><path class="mark" d="M183.50,266.00V202.83Q183.50,198.83 187.50,198.83H203.50Q207.50,198.83 207.50,202.83V266.00Z" data-tip="FY19 · Surgery and wound drainage: Rs. 275mn" fill="var(--s1)"><title>FY19 · Surgery and wound drainage: Rs. 275mn</title></path><text class="val" text-anchor="middle" x="195.50" y="192.83">275</text><path class="mark" d="M209.50,266.00V212.67Q209.50,208.67 213.50,208.67H229.50Q233.50,208.67 233.50,212.67V266.00Z" data-tip="FY19 · Urology: Rs. 235mn" fill="var(--s2)"><title>FY19 · Urology: Rs. 235mn</title></path><text class="val" text-anchor="middle" x="221.50" y="202.67">235</text><path class="mark" d="M235.50,266.00V259.78Q235.50,255.78 239.50,255.78H255.50Q259.50,255.78 259.50,259.78V266.00Z" data-tip="FY19 · Gastroenterology: Rs. 42mn" fill="var(--s3)"><title>FY19 · Gastroenterology: Rs. 42mn</title></path><text class="val" text-anchor="middle" x="247.50" y="249.78">42</text><text class="tick" text-anchor="middle" x="338.50" y="284">FY20</text><path class="mark" d="M300.50,266.00V199.37Q300.50,195.37 304.50,195.37H320.50Q324.50,195.37 324.50,199.37V266.00Z" data-tip="FY20 · Surgery and wound drainage: Rs. 289mn" fill="var(--s1)"><title>FY20 · Surgery and wound drainage: Rs. 289mn</title></path><text class="val" text-anchor="middle" x="312.50" y="189.37">289</text><path class="mark" d="M326.50,266.00V207.74Q326.50,203.74 330.50,203.74H346.50Q350.50,203.74 350.50,207.74V266.00Z" data-tip="FY20 · Urology: Rs. 255mn" fill="var(--s2)"><title>FY20 · Urology: Rs. 255mn</title></path><text class="val" text-anchor="middle" x="338.50" y="197.74">255</text><path class="mark" d="M352.50,266.00V259.30Q352.50,255.30 356.50,255.30H372.50Q376.50,255.30 376.50,259.30V266.00Z" data-tip="FY20 · Gastroenterology: Rs. 44mn" fill="var(--s3)"><title>FY20 · Gastroenterology: Rs. 44mn</title></path><text class="val" text-anchor="middle" x="364.50" y="249.30">44</text><text class="tick" text-anchor="middle" x="455.50" y="284">FY21-FY24</text><text class="tick" text-anchor="middle" x="572.50" y="284">FY25</text><path class="mark" d="M534.50,266.00V48.45Q534.50,44.45 538.50,44.45H554.50Q558.50,44.45 558.50,48.45V266.00Z" data-tip="FY25 · Surgery and wound drainage: Rs. 908mn" fill="var(--s1)"><title>FY25 · Surgery and wound drainage: Rs. 908mn</title></path><text class="val" text-anchor="middle" x="546.50" y="38.45">908</text><path class="mark" d="M560.50,266.00V141.41Q560.50,137.41 564.50,137.41H580.50Q584.50,137.41 584.50,141.41V266.00Z" data-tip="FY25 · Urology: Rs. 527mn" fill="var(--s2)"><title>FY25 · Urology: Rs. 527mn</title></path><text class="val" text-anchor="middle" x="572.50" y="131.41">527</text><text class="tick" text-anchor="middle" x="689.50" y="284">FY26</text><path class="mark" d="M651.50,266.00V53.08Q651.50,49.08 655.50,49.08H671.50Q675.50,49.08 675.50,53.08V266.00Z" data-tip="FY26 · Surgery and wound drainage: Rs. 889mn" fill="var(--s1)"><title>FY26 · Surgery and wound drainage: Rs. 889mn</title></path><text class="val" text-anchor="middle" x="663.50" y="43.08">889</text><path class="mark" d="M677.50,266.00V148.73Q677.50,144.73 681.50,144.73H697.50Q701.50,144.73 701.50,148.73V266.00Z" data-tip="FY26 · Urology: Rs. 497mn" fill="var(--s2)"><title>FY26 · Urology: Rs. 497mn</title></path><text class="val" text-anchor="middle" x="689.50" y="138.73">497</text></svg></div><p class="note">FY18-FY20: consolidated product sales from the Feb-2021 placement document. FY25-FY26: our calculation, BRSR share of standalone turnover x standalone revenue from operations (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 32">Rs. 16.0bn</span> and <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 32">Rs. 16.6bn</span>). The two halves are on different bases. FY21-FY24 were not disclosed by line, and the BRSR does not list gastroenterology. Standalone revenue grew <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 9">3.8%</span> in FY26.</p><p class="src">Source: QIP Placement Document Feb 2021; BRSR FY25; Annual Report FY26; our calculation; BRSR FY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY18</th><th class="num">FY19</th><th class="num">FY20</th><th>FY21-FY24</th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">Surgery and wound drainage</th><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 248mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 275mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 289mn</span></td><td>–</td><td class="num"><span class="n" title="Our calculation: A-0897/100*A-0351; inputs: 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 908mn</span></td><td class="num"><span class="n" title="Our calculation: A-0849/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 889mn</span></td></tr><tr><th scope="row">Urology</th><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 201mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 235mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 255mn</span></td><td>–</td><td class="num"><span class="n" title="Our calculation: A-0898/100*A-0351; inputs: 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 527mn</span></td><td class="num"><span class="n" title="Our calculation: A-0850/100*A-0350; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 497mn</span></td></tr><tr><th scope="row">Gastroenterology</th><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 34mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 42mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 44mn</span></td><td>–</td><td class="num">–</td><td class="num">–</td></tr></tbody></table></div></details></figure>
+<figure class="exh" id="exh-gus_disclosure"><figcaption><span class="exn">Exhibit 46:</span> Surgery's share of sales has moved in a narrow band since FY18; gastroenterology has not been shown since 9MFY21</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Period</th>
+<th>Source and basis</th>
+<th>Surgery and wound drainage</th>
+<th>Urology</th>
+<th>Gastroenterology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY18</td>
+<td>Placement document (Feb-2021)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 248mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.9%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 201mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.0%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 34mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">0.7%</span>)</td>
+</tr>
+<tr>
+<td>FY19</td>
+<td>Placement document</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 275mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.7%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 235mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.0%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 42mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">0.7%</span>)</td>
+</tr>
+<tr>
+<td>FY20</td>
+<td>Placement document</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 289mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.3%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 255mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.8%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 44mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">0.7%</span>)</td>
+</tr>
+<tr>
+<td>9MFY21</td>
+<td>Placement document</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 204mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.6%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 184mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.3%</span>)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 39mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">0.7%</span>)</td>
+</tr>
+<tr>
+<td>Oct-2019, Jun-2020, Nov-2020</td>
+<td>Investor decks, period not stated</td>
+<td><span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">5%</span>, <span class="n" title="Source: Corporate presentation Jun 2020 (2020-06-24), slide/page 15">5%</span>, <span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 14">5%</span></td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FY20</td>
+<td>QIP deck (Feb-2021)</td>
+<td><span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 13">5%</span> (rounded)</td>
+<td><span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 13">4%</span> (rounded)</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FY22 (presumed)</td>
+<td>May-2022 deck</td>
+<td>~<span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">4%</span> (visual read)</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>FY25</td>
+<td>BRSR, standalone</td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">5.7%</span>, ~<span class="n" title="Our calculation: A-0897/100*A-0351; inputs: 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 908mn</span></td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">3.3%</span>, ~<span class="n" title="Our calculation: A-0898/100*A-0351; inputs: 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 527mn</span></td>
+<td>Not listed</td>
+</tr>
+<tr>
+<td>FY26</td>
+<td>BRSR, standalone</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span>, ~<span class="n" title="Our calculation: A-0849/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 889mn</span></td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span>, ~<span class="n" title="Our calculation: A-0850/100*A-0350; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 497mn</span></td>
+<td>Not listed</td>
+</tr>
+</tbody>
+</table></div><p class="note">Placement-document shares are of consolidated product sales; deck shares are rounded and read from pie charts; BRSR shares are of standalone turnover. The May-2022 deck does not state its period (presumed FY22) and its surgery slice is a visual read. Rupee values for FY25-FY26 are our calculation.</p><p class="src">Source: QIP Placement Document Feb 2021; Corporate presentation 2019; Corporate presentation Jun 2020; Investor presentation Nov 2020; Roadshow presentation Feb 2021; Investor presentation May 2022; BRSR FY25; BRSR FY26; Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- PD21 p.130; DK2019 p.13; DKJUN20 p.15; DKNOV20 p.14; DKFEB21 p.13; DKMAY22 p.10; BRSR25 p.5; BRSR26 p.12; AR26 p.32 -->
+<h3 id="gastroenterology-and-enteral-feeding-small-but-the-one-range">Gastroenterology and enteral feeding: small, but the one range being upgraded</h3>
+<p>The range is Ryle's (nasogastric) and Levin's tubes, Novofeed infant feeding tubes, a 1200 ml feeding bag, and umbilical catheters that Polymed files under gastroenterology; stomach tubes appear only in the veterinary range. Each insertion uses one tube, replaced when blocked, displaced or at protocol intervals. Revenue was last disclosed at <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 39mn</span> for 9MFY21. <!-- CATDOM25 p.25; CATEXP24 pp.79-82; WEB_GASTROENTEROLOGY p.1; PD24 pp.173-174; D_product_glossary A4.7 --></p>
+<p><strong>The enteral-connector transition.</strong> The enteral part of the ISO 80369 small-bore connector series, known as ENFit, uses fittings that cannot mate with IV luer connectors, so feeds cannot be given into a vein by mistake, and regulated markets are converting to it. 360iResearch calls the "broad implementation of standardized enteral connectors" a key shift. <!-- D_product_glossary A4.7; VND_RNM_ENTERAL p.1 --></p>
+<ul>
+<li><strong>Export range.</strong> The Oct-2024 export catalogue lists enteral-connector versions of the infant (POLYFIT), Ryle's and Levin's tubes, a feeding bag, an extension set with purple connectors and an enteral stopcock designed to prevent connection to "vascular, respiratory, or epidural lines". The website also lists them under critical care, the ICU division management is building (Section A4.6). <!-- CATEXP24 pp.79-80; WEB_CRITICAL_CARE p.1 --></li>
+<li><strong>India.</strong> The Oct-2025 domestic catalogue lists no enteral-connector versions. The 31st AGM deck (Sep-2026) shows a Ryle's tube and a 1200 ml feeding bag with enteral connector, and an enteral syringe, among recent launches; we read this as the connector range being extended. <!-- CATDOM25 p.25; DKAGM31 p.5 --></li>
+<li><strong>Gap.</strong> No Polymed document uses the ENFit name or cites the enteral part of ISO 80369, so conformity is [not disclosed].</li>
+</ul>
+<p>360iResearch (Sep-2026, a vendor estimate) sizes enteral feeding devices at <span class="n" title="Source: Enteral Feeding Devices Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$3.18bn</span> in 2026, growing <span class="n" title="Source: Enteral Feeding Devices Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">7.7%</span> a year to <span class="n" title="Source: Enteral Feeding Devices Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$4.99bn</span> by 2032. It profiles three Indian makers, Angiplast, Romsons and Sterimed, alongside BD, B. Braun, Cardinal Health and Medline, but not Polymed. Polymed lists no enteral product with the FDA. <!-- VND_RNM_ENTERAL p.1; FDAREG_POLY p.1 --></p>
+<h3 id="urology-catheters-and-bags-without-the-premium-materials">Urology: catheters and bags without the premium materials</h3>
+<p>Polymed sells two-way Foley balloon catheters of "silicone elastomer bonded with latex rubber"; PVC Nelaton, female and rectal catheters; urine bags (the Polyuro Premium with a T-type bottom outlet and sampling port, the Deluxe and Echo, leg and paediatric bags); the Polyurimeter measured-volume meter; and TUR and irrigation sets. The catalogues list no all-silicone, three-way, hydrophilic or antimicrobial catheter and no suprapubic set. Each catheterization episode uses a catheter and a bag or meter, changed when full or at protocol intervals. <!-- CATDOM25 pp.23-24; CATEXP24 pp.83-86; WEB_UROLOGY p.1; D_product_glossary A4.7 --></p>
+<p><strong>CAUTI and the closed-system upgrade.</strong> Grand View Research lists concerns over catheter-associated urinary tract infection (CAUTI) as a restraint on the Foley market and "rising demand for antimicrobial catheters" as a driver. Of its segments (latex, silicone-elastomer-coated, all-silicone, hydrophilic-coated, silver-alloy-coated), Polymed competes only in coated latex, outside the antimicrobial segment the vendor sees growing. Its part in the closed-system upgrade is on the drainage side: bags with needle-free sampling ports and optional air filters, and a urimeter whose sampling port "maintains closed system, reduces the chance of Urinary Tract Infection". <!-- VND_RNM_FOLEY p.1; CATEXP24 pp.84-85 --></p>
+<p><strong>Market.</strong> Grand View (Jun-2026, a vendor estimate) values the global Foley market at <span class="n" title="Source: Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page (2026-06) · third-party estimate">$1.9bn</span> in 2025, rising to <span class="n" title="Source: Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page (2026-06) · third-party estimate">$3.0bn</span> by 2033, a <span class="n" title="Source: Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page (2026-06) · third-party estimate">5.6%</span> CAGR from 2026. IMARC puts intermittent catheters, where Polymed has only PVC Nelaton catheters, at <span class="n" title="Source: Intermittent Catheters Market Report 2026-2034 (IMARC Group) – Research and Markets product page (2026-04) · third-party estimate">$3.1bn</span> (also a vendor estimate). Frost &amp; Sullivan's 2021 data in Healthium's prospectus gave Coloplast <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">39.3%</span> of UK urology consumables and Coloplast with BD <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">47.9%</span> (FY21), while cheaper independents gained: Healthium's Clinisupplies took its UK collection-device share from <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">10.6%</span> to <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">14.0%</span> in FY19-FY21. <!-- VND_RNM_FOLEY p.1; VND_RNM_ICATH p.1; DRHP_HEAL pp.137-139 --></p>
+<p><strong>India's public tenders.</strong> Urine and stool catheters (HS 90183910) are one of <span class="n" title="Source: DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only) (2021-03-25)">19</span> device lines reserved since Mar-2021 for Class-I local suppliers, those with at least <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content. The government's illustrative supplier list for the line names Polymed alongside Romsons, Angiplast, Sterimed, Healthium, Nipro India, Biorad and a long tail of small makers, which we read as a fragmented, price-led market. <!-- PPP_MD_LC21B pp.1, 3, 8; PPP_MD_GUIDE21 p.1 --></p>
+<h3 id="surgery-and-wound-drainage-the-largest-of-the-three">Surgery and wound drainage: the largest of the three</h3>
+<p>The range covers closed wound suction (Polyvac bellows units, the spring-loaded Novovac and the 50 ml Neovac for minor and plastic surgery), Ultravak high-pressure vacuum bottles and Redon drains, Polyseal under-water-seal chest drainage with Ultra Cath Novo thoracic catheters, Polysuction Yankauer sets and an abdominal drainage set. The 30th AGM deck (Sep-2025) listed a decompressor needle and a centesis catheter as recent launches; no skin staplers or sutures are listed. Each operation that needs a drain uses one set, and each chest-drain insertion one catheter and seal system. <!-- CATDOM25 pp.26-27; CATEXP24 pp.66-70, 90; WEB_SURGERY_AND_WOUND_DRAINAGE p.1; DKAGM30 p.18; D_product_glossary A4.7 --></p>
+<p>Future Market Insights (Aug-2025, a vendor estimate) sizes surgical drainage devices at <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">$1.7bn</span> in 2025, growing <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">7.7%</span> a year to <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">$3.6bn</span> by 2035; active drains are <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">57.6%</span> of the market and thoracic and cardiovascular surgery <span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">42.3%</span>, both segments Polymed serves. In India, CRISIL (commissioned by Polymed, Aug-2024; a vendor estimate) puts general and plastic surgery at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 138">5%</span> of the device market in FY24, growing <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 138">11-12%</span> a year to FY28, and 1Lattice counts ~<span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 183">165.7</span>mn surgical procedures in FY25. <!-- VND_FMI_DRAIN p.1; PD24 p.138; DRHP_GSURG p.183 --></p>
+<h3 id="competition-mnc-specialists-above-many-indian-and-chinese-ma">Competition: MNC specialists above, many Indian and Chinese makers below</h3>
+<figure class="exh" id="exh-gus_comp"><figcaption><span class="exn">Exhibit 47:</span> Polymed meets MNC specialists in premium catheters and drains, and many Indian and Chinese makers in the commodity items it sells</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where it meets Polymed</th>
+<th>Scale and position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BD, including Bard (US)</td>
+<td>Foley, intermittent and external catheters, urine meters; enteral syringes; drains</td>
+<td>Urology and Critical Care revenue <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$1.6bn</span> in FY25, up <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">6.1%</span></td>
+</tr>
+<tr>
+<td>Coloplast (Denmark), Hollister (US)</td>
+<td>Intermittent catheters and collection devices</td>
+<td>Coloplast <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">39.3%</span> of UK urology consumables (FY21); Hollister makes in India, in the Haryana-Delhi cluster that includes Polymed</td>
+</tr>
+<tr>
+<td>Teleflex (US)</td>
+<td>Urology-care catheters and urine collectors; drains</td>
+<td>Urology care being sold to Intersurgical with Acute Care for <span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$530mn</span> (signed Dec-2025); named among drain leaders</td>
+</tr>
+<tr>
+<td>B. Braun (Germany); Cardinal Health, Medline, Convatec, Medtronic</td>
+<td>Drains, enteral feeding, Foley</td>
+<td>Aesculap (surgery) sales <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 44">€2.4bn</span> (CY25); the others are named by the vendor reports</td>
+</tr>
+<tr>
+<td>Romsons (India)</td>
+<td>Urology, enteral feeding, anaesthesia, transfusion</td>
+<td>FY24 revenue <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">Rs. 8.6bn</span>, EBITDA margin <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">26.8%</span>; Temasek minority stake completed Sep-2026</td>
+</tr>
+<tr>
+<td>Angiplast and Sterimed (India)</td>
+<td>Angiplast: feeding bags, Ryle's tubes, urine bags, Foley and Nelaton catheters, drains; Sterimed: Foley, enteral, urine catheters</td>
+<td>Angiplast exports more than <span class="n" title="Source: Angiplast Pvt Ltd – corporate website (self-reported export share) (2026-09-24)">80%</span> of output and does OEM work; both are profiled by the Foley and enteral vendor reports</td>
+</tr>
+<tr>
+<td>Healthium (India, KKR)</td>
+<td>Urine collection devices in the UK (Clinisupplies)</td>
+<td>FY25 revenue <span class="n" title="Source: ICRA – Healthium Medtech Limited: Ratings reaffirmed for Bank Lines and assigned for Commercial Paper; outlook revised to Negative (2025-12-11), slide/page 4">Rs. 8.6bn</span>; UK collection-device share <span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 139">14.0%</span> (FY21)</td>
+</tr>
+<tr>
+<td>KDL (China)</td>
+<td>Feeding tubes, urinary catheters, suction tubes, drains</td>
+<td><span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 21">22</span> products CE-registered in CY25, among them feeding tubes, suction tubes and urinary catheters; a thoraco-abdominal drainage catheter registered in China</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025; Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021); QIP Placement Document Aug 2024; Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025; B. Braun SE – Annual Report 2025; Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page; Enteral Feeding Devices Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page; G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); Temasek acquires minority stake in Romsons Group; Temasek takes minority stake in Romsons Group to back expansion and M&amp;A; Angiplast Pvt Ltd – corporate website (self-reported export share); ICRA – Healthium Medtech Limited: Ratings reaffirmed for Bank Lines and assigned for Commercial Paper; outlook revised to Negative; Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告); Avendus Spark Research</p></figure>
+<!-- BD_10K25 p.1; DRHP_HEAL pp.137-139; PD24 pp.130, 133; TFX_10K25 p.1; BBRAUN_AR25 p.44; VND_RNM_FOLEY p.1; VND_RNM_ENTERAL p.1; DRHP_GSURG pp.211, 219; MB_ROMSONS p.1; BS_ROMSONS p.1; ANGIPLAST_WEB p.1; ICRA_HEAL p.4; KDL_AR25 p.21 -->
+<p>Polymed's position rests on breadth within the distributor basket and on local manufacture, not on product leadership: no vendor report profiles it, and we found no share claim for any of these lines.</p>
+<h3 id="customers-channel-pricing-and-regulation">Customers, channel, pricing and regulation</h3>
+<p>No customer, channel or price data are disclosed for these lines, sold through the infusion network: in India, <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 167">506</span> distributors and a sales team of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 170">440</span> covering <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 167">8,000</span> hospitals and nursing homes (Jun-2024), with private buyers ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">90%</span> of domestic sales. Management is shrinking government business, ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">10-12%</span> of domestic sales and down <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">18%</span> in 3QFY26, because prices are lower and states pay late. That cuts against urology's one protected channel, the local-supplier reservation in public tenders. <!-- PD24 pp.167, 170; TR3Q26 p.4 --></p>
+<ul>
+<li><strong>Price caps and trade margins.</strong> MRP increases on devices are capped at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 41">10%</span> a year. In Sep-2026 a Maharashtra FDA survey found a catheter (type and maker not named) bought for <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 29.4</span> with an MRP of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 310</span>, a <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">955%</span> mark-up, and on 18 Sep the Health Minister asked the DoP to explore curbs on mark-ups on hospital consumables (Section B3). The mark-up accrues to distributors and hospitals, so a cap would hit the channel before Polymed's price (our view). <!-- PD24 p.41; FPJ_MAHFDA_2609 p.1; MB_MRP_2609 p.1 --></li>
+<li><strong>Europe.</strong> Management said Polymed "had to drop many products" in the MDD-to-MDR transition; whether any were in these ranges is [not disclosed]. <!-- TR3Q26 p.8 --></li>
+<li><strong>US.</strong> Polymed lists a leg bag, a urine flow-rate meter, a non-powered suction apparatus and a vacuum collection bottle with the FDA, none with a 510(k) in its name. <!-- FDAREG_POLY p.1; FDA510K_POLY p.1 --></li>
+</ul>
+<h3 id="company-specific-growth-drivers-ranked-3">Company-specific growth drivers, ranked</h3>
+<ol>
+<li><strong>Surgical volumes and drainage</strong> (our view; ongoing). Surgery is the largest line and the only one that gained share from FY20 to FY25, and vendors expect drains to grow faster (<span class="n" title="Source: Surgical Drainage Devices Market – Global Market Analysis Report 2035 (summary page) (2025-08-14) · third-party estimate">7.7%</span> a year) than Foley catheters (<span class="n" title="Source: Foley Catheters Market Size to 2033 (Grand View Research) – Research and Markets product page (2026-06) · third-party estimate">5.6%</span>). The FY26 decline needs an explanation first.</li>
+<li><strong>Enteral-connector conversion</strong> (company launches; our view on uptake). The connector tubes, syringe and feeding bag replace funnel-end tubes with a higher-specification item as regulated markets switch; conformity, registrations and pricing are [not disclosed].</li>
+<li><strong>ICU and neonatal cross-selling through critical care</strong> (our read-across). The division already carries the enteral range and reached <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">500</span> hospitals by Nov-2025, a route for urimeters and closed urine bags; infant feeding tubes and umbilical catheters fit neonatology, a stated focus area. <!-- TR2Q26 p.5; WEB_CRITICAL_CARE p.1; TR4Q26 p.10 --></li>
+<li><strong>Therapy entry</strong> (management option, deferred). In Jul-2024 the MD named urology (from renal) and gastroenterology (from critical care) as adjacencies while saying Polymed would stay with its "current <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 14 · Himanshu Baid, MD">6</span> segments" for the next <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 14 · Himanshu Baid, MD">4-5</span> years; in Aug-2026 he ruled out anything new "substantially in the next few years". <!-- TR1Q25 p.14; TR1Q27S p.13 --></li>
+</ol>
+<h3 id="company-specific-margin-drivers-ranked-3">Company-specific margin drivers, ranked</h3>
+<ol>
+<li><strong>Price competition.</strong> These are commodity items with many local makers, Chinese makers such as KDL are registering the same products in Europe, and Grand View lists "pricing pressure and competitive tendering" as a challenge for Foley makers. <!-- VND_RNM_FOLEY p.1 --></li>
+<li><strong>Raw materials.</strong> PVC compounds, latex and silicone: Polymed imported <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 88">74.0%</span> of its raw-material needs in 1QFY25, management cited a ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · Himanshu Baid, MD">20%</span> rise in raw-material costs in early FY27, and price increases lag. <!-- PD24 p.88; TR4Q26 p.6 --></li>
+<li><strong>Mix.</strong> Polymed is absent from the premium catheter segments; enteral-connector versions are its only mix upgrade here.</li>
+<li><strong>Channel.</strong> Leaving lower-priced government tenders helps margin but costs volume in all three lines.</li>
+</ol>
+<p>Margins for these lines are [not disclosed]; asked which products earn more, the MD replied, "you are asking the secret recipe for my business?". Romsons, whose range overlaps in urology, earned an EBITDA margin of <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">26.8%</span> on <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">Rs. 8.6bn</span> of revenue across its whole range in FY24, which suggests these categories can pay at scale. <!-- TR4Q25 p.12; DRHP_GSURG p.219 --></p>
+<h3 id="what-to-watch-7">What to watch</h3>
+<figure class="exh" id="exh-gus_watch"><figcaption><span class="exn">Exhibit 48:</span> Gastroenterology, urology and surgery: the BRSR shares and the enteral launches are the only regular signals</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BRSR shares of surgery and urology</td>
+<td>The only regular size disclosure</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span> and <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span> of FY26 standalone turnover</td>
+<td>BRSR, annual</td>
+</tr>
+<tr>
+<td>Implied growth against the company</td>
+<td>Tests whether the lines keep pace</td>
+<td><span class="n" title="Our calculation: A-0849*A-0350/(A-0897*A-0351)*100-100; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 5.7% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-2.1%</span> and <span class="n" title="Our calculation: A-0850*A-0350/(A-0898*A-0351)*100-100; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 3.3% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-5.7%</span> against <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 9">+3.8%</span> (FY26, our calculation)</td>
+<td>BRSR; results</td>
+</tr>
+<tr>
+<td>Gastroenterology revenue</td>
+<td>Not shown since 9MFY21</td>
+<td>[not disclosed]; <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 39mn</span> in 9MFY21</td>
+<td>Placement document (Feb-2021)</td>
+</tr>
+<tr>
+<td>Enteral-connector range</td>
+<td>Regulated markets are converting to ENFit-type connectors</td>
+<td>Ryle's tube, syringe and feeding bag with enteral connector shown as recent launches (Sep-2026); conformity [not disclosed]</td>
+<td>AGM decks; catalogues</td>
+</tr>
+<tr>
+<td>Government tenders</td>
+<td>Urine catheters are reserved for local suppliers; Polymed is cutting exposure</td>
+<td>Government ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">10-12%</span> of domestic sales, <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">-18%</span> yoy in 3QFY26</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Trade-margin policy</td>
+<td>Catheter mark-ups were flagged</td>
+<td><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">955%</span> on a catheter (Maharashtra FDA survey, Sep-2026)</td>
+<td>DoP and NPPA orders</td>
+</tr>
+<tr>
+<td>Entry into urology or gastro therapies</td>
+<td>Would change the lines' strategic role</td>
+<td>Ruled out for "the next few years" (Aug-2026)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Chinese entrants</td>
+<td>Same items now CE-registered</td>
+<td>KDL: <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 21">22</span> CE registrations in CY25</td>
+<td>KDL annual report</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: BRSR FY26; Investor presentation 4QFY26; QIP Placement Document Feb 2021; 31st AGM presentation; 3QFY26 earnings call transcript (6 Feb 2026); Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set; 1QFY27 earnings call (Aug 10 2026); Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告); Annual Report FY26; BRSR FY25; our calculation; Avendus Spark Research</p></figure>
+<!-- BRSR26 p.12; DK4Q26 p.9; PD21 p.130; DKAGM31 p.5; TR3Q26 p.4; FPJ_MAHFDA_2609 p.1; TR1Q27S pp.13-14; KDL_AR25 p.21 -->
+<p>Open questions for management, from revenue by line to ENFit conformity and MDR lapses, are in the question bank.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-6.html"><span>Previous</span>A4.6 Anaesthesia, respiratory and critical care</a><a class="next" href="a4-8.html"><span>Next</span>A4.8 Cardiology</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

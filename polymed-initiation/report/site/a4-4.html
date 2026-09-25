@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.4 Transfusion and blood management · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html" class="active">A4.4 Transfusion and blood management</a></li><li class="l3"><a href="#what-it-is-and-how-it-is-used-one-bag-system-per-donation">What it is and how it is used: one bag system per donation</a></li><li class="l3"><a href="#polymed-s-portfolio-and-position-2">Polymed&#x27;s portfolio and position</a></li><li class="l3"><a href="#revenue-four-disclosures-four-bases">Revenue: four disclosures, four bases</a></li><li class="l3"><a href="#market-india-collects-more-blood-and-discards-more-of-it">Market: India collects more blood, and discards more of it</a></li><li class="l3"><a href="#customers-channel-and-pricing-2">Customers, channel and pricing</a></li><li class="l3"><a href="#competition-two-incumbents-with-more-capacity-than-india-col">Competition: two incumbents with more capacity than India collects</a></li><li class="l3"><a href="#regulation-and-trends">Regulation and trends</a></li><li class="l3"><a href="#company-specific-growth-drivers-ranked-2">Company-specific growth drivers, ranked</a></li><li class="l3"><a href="#company-specific-margin-drivers-ranked-2">Company-specific margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-4">What to watch</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-3.html"><span>Previous</span>A4.3 Renal care</a><a class="next" href="a4-5.html"><span>Next</span>A4.5 Diagnostics (blood collection)</a></nav>
+<h2 id="a4-4">A4.4 Transfusion and blood management</h2>
+<p>Blood management, entered in 2000, is Polymed's third-largest product family on the BRSR and its least transparent: the BRSR puts it at ~<span class="n" title="Our calculation: A-0896/100*A-0351/D-0047; inputs: 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32); Rs. 765mn (QIP Placement Document Aug 2024, p.173)">2.1x</span> the size the placement document showed a year earlier (our calculation), and every consistent series shows it growing more slowly than the group. Demand comes from a public blood system that buys largely by tender, against two larger incumbents. The levers are a doubling of capacity at Palwal from Mar-2027 and a shift to multi-bag, filtered systems as India separates more of its blood into components. <!-- AR26 p.11; BRSR25 p.5; BRSR26 p.12; PD24 p.173; TR1Q26 p.18; DKAGM31 p.4 --></p>
+<section class="snapshot"><p class="ct">Transfusion and blood management at a glance</p><dl><div><dt>Revenue (placement documents)</dt><dd><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 765mn</span> in FY24 (<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">5.9%</span> of consolidated product sales) and <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 217mn</span> in 1QFY25; later years [not disclosed]</dd></div><div><dt>Size on the BRSR basis</dt><dd><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> of FY26 standalone turnover (FY25: <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span>), ~<span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span>; implied change <span class="n" title="Our calculation: A-0848*A-0350/(A-0896*A-0351)*100-100; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-0.6%</span> (our calculation)</dd></div><div><dt>Growth</dt><dd><span class="n" title="Our calculation: ((D-0047/D-0605)**(1/6)-1)*100; inputs: Rs. 765mn (QIP Placement Document Aug 2024, p.173); Rs. 449mn (QIP Placement Document Feb 2021, p.130)">9.3%</span> FY18-FY24 CAGR against <span class="n" title="Our calculation: ((D-0070/D-0653)**(1/6)-1)*100; inputs: Rs. 13.0bn (QIP Placement Document Aug 2024, p.173); Rs. 5.1bn (QIP Placement Document Feb 2021, p.130)">17.0%</span> for all product sales (our calculation); management: transfusion grew ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 6 · Himanshu Baid, MD">18%</span> in 1QFY26</dd></div><div><dt>Range</dt><dd>Single to quintuple CPDA and CPD-SAGM bag systems; top-and-bottom, in-line leuko-depletion, platelet (TOTM), paediatric, cord-blood and ACD bags; blood administration sets</dd></div><div><dt>Capacity</dt><dd>Added in FY24; to double at Palwal (Phase-1 by Mar-2027); units [not disclosed]</dd></div><div><dt>Market</dt><dd>India collected <span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">15.7mn units</span> in 2025 (<span class="n" title="Our calculation: F-0129/F-0130*100-100; inputs: 15.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 12.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">+24%</span> on 2023); global blood bags <span class="n" title="Source: Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$621.42mn</span> in 2026 (vendor estimate)</dd></div><div><dt>What is disclosed</dt><dd>Blood-bag sales only to FY16; the later line bundles blood-collection tubes and needles (Section A4.5); no volumes, prices, capacity or margins</dd></div></dl></section>
+<!-- PD24 p.173; PD21 p.130; BRSR25 p.5; BRSR26 p.12; TR1Q26 p.6, p.18; TR3Q24b p.5; DKAGM31 p.4; FACTLY_BLOOD p.1; VND_RNM_BLOODBAG p.1 -->
+<h3 id="what-it-is-and-how-it-is-used-one-bag-system-per-donation">What it is and how it is used: one bag system per donation</h3>
+<p>A blood bag system is a sterile set of PVC bags, pre-filled with anticoagulant, into which a donor's blood is drawn through an attached 16G needle; the MD calls it a "device plus drug" combination. CPDA keeps whole blood or packed red cells for <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 31">35 days</span>, and SAGM additive solution extends red cells to <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 31">42 days</span>. <!-- CATDOM25 p.31; TR3Q25 p.19 --></p>
+<p>The unit of demand is the donation: each unit collected uses one bag system, and what varies is its complexity. <!-- D_product_glossary A4.4 --></p>
+<ul>
+<li><strong>Components.</strong> Double to quintuple systems carry satellite bags so that a blood centre can centrifuge a unit into red cells, plasma and platelets, letting one donation "meet the needs of more than one patient" (WHO). <!-- CATDOM25 p.31; WHO_BLOOD p.1 --></li>
+<li><strong>Premium configurations</strong> add a TOTM platelet bag (about <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 32">5</span> days' storage), top-and-bottom bags for automated extraction, an in-line leuko-depletion filter, or a needle guard with a pouch that diverts the first, skin-contaminated blood. <!-- CATDOM25 pp.32-33 --></li>
+<li><strong>Smaller items</strong> include paediatric and Penta bags (one unit split among up to five paediatric recipients), cord-blood bags and the ACD anticoagulant bag used in apheresis. <!-- CATDOM25 p.31; CATEXP24 pp.55, 58 --></li>
+</ul>
+<p>Each transfusion then uses a filtered administration set. Collection tubes and needles, reported in the same line, are covered in Section A4.5. <!-- CATDOM25 p.31; PD24 p.173; D_product_glossary A4.4 --></p>
+<h3 id="polymed-s-portfolio-and-position-2">Polymed's portfolio and position</h3>
+<p>Polymed entered transfusion in 2000, three years after infusion, and by FY16 sold a quadruple bag with an in-line red-cell filter. Its domestic and export catalogues cover every configuration above, with main bags from 250 ml to 500 ml, plus Haemofusor and Transvol administration sets and a pressure pump set; the latest decks add a bedside filter and a lab-side leukocyte filter. It does not make IV fluid bags. <!-- AR26 p.11; AR16 p.6; CATDOM25 pp.31-33; CATEXP24 pp.55-60; DK1Q27 p.4; DKAGM31 p.5; TR3Q23 p.17 --></p>
+<p>Management sells transfusion as a basket: it pitched blood banking as a "concept" at Arab Health in 2024 and promised to "keep on adding more and more products" in transfusion and vascular access. The blood-banking equipment the MD floated in Feb-2022 has not appeared: the catalogues list no collection monitors, mixers or other blood-bank machines. Market share is [not disclosed]; the MD has said only that Polymed gained share in blood transfusion (May-2022) and that new capacity would raise its domestic and export share (Feb-2024). <!-- TR3Q24b pp.5-6; TR1Q25 p.4; TR3Q22 pp.7-8; CATDOM25 pp.31-33; CATEXP24 pp.55-60; TR4Q22 p.13 --></p>
+<p><strong>Capacity and supply chain.</strong></p>
+<ul>
+<li><strong>Expansion.</strong> Capacity was added in FY24, with new lines due by May-2024 "for exports and for the local market". In Aug-2025 the MD said transfusion capacity would double at Palwal in Haryana, a plant he now describes as focused on "orthopedics and transfusion" plus extra infusion capacity. <!-- TR3Q24b p.5; TR4Q24 p.3; TR1Q26 p.18; TR1Q27S p.15 --></li>
+<li><strong>Palwal.</strong> Budgeted at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 74 · management guidance">Rs. 2.7bn</span> in the 2024 placement document and billed as the company's largest plant, it is due for Phase-1 by Mar-2027 and Phase-2 by Dec-2027. Current capacity, and which plant makes blood bags today, are [not disclosed]. <!-- PD24 p.74; DK3Q25 p.13; DKAGM31 p.4 --></li>
+<li><strong>Inputs.</strong> The placement document lists "blood bag sheets" among raw materials, which we read as the PVC film being bought in rather than extruded. <!-- PD21 p.86 --></li>
+</ul>
+<h3 id="revenue-four-disclosures-four-bases">Revenue: four disclosures, four bases</h3>
+<p>In the annual reports we have, blood bags are the only manufactured product besides IV cannulas ever shown separately, and only for FY12-FY16. Every later figure is broader or inconsistent (<a href="#exh-blood_bases">Exhibit 36</a>).</p>
+<p><strong>Blood bags, FY12-FY16.</strong> Sales rose from <span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 179mn</span> to <span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 319mn</span>, a <span class="n" title="Our calculation: ((B-0181/B-0092)**(1/4)-1)*100; inputs: Rs. 319mn (Annual Report FY16, p.94); Rs. 179mn (Annual Report FY13, p.49)">15.5%</span> CAGR against <span class="n" title="Our calculation: ((WB-0042/WB-0041)**(1/4)-1)*100; inputs: Rs. 3.9bn (Annual Report FY16, p.94); Rs. 2.0bn (Annual Report FY13, p.49)">18.5%</span> for all finished goods (our calculation), in steps: <span class="n" title="Our calculation: B-0091/B-0092*100-100; inputs: Rs. 221mn (Annual Report FY13, p.49); Rs. 179mn (Annual Report FY13, p.49)">+23%</span> in FY13, <span class="n" title="Our calculation: B-0182/B-0091*100-100; inputs: Rs. 223mn (Annual Report FY16, p.94); Rs. 221mn (Annual Report FY13, p.49)">+1%</span> over the next two years and <span class="n" title="Our calculation: B-0181/B-0182*100-100; inputs: Rs. 319mn (Annual Report FY16, p.94); Rs. 223mn (Annual Report FY16, p.94)">+43%</span> in FY16. We read the lumpiness as consistent with tender-driven demand. <!-- AR13 p.49; AR16 p.94 --></p>
+<p><strong>Blood management and collection, FY18-FY24.</strong> The placement documents report a broader line (bags, administration sets, collection tubes and needles) on consolidated product sales. It grew from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 449mn</span> to <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 765mn</span>, a <span class="n" title="Our calculation: ((D-0047/D-0605)**(1/6)-1)*100; inputs: Rs. 765mn (QIP Placement Document Aug 2024, p.173); Rs. 449mn (QIP Placement Document Feb 2021, p.130)">9.3%</span> CAGR against <span class="n" title="Our calculation: ((D-0070/D-0653)**(1/6)-1)*100; inputs: Rs. 13.0bn (QIP Placement Document Aug 2024, p.173); Rs. 5.1bn (QIP Placement Document Feb 2021, p.130)">17.0%</span> for all product sales, so its share fell from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">8.8%</span> to <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">5.9%</span> (our calculation). Two points jar: <!-- PD21 p.130; PD24 p.173 --></p>
+<ol>
+<li>the line fell <span class="n" title="Our calculation: D-0609/D-0607*100-100; inputs: Rs. 546mn (QIP Placement Document Feb 2021, p.130); Rs. 652mn (QIP Placement Document Feb 2021, p.130)">16%</span> in FY20 (our calculation), yet the same document names the blood bag among the products behind that year's <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 93">14.6%</span> rise in manufactured sales; <!-- PD21 p.93, p.130 --></li>
+<li>the May-2022 deck showed "blood transfusion" at <span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">9%</span> of sales, presumably for FY22, against <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">6.3%</span> in the placement document. <!-- DKMAY22 p.10; PD24 p.173 --></li>
+</ol>
+<figure class="exh" id="exh-blood_rev"><figcaption><span class="exn">Exhibit 35:</span> Blood revenue grew more slowly than the group on each consistent basis, and the BRSR figures from FY25 cannot be compared with earlier years</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Blood bags (annual reports, standalone)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Blood management and collection (placement documents, consolidated)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>BRSR share x standalone revenue (our calculation)</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">500</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">1,000</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">1,500</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">2,000</text><text class="unit" text-anchor="start" x="2" y="13">Rs mn</text><text class="tick" text-anchor="middle" x="75.25" y="284">FY12</text><path class="mark" d="M63.25,266.00V248.16Q63.25,244.16 67.25,244.16H83.25Q87.25,244.16 87.25,248.16V266.00Z" data-tip="FY12 · Blood bags (annual reports, standalone): Rs. 179mn" fill="var(--s1)"><title>FY12 · Blood bags (annual reports, standalone): Rs. 179mn</title></path><text class="val" text-anchor="middle" x="75.25" y="238.16">179</text><text class="tick" text-anchor="middle" x="133.75" y="284">FY13</text><path class="mark" d="M121.75,266.00V243.09Q121.75,239.09 125.75,239.09H141.75Q145.75,239.09 145.75,243.09V266.00Z" data-tip="FY13 · Blood bags (annual reports, standalone): Rs. 221mn" fill="var(--s1)"><title>FY13 · Blood bags (annual reports, standalone): Rs. 221mn</title></path><text class="val" text-anchor="middle" x="133.75" y="233.09">221</text><text class="tick" text-anchor="middle" x="192.25" y="284">FY15</text><path class="mark" d="M180.25,266.00V242.78Q180.25,238.78 184.25,238.78H200.25Q204.25,238.78 204.25,242.78V266.00Z" data-tip="FY15 · Blood bags (annual reports, standalone): Rs. 223mn" fill="var(--s1)"><title>FY15 · Blood bags (annual reports, standalone): Rs. 223mn</title></path><text class="val" text-anchor="middle" x="192.25" y="232.78">223</text><text class="tick" text-anchor="middle" x="250.75" y="284">FY16</text><path class="mark" d="M238.75,266.00V231.14Q238.75,227.14 242.75,227.14H258.75Q262.75,227.14 262.75,231.14V266.00Z" data-tip="FY16 · Blood bags (annual reports, standalone): Rs. 319mn" fill="var(--s1)"><title>FY16 · Blood bags (annual reports, standalone): Rs. 319mn</title></path><text class="val" text-anchor="middle" x="250.75" y="221.14">319</text><text class="tick" text-anchor="middle" x="309.25" y="284">FY18</text><path class="mark" d="M297.25,266.00V215.21Q297.25,211.21 301.25,211.21H317.25Q321.25,211.21 321.25,215.21V266.00Z" data-tip="FY18 · Blood management and collection (placement documents, consolidated): Rs. 449mn" fill="var(--s2)"><title>FY18 · Blood management and collection (placement documents, consolidated): Rs. 449mn</title></path><text class="val" text-anchor="middle" x="309.25" y="205.21">449</text><text class="tick" text-anchor="middle" x="367.75" y="284">FY19</text><path class="mark" d="M355.75,266.00V190.41Q355.75,186.41 359.75,186.41H375.75Q379.75,186.41 379.75,190.41V266.00Z" data-tip="FY19 · Blood management and collection (placement documents, consolidated): Rs. 652mn" fill="var(--s2)"><title>FY19 · Blood management and collection (placement documents, consolidated): Rs. 652mn</title></path><text class="val" text-anchor="middle" x="367.75" y="180.41">652</text><text class="tick" text-anchor="middle" x="426.25" y="284">FY20</text><path class="mark" d="M414.25,266.00V203.34Q414.25,199.34 418.25,199.34H434.25Q438.25,199.34 438.25,203.34V266.00Z" data-tip="FY20 · Blood management and collection (placement documents, consolidated): Rs. 546mn" fill="var(--s2)"><title>FY20 · Blood management and collection (placement documents, consolidated): Rs. 546mn</title></path><text class="val" text-anchor="middle" x="426.25" y="193.34">546</text><text class="tick" text-anchor="middle" x="484.75" y="284">FY22</text><path class="mark" d="M472.75,266.00V202.18Q472.75,198.18 476.75,198.18H492.75Q496.75,198.18 496.75,202.18V266.00Z" data-tip="FY22 · Blood management and collection (placement documents, consolidated): Rs. 556mn" fill="var(--s2)"><title>FY22 · Blood management and collection (placement documents, consolidated): Rs. 556mn</title></path><text class="val" text-anchor="middle" x="484.75" y="192.18">556</text><text class="tick" text-anchor="middle" x="543.25" y="284">FY23</text><path class="mark" d="M531.25,266.00V185.40Q531.25,181.40 535.25,181.40H551.25Q555.25,181.40 555.25,185.40V266.00Z" data-tip="FY23 · Blood management and collection (placement documents, consolidated): Rs. 693mn" fill="var(--s2)"><title>FY23 · Blood management and collection (placement documents, consolidated): Rs. 693mn</title></path><text class="val" text-anchor="middle" x="543.25" y="175.40">693</text><text class="tick" text-anchor="middle" x="601.75" y="284">FY24</text><path class="mark" d="M589.75,266.00V176.62Q589.75,172.62 593.75,172.62H609.75Q613.75,172.62 613.75,176.62V266.00Z" data-tip="FY24 · Blood management and collection (placement documents, consolidated): Rs. 765mn" fill="var(--s2)"><title>FY24 · Blood management and collection (placement documents, consolidated): Rs. 765mn</title></path><text class="val" text-anchor="middle" x="601.75" y="166.62">765</text><text class="tick" text-anchor="middle" x="660.25" y="284">FY25</text><path class="mark" d="M648.25,266.00V75.41Q648.25,71.41 652.25,71.41H668.25Q672.25,71.41 672.25,75.41V266.00Z" data-tip="FY25 · BRSR share x standalone revenue (our calculation): Rs. 1.6bn" fill="var(--s3)"><title>FY25 · BRSR share x standalone revenue (our calculation): Rs. 1.6bn</title></path><text class="val" text-anchor="middle" x="660.25" y="65.41">1,595</text><text class="tick" text-anchor="middle" x="718.75" y="284">FY26</text><path class="mark" d="M706.75,266.00V76.51Q706.75,72.51 710.75,72.51H726.75Q730.75,72.51 730.75,76.51V266.00Z" data-tip="FY26 · BRSR share x standalone revenue (our calculation): Rs. 1.6bn" fill="var(--s3)"><title>FY26 · BRSR share x standalone revenue (our calculation): Rs. 1.6bn</title></path><text class="val" text-anchor="middle" x="718.75" y="66.51">1,586</text></svg></div><p class="note">FY12-FY16: blood-bag sales among finished goods sold in the standalone annual reports. FY18-FY24: the 'Blood Management &amp; Blood Collection' vertical in the product tables of the Feb-2021 and Aug-2024 placement documents, which also includes administration sets, collection tubes and needles. FY25-FY26: BRSR share of standalone turnover multiplied by standalone revenue from operations (our calculation). FY14, FY17 and FY21 were not disclosed; 9MFY21 was <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 314mn</span>.</p><p class="src">Source: Annual Report FY13; Annual Report FY16; QIP Placement Document Feb 2021; QIP Placement Document Aug 2024; BRSR FY25; BRSR FY26; Annual Report FY26; our calculation; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th>FY12</th><th>FY13</th><th>FY15</th><th>FY16</th><th>FY18</th><th>FY19</th><th>FY20</th><th>FY22</th><th>FY23</th><th>FY24</th><th>FY25</th><th>FY26</th></tr></thead><tbody><tr><th scope="row">Blood bags (annual reports, standalone)</th><td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 179mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 221mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 223mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 319mn</span></td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr><tr><th scope="row">Blood management and collection (placement documents, consolidated)</th><td>–</td><td>–</td><td>–</td><td>–</td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 449mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 652mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 546mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 556mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 693mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 765mn</span></td><td>–</td><td>–</td></tr><tr><th scope="row">BRSR share x standalone revenue (our calculation)</th><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class="num"><span class="n" title="Our calculation: A-0896/100*A-0351; inputs: 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 1.6bn</span></td><td class="num"><span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span></td></tr></tbody></table></div></details></figure>
+<!-- AR13 p.49; AR16 p.94; PD21 p.130; PD24 p.173; BRSR25 p.5; BRSR26 p.12; AR26 p.32 -->
+<p><strong>The BRSR, FY25-FY26.</strong> The BRSR puts "Blood Management &amp; Blood Collection" at <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span> of FY25 and <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> of FY26 standalone turnover, ~<span class="n" title="Our calculation: A-0896/100*A-0351; inputs: 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 1.6bn</span> and ~<span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span>, an implied <span class="n" title="Our calculation: A-0848*A-0350/(A-0896*A-0351)*100-100; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-0.6%</span> change (our calculation). No filing or call explains the step up from FY24; we read it as reclassification, not growth, though the company has not said so. The flat FY26 also sits awkwardly with the annual report, which names blood bags first among FY26 growth products, and with the ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 6 · Himanshu Baid, MD">18%</span> transfusion growth the MD cited for 1QFY26; weaker collection tubes could hide growth in bags. Management declines to split the line: the MD called each category outside infusion and renal "not significant <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 17 · Himanshu Baid, MD">under 5%</span>" (Feb-2025) and the transfusion numbers "confidential" (May-2025). <!-- BRSR25 p.5; BRSR26 p.12; AR26 p.47; TR1Q26 p.6; TR3Q25 p.17; TR4Q25 p.12 --></p>
+<figure class="exh" id="exh-blood_bases"><figcaption><span class="exn">Exhibit 36:</span> Blood's share of sales depends on which disclosure one reads: each uses a different scope or denominator</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Source</th>
+<th>Periods</th>
+<th>Scope</th>
+<th>Denominator</th>
+<th>Blood's share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual reports (Schedule VI notes)</td>
+<td>FY12, FY13, FY15, FY16</td>
+<td>Blood bags only</td>
+<td>Standalone finished goods sold</td>
+<td><span class="n" title="Our calculation: B-0092/WB-0041*100; inputs: Rs. 179mn (Annual Report FY13, p.49); Rs. 2.0bn (Annual Report FY13, p.49)">9.1%</span>, <span class="n" title="Our calculation: B-0091/WB-0040*100; inputs: Rs. 221mn (Annual Report FY13, p.49); Rs. 2.5bn (Annual Report FY13, p.49)">9.0%</span>, <span class="n" title="Our calculation: B-0182/WB-0043*100; inputs: Rs. 223mn (Annual Report FY16, p.94); Rs. 3.6bn (Annual Report FY16, p.94)">6.1%</span>, <span class="n" title="Our calculation: B-0181/WB-0042*100; inputs: Rs. 319mn (Annual Report FY16, p.94); Rs. 3.9bn (Annual Report FY16, p.94)">8.2%</span> (our calculation)</td>
+</tr>
+<tr>
+<td>Placement document, Feb-2021</td>
+<td>FY18, FY19, FY20, 9MFY21</td>
+<td>Bags, administration sets, collection tubes and needles</td>
+<td>Consolidated product sales</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">8.8%</span>, <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">11.0%</span>, <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">8.2%</span>, <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">5.6%</span></td>
+</tr>
+<tr>
+<td>Five investor decks, Oct-2019 to May-2022</td>
+<td>FY19 to FY22 (periods partly presumed)</td>
+<td>"Blood transfusion" or "blood management and collection"; diagnostics shown separately (<span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">3%</span>) in Oct-2019</td>
+<td>Sales</td>
+<td><span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">9%</span>, <span class="n" title="Source: Corporate presentation Jun 2020 (2020-06-24), slide/page 15">9%</span>, <span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 14">9%</span>, <span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 13">9%</span>, <span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">9%</span></td>
+</tr>
+<tr>
+<td>Placement document, Aug-2024</td>
+<td>FY22, FY23, FY24, 1QFY25</td>
+<td>As in Feb-2021</td>
+<td>Consolidated product sales</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">6.3%</span>, <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">6.5%</span>, <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">5.9%</span>, <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">5.9%</span></td>
+</tr>
+<tr>
+<td>BRSR</td>
+<td>FY25, FY26</td>
+<td>Blood management and blood collection</td>
+<td>Standalone turnover</td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span>, <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span></td>
+</tr>
+<tr>
+<td>MD on the 3QFY25 call</td>
+<td>9MFY25</td>
+<td>Each category other than infusion and renal</td>
+<td>Revenue</td>
+<td class="num"><span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 17 · Himanshu Baid, MD">under 5%</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY13; Annual Report FY16; QIP Placement Document Feb 2021; Corporate presentation 2019; Corporate presentation Jun 2020; Investor presentation Nov 2020; Roadshow presentation Feb 2021; Investor presentation May 2022; QIP Placement Document Aug 2024; BRSR FY25; BRSR FY26; 3QFY25 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- AR13 p.49; AR16 p.94; PD21 p.130; DK2019 p.13; DKJUN20 p.15; DKNOV20 p.14; DKFEB21 p.13; DKMAY22 p.10; PD24 p.173; BRSR25 p.5; BRSR26 p.12; TR3Q25 p.17 -->
+<h3 id="market-india-collects-more-blood-and-discards-more-of-it">Market: India collects more blood, and discards more of it</h3>
+<p><strong>Volumes.</strong> Collections reported on e-Raktkosh rose <span class="n" title="Our calculation: F-0129/F-0130*100-100; inputs: 15.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 12.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">24%</span> over 2023-2025 to <span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">15.7mn units</span>, above the government's requirement estimate of <span class="n" title="Source: Blood Transfusion Services page (2026-09-24)">14.6mn units</span>. Growth slowed to <span class="n" title="Our calculation: F-0129/E-0316*100-100; inputs: 15.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 14.6mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">8%</span> in 2025, and discards rose to <span class="n" title="Our calculation: F-0131/F-0129*100; inputs: 1.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 15.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">11%</span> of collections, with expiry the largest cause (our calculation; <a href="#exh-blood_india">Exhibit 37</a>). Reporting is patchy: in one study ~<span class="n" title="Source: Securing India's Lifeblood For A Reliable National Blood Supply (2025-10-04)">22%</span> of blood banks rarely or never updated the portal. <!-- FACTLY_BLOOD p.1; DGHS_BTS p.1; ORF_BLOOD p.1 --></p>
+<figure class="exh" id="exh-blood_india"><figcaption><span class="exn">Exhibit 37:</span> India's reported blood collections now exceed the official requirement estimate, while discards have more than doubled</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Collected</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Discarded</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">5</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">10</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">15</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">20</text><text class="unit" text-anchor="start" x="2" y="13">mn units</text><text class="tick" text-anchor="middle" x="163.00" y="284">2023</text><path class="mark" d="M138.00,266.00V115.12Q138.00,111.12 142.00,111.12H158.00Q162.00,111.12 162.00,115.12V266.00Z" data-tip="2023 · Collected: 12.7mn units" fill="var(--s1)"><title>2023 · Collected: 12.7mn units</title></path><text class="val" text-anchor="middle" x="150.00" y="105.12">12.7</text><path class="mark" d="M164.00,266.00V260.24Q164.00,256.24 168.00,256.24H184.00Q188.00,256.24 188.00,260.24V266.00Z" data-tip="2023 · Discarded: 0.8mn units" fill="var(--s2)"><title>2023 · Discarded: 0.8mn units</title></path><text class="val" text-anchor="middle" x="176.00" y="250.24">0.8</text><text class="tick" text-anchor="middle" x="397.00" y="284">2024</text><path class="mark" d="M372.00,266.00V91.87Q372.00,87.87 376.00,87.87H392.00Q396.00,87.87 396.00,91.87V266.00Z" data-tip="2024 · Collected: 14.6mn units" fill="var(--s1)"><title>2024 · Collected: 14.6mn units</title></path><text class="val" text-anchor="middle" x="384.00" y="81.87">14.6</text><path class="mark" d="M398.00,266.00V255.14Q398.00,251.14 402.00,251.14H418.00Q422.00,251.14 422.00,255.14V266.00Z" data-tip="2024 · Discarded: 1.2mn units" fill="var(--s2)"><title>2024 · Discarded: 1.2mn units</title></path><text class="val" text-anchor="middle" x="410.00" y="245.14">1.2</text><text class="tick" text-anchor="middle" x="631.00" y="284">2025</text><path class="mark" d="M606.00,266.00V78.29Q606.00,74.29 610.00,74.29H626.00Q630.00,74.29 630.00,78.29V266.00Z" data-tip="2025 · Collected: 15.7mn units" fill="var(--s1)"><title>2025 · Collected: 15.7mn units</title></path><text class="val" text-anchor="middle" x="618.00" y="68.29">15.7</text><path class="mark" d="M632.00,266.00V248.74Q632.00,244.74 636.00,244.74H652.00Q656.00,244.74 656.00,248.74V266.00Z" data-tip="2025 · Discarded: 1.7mn units" fill="var(--s2)"><title>2025 · Discarded: 1.7mn units</title></path><text class="val" text-anchor="middle" x="644.00" y="238.74">1.7</text></svg></div><p class="note">Units reported by blood centres on e-Raktkosh, from the Health Ministry's reply to a Rajya Sabha question of 4 Aug 2026 as summarized by Factly; calendar years. The government's annual requirement estimate is <span class="n" title="Source: Blood Transfusion Services page (2026-09-24)">14.6mn units</span>. Discards rose from <span class="n" title="Our calculation: WF-0003/F-0130*100; inputs: 0.8mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 12.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">6.3%</span> of collections in 2023 to <span class="n" title="Our calculation: F-0131/F-0129*100; inputs: 1.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 15.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">11%</span> in 2025 and were <span class="n" title="Our calculation: F-0131/WF-0003; inputs: 1.7mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1); 0.8mn units (Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026), p.1)">2.2x</span> their 2023 level (our calculation); expired units were about <span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">46%</span> of 2025 discards.</p><p class="src">Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026); Blood Transfusion Services page; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">2023</th><th class="num">2024</th><th class="num">2025</th></tr></thead><tbody><tr><th scope="row">Collected</th><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">12.7mn units</span></td><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">14.6mn units</span></td><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">15.7mn units</span></td></tr><tr><th scope="row">Discarded</th><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">0.8mn units</span></td><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">1.2mn units</span></td><td class="num"><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">1.7mn units</span></td></tr></tbody></table></div></details></figure>
+<!-- FACTLY_BLOOD p.1; DGHS_BTS p.1 -->
+<p><strong>Mix.</strong> Policy has promoted component separation since the 2003 Action Plan for Blood Safety, and for bag makers it is a second lever besides volume: lower-middle-income countries separate <span class="n" title="Source: WHO Fact sheet – Blood safety and availability (2026-06-12)">81%</span> of their blood, against <span class="n" title="Source: WHO Fact sheet – Blood safety and availability (2026-06-12)">98%</span> in high-income ones (WHO), and each separated unit needs a multi-bag system. India's separation rate is [not disclosed] in our sources. <!-- DGHS_BTS p.1; WHO_BLOOD p.1; D_product_glossary A4.4 --></p>
+<p><strong>Structure.</strong> A 1996 Supreme Court judgment that ended paid donation led to the National Blood Transfusion Council and state councils; blood banks have been licensed since 1997, and the DGHS took over from NACO in 2021. India has <span class="n" title="Source: Blood Transfusion Services page (2026-09-24)">4,263</span> licensed blood centres, and the DGHS supports <span class="n" title="Source: Blood Transfusion Services page (2026-09-24)">1,131</span> public and charitable ones with staff, training and the procurement of blood bags and test kits. <!-- DGHS_BTS p.1 --></p>
+<p><strong>Value.</strong> There is no current Indian market size. A 2018 Business Today report on Terumo BCT put India's <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">11</span>mn annual collections at a <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">$50mn</span> market, ~<span class="n" title="Our calculation: E-0314/E-0313; inputs: $50mn (TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403), p.1); 11 million per year (TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403), p.1)">$4.5</span> per collection (our calculation). 360iResearch puts the global market at <span class="n" title="Source: Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$621.42mn</span> in 2026, growing <span class="n" title="Source: Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">7.3%</span> a year to <span class="n" title="Source: Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$968.19mn</span> by 2032 (vendor estimates), ~<span class="n" title="Our calculation: E-0362/E-0400; inputs: $621.42mn (Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page, p.1); 120.4 million donations (WHO Fact sheet – Blood safety and availability, p.1)">$5.2</span> per donation on WHO's <span class="n" title="Source: WHO Fact sheet – Blood safety and availability (2026-06-12)">120.4</span>mn (our calculation, different vintages). Lower-middle-income export markets collect only <span class="n" title="Source: WHO Fact sheet – Blood safety and availability (2026-06-12)">8.5</span> donations per thousand people, against <span class="n" title="Source: WHO Fact sheet – Blood safety and availability (2026-06-12)">28.9</span> in high-income countries. <!-- BT_TERUMOBCT p.1; VND_RNM_BLOODBAG p.1; WHO_BLOOD p.1 --></p>
+<h3 id="customers-channel-and-pricing-2">Customers, channel and pricing</h3>
+<p>In India the customers are blood banks, which the BRSR names among Polymed's customers. <!-- BRSR26 p.13 --></p>
+<ul>
+<li><strong>Public and charitable blood banks</strong> get bags through government procurement, which the DGHS support above covers. HS 90189032 "blood transfusion apparatus" is one of <span class="n" title="Source: DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only) (2021-03-25)">19</span> device lines reserved since Mar-2021 for Class-I local suppliers (at least <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content), and the DoP's illustrative list of such suppliers names Polymed. <!-- DGHS_BTS p.1; PPP_MD_GUIDE21 p.1; PPP_MD_LC21B p.3, p.10 --></li>
+<li><strong>Private blood banks</strong> buy through distributors, which for Polymed are blood-banking specialists. <!-- TR3Q22 p.11 --></li>
+<li><strong>Exports</strong> go through overseas distributors, who sell from the full export catalogue. <!-- CATEXP24 pp.55-60 --></li>
+</ul>
+<p>Prices and the channel split are [not disclosed]. We read the market as price-led: value per collection is low, incumbent capacity exceeds domestic demand, and blood centres' own charges for blood follow national rates, last revised in Jun-2022. <!-- DGHS_BTS p.1 --></p>
+<h3 id="competition-two-incumbents-with-more-capacity-than-india-col">Competition: two incumbents with more capacity than India collects</h3>
+<p>In 2018 Terumo Penpol made <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">30</span>mn bags and exported <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">55%</span>, leaving ~<span class="n" title="Our calculation: E-0311*(100-E-0312)/100; inputs: 30 mn bags per year (TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403), p.1); 55% (TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403), p.1)">13.5mn units</span> for a country that collected <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">11</span>mn units (our calculation). HLL Lifecare, a government enterprise, can make <span class="n" title="Source: HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page (2024-07-11)">12.5</span>mn pieces a year and claims a "dominant market share". We see Polymed as a smaller challenger that competes on breadth of range and on local-supplier status in tenders. <!-- BT_TERUMOBCT p.1; HLL_AFT p.1; HLL_BISPR p.1 --></p>
+<figure class="exh" id="exh-blood_comp"><figcaption><span class="exn">Exhibit 38:</span> Polymed competes with a state-owned incumbent and Terumo in India, and with European, Japanese and Chinese makers abroad</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where it meets Polymed</th>
+<th>Scale and position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HLL Lifecare (Government of India)</td>
+<td>Indian tenders; Haemopack and Donato systems from single to quadruple, with leuko-depletion filters and diversion bags</td>
+<td>Capacity <span class="n" title="Source: HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page (2024-07-11)">12.5 mn pieces per annum</span>; claims a "dominant market share"; first licence to the ISO 3826 blood-bag standard from BIS (Aug-2023); its factory exports to <span class="n" title="Source: HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page (2024-07-11)">more than 20</span> countries</td>
+</tr>
+<tr>
+<td>Terumo Penpol (Terumo Blood and Cell Technologies, Japan)</td>
+<td>Indian tenders and exports; the parent also sells automated whole-blood processing (Reveos) and plasma collection (Rika)</td>
+<td><span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">30 mn bags per year</span> made and <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">55%</span> exported to <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">about 130</span> countries (2018), with a plan for <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">40mn units</span>; segment revenue <span class="n" title="Source: Terumo Corporation – Financial Results for FY ended 31-Mar-2026 (FY2025), presentation with speaker notes (2026-05-15), slide/page 10">JPY 231.0bn</span> (FY to Mar-2026)</td>
+</tr>
+<tr>
+<td>Other Indian local suppliers: Mitra Industries, BL Lifesciences, Romsons, Lars Medicare, Angiplast</td>
+<td>Government tenders reserved for local suppliers; transfusion sets</td>
+<td>Named with Polymed on the DoP's illustrative list for blood transfusion apparatus; Mitra and BL Lifesciences also profiled by 360iResearch; scale [not disclosed]</td>
+</tr>
+<tr>
+<td>B. Braun, Fresenius Kabi, Macopharma, Haemonetics, Grifols, JMS, SB-Kawasumi</td>
+<td>Export markets</td>
+<td>Named by 360iResearch as major or profiled blood-bag players, as is Polymed</td>
+</tr>
+<tr>
+<td>Shandong Weigao (China)</td>
+<td>Export markets; collection, storage and separation consumables and equipment</td>
+<td>Blood management revenue <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 17">RMB 995.1mn</span> in CY25 (<span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 17">+13.5%</span>); <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 15">419</span> blood stations among its Chinese customers</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page; HLL becomes the first Indian company to receive the BIS mark for its Blood Bag Systems (press release); TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403); Terumo Corporation – Financial Results for FY ended 31-Mar-2026 (FY2025), presentation with speaker notes; DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only); Angiplast Pvt Ltd – corporate website (self-reported export share); G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); Blood Bags Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page; Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025; Avendus Spark Research</p></figure>
+<!-- HLL_AFT p.1; HLL_BISPR p.1; BT_TERUMOBCT p.1; TERUMO_FY25 p.10; PPP_MD_LC21B pp.10-11; ANGIPLAST_WEB p.1; DRHP_GSURG p.211; VND_RNM_BLOODBAG p.1; WEIGAO_AR25 p.12, p.15, p.17 -->
+<p>The global leaders are moving into equipment: Terumo's blood business grew on Reveos automated whole-blood processing, with tender wins in Asia, and on Rika plasma collection. Polymed sells only disposables (an ACD bag, but no apheresis kits), and we see equipment-linked systems as its main long-run threat in large blood centres. <!-- TERUMO_FY25 p.10; CATEXP24 p.55 --></p>
+<h3 id="regulation-and-trends">Regulation and trends</h3>
+<ul>
+<li><strong>Indian licensing.</strong> Blood bags were on the short list of devices already licensed before the 2020 amendment to the Medical Devices Rules, so we read the Oct-2023 licensing of Class C and D devices, which helped renal, as having changed little here. HLL was the first maker certified by BIS to the ISO 3826 blood-bag standard (Aug-2023); Polymed's status is [not disclosed]. <!-- GSR102E_2020 p.7; TR1Q25 p.10; HLL_BISPR p.1 --></li>
+<li><strong>DEHP.</strong> DEHP typically makes up <span class="n" title="Source: GMED newsletter – Phthalates in medical devices: regulations and alternatives (DEHP REACH dates) (2025-01)">40%</span> of plasticized PVC by weight and helps preserve stored red cells, which we read as making red-cell bags harder to convert than tubing. The EU requires authorization for its use in devices after <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 July 2030</span>, with applications due by <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 January 2029</span> (Section B5). Polymed's catalogues call its bags "medical grade PVC sheet" without naming the plasticizer; only the TOTM platelet bag and the DEHP-free administration sets are specified. HLL's bags are also PVC. <!-- GMED_DEHP pp.1-2; EU_REACH2023_2482 p.4; CATDOM25 pp.31-32; CATEXP24 pp.55-60; HLL_BISPR p.1 --></li>
+</ul>
+<h3 id="company-specific-growth-drivers-ranked-2">Company-specific growth drivers, ranked</h3>
+<ol>
+<li><strong>Mix shift to component systems</strong> (structural; our view). Higher separation rates favour triple, quadruple, SAGM and filtered bags without extra donations; Polymed's range covers them, so the lever is its share of the upgrade. <!-- WHO_BLOOD p.1; CATDOM25 pp.31-33 --></li>
+<li><strong>Palwal capacity</strong> (management plan; Phase-1 by Mar-2027). Doubling capacity pays off only if tenders and exports absorb it. <!-- TR1Q26 p.18; DKAGM31 p.4 --></li>
+<li><strong>Collection growth</strong> (structural but slowing). Collections already exceed the requirement estimate, and rising discards may make blood centres collect more carefully rather than more. <!-- FACTLY_BLOOD p.1 --></li>
+<li><strong>Exports and DEHP-free bags</strong> (our view; 2029-2030). Low donation rates abroad and the EU deadline favour makers with validated alternatives; Polymed's readiness is [not disclosed].</li>
+<li><strong>Adjacent products</strong> (management ambition): filters, the Haemodraw segment device and, possibly, blood-bank equipment. <!-- DKAGM31 p.5; CATDOM25 p.33; TR3Q22 pp.7-8 --></li>
+</ol>
+<h3 id="company-specific-margin-drivers-ranked-2">Company-specific margin drivers, ranked</h3>
+<ol>
+<li><strong>Tender pricing against surplus capacity</strong> (our view): public buying and two large incumbents cap prices on standard bags.</li>
+<li><strong>Mix:</strong> multi-bag, SAGM and filtered systems carry more value per donation; realizations by configuration are [not disclosed].</li>
+<li><strong>Utilization:</strong> doubling capacity ahead of demand would weigh on absorption from FY28 until volumes follow (our inference).</li>
+<li><strong>Materials:</strong> bought-in PVC film and the cost of any move away from DEHP drive the cost of goods. <!-- PD21 p.86 --></li>
+</ol>
+<h3 id="what-to-watch-4">What to watch</h3>
+<figure class="exh" id="exh-blood_watch"><figcaption><span class="exn">Exhibit 39:</span> Blood management: the BRSR share, Palwal commissioning and India's collection data are the datapoints to track</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI / risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BRSR share of standalone turnover</td>
+<td>The only recurring size disclosure</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> in FY26 (<span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span> in FY25); implied <span class="n" title="Our calculation: A-0848*A-0350/(A-0896*A-0351)*100-100; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); 10.0% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">-0.6%</span> (our calculation)</td>
+<td>BRSR, annual</td>
+</tr>
+<tr>
+<td>Split between bags and collection tubes</td>
+<td>Decides the growth and margin profile of the line</td>
+<td>[not disclosed]</td>
+<td>Management questions</td>
+</tr>
+<tr>
+<td>Palwal Phase-1 and transfusion capacity</td>
+<td>Doubling of capacity</td>
+<td>Phase-1 by Mar-2027, Phase-2 by Dec-2027; units [not disclosed]</td>
+<td>AGM deck; calls</td>
+</tr>
+<tr>
+<td>Management's transfusion growth remarks</td>
+<td>The only recent growth datapoint</td>
+<td>~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 6 · Himanshu Baid, MD">18%</span> in 1QFY26</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>India collections and discards</td>
+<td>Unit of demand and blood-centre economics</td>
+<td><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">15.7mn units</span> collected and <span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">1.7mn units</span> discarded in 2025</td>
+<td>Parliament answers (e-Raktkosh)</td>
+</tr>
+<tr>
+<td>EU DEHP deadlines</td>
+<td>Access to European tenders</td>
+<td>Applications by <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 January 2029</span>; sunset <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 July 2030</span></td>
+<td>REACH Annex XIV</td>
+</tr>
+<tr>
+<td>BIS certification of blood bags</td>
+<td>Possible tender requirement</td>
+<td>HLL first licensed (Aug-2023); Polymed [not disclosed]</td>
+<td>BIS; tender documents</td>
+</tr>
+<tr>
+<td>Incumbent capacity</td>
+<td>Sets tender prices</td>
+<td>HLL <span class="n" title="Source: HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page (2024-07-11)">12.5 mn pieces per annum</span>; Terumo Penpol <span class="n" title="Source: TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403) (2018-02-27)">30 mn bags per year</span> (2018)</td>
+<td>Company websites; press</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: BRSR FY25; BRSR FY26; 31st AGM presentation; 1QFY26 earnings call transcript; Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026); Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV); HLL becomes the first Indian company to receive the BIS mark for its Blood Bag Systems (press release); HLL Lifecare Ltd – Akkulam Factory Thiruvananthapuram (blood bags) web page; TerumoBCT to make India major hub for blood management solutions (Terumo Penpol capacity) – read via WebFetch (curl 403); Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- BRSR25 p.5; BRSR26 p.12; DKAGM31 p.4; TR1Q26 p.6; FACTLY_BLOOD p.1; EU_REACH2023_2482 p.4; HLL_BISPR p.1; HLL_AFT p.1; BT_TERUMOBCT p.1 -->
+<p>Open questions for management (question bank): the split between bags, sets and tubes; why the BRSR share differs from the placement documents; volumes and prices by channel; current and Palwal capacity; the plasticizer in red-cell bags; and BIS certification.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-3.html"><span>Previous</span>A4.3 Renal care</a><a class="next" href="a4-5.html"><span>Next</span>A4.5 Diagnostics (blood collection)</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

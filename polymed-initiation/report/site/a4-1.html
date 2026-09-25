@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.1 Infusion therapy · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html" class="active">A4.1 Infusion therapy</a></li><li class="l3"><a href="#six-product-families-one-clinical-workflow">Six product families, one clinical workflow</a></li><li class="l3"><a href="#the-iv-cannula-the-anchor-product">The IV cannula: the anchor product</a></li><li class="l3"><a href="#prefilled-flush-syringes-a-second-product-family-of-renal-si">Prefilled flush syringes: a second product family of renal-sized scale</a></li><li class="l3"><a href="#administration-sets-stopcocks-extension-lines-and-connectors">Administration sets, stopcocks, extension lines and connectors</a></li><li class="l3"><a href="#revenue-doubled-since-fy20-flat-since-fy25">Revenue: doubled since FY20, flat since FY25</a></li><li class="l3"><a href="#customers-channel-and-pricing">Customers, channel and pricing</a></li><li class="l3"><a href="#the-us-six-clearances-small-revenue-a-moving-tariff">The US: six clearances, small revenue, a moving tariff</a></li><li class="l3"><a href="#europe-and-other-export-markets">Europe and other export markets</a></li><li class="l3"><a href="#market-and-competition">Market and competition</a></li><li class="l3"><a href="#regulation-and-policy-specific-to-infusion">Regulation and policy specific to infusion</a></li><li class="l3"><a href="#capacity-and-supply-chain">Capacity and supply chain</a></li><li class="l3"><a href="#growth-drivers-ranked">Growth drivers, ranked</a></li><li class="l3"><a href="#margin-drivers-ranked">Margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch">What to watch</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a3.html"><span>Previous</span>A3 The FY26 reset and the guidance record</a><a class="next" href="a4-2.html"><span>Next</span>A4.2 Vascular access and oncology (Plan1Health)</a></nav>
+<h2 id="a4-1">A4.1 Infusion therapy</h2>
+<p>Infusion is where Polymed started in 1997, where it still earns half its revenue, and where its claim to global scale rests: management says it makes ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn IV catheters a year and ranks third in the world. The line is really six product families sold into one clinical workflow, from the cannula in the vein to the flush syringe that keeps it open, and two of them, the IV cannula and the prefilled flush syringe, are the only ones for which the company has ever given a number. <!-- DK4Q26 p.21; TR4Q26 p.17; DK1Q27 p.7 --></p>
+<section class="snapshot"><p class="ct">Infusion therapy at a glance</p><dl><div><dt>Revenue FY26</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 10.0bn</span> consolidated, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">-1.5%</span> yoy; <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">53%</span> of group revenue (vs. <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">68%</span> in FY20)</dd></div><div><dt>Revenue 1QFY27</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 2.6bn</span>, <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">+11.1%</span> yoy; <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">50%</span> of revenue</dd></div><div><dt>Growth</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">14%</span> CAGR over FY20-FY26 and <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 19">9%</span> over FY23-FY26 (company figures)</dd></div><div><dt>IV cannula</dt><dd><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span> of revenue (Jul-2024, management); ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn pieces a year; almost <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">11%</span> global share (company claim)</dd></div><div><dt>Prefilled flush syringes</dt><dd><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> of FY26 standalone turnover, ~<span class="n" title="Our calculation: A-0870/100*A-0350; inputs: 10.2% (BRSR FY26, p.27); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.7bn</span> (our calculation)</dd></div><div><dt>Price points</dt><dd>Rs. <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">10-20</span> per device (the MD's illustration, May-2026)</dd></div><div><dt>US</dt><dd><span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> FDA 510(k) clearances, all infusion; US revenue of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27</dd></div><div><dt>Policy</dt><dd>US duty of <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> on Indian goods against <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> plus <span class="n" title="Source: Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour) (2026-07-28), slide/page 4">12.5%</span> on Chinese syringes and needles; a cap on Indian trade margins under review</dd></div><div><dt>What is disclosed</dt><dd>Annual and quarterly segment revenue; no product split beyond the two items above and pre-FY17 IV cannula sales</dd></div></dl></section>
+<!-- AR26 p.47; DK1Q27 p.6, p.27; TR1Q25 p.16; TR4Q26 pp.17-18; BRSR26 p.27; FDA510K_POLY p.1; TR1Q27S p.12; FR_301ACT_260728 p.7; FR_301MOD_240918 p.9; FR_301PRES_260728 p.4; PIB_PSC176_2608 p.1; MB_MRP_2609 p.1 -->
+<h3 id="six-product-families-one-clinical-workflow">Six product families, one clinical workflow</h3>
+<p>A patient on an IV drip uses most of Polymed's infusion range at once:</p>
+<ul>
+<li>a cannula in a peripheral vein;</li>
+<li>an administration set from the bag, sometimes with a burette or flow regulator;</li>
+<li>stopcocks and extension lines at the bedside;</li>
+<li>a needle-free connector on the hub, capped with a disinfecting cap between uses;</li>
+<li>saline flush syringes before and after every intermittent dose. <!-- D_product_glossary; CATDOM25 pp.6-16; CATEXP24 pp.6-37 --></li>
+</ul>
+<p>The unit of demand differs by item. It is one cannula per insertion attempt, one set per line, and several flushes per catheter per day. Demand therefore scales with admissions, IV-therapy days and protocol intensity rather than with hospital capital budgets. <a href="#exh-inf_parts">Exhibit 17</a> sets out each family. <!-- D_product_glossary --></p>
+<figure class="exh" id="exh-inf_parts"><figcaption><span class="exn">Exhibit 17:</span> Infusion spans six product families; the company quantifies only the IV cannula and the flush syringe</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product family</th>
+<th>What it does</th>
+<th>Unit of demand</th>
+<th>Polymed brands</th>
+<th>What Polymed discloses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV cannulas: conventional, safety, blood-control, closed-system</td>
+<td>Short catheter left in a peripheral vein for fluids, drugs, blood and contrast</td>
+<td>One per insertion attempt; re-sited on failure or by protocol</td>
+<td>Polyflon, Polyflex, Polywin, Polycan, Polypen, Polyneo, Neonovo, Polycath; safety Polysafety, Polysafety Pro, Polywin Safety, Polyguard+, Polyshield; blood-control Polysafety BC; closed Nouvo Safety Set</td>
+<td><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span> of revenue (Jul-2024); ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn pieces a year</td>
+</tr>
+<tr>
+<td>Prefilled saline flush syringes</td>
+<td>Flush catheters before and after doses; keep idle lines open</td>
+<td>Several per catheter per day</td>
+<td>PolyFlush</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> of FY26 standalone turnover (BRSR)</td>
+</tr>
+<tr>
+<td>Administration, burette and flow-regulator sets</td>
+<td>Carry fluid from bag or bottle to the cannula; control rate</td>
+<td>One per IV line, replaced at protocol intervals</td>
+<td>Polyfusion, Novofusion, Autofusion, Microfusion, Photofusion, Oncofusion; Polyvol, Polypedia; Polyflo Novo</td>
+<td>[not disclosed]</td>
+</tr>
+<tr>
+<td>Stopcocks, extension lines, manifolds</td>
+<td>Let several infusions share one access; extend and protect the line</td>
+<td>One or more per line; heavy use in ICU and theatre</td>
+<td>Polyway, Polyway Pro, Polyway Pro Click; high- and low-pressure lines</td>
+<td>[not disclosed]</td>
+</tr>
+<tr>
+<td>Needle-free connectors, disinfecting caps, vial-access spikes</td>
+<td>Needle-free access; infection prevention between accesses</td>
+<td>One connector per lumen; one cap per access</td>
+<td>Safe Conekt, Micro PolySyte; Polyswab; Polyspike</td>
+<td>[not disclosed]</td>
+</tr>
+<tr>
+<td>Scalp-vein sets, obturators, fixation dressings, CVP manometers</td>
+<td>Short infusions; hub closure; securement; low-cost pressure monitoring</td>
+<td>One per procedure or insertion</td>
+<td>Safety winged set; Novoguard</td>
+<td>[not disclosed]</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; QIP Placement Document Aug 2024; 1QFY25 earnings call transcript; 4QFY26 earnings call transcript; BRSR FY26; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.6-16, p.33-34; CATEXP24 pp.6-37; PD24 p.173; TR1Q25 p.16; TR4Q26 p.17; BRSR26 p.27 -->
+<h3 id="the-iv-cannula-the-anchor-product">The IV cannula: the anchor product</h3>
+<p><strong>What it is.</strong> A peripheral IV cannula is a short plastic catheter over a steel needle. After the vein is punctured the needle is withdrawn and the catheter stays in the hand or forearm. Polymed sells gauges from 14G (colour-coded orange) to 26G (violet, for neonates). Its range covers four design generations: <!-- D_product_glossary; CATEXP24 pp.6-13 --></p>
+<ol>
+<li><strong>Conventional,</strong> ported or non-ported. Ported designs with a top injection port are standard in India, Europe and emerging markets; non-ported designs dominate the US.</li>
+<li><strong>Safety,</strong> with a needle-tip shield that engages automatically (passive: Polysafety, Polywin Safety) or at the press of a tab (active: Polyguard+, Polyshield). These protect staff from needlestick injuries and are what regulated markets now buy.</li>
+<li><strong>Blood-control safety</strong> (Polysafety BC), with a valve that stops blood flowing back once the needle is out. US demand has moved toward these.</li>
+<li><strong>Closed-system</strong> (Nouvo Safety Set), with a pre-attached extension, a needle-free connector and a stabilizing platform, power-injectable to <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 6">300 psi</span> for CT contrast.</li>
+</ol>
+<p>Quick-flashback "Adva" needles, which show blood as soon as the tip enters the vein, run across the range. <!-- D_product_glossary; CATDOM25 pp.6-8; CAT25 pp.4-5; D digest A4.1 --></p>
+<p><strong>Why volume keeps growing.</strong> Up to <span class="n" title="Source: ClinicalTrials.gov NCT06727240 – Safe-Infusion Study (background on PIVC volumes/failure rates) (2024-12-10)">90%</span> of hospitalized patients receive a peripheral catheter, and published failure rates run as high as <span class="n" title="Source: ClinicalTrials.gov NCT06727240 – Safe-Infusion Study (background on PIVC volumes/failure rates) (2024-12-10)">69%</span>, from phlebitis, infiltration, occlusion and dislodgement. Each failure means a new insertion, so cannula volume rises with admissions, day-care and emergency visits and with how often hospitals re-site. Better catheters that fail less reduce units per patient but command higher prices. <!-- CTG_NCT06727240 p.1; D_product_glossary --></p>
+<p><strong>Scale and position.</strong> Management's claim has firmed over time:</p>
+<ul>
+<li>"<span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 4">Amongst the Top 5</span>" IV cannula makers in the world (Oct-2019 deck), then "<span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 8">Amongst the Top 3</span>" from Oct-2020; <!-- DK2019 p.4; DKNOV20 p.8; AR22 p.47 --></li>
+<li><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">almost 10%</span> of global volume (Jul-2024), then almost <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">11%</span> on ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn pieces (May-2026); <!-- TR1Q25 p.16; TR4Q26 p.17 --></li>
+<li>the third-largest maker globally in the Aug-2026 deck, though the Sep-2026 AGM deck says only "amongst the largest". <!-- DK1Q27 p.7; DKAGM31 p.12 --></li>
+</ul>
+<p>No third party verifies the ranking. The two management figures imply a world market of ~<span class="n" title="Our calculation: CA-0188/WA-0003*100/1000; inputs: 600mn units (4QFY26 earnings call transcript, p.17); 11% (4QFY26 earnings call transcript, p.17)">5.5bn units</span> a year (our calculation). That is far above the <span class="n" title="Source: ClinicalTrials.gov NCT06727240 – Safe-Infusion Study (background on PIVC volumes/failure rates) (2024-12-10)">1.5bn units</span> a year quoted in a 2024 clinical-trial record. We think the higher figure is more plausible: B. Braun alone says its Penang site makes over <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 11">600</span>mn catheters a year and that it has produced <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 11">10</span>bn IV catheters since 1984. But the gap is wide enough that the share claim should be treated as indicative. <!-- CTG_NCT06727240 p.1; BBRAUN_AR25 p.11 --></p>
+<p><strong>Revenue.</strong> The cannula is the only infusion product with a stated revenue share:</p>
+<ul>
+<li><strong>Now:</strong> <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span> of revenue, in the MD's words (Jul-2024). On FY24 revenue that is between <span class="n" title="Our calculation: WA-0001/100*CB-0038; inputs: 25% (1QFY25 earnings call transcript, p.16); Rs. 13.8bn (Investor deck 1QFY27, p.6)">Rs. 3.4bn</span> and <span class="n" title="Our calculation: WA-0002/100*CB-0038; inputs: 30% (1QFY25 earnings call transcript, p.16); Rs. 13.8bn (Investor deck 1QFY27, p.6)">Rs. 4.1bn</span>, or <span class="n" title="Our calculation: WA-0001/100*CB-0038/CB-0023*100; inputs: 25% (1QFY25 earnings call transcript, p.16); Rs. 13.8bn (Investor deck 1QFY27, p.6); Rs. 9.2bn (Investor deck 1QFY27, p.6)">37%</span> to <span class="n" title="Our calculation: WA-0002/100*CB-0038/CB-0023*100; inputs: 30% (1QFY25 earnings call transcript, p.16); Rs. 13.8bn (Investor deck 1QFY27, p.6); Rs. 9.2bn (Investor deck 1QFY27, p.6)">45%</span> of infusion revenue (our calculation). <!-- TR1Q25 p.16 --></li>
+<li><strong>History:</strong> under the old Schedule VI the standalone accounts itemized IV cannula sales: <span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 915mn</span> in FY12, <span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 1.1bn</span> in FY13, <span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 1.5bn</span> in FY15 and <span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 1.5bn</span> in FY16. On our calculation the share of standalone revenue fell from <span class="n" title="Our calculation: B-0090/B-0078*100; inputs: Rs. 915mn (Annual Report FY13, p.49); Rs. 2.1bn (Annual Report FY13, p.35)">44%</span> in FY12 to <span class="n" title="Our calculation: B-0179/B-0161*100; inputs: Rs. 1.5bn (Annual Report FY16, p.94); Rs. 3.9bn (Annual Report FY16, p.79)">37%</span> in FY16. <!-- AR13 p.49; AR16 p.94 --></li>
+<li><strong>CRISIL's figure:</strong> CRISIL Ratings put the "IV cannula segment" at <span class="n" title="Source: CRISIL rating rationale 08-Dec-2022 (2022-12-08)">56-57%</span> of FY22 revenue. That is close to the whole infusion segment's share (<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 49">60.0%</span> of FY22 revenue from operations in the placement document), so we read it as infusion, not the cannula alone, and use management's <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span>. <!-- CRR2212 p.1; CR23 p.6; PD24 p.49 --></li>
+</ul>
+<p><strong>Unit economics.</strong> Standalone Polymed sold <span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 11">1.4bn units</span> in FY25 (<span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 11">+24.7%</span> yoy) for average revenue of <span class="n" title="Our calculation: A-0351/CB-2573; inputs: Rs. 16.0bn (Annual Report FY26, p.32); 1.4bn units (Investor presentation 4QFY25 and FY25, p.11)">Rs. 11.2</span> per device, against <span class="n" title="Our calculation: A-0733/CB-2574; inputs: Rs. 13.1bn (Annual Report FY25, p.19); 1.2bn units (Investor presentation 4QFY25 and FY25, p.11)">Rs. 11.4</span> in FY24 (our calculation). Management's ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn cannulas would be roughly <span class="n" title="Our calculation: CA-0188/CB-2573*100; inputs: 600mn units (4QFY26 earnings call transcript, p.17); 1.4bn units (Investor presentation 4QFY25 and FY25, p.11)">42%</span> of those units (our calculation; the two figures are a year apart). The five largest products, which the company does not name, earned <span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 11">Rs. 9.6bn</span> in FY25, <span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 11">+22.3%</span> yoy. <!-- DK4Q25 p.11; TR4Q26 p.17 --></p>
+<h3 id="prefilled-flush-syringes-a-second-product-family-of-renal-si">Prefilled flush syringes: a second product family of renal-sized scale</h3>
+<p>The FY26 BRSR disclosed, in its life-cycle-assessment table, that PolyFlush prefilled saline syringes earned <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> of FY26 standalone turnover. That is ~<span class="n" title="Our calculation: A-0870/100*A-0350; inputs: 10.2% (BRSR FY26, p.27); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.7bn</span> (our calculation), close to the whole renal business (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 1.9bn</span> consolidated). It makes the flush syringe Polymed's largest product family after the cannula on the disclosed evidence. <!-- BRSR26 p.27; AR26 p.47 --></p>
+<ul>
+<li><strong>Product.</strong> Ready-to-use syringes of normal saline in three fill sizes, all on the barrel diameter of the largest size, so that injection pressure stays low enough not to damage catheters. Single-sterile and sterile-field versions are offered, and the product is gamma sterilized. <!-- CATDOM25 p.9; CATEXP24 p.34; D_product_glossary --></li>
+<li><strong>Unit of demand.</strong> One flush before and after each intermittent dose plus scheduled flushes of idle lines, so several per catheter per day. Use is heaviest in US and European hospitals and home infusion; Indian adoption is lower. <!-- D_product_glossary --></li>
+<li><strong>History.</strong> Launched in Nov-2020. By May-2022 management called Polymed the only Indian manufacturer, with BD the only importer, and claimed ~<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 5 · Himanshu Baid, MD">25-30%</span> of the Indian market. Exports had begun by Feb-2022. Management named prefilled syringes as a driver of product-sales and export growth in FY24 and FY25. <!-- DKFEB21 p.14; TR4Q22 p.5; TR3Q22 p.21; PD24 pp.106-107; AR25 p.62 --></li>
+<li><strong>Competition.</strong> BD sells prefilled flush syringes within its Medication Delivery Solutions unit (<span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$4.6bn</span> revenue in FY25). In China, Weigao says volume-based procurement pricing hit its flush-syringe revenue, and it names lower flush-syringe prices among the reasons its group gross margin fell to <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd – Announcement of Interim Results for six months ended 30-Jun-2026 (2026-08-25), slide/page 21">46.3%</span> in the first half of 2026. We read this as a risk that Chinese flush syringes seek export markets, as Chinese makers have done in other disposables. <!-- BD_10K25 p.1; WEIGAO_IR26 pp.21-22; WEIGAO_AR25 p.13 --></li>
+<li><strong>US access.</strong> None of Polymed's <span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> US 510(k)s covers the flush syringe, so the US market is not yet open to it. <!-- FDA510K_POLY p.1 --></li>
+<li><strong>The US opening is widening.</strong> Chinese syringes have carried a <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> Section 301 duty since Sep-2024, the FDA told US users in 2024 to move away from plastic syringes made by four Chinese firms, including KDL, and US syringe imports from China fell from <span class="n" title="Source: UN Comtrade - USA imports HS 901831, 2024, by partner (2026-09-24)">$170.5mn</span> in 2024 to <span class="n" title="Source: UN Comtrade - USA imports HS 901831, 2025, by partner (2026-09-24)">$126.0mn</span> in 2025. India's syringe exports to the US rose from <span class="n" title="Source: UN Comtrade - India exports HS 901831, 2024, by partner (2026-09-24)">$530k</span> to <span class="n" title="Source: UN Comtrade - India exports HS 901831, 2025, by partner (2026-09-24)">$14.1mn</span> over the same two years, making the US the largest market for India's <span class="n" title="Source: UN Comtrade - India exports HS 901831, 2025, by partner (2026-09-24)">$71.2mn</span> of syringe exports in 2025 (UN Comtrade). <!-- FR_301MOD_240918 p.9; AHA_SYR p.1; F_CT_USA_M_901831_2024 p.1; F_CT_USA_M_901831_2025 p.1; F_CT_IND_X_901831_2024 p.1; F_CT_IND_X_901831_2025 p.1 --></li>
+<li><strong>Not yet Polymed's gain.</strong> These are country figures, and nothing links them to Polymed: its US FDA device listings include no syringe, and the average value of <span class="n" title="Our calculation: F-0150/WA-0019*100; inputs: $14.1mn (UN Comtrade - India exports HS 901831, 2025, by partner, p.1); 277,593,158 items (UN Comtrade - India exports HS 901831, 2025, by partner, p.1)">5.1 US cents</span> a unit (our calculation) points to standard hypodermic syringes rather than prefilled flush syringes. A flush-syringe 510(k) would let Polymed compete for the same shift (our view). <!-- FDAREG_POLY p.1; F_CT_IND_X_901831_2025 p.1 --></li>
+</ul>
+<h3 id="administration-sets-stopcocks-extension-lines-and-connectors">Administration sets, stopcocks, extension lines and connectors</h3>
+<p>These are sold with the cannula and follow its channel, but their demand drivers differ.</p>
+<ul>
+<li><strong>Administration sets</strong> follow IV-line days and protocol changes. Specialist sets carry more value per unit: auto air-stop (Autofusion), paediatric micro-drip (Microfusion), light-protective (Photofusion) and oncology in-line filter (Oncofusion). Polymed has held a US 510(k) for Polyfusion sets since Apr-2023. <!-- CATDOM25 pp.14-15; FDA510K_POLY p.1 --></li>
+<li><strong>Stopcocks and extension lines</strong> are ICU- and theatre-heavy. Lipid-resistant stopcocks (Polyway Pro) tolerate propofol, and high-pressure lines serve syringe pumps and contrast injectors. Management named "three way stop cock" among the growth products of the foreign subsidiaries in FY24. The stopcock is also sold to other device makers as a component (Section A4.10). <!-- CATEXP24 pp.23-24, pp.35-36; PD24 p.107; CATCOMP24 p.15 --></li>
+<li><strong>Needle-free connectors and disinfecting caps</strong> are consumed per lumen and per access. Demand depends on infection-prevention protocols, which are strongest in the US and Europe, so these are export products for Polymed. <!-- D_product_glossary; CATDOM25 pp.9-10; CATEXP24 pp.22-24 --></li>
+<li><strong>Competition in sets and connectors</strong> comes from pump makers and connector specialists. BD and ICU Medical sell dedicated sets with their infusion pumps, and ICU Medical says its pumps let it sell "a larger volume of higher margin infusion consumables". ICU Medical's Clave connectors and SwabCap caps, and BD's needle-free connectors and disinfecting caps, lead in the US. Polymed makes no pumps, so it competes in gravity and non-dedicated sets, and in flow regulators and burettes that stand in for pumps where hospitals lack them. <!-- ICUI_10K25 p.1; BD_10K25 p.1; D_product_glossary --></li>
+<li><strong>Scalp-vein sets</strong> were bought in from contract manufacturer Vitromed Healthcare at the time of the 2021 placement document; the 2024 document no longer says so. Whether any infusion products are still made on job work is [not disclosed] (Section A9). <!-- PD21 p.86; PD24 p.102 --></li>
+</ul>
+<h3 id="revenue-doubled-since-fy20-flat-since-fy25">Revenue: doubled since FY20, flat since FY25</h3>
+<figure class="exh" id="exh-inf_hist"><figcaption><span class="exn">Exhibit 18:</span> The cannula's weight in revenue has fallen for a decade and infusion's share has fallen since FY23, as other lines grew faster</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th></th>
+<th>FY12</th>
+<th>FY16</th>
+<th>FY18</th>
+<th>FY20</th>
+<th>FY22</th>
+<th>FY23</th>
+<th>FY24</th>
+<th>FY25</th>
+<th>FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV cannula sales (standalone)</td>
+<td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 49">Rs. 915mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 94">Rs. 1.5bn</span></td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>IV cannula, % of revenue</td>
+<td class="num"><span class="n" title="Our calculation: B-0090/B-0078*100; inputs: Rs. 915mn (Annual Report FY13, p.49); Rs. 2.1bn (Annual Report FY13, p.35)">44%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0179/B-0161*100; inputs: Rs. 1.5bn (Annual Report FY16, p.94); Rs. 3.9bn (Annual Report FY16, p.79)">37%</span></td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span></td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Infusion revenue (deck)</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 4.7bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 5.5bn</span></td>
+<td class="num"><span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 19">Rs. 7.7bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 9.2bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 10.1bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 10.0bn</span></td>
+</tr>
+<tr>
+<td>Infusion revenue (placement document)</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 3.6bn</span></td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 4.5bn</span></td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 5.5bn</span></td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 7.3bn</span></td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 8.6bn</span></td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Infusion, % of revenue (deck)</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">68%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">63%</span></td>
+<td class="num"><span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 19">69%</span></td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">61%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">53%</span></td>
+</tr>
+<tr>
+<td>Infusion, % of standalone turnover (BRSR)</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">67.1%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">69.9%</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">IV cannula shares for FY12-FY16 are our calculation on standalone revenue from operations; the FY24 figure is the MD's statement of Jul-2024. Deck and placement-document series use different product classifications; the BRSR series is standalone and broader (see text).</p><p class="src">Source: Annual Report FY13; Annual Report FY16; QIP Placement Document Feb 2021; QIP Placement Document Aug 2024; Investor deck 1QFY27; 31st AGM presentation; Investor presentation 4QFY26; Investor presentation May 2022; BRSR FY25; BRSR FY26; 1QFY25 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- AR13 p.49; AR16 p.94; PD21 p.130; PD24 p.173; DK1Q27 p.6; DKAGM31 p.19; DK4Q26 p.12; DKMAY22 p.10; BRSR25 p.5; BRSR26 p.12; TR1Q25 p.16 -->
+<p>Infusion revenue doubled from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 4.7bn</span> in FY20 to <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 10.0bn</span> in FY26, a company-stated CAGR of <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">14%</span>, but it has not grown since FY25:</p>
+<ul>
+<li><strong>FY26:</strong> <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">-1.5%</span> on the annual figures. Management attributed the slowdown mainly to Europe, where, it said, distributors cut inventory, Chinese product diverted from the US undercut prices and MDR re-certifications arrived late (Section A3). <!-- AR26 p.47; TR1Q26 p.6 --></li>
+<li><strong>Mix:</strong> management described infusion as "a little bit a laggard" in 3QFY26, still growing "despite the weakness in international markets". <!-- TR3Q26 p.6 --></li>
+<li><strong>1QFY27:</strong> infusion grew <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">+11.1%</span>. Management said the growth reflected both India and exports and was led by domestic infusion, up <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 6 · Rahul Gautam, President - Strategy &amp; Corporate Development">20% plus</span> on higher-value products and price increases, while West Asia fell. <!-- TR1Q27S p.3, p.6; DK1Q27 p.27 --></li>
+</ul>
+<p>Three measurement issues matter for anyone modelling this line:</p>
+<ol>
+<li><strong>Annual and quarterly figures do not reconcile.</strong> The four FY26 quarters, as last reported, add up to <span class="n" title="Our calculation: CB-0344+CB-1524+CB-1522+CB-0862; inputs: Rs. 2.3bn (Investor deck 1QFY27, p.27); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.6bn (Investor presentation 4QFY26, p.12)">Rs. 10.4bn</span>, <span class="n" title="Our calculation: CB-0344+CB-1524+CB-1522+CB-0862-CB-0864; inputs: Rs. 2.3bn (Investor deck 1QFY27, p.27); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.6bn (Investor presentation 4QFY26, p.12); Rs. 10.0bn (Investor presentation 4QFY26, p.12)">Rs. 399mn</span> more than the annual <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 10.0bn</span>. On summed quarters, FY26 growth was <span class="n" title="Our calculation: ((CB-0344+CB-1524+CB-1522+CB-0862)/(CB-2051+CB-1815+CB-1523+CB-0863)-1)*100; inputs: Rs. 2.3bn (Investor deck 1QFY27, p.27); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.6bn (Investor presentation 4QFY26, p.12); Rs. 2.6bn (Investor presentation 1QFY26, p.17); Rs. 2.8bn (Investor presentation 2QFY26, p.17); Rs. 2.6bn (Investor presentation 3QFY26, p.13); Rs. 2.5bn (Investor presentation 4QFY26, p.12)">-1.1%</span> (our calculation). The company moves some revenue from infusion into "others" in its annual tables and restated 1QFY26 from <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 2.5bn</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 2.3bn</span>. <!-- DK4Q26 p.12; DK1Q26 p.17; DK1Q27 p.27 --></li>
+<li><strong>FY23 has two values:</strong> <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 19">Rs. 7.7bn</span> in the AGM deck and <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 7.3bn</span> in the placement document's product table.</li>
+<li><strong>The BRSR uses a broader definition.</strong> Its "Infusion Therapy" line was <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">69.9%</span> of FY26 standalone turnover. That implies <span class="n" title="Our calculation: A-0846/100*A-0350; inputs: 69.9% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 11.6bn</span> of standalone infusion revenue, <span class="n" title="Our calculation: A-0846/100*A-0350-A-0281; inputs: 69.9% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32); Rs. 10.0bn (Annual Report FY26, p.47)">Rs. 1.6bn</span> more than the consolidated infusion revenue in the MD&amp;A (our calculation). BRSR "Dialysis", by contrast, converts to <span class="n" title="Our calculation: A-0847/100*A-0350; inputs: 11.2% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.9bn</span>, almost exactly the deck's renal revenue. The BRSR bucket therefore probably includes vascular-access and critical-care items that the deck puts in "others". We use the deck and MD&amp;A series for infusion and quote the BRSR only for product families the deck does not show. <!-- BRSR26 p.12; AR26 p.47 --></li>
+</ol>
+<figure class="exh" id="exh-inf_q"><figcaption><span class="exn">Exhibit 19:</span> Quarterly infusion revenue has moved sideways for two years; the 1QFY27 pick-up was led by India</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">1</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">2</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">3</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">4</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="85.00" y="284">1QFY25</text><path class="mark" d="M73.00,266.00V113.72Q73.00,109.72 77.00,109.72H93.00Q97.00,109.72 97.00,113.72V266.00Z" data-tip="1QFY25 · Infusion revenue, consolidated: Rs. 2.6bn" fill="var(--s1)"><title>1QFY25 · Infusion revenue, consolidated: Rs. 2.6bn</title></path><text class="val" text-anchor="middle" x="85.00" y="103.72">2.56</text><text class="tick" text-anchor="middle" x="163.00" y="284">2QFY25</text><path class="mark" d="M151.00,266.00V99.02Q151.00,95.02 155.00,95.02H171.00Q175.00,95.02 175.00,99.02V266.00Z" data-tip="2QFY25 · Infusion revenue, consolidated: Rs. 2.8bn" fill="var(--s1)"><title>2QFY25 · Infusion revenue, consolidated: Rs. 2.8bn</title></path><text class="val" text-anchor="middle" x="163.00" y="89.02">2.80</text><text class="tick" text-anchor="middle" x="241.00" y="284">3QFY25</text><path class="mark" d="M229.00,266.00V110.73Q229.00,106.73 233.00,106.73H249.00Q253.00,106.73 253.00,110.73V266.00Z" data-tip="3QFY25 · Infusion revenue, consolidated: Rs. 2.6bn" fill="var(--s1)"><title>3QFY25 · Infusion revenue, consolidated: Rs. 2.6bn</title></path><text class="val" text-anchor="middle" x="241.00" y="100.73">2.61</text><text class="tick" text-anchor="middle" x="319.00" y="284">4QFY25</text><path class="mark" d="M307.00,266.00V116.65Q307.00,112.65 311.00,112.65H327.00Q331.00,112.65 331.00,116.65V266.00Z" data-tip="4QFY25 · Infusion revenue, consolidated: Rs. 2.5bn" fill="var(--s1)"><title>4QFY25 · Infusion revenue, consolidated: Rs. 2.5bn</title></path><text class="val" text-anchor="middle" x="319.00" y="106.65">2.51</text><text class="tick" text-anchor="middle" x="397.00" y="284">1QFY26</text><path class="mark" d="M385.00,266.00V127.69Q385.00,123.69 389.00,123.69H405.00Q409.00,123.69 409.00,127.69V266.00Z" data-tip="1QFY26 · Infusion revenue, consolidated: Rs. 2.3bn" fill="var(--s1)"><title>1QFY26 · Infusion revenue, consolidated: Rs. 2.3bn</title></path><text class="val" text-anchor="middle" x="397.00" y="117.69">2.33</text><text class="tick" text-anchor="middle" x="475.00" y="284">2QFY26</text><path class="mark" d="M463.00,266.00V103.17Q463.00,99.17 467.00,99.17H483.00Q487.00,99.17 487.00,103.17V266.00Z" data-tip="2QFY26 · Infusion revenue, consolidated: Rs. 2.7bn" fill="var(--s1)"><title>2QFY26 · Infusion revenue, consolidated: Rs. 2.7bn</title></path><text class="val" text-anchor="middle" x="475.00" y="93.17">2.73</text><text class="tick" text-anchor="middle" x="553.00" y="284">3QFY26</text><path class="mark" d="M541.00,266.00V102.68Q541.00,98.68 545.00,98.68H561.00Q565.00,98.68 565.00,102.68V266.00Z" data-tip="3QFY26 · Infusion revenue, consolidated: Rs. 2.7bn" fill="var(--s1)"><title>3QFY26 · Infusion revenue, consolidated: Rs. 2.7bn</title></path><text class="val" text-anchor="middle" x="553.00" y="92.68">2.74</text><text class="tick" text-anchor="middle" x="631.00" y="284">4QFY26</text><path class="mark" d="M619.00,266.00V113.78Q619.00,109.78 623.00,109.78H639.00Q643.00,109.78 643.00,113.78V266.00Z" data-tip="4QFY26 · Infusion revenue, consolidated: Rs. 2.6bn" fill="var(--s1)"><title>4QFY26 · Infusion revenue, consolidated: Rs. 2.6bn</title></path><text class="val" text-anchor="middle" x="631.00" y="103.78">2.56</text><text class="tick" text-anchor="middle" x="709.00" y="284">1QFY27</text><path class="mark" d="M697.00,266.00V111.89Q697.00,107.89 701.00,107.89H717.00Q721.00,107.89 721.00,111.89V266.00Z" data-tip="1QFY27 · Infusion revenue, consolidated: Rs. 2.6bn" fill="var(--s1)"><title>1QFY27 · Infusion revenue, consolidated: Rs. 2.6bn</title></path><text class="val" text-anchor="middle" x="709.00" y="101.89">2.59</text></svg></div><p class="note">As reported in each quarter's presentation; 1QFY26 as restated in the 1QFY27 deck (originally <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 2.5bn</span>). Growth yoy: <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">-2.4%</span> in 2QFY26, <span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">+5%</span> in 3QFY26, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+1.9%</span> in 4QFY26 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">+11.1%</span> in 1QFY27. Infusion was <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">58%</span> of revenue in 1QFY26 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">50%</span> in 1QFY27.</p><p class="src">Source: Investor presentation 1QFY26; Investor presentation 2QFY26; Investor presentation 3QFY26; Investor presentation 4QFY26; Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">1QFY25</th><th class="num">2QFY25</th><th class="num">3QFY25</th><th class="num">4QFY25</th><th class="num">1QFY26</th><th class="num">2QFY26</th><th class="num">3QFY26</th><th class="num">4QFY26</th><th class="num">1QFY27</th></tr></thead><tbody><tr><th scope="row">Infusion revenue, consolidated</th><td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 17">Rs. 2.6bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 2.8bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">Rs. 2.6bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 2.5bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 2.3bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">Rs. 2.7bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">Rs. 2.7bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 2.6bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 2.6bn</span></td></tr></tbody></table></div></details></figure>
+<p><strong>Where it is sold.</strong> Exports are overwhelmingly infusion: management put the line at <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 6 · Himanshu Baid, MD">90%</span> of export revenue in Feb-2023 and ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 7 · Himanshu Baid, MD">80-85%</span> for FY23, against ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 7 · Himanshu Baid, MD">45-50%</span> of domestic revenue. We infer that most infusion revenue is earned abroad, which makes the line more exposed to European and US conditions than the group's <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 12 · Himanshu Baid, MD">68%</span> export share suggests. Standalone export sales to Europe fell from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 5.4bn</span> in FY25 to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 4.9bn</span> in FY26 and to the Americas from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.9bn</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.8bn</span>, while Asia rose from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.0bn</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.3bn</span>. The Indian industry stalled with it: India's exports of catheters, cannulae and needles (HS 901839) were flat in FY26 at <span class="n" title="Source: TradeStat EIDB - HS 901839 exports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$512.33mn</span>, and those to the US fell to <span class="n" title="Source: TradeStat EIDB - HS 901839 exports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$51.04mn</span> (TradeStat). <!-- TR3Q23 p.6; TR4Q23 p.7; TR2Q26 p.12; AR26 p.92; TS_X_901839_FY26 p.1 --></p>
+<h3 id="customers-channel-and-pricing">Customers, channel and pricing</h3>
+<p><strong>Who buys.</strong> Abroad, every sale goes through distributors, several with national exclusivity. They supply hospitals directly or through tenders and purchasing groups. <!-- AR25 p.61; PD24 p.46; CR23 p.7 --></p>
+<ul>
+<li><strong>Europe:</strong> Polymed wins on a wider basket per distributor and on price; management puts the price gap between Indian makers and multinationals at <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 15 · Himanshu Baid, MD">20-25%</span>. Six countries (UK, France, Italy, Germany, Spain and Sweden) produced <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">one-third</span> of export revenue in Feb-2022. <!-- TR1Q25 p.15; TR3Q22 p.6 --></li>
+<li><strong>UK:</strong> the NHS buys ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 10 · Himanshu Baid, MD">90%</span> of UK volumes. Polymed bid for <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 11 · Himanshu Baid, MD">6-7</span> new product categories, mostly vascular, in the 2026 cycle, but management says NHS contracts slipped by <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years after the change of government. <!-- TR1Q26 pp.10-11; TR3Q26 p.16 --></li>
+<li><strong>India:</strong> a direct sales force and distributors reach <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 61">more than 8,000</span> hospitals, and all Indian sales are under the Polymed brand. Management expects hospital-chain consolidation to carry its products into merged chains. <!-- AR25 p.61; TR3Q23 p.9; TR4Q25 p.8 --></li>
+</ul>
+<p><strong>Own brand versus private label.</strong> <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">25%</span> of exports were white label in Feb-2023, and none of India's sales. The US business is being built through GPOs and distributors that "will be placing the product directly into the market", with Polymed's role "limited to manufacturing in India" (Section A4.10). <!-- TR3Q23 p.9; TR1Q25 p.4 --></p>
+<p><strong>Pricing.</strong> The MD's illustrative price points for infusion devices are Rs. <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">10-20</span> each. Price is set against the multinationals above and the Chinese below, as <a href="#exh-inf_price">Exhibit 20</a> shows. <!-- TR4Q26 p.18 --></p>
+<figure class="exh" id="exh-inf_price"><figcaption><span class="exn">Exhibit 20:</span> Polymed prices below the multinationals and above China; its recent price increases have been modest</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Price reference</th>
+<th>Value</th>
+<th>Source and date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polymed infusion device price points</td>
+<td>Rs. <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">10-20</span> a device</td>
+<td>MD, May-2026</td>
+</tr>
+<tr>
+<td>Polymed vs. BD and B. Braun</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">15-20%</span> cheaper</td>
+<td>MD, Feb-2023</td>
+</tr>
+<tr>
+<td>Indian makers vs. multinationals</td>
+<td><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 15 · Himanshu Baid, MD">20-25%</span> cheaper</td>
+<td>MD, Jul-2024</td>
+</tr>
+<tr>
+<td>Chinese makers vs. other suppliers</td>
+<td><span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 15 · Himanshu Baid, MD">20%</span> cheaper</td>
+<td>MD, Feb-2024</td>
+</tr>
+<tr>
+<td>Discount to China that Polymed says it needs to win on price alone</td>
+<td><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 12 · Himanshu Baid, MD">10%</span> below China</td>
+<td>MD, Feb-2026</td>
+</tr>
+<tr>
+<td>BD price for the same product: Europe / US and Japan / Africa</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">$1</span> / <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">$3</span> / $<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">0.25</span></td>
+<td>MD's example, Feb-2023</td>
+</tr>
+<tr>
+<td>Price increase taken in FY22</td>
+<td><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 8 · Himanshu Baid, MD">5-7%</span> for most customers; Europe <span class="n" title="Source: 2QFY22 earnings call transcript (2022-12-01), slide/page 10 · Himanshu Baid, MD">8-15%</span></td>
+<td>Calls, Nov-2021 and May-2022</td>
+</tr>
+<tr>
+<td>Typical annual price increase, domestic portfolio</td>
+<td><span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 9 · Himanshu Baid, MD">3-4%</span> a year</td>
+<td>MD, Feb-2025</td>
+</tr>
+<tr>
+<td>Price increase for FY27 raw-material inflation</td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · Himanshu Baid, MD">3-5%</span> in FY27</td>
+<td>MD, May-2026</td>
+</tr>
+<tr>
+<td>Average price increase, 1QFY27 vs. 4QFY26</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">4-5%</span> quarter on quarter</td>
+<td>1QFY27 deck</td>
+</tr>
+<tr>
+<td>A Polymed IV set in Maharashtra</td>
+<td>Bought by a hospital for <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 10.5</span>; MRP <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 187</span> (mark-up <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,681%</span>)</td>
+<td>Press report of the state regulator's survey, Sep-2026</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 4QFY26 earnings call transcript; 3QFY23 earnings call transcript; 1QFY25 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); 2QFY22 earnings call transcript; 4QFY22 earnings call transcript; 3QFY25 earnings call transcript; Investor deck 1QFY27; Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set; 3QFY24 earnings call transcript (full); Avendus Spark Research</p></figure>
+<!-- TR4Q26 p.18; TR3Q23 p.15; TR1Q25 p.15; TR3Q24b p.15; TR3Q26 p.12; TR2Q22 p.10; TR4Q22 p.8; TR3Q25 p.9; TR4Q26 p.6; DK1Q27 p.22; FPJ_MAHFDA_2609 p.1 -->
+<p>Five points follow:</p>
+<ul>
+<li><strong>Regional price gaps are wide.</strong> In management's example, the same BD device sells for <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">$1</span> in Europe, <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">$3</span> in the US and $<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">0.25</span> in Africa. Polymed's move into the US is therefore a move into a higher price tier as well as into more volume (our view). <!-- TR3Q23 p.15 --></li>
+<li><strong>Price increases lag costs.</strong> Increases reach customers annually or at contract renewal. Looking back on the FY22-FY23 cost spike in May-2023, the MD said increases had gone to only ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 12 · Himanshu Baid, MD">25-30%</span> of customers, although a year earlier he had described a <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 8 · Himanshu Baid, MD">5-7%</span> increase for "most of the customers". The FY27 increase of <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · Himanshu Baid, MD">3-5%</span> compares with ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · Himanshu Baid, MD">20%</span> crude-linked raw-material inflation. <!-- TR4Q23 p.12; TR4Q22 p.8; AR26 p.85; TR4Q26 p.6 --></li>
+<li><strong>Rebates are rising.</strong> Standalone rebates and discounts rose to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 77">Rs. 116mn</span> in FY26 from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 77">Rs. 73mn</span> in FY25 and <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 119">Rs. 53mn</span> in FY24. <!-- AR26 p.77; AR25 p.119 --></li>
+<li><strong>The incumbents' pricing is mixed.</strong> Pricing took <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">0.3%</span> off BD's FY25 revenue growth, and BD blames "the entry into the market of low-cost manufacturers" and buying concentrated in GPOs. B. Braun's Hospital Care division did raise prices in 2025, and in the year to Mar-2026 Terumo's price increases added <span class="n" title="Source: Terumo Corporation – Financial Results for FY ended 31-Mar-2026 (FY2025), presentation with speaker notes (2026-05-15), slide/page 7">JPY 14.6bn</span> to operating profit, more than offsetting a <span class="n" title="Source: Terumo Corporation – Financial Results for FY ended 31-Mar-2026 (FY2025), presentation with speaker notes (2026-05-15), slide/page 7">JPY 12.1bn</span> hit from US tariffs. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44; TERUMO_FY25 p.7 --></li>
+<li><strong>Indian MRPs are under scrutiny.</strong> A press report of a Maharashtra FDA survey in Sep-2026 found a Polymed IV set bought by a hospital for <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 10.5</span> and carrying an MRP of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 187</span>, a mark-up of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,681%</span>. The purchase price sits at the bottom of the MD's illustrative Rs. <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">10-20</span> range, so we infer that the mark-up accrues to the hospital and any distributor, not to Polymed. In Aug-2026 a parliamentary committee recommended capping the gap between landing price and MRP for devices at <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span>, and on 18-Sep-2026 the Health Minister asked the DoP and NPPA to consult on curbing mark-ups on hospital consumables, with no deadline. A cap would not cut Polymed's selling price directly, but it would change the economics of the distributors and hospitals that stock its products; how Polymed sets its MRPs is [not disclosed] (our view). <!-- FPJ_MAHFDA_2609 p.1; TR4Q26 p.18; PIB_PSC176_2608 p.1; MB_MRP_2609 p.1 --></li>
+</ul>
+<p>In India, Para 20 of DPCO 2013 caps annual MRP increases on notified devices at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 41">10%</span> (Section B3). <!-- PD24 p.41 --></p>
+<h3 id="the-us-six-clearances-small-revenue-a-moving-tariff">The US: six clearances, small revenue, a moving tariff</h3>
+<p>The US is the largest market for safety and closed-system catheters and the highest-priced. Polymed's entire US 510(k) portfolio is in infusion. <!-- VND_PMR_PIVC p.1; FDA510K_POLY p.1 --></p>
+<figure class="exh" id="exh-inf_us"><figcaption><span class="exn">Exhibit 21:</span> All six US clearances are infusion products, but US revenue has stayed small while the target date kept moving</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K220312</td>
+<td>Polyfusion IV administration sets</td>
+<td>Apr-2023</td>
+</tr>
+<tr>
+<td>K230616</td>
+<td>Polyguard and Polyshield safety IV catheters</td>
+<td>May-2023</td>
+</tr>
+<tr>
+<td>K231401</td>
+<td>Polysafety BC, Polysafety BC Adva, Polywin Safety, Polywin Safety Adva</td>
+<td>Sep-2023</td>
+</tr>
+<tr>
+<td>K232234</td>
+<td>Nouvo Safety Set (closed IV catheter system)</td>
+<td>Mar-2024</td>
+</tr>
+<tr>
+<td>K252677</td>
+<td>Polyshield safety IV catheters</td>
+<td>Nov-2025</td>
+</tr>
+<tr>
+<td>K252513</td>
+<td>Polywin Safety and Polywin Safety Adva, full size range</td>
+<td>Apr-2026</td>
+</tr>
+<tr>
+<td>US revenue target</td>
+<td><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 9 · management guidance; Himanshu Baid, MD">$15-20mn</span> in four to five years; <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 14 · management guidance; Himanshu Baid, MD">$15-20mn</span> in three to four years; <span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 7 · management guidance; Himanshu Baid, MD">$15-20mn</span> a year by FY28; <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 14 · management guidance; Himanshu Baid, MD">$15-20mn</span> "pipeline" on a three-year basis</td>
+<td>May-2022; May-2023; Feb-2024; Nov-2025</td>
+</tr>
+<tr>
+<td>US revenue achieved</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 14 · Himanshu Baid, MD">&gt;$1mn</span> (Feb-2023); <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 3 · management guidance; Himanshu Baid, MD">$2-3mn</span> expected for FY25; below <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">$3-3.5mn</span> in FY26; <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected for FY27</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>US tariff on Indian goods, per management</td>
+<td><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 11 · Himanshu Baid, MD">0%</span> (Oct-2024); <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">50%</span> (Aug-2025); <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · Himanshu Baid, MD">18%</span> announced (Feb-2026); <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span> (Aug-2026)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>US duty on Indian HS 9018 goods, in law</td>
+<td><span class="n" title="Source: Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates) (2025-08-06), slide/page 5">25%</span> from 7-Aug-2025, plus <span class="n" title="Source: Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%) (2025-08-11)">25%</span> from 27-Aug-2025; the extra <span class="n" title="Source: Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%) (2025-08-11)">25%</span> lifted from 7-Feb-2026, and the <span class="n" title="Source: United States-India Joint Statement (framework for Interim Agreement) (2026-02-06)">18%</span> rate announced then was never applied; IEEPA duties void after the Supreme Court ruling of 20-Feb-2026; <span class="n" title="Source: Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II (2026-02-25), slide/page 3">10%</span> Section 122 surcharge from 24-Feb-2026 to 24-Jul-2026; <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> Section 301 duty since 24-Jul-2026</td>
+<td>Federal Register</td>
+</tr>
+<tr>
+<td>US duty on Chinese syringes and needles</td>
+<td><span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> Section 301 since 27-Sep-2024, plus <span class="n" title="Source: Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour) (2026-07-28), slide/page 4">12.5%</span> since 24-Jul-2026</td>
+<td>Federal Register</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: FDA 510(k) clearances – Poly Medicure; 4QFY22 earnings call transcript; 4QFY23 earnings call transcript; 2QFY26 earnings call transcript; 3QFY23 earnings call transcript; 2QFY25 earnings call transcript; 1QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); 3QFY26 earnings call transcript (6 Feb 2026); Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates); Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%); Executive Order 14384 - Modifying Duties To Address Threats ... Russian Federation (removes India +25%); United States-India Joint Statement (framework for Interim Agreement); Learning Resources, Inc. v. Trump, No. 24-1287 (slip opinion); Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II; USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II); USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581; Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour); 3QFY24 earnings call transcript (full); Avendus Spark Research</p></figure>
+<!-- FDA510K_POLY p.1; TR4Q22 p.9; TR4Q23 p.14; TR3Q24b p.7; TR2Q26 p.14; TR3Q23 p.14; TR2Q25 p.3; TR1Q26 p.7; TR1Q27S p.12; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6; FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; FR_EORUS_260211 p.1; WH_USIND_JS_2602 p.1; SCOTUS_IEEPA_260220 p.2; FR_S122_260225 p.3; FR_301ACT_260728 p.7; FR_301MOD_240918 p.9; FR_301PRES_260728 p.4 -->
+<p>The US effort has been slower than planned at every stage:</p>
+<ul>
+<li><strong>Approvals.</strong> 510(k) filings went in mid-2021. The FDA then asked for extra biocompatibility and genotoxicity testing, and in Nov-2025 management said the FDA had "started disapproving Indian lab results", forcing re-tests in the US. <!-- TR2Q23 p.9; TR3Q23 p.10; TR2Q26 p.11 --></li>
+<li><strong>Contracts.</strong> By Aug-2022 Polymed had signed a contract with a large US distributor for one product category, which management said carried potential revenue of <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 12 · management guidance; Himanshu Baid, MD">$15mn</span> over five years. Contracts with two large GPOs and distributors followed. <!-- TR1Q23 p.12; TR1Q26 p.7 --></li>
+<li><strong>Tariffs.</strong> The Aug-2025 US tariff on India was "completely untenable" and put customers on hold. After the cut announced in Feb-2026 management was "reinitiating conversations" with contracted customers. The duty actually charged differed from the headlines: the announced <span class="n" title="Source: United States-India Joint Statement (framework for Interim Agreement) (2026-02-06)">18%</span> never took effect, the IEEPA duties ended with the Supreme Court ruling, and Indian HS 9018 goods have paid <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> since Jul-2026, the rate management cited in Aug-2026 (Section B4). <!-- TR2Q26 p.11; TR3Q26 p.6; WH_USIND_JS_2602 p.1; FR_ENDTAR_260225 p.1; FR_301ACT_260728 p.7, p.166; TR1Q27S p.12 --></li>
+<li><strong>The channel.</strong> GPOs buy for more than <span class="n" title="Source: Healthcare Supply Chain Association (US GPO association) – home page statistics (2026-09-24)">7,000 hospitals</span> in the US (industry-body figure). ICU Medical warns that large rivals win "full-line" contracts to supply all of a hospital's or GPO's infusion needs, and that long-term fixed-price contracts stop it passing on cost increases; it paid <span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">$33.6mn</span> in incremental US tariffs in 2025. A GPO contract gives access, not volume, since members "may choose to purchase from our competitors". <!-- HSCA_HOME p.1; ICUI_10K25 p.1 --></li>
+<li><strong>The next tariff risk.</strong> BD and ICU Medical both flag the Section 232 national-security investigation into imports of medical consumables and equipment, opened in Sep-2025, as a source of further tariffs whatever the country of origin. Commerce had <span class="n" title="Source: Section 232 Investigations - list page (2026-09-24)">270 days</span> to report to the President; no action had been published by late Sep-2026 (Section B4). <!-- BD_10K25 p.1; ICUI_10K25 p.1; FR_232PPE_250926 p.1; BIS_232_LIST p.1 --></li>
+<li><strong>Scale.</strong> The US subsidiary PolyHealth Medical booked only <span class="n" title="Source: PolyHealth Medical Inc FY26 accounts (2026-08-18), slide/page 2">$211k</span> of revenue in FY26. US sales run mainly as exports from India to distributors and GPOs, and management calls US exposure "not very big". <!-- SUB26US p.2; TR1Q27S p.12 --></li>
+</ul>
+<p>We see the US as an option on the safety and closed-system range rather than a driver of FY27 revenue. The evidence to watch is repeat GPO orders at US prices, not new clearances.</p>
+<h3 id="europe-and-other-export-markets">Europe and other export markets</h3>
+<p>Europe is Polymed's largest infusion market and the source of the FY26 slowdown (Section A3).</p>
+<ul>
+<li><strong>The downturn.</strong> Distributors cut inventory from four to five months of cover to two to three, and shorter transit after the reopening of the Suez route released more stock. <!-- TR1Q26 p.9; TR2Q26 p.9 --></li>
+<li><strong>The recovery.</strong> Organic European revenue grew <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">17.6%</span> in 1QFY27. Management attributes this to new customers, <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 8 · management guidance; Himanshu Baid, MD">5-6</span> of them from Apr-2026 and mainly in infusion, and to existing customers restocking. <!-- TR1Q27S p.3; TR3Q26 p.8; TR4Q26 pp.8-9 --></li>
+<li><strong>MDR.</strong> The MDR cost Polymed products during the transition: "we had to drop many products initially". In Nov-2025 management counted ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · Himanshu Baid, MD">75</span> CE-certified products and ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · management guidance; Himanshu Baid, MD">20</span> new products, filed in early 2025, due for CE marks during 2026. In Aug-2026 it put the CE-marking pipeline at almost <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 9 · management guidance; Himanshu Baid, MD">25</span> products; whether these overlap with the earlier batch is not stated. The company's own counts differ by document: <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> products with MDR certificates in the Sep-2025 AGM deck and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approved in the May-2026 deck (Section A5). The company says every plant is certified under the EU MDR for its full range. <!-- TR3Q26 p.8; TR2Q26 p.10; TR1Q27S p.9; DKAGM30 p.3; DK4Q26 p.39; AR26 p.35 --></li>
+<li><strong>UK.</strong> The UK was <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 6 · Himanshu Baid, MD">5-6%</span> of revenue in FY25. The India-UK trade agreement cuts UK import duty on most of Polymed's products from ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 10 · Himanshu Baid, MD">4-5%</span> to near zero. <!-- TR4Q25 pp.6-7; TR1Q26 p.10 --></li>
+<li><strong>EU tenders.</strong> Since Jun-2025 the EU has excluded bids from Chinese companies in public medical-device tenders worth <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 12">€5mn</span> or more, and capped Chinese-origin content at <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">50%</span> of a contract's value, for five years. Tenders of that size are about <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">59%</span> of EU public device procurement. The measure helps non-Chinese suppliers such as Polymed and Plan1Health, although most of Polymed's European sales go through distributors, who decide whether to bid (our view). <!-- EU_IPI2025_1197 pp.5, 12; KS_IPI_2507 p.1; AR25 p.61 --></li>
+</ul>
+<p>Outside Europe, infusion sells through distributors in Latin America, Africa, Asia and West Asia, where currency and logistics set the pace. B. Braun reports stiffer competition in Latin America and Chinese share gains in ASEAN. West Asia revenue fell <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">32%</span> in 1QFY27 because, management says, the West Asia crisis left it unable to ship orders it holds. Iran declared the Strait of Hormuz closed in early 2026, and carriers such as Hapag-Lloyd added war-risk surcharges of <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">$1,500 per TEU</span> on Gulf cargo. <!-- TR3Q24b p.14; BBRAUN_AR25 p.42, p.44; TR1Q27S p.3; HOWDEN_HORMUZ_2603 pp.3, 11 --></p>
+<h3 id="market-and-competition">Market and competition</h3>
+<p><strong>Market size (vendor estimates).</strong> Commercial research firms put the global peripheral IV catheter market at:</p>
+<ul>
+<li><span class="n" title="Source: Peripheral IV Catheters Global Market Report (The Business Research Company) – Research and Markets product page (2026-02) · third-party estimate">$5.74bn</span> in 2025 (Research and Markets);</li>
+<li><span class="n" title="Source: Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page (2026-05) · third-party estimate">$5.1bn</span> in 2026 (Persistence Market Research);</li>
+<li><span class="n" title="Source: Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page (2026) · third-party estimate">$7.5bn</span> in 2026 (Future Market Insights).</li>
+</ul>
+<p>They disagree on how much of it is already safety-engineered, from <span class="n" title="Source: Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page (2026) · third-party estimate">30.3%</span> (FMI) to <span class="n" title="Source: Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page (2026-05) · third-party estimate">62%</span> (Persistence). Persistence puts North America at <span class="n" title="Source: Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page (2026-05) · third-party estimate">37%</span> of the market. FMI names BD, B. Braun and Smiths (now part of ICU Medical) as the largest suppliers, and the reports list Terumo, Teleflex, Vygon and Nipro among the others. We treat these as ranges, not facts. <!-- VND_RNM_PIVC p.1; VND_PMR_PIVC p.1; VND_FMI_PIVC p.1 --></p>
+<p><strong>India.</strong> No source sizes the Indian cannula market on its own. 1Lattice, in a 2025 offer document, puts India's broader catheters-and-cannulae segment at <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 202">$1.3bn</span> in FY25, growing <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 202">9.1%</span> a year over FY20-FY25 and making up <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 202">34.4%</span> of Indian surgical disposables (vendor estimate). CRISIL says imports still meet <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">30-40%</span> of Indian demand for consumables, less for needles and syringes and more for catheters and cannulas, which in our view puts the room for import substitution in Polymed's core line. CRISIL put Polymed's share of India's whole consumables market at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 166">1.9%</span> in FY23, on domestic revenue of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 166">Rs. 3.4bn</span>. Management sees the domestic runway in reach rather than market share: "I <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 13 · Himanshu Baid, MD">only covered one-third</span> of the hospital[s]", the MD said in Feb-2025, and in Nov-2025 he put Polymed's wallet share in the hospitals it serves at <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 13 · Himanshu Baid, MD">5-7%</span>. <!-- DRHP_GSURG p.202; PD24 p.134, p.139, p.166; TR3Q25 p.13; TR2Q26 p.13 --></p>
+<figure class="exh" id="exh-inf_comp"><figcaption><span class="exn">Exhibit 22:</span> Polymed competes with three global leaders many times its size, Chinese exporters with a cost edge, and Indian makers far smaller in cannulas</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Company</th>
+<th>Relevant range</th>
+<th>Scale indicator</th>
+<th>Where it meets Polymed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BD (US)</td>
+<td>Conventional and safety PIVCs, flush syringes, needle-free connectors, disinfecting caps</td>
+<td>Medication Delivery Solutions revenue <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$4.6bn</span> (FY25), of which US <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$2.8bn</span></td>
+<td>US GPOs, Europe, India (BD India revenue <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 165">Rs. 13.0bn</span> in FY23)</td>
+</tr>
+<tr>
+<td>B. Braun (Germany)</td>
+<td>Introcan Safety catheters, infusion systems and supplies</td>
+<td>Hospital Care revenue <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 43">€5.1bn</span> (CY25), up <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 43">6.1%</span> at constant currency; Penang site over <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 11">600</span>mn catheters a year</td>
+<td>Europe, India (B. Braun India revenue <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 165">Rs. 6.1bn</span> in FY23)</td>
+</tr>
+<tr>
+<td>ICU Medical, incl. Smiths Medical (US)</td>
+<td>Jelco PIVCs, Clave connectors, disinfecting caps</td>
+<td>Consumables revenue <span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">$1.1bn</span> (CY25), up <span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">6.1%</span> at constant currency</td>
+<td>US, Europe</td>
+</tr>
+<tr>
+<td>Terumo, Nipro (Japan); Teleflex (US); Vygon</td>
+<td>PIVCs, infusion and specialty vascular access</td>
+<td>Named by vendor reports among the leading suppliers</td>
+<td>Europe, Asia, US</td>
+</tr>
+<tr>
+<td>Weigao, KDL (China)</td>
+<td>Syringes, IV catheters, infusion sets, flush syringes</td>
+<td>Weigao medical-device revenue <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 17">RMB 6.4bn</span> (CY25); KDL exports <span class="n" title="Our calculation: E-0281/E-0280*100; inputs: RMB 795.4mn (Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告), p.25); RMB 2.3bn (Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告), p.24)">35%</span> of revenue (our calculation)</td>
+<td>Europe, Latin America, Asia, Africa on price</td>
+</tr>
+<tr>
+<td>Hindustan Syringes &amp; Medical Devices, Romsons, Lars Medicare, others (India)</td>
+<td>Syringes, IV cannulas (incl. safety), disposables</td>
+<td>HMD revenue <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 165">Rs. 8.5bn</span> (FY23) and a plant built for <span class="n" title="Source: Hindustan Syringes &amp; Medical Devices Ltd – Infrastructure page (2026-09-24)">36</span>mn IV cannulas a year; Romsons revenue <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">Rs. 8.6bn</span> (FY24)</td>
+<td>Indian trade and tenders; some exports</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025; B. Braun SE – Annual Report 2025; ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025; Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page; Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page; Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025; Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告); QIP Placement Document Aug 2024; Hindustan Syringes &amp; Medical Devices Ltd – Infrastructure page; Hindustan Syringes &amp; Medical Devices Ltd – corporate website home page (self-reported capacity/scale); Lars Medicare Pvt Ltd – corporate website (self-reported reach); G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); our calculation; Avendus Spark Research</p></figure>
+<!-- BD_10K25 p.1; BBRAUN_AR25 p.11, p.43; ICUI_10K25 p.1; VND_FMI_PIVC p.1; VND_PMR_PIVC p.1; WEIGAO_AR25 p.17; KDL_AR25 pp.21, 24-25; PD24 p.165; HMD_INFRA p.1; HMD_WEB p.1; LARS_WEB p.1; DRHP_GSURG p.219 -->
+<p>We draw four points from the competitor evidence.</p>
+<ol>
+<li><strong>The global leaders are integrated systems sellers.</strong> BD and ICU Medical sell catheters with pumps, connectors and caps and compete for US GPO contracts across the whole portfolio. ICU Medical says it can now offer "a one-stop shop" and "more flexible competitive pricing". Polymed's closed-system and blood-control catheters, needle-free connectors and flush syringes are its answer to the breadth problem. Its lack of pumps is a gap. <!-- ICUI_10K25 p.1; BD_10K25 p.1 --></li>
+<li><strong>Chinese makers are shifting to exports, and towards Polymed's markets.</strong> KDL's core products (syringes, IV catheters, blood tubes, infusion sets) are now in provincial volume-based procurement at home, and China ran <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 17">78</span> such procurement projects for consumables in 2025. KDL's export gross margin was <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 25">35.6%</span> against <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 25">31.5%</span> in China. Chinese industry data show where the product went in 2025: device exports to the EU and UK rose <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 18">8.9%</span> to <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 18">$11.3bn</span>, overtaking exports to the US, which fell <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 18">10.8%</span> to <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 18">$10.5bn</span>, and exports to Latin America rose <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 18">13.3%</span>. Weigao lifted overseas sales to <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 7">27%</span> of revenue. B. Braun reports that in ASEAN "Chinese manufacturers expanded their market shares". Management describes Chinese device exports as "<span class="n nl" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">minus 20% in U.S. ... 25% to 30% in all other global markets</span>". <!-- KDL_AR25 pp.17-18, 21, 25; WEIGAO_AR25 p.7; BBRAUN_AR25 p.42; TR3Q26 p.5 --></li>
+<li><strong>US policy now disadvantages Chinese syringes and needles, but South-East Asia has gained most so far.</strong> Chinese syringes and needles pay a <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> Section 301 duty, plus a further <span class="n" title="Source: Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour) (2026-07-28), slide/page 4">12.5%</span> since Jul-2026, against <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> on Indian goods. Management says US buyers leaving China have favoured Vietnam, Thailand, Malaysia and Indonesia. The 2025 trade data show how far India has to go: the US imported <span class="n" title="Source: UN Comtrade - USA imports HS 901839, 2025, by partner (2026-09-24)">$431.8mn</span> of catheters, cannulae and needles (HS 901839) from Malaysia and <span class="n" title="Source: UN Comtrade - USA imports HS 901839, 2025, by partner (2026-09-24)">$467.8mn</span> from China, against <span class="n" title="Source: UN Comtrade - USA imports HS 901839, 2025, by partner (2026-09-24)">$52.4mn</span> from India, about <span class="n" title="Our calculation: F-0180/F-0177*100; inputs: $52.4mn (UN Comtrade - USA imports HS 901839, 2025, by partner, p.1); $10.4bn (UN Comtrade - USA imports HS 901839, 2025, by partner, p.1)">0.5%</span> of the <span class="n" title="Source: UN Comtrade - USA imports HS 901839, 2025, by partner (2026-09-24)">$10.4bn</span> total (UN Comtrade; our calculation). <!-- FR_301MOD_240918 p.9; FR_301PRES_260728 p.4; FR_301ACT_260728 p.7; TR2Q26 p.14; F_CT_USA_M_901839_2025 p.1 --></li>
+<li><strong>Indian competitors are syringe-heavy, but some now match the cannula range.</strong> Hindustan Syringes claims capacity of more than <span class="n" title="Source: Hindustan Syringes &amp; Medical Devices Ltd – corporate website home page (self-reported capacity/scale) (2026-09-24)">4.5 bn units per annum</span> across eight Faridabad plants, but its newest plant was built for only <span class="n" title="Source: Hindustan Syringes &amp; Medical Devices Ltd – Infrastructure page (2026-09-24)">36</span>mn IV cannulas a year, against Polymed's ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn. Smaller makers now offer the same catheter generations: Lars Medicare lists safety, blood-control and closed IV catheters and sells as a contract supplier to distributors in more than <span class="n" title="Source: Lars Medicare Pvt Ltd – corporate website (self-reported reach) (2026-09-24)">100 countries</span> (its own claims). CRISIL names Hindustan Syringes, Lotus Surgical, B. Braun and BD with Polymed as the key consumables players in India. Private equity is funding the domestic rivals: Temasek took a minority stake in Romsons in Sep-2026. <!-- HMD_WEB p.1; HMD_INFRA p.1; LARS_WEB p.1; PD24 p.132; MB_ROMSONS p.1 --></li>
+</ol>
+<p>Polymed's differentiation, on management's account, is design (the group holds <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 8">390+</span> granted patents; "A lot of companies do copy our products"), MDR and FDA approvals that most Indian peers lack, and prices <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 15 · Himanshu Baid, MD">15-20%</span> below BD and B. Braun. The 2024 placement document still listed a criminal complaint that Polymed filed in 2012 against B. Braun Medical (India) over a catheter patent. <!-- AR26 p.8; TR1Q27S p.15; TR3Q23 p.15; PD24 p.246 --></p>
+<h3 id="regulation-and-policy-specific-to-infusion">Regulation and policy specific to infusion</h3>
+<ul>
+<li><strong>Sharps safety.</strong> The EU sharps directive of 2010, which member states had to transpose by <span class="n" title="Source: Council Directive 2010/32/EU - prevention from sharp injuries in hospital and healthcare sector (2010-05-10), slide/page 2">11 May 2013</span>, requires employers, where a risk assessment shows the need, to provide devices with safety-engineered protection, and it bans recapping. With US needlestick legislation, it makes safety-engineered catheters the default purchase in those markets. In India adoption is rising in private hospitals, and each hospital that converts moves from a conventional to a safety cannula at a higher price. CRISIL lists safety IV cannulas and safety vein sets among the safety devices now used in Indian infusion therapy. <!-- EU_DIR2010_32 p.2, p.6; D_product_glossary; VND_PMR_PIVC p.1; PD24 p.137 --></li>
+<li><strong>EU MDR</strong> has raised the cost and time of keeping each catheter variant on the market. Management said in May-2022 that a CE mark took <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">18-24</span> months, against six to twelve before. <!-- TR4Q22 pp.5-6; TR3Q26 p.8 --></li>
+<li><strong>MDR relief is proposed but not settled.</strong> The Commission's Dec-2025 proposal would replace the five-year limit on certificates with periodic reviews and lighten the rules for "well-established technology" devices, a category that should cover most of the infusion range (our view). The Parliament's rapporteur has instead proposed keeping initial certificates to five years; the committee vote is scheduled for December and the Parliament's position is expected in early 2027. <!-- EU_COM2025_1023 p.1; DSV_MDR_2607 p.1 --></li>
+<li><strong>US.</strong> The 510(k) route applies, and the FDA now expects testing in US labs. Since Feb-2026 the FDA's quality system rule (QMSR) has incorporated ISO 13485:2016, a standard Polymed's plants are already certified to, alongside the MDSAP single audit. Tariffs are set out in Section B4. <!-- TR2Q26 p.11; FR_QMSR_240202 p.1; AR26 p.35 --></li>
+<li><strong>India.</strong> Price increases on notified devices are capped at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 41">10%</span> a year, and a cap on trade margins is under review (see pricing above). Class A/B licensing has applied since Oct-2022 and Class C/D since Oct-2023, which management says has cut unregulated imports. Public tenders for cannulae, syringes and hollow needles are among <span class="n" title="Source: DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only) (2021-03-25)">19</span> device lines reserved since Mar-2021 for local suppliers with at least <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content, and Polymed is one of many firms on the government's illustrative list of local cannula suppliers; management, though, is withdrawing from low-margin government tenders. GST on medical devices was cut from <span class="n" title="Source: PIB backgrounder: GST for Affordable Healthcare (2025-09-12), slide/page 2">12% to 5%</span> in Sep-2025. <!-- PD24 p.41; TR2Q23 p.3; TR1Q25 p.10; PPP_MD_LC21B p.1, p.9; PPP_MD_GUIDE21 p.1; TR3Q26 p.4; PIB_GSTHEALTH_2509 p.2 --></li>
+</ul>
+<h3 id="capacity-and-supply-chain">Capacity and supply chain</h3>
+<p>Polymed does not disclose which plants make cannulas or the capacity dedicated to them. In Aug-2023 the MD described the plant roles: <!-- TR1Q24 p.9 --></p>
+<ul>
+<li>the Faridabad EOU extension serves the US business and new export products;</li>
+<li>the Jaipur SEZ is "mainly for European business";</li>
+<li>IMT Faridabad serves India.</li>
+</ul>
+<p>The FDA listings for its safety IV catheters are all at a Faridabad establishment. <!-- TR1Q24 p.9; FDAREG_POLY p.1 --></p>
+<p>At group level:</p>
+<ul>
+<li><strong>Capacity</strong> rose from ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 9">1bn units</span> in FY20 to ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">1.9bn units</span> in FY26. Management put utilization of the post-2021 capacity at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">65-70%</span> in May-2026. <!-- DK1Q27 pp.9-10; TR4Q26 p.14 --></li>
+<li><strong>New plant:</strong> the Palwal plant, due around Mar-2027, adds infusion capacity alongside orthopaedics and transfusion. <!-- TR1Q27S p.15 --></li>
+<li><strong>Materials:</strong> the key inputs are plastic granules, FEP compound for catheter tubing and stainless-steel needle tube, mostly imported and bought on purchase orders (Section A2). Whether Polymed grinds needles in-house is [not disclosed]. <!-- PD24 pp.48, 179-180; PD21 pp.44-45; AR26 p.85 --></li>
+<li><strong>Tubing:</strong> the government has approved a grant of <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 100mn</span> towards a <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 1.0bn</span> Polymed project in Haryana to make polymer tubing components for infusion therapy, bloodlines and dialysis accessories and central venous catheters, under its Marginal Investment Scheme for Reducing Import Dependence (MIS-RID). <!-- LSQ_AU1001_260724 pp.2, 9 --></li>
+</ul>
+<h3 id="growth-drivers-ranked">Growth drivers, ranked</h3>
+<ol>
+<li><strong>India conversion and reach</strong> (management target; our view: most visible). Domestic infusion grew <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 6 · Rahul Gautam, President - Strategy &amp; Corporate Development">20% plus</span> in 1QFY27, with private hospitals (<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">90%</span> of domestic revenue) growing while Polymed exits low-margin government tenders. The levers are corporate-chain contracts, a larger clinical sales force and conversion to safety and closed catheters at higher prices. <!-- TR1Q27S p.6; TR3Q26 p.4; TR1Q26 pp.4-5 --></li>
+<li><strong>Europe restocking and new customers</strong> (management target; timing FY27). The evidence is 1QFY27 organic Europe growth of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">17.6%</span>. Management expects new customers from Apr-2026, MDR approvals and NHS contracts to add to it. <!-- TR1Q27S p.3; TR3Q26 p.8 --></li>
+<li><strong>Flush syringes, connectors and caps</strong> (our view). These are consumed several times per catheter, sell at higher prices in the US and Europe, and let Polymed sell a bundle rather than a cannula. The flush syringe is already ~<span class="n" title="Our calculation: A-0870/100*A-0350; inputs: 10.2% (BRSR FY26, p.27); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.7bn</span> of standalone revenue (our calculation).</li>
+<li><strong>US safety catheters</strong> (management target; our view: an option, FY28 at the earliest). The US tier prices several times above Europe. Tariffs, the FDA testing issue and GPO ramp-up have delayed every US target since 2022. <!-- TR3Q23 p.15; TR2Q26 p.11 --></li>
+<li><strong>China-plus-one sourcing</strong> (our view: two-sided). The cost case is real: hourly manufacturing wages are below <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$2 per hour</span> in India against <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$5-6 per hour</span> in China (Frost &amp; Sullivan, 2024 data), and 1Lattice reports that "many companies are moving manufacturing from China to India". US measures against Chinese syringes help. Chinese makers redirecting product to Europe and emerging markets hurt, as FY26 showed, and some are now producing outside China: Weigao's Indonesian joint venture is due to start local manufacturing in the second half of 2026. <!-- DRHP_SMT p.185; DRHP_GSURG p.176; WEIGAO_IR26 p.34 --></li>
+</ol>
+<h3 id="margin-drivers-ranked">Margin drivers, ranked</h3>
+<p>Polymed does not disclose infusion's margin. Management says exports earn "slightly higher" margins than India; in Feb-2023 it put export EBITDA at <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 16 · Himanshu Baid, MD">30%+</span> against <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 16 · Himanshu Baid, MD">18-20%</span> for India (as transcribed, the answer sits inside the analyst's turn). Infusion is the most exported line, so it is probably the group's highest-margin line, but that is our inference. <!-- TR4Q25 p.10; TR3Q23 p.16 --></p>
+<ol>
+<li><strong>Automation.</strong> The decks' count of assembly machines rose from <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 30">200</span>+ (Aug-2025) to <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 29">530</span>+ (May-2026), although most of the step came in one quarter and we read it as a change in what is counted (Section A6); job work fell as a share of revenue (Section A2). Management says it is "pushing more on automation" to "mitigate some wage revisions" in Haryana. <!-- DK1Q26 p.30; DK4Q26 p.29; TR4Q26 p.7 --></li>
+<li><strong>In-house gamma sterilization.</strong> It is to take over most of the ethylene-oxide sterilization now outsourced. Management cites control of the process and a safer method than EtO; it has not quantified any cost saving (Section A6). Capacity is going <span class="n nl" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">from 300 kci to 2,000 kci</span>. <!-- TR1Q25 p.3; TR1Q26 p.7 --></li>
+<li><strong>Mix.</strong> Safety, blood-control and closed catheters, flush syringes and connectors earn more per unit than a conventional cannula. Average revenue per device slipped from <span class="n" title="Our calculation: A-0733/CB-2574; inputs: Rs. 13.1bn (Annual Report FY25, p.19); 1.2bn units (Investor presentation 4QFY25 and FY25, p.11)">Rs. 11.4</span> to <span class="n" title="Our calculation: A-0351/CB-2573; inputs: Rs. 16.0bn (Annual Report FY26, p.32); 1.4bn units (Investor presentation 4QFY25 and FY25, p.11)">Rs. 11.2</span> in FY25 (our calculation), so the mix gain is not yet visible in group numbers.</li>
+<li><strong>Raw materials and freight</strong> (the main risk). Plastics are crude-linked and priced with a lag. Export prices are mostly ex-factory, so customers pay most of the freight (MD, Feb-2024), but management blamed a "freight crisis" in part for weak FY26 exports and said in May-2026 that freight had caused "some disruption"; the FY26 annual report also names higher freight and forwarding among the reasons consolidated other expenses rose. The West Asia conflict renewed both pressures in 2026: Indian polypropylene prices rose <span class="n" title="Source: India plastic manufacturing faces margin squeeze as PVC PP and PE prices jump (2026-04-01) · third-party estimate">about 60%</span> in Mar-2026 (a procurement-data provider's estimate), India's temporary cut in import duty on polymers lapsed after 15-Jul-2026, and the Drewry World Container Index rose from <span class="n" title="Source: Drewry World Container Index - 02 Apr 2026 (reprint) (2026-04-07)">$2,287 per 40ft</span> on 2-Apr-2026 to <span class="n" title="Source: Drewry World Container Index - 17 Sep 2026 (2026-09-17)">$4,500 per 40ft</span> on 17-Sep-2026. <!-- AR26 p.85, p.48; TR3Q24b p.15; TR3Q26 p.8; TR4Q26 p.6; TR1Q27S p.8; PR_POLYMER_INDIA_2026 p.1; CUSNOT22_2026 p.2; DREWRY_WCI_260402 p.1; DREWRY_WCI_2609 p.1 --></li>
+</ol>
+<h3 id="what-to-watch">What to watch</h3>
+<figure class="exh" id="exh-inf_watch"><figcaption><span class="exn">Exhibit 23:</span> Infusion: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infusion revenue growth, quarterly</td>
+<td>Tests whether FY26 was destocking or share loss</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">+11.1%</span> in 1QFY27</td>
+<td>Quarterly presentation</td>
+</tr>
+<tr>
+<td>Organic Europe growth</td>
+<td>Largest infusion market; new customers from Apr-2026</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">17.6%</span> in 1QFY27</td>
+<td>Quarterly presentation and call</td>
+</tr>
+<tr>
+<td>Domestic infusion growth</td>
+<td>Conversion to safety and closed catheters in private hospitals</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 6 · Rahul Gautam, President - Strategy &amp; Corporate Development">20% plus</span> in 1QFY27</td>
+<td>Call only</td>
+</tr>
+<tr>
+<td>IV cannula revenue and volume</td>
+<td>The anchor product has no regular disclosure</td>
+<td><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 16 · Himanshu Baid, MD">25-30%</span> of revenue (Jul-2024); ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600</span>mn pieces a year</td>
+<td>Calls, ad hoc</td>
+</tr>
+<tr>
+<td>Flush-syringe share of turnover</td>
+<td>Second-largest product family; Chinese price pressure</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> (FY26)</td>
+<td>BRSR, annual</td>
+</tr>
+<tr>
+<td>US revenue and GPO orders</td>
+<td>Test of the safety-catheter strategy</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>US tariff on Indian goods</td>
+<td>Sets the price gap to Vietnam, Malaysia and Mexico</td>
+<td><span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> Section 301 duty since Jul-2026</td>
+<td>Calls; Federal Register</td>
+</tr>
+<tr>
+<td>US Section 232 investigation into medical consumables</td>
+<td>Could add duties for every importer</td>
+<td>No action published by Sep-2026</td>
+<td>Federal Register</td>
+</tr>
+<tr>
+<td>Trade-margin cap on hospital consumables in India</td>
+<td>Could change the economics of Polymed's Indian channel</td>
+<td>Committee recommends a <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span> cap; consultations ordered Sep-2026</td>
+<td>Government notifications</td>
+</tr>
+<tr>
+<td>Price increases vs. raw-material inflation</td>
+<td>Margin protection with a lag</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">4-5%</span> in 1QFY27</td>
+<td>Presentation</td>
+</tr>
+<tr>
+<td>Rebates and discounts</td>
+<td>Early sign of price competition</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 77">Rs. 116mn</span> (FY26)</td>
+<td>Annual report</td>
+</tr>
+<tr>
+<td>Annual vs. quarterly infusion classification</td>
+<td>Distorts reported growth</td>
+<td>Gap of <span class="n" title="Our calculation: CB-0344+CB-1524+CB-1522+CB-0862-CB-0864; inputs: Rs. 2.3bn (Investor deck 1QFY27, p.27); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.7bn (Investor presentation 3QFY26, p.13); Rs. 2.6bn (Investor presentation 4QFY26, p.12); Rs. 10.0bn (Investor presentation 4QFY26, p.12)">Rs. 399mn</span> in FY26 (our calculation)</td>
+<td>Presentations</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; 1QFY27 earnings call (Aug 10 2026); 1QFY25 earnings call transcript; 4QFY26 earnings call transcript; BRSR FY26; USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II); PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare; Annual Report FY26; Investor presentation 3QFY26; Investor presentation 4QFY26; our calculation; Avendus Spark Research</p></figure>
+<p><strong>Open questions for management</strong> (also in the question bank):</p>
+<ul>
+<li>the IV cannula's revenue and volume by year, and the split between conventional, safety and closed catheters;</li>
+<li>flush-syringe revenue by market, and when a US 510(k) filing is planned;</li>
+<li>which plants make cannulas, and whether needle grinding is in-house;</li>
+<li>the reclassification between infusion and "others" in the annual tables;</li>
+<li>the basis for the global share claim and the third-place ranking;</li>
+<li>how domestic MRPs are set, and what a cap on trade margins would mean for domestic infusion sales.</li>
+</ul>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a3.html"><span>Previous</span>A3 The FY26 reset and the guidance record</a><a class="next" href="a4-2.html"><span>Next</span>A4.2 Vascular access and oncology (Plan1Health)</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

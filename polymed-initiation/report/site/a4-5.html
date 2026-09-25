@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.5 Diagnostics (blood collection) · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html" class="active">A4.5 Diagnostics (blood collection)</a></li><li class="l3"><a href="#products-and-the-unit-of-demand">Products and the unit of demand</a></li><li class="l3"><a href="#how-the-line-was-built-and-whether-polymed-makes-the-tubes">How the line was built, and whether Polymed makes the tubes</a></li><li class="l3"><a href="#what-has-been-disclosed">What has been disclosed</a></li><li class="l3"><a href="#market-and-customers">Market and customers</a></li><li class="l3"><a href="#competition">Competition</a></li><li class="l3"><a href="#regulation">Regulation</a></li><li class="l3"><a href="#growth-and-margin-drivers-ranked-2">Growth and margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-5">What to watch</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-4.html"><span>Previous</span>A4.4 Transfusion and blood management</a><a class="next" href="a4-6.html"><span>Next</span>A4.6 Anaesthesia, respiratory and critical care</a></nav>
+<h2 id="a4-5">A4.5 Diagnostics (blood collection)</h2>
+<p>Diagnostics at Polymed means venous blood collection (Haemochek vacuum tubes, needles, holders and a safety butterfly set), sold mainly in India to laboratories and hospitals. Management pushed the line in 2021-2022 and opened a dedicated plant in FY24, but has not mentioned it on a results call since Oct-2024; its revenue, undisclosed since FY22, sits inside the BRSR's "Blood Management &amp; Blood Collection" family with blood bags (Section A4.4). <!-- CATDOM25 p.30; TR4Q22 p.15; TR1Q22 p.4; TR3Q22 p.4; TR1Q24 p.9; TR2Q25 p.6; BRSR26 p.12 --></p>
+<section class="snapshot"><p class="ct">Diagnostics at a glance</p><dl><div><dt>Revenue</dt><dd>[not disclosed] since FY22; the MD put FY22 at <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 16 · Himanshu Baid, MD">~Rs. 350-400mn</span> (May-2022); last shown as a share of sales at <span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">3%</span> (Oct-2019 deck)</dd></div><div><dt>Bundled disclosure</dt><dd>"Blood Management &amp; Blood Collection", shared with blood bags: <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> of FY26 standalone turnover (<span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span> in FY25), ~<span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span> (our calculation)</dd></div><div><dt>Products</dt><dd>Haemochek PET vacuum tubes (serum, gel, citrate, EDTA, heparin, glucose, ESR, CPDA); multi-sample and flashback needles; holder; Nuovo Safe safety set; VTM kit</dd></div><div><dt>Manufacturing</dt><dd>Tubes named among traded goods in FY22-FY24; diagnostics plant in Faridabad from 1QFY24; traded sales down <span class="n" title="Our calculation: WG-0002/WB-0039*100-100; inputs: Rs. 47mn (Annual Report FY26, p.113); Rs. 92mn (QIP Placement Document Aug 2024, p.107)">49%</span> over FY24-FY26 (our calculation)</dd></div><div><dt>Policy</dt><dd>IVD approval under the PLI scheme for pharmaceuticals (Feb-2022); <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 6 · Himanshu Baid, MD">~Rs. 14mn</span> incentive received for FY24</dd></div><div><dt>What is disclosed</dt><dd>No line revenue, volumes, capacity, prices or margin</dd></div></dl></section>
+<!-- TR4Q22 p.16; DK2019 p.13; BRSR26 p.12; BRSR25 p.5; CATDOM25 p.30; CATEXP24 pp.61-65; DK1Q26 p.28; PD24 p.107, p.110; TR1Q24 p.9; AR26 p.113; TR3Q22 p.4; TR2Q25 p.6 -->
+<h3 id="products-and-the-unit-of-demand">Products and the unit of demand</h3>
+<p>Haemochek tubes are PET and colour-coded by additive, and so by test: serum and gel-separator tubes for chemistry, citrate for coagulation, K2 or K3 EDTA for blood counts, heparin for plasma chemistry, fluoride for glucose, plus ESR and CPDA (blood-grouping) tubes. A multi-sample needle (20G to 23G, including the HaemoFlash flashback version) in a standard holder fills several tubes from one venepuncture; the Nuovo Safe winged set, with a locking needle shield, is for small or difficult veins. <!-- CATDOM25 p.30; CATEXP24 pp.61-65; WEB_DIAGNOSTICS p.1 --></p>
+<p>Demand is one needle per venepuncture and a tube per group of tests, so volumes follow laboratory test counts. The catalogues list no lancets; the heparinized blood-gas syringe (<span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 34">80 IU</span> in the 3 ml size) is sold with infusion products, and the Aug-2025 deck still shows a VTM kit under diagnostics. <!-- D_product_glossary A4.5; CATDOM25 p.34; DK1Q26 p.28 --></p>
+<h3 id="how-the-line-was-built-and-whether-polymed-makes-the-tubes">How the line was built, and whether Polymed makes the tubes</h3>
+<ul>
+<li><strong>Early range.</strong> Tubes, needles, safety sets and a holder were in the FY16 product list. The Oct-2019 deck, the only one to split the line out, put diagnostics at <span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">3%</span> of sales (blood transfusion <span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">9%</span>). <!-- AR16 p.6; DK2019 p.13 --></li>
+<li><strong>COVID.</strong> When tubes ran short, laboratories reliant on imports turned to Polymed, which "had the production of these items" (MD, Jul-2021). VTM kits and respiratory products added <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 5 · Himanshu Baid, MD">~Rs. 200mn</span> to 1QFY22 domestic sales, demand that was gone by FY23. <!-- TR1Q22 p.4; TR1Q23 p.5 --></li>
+<li><strong>The 2021-2022 push.</strong> A diagnostics head (Nov-2021), dedicated distributors and new test kits were meant to "fill the same pipe" into laboratories already buying Polymed's tubes, with equipment to follow. <!-- TR2Q22 p.3-4; TR3Q22 p.8, p.11; TR2021 p.12 --></li>
+<li><strong>PLI.</strong> By Feb-2022 Polymed had approval under the IVD category of the PLI scheme for pharmaceuticals (renal is in the separate medical-devices scheme): <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 4 · Himanshu Baid, MD">5%</span> of incremental sales from FY23, for a committed <span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 18">Rs. 500mn</span> of investment over FY22-FY28. Approved products are blood-collection tubes, viral transport media, rapid tests (HIV, hepatitis, malaria, dengue, typhoid) and an RNA extraction kit; the FY22 annual report counts <span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 46">5</span> IVD applicants among <span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 46">55</span> selected. <!-- TR3Q22 p.4; TR4Q22 p.3; DKMAY22 p.18; DOP_PPO24 p.17; AR22 p.46 --></li>
+<li><strong>Plant.</strong> The first of four new plants, in Faridabad, started production in 1QFY24; management confirmed it was for diagnostics. <!-- TR2Q23 p.12; TR1Q24 p.9; TR4Q24 p.3 --></li>
+</ul>
+<p><strong>Made or bought.</strong> The Feb-2021 placement document lists tubes among products "manufactured", yet the Aug-2024 one names blood-collection tubes first among traded goods in FY22-FY24, when traded sales ran between <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 110">Rs. 83mn</span> and <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 107">Rs. 92mn</span> a year. FY22 traded sales (<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 110">Rs. 88mn</span>, including dialysis machines) were below even the lowest FY22 diagnostics figure management gave (<span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 20 · Himanshu Baid, MD">~Rs. 150mn</span>), so part of the range was already made in-house (our inference). Since the new plant opened, traded sales have fallen <span class="n" title="Our calculation: WG-0002/WB-0039*100-100; inputs: Rs. 47mn (Annual Report FY26, p.113); Rs. 92mn (QIP Placement Document Aug 2024, p.107)">49%</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 47mn</span> in FY26, <span class="n" title="Our calculation: WG-0002/(WG-0002+A-0645)*100; inputs: Rs. 47mn (Annual Report FY26, p.113); Rs. 47mn (Annual Report FY26, p.113); Rs. 18.5bn (Annual Report FY26, p.113)">0.3%</span> of product sales (our calculation). We read this as the remaining bought-in tubes moving in-house from FY24, though the company has not named its later traded items. <!-- PD21 p.131; PD24 p.107, p.110; TR3Q22 p.20; AR26 p.113 --></p>
+<h3 id="what-has-been-disclosed">What has been disclosed</h3>
+<p><a href="#exh-dx_disclosure">Exhibit 40</a> lists every figure given. The PLI incentive is the only later pointer to scale: at the <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 4 · Himanshu Baid, MD">5%</span> rate, the <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 6 · Himanshu Baid, MD">~Rs. 14mn</span> received for FY24 implies ~<span class="n" title="Our calculation: WG-0006/CC-0176*100; inputs: Rs. 14mn (2QFY25 earnings call transcript, p.6); 5% (3QFY22 earnings call transcript, p.4)">Rs. 280mn</span> of eligible sales above the scheme's base year (our calculation). It is not revenue, since base-year sales are undisclosed; in Feb-2022 the MD had expected ~<span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 12 · management guidance; Himanshu Baid, MD">Rs. 15mn</span> a year. <!-- TR2Q25 p.6; TR3Q22 p.4, p.12 --></p>
+<figure class="exh" id="exh-dx_disclosure"><figcaption><span class="exn">Exhibit 40:</span> Diagnostics revenue has not been disclosed since FY22, when management gave three different figures</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Period</th>
+<th>Measure</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct-2019 deck</td>
+<td>Diagnostics share of sales (period not stated)</td>
+<td><span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">3%</span> (blood transfusion <span class="n" title="Source: Corporate presentation 2019 (2019-10-01), slide/page 13">9%</span>)</td>
+<td>Corporate deck</td>
+</tr>
+<tr>
+<td>FY22</td>
+<td>Planned sales of new diagnostic kits</td>
+<td>Less than <span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 12 · management guidance; Himanshu Baid, MD">Rs. 100mn</span></td>
+<td>4QFY21 call (May-2021)</td>
+</tr>
+<tr>
+<td>FY22</td>
+<td>Diagnostics revenue, three statements</td>
+<td><span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 20 · Himanshu Baid, MD">~Rs. 150mn</span> "as of now" and <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">Rs. 250-300mn</span> (Feb-2022); <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 16 · Himanshu Baid, MD">~Rs. 350-400mn</span> (May-2022)</td>
+<td>3QFY22 and 4QFY22 calls</td>
+</tr>
+<tr>
+<td>FY23</td>
+<td>Revenue hoped for; growth a year after that</td>
+<td><span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 14 · management guidance; Himanshu Baid, MD">Rs. 250-300mn</span>; <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 14 · management guidance; Himanshu Baid, MD">30-40%</span></td>
+<td>3QFY22 call (Feb-2022)</td>
+</tr>
+<tr>
+<td>FY22-FY24</td>
+<td>Traded goods "such as blood collection tubes" (consolidated)</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 110">Rs. 88mn</span>; <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 110">Rs. 83mn</span>; <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 107">Rs. 92mn</span></td>
+<td>Placement document (Aug-2024)</td>
+</tr>
+<tr>
+<td>FY25-FY26</td>
+<td>Traded goods, items not named (consolidated)</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 59mn</span>; <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 47mn</span></td>
+<td>FY26 annual report</td>
+</tr>
+<tr>
+<td>FY24</td>
+<td>IVD PLI incentive</td>
+<td><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 6 · Himanshu Baid, MD">~Rs. 14mn</span>, received Oct-2024</td>
+<td>2QFY25 call</td>
+</tr>
+<tr>
+<td>FY22; FY24</td>
+<td>Blood management and blood collection, product table (consolidated)</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 556mn</span>; <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 765mn</span></td>
+<td>Placement document (Aug-2024)</td>
+</tr>
+<tr>
+<td>FY25; FY26</td>
+<td>Blood management and blood collection, share of standalone turnover</td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span>; <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span></td>
+<td>BRSR</td>
+</tr>
+<tr>
+<td>FY23 onward</td>
+<td>Diagnostics revenue, volumes, capacity, margin</td>
+<td>[not disclosed]</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="note">Both blood management and blood collection series include blood bags (Section A4.4); the placement-document table is consolidated and the BRSR share is of standalone turnover, so the two cannot be joined.</p><p class="src">Source: Corporate presentation 2019; Investor call transcript Jun 2021; 3QFY22 earnings call transcript; 4QFY22 earnings call transcript; QIP Placement Document Aug 2024; Annual Report FY26; 2QFY25 earnings call transcript; BRSR FY25; BRSR FY26; Avendus Spark Research</p></figure>
+<!-- DK2019 p.13; TR2021 p.12; TR3Q22 p.12, p.14, p.20; TR4Q22 p.16; PD24 p.107, p.110, p.173; AR26 p.113; TR2Q25 p.6; BRSR25 p.5; BRSR26 p.12 -->
+<h3 id="market-and-customers">Market and customers</h3>
+<p><strong>Demand follows test volumes, which are low in India.</strong> Frost &amp; Sullivan (Oct-2025, in the Integris Medtech prospectus) puts yearly diagnostic tests per capita at <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 241">less than 5</span> in India and China against <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 241">more than 20</span> in the US, and sees standalone laboratories giving way to chains, citing revenue CAGRs of <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 241">12.5%</span> for Dr. Lal PathLabs (2019-2024) and <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 241">11.5%</span> for Metropolis (2015-2024). CRISIL (commissioned by Polymed) sizes India's IVD and reagents segment at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 137">Rs. 82.0bn</span> in FY24, growing <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 137">12-13%</span> a year to FY28. We found no size for India's tube market. <!-- DRHP_INTEG p.241; PD24 p.137 --></p>
+<p><strong>Customers.</strong> In May-2021 the MD named Thyrocare, Metropolis, Dr. Lal PathLabs, SRL and Pathkind among its laboratory customers, adding Vijay Diagnostics in Feb-2022. Prices and customer concentration are [not disclosed]. <!-- TR2021 p.14; TR3Q22 p.14 --></p>
+<p><strong>Global.</strong> 360iResearch projects the tube market at <span class="n" title="Source: Blood Collection Tubes Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$4.64bn</span> in 2026 and <span class="n" title="Source: Blood Collection Tubes Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$7.23bn</span> by 2032, a <span class="n" title="Source: Blood Collection Tubes Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">7.3%</span> CAGR (vendor estimate). Filed numbers grow more slowly: BD's Specimen Management unit (Vacutainer tubes, needles, wingsets, blood-gas devices) sold <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$1.9bn</span> in FY25, up <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">2.0%</span> despite a decline in China. <!-- VND_RNM_BCT p.1; BD_10K25 p.1 --></p>
+<h3 id="competition">Competition</h3>
+<ul>
+<li><strong>BD.</strong> Polymed's MD calls vacuum tubes "vacutainers". BD has an FDA warning letter open on Specimen Management and from Oct-2025 reports it in a new Medical Essentials segment with its infusion consumables, which we read as treating blood collection as a consumables business, as Polymed does. <!-- TR3Q22 p.14; BD_10K25 p.1 --></li>
+<li><strong>Other multinationals.</strong> Nipro sells Neotube vacuum tubes; Greiner Bio-One, Sarstedt and Terumo are among the suppliers 360iResearch profiles, with no filed data on their tube sales or Indian presence. <!-- NIPRO_FY25 p.22; VND_RNM_BCT p.1 --></li>
+<li><strong>HMD</strong> (Hindustan Syringes &amp; Medical Devices), also in Faridabad, sells its Vaku range of evacuated tubes, needles, winged sets and holders, developed with Israel's Estar Technology; Dispovan is its syringe brand. <!-- HMD_WEB p.1 --></li>
+<li><strong>Chinese makers.</strong> KDL won every category of vacuum tubes and blood-collection needles in a Liaoning-led provincial alliance tender in CY25, and CE-registered venous blood-collection containers among <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 21">22</span> products. Weigao's blood-management line, which bundles collection with storage and separation, sold <span class="n" title="Source: Shandong Weigao Group Medical Polymer Co Ltd (HKEX: 1066) – Annual Report 2025 (2026-04-28), slide/page 17">RMB 995.1mn</span> in CY25. <!-- KDL_AR25 p.21; WEIGAO_AR25 p.17; WEIGAO_IR26 p.21 --></li>
+</ul>
+<p>Against them Polymed offers local manufacture, public-procurement preference and a full collection basket, but claims no market share. <!-- DOP_PPO24 p.17; CATDOM25 p.30 --></p>
+<h3 id="regulation">Regulation</h3>
+<ul>
+<li><strong>India.</strong> Class A and B devices have needed licences under the Medical Devices Rules since 1 Oct 2022; management said in Aug-2022 that most of its devices are Class B. For incentives and procurement the tubes count as IVD products: the Department of Pharmaceuticals' Oct-2024 order deeming PLI makers Class-II local suppliers lists them under the pharmaceuticals scheme. <!-- PIB_MDRAB_2209 p.1; TR1Q23 p.8; DKMAY22 p.18; DOP_PPO24 p.1, p.17 --></li>
+<li><strong>Exports.</strong> Under EU-style rules tubes are IVD "specimen receptacles". Saudi Arabia's SFDA defines them as devices "whether of a vacuum-type or not" and puts them in its lowest IVD class (Class A), and the IVDR applies in Europe, where Polymed had no diagnostics business in May-2022. <!-- SFDA_REQ1 p.77, p.80; VND_RNM_BCT p.1; TR4Q22 p.15 --></li>
+</ul>
+<h3 id="growth-and-margin-drivers-ranked-2">Growth and margin drivers, ranked</h3>
+<ol>
+<li><strong>Test volumes and chain consolidation</strong> (structural; our view). More draws, bought by chains Polymed already supplies. <!-- DRHP_INTEG p.241; TR2021 p.14 --></li>
+<li><strong>Cross-selling kits through the tube channel</strong> (management strategy, 2021-2022). No result has been disclosed, and the MD conceded "there are many companies for diagnostic products". <!-- TR4Q22 p.15 --></li>
+<li><strong>Public procurement</strong> (policy). Deemed local-supplier status helps in government laboratory tenders; its value is [not disclosed]. <!-- DOP_PPO24 p.1, p.17 --></li>
+<li><strong>Margin: make rather than buy</strong> (our inference). Own output should earn more than traded tubes, and PLI adds <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 4 · Himanshu Baid, MD">5%</span> on eligible incremental sales; plant utilization is [not disclosed]. In May-2021 the MD expected margins similar to the core business. <!-- TR2021 p.14 --></li>
+<li><strong>Margin: price</strong> (our view). Tubes are a commodity that Chinese makers win on price at home; import pricing is the main risk to the line's margin. <!-- KDL_AR25 p.21 --></li>
+</ol>
+<h3 id="what-to-watch-5">What to watch</h3>
+<figure class="exh" id="exh-dx_watch"><figcaption><span class="exn">Exhibit 41:</span> Diagnostics: the BRSR share, traded goods and the PLI claim are the only recurring signals</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blood management and blood collection share of turnover</td>
+<td>Only recurring disclosure of the bundled line</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> (FY26); <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span> (FY25)</td>
+<td>BRSR, annual</td>
+</tr>
+<tr>
+<td>Traded-goods sales</td>
+<td>Shows how much of the range is still bought in</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 47mn</span> (FY26) vs <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 107">Rs. 92mn</span> (FY24); <span class="n" title="Our calculation: WG-0002/(WG-0002+A-0645)*100; inputs: Rs. 47mn (Annual Report FY26, p.113); Rs. 47mn (Annual Report FY26, p.113); Rs. 18.5bn (Annual Report FY26, p.113)">0.3%</span> of product sales (our calculation)</td>
+<td>Annual report revenue note</td>
+</tr>
+<tr>
+<td>IVD PLI incentive</td>
+<td>Tracks eligible sales growth</td>
+<td><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 6 · Himanshu Baid, MD">~Rs. 14mn</span> for FY24; FY25-FY26 [not disclosed]</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Diagnostics revenue and plant utilization</td>
+<td>Tests the Feb-2022 hope of <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 14 · management guidance; Himanshu Baid, MD">30-40%</span> growth a year</td>
+<td>[not disclosed]</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Chinese tube pricing</td>
+<td>Sets the price floor in tenders and exports</td>
+<td>KDL won all tube and needle categories in a provincial alliance tender (CY25)</td>
+<td>Competitor filings</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: BRSR FY26; BRSR FY25; Annual Report FY26; QIP Placement Document Aug 2024; 2QFY25 earnings call transcript; 3QFY22 earnings call transcript; Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告); our calculation; Avendus Spark Research</p></figure>
+<!-- BRSR26 p.12; BRSR25 p.5; AR26 p.113; PD24 p.107; TR2Q25 p.6; TR3Q22 p.14; KDL_AR25 p.21 -->
+<p>Open questions (question bank): line revenue since FY22; products still bought in; plant capacity and utilization; FY25-FY26 PLI claims; the kit range; export registrations.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-4.html"><span>Previous</span>A4.4 Transfusion and blood management</a><a class="next" href="a4-6.html"><span>Next</span>A4.6 Anaesthesia, respiratory and critical care</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

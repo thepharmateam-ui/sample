@@ -26,11 +26,16 @@ Demand is one needle per venepuncture and a tube per group of tests, so volumes 
 - **PLI.** By Feb-2022 Polymed had approval under the IVD category of the PLI scheme for pharmaceuticals (renal is in the separate medical-devices scheme): {{CC-0176}} of incremental sales from FY23, for a committed {{CC-0917}} of investment over FY22-FY28. Approved products are blood-collection tubes, viral transport media, rapid tests (HIV, hepatitis, malaria, dengue, typhoid) and an RNA extraction kit; the FY22 annual report counts {{WG-0005}} IVD applicants among {{WG-0004}} selected. <!-- TR3Q22 p.4; TR4Q22 p.3; DKMAY22 p.18; DOP_PPO24 p.17; AR22 p.46 -->
 - **Plant.** The first of four new plants, in Faridabad, started production in 1QFY24; management confirmed it was for diagnostics. <!-- TR2Q23 p.12; TR1Q24 p.9; TR4Q24 p.3 -->
 
-**Made or bought.** The Feb-2021 placement document lists tubes among products "manufactured", yet the Aug-2024 one names blood-collection tubes first among traded goods in FY22-FY24, when traded sales ran between {{WB-0038}} and {{WB-0039}} a year. FY22 traded sales ({{WB-0037}}, including dialysis machines) were below even the lowest FY22 diagnostics figure management gave ({{CC-0215|range}}), so part of the range was already made in-house (our inference). Since the new plant opened, traded sales have fallen {{D-WG-003|abs}} to {{WG-0002}} in FY26, {{D-WG-002}} of product sales (our calculation). We read this as the remaining bought-in tubes moving in-house from FY24, though the company has not named its later traded items. <!-- PD21 p.131; PD24 p.107, p.110; TR3Q22 p.20; AR26 p.113 -->
+**Made or bought.** The Feb-2021 placement document lists tubes among products "manufactured", yet the Aug-2024 one names blood-collection tubes first among traded goods in FY22-FY24. FY22 traded sales ({{WB-0037}}, including dialysis machines) were below even the lowest FY22 diagnostics figure management gave ({{CC-0215|range}}), so part of the range was already made in-house (our inference). Since the new plant opened, traded sales have roughly halved ([[EXREF:dx_traded]]). We read this as the remaining bought-in tubes moving in-house from FY24, though the company has not named its later traded items. <!-- PD21 p.131; PD24 p.107, p.110; TR3Q22 p.20; AR26 p.113 -->
+
+::: chart
+{"id":"dx_traded","type":"column","title":"Traded-goods sales, which once included blood-collection tubes, have roughly halved since FY24, when the diagnostics plant opened","cats":["FY22","FY23","FY24","FY25","FY26"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Sale of traded goods, consolidated","facts":["WB-0037","WB-0038","WB-0039","WG-0001","WG-0002"]}],"label_all":true,"note":"FY22-FY24 from the Aug-2024 placement document, which names blood-collection tubes first among traded goods (and haemodialysis machines in FY22); FY25-FY26 from the FY26 annual report's revenue note, which names no items. Traded goods were {{D-WG-001}} of product sales in FY24 and {{D-WG-002}} in FY26, a {{D-WG-003}} change (our calculations). The Faridabad diagnostics plant started production in 1QFY24."}
+:::
+<!-- PD24 p.107, p.110; AR26 p.113; TR1Q24 p.9 -->
 
 ### What has been disclosed
 
-[[EXREF:dx_disclosure]] lists every figure given. The PLI incentive is the only later pointer to scale: at the {{CC-0176}} rate, the {{WG-0006|approx}} received for FY24 implies ~{{D-WG-004}} of eligible sales above the scheme's base year (our calculation). It is not revenue, since base-year sales are undisclosed; in Feb-2022 the MD had expected ~{{CC-0192}} a year. <!-- TR2Q25 p.6; TR3Q22 p.4, p.12 -->
+Besides traded goods, [[EXREF:dx_disclosure]] lists every figure given. The PLI incentive is the only later pointer to scale: at the {{CC-0176}} rate, the {{WG-0006|approx}} received for FY24 implies ~{{D-WG-004}} of eligible sales above the scheme's base year (our calculation). It is not revenue, since base-year sales are undisclosed; in Feb-2022 the MD had expected ~{{CC-0192}} a year. <!-- TR2Q25 p.6; TR3Q22 p.4, p.12 -->
 
 ::: table id="dx_disclosure" title="Diagnostics revenue has not been disclosed since FY22, when management gave three different figures" note="Both blood management and blood collection series include blood bags (Section A4.4); the placement-document table is consolidated and the BRSR share is of standalone turnover, so the two cannot be joined."
 | Period | Measure | Value | Source |
@@ -39,14 +44,12 @@ Demand is one needle per venepuncture and a tube per group of tests, so volumes 
 | FY22 | Planned sales of new diagnostic kits | Less than {{CC-0055|range}} | 4QFY21 call (May-2021) |
 | FY22 | Diagnostics revenue, three statements | {{CC-0215|range}} "as of now" and {{CC-0191|range}} (Feb-2022); {{CC-0286|range}} (May-2022) | 3QFY22 and 4QFY22 calls |
 | FY23 | Revenue hoped for; growth a year after that | {{CC-0200|range}}; {{CC-0201|range}} | 3QFY22 call (Feb-2022) |
-| FY22-FY24 | Traded goods "such as blood collection tubes" (consolidated) | {{WB-0037}}; {{WB-0038}}; {{WB-0039}} | Placement document (Aug-2024) |
-| FY25-FY26 | Traded goods, items not named (consolidated) | {{WG-0001}}; {{WG-0002}} | FY26 annual report |
 | FY24 | IVD PLI incentive | {{WG-0006|approx}}, received Oct-2024 | 2QFY25 call |
 | FY22; FY24 | Blood management and blood collection, product table (consolidated) | {{D-0051}}; {{D-0047}} | Placement document (Aug-2024) |
 | FY25; FY26 | Blood management and blood collection, share of standalone turnover | {{A-0896}}; {{A-0848}} | BRSR |
 | FY23 onward | Diagnostics revenue, volumes, capacity, margin | [not disclosed] | – |
 :::
-<!-- DK2019 p.13; TR2021 p.12; TR3Q22 p.12, p.14, p.20; TR4Q22 p.16; PD24 p.107, p.110, p.173; AR26 p.113; TR2Q25 p.6; BRSR25 p.5; BRSR26 p.12 -->
+<!-- DK2019 p.13; TR2021 p.12; TR3Q22 p.12, p.14, p.20; TR4Q22 p.16; PD24 p.173; TR2Q25 p.6; BRSR25 p.5; BRSR26 p.12 -->
 
 ### Market and customers
 

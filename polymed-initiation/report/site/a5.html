@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A5 Geographies and legal entities · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html" class="active">A5 Geographies and legal entities</a></li><li class="l3"><a href="#where-the-revenue-comes-from">Where the revenue comes from</a></li><li class="l3"><a href="#the-legal-structure-an-indian-exporter-a-dutch-holding-compa">The legal structure: an Indian exporter, a Dutch holding company and the acquired businesses</a></li><li class="l3"><a href="#europe-distributors-a-direct-foothold-in-italy-and-a-regulat">Europe: distributors, a direct foothold in Italy and a regulatory reset</a></li><li class="l3"><a href="#united-states-small-revenue-a-long-approval-queue-and-tariff">United States: small revenue, a long approval queue and tariff whiplash</a></li><li class="l3"><a href="#west-asia-demand-intact-shipments-stuck">West Asia: demand intact, shipments stuck</a></li><li class="l3"><a href="#africa-a-small-export-market-served-partly-through-egypt">Africa: a small export market, served partly through Egypt</a></li><li class="l3"><a href="#latin-america-brazil-goes-direct">Latin America: Brazil goes direct</a></li><li class="l3"><a href="#asia-south-east-asia-grows-the-china-plant-winds-down">Asia: South-East Asia grows, the China plant winds down</a></li><li class="l3"><a href="#egypt-a-profitable-associate-that-pays-dividends">Egypt: a profitable associate that pays dividends</a></li><li class="l3"><a href="#india-the-growth-engine-is-the-private-hospital">India: the growth engine is the private hospital</a></li><li class="l3"><a href="#company-specific-drivers-by-region-ranked">Company-specific drivers by region, ranked</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-10.html"><span>Previous</span>A4.10 Components, OEM and contract manufacturing</a><a class="next" href="a6.html"><span>Next</span>A6 Manufacturing, capacity and R&amp;D</a></nav>
+<h2 id="a5">A5 Geographies and legal entities</h2>
+<p>Polymed is an Indian exporter first and a multinational second. <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">69%</span> of FY26 revenue was earned outside India, yet only <span class="n" title="Our calculation: A-0649/A-0039*100; inputs: Rs. 2.1bn (Annual Report FY26, p.113); Rs. 18.8bn (Annual Report FY26, p.6)">11.3%</span> came from foreign subsidiaries (our calculation). The rest was shipped from the Indian plants to distributors abroad. FY26 split the two apart: the holding company's own exports fell <span class="n" title="Our calculation: (A-0474/A-0475-1)*100; inputs: Rs. 10.7bn (Annual Report FY26, p.77); Rs. 11.0bn (Annual Report FY26, p.77)">3.2%</span>, while the subsidiaries' sales rose <span class="n" title="Our calculation: (A-0649/A-0650-1)*100; inputs: Rs. 2.1bn (Annual Report FY26, p.113); Rs. 680mn (Annual Report FY26, p.113)">213%</span> as PendraCare and Citieffe were consolidated (our calculation). We therefore treat international revenue as two businesses with different drivers:</p>
+<ol>
+<li>Indian-made disposables sold through distributors, which move with distributor stocking, tenders, product approvals, freight and Chinese pricing;</li>
+<li>acquired European device makers that sell partly direct to surgeons and hospitals, which move with clinical relationships, tender calendars and the euro.</li>
+</ol>
+<section class="snapshot"><p class="ct">Geographies and entities at a glance</p><dl><div><dt>Revenue outside India</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">69%</span> of FY26; <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">72%</span> in 1QFY27</dd></div><div><dt>Mix by region, FY26</dt><dd>India <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">31%</span>, Europe <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">32%</span>, rest of world <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">37%</span></dd></div><div><dt>Foreign subsidiaries</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 2.1bn</span> of FY26 sales (<span class="n" title="Our calculation: A-0649/A-0039*100; inputs: Rs. 2.1bn (Annual Report FY26, p.113); Rs. 18.8bn (Annual Report FY26, p.6)">11.3%</span> of revenue, our calculation)</dd></div><div><dt>Reach</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">125+</span> countries, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">1,000+</span> distributors, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">590+</span> direct sales reps (India, US, Italy, Mexico)</dd></div><div><dt>Plants</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">15</span> in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">5</span> countries: India <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">10</span>, Italy <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">2</span>, China <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">1</span>, Egypt <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">1</span> (associate), Netherlands <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">1</span></dd></div><div><dt>West Asia exposure</dt><dd><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">6-8%</span> of revenue (management); <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">-32%</span> yoy in 1QFY27</dd></div><div><dt>US exports</dt><dd><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27 (management)</dd></div><div><dt>Not disclosed</dt><dd>Revenue by country; West Asia, US and Latin America revenue in rupees; PendraCare's regional split</dd></div></dl></section>
+<h3 id="where-the-revenue-comes-from">Where the revenue comes from</h3>
+<p>The annual report gives two views that together show where FY26 went wrong and where it went right.</p>
+<ul>
+<li><strong>Consolidated regions.</strong> Revenue is split into India, Europe and the rest of the world (RoW) in the MD&amp;A and the presentations.</li>
+<li><strong>The holding company's exports.</strong> The consolidated notes split Poly Medicure Ltd's export sales into five regions and add the foreign subsidiaries' sales as a separate line.</li>
+</ul>
+<figure class="exh" id="exh-geo_outside"><figcaption><span class="exn">Exhibit 62:</span> Revenue outside India grew 9% in FY26 only because the new subsidiaries were added; exports from the Indian plants fell in Europe and the Americas</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Europe (exports)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Americas (exports)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Asia (exports)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s4)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Africa (exports)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s5)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Others (exports)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s6)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Foreign subsidiaries</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="184.67" y2="184.67"></line><text class="tick" text-anchor="end" x="40" y="188.67">5</text><line class="grid" x1="46" x2="748" y1="103.33" y2="103.33"></line><text class="tick" text-anchor="end" x="40" y="107.33">10</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">15</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="221.50" y="284">FY25</text><path class="mark" d="M209.50,179.43h24.00v86.57h-24.00Z" data-tip="FY25 · Europe (exports): Rs. 5.4bn" fill="var(--s1)"><title>FY25 · Europe (exports): Rs. 5.4bn</title></path><path class="mark" d="M209.50,132.74h24.00v44.69h-24.00Z" data-tip="FY25 · Americas (exports): Rs. 2.9bn" fill="var(--s2)"><title>FY25 · Americas (exports): Rs. 2.9bn</title></path><path class="mark" d="M209.50,99.96h24.00v30.79h-24.00Z" data-tip="FY25 · Asia (exports): Rs. 2.0bn" fill="var(--s3)"><title>FY25 · Asia (exports): Rs. 2.0bn</title></path><path class="mark" d="M209.50,92.07h24.00v5.89h-24.00Z" data-tip="FY25 · Africa (exports): Rs. 485mn" fill="var(--s4)"><title>FY25 · Africa (exports): Rs. 485mn</title></path><path class="mark" d="M209.50,87.60h24.00v2.47h-24.00Z" data-tip="FY25 · Others (exports): Rs. 275mn" fill="var(--s5)"><title>FY25 · Others (exports): Rs. 275mn</title></path><path class="mark" d="M209.50,85.60V79.53Q209.50,75.53 213.50,75.53H229.50Q233.50,75.53 233.50,79.53V85.60Z" data-tip="FY25 · Foreign subsidiaries: Rs. 680mn" fill="var(--s6)"><title>FY25 · Foreign subsidiaries: Rs. 680mn</title></path><text class="val" text-anchor="middle" x="221.50" y="69.53">11.7</text><text class="tick" text-anchor="middle" x="572.50" y="284">FY26</text><path class="mark" d="M560.50,186.85h24.00v79.15h-24.00Z" data-tip="FY26 · Europe (exports): Rs. 4.9bn" fill="var(--s1)"><title>FY26 · Europe (exports): Rs. 4.9bn</title></path><path class="mark" d="M560.50,140.90h24.00v43.95h-24.00Z" data-tip="FY26 · Americas (exports): Rs. 2.8bn" fill="var(--s2)"><title>FY26 · Americas (exports): Rs. 2.8bn</title></path><path class="mark" d="M560.50,102.91h24.00v35.99h-24.00Z" data-tip="FY26 · Asia (exports): Rs. 2.3bn" fill="var(--s3)"><title>FY26 · Asia (exports): Rs. 2.3bn</title></path><path class="mark" d="M560.50,95.10h24.00v5.81h-24.00Z" data-tip="FY26 · Africa (exports): Rs. 480mn" fill="var(--s4)"><title>FY26 · Africa (exports): Rs. 480mn</title></path><path class="mark" d="" data-tip="FY26 · Others (exports): Rs. 107mn" fill="var(--s5)"><title>FY26 · Others (exports): Rs. 107mn</title></path><path class="mark" d="M560.50,91.37V61.76Q560.50,57.76 564.50,57.76H580.50Q584.50,57.76 584.50,61.76V91.37Z" data-tip="FY26 · Foreign subsidiaries: Rs. 2.1bn" fill="var(--s6)"><title>FY26 · Foreign subsidiaries: Rs. 2.1bn</title></path><text class="val" text-anchor="middle" x="572.50" y="51.76">12.8</text></svg></div><p class="note">Revenue from outside India, AR26 geographic note: Poly Medicure Ltd's export sales by destination plus 'sales related to foreign subsidiaries'. Total outside India rose <span class="n" title="Our calculation: (A-0702/A-0703-1)*100; inputs: Rs. 12.8bn (Annual Report FY26, p.131); Rs. 11.7bn (Annual Report FY26, p.131)">9.3%</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 12.8bn</span>. Holding-company exports fell <span class="n" title="Our calculation: (A-0474/A-0475-1)*100; inputs: Rs. 10.7bn (Annual Report FY26, p.77); Rs. 11.0bn (Annual Report FY26, p.77)">3.2%</span>: Europe <span class="n" title="Our calculation: (A-0567/A-0568-1)*100; inputs: Rs. 4.9bn (Annual Report FY26, p.92); Rs. 5.4bn (Annual Report FY26, p.92)">-8.5%</span>, Americas <span class="n" title="Our calculation: (A-0569/A-0570-1)*100; inputs: Rs. 2.8bn (Annual Report FY26, p.92); Rs. 2.9bn (Annual Report FY26, p.92)">-1.6%</span>, Asia <span class="n" title="Our calculation: (A-0571/A-0572-1)*100; inputs: Rs. 2.3bn (Annual Report FY26, p.92); Rs. 2.0bn (Annual Report FY26, p.92)">+15.9%</span>, Africa <span class="n" title="Our calculation: (A-0573/A-0574-1)*100; inputs: Rs. 480mn (Annual Report FY26, p.92); Rs. 485mn (Annual Report FY26, p.92)">-1.0%</span>, others <span class="n" title="Our calculation: (A-0575/A-0576-1)*100; inputs: Rs. 107mn (Annual Report FY26, p.92); Rs. 275mn (Annual Report FY26, p.92)">-61%</span>. Foreign subsidiaries were <span class="n" title="Our calculation: A-0649/A-0702*100; inputs: Rs. 2.1bn (Annual Report FY26, p.113); Rs. 12.8bn (Annual Report FY26, p.131)">17%</span> of revenue outside India in FY26 (all our calculations).</p><p class="src">Source: Annual Report FY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">Europe (exports)</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 5.4bn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 4.9bn</span></td></tr><tr><th scope="row">Americas (exports)</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.9bn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.8bn</span></td></tr><tr><th scope="row">Asia (exports)</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.0bn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 2.3bn</span></td></tr><tr><th scope="row">Africa (exports)</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 485mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 480mn</span></td></tr><tr><th scope="row">Others (exports)</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 275mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 107mn</span></td></tr><tr><th scope="row">Foreign subsidiaries</th><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 680mn</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 113">Rs. 2.1bn</span></td></tr></tbody></table></div></details></figure>
+<!-- AR26 p.131, p.92, p.113 -->
+<p>Three points stand out.</p>
+<ol>
+<li><strong>Europe is still the largest destination but lost share.</strong> Europe was <span class="n" title="Our calculation: A-0567/A-0474*100; inputs: Rs. 4.9bn (Annual Report FY26, p.92); Rs. 10.7bn (Annual Report FY26, p.77)">46%</span> of the holding company's FY26 exports against <span class="n" title="Our calculation: A-0568/A-0475*100; inputs: Rs. 5.4bn (Annual Report FY26, p.92); Rs. 11.0bn (Annual Report FY26, p.77)">49%</span> a year earlier (our calculation). Section A3 sets out the destocking, Chinese pricing and certification delays that management blamed (<a href="a3.html#exh-q_reasons">Exhibit 14</a>).</li>
+<li><strong>Asia was the only export region that grew</strong> (<span class="n" title="Our calculation: (A-0571/A-0572-1)*100; inputs: Rs. 2.3bn (Annual Report FY26, p.92); Rs. 2.0bn (Annual Report FY26, p.92)">+15.9%</span>, our calculation). The Asia line includes West Asia, where the Gulf conflict hit only in the last weeks of FY26.</li>
+<li><strong>The Americas are the second-largest export destination</strong> (<span class="n" title="Our calculation: A-0569/A-0474*100; inputs: Rs. 2.8bn (Annual Report FY26, p.92); Rs. 10.7bn (Annual Report FY26, p.77)">26%</span> of exports). Latin America is the bulk of it: management has called LatAm its second-largest export market after Europe, and the US contributed less than <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">$3-3.5mn</span> of revenue in FY26 by management's account. <!-- TR3Q24b p.14; TR1Q26 p.7 --></li>
+</ol>
+<figure class="exh" id="exh-geo_regions"><figcaption><span class="exn">Exhibit 63:</span> On a consolidated basis India grew fastest in FY26; in 1QFY27 Europe recovered organically while RoW stalled on West Asia</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Region</th>
+<th class="num">FY25</th>
+<th class="num">FY26</th>
+<th class="num">yoy</th>
+<th class="num">1QFY26</th>
+<th class="num">1QFY27</th>
+<th class="num">yoy, reported</th>
+<th class="num">yoy, organic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>India</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 4.9bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 5.8bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">+19.6%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.3bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.5bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+16.2%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+16.2%</span></td>
+</tr>
+<tr>
+<td>Europe</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 5.6bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 6.0bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">+7.1%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.3bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.9bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+43.8%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+17.6%</span></td>
+</tr>
+<tr>
+<td>Rest of world</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 6.1bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 6.8bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">+11.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.4bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 1.9bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+30.3%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+4%</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">FY columns from the MD&amp;A table of the FY26 annual report; quarterly columns from the 1QFY27 presentation. Organic excludes PendraCare and Citieffe. Other operating revenue (export incentives, scrap) is not allocated to regions. Management put West Asia at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">6-8%</span> of revenue and its 1QFY27 decline at <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">32%</span>.</p><p class="src">Source: Annual Report FY26; Investor deck 1QFY27; Avendus Spark Research</p></figure>
+<!-- AR26 p.47; DK1Q27 p.26 -->
+<p>The regional mix has barely moved in two years: India, Europe and RoW each earn about a third of revenue, which the MD calls his long-run goal of <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 11 · management guidance; Himanshu Baid, MD">1/3 India and 2/3 RoW</span>. That stability hides a change in how the non-Indian revenue is earned. In FY26 <span class="n" title="Our calculation: A-0649/A-0702*100; inputs: Rs. 2.1bn (Annual Report FY26, p.113); Rs. 12.8bn (Annual Report FY26, p.131)">17%</span> of revenue from outside India came from subsidiaries, with PendraCare and Citieffe consolidated for only part of the year; in 1QFY27 the two acquisitions alone were <span class="n" title="Our calculation: (CB-0311-CB-0314)/CB-0311*100; inputs: Rs. 3.8bn (Investor deck 1QFY27, p.26); Rs. 3.0bn (Investor deck 1QFY27, p.26); Rs. 3.8bn (Investor deck 1QFY27, p.26)">19%</span> of international revenue (both our calculations). <!-- TR4Q26 p.11 --></p>
+<h3 id="the-legal-structure-an-indian-exporter-a-dutch-holding-compa">The legal structure: an Indian exporter, a Dutch holding company and the acquired businesses</h3>
+<p>The listed company in India owns the Indian plants and makes almost all group volume. Nearly everything abroad is held through Poly Medicure BV in Amsterdam, a holding and financing company with no employees. It received <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 12">€42.8mn</span> of new equity from India in FY26, which it used to buy Medistream (Citieffe) and to lend <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€14.6mn</span> to Risor Holdings for PendraCare. <!-- SUB26BV p.5, p.10, p.12, p.14; AR26 p.33 --></p>
+<figure class="exh" id="exh-entity_map"><figcaption><span class="exn">Exhibit 64:</span> Poly Medicure BV holds every operating business abroad except the China plant; the associates are a 23% stake in an Egyptian maker and a captive solar company</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Entity</th>
+<th>Country</th>
+<th>Polymed's interest, held through</th>
+<th>What it does</th>
+<th>In the group since</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poly Medicure Ltd</td>
+<td>India</td>
+<td>Listed parent</td>
+<td>Owns the <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 15">10</span> Indian plants; makes and exports almost all group volume; runs the Indian sales force</td>
+<td>Incorporated 1995</td>
+</tr>
+<tr>
+<td>Poly Medicure BV</td>
+<td>Netherlands</td>
+<td>Wholly owned, direct</td>
+<td>Holding and financing company for the foreign subsidiaries; no operations</td>
+<td>Incorporated 15 Mar 2018</td>
+</tr>
+<tr>
+<td>Plan1 Health srl</td>
+<td>Italy (Amaro)</td>
+<td>Wholly owned, via BV</td>
+<td>Makes vascular-access and oncology devices (ports, catheters); its own plant and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+ distributors (Section A4.2)</td>
+<td>Acquired 2018-19</td>
+</tr>
+<tr>
+<td>PolyHealth Medical Inc</td>
+<td>US (North Carolina)</td>
+<td>Wholly owned, via BV</td>
+<td>Sales and customer support for US accounts; small trading revenue</td>
+<td>Incorporated 19 Jul 2021</td>
+</tr>
+<tr>
+<td>Poly Health Ltd</td>
+<td>UK</td>
+<td>Wholly owned, step-down</td>
+<td>Formed 'for manufacturing and distribution of medical devices'; the vehicle for selling direct into the NHS</td>
+<td>Incorporated 4 Feb 2025</td>
+</tr>
+<tr>
+<td>Poly Medicure (Laiyang) Co.</td>
+<td>China (Laiyang, Shandong)</td>
+<td>Wholly owned, direct</td>
+<td>Small plant selling mainly in China; sourcing and critical components</td>
+<td>Established 25 Jun 2007; production from FY10</td>
+</tr>
+<tr>
+<td>Plan1 Health India Pvt Ltd</td>
+<td>India</td>
+<td>Wholly owned, direct</td>
+<td>Dormant</td>
+<td>FY20</td>
+</tr>
+<tr>
+<td>Polymed Brazil Ltda and Medyneo</td>
+<td>Brazil</td>
+<td>Wholly owned</td>
+<td>Pre-operational subsidiary; Medyneo holds ANVISA and import licences</td>
+<td>Brazil subsidiary 1QFY26; Medyneo bought 29 Apr 2026</td>
+</tr>
+<tr>
+<td>Risor Holdings BV and PendraCare/Wellinq companies</td>
+<td>Netherlands (Leek)</td>
+<td><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 14">90%</span> economic interest, full voting rights, via BV</td>
+<td>Makes guiding and diagnostic catheters (Section A4.8); <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 97">Rs. 431mn</span> of non-controlling interest in the FY26 balance sheet</td>
+<td>SPA signed 3 Sep 2025; closed 22 Sep 2025 (annual report); consolidated from 23 Sep 2025 (presentations)</td>
+</tr>
+<tr>
+<td>Medistream SA, Citieffe srl, Citieffe Inc, Citieffe de Mexico</td>
+<td>Switzerland, Italy (Bologna), US, Mexico</td>
+<td>Wholly owned, via BV (Citieffe de Mexico <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 10">99%</span>)</td>
+<td>Swiss holding company; Italian maker of orthopaedic trauma implants; US and Mexican sales companies (Section A4.9)</td>
+<td>Signed 24 Sep 2025, closed 6 Nov 2025</td>
+</tr>
+<tr>
+<td>Himalayan Mineral Waters Pvt Ltd</td>
+<td>India (Haridwar)</td>
+<td>Wholly owned, acquired under the insolvency code</td>
+<td>Holds land next to the second Haridwar site; no mineral-water business</td>
+<td>Consolidated from 1QFY27</td>
+</tr>
+<tr>
+<td>Ultra for Medical Products (Ultra Med)</td>
+<td>Egypt (Assiut)</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">23%</span> associate, direct</td>
+<td>Makes disposable devices for Egypt, Africa and other markets; joint venture with the El-Agar group</td>
+<td>Before FY10</td>
+</tr>
+<tr>
+<td>AMPIN C&amp;I Power Two Pvt Ltd</td>
+<td>India (Haryana)</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">26%</span> associate, direct</td>
+<td>Captive solar plant of <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 41">9.9 MWp</span> supplying the Faridabad plants</td>
+<td>Commissioned 9 Nov 2025</td>
+</tr>
+</tbody>
+</table></div><p class="note">Stakes and dates from the FY26 annual report, BRSR and subsidiary accounts. The annual report calls Risor wholly owned; the BRSR, the deal filings and the accounts show <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 14">90%</span> economic ownership with full voting rights. Plan1Health, Medistream, Citieffe and the Egypt associate report calendar years.</p><p class="src">Source: Annual Report FY26; Annual Report FY25; Annual Report FY20; BRSR FY26; Poly Medicure BV FY26 accounts; PolyHealth Medical Inc FY25 accounts; Poly Medicure (Laiyang) China FY26 accounts; Polymed Brazil Ltda Mar26 accounts; Medistream consolidated opinion 2025; Board outcome and results 1QFY27; 2QFY26 earnings call transcript; 2QFY23 earnings call transcript; CRISIL rating rationale 08-Dec-2022; Investor presentation 4QFY26; Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025; Avendus Spark Research</p></figure>
+<!-- AR26 p.33, p.40, p.97, p.134; AR25 p.48; AR20 p.69; BRSR26 p.14; SUB26BV p.5, p.8, p.10; SUB25US p.7; SUB26CN p.38; SUB26BR p.2; SUB26MEDC p.10; RS1Q27 p.5; TR2Q26 p.16; TR2Q23 p.11; CRR2212 p.1; DK4Q26 p.41; MA_2509 p.8 -->
+<p>The acquisitions changed the balance sheet as much as the income statement.</p>
+<ul>
+<li><strong>Assets abroad.</strong> Non-current assets located outside India rose <span class="n" title="Our calculation: A-0707/WC-0061; inputs: Rs. 2.8bn (Annual Report FY26, p.131); Rs. 170mn (Annual Report FY26, p.131)">16x</span> in a year, from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 170mn</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 2.8bn</span> (our calculation). They sit in Switzerland (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 1.4bn</span>, mostly the Medistream acquisition), the Netherlands (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 691mn</span>), Italy (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 518mn</span>), the US (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 93mn</span>), Mexico (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 131">Rs. 85mn</span>) and China (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 40">Rs. 47mn</span> of investment at cost). <!-- AR26 p.131, p.40 --></li>
+<li><strong>Debt abroad.</strong> Bank term loans in the foreign subsidiaries were <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 110">Rs. 681mn</span> at 31 Mar 2026, all of it Citieffe's, at <span class="n nl" title="Source: Annual Report FY26 (2026-08), slide/page 110">1.5% to 3.12% plus 3M Euribor</span>. The Indian parent has only working-capital debt. <!-- AR26 p.110; TR1Q27S p.11 --></li>
+<li><strong>Minorities.</strong> The <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 97">Rs. 431mn</span> of non-controlling interest is the sellers' retained stake in PendraCare, which Polymed can buy out by 2030 (Section A4.8).</li>
+</ul>
+<figure class="exh" id="exh-sub_pnl"><figcaption><span class="exn">Exhibit 65:</span> Before the acquisitions the subsidiaries were small and marginally profitable; the enlarged Dutch sub-group lost money in FY26</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Entity</th>
+<th>Basis</th>
+<th class="num">Revenue FY24</th>
+<th class="num">Revenue FY25</th>
+<th class="num">Revenue FY26</th>
+<th>Profit FY24</th>
+<th class="num">Profit FY25</th>
+<th class="num">Profit FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poly Medicure (Laiyang), China</td>
+<td>Rs, AOC statement</td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 150mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 135mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 112mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 211">Rs. 16mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 223">Rs. 11mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">-Rs. 6.7mn</span></td>
+</tr>
+<tr>
+<td>same, audited local accounts</td>
+<td>RMB</td>
+<td class="num"><span class="n" title="Source: Poly Medicure Laiyang FY25 financials (2025-09-09), slide/page 8">RMB 12.8mn</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 11.6mn</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 8.82mn</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure Laiyang FY25 financials (2025-09-09), slide/page 8">RMB 1.47mn</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 860k</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">-RMB 526k</span></td>
+</tr>
+<tr>
+<td>Poly Medicure BV, consolidated sub-group</td>
+<td>Rs, AOC statement</td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 211">Rs. 650mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 223">Rs. 748mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">Rs. 2.2bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 211">Rs. 33mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 223">Rs. 23mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">-Rs. 167mn</span></td>
+</tr>
+<tr>
+<td>of which Plan1Health, Italy</td>
+<td>Rs revenue; € net profit</td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 649mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 739mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.1bn</span></td>
+<td class="num"><span class="n" title="Source: Plan1 Health srl 2024 accounts (2025-09-19), slide/page 4">€615k</span></td>
+<td class="num"><span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 13">€483k</span></td>
+<td class="num"><span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 4">€681k</span></td>
+</tr>
+<tr>
+<td>of which PolyHealth Medical, US</td>
+<td>Rs revenue; $ net result</td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 1.4mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 8.8mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 19mn</span></td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: PolyHealth Medical Inc FY25 accounts (2025-09-19), slide/page 4">-$583k</span></td>
+<td class="num"><span class="n" title="Source: PolyHealth Medical Inc FY26 accounts (2026-08-18), slide/page 2">-$346k</span></td>
+</tr>
+<tr>
+<td>of which Risor (PendraCare), from Sep-2025</td>
+<td>€</td>
+<td class="num">–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">€4.17mn</span></td>
+<td>–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">-€1.33mn</span></td>
+</tr>
+<tr>
+<td>of which Medistream (Citieffe), full calendar year</td>
+<td>€</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€16.8mn</span></td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€17.2mn</span></td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€429k</span></td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">-€1.21mn</span></td>
+</tr>
+<tr>
+<td>Polymed Brazil Ltda</td>
+<td>Rs, AOC statement</td>
+<td class="num">–</td>
+<td class="num">–</td>
+<td>nil</td>
+<td>–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">-Rs. 2.5mn</span></td>
+</tr>
+<tr>
+<td>Plan1 Health India</td>
+<td>Rs</td>
+<td>nil</td>
+<td>nil</td>
+<td>nil</td>
+<td>–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Plan 1 Health India FY26 accounts (2026-08-18), slide/page 3">-Rs. 0.1mn</span></td>
+</tr>
+<tr>
+<td>Ultra Med, Egypt (associate)</td>
+<td>Rs; sales and Polymed's share of profit</td>
+<td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 37">Rs. 813mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.2bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.2bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 211">Rs. 25mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 98">Rs. 52mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 98">Rs. 57mn</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">Rupee rows from the AOC statements and Directors' Reports (the Poly Medicure BV and Brazil columns are management-certified, not audited); local-currency rows from each entity's own accounts. Calendar-year entities (Plan1Health, Medistream, Egypt) are shown in the fiscal year in which their calendar year ends in December: FY24 = CY23, FY25 = CY24, FY26 = CY25. Medistream's CY25 is the full year, although it was consolidated only from 7 Nov 2025. For the Egypt associate the profit columns show Polymed's share of profit; the associate's own profit was about <span class="n" title="Our calculation: A-0622+A-0719; inputs: Rs. 57mn (Annual Report FY26, p.98); Rs. 192mn (Annual Report FY26, p.134)">Rs. 249mn</span> in CY25 (our calculation). Poly Health UK booked no revenue from operations; the Directors' Report's turnover of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 5.4mn</span> matches its other income.</p><p class="src">Source: Annual Report FY24; Annual Report FY25; Annual Report FY26; Poly Medicure Laiyang FY25 financials; Poly Medicure (Laiyang) China FY26 accounts; PolyHealth Medical Inc FY25 accounts; PolyHealth Medical Inc FY26 accounts; Poly Medicure BV FY26 accounts; Plan1 Health srl 2024 accounts; Plan1 Health srl FY26 accounts; Risor Holdings accounts; Medistream consolidated opinion 2025; Plan 1 Health India FY26 accounts; Poly Health Limited UK FY26 accounts; Avendus Spark Research</p></figure>
+<!-- AR24 p.211; AR25 p.37, p.223; AR26 p.33, p.98, p.134; SUB25CN p.8; SUB26CN p.8; SUB25US p.4; SUB26US p.2; SUB26BV p.13; SUB25P1IT p.4; SUB26P1IT p.3-4; SUB26RIS p.2; SUB26MEDC p.6; SUB26P1IN p.3; SUB26UK p.2 -->
+<p>What the table says about each part:</p>
+<ul>
+<li><strong>Plan1Health is the one foreign subsidiary that was already working.</strong> Its turnover rose <span class="n" title="Our calculation: (A-0380/A-0381-1)*100; inputs: Rs. 1.1bn (Annual Report FY26, p.33); Rs. 739mn (Annual Report FY26, p.33)">43%</span> in rupees in CY25 (our calculation) and it made a profit in each of the three years. Section A4.2 covers it in detail.</li>
+<li><strong>PolyHealth is a support company, not the US business.</strong> Its revenue of <span class="n" title="Source: PolyHealth Medical Inc FY26 accounts (2026-08-18), slide/page 2">$211k</span> in FY26 (+<span class="n" title="Our calculation: (B-0681/B-0678-1)*100; inputs: $211k (PolyHealth Medical Inc FY26 accounts, p.2); $105k (PolyHealth Medical Inc FY25 accounts, p.4)">102%</span>, our calculation) is a small fraction of the US revenue that management puts at below <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">$3-3.5mn</span>, most of which is shipped from India direct to US distributors and group purchasing organizations (GPOs). It lost <span class="n" title="Source: PolyHealth Medical Inc FY26 accounts (2026-08-18), slide/page 2">$346k</span> in FY26, needed <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 9">USD 375,000</span> of fresh capital from Poly Medicure BV, and its FY25 accounts carry a going-concern note that relies on parent support. <!-- SUB25US p.8; SUB26BV p.9 --></li>
+<li><strong>The acquired businesses made losses in their first months.</strong> Risor's post-deal loss and Citieffe's currency-driven CY25 loss are analysed in Sections A4.8 and A4.9. The ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">Rs. 90mn</span> one-off provision management booked in 4QFY26 'in one of our international subsidiaries' has not been attributed to an entity. <!-- TR4Q26 p.5 --></li>
+<li><strong>The China plant has shrunk into a loss</strong> (see Asia below).</li>
+</ul>
+<h3 id="europe-distributors-a-direct-foothold-in-italy-and-a-regulat">Europe: distributors, a direct foothold in Italy and a regulatory reset</h3>
+<p>Europe is <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">32%</span> of group revenue and the market Polymed built deliberately. Europe rose from <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 14 · Himanshu Baid, MD">10-15%</span> of exports around FY18 to <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 14 · Himanshu Baid, MD">almost 40%</span> by FY22 after a Europe CEO was hired in 2017. Six Western European markets (the UK, France, Italy, Germany, Spain and Sweden) produced <span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 13 · Himanshu Baid, MD">80-85%</span> of European revenue in May-2024. <!-- TR3Q23 p.14; TR4Q22 p.14; TR4Q24 p.13 --></p>
+<p><strong>How Polymed sells there.</strong> The Indian-made range goes through distributors: <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">75</span>+ of them, with <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> products approved and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> in the pipeline (May-2026). The acquired companies bring their own channels: Citieffe sells direct in Italy plus <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">12</span> distributors, PendraCare uses <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">17</span> distributors and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">2</span> OEM relationships, and Plan1Health <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+ distributors. Italy, through Citieffe, is the only European market where the group sells direct; Plan1Health sells through distributors. The MD said in Aug-2026 that he wants to go direct in <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 8 · management guidance; Himanshu Baid, MD">3-4</span> more geographies, starting with new products, because 'our distributors only sell our existing products'. <!-- DK4Q26 p.39; TR1Q27S p.8 --></p>
+<figure class="exh" id="exh-geo_channels"><figcaption><span class="exn">Exhibit 66:</span> Each business reaches the US and Europe differently: the Indian range through distributors, Citieffe direct, PendraCare and Plan1Health still building</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Business</th>
+<th>US: presence and approvals</th>
+<th>Europe: presence and approvals</th>
+<th>Stated plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polymed (Indian plants)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">4</span> distributors plus GPO contracts; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">4</span> approved, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">3-4</span> in pipeline</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">75</span>+ distributors; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">82</span> approved, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">15</span> in pipeline</td>
+<td>US: infusion and critical care, ramp-up expected in FY27. Europe: new distributors in northern Europe, direct presence in larger markets</td>
+</tr>
+<tr>
+<td>Citieffe</td>
+<td>Direct sales; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">10</span> approved, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">8-10</span> in pipeline</td>
+<td>Direct in Italy plus <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">12</span> distributors; whole portfolio (<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+) approved</td>
+<td>Add plates to double the addressable market; expand in US states with hospital approvals; more tenders in Italy</td>
+</tr>
+<tr>
+<td>PendraCare</td>
+<td>Guiding catheter cleared; in talks with distributors and a global OEM</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">17</span> distributors and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">2</span> OEM relationships; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">2</span> approved, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">3</span> in pipeline</td>
+<td>New guiding catheter co-developed with Polymed; contract development and manufacturing for OEMs</td>
+</tr>
+<tr>
+<td>Plan1Health</td>
+<td>No presence; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">1</span> clearance, used for OEM supply</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">20</span>+ distributors; whole portfolio (four categories), <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">1</span> in pipeline</td>
+<td>Evaluating FDA submissions; talks with a Polymed US distributor</td>
+</tr>
+</tbody>
+</table></div><p class="note">Presentation of 25 May 2026 (4QFY26), 'International Strategy' slides; approval counts are the company's. The FDA database lists <span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> 510(k) clearances in Poly Medicure's name, <span class="n" title="Source: FDA 510(k) clearances – Citieffe (2026-09-24)">11</span> for Citieffe, <span class="n" title="Source: FDA 510(k) clearances – PendraCare (2026-09-24)">4</span> for PendraCare and <span class="n" title="Source: FDA 510(k) clearances – Plan 1 Health (2026-09-24)">1</span> for Plan1Health (Sep-2026). Group-level US approvals were <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">15</span> with <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">11-13</span> in the pipeline in Aug-2026.</p><p class="src">Source: Investor presentation 4QFY26; Investor deck 1QFY27; FDA 510(k) clearances – Poly Medicure; FDA 510(k) clearances – Citieffe; FDA 510(k) clearances – PendraCare; FDA 510(k) clearances – Plan 1 Health; Avendus Spark Research</p></figure>
+<!-- DK4Q26 p.38-39; DK1Q27 p.11; FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1 -->
+<p><strong>What drives European revenue</strong>, in the order we rank them:</p>
+<ol>
+<li><strong>Distributor stocking.</strong> European distributors normally hold <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">4-5</span> months of inventory; they cut it to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">2-3</span> months in 2025, which management cited as a cause of the FY26 contraction alongside Chinese pricing and certification delays. The 1QFY27 organic growth of <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">17.6%</span> came from 'new customer acquisitions' plus restocking. Management guided to <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 8 · management guidance; Himanshu Baid, MD">5-6</span> new customers from Apr-2026. <!-- TR1Q26 p.9; TR3Q26 p.8; TR1Q27S p.3, p.9 --></li>
+<li><strong>Approvals under the EU Medical Device Regulation (MDR).</strong> <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> products received MDR certificates, but management admits it 'had to drop many products initially' while waiting. The pipeline is <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">30</span>+ products under registration and ~<span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 9 · management guidance; Himanshu Baid, MD">25 products</span> due for CE marking within three to four months of Aug-2026. Under the EU's 2023 extension of the transition, legacy certificates run to 31 Dec 2027 for class III and implantable IIb devices and to 31 Dec 2028 for the rest. That gives time to products still on legacy certificates; Citieffe and Plan1Health say their whole portfolios are already MDR-approved (Sections A4.2 and A4.9), which leaves PendraCare's pipeline as the acquired business most exposed. <!-- DKAGM30 p.3; TR3Q26 p.8, p.16; DK1Q27 p.11; TR1Q27S p.9; EU_REG2023_607 p.4; DK4Q26 p.39 --></li>
+<li><strong>Chinese competition, now partly fenced off in public tenders.</strong> Management blamed 1HFY26 on Chinese product redirected from the US. Since 30 Jun 2025 the EU has excluded Chinese bidders from public medical-device tenders of <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 12">€5mn</span> or more and capped China-origin content at <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">50%</span>; such tenders are ~<span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">59%</span> of EU device procurement. The company names the acquisitions as its route into tender markets, which suggests the standalone business sells little through EU tenders today (our inference). <!-- TR2Q26 p.9; EU_IPI2025_1197 p.5, p.12; DK4Q26 p.39 --></li>
+<li><strong>Clinical selling.</strong> Polymed has hired <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 12 · Himanshu Baid, MD">25+</span> clinical staff to support distributors, after concluding that distributors 'are not able to do justice' to the clinical case for its products; it plans such teams in <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 22 · management guidance; Himanshu Baid, MD">25-30</span> markets. The MD's reasoning: to win on price alone 'I have to be <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 12 · Himanshu Baid, MD">10%</span> cheaper than China', which Polymed's scale does not allow. <!-- TR3Q26 p.12, p.22 --></li>
+</ol>
+<p><strong>The UK</strong> deserves separate mention. It was <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 6 · Himanshu Baid, MD">5-6%</span> of revenue in FY25, the National Health Service does ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 10 · Himanshu Baid, MD">90%</span> of purchasing, and the India-UK trade agreement cut UK duty on most of Polymed's products from <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 10 · Himanshu Baid, MD">4-5%</span> to zero. Polymed bid for <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 11 · Himanshu Baid, MD">6-7</span> new product categories, mostly vascular access, in the NHS's 2026 cycle and formed Poly Health Ltd to sell direct. The offset: NHS contracts slipped <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years after the change of government. <!-- TR4Q25 p.6-7; TR1Q26 p.10-11; TR3Q26 p.16; AR25 p.48 --></p>
+<h3 id="united-states-small-revenue-a-long-approval-queue-and-tariff">United States: small revenue, a long approval queue and tariff whiplash</h3>
+<p>The US is the largest device market but a small Polymed market. Management guided US revenue of <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 3 · management guidance; Himanshu Baid, MD">$2-3mn</span> for FY25, said FY26 was below <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">$3-3.5mn</span>, and expects <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> in FY27. The medium-term target of <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 3 · management guidance; Himanshu Baid, MD">$15-20mn</span> has kept its size but not its date: management called it a three-year goal in Jul-2024, three to four years in Oct-2024 and two to three years in Aug-2025. <!-- TR1Q25 p.4; TR2Q25 p.3; TR1Q26 p.7; TR1Q27S p.12 --></p>
+<p>The reasons it is still small, as management describes them:</p>
+<ol>
+<li><strong>Approvals.</strong> The FDA database lists <span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> 510(k) clearances in Poly Medicure's name, all class II infusion devices (safety IV catheters and IV sets), the latest dated 1 Apr 2026. Management said in Nov-2025 that the FDA had started rejecting data from Indian test labs, so products had to be re-tested in the US and 'all work we have done in the past was negated'. It expected the new tests to finish by Apr-May 2026, re-filing to follow and new approvals from mid-2026. <!-- FDA510K_POLY p.1; TR2Q26 p.11 --></li>
+<li><strong>Channel.</strong> Polymed supplies through <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">4</span> distributors and GPO contracts ('two large GPOs and distributors'); 'our job is limited to manufacturing in India'. The FDA listing of a suction catheter kit at the Jaipur plant under the name of McKesson, a US distributor, is the only public sign of private-label supply. <!-- DK4Q26 p.38; TR1Q26 p.7; TR1Q25 p.6; FDAREG_POLY p.1 --></li>
+<li><strong>Tariffs.</strong> The US was 'a red flag because of ... tariff situation', which 'delayed our launch to the U.S. market quite a lot'. <!-- TR4Q26 p.10 --></li>
+</ol>
+<figure class="exh" id="exh-us_tariff"><figcaption><span class="exn">Exhibit 67:</span> US duty on Indian medical consumables went from zero to 50% in August 2025 and is back to 10%; Polymed paused US customer talks while it lasted</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>From</th>
+<th>US measure</th>
+<th class="num">Duty on Indian medical consumables</th>
+<th>Management's comment at the time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standing</td>
+<td>Most-favoured-nation rate</td>
+<td class="num"><span class="n" title="Source: USITC HTS REST API - Column 1 General rates for 9018.31/9018.32/9018.39/9018.90 (2026-09-24)">Free</span></td>
+<td>'Current tariffs are <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 11 · Himanshu Baid, MD">0%</span> from India' (Oct-2024)</td>
+</tr>
+<tr>
+<td>7 Aug 2025</td>
+<td>Reciprocal tariff</td>
+<td class="num"><span class="n" title="Source: Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates) (2025-08-06), slide/page 5">25%</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>27 Aug 2025</td>
+<td>Additional duty (Russian oil)</td>
+<td class="num">+<span class="n" title="Source: Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%) (2025-08-11)">25%</span></td>
+<td><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">50%</span> is 'unsustainable for exports from India' (Aug-2025)</td>
+</tr>
+<tr>
+<td>7 Feb 2026</td>
+<td>Additional duty withdrawn; reciprocal rate of <span class="n" title="Source: United States-India Joint Statement (framework for Interim Agreement) (2026-02-06)">18%</span> announced but not implemented</td>
+<td class="num"><span class="n" title="Source: Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates) (2025-08-06), slide/page 5">25%</span></td>
+<td>'Reinitiating conversations with our customers' after the cut to <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · Himanshu Baid, MD">18%</span> (Feb-2026)</td>
+</tr>
+<tr>
+<td>24 Feb 2026</td>
+<td>Supreme Court ends IEEPA duties; Section 122 surcharge</td>
+<td class="num"><span class="n" title="Source: Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II (2026-02-25), slide/page 3">10%</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>24 Jul 2026</td>
+<td>Section 301 action</td>
+<td class="num"><span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span></td>
+<td>'The duty is only <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span>' (Aug-2026)</td>
+</tr>
+</tbody>
+</table></div><p class="note">Duty on Indian-origin HS 9018 consumables, from the Federal Register and White House documents in the F digest; Section B4 sets out the full chronology. A Section 232 investigation into medical consumables, opened on 2 Sep 2025, could add duty on top.</p><p class="src">Source: USITC HTS REST API - Column 1 General rates for 9018.31/9018.32/9018.39/9018.90; Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates); Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%); Executive Order 14384 - Modifying Duties To Address Threats ... Russian Federation (removes India +25%); United States-India Joint Statement (framework for Interim Agreement); Learning Resources, Inc. v. Trump, No. 24-1287 (slip opinion); Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II; USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II); 2QFY25 earnings call transcript; 1QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); 1QFY27 earnings call (Aug 10 2026); Avendus Spark Research</p></figure>
+<!-- F_HTS_9018 p.1; FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; FR_EORUS_260211 p.1; WH_USIND_JS_2602 p.1; SCOTUS_IEEPA_260220 p.2; FR_S122_260225 p.3; FR_301ACT_260728 p.7; TR2Q25 p.11; TR1Q26 p.5; TR3Q26 p.6; TR1Q27S p.12 -->
+<p>The acquisitions give Polymed its first direct US presence. Citieffe sells to US trauma centres through its own reps and commissioned agents, not GPO contracts; the US was <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">16.9%</span> of its CY25 sales, and management points to US orthopaedic prices of <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">4-5</span>x Europe's. PendraCare's guiding catheter is cleared and management expects US sales to start in FY27. <!-- TRCIT p.10-11; DK1Q27 p.14; DK4Q26 p.38 --></p>
+<h3 id="west-asia-demand-intact-shipments-stuck">West Asia: demand intact, shipments stuck</h3>
+<p>West Asia (the Gulf states and their neighbours) was <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">6-8%</span> of revenue before the conflict that began in Feb-Mar 2026, by management's estimate. <!-- HOWDEN_HORMUZ_2603 p.3 --> Management described demand as intact but called shipping 'a logistics nightmare': revenue from the region fell <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">32%</span> yoy in 1QFY27, with 'all the orders ... still lying at ports or in factories'. That cut organic RoW growth to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">4%</span>. <!-- TR4Q26 p.5; TR1Q27S p.3, p.9; DK1Q27 p.26 --></p>
+<ul>
+<li><strong>Costs.</strong> Management said logistics costs rose <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 8 · Himanshu Baid, MD">2-3</span> times in the six months to Aug-2026. Hapag-Lloyd added a war-risk surcharge of <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">$1,500 per TEU</span>, and Indian exporters faced <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">40-50%</span> higher insurance on Gulf-routed cargo. The Drewry container index rose from <span class="n" title="Source: Drewry World Container Index - 02 Apr 2026 (reprint) (2026-04-07)">$2,287 per 40ft</span> on 2 Apr 2026 to <span class="n" title="Source: Drewry World Container Index - 17 Sep 2026 (2026-09-17)">$4,500 per 40ft</span> on 17 Sep 2026. <!-- TR1Q27S p.8; HOWDEN_HORMUZ_2603 p.11; DREWRY_WCI_260402 p.1; DREWRY_WCI_2609 p.1 --></li>
+<li><strong>The acquisitions add exposure.</strong> PendraCare had 'over-indexed exposure' of ~<span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">20</span>% to the region, which management says is why it is not growing. <!-- TR1Q27S p.11 --></li>
+<li><strong>Recovery.</strong> Management expects West Asia to grow <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 9 · management guidance; Himanshu Baid, MD">20-25%</span> once the situation improves. We would treat that as a rebound from a depressed base, not a trend. <!-- TR1Q27S p.9 --></li>
+<li><strong>Access.</strong> Saudi Arabia requires a marketing authorization and a licensed local authorized representative for every device. <!-- SFDA_REQ1 p.4-5 --></li>
+</ul>
+<h3 id="africa-a-small-export-market-served-partly-through-egypt">Africa: a small export market, served partly through Egypt</h3>
+<p>Africa took <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 92">Rs. 480mn</span> of the holding company's FY26 exports, <span class="n" title="Our calculation: A-0573/A-0474*100; inputs: Rs. 480mn (Annual Report FY26, p.92); Rs. 10.7bn (Annual Report FY26, p.77)">4%</span> of the total and <span class="n" title="Our calculation: (A-0573/A-0574-1)*100; inputs: Rs. 480mn (Annual Report FY26, p.92); Rs. 485mn (Annual Report FY26, p.92)">-1.0%</span> yoy (our calculation). Management has said Africa and South-East Asia 'don't contribute too much', and in Feb-2024 said the global currency crisis was hitting West Asia and Africa harder than Latin America. The Egyptian associate, which CRISIL describes as catering directly to 'the African and other markets', is Polymed's local manufacturing presence. <!-- AR26 p.92; TR2Q23 p.4; TR3Q24b p.14; CRR2212 p.1 --></p>
+<h3 id="latin-america-brazil-goes-direct">Latin America: Brazil goes direct</h3>
+<p>Latin America is Polymed's second-largest export region, with Brazil and Mexico growing and 'a good market share' in Argentina (May-2022). Registration is slow: management said in 2022 that registering a product in Mexico took <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">almost two years</span>. <!-- TR3Q24b p.14; TR4Q22 p.5-6 --></p>
+<p>Brazil is where Polymed is changing its model.</p>
+<ul>
+<li><strong>Market.</strong> Management sizes Brazil's device market at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">$13-15bn</span>, the largest in South America. Brazil was the second-largest destination for India's exports of catheters, cannulas and needles (HS 901839) in 2025, at <span class="n" title="Source: UN Comtrade - India exports HS 901839, 2025, by partner (2026-09-24)">$46.7mn</span>. <!-- TR4Q26 p.3; F_CT_IND_X_901839_2025 p.1 --></li>
+<li><strong>Rules.</strong> Under ANVISA's device rules of 2022, a registration must be held by a legal entity in Brazil and is valid for <span class="n" title="Source: ANVISA Resolução RDC nº 751, de 15 de setembro de 2022 (Diário Oficial da União) (2022-09-21)">10 years</span>. A foreign maker selling through distributors leaves the registrations with them. <!-- ANVISA_RDC751 p.1 --></li>
+<li><strong>Moves.</strong> Polymed set up a Brazilian subsidiary in 1QFY26 (pre-operational; FY26 loss <span class="n" title="Source: Polymed Brazil Ltda Mar26 accounts (2026-08-18), slide/page 3">BRL 142k</span>), then on 29 Apr 2026 bought Medyneo, a distribution company with ANVISA and import licences but no operations, for <span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 3.4mn</span> (<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">about $40,000</span>). Management says the purchase saves <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">18-24</span> months. Renato Rocha (ex-Descarpack, B. Braun and GE Healthcare) became CEO of Polymed Brazil in Aug-2026, and the Board has allocated funds for direct sales. The plan is to sell new products direct while distributors keep the existing range. <!-- DK1Q26 p.7; SUB26BR p.3; RS1Q27 p.5; TR4Q26 p.3-4, p.8; DK1Q27 p.22; TR1Q27S p.5, p.8 --></li>
+<li><strong>Mexico</strong> is covered by Citieffe's direct sales company, where Citieffe claims ~<span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 7">12%</span> of its segment. <!-- DK2Q26 p.7 --></li>
+</ul>
+<h3 id="asia-south-east-asia-grows-the-china-plant-winds-down">Asia: South-East Asia grows, the China plant winds down</h3>
+<p><strong>South-East Asia</strong> is one of the two export markets management singled out for FY27 growth, alongside Europe. Polymed exhibited in Thailand, Malaysia, Indonesia and Vietnam in 2025 and names the region in its go-direct plans. The competitive risk is Chinese: in ASEAN, B. Braun reports 'enormous pricing pressure' and says Chinese manufacturers expanded their market shares, and Weigao's Indonesian joint venture is due to start local production in the second half of 2026. <!-- TR1Q27S p.9; DK2Q26 p.12; DK1Q27 p.11; BBRAUN_AR25 p.42; WEIGAO_IR26 p.34 --></p>
+<p><strong>China.</strong> Poly Medicure (Laiyang) has been a wholly owned plant in Shandong since 2007. The MD described its purpose in 2022 as understanding Chinese technology, sourcing and 'making some critical components'. It is now shrinking:</p>
+<ul>
+<li><strong>Sales</strong> fell <span class="n" title="Our calculation: (B-0712/B-0714-1)*100; inputs: RMB 8.82mn (Poly Medicure (Laiyang) China FY26 accounts, p.8); RMB 12.8mn (Poly Medicure Laiyang FY25 financials, p.8)">31%</span> in renminbi between FY24 and FY26 to <span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 8.82mn</span> (our calculation); exports were only <span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 361k</span>.</li>
+<li><strong>Margins.</strong> Gross margin fell from <span class="n" title="Our calculation: WC-0023/B-0713*100; inputs: RMB 3.05mn (Poly Medicure (Laiyang) China FY26 accounts, p.8); RMB 11.6mn (Poly Medicure (Laiyang) China FY26 accounts, p.8)">26.2%</span> to <span class="n" title="Our calculation: B-0716/B-0712*100; inputs: RMB 1.90mn (Poly Medicure (Laiyang) China FY26 accounts, p.8); RMB 8.82mn (Poly Medicure (Laiyang) China FY26 accounts, p.8)">21.5%</span> (our calculation), and the plant made a net loss of <span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 526k</span> in FY26.</li>
+<li><strong>Future.</strong> The MD said in Jul-2024 that the plant (fewer than <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 13 · Himanshu Baid, MD">40-50</span> people, revenue under <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 13 · Himanshu Baid, MD">$2mn</span>) would 'probably close' because Chinese costs are 'much, much higher' than India's and its ~<span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 13 · Himanshu Baid, MD">20</span>-year lease expires within <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 13 · Himanshu Baid, MD">18-24</span> months. The business licence runs to 23 May 2027 and the FY26 accounts say an extension is 'in process'. The two statements conflict; we treat closure as likely but unconfirmed.</li>
+</ul>
+<!-- TR2Q23 p.11; SUB25CN p.8; SUB26CN p.8, p.38; TR1Q25 p.13 -->
+<h3 id="egypt-a-profitable-associate-that-pays-dividends">Egypt: a profitable associate that pays dividends</h3>
+<p>Ultra for Medical Products (Ultra Med) runs a plant of <span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 69">12,500 sq m</span> in Assiut making disposable devices. Polymed owns <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 134">23%</span>; CRISIL describes it as a joint venture with the El-Agar group. <!-- AR20 p.69; AR26 p.134; CRR2212 p.1 --></p>
+<ul>
+<li><strong>Growth.</strong> Sales in rupees rose <span class="n" title="Our calculation: (A-0385/A-0816-1)*100; inputs: Rs. 1.2bn (Annual Report FY26, p.33); Rs. 813mn (Annual Report FY25, p.37)">53%</span> between CY23 and CY25 to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 1.2bn</span> (our calculation), recovering from the Egyptian pound's devaluation, which had cut CY22 sales to <span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 22">Rs. 736mn</span>.</li>
+<li><strong>Profit.</strong> The associate's CY25 profit was about <span class="n" title="Our calculation: A-0622+A-0719; inputs: Rs. 57mn (Annual Report FY26, p.98); Rs. 192mn (Annual Report FY26, p.134)">Rs. 249mn</span>, a net margin of ~<span class="n" title="Our calculation: (A-0622+A-0719)/A-0385*100; inputs: Rs. 57mn (Annual Report FY26, p.98); Rs. 192mn (Annual Report FY26, p.134); Rs. 1.2bn (Annual Report FY26, p.33)">20%</span> (our calculation from the AOC statement). Polymed's share, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 98">Rs. 57mn</span>, is its only equity-accounted profit.</li>
+<li><strong>Cash and trade.</strong> Polymed received <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 33mn</span> in dividend and governing-council share in FY26 and sold it <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 63mn</span> of goods. The investment is carried at <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 97">Rs. 152mn</span> against a cost of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 40">Rs. 8.9mn</span>.</li>
+</ul>
+<!-- AR26 p.33, p.40, p.88, p.97, p.98, p.134; AR23 p.22 -->
+<h3 id="india-the-growth-engine-is-the-private-hospital">India: the growth engine is the private hospital</h3>
+<p>India produced <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 5.8bn</span> of revenue in FY26, up <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">19.6%</span>, the fastest of the three regions. Management is deliberately shrinking government business in India. <!-- AR26 p.47 --></p>
+<ul>
+<li><strong>Private vs government.</strong> Private customers were ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">90%</span> of domestic revenue in 3QFY26 and grew <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">22.5%</span>. Government business (<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">10-12%</span>) fell <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">18%</span>. Management's reasons are late state payments and tenders that do not reward quality. The target is <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · management guidance; Himanshu Baid, MD">92-93%</span> private and <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · management guidance; Himanshu Baid, MD">6-7%</span> government. <!-- TR3Q26 p.4; TR4Q25 p.13 --></li>
+<li><strong>Coverage.</strong> Polymed reaches ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 17 · Himanshu Baid, MD">8,000</span> hospitals, against the ~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 11 · Himanshu Baid, MD">20,000</span> larger Indian hospitals that management counts as addressable. The MD put coverage at 'one-third of the hospital[s]' in Feb-2025 and wallet share in covered hospitals at <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 13 · Himanshu Baid, MD">5-7%</span> in Nov-2025, having said below <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 13 · Himanshu Baid, MD">20%</span> earlier. <!-- TR3Q26 p.17; TR4Q25 p.11; TR3Q25 p.13; TR2Q26 p.13 --></li>
+<li><strong>Channel.</strong> <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 40">650</span>+ distributors in India and the group's <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">590+</span> direct reps. Management plans <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 40 · management guidance">100</span>+ sales hires in FY27, uses ~<span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 14 · Himanshu Baid, MD">Rs. 10mn</span> of revenue a year per rep as a benchmark, and has ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 18 · Himanshu Baid, MD">40-45</span> clinical staff in India. Indranil Mukherjee (ex-B. Braun and Translumina) joined in 2026 as CEO for India and Asia-Pacific. The MD says 'you can see Polymed products in every top private chain in the country'. <!-- DK4Q26 p.40; AR26 p.3; TR2Q25 p.14; TR3Q26 p.18; DK1Q27 p.22 --></li>
+<li><strong>Policy.</strong> The GST cut on devices (<span class="n" title="Source: PIB backgrounder: GST for Affordable Healthcare (2025-09-12), slide/page 2">12% to 5%</span> from 22 Sep 2025) lowered end prices, though management linked a 2QFY26 domestic slowdown to channel inventory adjusting to it. The larger risk is trade-margin regulation. A Maharashtra FDA survey in Sep-2026 cited a Polymed IV set bought at <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 10.5</span> with an MRP of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 187</span>, and a parliamentary committee has recommended capping the gap between landing price and MRP at <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span> (Section B3). <!-- PIB_GSTHEALTH_2509 p.2; TR2Q26 p.8; FPJ_MAHFDA_2609 p.1; PIB_PSC176_2608 p.1 --></li>
+</ul>
+<h3 id="company-specific-drivers-by-region-ranked">Company-specific drivers by region, ranked</h3>
+<ol>
+<li><strong>Europe organic recovery and tender access (management target, partly visible).</strong> Mechanism: new customers, restocking, MDR approvals and the EU's exclusion of Chinese bidders. Evidence: <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">17.6%</span> organic growth in 1QFY27. Timing: FY27. Our view: the most important swing factor for export growth.</li>
+<li><strong>India private-hospital penetration (management target, visible).</strong> Mechanism: more reps, clinical staff and products per hospital. Evidence: private revenue grew <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 4 · Himanshu Baid, MD">22.3%</span> in 2QFY26 and <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">22.5%</span> in 3QFY26. Timing: continuous.</li>
+<li><strong>West Asia normalization (management expectation).</strong> Mechanism: pent-up orders ship once routes reopen. Evidence: none yet; <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">-32%</span> in 1QFY27.</li>
+<li><strong>Direct models in Brazil and new European markets (management plan, early).</strong> Mechanism: own sales teams for new products. Evidence: Medyneo licences and a CEO hire; no revenue yet. Our view: a margin cost before it is a revenue gain.</li>
+<li><strong>US (management target, repeatedly deferred).</strong> Mechanism: 510(k) re-filings and GPO contracts, plus Citieffe and PendraCare products. Evidence: <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27. Our view: immaterial to FY27-FY28 revenue unless tariffs stay at <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span> and the re-filed products clear.</li>
+</ol>
+<p>Two margin effects follow, in our view. Direct selling raises gross margin but adds fixed sales cost ahead of revenue. The Gulf and container-freight shock raises delivered cost on the export business. Management raised prices at the start of FY27 to offset raw-material inflation, but has not said how much of the freight increase it recovers. <!-- TR1Q27S p.5 --></p>
+<figure class="exh" id="exh-a5_watch"><figcaption><span class="exn">Exhibit 68:</span> What to watch: European organic growth, West Asia shipments, the US queue and the China plant decision</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI / risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic Europe growth</td>
+<td>Largest export region; FY26 contraction came from distributor destocking</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">17.6%</span> yoy in 1QFY27</td>
+<td>Quarterly presentation</td>
+</tr>
+<tr>
+<td>West Asia revenue</td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">6-8%</span> of revenue; orders stuck at port</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">-32%</span> yoy in 1QFY27</td>
+<td>Earnings call</td>
+</tr>
+<tr>
+<td>Holding-company exports by region</td>
+<td>Shows Indian-plant exports separately from acquisitions</td>
+<td><span class="n" title="Our calculation: (A-0474/A-0475-1)*100; inputs: Rs. 10.7bn (Annual Report FY26, p.77); Rs. 11.0bn (Annual Report FY26, p.77)">-3.2%</span> in FY26 (our calculation)</td>
+<td>Annual report geographic note</td>
+</tr>
+<tr>
+<td>US revenue and 510(k) clearances</td>
+<td>Target of <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 3 · management guidance; Himanshu Baid, MD">$15-20mn</span> rolled forward since Jul-2024</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27; <span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> clearances</td>
+<td>Calls; FDA database</td>
+</tr>
+<tr>
+<td>US duty on HS 9018 goods</td>
+<td>Went to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">50%</span> in 2025</td>
+<td><span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> since 24 Jul 2026; Section 232 pending</td>
+<td>Federal Register</td>
+</tr>
+<tr>
+<td>Brazil direct sales</td>
+<td>First new direct market</td>
+<td>Medyneo bought; CEO from Aug-2026</td>
+<td>Calls; subsidiary accounts</td>
+</tr>
+<tr>
+<td>China plant</td>
+<td>Licence to 23 May 2027; loss-making</td>
+<td><span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">-RMB 526k</span> in FY26</td>
+<td>Subsidiary accounts</td>
+</tr>
+<tr>
+<td>Egypt associate</td>
+<td>Dividends and associate profit</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 98">Rs. 57mn</span> share of profit in FY26</td>
+<td>Annual report</td>
+</tr>
+<tr>
+<td>Private share of domestic revenue</td>
+<td>Target <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · management guidance; Himanshu Baid, MD">92-93%</span></td>
+<td>~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · Himanshu Baid, MD">90%</span> in 3QFY26</td>
+<td>Earnings call</td>
+</tr>
+<tr>
+<td>NHS contract awards</td>
+<td>UK duty now zero; bids in <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 11 · Himanshu Baid, MD">6-7</span> categories</td>
+<td>Contracts delayed <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years</td>
+<td>Earnings call</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; 4QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); Annual Report FY26; our calculation; 2QFY25 earnings call transcript; FDA 510(k) clearances – Poly Medicure; 1QFY26 earnings call transcript; USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II); Poly Medicure (Laiyang) China FY26 accounts; 3QFY26 earnings call transcript (6 Feb 2026); Avendus Spark Research</p></figure>
+<p>Open questions for management: revenue by country for the top ten markets; West Asia, US and Latin America revenue in rupees; PendraCare's and Citieffe's revenue by region; which subsidiary booked the 4QFY26 provision; whether the China plant closes or renews its licence; the cost and revenue plan for the Brazilian direct model; and the timetable for the next European direct market.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-10.html"><span>Previous</span>A4.10 Components, OEM and contract manufacturing</a><a class="next" href="a6.html"><span>Next</span>A6 Manufacturing, capacity and R&amp;D</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

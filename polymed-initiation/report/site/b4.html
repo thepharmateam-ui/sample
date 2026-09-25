@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B4 Export-market regimes · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html" class="active">B4 Export-market regimes</a></li><li class="l3"><a href="#europe-mdr-a-procurement-shield-against-china-and-a-dehp-dea">Europe: MDR, a procurement shield against China and a DEHP deadline</a></li><li class="l3"><a href="#united-states-clearance-quality-rules-and-a-tariff-path-that">United States: clearance, quality rules and a tariff path that keeps changing</a></li><li class="l3"><a href="#other-markets-registration-rules-tenders-and-war-risk-freigh">Other markets: registration rules, tenders and war-risk freight</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="b3.html"><span>Previous</span>B3 India medtech: market, policy and demand</a><a class="next" href="b5.html"><span>Next</span>B5 Structural trends</a></nav>
+<h2 id="b4">B4 Export-market regimes</h2>
+<p>Polymed earns <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">~69%</span> of its revenue outside India, so the rules of its export markets matter as much as India's (Section A1). <!-- DK1Q27 p.10 --> Three regimes set the terms: the EU's Medical Device Regulation (MDR) and procurement rules, which govern its largest export region; US clearance and tariff policy, which govern the largest market it barely serves; and a patchwork of registration rules, procurement systems and, since early 2026, war-related shipping costs in its other markets.</p>
+<h3 id="europe-mdr-a-procurement-shield-against-china-and-a-dehp-dea">Europe: MDR, a procurement shield against China and a DEHP deadline</h3>
+<figure class="exh" id="exh-b4_eu"><figcaption><span class="exn">Exhibit 113:</span> EU rules: MDR deadlines have been extended and may be eased; Chinese bidders are shut out of large tenders; DEHP must go by 2030</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date</th>
+<th>Instrument</th>
+<th>What it does</th>
+<th>What it means for Polymed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transposed by <span class="n" title="Source: Council Directive 2010/32/EU - prevention from sharp injuries in hospital and healthcare sector (2010-05-10), slide/page 2">11 May 2013</span></td>
+<td>Directive 2010/32/EU on sharps injuries</td>
+<td>Employers must provide devices with safety-engineered protection where a risk assessment calls for it; recapping is banned</td>
+<td>Structural demand for safety cannulas and needles (Section B5)</td>
+</tr>
+<tr>
+<td>15-Mar-2023</td>
+<td>Regulation (EU) 2023/607, extending the MDR transition</td>
+<td>Legacy devices certified under the old directive may stay on the market to <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2027</span> (class III and implantable class IIb) or <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2028</span> (other classes), if the maker had applied to a notified body by 26-May-2024</td>
+<td>Deadline for moving any remaining directive-era certificates to MDR, including PendraCare's; Citieffe says its range is fully MDR-certified (Appendix)</td>
+</tr>
+<tr>
+<td>13-Nov-2023</td>
+<td>Regulation (EU) 2023/2482 (REACH)</td>
+<td>DEHP in medical devices: latest application date <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 January 2029</span>, sunset <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 July 2030</span></td>
+<td>PVC blood bags, bloodlines and tubing sold in the EU must move to other plasticizers</td>
+</tr>
+<tr>
+<td>In force 30-Jun-2025</td>
+<td>Implementing Regulation (EU) 2025/1197 (International Procurement Instrument)</td>
+<td>Excludes Chinese bidders from EU public device tenders of <span class="n" title="Source: European Commission Excludes Chinese Medical Device Manufacturers from EU Public Procurement Contracts (2025-07-01)">€5mn</span> or more, and caps China-origin content at <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">50%</span> of contract value, for <span class="n" title="Source: European Commission Excludes Chinese Medical Device Manufacturers from EU Public Procurement Contracts (2025-07-01)">five years</span></td>
+<td>Removes Chinese competition from tenders that made up ~<span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">59%</span> of EU device procurement by value in 2017-2022</td>
+</tr>
+<tr>
+<td>16-Dec-2025</td>
+<td>Commission proposal to simplify the MDR and IVDR</td>
+<td>Removes the five-year limit on certificates in favour of periodic review; adds a "well-established technology" category; the Commission estimates savings of <span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">&gt;€3bn</span> a year</td>
+<td>Lower recertification cost for established disposables, for Polymed and its smaller rivals alike</td>
+</tr>
+<tr>
+<td>Jul-2026</td>
+<td>European Parliament committee draft report</td>
+<td>Proposes limiting initial certificates to five years; Council and plenary positions pending</td>
+<td>Timing and content of the relief remain uncertain</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Council Directive 2010/32/EU - prevention from sharp injuries in hospital and healthcare sector; Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions; Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV); Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC); European Commission Excludes Chinese Medical Device Manufacturers from EU Public Procurement Contracts; COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD); MDR and IVDR - Parliament discusses revisions to promote simplification and innovation; Avendus Spark Research</p></figure>
+<!-- EU_DIR2010_32 pp.2, 6; EU_REG2023_607 p.4; EU_REACH2023_2482 pp.1, 4; EU_IPI2025_1197 pp.5, 12-13; KS_IPI_2507 p.1; EU_COM2025_1023 p.1; DSV_MDR_2607 p.1 -->
+<p><strong>MDR.</strong> The MDR has applied since May-2021, and its certificates, issued by notified bodies, are valid for at most five years. It raised the cost and time of keeping each product on the market: management said in May-2022 that a CE mark now took <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">18-24</span> months, against six to twelve before, and in Feb-2026 that Polymed "had to drop many products initially". The EU has only <span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">51</span> notified bodies designated under the MDR, for a medical-technology market the Commission puts at <span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">€170bn</span>. <!-- PD24 p.42; EU_COM2025_1023 p.1; TR4Q22 pp.5-6; TR3Q26 p.8 --></p>
+<p>Polymed's position is strong: every plant is certified under the MDR for its full range, <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> products held MDR certificates in FY25, and management put its CE-certified range at ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · Himanshu Baid, MD">75</span> products in Nov-2025, with ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · management guidance; Himanshu Baid, MD">20</span> more expected to be CE-marked in CY26; the two counts are on different bases, which the company does not reconcile (Appendix). The acquisitions also bought MDR-certified European manufacturing. The simplification proposal would lower costs for everyone and so narrow the advantage Polymed gained by paying the entry cost early (Section B5). <!-- AR26 p.35; DKAGM30 p.3; TR2Q26 p.10 --></p>
+<p><strong>The procurement shield.</strong> The International Procurement Instrument measure is the EU's answer to China's closure of its own hospital market: an EU investigation found that <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 6">87%</span> of Chinese public device tenders restrict imported products. Since 30-Jun-2025 Chinese bidders have been excluded from EU device tenders of <span class="n" title="Source: European Commission Excludes Chinese Medical Device Manufacturers from EU Public Procurement Contracts (2025-07-01)">€5mn</span> or more, and winning bidders may source no more than <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">50%</span> of the contract value from China. China responded by restricting European device makers in its own public procurement, per B. Braun. <!-- EU_IPI2025_1197 pp.5-6, 12; BBRAUN_AR25 p.42 --></p>
+<p>We see the measure as a direct, if partial, benefit to Polymed. It removes Chinese makers from the largest European tenders just as Chinese pricing was hurting Polymed's European sales (Section A3), but it does not cover tenders below the threshold, private buyers or distributors' own sourcing, and the content cap still allows some Chinese components.</p>
+<p><strong>The UK.</strong> Management put the UK at about <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 6 · Himanshu Baid, MD">5-6%</span> of Polymed's revenue in FY25. Management says the India-UK trade agreement cuts UK import duty on most of its products from ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 10 · Himanshu Baid, MD">4-5%</span> to near zero, and that NHS contracts were delayed by <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years after the change of government. <!-- TR4Q25 pp.6-7; TR1Q26 p.10; TR3Q26 p.16 --></p>
+<h3 id="united-states-clearance-quality-rules-and-a-tariff-path-that">United States: clearance, quality rules and a tariff path that keeps changing</h3>
+<p><strong>Clearance and quality.</strong> Polymed's own FDA 510(k) clearances are all in infusion; its subsidiaries hold clearances for a pain-management catheter (Plan1Health), guiding catheters (PendraCare) and trauma implants (Citieffe) (Sections A4.1 and A8). The FDA's Quality Management System Regulation, which incorporates ISO 13485:2016, took effect on 2-Feb-2026, and management says the FDA now expects testing in US laboratories. The FDA has also turned against Chinese syringes: it advised US providers in 2024 to use syringes "not manufactured in China, if possible", and put several Chinese makers on import alert. <!-- FDA510K_POLY p.1; FDA510K_CIT p.1; FDA510K_PEN p.1; FDA510K_P1H p.1; FR_QMSR_240202 pp.1-2; TR2Q26 p.11; FDA_SYRINGE_CHINA p.1; FDA_RU240517 p.1 --></p>
+<p><strong>Tariffs.</strong> Medical instruments enter the US free of ordinary (MFN) duty, so every tariff Polymed has faced since 2025 has come from emergency or trade-remedy measures that were imposed, raised, struck down and replaced in quick succession.</p>
+<figure class="exh" id="exh-b4_tariffs"><figcaption><span class="exn">Exhibit 114:</span> US tariffs on medical consumables (HS 9018): India's rate rose from zero to 50% in 2025 and is now 10%; China pays more, with heavy extra duties on syringes and needles</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Effective</th>
+<th>Measure</th>
+<th>India-origin goods</th>
+<th>China-origin goods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standing</td>
+<td>Ordinary (MFN) duty, HS 9018</td>
+<td class="num"><span class="n" title="Source: USITC HTS REST API - Column 1 General rates for 9018.31/9018.32/9018.39/9018.90 (2026-09-24)">Free</span></td>
+<td><span class="n" title="Source: USITC HTS REST API - Column 1 General rates for 9018.31/9018.32/9018.39/9018.90 (2026-09-24)">Free</span>, plus Section 301 duties below</td>
+</tr>
+<tr>
+<td>27-Sep-2024</td>
+<td>Section 301 four-year review</td>
+<td>–</td>
+<td>Syringes and needles: <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span>; enteral syringes excluded to 1-Jan-2026</td>
+</tr>
+<tr>
+<td>5-Apr-2025</td>
+<td>Reciprocal tariff under IEEPA, Executive Order No. 14257</td>
+<td><span class="n" title="Source: Executive Order 14257 - Regulating Imports With a Reciprocal Tariff (with Annex II) (2025-04-07), slide/page 5">10%</span> baseline</td>
+<td>Higher rates, then <span class="n" title="Source: Executive Order 14358 - Modifying Reciprocal Tariff Rates Consistent With the US-PRC Economic and Trade Arrangement (2025-11-07)">10%</span> from May-2025</td>
+</tr>
+<tr>
+<td>7-Aug-2025</td>
+<td>Executive Order No. 14326, country rates</td>
+<td class="num"><span class="n" title="Source: Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates) (2025-08-06), slide/page 5">25%</span></td>
+<td><span class="n" title="Source: Executive Order 14358 - Modifying Reciprocal Tariff Rates Consistent With the US-PRC Economic and Trade Arrangement (2025-11-07)">10%</span> (suspension continued)</td>
+</tr>
+<tr>
+<td>27-Aug-2025</td>
+<td>Executive Order No. 14329 (Russian oil)</td>
+<td>A further <span class="n" title="Source: Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%) (2025-08-11)">25%</span>, for <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">50%</span> in all</td>
+<td>–</td>
+</tr>
+<tr>
+<td>2-Sep-2025</td>
+<td>Section 232 investigation of PPE, medical consumables and equipment opened</td>
+<td>Pending</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>10-Nov-2025</td>
+<td>US-China arrangement</td>
+<td>–</td>
+<td>Higher reciprocal rate suspended to 10-Nov-2026; <span class="n" title="Source: USTR Notice of Product Exclusion Extensions (178 exclusions to 10-Nov-2026) (2025-12-01), slide/page 2">178</span> Section 301 exclusions extended</td>
+</tr>
+<tr>
+<td>7-Feb-2026</td>
+<td>Executive Order No. 14384; US-India joint statement</td>
+<td>Russian-oil duty removed (<span class="n" title="Source: Executive Order 14384 - Modifying Duties To Address Threats ... Russian Federation (removes India +25%) (2026-02-11)">0%</span>); an <span class="n" title="Source: United States-India Joint Statement (framework for Interim Agreement) (2026-02-06)">18%</span> reciprocal rate announced but never applied</td>
+<td>–</td>
+</tr>
+<tr>
+<td>20-Feb-2026</td>
+<td>Supreme Court, Learning Resources v. Trump; Executive Order No. 14389</td>
+<td>IEEPA duties end</td>
+<td>IEEPA duties end; Section 301 duties stay</td>
+</tr>
+<tr>
+<td>24-Feb-2026 to 24-Jul-2026</td>
+<td>Section 122 temporary surcharge</td>
+<td><span class="n" title="Source: Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II (2026-02-25), slide/page 3">10%</span>; HS 9018 not exempt</td>
+<td><span class="n" title="Source: Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II (2026-02-25), slide/page 3">10%</span>, on top of other duties</td>
+</tr>
+<tr>
+<td>24-Jul-2026</td>
+<td>Section 301 action on forced-labour import rules</td>
+<td><span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span>; HS 9018 not exempt</td>
+<td><span class="n" title="Source: Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour) (2026-07-28), slide/page 4">12.5%</span>; stacking on earlier Section 301 duties not confirmed</td>
+</tr>
+<tr>
+<td>Pending</td>
+<td>Section 232 outcome</td>
+<td>No action found by 24-Sep-2026</td>
+<td>No action found by 24-Sep-2026</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: USITC HTS REST API - Column 1 General rates for 9018.31/9018.32/9018.39/9018.90; USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581; Executive Order 14257 - Regulating Imports With a Reciprocal Tariff (with Annex II); President Trump Lowers IEEPA-Based Tariffs on India and Announces Framework for Bilateral Interim Trade Agreement; Executive Order 14358 - Modifying Reciprocal Tariff Rates Consistent With the US-PRC Economic and Trade Arrangement; Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates); Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%); BIS Notice of Request for Public Comments on Section 232 Investigation of Imports of PPE, Medical Consumables, and Medical Equipment, Including Devices; USTR Notice of Product Exclusion Extensions (178 exclusions to 10-Nov-2026); Executive Order 14384 - Modifying Duties To Address Threats ... Russian Federation (removes India +25%); United States-India Joint Statement (framework for Interim Agreement); Learning Resources, Inc. v. Trump, No. 24-1287 (slip opinion); Executive Order 14389 - Ending Certain Tariff Actions (IEEPA duties); Proclamation 11012 - Imposing a Temporary Import Surcharge (Section 122) with Annexes I-II; Court of International Trade Rejects 10% Section 122 Tariff; USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II); Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour); Section 232 Investigations - list page; 1QFY26 earnings call transcript; Avendus Spark Research</p></figure>
+<!-- F_HTS_9018 p.1; FR_301MOD_240918 pp.1, 9, 20; FR_EO14257_250407 p.5; TH_INDIA_2602 p.1; FR_EOCHN_251107 pp.1-2; FR_EO14326_250806 p.5; FR_EO14329_250811 pp.1-2; FR_232PPE_250926 pp.1-2; FR_301EXCL_251201 p.2; FR_EORUS_260211 p.1; WH_USIND_JS_2602 p.1; SCOTUS_IEEPA_260220 p.2; FR_ENDTAR_260225 p.1; FR_S122_260225 pp.3-5, 88; WS_S122_CIT p.1; FR_301ACT_260728 pp.1, 5, 7, 166; FR_301PRES_260728 p.4; BIS_232_LIST p.1; TR1Q26 p.5 -->
+<p>Four points follow from the table:</p>
+<ol>
+<li><strong>India's rate is back to where management can sell.</strong> The MD called the Aug-2025 rate of <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 11 · Himanshu Baid, MD">50%</span> "completely untenable" and said customers were waiting; by Aug-2026 he said "the duty is only <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span>" and that the US pathway was still open. <!-- TR2Q26 p.11; TR1Q27S p.12 --></li>
+<li><strong>India now pays less than China on the products that matter.</strong> On syringes and needles China carries the <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> Section 301 duty; on all medical instruments the forced-labour action charges China <span class="n" title="Source: Presidential Memorandum of 23-Jul-2026 - Actions in Section 301 investigations of 60 economies (forced labour) (2026-07-28), slide/page 4">12.5%</span> against India's <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span>. The forced-labour action came only in Jul-2026, so we infer that it was the Section 301 duty on Chinese syringes and needles from Sep-2024, with the FDA's stance on Chinese syringes, that opened the US syringe market to Indian suppliers in 2025 (Section B5). <!-- FR_301MOD_240918 p.9; FR_301PRES_260728 p.4; FR_301ACT_260728 p.7 --></li>
+<li><strong>Section 232 is the next risk for everyone.</strong> The Commerce Department opened a national-security investigation into imports of PPE, medical consumables and medical equipment on 2-Sep-2025. The statute gave Commerce <span class="n" title="Source: Section 232 Investigations - list page (2026-09-24)">270 days</span> from initiation to report to the President, a period that ended in late May-2026, and a finding could add tariffs on top of country rates whatever the origin. BD and ICU Medical both flag it as a risk; we found no published report or action as of 24-Sep-2026. <!-- FR_232PPE_250926 p.1; BIS_232_LIST p.1; BD_10K25 p.1; ICUI_10K25 p.1 --></li>
+<li><strong>India is also a target.</strong> A Section 301 investigation opened in Mar-2026 into excess capacity lists health among India's surplus sectors and cites a bilateral goods surplus of <span class="n" title="Source: USTR Initiation of Section 301 investigations - structural excess capacity in manufacturing (2026-03-17), slide/page 5">$42bn</span> in 2025; no action has followed yet. In the Feb-2026 joint statement India agreed to "address long-standing barriers to the trade in U.S. medical devices". <!-- FR_301INIT_260317b p.5; WH_USIND_JS_2602 p.1 --></li>
+</ol>
+<p>For Polymed the direct exposure is small: management expects US exports of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> in FY27. The indirect effects are larger. US tariffs on China push Chinese product into Polymed's other markets (Section B2), and US tariffs on EU-made goods also apply to the European subsidiaries' US sales; B. Braun reported a <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 41">15%</span> US tariff on EU-made medical technology in 2025, before the IEEPA duties were struck down. <!-- TR1Q27S p.12; BBRAUN_AR25 p.41 --></p>
+<h3 id="other-markets-registration-rules-tenders-and-war-risk-freigh">Other markets: registration rules, tenders and war-risk freight</h3>
+<figure class="exh" id="exh-b4_other"><figcaption><span class="exn">Exhibit 115:</span> Other export markets: registration rules decide who can sell; West Asia's war has raised freight and insurance costs</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Market</th>
+<th>Regime</th>
+<th>What it means for Polymed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>West Asia</td>
+<td>War since late Feb-2026: strikes on Iran and the Strait of Hormuz declared closed; war-risk surcharges of <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">$1,500 per TEU</span>; insurance on Gulf-routed cargo from India up <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">40-50%</span>. Saudi Arabia requires a marketing authorization through a licensed local representative</td>
+<td>Management puts West Asia at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">6-8%</span> of revenue; sales fell <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">32%</span> in 1QFY27 with orders stuck at port. Indian device exports to West Asia and North Africa grew <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 3">13.1%</span> in Apr-Feb FY26, almost all of it before the war</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>ANVISA RDC 751/2022, in force 1-Mar-2023: higher-risk devices need a registration, valid <span class="n" title="Source: ANVISA Resolução RDC nº 751, de 15 de setembro de 2022 (Diário Oficial da União) (2022-09-21)">10 years</span>, held by a Brazilian legal entity</td>
+<td>Polymed bought Medyneo, a registration-holding company, to sell direct; Brazil is the second-largest buyer of India's cannula and catheter exports</td>
+</tr>
+<tr>
+<td>China</td>
+<td>National and provincial volume-based procurement: the first national stent round cut prices by <span class="n" title="Source: China's centralized purchasing leads to 90 percent drop in price of coronary stents (2020-11-06)">93%</span>, and later rounds extended it to other implants and to consumables</td>
+<td>Polymed's China sales are small; VBP matters as the force pushing Chinese makers to export (Section B2)</td>
+</tr>
+<tr>
+<td>Southeast Asia</td>
+<td>Growing demand, "enormous pricing pressure" and Chinese share gains, per B. Braun; ASEAN free-trade access to India</td>
+<td>A competitive market for Polymed, and the route for duty-free Chinese dialysers into India (Section B3)</td>
+</tr>
+<tr>
+<td>Latin America</td>
+<td>Growing, but with tighter localization rules in Brazil and more competition, per B. Braun</td>
+<td>Distributor-led; Citieffe lost a won tender when it was cancelled</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Strait of Hormuz report (26 March 2026); MDS-REQ 1 Requirements for Medical Devices Marketing Authorization v6.0; 4QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); Medical devices trade analysis April-February 2025-26 (DGCIS); ANVISA Resolução RDC nº 751, de 15 de setembro de 2022 (Diário Oficial da União); UN Comtrade - India exports HS 901839, 2025, by partner; China's centralized purchasing leads to 90 percent drop in price of coronary stents; 2025 outlook for medtech in China; B. Braun SE – Annual Report 2025; Avendus Spark Research</p></figure>
+<!-- HOWDEN_HORMUZ_2603 pp.3, 11; SFDA_REQ1 pp.4-5; TR4Q26 p.5; TR1Q27S pp.3, 6; EPCMD_EXIM_11MFY26 p.3; ANVISA_RDC751 p.1; TR4Q26 p.8; F_CT_IND_X_901839_2025 p.1; NHC_VBP_2011 p.1; SK_CHINAMEDTECH_2025 p.1; BBRAUN_AR25 pp.42, 44; TR4Q26 pp.16-17 -->
+<p><strong>Freight.</strong> The Drewry World Container Index roughly doubled between April and September 2026, and the Shanghai-Rotterdam lane rose by about two-fifths. In September Drewry linked the latest rise to Transpacific demand ahead of China's Golden Week and carrier capacity management, and noted a gradual return of Suez services but renewed risk in the Red Sea; war-risk surcharges and insurance add to the cost of Gulf cargo. Polymed sells ex-factory in many markets, so customers bear much of the freight, but management says logistics costs have risen <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 8 · Himanshu Baid, MD">2-3</span> times in six months and that longer delivery times have slowed collections. <!-- DREWRY_WCI_260402 p.1; DREWRY_WCI_2609 p.1; HOWDEN_HORMUZ_2603 p.11; TR3Q24b p.15; TR1Q27S pp.8, 14 --></p>
+<figure class="exh" id="exh-b4_freight"><figcaption><span class="exn">Exhibit 116:</span> Container freight spot rates roughly doubled between April and September 2026; the Shanghai-Rotterdam lane rose by about two-fifths</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>World Container Index (composite)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Shanghai to Rotterdam</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">1,000</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">2,000</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">3,000</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">4,000</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">5,000</text><text class="unit" text-anchor="start" x="2" y="13">US$ per 40ft container</text><text class="tick" text-anchor="middle" x="163.00" y="284">2-Apr-2026</text><path class="mark" d="M138.00,266.00V158.39Q138.00,154.39 142.00,154.39H158.00Q162.00,154.39 162.00,158.39V266.00Z" data-tip="2-Apr-2026 · World Container Index (composite): $2,287 per 40ft" fill="var(--s1)"><title>2-Apr-2026 · World Container Index (composite): $2,287 per 40ft</title></path><path class="mark" d="M164.00,266.00V145.90Q164.00,141.90 168.00,141.90H184.00Q188.00,141.90 188.00,145.90V266.00Z" data-tip="2-Apr-2026 · Shanghai to Rotterdam: $2,543 per 40ft" fill="var(--s2)"><title>2-Apr-2026 · Shanghai to Rotterdam: $2,543 per 40ft</title></path><text class="tick" text-anchor="middle" x="397.00" y="284">23-Apr-2026</text><path class="mark" d="M372.00,266.00V161.08Q372.00,157.08 376.00,157.08H392.00Q396.00,157.08 396.00,161.08V266.00Z" data-tip="23-Apr-2026 · World Container Index (composite): $2,232 per 40ft" fill="var(--s1)"><title>23-Apr-2026 · World Container Index (composite): $2,232 per 40ft</title></path><text class="tick" text-anchor="middle" x="631.00" y="284">17-Sep-2026</text><path class="mark" d="M606.00,266.00V50.40Q606.00,46.40 610.00,46.40H626.00Q630.00,46.40 630.00,50.40V266.00Z" data-tip="17-Sep-2026 · World Container Index (composite): $4,500 per 40ft" fill="var(--s1)"><title>17-Sep-2026 · World Container Index (composite): $4,500 per 40ft</title></path><text class="val" text-anchor="middle" x="618.00" y="40.40">4,500</text><path class="mark" d="M632.00,266.00V93.05Q632.00,89.05 636.00,89.05H652.00Q656.00,89.05 656.00,93.05V266.00Z" data-tip="17-Sep-2026 · Shanghai to Rotterdam: $3,626 per 40ft" fill="var(--s2)"><title>17-Sep-2026 · Shanghai to Rotterdam: $3,626 per 40ft</title></path><text class="val" text-anchor="middle" x="644.00" y="83.05">3,626</text></svg></div><p class="note">Drewry World Container Index, spot rates. The 23-Apr reading is from a press reprint. A war-risk surcharge of <span class="n" title="Source: Strait of Hormuz report (26 March 2026) (2026-03-26), slide/page 11">$1,500 per TEU</span> applied on Gulf cargo from Mar-2026.</p><p class="src">Source: Drewry World Container Index - 02 Apr 2026 (reprint); Drewry: World Container Index down 1% (23 Apr 2026 assessment, reprint); Drewry World Container Index - 17 Sep 2026; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">2-Apr-2026</th><th>23-Apr-2026</th><th class="num">17-Sep-2026</th></tr></thead><tbody><tr><th scope="row">World Container Index (composite)</th><td class="num"><span class="n" title="Source: Drewry World Container Index - 02 Apr 2026 (reprint) (2026-04-07)">$2,287 per 40ft</span></td><td class="num"><span class="n" title="Source: Drewry: World Container Index down 1% (23 Apr 2026 assessment, reprint) (2026-04-25)">$2,232 per 40ft</span></td><td class="num"><span class="n" title="Source: Drewry World Container Index - 17 Sep 2026 (2026-09-17)">$4,500 per 40ft</span></td></tr><tr><th scope="row">Shanghai to Rotterdam</th><td class="num"><span class="n" title="Source: Drewry World Container Index - 02 Apr 2026 (reprint) (2026-04-07)">$2,543 per 40ft</span></td><td>–</td><td class="num"><span class="n" title="Source: Drewry World Container Index - 17 Sep 2026 (2026-09-17)">$3,626 per 40ft</span></td></tr></tbody></table></div></details></figure>
+<p><strong>Where India's cannula and catheter exports go.</strong> The trade data show why these regimes matter to Polymed. India's exports under HS 901839, the customs code for needles, catheters and cannulas, were <span class="n" title="Our calculation: F-0134/1000000; inputs: $525.9mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$525.9mn</span> in 2025 (our calculation from UN Comtrade). The largest buyers were the US, Brazil and the UAE, followed by Türkiye, Russia, Germany and France.</p>
+<figure class="exh" id="exh-b4_dest"><figcaption><span class="exn">Exhibit 117:</span> The US and Brazil are the largest buyers of India's cannula and catheter exports, well ahead of the UAE, Türkiye, Russia and European markets</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 290"><line class="base" x1="190.00" x2="190.00" y1="24" y2="264"></line><text class="tick" text-anchor="middle" x="190.00" y="280">0</text><line class="grid" x1="361.33" x2="361.33" y1="24" y2="264"></line><text class="tick" text-anchor="middle" x="361.33" y="280">20</text><line class="grid" x1="532.67" x2="532.67" y1="24" y2="264"></line><text class="tick" text-anchor="middle" x="532.67" y="280">40</text><line class="grid" x1="704.00" x2="704.00" y1="24" y2="264"></line><text class="tick" text-anchor="middle" x="704.00" y="280">60</text><text class="unit" text-anchor="end" x="704" y="16">CY2025, US$ mn</text><text class="cat" text-anchor="end" x="182" y="43.00">US</text><path class="mark" d="M190.00,30.00H655.45Q659.45,30.00 659.45,34.00V44.00Q659.45,48.00 655.45,48.00H190.00Z" data-tip="US · India's exports, HS 901839: $54.8mn" fill="var(--s1)"><title>US · India's exports, HS 901839: $54.8mn</title></path><text class="val" text-anchor="start" x="664.45" y="43.00">54.8</text><text class="cat" text-anchor="end" x="182" y="73.00">Brazil</text><path class="mark" d="M190.00,60.00H586.06Q590.06,60.00 590.06,64.00V74.00Q590.06,78.00 586.06,78.00H190.00Z" data-tip="Brazil · India's exports, HS 901839: $46.7mn" fill="var(--s1)"><title>Brazil · India's exports, HS 901839: $46.7mn</title></path><text class="val" text-anchor="start" x="595.06" y="73.00">46.7</text><text class="cat" text-anchor="end" x="182" y="103.00">UAE</text><path class="mark" d="M190.00,90.00H388.17Q392.17,90.00 392.17,94.00V104.00Q392.17,108.00 388.17,108.00H190.00Z" data-tip="UAE · India's exports, HS 901839: $23.6mn" fill="var(--s1)"><title>UAE · India's exports, HS 901839: $23.6mn</title></path><text class="val" text-anchor="start" x="397.17" y="103.00">23.6</text><text class="cat" text-anchor="end" x="182" y="133.00">Türkiye</text><path class="mark" d="M190.00,120.00H359.90Q363.90,120.00 363.90,124.00V134.00Q363.90,138.00 359.90,138.00H190.00Z" data-tip="Türkiye · India's exports, HS 901839: $20.3mn" fill="var(--s1)"><title>Türkiye · India's exports, HS 901839: $20.3mn</title></path><text class="val" text-anchor="start" x="368.90" y="133.00">20.3</text><text class="cat" text-anchor="end" x="182" y="163.00">Russia</text><path class="mark" d="M190.00,150.00H356.48Q360.48,150.00 360.48,154.00V164.00Q360.48,168.00 356.48,168.00H190.00Z" data-tip="Russia · India's exports, HS 901839: $19.9mn" fill="var(--s1)"><title>Russia · India's exports, HS 901839: $19.9mn</title></path><text class="val" text-anchor="start" x="365.48" y="163.00">19.9</text><text class="cat" text-anchor="end" x="182" y="193.00">Germany</text><path class="mark" d="M190.00,180.00H355.62Q359.62,180.00 359.62,184.00V194.00Q359.62,198.00 355.62,198.00H190.00Z" data-tip="Germany · India's exports, HS 901839: $19.8mn" fill="var(--s1)"><title>Germany · India's exports, HS 901839: $19.8mn</title></path><text class="val" text-anchor="start" x="364.62" y="193.00">19.8</text><text class="cat" text-anchor="end" x="182" y="223.00">France</text><path class="mark" d="M190.00,210.00H347.91Q351.91,210.00 351.91,214.00V224.00Q351.91,228.00 347.91,228.00H190.00Z" data-tip="France · India's exports, HS 901839: $18.9mn" fill="var(--s1)"><title>France · India's exports, HS 901839: $18.9mn</title></path><text class="val" text-anchor="start" x="356.91" y="223.00">18.9</text><text class="cat" text-anchor="end" x="182" y="253.00">Saudi Arabia</text><path class="mark" d="M190.00,240.00H258.82Q262.82,240.00 262.82,244.00V254.00Q262.82,258.00 258.82,258.00H190.00Z" data-tip="Saudi Arabia · India's exports, HS 901839: $8.5mn" fill="var(--s1)"><title>Saudi Arabia · India's exports, HS 901839: $8.5mn</title></path><text class="val" text-anchor="start" x="267.82" y="253.00">8.5</text></svg></div><p class="note">UN Comtrade, India as reporter, calendar 2025; US dollar values converted to US$ mn (our calculation). All Indian makers, not only Polymed; Polymed's own country split is not disclosed beyond the US.</p><p class="src">Source: UN Comtrade - India exports HS 901839, 2025, by partner; our calculation; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">US</th><th class="num">Brazil</th><th class="num">UAE</th><th class="num">Türkiye</th><th class="num">Russia</th><th class="num">Germany</th><th class="num">France</th><th class="num">Saudi Arabia</th></tr></thead><tbody><tr><th scope="row">India's exports, HS 901839</th><td class="num"><span class="n" title="Our calculation: F-0137/1000000; inputs: $54.8mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$54.8mn</span></td><td class="num"><span class="n" title="Our calculation: F-0138/1000000; inputs: $46.7mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$46.7mn</span></td><td class="num"><span class="n" title="Our calculation: F-0139/1000000; inputs: $23.6mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$23.6mn</span></td><td class="num"><span class="n" title="Our calculation: F-0140/1000000; inputs: $20.3mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$20.3mn</span></td><td class="num"><span class="n" title="Our calculation: F-0141/1000000; inputs: $19.9mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$19.9mn</span></td><td class="num"><span class="n" title="Our calculation: F-0142/1000000; inputs: $19.8mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$19.8mn</span></td><td class="num"><span class="n" title="Our calculation: F-0143/1000000; inputs: $18.9mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$18.9mn</span></td><td class="num"><span class="n" title="Our calculation: F-0144/1000000; inputs: $8.50mn (UN Comtrade - India exports HS 901839, 2025, by partner, p.1)">$8.5mn</span></td></tr></tbody></table></div></details></figure>
+<!-- F_CT_IND_X_901839_2025 p.1 -->
+<p>We draw two conclusions for Polymed. First, in the regimes that matter most Polymed has already paid the entry cost where it sells today: it holds MDR certificates for its range in Europe and US clearances for its safety catheters and IV sets, which makes these regimes barriers to others more than to Polymed in those products. Second, the risks are now mostly in trade policy and logistics rather than regulation: Section 232 in the US, the West Asia war, and whether the EU's shield against Chinese bidders holds.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="b3.html"><span>Previous</span>B3 India medtech: market, policy and demand</a><a class="next" href="b5.html"><span>Next</span>B5 Structural trends</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

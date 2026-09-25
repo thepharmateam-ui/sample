@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Question bank: Industry, regulation and policy · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l3"><a href="c3-strategy-and-vision-2030.html">Strategy and Vision 2030</a></li><li class="l3"><a href="c3-the-fy26-reset-and-the-recovery.html">The FY26 reset and the recovery</a></li><li class="l3"><a href="c3-infusion-therapy.html">Infusion therapy</a></li><li class="l3"><a href="c3-vascular-access-and-oncology.html">Vascular access and oncology</a></li><li class="l3"><a href="c3-renal-care.html">Renal care</a></li><li class="l3"><a href="c3-blood-management-and-diagnostics.html">Blood management and diagnostics</a></li><li class="l3"><a href="c3-anaesthesia-critical-care-urology-and-surgery.html">Anaesthesia, critical care, urology and surgery</a></li><li class="l3"><a href="c3-cardiology.html">Cardiology</a></li><li class="l3"><a href="c3-orthopaedics.html">Orthopaedics</a></li><li class="l3"><a href="c3-customers-and-channel.html">Customers and channel</a></li><li class="l3"><a href="c3-competition.html">Competition</a></li><li class="l3"><a href="c3-industry-regulation-and-policy.html" class="active">Industry, regulation and policy</a></li><li class="l3"><a href="c3-manufacturing-capacity-and-automation.html">Manufacturing, capacity and automation</a></li><li class="l3"><a href="c3-quality-and-sterilization.html">Quality and sterilization</a></li><li class="l3"><a href="c3-margins-and-costs.html">Margins and costs</a></li><li class="l3"><a href="c3-capital-allocation-and-governance.html">Capital allocation and governance</a></li><li class="l3"><a href="c3-people-and-organization.html">People and organization</a></li><li class="l3"><a href="c3-floor-walk-observation-checklist.html">Floor-walk observation checklist</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="c3-competition.html"><span>Previous</span>Question bank: Competition</a><a class="next" href="c3-manufacturing-capacity-and-automation.html"><span>Next</span>Question bank: Manufacturing, capacity and automation</a></nav>
+<h3 id="industry-regulation-and-policy">Industry, regulation and policy</h3>
+<div class="qblock must" id="q-Q90"><p class="qh"><span class="qid">Q90</span><span class="tag must">Must-ask</span><span class="tag">Regulation and policy</span></p><p class="q">What share of domestic revenue is sold through the trade channel at MRP, what trade margin do your products typically carry today, and how would a cap on trade margins change your realizations?</p><dl class="qd"><dt>Why it matters</dt><dd>India is weighing a cap on trade margins for medical devices; the exposure depends on the channel mix and MRP headroom (Section B3).</dd><dt>Our context</dt><dd>A press report of a Maharashtra FDA survey named a Polymed IV set bought at <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 10.5</span> against an MRP of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">Rs. 187</span>, a mark-up of <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,681%</span>. The Parliamentary Standing Committee on Health recommended capping the gap between landing price and MRP at <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span> in Aug-2026, and the Health Minister ordered a review. Domestic revenue was <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 5.8bn</span> in FY26. <!-- FPJ_MAHFDA_2609 p.1; PIB_PSC176_2608 p.1; AR26 p.47 --></dd><dt>Listen for</dt><dd>Reassuring: modest trade margins and hospital-led pricing. Concerning: MRPs set well above realized prices.</dd><dt>Follow-up</dt><dd>What share of domestic revenue is billed to patients at MRP, as against package rates, chain contracts or tenders – and would you reset MRPs ahead of a cap?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock must" id="q-Q91"><p class="qh"><span class="qid">Q91</span><span class="tag must">Must-ask</span><span class="tag">Regulation and policy</span></p><p class="q">With the US tariff on Indian devices at <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span> and higher US duties on Chinese syringes and needles, which of your products become competitive in the US, and what is your exposure to the Section 232 investigation?</p><dl class="qd"><dt>Why it matters</dt><dd>US trade policy is the largest external swing factor for the export thesis (Section B4).</dd><dt>Our context</dt><dd>The duty on Indian HS 9018 goods rose to <span class="n" title="Source: Executive Order 14326 - Further Modifying the Reciprocal Tariff Rates (Annex I country rates) (2025-08-06), slide/page 5">25%</span> plus a further <span class="n" title="Source: Executive Order 14329 - Addressing Threats to the US by the Government of the Russian Federation (India +25%) (2025-08-11)">25%</span> in Aug-2025, fell to nil after the Supreme Court's IEEPA ruling of 20-Feb-2026, and is now a <span class="n" title="Source: USTR Notice of Actions in forced-labour Section 301 investigations (with Annexes I-II) (2026-07-28), slide/page 7">10%</span> Section 301 duty from 24-Jul-2026. Chinese syringes and needles pay <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> under Section 301. US syringe imports from India (all makers) rose from <span class="n" title="Source: UN Comtrade - USA imports HS 901831, 2024, by partner (2026-09-24)">$930k</span> in 2024 to <span class="n" title="Source: UN Comtrade - USA imports HS 901831, 2025, by partner (2026-09-24)">$14.8mn</span> in 2025, while imports from China fell. <!-- FR_EO14326_250806 p.5; FR_EO14329_250811 p.1; SCOTUS_IEEPA_260220 p.2; FR_301ACT_260728 p.7; FR_301MOD_240918 p.9; F_CT_USA_M_901831_2025 p.1 --></dd><dt>Listen for</dt><dd>Reassuring: product-by-product US plans. Concerning: US ambitions contingent on tariff outcomes.</dd><dt>Follow-up</dt><dd>Commerce had <span class="n" title="Source: Section 232 Investigations - list page (2026-09-24)">270 days</span> to report on Section 232. Are you considering US-side packaging, assembly or sourcing to qualify for any exemption?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q92"><p class="qh"><span class="qid">Q92</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">How does the DPCO cap on annual price increases interact with your pass-through of raw-material costs in India?</p><dl class="qd"><dt>Why it matters</dt><dd>Limits domestic pricing flexibility in inflationary periods.</dd><dt>Our context</dt><dd>The cap is <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 41">10%</span> in any 12-month period for non-scheduled devices. <!-- PD24 p.41 --></dd><dt>Listen for</dt><dd>Reassuring: annual price increases taken routinely. Concerning: price increases delayed or foregone.</dd><dt>Follow-up</dt><dd>Which products are closest to their price ceilings?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q93"><p class="qh"><span class="qid">Q93</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Which notified bodies certify your products under EU MDR, and how many certificates expire before the 2027-28 transition deadlines?</p><dl class="qd"><dt>Why it matters</dt><dd>Certificate continuity is a gate for European revenue.</dd><dt>Our context</dt><dd>Legacy certificates under the old directives are valid to <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2027</span> for higher-risk classes and <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2028</span> for others, under Regulation (EU) 2023/607. <!-- EU_REG2023_607 p.4 --></dd><dt>Listen for</dt><dd>Reassuring: all legacy certificates covered by applications. Concerning: products at risk of lapse.</dd><dt>Follow-up</dt><dd>Do you use more than one notified body?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q94"><p class="qh"><span class="qid">Q94</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Since the FDA's Quality Management System Regulation took effect in Feb-2026, have your plants been inspected, and which plants are FDA-registered?</p><dl class="qd"><dt>Why it matters</dt><dd>FDA readiness is a precondition for US growth.</dd><dt>Our context</dt><dd>Faridabad Unit II has been inspected by the US FDA. <!-- AR16 p.48; CRR2606 p.1; FR_QMSR_240202 --></dd><dt>Listen for</dt><dd>Reassuring: recent clean inspections. Concerning: no inspection history at the plants that would supply the US.</dd><dt>Follow-up</dt><dd>Have any customer audits led to corrective actions in the last two years?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q95"><p class="qh"><span class="qid">Q95</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">What does the draft 2026 Drugs, Medical Devices and Cosmetics Bill change for Polymed?</p><dl class="qd"><dt>Why it matters</dt><dd>Separate device regulation could alter licensing, pricing and quality obligations (Section B3).</dd><dt>Our context</dt><dd>Section B3 summarizes the draft bill's provisions. <!-- F_digest --></dd><dt>Listen for</dt><dd>Reassuring: a considered view and industry-association engagement. Concerning: no view.</dd><dt>Follow-up</dt><dd>Which provision would you change?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q96"><p class="qh"><span class="qid">Q96</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">How much of your government business depends on public-procurement preferences for local manufacturing?</p><dl class="qd"><dt>Why it matters</dt><dd>Procurement rules support domestic makers in tenders; changes would move share.</dd><dt>Our context</dt><dd>Government business fell <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 4 · Himanshu Baid, MD">10%</span> in 1QFY26. <!-- TR1Q26 p.5 --></dd><dt>Listen for</dt><dd>Reassuring: government business that is competitive without preference. Concerning: reliance on preference.</dd><dt>Follow-up</dt><dd>How long do government customers take to pay?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q97"><p class="qh"><span class="qid">Q97</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Which clearances make up the <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">15</span> US approvals cited in the 1QFY27 presentation, when the FDA database lists <span class="n" title="Our calculation: D-0876+D-0877+D-0878+D-0879; inputs: 6 (FDA 510(k) clearances – Poly Medicure, p.1); 11 (FDA 510(k) clearances – Citieffe, p.1); 4 (FDA 510(k) clearances – PendraCare, p.1); 1 (FDA 510(k) clearances – Plan 1 Health, p.1)">22</span> 510(k) records for the four group applicants?</p><dl class="qd"><dt>Why it matters</dt><dd>A precise count by product is the basis for the US opportunity (Appendix).</dd><dt>Our context</dt><dd>The FDA database covers Poly Medicure, Citieffe, PendraCare and Plan1Health (our count). Management says <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11">11-13</span> more approvals are in process. <!-- DK1Q27 p.11; FDA510K_POLY --></dd><dt>Listen for</dt><dd>Reassuring: a list by K-number with launch status. Concerning: counts that mix families and submissions.</dd><dt>Follow-up</dt><dd>Which approvals in the pipeline matter most for revenue?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q98"><p class="qh"><span class="qid">Q98</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">How many 510(k) filings had to be redone after the FDA stopped accepting data from Indian laboratories, what did US retesting cost, and when do you expect the pending clearances?</p><dl class="qd"><dt>Why it matters</dt><dd>US revenue depends on cleared devices; management said past work was "negated".</dd><dt>Our context</dt><dd>The MD described the retesting on the 2QFY26 call. <!-- TR2Q26 p.11 --></dd><dt>Listen for</dt><dd>Reassuring: filing dates and expected clearances by product. Concerning: open-ended delays.</dd><dt>Follow-up</dt><dd>Which US laboratory do you now use?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q99"><p class="qh"><span class="qid">Q99</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Why do the European product counts move between documents, and which products were dropped in the move from the directives to MDR?</p><dl class="qd"><dt>Why it matters</dt><dd>Dropped products may explain part of the FY26 European slowdown.</dd><dt>Our context</dt><dd>The counts include <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">89</span> MDR-certified products (FY25) and about <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · Himanshu Baid, MD">75 products</span> with CE certification (Nov-2025). <!-- DKAGM30 p.3; TR2Q26 p.10 --></dd><dt>Listen for</dt><dd>Reassuring: a reconciliation by product family. Concerning: revenue lost on dropped products.</dd><dt>Follow-up</dt><dd>Which dropped products will you re-file?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q100"><p class="qh"><span class="qid">Q100</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Has the EU's exclusion of Chinese bidders from large public device tenders brought wins for your distributors or for Plan1Health?</p><dl class="qd"><dt>Why it matters</dt><dd>A regulatory tailwind in Polymed's largest export region (Section B4).</dd><dt>Our context</dt><dd>Since Jun-2025 Chinese bidders are excluded from EU device tenders of <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 12">€5mn</span> or more, which covered about <span class="n" title="Source: Commission Implementing Regulation (EU) 2025/1197 - IPI measure on medical devices (PRC) (2025-06-19), slide/page 5">59%</span> of EU public device procurement in 2017-2022. <!-- EU_IPI2025_1197 p.5, p.12 --></dd><dt>Listen for</dt><dd>Reassuring: named tender wins. Concerning: no effect.</dd><dt>Follow-up</dt><dd>Do Chinese makers now bid through non-Chinese distributors?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q101"><p class="qh"><span class="qid">Q101</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">How many ANVISA registrations does Medyneo hold, and how many Polymed, PendraCare and Citieffe products will you register through it in FY27-FY28?</p><dl class="qd"><dt>Why it matters</dt><dd>Brazilian registrations must be held by a local legal entity; Medyneo was bought for its licences.</dd><dt>Our context</dt><dd>Polymed paid <span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 3.4mn</span> for Medyneo; management says it saves <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">18-24</span> months in registrations. <!-- RS1Q27 p.5; TR4Q26 p.8 --></dd><dt>Listen for</dt><dd>Reassuring: a registration schedule and first direct sales. Concerning: registrations still to be filed.</dd><dt>Follow-up</dt><dd>What revenue does the new Brazil CEO target?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q102"><p class="qh"><span class="qid">Q102</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">When do you expect Indian import registrations for PendraCare and Citieffe products, and which come first?</p><dl class="qd"><dt>Why it matters</dt><dd>Cross-selling acquired products in India is part of the acquisition case.</dd><dt>Our context</dt><dd>Management said import registrations take <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">6-9</span> months. <!-- TR4Q26 p.3 --></dd><dt>Listen for</dt><dd>Reassuring: filing dates and a product list. Concerning: no filings yet.</dd><dt>Follow-up</dt><dd>Will you manufacture any of these products in India instead of importing them?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q103"><p class="qh"><span class="qid">Q103</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">What happens to the Laiyang plant in China when its business licence expires in May-2027, and what does it sell under its Korean and European approvals?</p><dl class="qd"><dt>Why it matters</dt><dd>The plant is shrinking, and management has said it might curtail or shut it (Section A5).</dd><dt>Our context</dt><dd>Laiyang's sales were <span class="n" title="Source: Poly Medicure (Laiyang) China FY26 accounts (2026-08-19), slide/page 8">RMB 8.82mn</span> in FY26; management raised the option of closure in Jul-2024. <!-- SUB26CN p.8, p.38; TR1Q25 p.6 --></dd><dt>Listen for</dt><dd>Reassuring: a decision with transfer of approvals to India. Concerning: open-ended losses.</dd><dt>Follow-up</dt><dd>Would closure trigger any write-off?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q104"><p class="qh"><span class="qid">Q104</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">Which plants hold MDSAP certificates today, and in which countries have you used them to register products?</p><dl class="qd"><dt>Why it matters</dt><dd>MDSAP audits can speed registrations in the US, Brazil, Canada, Australia and Japan.</dd><dt>Our context</dt><dd>Plant certificates by site are listed in the appendix. <!-- Appendix --></dd><dt>Listen for</dt><dd>Reassuring: all export plants covered. Concerning: gaps at new plants.</dd><dt>Follow-up</dt><dd>Will the new plants apply for MDSAP?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q105"><p class="qh"><span class="qid">Q105</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">If NPPA caps trade margins on IV sets, syringes and catheters, would you cut MRPs, change distributor terms or accept lower ex-factory prices – and what have you told the Department of Pharmaceuticals in the consultations?</p><dl class="qd"><dt>Why it matters</dt><dd>Who absorbs a cap – the channel or the manufacturer – decides the impact on Polymed (Section B3).</dd><dt>Our context</dt><dd>The Health Minister directed a review of trade margins in Sep-2026; the Parliamentary committee proposed limiting the landing-price-to-MRP gap to <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span>. <!-- PIB_PSC176_2608 p.1 --></dd><dt>Listen for</dt><dd>Reassuring: modest ex-factory impact because distributors carry most of the margin. Concerning: a plan to protect distributor margins at the company's expense.</dd><dt>Follow-up</dt><dd>Does your industry association support caps based on ex-factory or landed prices?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q106"><p class="qh"><span class="qid">Q106</span><span class="tag">If time permits</span><span class="tag">Regulation and policy</span></p><p class="q">What is the government share of domestic revenue today, what are receivable days on state contracts, and does the move away from government business extend to lines reserved for local suppliers?</p><dl class="qd"><dt>Why it matters</dt><dd>Government tenders are won on price and paid slowly (Section B1).</dd><dt>Our context</dt><dd>Management targets a domestic mix of <span class="n nl" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 4 · management guidance; Himanshu Baid, MD">private 92% to 93%, government 6% to 7%</span>. <!-- TR3Q26 p.4 --></dd><dt>Listen for</dt><dd>Reassuring: selective participation with prompt payers. Concerning: exit from lines where Polymed has a reserved advantage.</dd><dt>Follow-up</dt><dd>Do PMNDP dialysis operators count as government customers?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+<div class="qblock" id="q-Q107"><p class="qh"><span class="qid">Q107</span><span class="tag">If time permits</span><span class="tag">Customers and channel</span></p><p class="q">What share of domestic revenue now comes from corporate hospital chains and organized dialysis chains, and what is your share of their spend on your categories?</p><dl class="qd"><dt>Why it matters</dt><dd>Chains are the fastest-growing and most price-transparent part of the Indian channel (Section B1).</dd><dt>Our context</dt><dd>Management put chain revenue at <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 9 · Himanshu Baid, MD">Rs. 0.8-1.0bn</span> in FY23 and its share of wallet at <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 13 · Himanshu Baid, MD">5-7%</span> in Nov-2025. <!-- TR4Q23 p.9; TR2Q26 p.13 --></dd><dt>Listen for</dt><dd>Reassuring: wallet share rising with new categories. Concerning: chains consolidating purchases on price.</dd><dt>Follow-up</dt><dd>Which chain is your largest customer?</dd></dl><div aria-hidden="true" class="qnotes"></div></div>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="c3-competition.html"><span>Previous</span>Question bank: Competition</a><a class="next" href="c3-manufacturing-capacity-and-automation.html"><span>Next</span>Question bank: Manufacturing, capacity and automation</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

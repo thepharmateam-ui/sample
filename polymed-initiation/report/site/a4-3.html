@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.3 Renal care · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html" class="active">A4.3 Renal care</a></li><li class="l3"><a href="#what-it-is-and-how-it-is-used-one-session-one-set-of-consuma">What it is and how it is used: one session, one set of consumables</a></li><li class="l3"><a href="#polymed-s-portfolio-and-position">Polymed&#x27;s portfolio and position</a></li><li class="l3"><a href="#revenue-nineteen-fold-in-eight-years-then-a-stall">Revenue: nineteen-fold in eight years, then a stall</a></li><li class="l3"><a href="#machines-and-the-installed-base-razor-and-blades-but-not-loc">Machines and the installed base: razor and blades, but not locked in</a></li><li class="l3"><a href="#market-india-s-dialysis-is-growing-fast-but-through-public-p">Market: India&#x27;s dialysis is growing fast, but through public programmes and price-driven chains</a></li><li class="l3"><a href="#competition-mncs-above-chinese-imports-below-and-no-indian-p">Competition: MNCs above, Chinese imports below, and no Indian peer</a></li><li class="l3"><a href="#regulation-and-policy-duty-inversion-a-trade-remedy-case-and">Regulation and policy: duty inversion, a trade-remedy case and a PLI that has not paid</a></li><li class="l3"><a href="#company-specific-growth-drivers-ranked">Company-specific growth drivers, ranked</a></li><li class="l3"><a href="#company-specific-margin-drivers-ranked">Company-specific margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-3">What to watch</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-2.html"><span>Previous</span>A4.2 Vascular access and oncology (Plan1Health)</a><a class="next" href="a4-4.html"><span>Next</span>A4.4 Transfusion and blood management</a></nav>
+<h2 id="a4-3">A4.3 Renal care</h2>
+<p>Renal is Polymed's second line and, until FY26, its fastest-growing one: a full haemodialysis consumables basket plus an Indian-made machine, sold into a market where the only other local dialyser plant is an export unit and where, management says, pricing is set by Chinese imports that enter duty-free through South-East Asia. The line's next leg depends on two things outside Polymed's control, a trade-remedy ruling and public dialysis tenders, and on one inside it, turning a small installed base of machines into consumables pull-through.</p>
+<section class="snapshot"><p class="ct">Renal care at a glance</p><dl><div><dt>Revenue FY26</dt><dd><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.9bn</span> (<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+24.5%</span> yoy), <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">10%</span> of consolidated revenue</dd></div><div><dt>Revenue 1QFY27</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 432mn</span> (<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">-3.8%</span> yoy), <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">8%</span> of consolidated revenue</dd></div><div><dt>Long-run growth</dt><dd>Company FY20-FY26 CAGR <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">39%</span>; FY26 revenue <span class="n" title="Our calculation: CB-0870/D-0621; inputs: Rs. 1.9bn (Investor presentation 4QFY26, p.12); Rs. 99mn (QIP Placement Document Feb 2021, p.130)">19x</span> FY18's (our calculation)</dd></div><div><dt>Machines</dt><dd><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">450 units</span> placed in FY26; installed base ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">1,100 units</span> (Aug-2026)</dd></div><div><dt>Share (management)</dt><dd><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">10%</span> of the Indian market (Feb-2026); target <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">15-17%</span> in two to three years</dd></div><div><dt>Policy</dt><dd>Anti-dumping case on Chinese and Malaysian dialysers opened on Polymed's petition (25 Jun 2026); PLI-approved, no incentive received</dd></div><div><dt>What is disclosed</dt><dd>Annual and quarterly renal revenue, machines placed; no split between dialysers, bloodlines, needles and machines; no segment margin</dd></div></dl></section>
+<h3 id="what-it-is-and-how-it-is-used-one-session-one-set-of-consuma">What it is and how it is used: one session, one set of consumables</h3>
+<p>In haemodialysis the patient's blood is pumped from an arteriovenous fistula in the arm through a dialyser, where toxins and excess water cross a hollow-fibre membrane into dialysate that the machine prepares from purified water and concentrates, and back into the vein. Each session, typically three to four hours, uses: <!-- RHP_NEPHRO p.268, p.334; D_product_glossary A4.3 --></p>
+<ul>
+<li><strong>a pair of AV fistula needles</strong> (arterial and venous), always single use, the cleanest per-session consumable;</li>
+<li><strong>one bloodline set</strong> and usually two transducer protectors;</li>
+<li><strong>one dialyser</strong>, which Indian centres commonly reprocess and reuse for the same patient;</li>
+<li>acid and bicarbonate concentrates, which Polymed's catalogues do not list. <!-- CATDOM25 p.28-29; CATEXP24 p.48-54 --></li>
+</ul>
+<p>Temporary access (acute kidney injury, or while a fistula matures) uses a haemodialysis catheter kit, and acute bedside peritoneal dialysis uses a stiff PD catheter set. A machine is a one-off sale that then runs three to four treatments a day, which is why management describes machines as only ~<span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 9 · Himanshu Baid, MD">10%</span> of renal revenue and consumables as the rest. <!-- TR1Q24 p.9, p.14 --></p>
+<p><strong>The unit of demand is the session.</strong> Frost &amp; Sullivan (Nov-2025, via the NephroPlus prospectus) puts India's in-clinic treatments at <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 285">33.9</span>mn in 2024, rising to <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 285">66.1</span>mn by 2029 (<span class="n" title="Our calculation: ((E-0058/E-0057)**(1/5)-1)*100; inputs: 66.1 million (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.285); 33.9 million (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.285)">14.3%</span> CAGR, our calculation), for <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 272">0.28</span>mn patients. In-clinic haemodialysis is more than <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 286">98%</span> of all dialysis in India, and only <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">50%</span> of patients are dialysed three times a week, the standard requirement. At a single-use pair per session, 2024 treatments imply ~<span class="n" title="Our calculation: E-0057*2; inputs: 33.9 million (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.285)">67.8</span>mn fistula needles a year (our calculation). <!-- RHP_NEPHRO p.268, p.278-279, p.285-286 --></p>
+<p><strong>Dialyser demand is sessions divided by reuse, and reuse is the swing factor.</strong></p>
+<ul>
+<li>The MD described reuse ranging from single use to ten times in Mumbai centres, <span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 14 · Himanshu Baid (MD)">7 to 8</span> on average and a single-use share of only <span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 14 · Himanshu Baid, MD">20-25%</span> (both Aug-2023). The industry benchmark is a Fresenius dialyser reused seven times. <!-- TR3Q23 p.12; TR1Q24 p.14; TR2Q23 p.6 --></li>
+<li>By Oct-2024 he put single use at <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">30-35%</span> of the market (from <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">10%</span> when Polymed entered), heading to <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">50%</span> in two to three years. That would raise dialyser consumption without a single extra session. <!-- TR2Q25 p.4 --></li>
+<li>Against that, the largest chain, NephroPlus, reprocesses dialysers for the same patient with its own patented Renova system, and CDSCO says it has received no complaints about reuse of single-use devices in five years. <!-- RHP_NEPHRO p.333; LSQ_AU1086_260724 p.2 --></li>
+<li>Management sized Indian consumption at <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 12 · Himanshu Baid, MD">8</span>-<span class="n" title="Our calculation: WB-0049/1000000; inputs: 12,000,000 units (3QFY23 earnings call transcript, p.12)">12</span>mn dialysers a year (Feb-2023). <!-- TR3Q23 p.12 --></li>
+</ul>
+<h3 id="polymed-s-portfolio-and-position">Polymed's portfolio and position</h3>
+<p>Polymed makes every item in the session except concentrates, under its own brands: <!-- CATDOM25 p.28-29; CATEXP24 p.48-54; WEB_DIALYSIS p.1; PD24 p.174 --></p>
+<ul>
+<li><strong>Dial-Ezee haemodialysis machine:</strong> touchscreen, bicarbonate dialysis with ultrafiltration and sodium profiling, inbuilt SLED, variable dialysate flow of <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 28">100 to 800</span> ml/min, single or dual blood pump, and an optional Polytox endotoxin filter that fits only Dial-Ezee.</li>
+<li><strong>Haem-O-Flux dialyser:</strong> PES membrane, mid and high flux, three surface-area variants, shelf life <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 28">36 months</span>.</li>
+<li><strong>Haem-O-Line bloodlines</strong> (pre- and post-pump) with a shelf life of <span class="n" title="Source: Thin catalogue domestic Oct 2025 (2025-10-17), slide/page 28">60 months</span>, and transducer protectors.</li>
+<li><strong>AV fistula needles</strong> in 15G, 16G and 17G, plus the Poly Protekt safety fistula needle.</li>
+<li><strong>Haemocent and Haemocent Pro</strong> double- and triple-lumen haemodialysis catheter kits, also sold as components.</li>
+<li><strong>Peritoneal dialysis set</strong> and Y-shaped PD transfusion set, for acute rather than home PD.</li>
+</ul>
+<p><strong>How the line was built.</strong></p>
+<ul>
+<li>Fistula needles, bloodlines, HD catheters and PD sets were already in the FY16 range. The company dates its renal entry to 2018 and launched its dialyser in FY19; it describes itself as the first Indian company to make dialysers indigenously, a claim CRISIL repeats. <!-- AR16 p.6; DK4Q26 p.21; AR19 p.11; AR24 p.71; PD24 p.131 --></li>
+<li>The machine came in two steps. Polymed first resold an imported machine from Jul-2020, and haemodialysis machines appear among traded goods in the placement document; the whole traded line, which also held blood-collection tubes, was only <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 110">Rs. 88mn</span> in FY22. <!-- DKFEB21 p.14; TR4Q22 p.7; PD24 p.110 --></li>
+<li>Its own machine came out of clinical trials with assembly starting in Aug-2022. Local content rose from ~<span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 3 · Himanshu Baid, MD">35%</span> to <span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 3 · Himanshu Baid, MD">50%+</span> by Feb-2024, with circuit boards moved from Taiwanese and Korean suppliers to Bangalore, and the MD says it was the first dialysis machine to receive BIS certification. <!-- TR1Q23 p.6; TR3Q24b p.3; CC digest A4.3; TR4Q24 p.6 --></li>
+<li>In the pipeline: an HDF (haemodiafiltration) machine made in India, targeted for mid-to-end 2026, <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 11 · Himanshu Baid, MD">7-8</span> further renal products, and a pain-reducing needle technology. <!-- TR1Q26 p.11-12; TR4Q25 p.11; TR2Q25 p.4 --></li>
+</ul>
+<p><strong>Capacity and service.</strong></p>
+<ul>
+<li>Management planned in Jul-2021 to raise renal capacity to <span class="n" title="Source: 1QFY22 earnings call transcript (2022-12-01), slide/page 3 · management guidance; Himanshu Baid, MD">three times</span> its Apr-2021 level by Mar-2022; by May-2022 it described dialysis capacity at the IMT Faridabad plant as "almost double". A further "tripling" was planned from FY25, after Polymed said in Oct-2024 that it was "short of products right now". Capacity was to "almost double" again by end-FY26. <!-- TR1Q22 p.3; TR4Q22 p.18; TR4Q24 p.12; TR2Q25 p.6; TR1Q26 p.5 --></li>
+<li>The PLI project at Faridabad is shown as commissioned, with <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 7">Rs. 556mn</span> invested against <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 7">Rs. 720mn</span> committed. A separate government grant of <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 100mn</span> supports a <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 1.0bn</span> project for polymer tubing components, including bloodline and dialysis accessories. <!-- LSQ_AU1001_260724 p.7, p.9 --></li>
+<li>Service is the differentiator management stresses: <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 9 · Himanshu Baid, MD">30+</span> engineers, each able to cover <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 9 · Himanshu Baid, MD">20-30</span> machines, and a three-year warranty followed by service contracts. Management says "we don't have any significant service revenue". <!-- TR4Q25 p.9; TR1Q26 p.18-19 --></li>
+</ul>
+<h3 id="revenue-nineteen-fold-in-eight-years-then-a-stall">Revenue: nineteen-fold in eight years, then a stall</h3>
+<p>Renal revenue rose from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 99mn</span> in FY18 to <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.9bn</span> in FY26, <span class="n" title="Our calculation: CB-0870/D-0621; inputs: Rs. 1.9bn (Investor presentation 4QFY26, p.12); Rs. 99mn (QIP Placement Document Feb 2021, p.130)">19x</span> on our calculation, lifting its share of the product table from <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">1.9%</span> to <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">10%</span> of consolidated revenue. Growth was uneven:</p>
+<ul>
+<li><strong>FY23-FY24:</strong> <span class="n" title="Our calculation: D-0057/D-0059*100-100; inputs: Rs. 758mn (QIP Placement Document Aug 2024, p.173); Rs. 596mn (QIP Placement Document Aug 2024, p.173)">27%</span> and <span class="n" title="Our calculation: D-0055/D-0057*100-100; inputs: Rs. 945mn (QIP Placement Document Aug 2024, p.173); Rs. 758mn (QIP Placement Document Aug 2024, p.173)">25%</span> on the placement-document figures (our calculation), against management's descriptions of <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 3 · Himanshu Baid, MD">around 40%</span> for FY23 and <span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 6 · Himanshu Baid, MD">21-22%</span> for FY24. <!-- TR4Q23 p.3; TR3Q24b p.6 --></li>
+<li><strong>FY25:</strong> <span class="n" title="Our calculation: CB-0871/D-0055*100-100; inputs: Rs. 1.5bn (Investor presentation 4QFY26, p.12); Rs. 945mn (QIP Placement Document Aug 2024, p.173)">60%</span> (our calculation; the company's standalone figure is <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 22">60.1%</span>). Management credited mandatory licensing of devices from Oct-2023, which it said ended unregulated parallel imports, and a rise in dialysis reimbursement <span class="n nl" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · Himanshu Baid, MD">from Rs. 1,200 to Rs. 1,800</span> per session that drew more standalone centres. <!-- TR1Q25 p.2-3, p.10; TR4Q25 p.3-4 --></li>
+<li><strong>FY26:</strong> <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+24.5%</span> as reported, which the MD described on the call as growth of "<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · Himanshu Baid, MD">close to around 20%</span>". Management gave three reasons: <!-- DK4Q26 p.12; TR4Q26 p.13; TR2Q26 p.5; TR3Q26 p.5, p.11 --><ol>
+<li>distributor inventory realignment around the Sep-2025 GST cut (2QFY26);</li>
+<li>pressure from Chinese suppliers (3QFY26);</li>
+<li>government contracts delayed by budgeting.</li>
+</ol>
+</li>
+<li><strong>1QFY27:</strong> revenue fell <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">3.8%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 432mn</span> because Polymed "made a conscious choice to raise prices to push the raw material price increase rather than defend volume at any cost". <!-- TR1Q27S p.3-4 --></li>
+</ul>
+<figure class="exh" id="exh-renal_rev"><figcaption><span class="exn">Exhibit 28:</span> Renal revenue compounded from a small base to FY25, then growth halved in FY26</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">0.5</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">1</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">1.5</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">2</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">2.5</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="85.00" y="284">FY18</text><path class="mark" d="M73.00,266.00V260.35Q73.00,256.35 77.00,256.35H93.00Q97.00,256.35 97.00,260.35V266.00Z" data-tip="FY18 · Renal revenue: Rs. 99mn" fill="var(--s1)"><title>FY18 · Renal revenue: Rs. 99mn</title></path><text class="val" text-anchor="middle" x="85.00" y="250.35">0.10</text><text class="tick" text-anchor="middle" x="163.00" y="284">FY19</text><path class="mark" d="M151.00,266.00V258.05Q151.00,254.05 155.00,254.05H171.00Q175.00,254.05 175.00,258.05V266.00Z" data-tip="FY19 · Renal revenue: Rs. 122mn" fill="var(--s1)"><title>FY19 · Renal revenue: Rs. 122mn</title></path><text class="val" text-anchor="middle" x="163.00" y="248.05">0.12</text><text class="tick" text-anchor="middle" x="241.00" y="284">FY20</text><path class="mark" d="M229.00,266.00V244.90Q229.00,240.90 233.00,240.90H249.00Q253.00,240.90 253.00,244.90V266.00Z" data-tip="FY20 · Renal revenue: Rs. 257mn" fill="var(--s1)"><title>FY20 · Renal revenue: Rs. 257mn</title></path><text class="val" text-anchor="middle" x="241.00" y="234.90">0.26</text><text class="tick" text-anchor="middle" x="319.00" y="284">FY21</text><text class="tick" text-anchor="middle" x="397.00" y="284">FY22</text><path class="mark" d="M385.00,266.00V211.87Q385.00,207.87 389.00,207.87H405.00Q409.00,207.87 409.00,211.87V266.00Z" data-tip="FY22 · Renal revenue: Rs. 596mn" fill="var(--s1)"><title>FY22 · Renal revenue: Rs. 596mn</title></path><text class="val" text-anchor="middle" x="397.00" y="201.87">0.60</text><text class="tick" text-anchor="middle" x="475.00" y="284">FY23</text><path class="mark" d="M463.00,266.00V196.06Q463.00,192.06 467.00,192.06H483.00Q487.00,192.06 487.00,196.06V266.00Z" data-tip="FY23 · Renal revenue: Rs. 758mn" fill="var(--s1)"><title>FY23 · Renal revenue: Rs. 758mn</title></path><text class="val" text-anchor="middle" x="475.00" y="186.06">0.76</text><text class="tick" text-anchor="middle" x="553.00" y="284">FY24</text><path class="mark" d="M541.00,266.00V177.79Q541.00,173.79 545.00,173.79H561.00Q565.00,173.79 565.00,177.79V266.00Z" data-tip="FY24 · Renal revenue: Rs. 945mn" fill="var(--s1)"><title>FY24 · Renal revenue: Rs. 945mn</title></path><text class="val" text-anchor="middle" x="553.00" y="167.79">0.94</text><text class="tick" text-anchor="middle" x="631.00" y="284">FY25</text><path class="mark" d="M619.00,266.00V122.92Q619.00,118.92 623.00,118.92H639.00Q643.00,118.92 643.00,122.92V266.00Z" data-tip="FY25 · Renal revenue: Rs. 1.5bn" fill="var(--s1)"><title>FY25 · Renal revenue: Rs. 1.5bn</title></path><text class="val" text-anchor="middle" x="631.00" y="112.92">1.51</text><text class="tick" text-anchor="middle" x="709.00" y="284">FY26</text><path class="mark" d="M697.00,266.00V86.90Q697.00,82.90 701.00,82.90H717.00Q721.00,82.90 721.00,86.90V266.00Z" data-tip="FY26 · Renal revenue: Rs. 1.9bn" fill="var(--s1)"><title>FY26 · Renal revenue: Rs. 1.9bn</title></path><text class="val" text-anchor="middle" x="709.00" y="76.90">1.88</text></svg></div><p class="note">FY18-FY24 from the product tables of the two placement documents (dialysis vertical); FY25-FY26 from the 4QFY26 presentation. FY21 was not disclosed in a filing; the MD put it at <span class="n" title="Source: 1QFY22 earnings call transcript (2022-12-01), slide/page 10 · Himanshu Baid, MD">Rs. 350-360mn</span>. The company's own FY20-FY26 CAGR is <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">39%</span>. BRSR cross-check: dialysis was <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">11.2%</span> of FY26 standalone turnover, or <span class="n" title="Our calculation: A-0847/100*A-0350; inputs: 11.2% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.9bn</span> (our calculation), against <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 1.9bn</span> in the annual report.</p><p class="src">Source: QIP Placement Document Feb 2021; QIP Placement Document Aug 2024; Investor presentation 4QFY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY18</th><th class="num">FY19</th><th class="num">FY20</th><th>FY21</th><th class="num">FY22</th><th class="num">FY23</th><th class="num">FY24</th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">Renal revenue</th><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 99mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 122mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 257mn</span></td><td>–</td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 596mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 758mn</span></td><td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 945mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.5bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.9bn</span></td></tr></tbody></table></div></details></figure>
+<p>The quarterly run-rate shows where the growth went. Revenue held between <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 442mn</span> and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 449mn</span> in each of the first three quarters of FY26, jumped <span class="n" title="Our calculation: CB-0868/CB-1530*100-100; inputs: Rs. 562mn (Investor presentation 4QFY26, p.12); Rs. 448mn (Investor presentation 3QFY26, p.13)">25.4%</span> qoq in 4QFY26 (our calculation) and fell back to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 432mn</span> in 1QFY27. The four FY26 quarters as last reported sum to <span class="n" title="Our calculation: (CB-0348+CB-1822+CB-1530+CB-0868); inputs: Rs. 449mn (Investor deck 1QFY27, p.27); Rs. 442mn (Investor presentation 2QFY26, p.17); Rs. 448mn (Investor presentation 3QFY26, p.13); Rs. 562mn (Investor presentation 4QFY26, p.12)">Rs. 1,901mn</span> (our calculation), slightly above the annual <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1,876mn</span>, because the 1QFY27 deck restated 1QFY26 from <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 17">Rs. 435mn</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 449mn</span>.</p>
+<figure class="exh" id="exh-renal_q"><figcaption><span class="exn">Exhibit 29:</span> Quarterly renal revenue has been flat since 1QFY26 apart from a 4QFY26 spike, and fell in 1QFY27</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">200</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">400</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">600</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">800</text><text class="unit" text-anchor="start" x="2" y="13">Rs mn</text><text class="tick" text-anchor="middle" x="85.00" y="284">1QFY25</text><path class="mark" d="M73.00,266.00V179.11Q73.00,175.11 77.00,175.11H93.00Q97.00,175.11 97.00,179.11V266.00Z" data-tip="1QFY25 · Renal revenue: Rs. 298mn" fill="var(--s1)"><title>1QFY25 · Renal revenue: Rs. 298mn</title></path><text class="val" text-anchor="middle" x="85.00" y="169.11">298</text><text class="tick" text-anchor="middle" x="163.00" y="284">2QFY25</text><path class="mark" d="M151.00,266.00V155.62Q151.00,151.62 155.00,151.62H171.00Q175.00,151.62 175.00,155.62V266.00Z" data-tip="2QFY25 · Renal revenue: Rs. 375mn" fill="var(--s1)"><title>2QFY25 · Renal revenue: Rs. 375mn</title></path><text class="val" text-anchor="middle" x="163.00" y="145.62">375</text><text class="tick" text-anchor="middle" x="241.00" y="284">3QFY25</text><path class="mark" d="M229.00,266.00V151.35Q229.00,147.35 233.00,147.35H249.00Q253.00,147.35 253.00,151.35V266.00Z" data-tip="3QFY25 · Renal revenue: Rs. 389mn" fill="var(--s1)"><title>3QFY25 · Renal revenue: Rs. 389mn</title></path><text class="val" text-anchor="middle" x="241.00" y="141.35">389</text><text class="tick" text-anchor="middle" x="319.00" y="284">4QFY25</text><path class="mark" d="M307.00,266.00V128.48Q307.00,124.48 311.00,124.48H327.00Q331.00,124.48 331.00,128.48V266.00Z" data-tip="4QFY25 · Renal revenue: Rs. 464mn" fill="var(--s1)"><title>4QFY25 · Renal revenue: Rs. 464mn</title></path><text class="val" text-anchor="middle" x="319.00" y="118.48">464</text><text class="tick" text-anchor="middle" x="397.00" y="284">1QFY26</text><path class="mark" d="M385.00,266.00V133.06Q385.00,129.06 389.00,129.06H405.00Q409.00,129.06 409.00,133.06V266.00Z" data-tip="1QFY26 · Renal revenue: Rs. 449mn" fill="var(--s1)"><title>1QFY26 · Renal revenue: Rs. 449mn</title></path><text class="val" text-anchor="middle" x="397.00" y="123.06">449</text><text class="tick" text-anchor="middle" x="475.00" y="284">2QFY26</text><path class="mark" d="M463.00,266.00V135.19Q463.00,131.19 467.00,131.19H483.00Q487.00,131.19 487.00,135.19V266.00Z" data-tip="2QFY26 · Renal revenue: Rs. 442mn" fill="var(--s1)"><title>2QFY26 · Renal revenue: Rs. 442mn</title></path><text class="val" text-anchor="middle" x="475.00" y="125.19">442</text><text class="tick" text-anchor="middle" x="553.00" y="284">3QFY26</text><path class="mark" d="M541.00,266.00V133.36Q541.00,129.36 545.00,129.36H561.00Q565.00,129.36 565.00,133.36V266.00Z" data-tip="3QFY26 · Renal revenue: Rs. 448mn" fill="var(--s1)"><title>3QFY26 · Renal revenue: Rs. 448mn</title></path><text class="val" text-anchor="middle" x="553.00" y="123.36">448</text><text class="tick" text-anchor="middle" x="631.00" y="284">4QFY26</text><path class="mark" d="M619.00,266.00V98.59Q619.00,94.59 623.00,94.59H639.00Q643.00,94.59 643.00,98.59V266.00Z" data-tip="4QFY26 · Renal revenue: Rs. 562mn" fill="var(--s1)"><title>4QFY26 · Renal revenue: Rs. 562mn</title></path><text class="val" text-anchor="middle" x="631.00" y="88.59">562</text><text class="tick" text-anchor="middle" x="709.00" y="284">1QFY27</text><path class="mark" d="M697.00,266.00V138.24Q697.00,134.24 701.00,134.24H717.00Q721.00,134.24 721.00,138.24V266.00Z" data-tip="1QFY27 · Renal revenue: Rs. 432mn" fill="var(--s1)"><title>1QFY27 · Renal revenue: Rs. 432mn</title></path><text class="val" text-anchor="middle" x="709.00" y="128.24">432</text></svg></div><p class="note">Consolidated, as reported in the FY26 quarterly presentations (FY25 quarters as their comparatives); 1QFY26 as restated in the 1QFY27 deck (first reported at <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 17">Rs. 435mn</span>). Year-on-year growth: <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 17">46.2%</span> in 1QFY26, <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">18.1%</span> in 2QFY26, <span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">15.1%</span> in 3QFY26, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">21.3%</span> in 4QFY26 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">-3.8%</span> in 1QFY27.</p><p class="src">Source: Investor presentation 1QFY26; Investor presentation 2QFY26; Investor presentation 3QFY26; Investor presentation 4QFY26; Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">1QFY25</th><th class="num">2QFY25</th><th class="num">3QFY25</th><th class="num">4QFY25</th><th class="num">1QFY26</th><th class="num">2QFY26</th><th class="num">3QFY26</th><th class="num">4QFY26</th><th class="num">1QFY27</th></tr></thead><tbody><tr><th scope="row">Renal revenue</th><td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 17">Rs. 298mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 375mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">Rs. 389mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 464mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 449mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 17">Rs. 442mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 13">Rs. 448mn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 562mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 432mn</span></td></tr></tbody></table></div></details></figure>
+<p><strong>The guidance record.</strong> Renal has been the least reliable line in Polymed's guidance (Section A3). Revenue targets were cut in four of the five years from FY23 to FY27, and machine targets were cut in every year from FY24 to FY26. The one beat, FY25, followed the start of device licensing.</p>
+<figure class="exh" id="exh-renal_guidance"><figcaption><span class="exn">Exhibit 30:</span> Renal guidance was cut in four of the five years from FY23 to FY27, and FY25 was the only year it was beaten</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th></th>
+<th>First guidance</th>
+<th>Later revisions</th>
+<th>Delivered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY23 revenue</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 5 · management guidance; Himanshu Baid, MD">60-70%</span> growth; <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 11 · management guidance; Himanshu Baid, MD">~Rs. 1.0bn</span> (Aug-2022)</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 5 · management guidance; Himanshu Baid, MD">40-50%</span> (Feb-2023)</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 758mn</span> (<span class="n" title="Our calculation: D-0057/D-0059*100-100; inputs: Rs. 758mn (QIP Placement Document Aug 2024, p.173); Rs. 596mn (QIP Placement Document Aug 2024, p.173)">27%</span>, our calculation); MD: ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 3 · Himanshu Baid, MD">40%</span></td>
+</tr>
+<tr>
+<td>FY23 machines</td>
+<td><span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 6 · management guidance; Himanshu Baid, MD">150</span> (Aug-2022)</td>
+<td>–</td>
+<td class="num">~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 7 · Himanshu Baid, MD">140</span></td>
+</tr>
+<tr>
+<td>FY24 revenue</td>
+<td><span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">30-40%</span> growth (May-2023)</td>
+<td><span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">25-30%</span> (Aug-2023); <span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 3 · management guidance; Himanshu Baid, MD">~Rs. 900mn</span> (Feb-2024)</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 173">Rs. 945mn</span> (<span class="n" title="Our calculation: D-0055/D-0057*100-100; inputs: Rs. 945mn (QIP Placement Document Aug 2024, p.173); Rs. 758mn (QIP Placement Document Aug 2024, p.173)">25%</span>, our calculation)</td>
+</tr>
+<tr>
+<td>FY24 machines</td>
+<td>~<span class="n" title="Source: 2QFY23 earnings call transcript (2022-12-01), slide/page 9 · management guidance; Himanshu Baid, MD">500</span> (Nov-2022)</td>
+<td>~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">200</span> (May-2023); <span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 8 · management guidance; Himanshu Baid, MD">200-250</span> (Feb-2024)</td>
+<td class="num">~<span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 6 · Himanshu Baid, MD">200</span></td>
+</tr>
+<tr>
+<td>FY25 revenue</td>
+<td>~<span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 6 · management guidance; Himanshu Baid, MD">50%</span> growth (May-2024); <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 2 · management guidance; Himanshu Baid, MD">Rs. 1.4-1.45bn</span> (Jul-2024)</td>
+<td><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · management guidance; Himanshu Baid, MD">Rs. 1.4-1.5bn</span> (Oct-2024)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.5bn</span> (<span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 22">60.1%</span> standalone)</td>
+</tr>
+<tr>
+<td>FY25 machines</td>
+<td><span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 6 · management guidance; Himanshu Baid, MD">500+</span> (May-2024)</td>
+<td><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 3 · management guidance; Himanshu Baid, MD">400-500</span> (Jul-2024); <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 9 · management guidance; Himanshu Baid, MD">350-400</span> (Oct-2024); <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 9 · management guidance; Himanshu Baid, MD">300-350</span> (Feb-2025)</td>
+<td class="num"><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · Himanshu Baid, MD">350+</span></td>
+</tr>
+<tr>
+<td>FY26 revenue</td>
+<td>~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">50%</span> growth (May-2025)</td>
+<td><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · management guidance; Himanshu Baid, MD">Rs. 2.0bn+</span> (Nov-2025); <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">~Rs. 1.8bn</span> (Feb-2026)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.9bn</span> (<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+24.5%</span>); MD: '<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · Himanshu Baid, MD">close to around 20%</span>'</td>
+</tr>
+<tr>
+<td>FY26 machines</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">500-600</span> (May-2025)</td>
+<td><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">450 units</span> (Feb-2026)</td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">450 units</span></td>
+</tr>
+<tr>
+<td>FY27 revenue</td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 16 · management guidance; Himanshu Baid, MD">20-25%</span> (May-2026; earlier ambition <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · management guidance; Himanshu Baid, MD">30-35%</span>)</td>
+<td>'<span class="n nl" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 10 · management guidance; Himanshu Baid, MD">around 15% to 18% ... maybe close to 20%</span>' (Aug-2026)</td>
+<td>1QFY27: <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">-3.8%</span></td>
+</tr>
+<tr>
+<td>FY27 machines</td>
+<td>+<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · management guidance; Himanshu Baid, MD">20%</span> (May-2026)</td>
+<td>–</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="note">Growth rates and amounts as stated by management on the calls; delivered revenue from the placement document (FY23, FY24) and presentations (FY25, FY26). Management's annual machine statements for FY22-FY24 (~<span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">80</span>, ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 7 · Himanshu Baid, MD">140</span> and ~<span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 6 · Himanshu Baid, MD">200</span>) sum to more than the 'earlier base' of <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 9 · Himanshu Baid, MD">150 units</span> it cited for Mar-2024 on the 2QFY25 call; the series from FY25 onward reconciles with the installed base of <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · Himanshu Baid, MD">500+</span> (May-2025), ~<span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">1,000 units</span> (Mar-2026) and ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">1,100 units</span> (Aug-2026).</p><p class="src">Source: 1QFY23 earnings call transcript; 3QFY23 earnings call transcript; 4QFY23 earnings call transcript; 2QFY23 earnings call transcript; 1QFY24 earnings call transcript; 4QFY24 earnings call transcript; 1QFY25 earnings call transcript; 2QFY25 earnings call transcript; 3QFY25 earnings call transcript; 4QFY25 earnings call transcript; 2QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); 4QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); QIP Placement Document Aug 2024; Investor presentation 4QFY26; Investor deck 1QFY27; our calculation; 3QFY24 earnings call transcript (full); 30th AGM presentation; Avendus Spark Research</p></figure>
+<!-- TR1Q23 p.6, p.11; TR3Q23 p.5; TR4Q23 p.3-5, p.7; TR2Q23 p.9; TR1Q24 p.4; TR3Q24b p.3, p.8; TR4Q24 p.6; TR1Q25 p.2-3; TR2Q25 p.4, p.9; TR3Q25 p.9; TR4Q25 p.4; TR2Q26 p.5; TR3Q26 p.5, p.11; TR4Q26 p.8, p.13, p.16; TR1Q27S p.10; PD24 p.173; DK4Q26 p.7, p.12; DK1Q27 p.22 -->
+<h3 id="machines-and-the-installed-base-razor-and-blades-but-not-loc">Machines and the installed base: razor and blades, but not locked in</h3>
+<p>The machine is the entry ticket to a dialysis unit's consumables, but Polymed's model differs from the MNCs'.</p>
+<ul>
+<li><strong>The MNC model.</strong> Fresenius and Nipro "place machines in the hospital" and then supply consumables under contracts of <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid (MD)">5</span> to <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid (MD)">7 years</span>, which their balance sheets allow. <!-- TR3Q26 p.11 --></li>
+<li><strong>Polymed's model.</strong> Polymed sells the machine outright, for ~Rs. <span class="n" title="Our calculation: WB-0050/1000000; inputs: Rs. 500,000 (4QFY23 earnings call transcript, p.17)">0.5</span>-<span class="n" title="Our calculation: WB-0051/1000000; inputs: Rs. 600,000 (4QFY23 earnings call transcript, p.17)">0.6</span>mn per unit (May-2023), priced <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">5-7%</span> below MNC machines, and relies on service and local content to win the consumables. <!-- TR3Q26 p.11; TR4Q23 p.17; TR1Q23 p.6 --></li>
+</ul>
+<p>Polymed's ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">1,100</span> machines are only <span class="n" title="Our calculation: CB-0194/E-0043*100; inputs: 1,100 units (Investor deck 1QFY27, p.22); 40,000 (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.279)">2.8%</span> of India's ~<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">40,000</span> (our calculation on F&amp;S's installed base). Management's ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">10%</span> share claim therefore implies that most of its dialysers, bloodlines and needles go into other brands' machines. Dialysers and needles are not machine-specific, so we read the installed base as a door-opener rather than a lock-in. <!-- RHP_NEPHRO p.279; TR3Q26 p.5 --></p>
+<p>The scale gap is wide. Fresenius and Nipro have "installations of over <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 9 · Himanshu Baid, MD">40,000-50,000</span> machines" in India, and the MD has put Fresenius alone at <span class="n" title="Source: 2QFY23 earnings call transcript (2022-12-01), slide/page 10 · Himanshu Baid, MD">70%</span>-<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 18 · Himanshu Baid, MD">80%</span> of India's installed base. NephroPlus alone ran <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 311">5,562</span> machines in Sep-2025, having added <span class="n" title="Our calculation: WB-0024-WB-0025; inputs: 5,562 (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.311); 3,662 (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.311)">1,900</span> since Mar-2023 (our calculation), more than Polymed's entire installed base. <!-- TR4Q25 p.9; TR2Q23 p.10; TR3Q23 p.18; RHP_NEPHRO p.311 --></p>
+<p>The FY26 shortfall against the machine target came from tenders. Management said that "certain government contracts are delayed", that it had bid for <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid, MD">600+</span> machines, and that its current visibility for FY26 was <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid (MD)">450</span> machines ("it can be <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid (MD)">470</span> also"), with the rest likely to slip into FY27 "because of budgeting issues". <!-- TR3Q26 p.11 --></p>
+<h3 id="market-india-s-dialysis-is-growing-fast-but-through-public-p">Market: India's dialysis is growing fast, but through public programmes and price-driven chains</h3>
+<p><strong>Demand and capacity</strong> (Frost &amp; Sullivan via the NephroPlus prospectus; vendor-commissioned, Nov-2025):</p>
+<ul>
+<li>India had <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 272">4.2</span>mn diagnosed ESRD patients in 2024, but only <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 272">0.28</span>mn were on dialysis. That is forecast to reach <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 278">0.52</span>mn by 2029, a <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 278">12.7%</span> CAGR.</li>
+<li>It has ~<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 264">5,000</span> dialysis clinics, more than <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 281">80%</span> of them private, and ~<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">40,000</span> machines against a stated need of more than <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">105,000</span>.</li>
+<li>The organized chains hold ~<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 285">20%</span> of a services market of <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 285">$818.0mn</span> (2024) that F&amp;S expects to reach <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 285">$2.0bn</span> by 2029.</li>
+</ul>
+<p>The MD's own sizing was <span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 8 · Himanshu Baid, MD">~Rs. 10.0bn</span> in May-2021, <span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 8 · Himanshu Baid, MD">95%</span> of it imported. By May-2023 he put the market at <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 17 · Himanshu Baid, MD">Rs. 10-11bn</span>, of which consumables were <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 17 · Himanshu Baid, MD">Rs. 8-9bn</span> and machines <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 17 · Himanshu Baid, MD">Rs. 2.0-2.5bn</span>, on <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 13 · Himanshu Baid, MD">3,000-4,000</span> machine sales a year. He put industry growth at ~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 12 · Himanshu Baid, MD">25%</span> in May-2025. <!-- RHP_NEPHRO p.264, p.278-279, p.281, p.285; TR2021 p.8; TR4Q23 p.17; TR3Q22 p.13; TR4Q25 p.12 --></p>
+<p><strong>Public money sets the price.</strong> Management estimates that <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid, MD">70-80%</span> of patients are treated in government-funded centres, and the programmes pay per session: <!-- TR3Q26 p.11 --></p>
+<ul>
+<li><strong>PMNDP.</strong> The Pradhan Mantri National Dialysis Programme, launched in 2016, runs <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">1,925</span> centres with <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">13,824</span> haemodialysis machines in <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">751</span> districts (dashboard, Sep-2026). Those machines are <span class="n" title="Our calculation: F-0114/E-0043*100; inputs: 13,824 (Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters), p.1); 40,000 (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.279)">35%</span> of F&amp;S's national installed base (our calculation; different dates). Annual sessions rose from <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">2.5mn</span> to <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">7.0mn</span> in five years. <!-- PMNDP_DASH p.1; PIB_PSC176_2608 p.1 --></li>
+<li><strong>PPP model.</strong> Where PMNDP runs as a PPP (in <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">14</span> states and UTs), the private partner supplies the machines, water plant, dialysers and consumables. Contracts run <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 283">5 years</span> (extendable), at a bid price that escalates <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 283">3%</span> a year. <!-- PMNDP_DASH p.1; RHP_NEPHRO p.280, p.283 --></li>
+<li><strong>PM-JAY.</strong> The insurer pays <span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,500</span> per haemodialysis session in tier-3 cities and <span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,800</span> in tier-1 and tier-2 (HBP 2022); F&amp;S puts the average at Rs. <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 284">1,650</span>. <!-- PMJAY_HBP2022 p.11; RHP_NEPHRO p.284 --></li>
+</ul>
+<p>Polymed's consumables are therefore bought mainly by PPP operators and chains that bid for low per-session rates. <!-- TR2Q23 p.6; TR4Q23 p.13 --></p>
+<p><strong>Private chains are consolidating the buying.</strong> NephroPlus is the largest. It served <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 282">29,281</span> patients in FY25, ~<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 282">10%</span> of India's dialysis patients, from <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 282">468</span> clinics (<span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 284">176</span> of them under PPP). DCDC runs more than <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 284">200</span> PPP clinics; Apex Kidney Care, Apollo Dialysis, RAHI Care, VitusCare and 7Med follow. <!-- RHP_NEPHRO p.282-284 --></p>
+<p>The chains buy centrally and are integrating backwards:</p>
+<ul>
+<li>NephroPlus sources the dialysers, bloodlines and fistula needles for its Indian clinics within India.</li>
+<li>It owns proprietary bloodline moulds and has contract manufacturers assemble the sets.</li>
+<li>It reprocesses dialysers.</li>
+</ul>
+<p>Its whole materials bill, across India, the Philippines and Uzbekistan, was <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 80">Rs. 1.9bn</span> in FY25, about the size of Polymed's renal revenue. <!-- RHP_NEPHRO p.80, p.313, p.338 --></p>
+<p>Polymed counts NephroPlus and DCDC among its customers, which makes the chains both the growth channel and the main source of price pressure. <!-- CC digest A2; TR3Q23; TR2021; TR4Q23 p.13 --></p>
+<p><strong>Global context.</strong> Fresenius Medical Care's 20-F (CY25) gives the frame:</p>
+<ul>
+<li><span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">4.5</span>mn patients worldwide, growing <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">4-5</span>% a year, <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">89%</span> of them on in-centre haemodialysis;</li>
+<li>a global dialysis market of <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">€81-85bn</span>, of which <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">€16bn</span> is products;</li>
+<li>~<span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">450</span>mn dialysers sold a year, <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">38%</span> of them made by Fresenius;</li>
+<li><span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">110,000</span> haemodialysis machines installed in 2025, ~<span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">50%</span> of them by Fresenius. <!-- FMC_20F25 p.1 --></li>
+</ul>
+<p>Vendor estimates put the global dialyser market at <span class="n" title="Source: Dialyzer Market Report 2026-2034 (IMARC Group) – Research and Markets product page (2026-04) · third-party estimate">$4.0bn</span> (IMARC, 2025) and haemodialysis catheters at <span class="n" title="Source: Hemodialysis Catheters Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$1.11bn</span> (360iResearch, 2026). <!-- VND_RNM_DIALYZER p.1; VND_RNM_HDCATH p.1 --></p>
+<h3 id="competition-mncs-above-chinese-imports-below-and-no-indian-p">Competition: MNCs above, Chinese imports below, and no Indian peer</h3>
+<figure class="exh" id="exh-renal_comp"><figcaption><span class="exn">Exhibit 31:</span> Polymed competes with MNCs on machines and with Chinese and Malaysian imports on dialysers; no other Indian maker sells dialysers at home</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Where it meets Polymed</th>
+<th>Scale and position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fresenius Medical Care (Germany)</td>
+<td>Machines, dialysers, bloodlines; service benchmark</td>
+<td><span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">38%</span> of global dialyser units; <span class="n" title="Source: 2QFY23 earnings call transcript (2022-12-01), slide/page 10 · Himanshu Baid, MD">70%</span>-<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 18 · Himanshu Baid, MD">80%</span> of India's installed machines per Polymed's MD; its FX, HF and HPS dialyser brands are excluded from the anti-dumping case</td>
+</tr>
+<tr>
+<td>Nipro (Japan)</td>
+<td>Dialysers made in India, imported machines</td>
+<td>Dialyser revenue <span class="n" title="Source: Nipro Corporation – IR Materials, Fiscal Year Ended March 31, 2026 (2026-05-12), slide/page 25">JPY 117.1bn</span> (FY to Mar-2026); Indian dialyser unit is a 100% export-oriented unit and the only other Indian producer; received <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 3">Rs. 349mn</span> of PLI incentives in FY23-FY25</td>
+</tr>
+<tr>
+<td>B. Braun Avitum (Germany)</td>
+<td>Machines, dialysers, services</td>
+<td>Avitum sales <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 45">€1.9bn</span> (CY25)</td>
+</tr>
+<tr>
+<td>Vantive, ex-Baxter Kidney Care (US)</td>
+<td>PD and HD products</td>
+<td>Sales <span class="n" title="Source: Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations) (2026-02-12)">$4.5bn</span> (CY24); sold to Carlyle for <span class="n" title="Source: Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations) (2026-02-12)">$3.8bn</span></td>
+</tr>
+<tr>
+<td>Japanese membrane makers (Toray, Asahi Kasei, Nikkiso)</td>
+<td>Premium dialysers</td>
+<td>India imported <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$16.02mn</span> from Japan under the dialysis tariff line in FY26 at ~<span class="n" title="Our calculation: WB-0016*1000000/WB-0017; inputs: $16.02mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); 2,646,243 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">$6.1</span> a unit (our calculation)</td>
+</tr>
+<tr>
+<td>Chinese makers (Shandong Weigao Blood Purification, Jiangxi Sanxin, Wego, Bain Medical, Chengdu OCI) and Vital Healthcare (Malaysia)</td>
+<td>Low-priced dialysers and consumables</td>
+<td>Registered as interested parties in the anti-dumping case; Sanxin's blood-purification revenue was <span class="n" title="Source: Jiangxi Sanxin Medtec Co Ltd (300453.SZ) – 2025 Annual Report (Chinese; 三鑫医疗2025年年度报告) (2026-04-27), slide/page 2">RMB 1.4bn</span> (CY25); declared import values of ~<span class="n" title="Our calculation: F-0193*1000000/WB-0005; inputs: $23.21mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); 10,592,925 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">$2.2</span> (China) and ~<span class="n" title="Our calculation: F-0194*1000000/WB-0010; inputs: $13.74mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); 6,060,880 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">$2.3</span> (Malaysia) a unit (our calculation)</td>
+</tr>
+<tr>
+<td>Indian makers</td>
+<td>–</td>
+<td>"Domestic, there is nobody. Except Polymed" (MD, May-2026); "<span class="n nl" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">hardly any regional player</span>" has entered in five to seven years</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025; 2QFY23 earnings call transcript; 3QFY23 earnings call transcript; DGTR initiation notification - anti-dumping investigation on Dialyzers from China PR and Malaysia (F.No. 6/19/2026-DGTR); Nipro Corporation – IR Materials, Fiscal Year Ended March 31, 2026; Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures); B. Braun SE – Annual Report 2025; Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations); Dialyzer Market Report 2026-2034 (IMARC Group) – Research and Markets product page; DGTR list of registered interested parties - Dialyzers; Jiangxi Sanxin Medtec Co Ltd (300453.SZ) – 2025 Annual Report (Chinese; 三鑫医疗2025年年度报告); TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn); 4QFY26 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- FMC_20F25 p.1; TR2Q23 p.10; TR3Q23 p.18; DGTR_DIAL_INIT p.1-3; NIPRO_FY25 p.25; LSQ_AU1001_260724 p.3; BBRAUN_AR25 p.45; BAX_10K25 p.1; VND_RNM_DIALYZER p.1; DGTR_DIAL_IP p.2-3; SANXIN_AR25 p.2; TS_M_90189031_FY26 p.1; TR4Q26 p.8, p.15 -->
+<p>Polymed positions itself between the two tiers on price. Its machines sell <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">5-7%</span> below MNC machines, and Chinese consumables were ~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 11 · Himanshu Baid, MD">15%</span> cheaper than Polymed's in May-2023. Against both, it offers local service and training ("Chinese don't offer any service"), local content for public buyers, and a full consumables basket including a safety fistula needle. <!-- TR1Q23 p.6; TR4Q23 p.11; TR4Q25 p.9 --></p>
+<p>Under public procurement rules, a Class-I local supplier needs at least <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content. The machine's ~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · Himanshu Baid, MD">50%</span> local content is at that threshold. A Department of Pharmaceuticals order of Oct-2024 that deems PLI makers Class-II suppliers lists Nipro for dialysers but not Polymed, although a maker can still qualify as Class-I on its own content. <!-- PPP_MD_GUIDE21 p.1; TR4Q25 p.4; DOP_PPO24 p.1-2 --></p>
+<h3 id="regulation-and-policy-duty-inversion-a-trade-remedy-case-and">Regulation and policy: duty inversion, a trade-remedy case and a PLI that has not paid</h3>
+<p><strong>Tariffs and the inverted duty structure.</strong></p>
+<ul>
+<li>Dialysers were duty-free until the Feb-2022 Budget imposed <span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 4 · Himanshu Baid, MD">7.5%</span>. Management says Chinese makers then shifted to bases in ASEAN countries and relabelled product there to enter India at zero duty under the ASEAN FTA. <!-- TR2021 p.10; TR3Q22 p.4; TR4Q23 p.11; TR4Q26 p.8 --></li>
+<li>In May-2026 the MD put Chinese imports at "<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">0% duty, only 5% GST</span>" on the finished product. Polymed, by contrast, pays <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">2.5%</span> customs duty on imported raw materials and <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">18%</span> GST on inputs. <!-- TR4Q26 p.15 --></li>
+<li>The FY26 annual report names renal as the segment hit by this duty inversion and by "dumping from China". <!-- AR26 p.47, p.49 --></li>
+</ul>
+<p><strong>Imports under the dialysis tariff line</strong> (HS 90189031, which also covers machines) show the route shifting:</p>
+<ul>
+<li><strong>China.</strong> Declared quantities fell <span class="n" title="Our calculation: WB-0005/WB-0004*100-100; inputs: 10,592,925 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); 17,298,455 units (TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn), p.1)">39%</span> in FY26 to <span class="n" title="Our calculation: WB-0005/1000000; inputs: 10,592,925 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">10.6mn units</span> (our calculation).</li>
+<li><strong>Malaysia and Hong Kong.</strong> Malaysia rose <span class="n" title="Our calculation: WB-0010/WB-0009*100-100; inputs: 6,060,880 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); 4,391,844 units (TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn), p.1)">38%</span> to <span class="n" title="Our calculation: WB-0010/1000000; inputs: 6,060,880 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">6.1mn units</span>, and Hong Kong jumped to <span class="n" title="Our calculation: WB-0014/1000000; inputs: 2,479,095 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">2.5mn units</span>.</li>
+<li><strong>By value.</strong> China's share of the line fell from <span class="n" title="Our calculation: WB-0001/WB-0019*100; inputs: $29.17mn (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1); $82.27mn (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">35%</span> in FY23 to <span class="n" title="Our calculation: F-0193/F-0192*100; inputs: $23.21mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); $112.39mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">21%</span> in FY26, while Malaysia and Hong Kong reached <span class="n" title="Our calculation: (F-0194+WB-0015)/F-0192*100; inputs: $13.74mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); $6.49mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); $112.39mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">18%</span>. The line's total value grew <span class="n" title="Our calculation: F-0192/WB-0019*100-100; inputs: $112.39mn (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1); $82.27mn (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">37%</span> over FY23-FY26 (our calculation).</li>
+</ul>
+<p>We read this as consistent with management's account of Chinese product being rerouted, not as proof of it. <!-- TS_M_90189031_FY24 p.1; TS_M_90189031_FY25 p.1; TS_M_90189031_FY26 p.1 --></p>
+<figure class="exh" id="exh-renal_imports"><figcaption><span class="exn">Exhibit 32:</span> Declared imports under the dialysis tariff line shifted from China to Malaysia and Hong Kong in FY26</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>China</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Malaysia</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Hong Kong</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">5</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">10</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">15</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">20</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">25</text><text class="unit" text-anchor="start" x="2" y="13">mn units</text><text class="tick" text-anchor="middle" x="133.75" y="284">FY23</text><path class="mark" d="M121.75,148.90h24.00v117.10h-24.00Z" data-tip="FY23 · China: 12.1mn units" fill="var(--s1)"><title>FY23 · China: 12.1mn units</title></path><path class="mark" d="" data-tip="FY23 · Malaysia: 0.1mn units" fill="var(--s2)"><title>FY23 · Malaysia: 0.1mn units</title></path><text class="val" text-anchor="middle" x="133.75" y="141.32">12.2</text><text class="tick" text-anchor="middle" x="309.25" y="284">FY24</text><path class="mark" d="M297.25,105.76h24.00v160.24h-24.00Z" data-tip="FY24 · China: 16.5mn units" fill="var(--s1)"><title>FY24 · China: 16.5mn units</title></path><path class="mark" d="M297.25,96.69h24.00v7.08h-24.00Z" data-tip="FY24 · Malaysia: 0.9mn units" fill="var(--s2)"><title>FY24 · Malaysia: 0.9mn units</title></path><path class="mark" d="M297.25,94.69V94.61Q297.25,90.61 301.25,90.61H317.25Q321.25,90.61 321.25,94.61V94.69Z" data-tip="FY24 · Hong Kong: 0.5mn units" fill="var(--s3)"><title>FY24 · Hong Kong: 0.5mn units</title></path><text class="val" text-anchor="middle" x="309.25" y="84.61">18.0</text><text class="tick" text-anchor="middle" x="484.75" y="284">FY25</text><path class="mark" d="M472.75,98.15h24.00v167.85h-24.00Z" data-tip="FY25 · China: 17.3mn units" fill="var(--s1)"><title>FY25 · China: 17.3mn units</title></path><path class="mark" d="M472.75,55.31h24.00v40.85h-24.00Z" data-tip="FY25 · Malaysia: 4.4mn units" fill="var(--s2)"><title>FY25 · Malaysia: 4.4mn units</title></path><path class="mark" d="" data-tip="FY25 · Hong Kong: 0.1mn units" fill="var(--s3)"><title>FY25 · Hong Kong: 0.1mn units</title></path><text class="val" text-anchor="middle" x="484.75" y="47.23">21.8</text><text class="tick" text-anchor="middle" x="660.25" y="284">FY26</text><path class="mark" d="M648.25,163.64h24.00v102.36h-24.00Z" data-tip="FY26 · China: 10.6mn units" fill="var(--s1)"><title>FY26 · China: 10.6mn units</title></path><path class="mark" d="M648.25,104.50h24.00v57.15h-24.00Z" data-tip="FY26 · Malaysia: 6.1mn units" fill="var(--s2)"><title>FY26 · Malaysia: 6.1mn units</title></path><path class="mark" d="M648.25,102.50V83.29Q648.25,79.29 652.25,79.29H668.25Q672.25,79.29 672.25,83.29V102.50Z" data-tip="FY26 · Hong Kong: 2.5mn units" fill="var(--s3)"><title>FY26 · Hong Kong: 2.5mn units</title></path><text class="val" text-anchor="middle" x="660.25" y="73.29">19.1</text></svg></div><p class="note">Our calculation from DGCI&amp;S TradeStat quantities (declared in numbers) for HS 90189031, artificial dialysis apparatus and haemodialysers; the line also covers machines, so counts are indicative. Import value: China <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$29.17mn</span> (FY23) and <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$23.21mn</span> (FY26); Malaysia <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$210k</span> and <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$13.74mn</span>; all origins <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$82.27mn</span> and <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$112.39mn</span>. Japan and Germany, the main premium sources, are excluded from the chart.</p><p class="src">Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn); our calculation; TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn); TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn); Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY23</th><th class="num">FY24</th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">China</th><td class="num"><span class="n" title="Our calculation: WB-0002/1000000; inputs: 12,098,684 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">12.1mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0003/1000000; inputs: 16,520,084 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">16.5mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0004/1000000; inputs: 17,298,455 units (TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn), p.1)">17.3mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0005/1000000; inputs: 10,592,925 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">10.6mn units</span></td></tr><tr><th scope="row">Malaysia</th><td class="num"><span class="n" title="Our calculation: WB-0007/1000000; inputs: 58,302 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">0.1mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0008/1000000; inputs: 934,872 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">0.9mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0009/1000000; inputs: 4,391,844 units (TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn), p.1)">4.4mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0010/1000000; inputs: 6,060,880 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">6.1mn units</span></td></tr><tr><th scope="row">Hong Kong</th><td class="num"><span class="n" title="Our calculation: WB-0011/1000000; inputs: 53 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">0mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0012/1000000; inputs: 521,989 units (TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn), p.1)">0.5mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0013/1000000; inputs: 106,844 units (TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn), p.1)">0.1mn units</span></td><td class="num"><span class="n" title="Our calculation: WB-0014/1000000; inputs: 2,479,095 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">2.5mn units</span></td></tr></tbody></table></div></details></figure>
+<p><strong>The anti-dumping case.</strong> The Directorate General of Trade Remedies opened Case AD (OI) (17/2026) on 25 Jun 2026 on Polymed's application. <!-- DGTR_DIAL_INIT p.1-5; DGTR_DIAL_PCN p.1-2; DGTR_DIAL_EXT p.1; DGTR_DIAL_IP p.1-3; DGTR_DIAL_CASE p.1 --></p>
+<ul>
+<li><strong>Scope.</strong> The case covers disposable dialysers from China and Malaysia, with product types defined by surface area and flux; housing material was added in Aug-2026. Named Fresenius brands are excluded, which we read as targeting the low-priced product rather than the premium MNC lines.</li>
+<li><strong>Periods.</strong> The period of investigation is CY25, and the injury period runs from FY23.</li>
+<li><strong>Standing.</strong> Polymed is "the major domestic producer". The only other producer, Nipro Medical India, is a 100% export-oriented unit.</li>
+<li><strong>The injury claim, as summarized by DGTR.</strong> Subject imports rose "significantly in absolute terms", with price undercutting and depression, and the domestic industry "has incurred financial losses, cash losses and negative return on capital employed during the period of investigation". This is the first disclosure of the economics of Polymed's dialyser business.</li>
+<li><strong>Status.</strong> <span class="n" title="Source: DGTR list of registered interested parties - Dialyzers (2026-09-15), slide/page 3">11</span> parties registered, including five Chinese producers, a Malaysian producer and two importers. Questionnaire responses were due by 9 Sep 2026, and no preliminary findings had been published by 24 Sep 2026.</li>
+<li><strong>Management's view.</strong> Management has claimed an injury margin of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · Himanshu Baid, MD">20%</span> and expects "something will happen between now and end of the year". It has also raised the issue with the Health Minister. <!-- TR1Q27S p.4, p.9-10 --></li>
+</ul>
+<p><strong>PLI: approved, invested, unpaid.</strong></p>
+<ul>
+<li><strong>Approval.</strong> Polymed is a Category A applicant under Target Segment 3 (anaesthetics, cardio-respiratory and renal-care devices) for seven products made at Faridabad: dialyser, machine, PD kit, fistula needle, bloodline, haemodialysis catheter and transducer protector. <!-- PLIMD_APPR23 p.2; PLIMD_APPR24 p.3 --></li>
+<li><strong>Terms.</strong> The scheme pays <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 41">5%</span> on incremental sales over FY20. A Category A applicant must show incremental sales of at least <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 600mn</span> in FY23, rising to <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 2.3bn</span> in FY26 and <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 2.8bn</span> in FY27, and the maximum incentive is <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 1.2bn</span>. <!-- PD24 p.41; PLIMD_GUIDE23 p.20 --></li>
+<li><strong>Why it has missed.</strong> On our proxy, renal revenue less the FY20 base, Polymed generated <span class="n" title="Our calculation: D-0057-D-0625; inputs: Rs. 758mn (QIP Placement Document Aug 2024, p.173); Rs. 257mn (QIP Placement Document Feb 2021, p.130)">Rs. 500mn</span>, <span class="n" title="Our calculation: D-0055-D-0625; inputs: Rs. 945mn (QIP Placement Document Aug 2024, p.173); Rs. 257mn (QIP Placement Document Feb 2021, p.130)">Rs. 688mn</span>, <span class="n" title="Our calculation: CB-0871-D-0625; inputs: Rs. 1.5bn (Investor presentation 4QFY26, p.12); Rs. 257mn (QIP Placement Document Feb 2021, p.130)">Rs. 1.2bn</span> and <span class="n" title="Our calculation: CB-0870-D-0625; inputs: Rs. 1.9bn (Investor presentation 4QFY26, p.12); Rs. 257mn (QIP Placement Document Feb 2021, p.130)">Rs. 1.6bn</span> of incremental sales in FY23-FY26, short of the threshold every year. Eligible sales may be defined differently.</li>
+<li><strong>Outcome.</strong> As of Jul-2026 Polymed had received no incentive, while Nipro had received <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 3">Rs. 349mn</span>. The MD had expected <span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 3 · management guidance; Himanshu Baid, MD">Rs. 400-450mn</span> in 2021; by 2025 he answered "<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 9 · Himanshu Baid, MD">Zero</span>" and said he was "building the business not on based on PLI". <!-- LSQ_AU1001_260724 p.2-3, p.7; TR2021 p.3; TR4Q25 p.9 --></li>
+</ul>
+<p><strong>Device regulation and reimbursement.</strong></p>
+<ul>
+<li>Dialysis machines are Class C devices under the Medical Devices Rules 2017. Licensing of Class C/D devices began in Oct-2023, which management credits for ending unregulated parallel imports. <!-- RHP_NEPHRO p.280; F digest B3.1; TR1Q25 p.10 --></li>
+<li>The HDF machine faces a reimbursement ceiling: PM-JAY pays a flat per-session rate, so management expects HDF only in private centres, ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 11 · Himanshu Baid, MD">30-40%</span> of the market. <!-- TR1Q26 p.11 --></li>
+<li>The Parliamentary Standing Committee's CKD report (its 177th, Aug-2026) recommends promoting peritoneal dialysis as "the preferred first-line renal replacement therapy for clinically suitable patients". We would watch this, because Polymed's PD range is acute-care only. <!-- PIB_PSC176_2608 p.1 --></li>
+</ul>
+<h3 id="company-specific-growth-drivers-ranked">Company-specific growth drivers, ranked</h3>
+<ol>
+<li><strong>Consumables pull-through from a larger installed base</strong> (management target; timing FY27-FY28).<ul>
+<li>Management plans a <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · management guidance; Himanshu Baid, MD">20%</span> rise in machine sales in FY27 and has a tender pipeline of <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 11 · Himanshu Baid, MD">600+</span> machines.</li>
+<li>It has hired a renal head from Nipro, Fresenius and DaVita to work the chains and distributors. <!-- TR4Q26 p.13; TR3Q26 p.11; DK1Q27 p.22; TR1Q27S p.2, p.10 --></li>
+<li>Our view: the lever is conversion of PPP and chain tenders, where lumpy timing produced the FY26 miss.</li>
+</ul>
+</li>
+<li><strong>A trade-remedy duty on Chinese and Malaysian dialysers</strong> (event-driven; management expects a decision by end-2026).<ul>
+<li>A duty would let Polymed recover the volume it gave up in 1QFY27 without cutting price.</li>
+<li>Our view: the outcome is binary for FY27 renal growth, and the exclusion of Fresenius brands limits the benefit to the low-price segment.</li>
+</ul>
+</li>
+<li><strong>Session growth and public funding</strong> (structural). F&amp;S expects treatments to grow at a <span class="n" title="Our calculation: ((E-0058/E-0057)**(1/5)-1)*100; inputs: 66.1 million (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.285); 33.9 million (Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025), p.285)">14.3%</span> CAGR, and PMNDP sessions have nearly tripled in five years. Every session consumes Polymed's needles and bloodlines whichever machine it runs on.</li>
+<li><strong>A shift to single-use dialysers</strong> (management expectation). Moving from <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">30-35%</span> to <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">50%</span> single use would lift dialyser volume per session. Our view: chains' reprocessing economics and the absence of any reuse rule make this slow.</li>
+<li><strong>New products</strong> (management target; 2026-2028). These are the HDF machine, <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 11 · Himanshu Baid, MD">7-8</span> further renal products, and exports of renal products once capacity allows. HDF is ~<span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 11 · Himanshu Baid, MD">10%</span> of Indian dialysis and "dominated by large multinationals like Fresenius and Nipro". <!-- TR1Q26 p.11; TR4Q25 p.11-12 --></li>
+</ol>
+<h3 id="company-specific-margin-drivers-ranked">Company-specific margin drivers, ranked</h3>
+<ol>
+<li><strong>Price, set by imports.</strong> The DGTR summary of Polymed's own injury claim describes losses, cash losses and negative ROCE on dialysers in CY25. That conflicts with the MD's May-2025 statement that renal was "not a loss making … the operating margin is positive" with PAT expected by end-FY26. The two cover different scopes (dialysers only versus the whole renal line) and periods, and we do not reconcile them. Management chose price over volume in 1QFY27. <!-- DGTR_DIAL_INIT p.4; TR4Q25 p.13-14; TR1Q27S p.3-4 --></li>
+<li><strong>Duty inversion on inputs.</strong> Import content has fallen below <span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 7 · Himanshu Baid, MD">50%</span>, but the <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">2.5%</span> customs duty and <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 15 · Himanshu Baid, MD">18%</span> GST on inputs weigh against duty-free imports. <!-- TR4Q23 p.7; TR4Q26 p.15 --></li>
+<li><strong>Utilization.</strong> On management's statements, renal capacity has been doubled or tripled more than once since FY22, while revenue has been flat for five quarters. We infer under-absorption of plant and of the fixed service network until volumes recover.</li>
+<li><strong>Mix.</strong> Machines, ~<span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 9 · Himanshu Baid, MD">10%</span> of renal revenue, are sold outright with no significant service income, and management declines to give product margins. <!-- TR1Q24 p.9; TR1Q26 p.13, p.19 --></li>
+<li><strong>Incentives.</strong> PLI has paid nothing so far; its remaining upside is capped at <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 1.2bn</span> over the scheme life and needs thresholds that renal has not met.</li>
+</ol>
+<h3 id="what-to-watch-3">What to watch</h3>
+<figure class="exh" id="exh-renal_watch"><figcaption><span class="exn">Exhibit 33:</span> Renal: the anti-dumping ruling and machine tenders are the near-term swing factors</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI / risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DGTR preliminary findings and any duty</td>
+<td>Sets the price floor for dialysers; management expects a decision by end-2026</td>
+<td>Initiated 25 Jun 2026; injury margin claimed <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · Himanshu Baid, MD">20%</span>; no findings by 24 Sep 2026</td>
+<td>DGTR case page; results calls</td>
+</tr>
+<tr>
+<td>Quarterly renal revenue</td>
+<td>Shows whether volume returns after the 1QFY27 price rise</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 432mn</span> in 1QFY27 (<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">-3.8%</span> yoy)</td>
+<td>Quarterly presentation</td>
+</tr>
+<tr>
+<td>Machines placed and installed base</td>
+<td>Drives consumables pull-through</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">450 units</span> in FY26; ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">1,100 units</span> installed (Aug-2026); +<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · management guidance; Himanshu Baid, MD">20%</span> planned for FY27</td>
+<td>Presentations, calls</td>
+</tr>
+<tr>
+<td>Imports from China, Malaysia and Hong Kong</td>
+<td>Tests the rerouting claim and any duty's effect</td>
+<td><span class="n" title="Our calculation: WB-0005/1000000; inputs: 10,592,925 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">10.6mn units</span>, <span class="n" title="Our calculation: WB-0010/1000000; inputs: 6,060,880 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">6.1mn units</span> and <span class="n" title="Our calculation: WB-0014/1000000; inputs: 2,479,095 units (TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn), p.1)">2.5mn units</span> in FY26 (our calculation)</td>
+<td>DGCI&amp;S TradeStat, HS 90189031</td>
+</tr>
+<tr>
+<td>PMNDP scale and PPP tenders</td>
+<td>Public programmes fund most sessions</td>
+<td><span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">1,925</span> centres, <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">13,824</span> machines (Sep-2026)</td>
+<td>PMNDP dashboard; state tenders</td>
+</tr>
+<tr>
+<td>PLI incentive</td>
+<td>Any payment would signal thresholds met</td>
+<td>Nil to date; <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 7">Rs. 556mn</span> invested</td>
+<td>Lok Sabha answers; annual report</td>
+</tr>
+<tr>
+<td>Single-use share of dialysers</td>
+<td>Multiplies dialyser volume per session</td>
+<td><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · Himanshu Baid, MD">30-35%</span> (Oct-2024, management)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Market-share claim</td>
+<td>Management's claims have moved from call to call</td>
+<td><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">10%</span> (Feb-2026)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Renal profitability</td>
+<td>Undisclosed; the DGTR injury claim points to dialyser losses</td>
+<td>[not disclosed]</td>
+<td>DGTR final findings; calls</td>
+</tr>
+<tr>
+<td>HDF machine launch</td>
+<td>Entry to the private premium segment</td>
+<td>Targeted for mid-to-end 2026</td>
+<td>Calls</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 1QFY27 earnings call (Aug 10 2026); Investor deck 1QFY27; Investor presentation 4QFY26; 4QFY26 earnings call transcript; TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn); our calculation; Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters); Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures); 2QFY25 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); Avendus Spark Research</p></figure>
+<figure class="exh" id="exh-renal_share_claims"><figcaption><span class="exn">Exhibit 34:</span> Management's renal share claims and targets have moved from call to call and never state the market they are measured against</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date of statement</th>
+<th>Current share claimed</th>
+<th class="num">Target</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>May-2021</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 8 · management guidance; Himanshu Baid, MD">10-15%</span></td>
+<td>~five years</td>
+</tr>
+<tr>
+<td>Feb-2022</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 13 · management guidance; Himanshu Baid, MD">10-15%</span></td>
+<td>two to three years</td>
+</tr>
+<tr>
+<td>Feb-2023</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 6 · management guidance; Himanshu Baid, MD">10%+</span></td>
+<td>two years</td>
+</tr>
+<tr>
+<td>May-2023</td>
+<td class="num"><span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 17 · Himanshu Baid, MD">6-7%</span></td>
+<td class="num">–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Oct-2024</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 4 · management guidance; Himanshu Baid, MD">30-40%</span></td>
+<td>four to five years</td>
+</tr>
+<tr>
+<td>Feb-2025</td>
+<td><span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 5 · Himanshu Baid, MD">10-12%</span> (by end-FY25)</td>
+<td class="num"><span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 18 · management guidance; Himanshu Baid, MD">20-25%</span></td>
+<td>by 2030</td>
+</tr>
+<tr>
+<td>May-2025</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 12 · Himanshu Baid, MD">10-12%</span> (dialysers)</td>
+<td class="num"><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 12 · management guidance; Himanshu Baid, MD">15-17%</span></td>
+<td>two to three years</td>
+</tr>
+<tr>
+<td>Aug-2025</td>
+<td class="num"><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">8-9%</span></td>
+<td class="num"><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · management guidance; Himanshu Baid, MD">15-17%</span></td>
+<td>two to three years</td>
+</tr>
+<tr>
+<td>Feb-2026</td>
+<td class="num"><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">10%</span></td>
+<td class="num"><span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">15-17%</span></td>
+<td>two to three years</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor call transcript Jun 2021; 3QFY22 earnings call transcript; 3QFY23 earnings call transcript; 4QFY23 earnings call transcript; 2QFY25 earnings call transcript; 3QFY25 earnings call transcript; 4QFY25 earnings call transcript; 1QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); Avendus Spark Research</p></figure>
+<!-- TR2021 p.8; TR3Q22 p.13; TR3Q23 p.6; TR4Q23 p.17; TR2Q25 p.4; TR3Q25 p.5, p.18; TR4Q25 p.12; TR1Q26 p.5; TR3Q26 p.5 -->
+<p>Open questions for management are in the question bank: the renal product split, dialyser volumes and reuse assumptions, machine margins, PPP tender wins, the basis of the share claims, and the reconciliation of the DGTR injury claim with earlier profitability statements.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-2.html"><span>Previous</span>A4.2 Vascular access and oncology (Plan1Health)</a><a class="next" href="a4-4.html"><span>Next</span>A4.4 Transfusion and blood management</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

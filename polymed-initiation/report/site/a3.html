@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A3 The FY26 reset and the guidance record · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html" class="active">A3 The FY26 reset and the guidance record</a></li><li class="l3"><a href="#what-happened-quarter-by-quarter">What happened, quarter by quarter</a></li><li class="l3"><a href="#the-guidance-record">The guidance record</a></li><li class="l3"><a href="#what-management-is-guiding-for-fy27-and-fy30">What management is guiding for FY27 and FY30</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a2.html"><span>Previous</span>A2 How Polymed makes money</a><a class="next" href="a4-1.html"><span>Next</span>A4.1 Infusion therapy</a></nav>
+<h2 id="a3">A3 The FY26 reset and the guidance record</h2>
+<p>FY26 broke a run of on-guidance delivery.</p>
+<ul>
+<li><strong>Headline growth.</strong> Consolidated revenue grew <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">12.3%</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 6">Rs. 18.8bn</span>, against the <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">20%</span> management guided in May-2025. Standalone revenue grew only <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">~4%</span>.</li>
+<li><strong>Organic growth.</strong> Excluding the part-year contribution of PendraCare and Citieffe, consolidated revenue grew <span class="n" title="Our calculation: (CB-0577/A-0040*100-1*100); inputs: Rs. 17.6bn (Investor presentation 4QFY26, p.5); Rs. 16.7bn (Annual Report FY26, p.6)">5.4%</span> (our calculation on the company's organic figure of <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 5">Rs. 17.6bn</span>).</li>
+<li><strong>Both halves missed, exports by more.</strong> Domestic revenue grew <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">19.6%</span> (vs. <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">30-32%</span> guided). International revenue grew <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">9.3%</span> including acquisitions (vs. <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">12-15%</span> guided) but was 'flattish' on an organic basis, and management put 4QFY26 standalone exports at minus <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 12 · Himanshu Baid, MD">3-4%</span>. <!-- TR4Q25 p.5; TR3Q26 p.16; TR4Q26 p.12 --></li>
+</ul>
+<p>The contrast with FY25 frames the debate. That year standalone revenue grew <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">~22.5%</span> against <span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 2 · management guidance; Himanshu Baid, MD">22-24%</span> guided, and management said it had 'very accurately' forecast revenue; consolidated revenue grew <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">~21.5%</span>, just below the range. <!-- TR4Q25 p.3 --></p>
+<p>Two readings of FY26 are possible:</p>
+<ol>
+<li>an external shock layered on a destocking cycle in the export channel;</li>
+<li>evidence that the export franchise is more exposed to Chinese pricing, US tariffs and regulatory friction than the FY21-25 record suggested.</li>
+</ol>
+<p>We read the 1QFY27 print as supporting the first reading more than the second. Standalone revenue grew <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 24">12.3%</span>, and Europe grew <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">17.6%</span> organically on new customers. We nonetheless see three company-specific elements that matter for FY27-30:</p>
+<ol>
+<li>European certification and tender slippage;</li>
+<li>price competition in renal from Chinese dialysers that, management says, enter India duty-free via ASEAN countries; <!-- TR4Q26 p.8; TR1Q27S p.9 --></li>
+<li>a guidance practice that moved targets without always acknowledging it.</li>
+</ol>
+<figure class="exh" id="exh-q_rev"><figcaption><span class="exn">Exhibit 12:</span> Consolidated revenue stalled in 1HFY26 and re-accelerated from 3QFY26, the later quarters helped by acquisitions</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="184.67" y2="184.67"></line><text class="tick" text-anchor="end" x="40" y="188.67">2</text><line class="grid" x1="46" x2="748" y1="103.33" y2="103.33"></line><text class="tick" text-anchor="end" x="40" y="107.33">4</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">6</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="77.91" y="284">3QFY24</text><path class="mark" d="M65.91,266.00V131.90Q65.91,127.90 69.91,127.90H85.91Q89.91,127.90 89.91,131.90V266.00Z" data-tip="3QFY24 · Consolidated revenue: Rs. 3.4bn" fill="var(--s1)"><title>3QFY24 · Consolidated revenue: Rs. 3.4bn</title></path><text class="tick" text-anchor="middle" x="141.73" y="284">4QFY24</text><path class="mark" d="M129.73,266.00V116.24Q129.73,112.24 133.73,112.24H149.73Q153.73,112.24 153.73,116.24V266.00Z" data-tip="4QFY24 · Consolidated revenue: Rs. 3.8bn" fill="var(--s1)"><title>4QFY24 · Consolidated revenue: Rs. 3.8bn</title></path><text class="tick" text-anchor="middle" x="205.55" y="284">1QFY25</text><path class="mark" d="M193.55,266.00V113.51Q193.55,109.51 197.55,109.51H213.55Q217.55,109.51 217.55,113.51V266.00Z" data-tip="1QFY25 · Consolidated revenue: Rs. 3.8bn" fill="var(--s1)"><title>1QFY25 · Consolidated revenue: Rs. 3.8bn</title></path><text class="tick" text-anchor="middle" x="269.36" y="284">2QFY25</text><path class="mark" d="M257.36,266.00V99.20Q257.36,95.20 261.36,95.20H277.36Q281.36,95.20 281.36,99.20V266.00Z" data-tip="2QFY25 · Consolidated revenue: Rs. 4.2bn" fill="var(--s1)"><title>2QFY25 · Consolidated revenue: Rs. 4.2bn</title></path><text class="tick" text-anchor="middle" x="333.18" y="284">3QFY25</text><path class="mark" d="M321.18,266.00V97.49Q321.18,93.49 325.18,93.49H341.18Q345.18,93.49 345.18,97.49V266.00Z" data-tip="3QFY25 · Consolidated revenue: Rs. 4.2bn" fill="var(--s1)"><title>3QFY25 · Consolidated revenue: Rs. 4.2bn</title></path><text class="tick" text-anchor="middle" x="397.00" y="284">4QFY25</text><path class="mark" d="M385.00,266.00V90.74Q385.00,86.74 389.00,86.74H405.00Q409.00,86.74 409.00,90.74V266.00Z" data-tip="4QFY25 · Consolidated revenue: Rs. 4.4bn" fill="var(--s1)"><title>4QFY25 · Consolidated revenue: Rs. 4.4bn</title></path><text class="tick" text-anchor="middle" x="460.82" y="284">1QFY26</text><path class="mark" d="M448.82,266.00V106.03Q448.82,102.03 452.82,102.03H468.82Q472.82,102.03 472.82,106.03V266.00Z" data-tip="1QFY26 · Consolidated revenue: Rs. 4.0bn" fill="var(--s1)"><title>1QFY26 · Consolidated revenue: Rs. 4.0bn</title></path><text class="tick" text-anchor="middle" x="524.64" y="284">2QFY26</text><path class="mark" d="M512.64,266.00V89.48Q512.64,85.48 516.64,85.48H532.64Q536.64,85.48 536.64,89.48V266.00Z" data-tip="2QFY26 · Consolidated revenue: Rs. 4.4bn" fill="var(--s1)"><title>2QFY26 · Consolidated revenue: Rs. 4.4bn</title></path><text class="tick" text-anchor="middle" x="588.45" y="284">3QFY26</text><path class="mark" d="M576.45,266.00V69.23Q576.45,65.23 580.45,65.23H596.45Q600.45,65.23 600.45,69.23V266.00Z" data-tip="3QFY26 · Consolidated revenue: Rs. 4.9bn" fill="var(--s1)"><title>3QFY26 · Consolidated revenue: Rs. 4.9bn</title></path><text class="tick" text-anchor="middle" x="652.27" y="284">4QFY26</text><path class="mark" d="M640.27,266.00V52.64Q640.27,48.64 644.27,48.64H660.27Q664.27,48.64 664.27,52.64V266.00Z" data-tip="4QFY26 · Consolidated revenue: Rs. 5.3bn" fill="var(--s1)"><title>4QFY26 · Consolidated revenue: Rs. 5.3bn</title></path><text class="tick" text-anchor="middle" x="716.09" y="284">1QFY27</text><path class="mark" d="M704.09,266.00V56.34Q704.09,52.34 708.09,52.34H724.09Q728.09,52.34 728.09,56.34V266.00Z" data-tip="1QFY27 · Consolidated revenue: Rs. 5.3bn" fill="var(--s1)"><title>1QFY27 · Consolidated revenue: Rs. 5.3bn</title></path><text class="val" text-anchor="middle" x="716.09" y="46.34">5.25</text></svg></div><p class="note">PendraCare consolidated from 23-Sep-2025 and Citieffe from 7-Nov-2025. Of 4QFY26 revenue of <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 10">Rs. 5.3bn</span>, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 5">Rs. 4.7bn</span> was organic; acquisitions contributed <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 21">Rs. 723mn</span> in 1QFY27.</p><p class="src">Source: Investor presentation 3QFY25; Investor presentation 4QFY25 and FY25; Investor presentation 1QFY26; Investor presentation 2QFY26; Investor presentation 3QFY26; Investor presentation 4QFY26; Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">3QFY24</th><th class="num">4QFY24</th><th class="num">1QFY25</th><th class="num">2QFY25</th><th class="num">3QFY25</th><th class="num">4QFY25</th><th class="num">1QFY26</th><th class="num">2QFY26</th><th class="num">3QFY26</th><th class="num">4QFY26</th><th class="num">1QFY27</th></tr></thead><tbody><tr><th scope="row">Consolidated revenue</th><td class="num"><span class="n" title="Source: Investor presentation 3QFY25 (2025-02-03), slide/page 14">Rs. 3.4bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 13">Rs. 3.8bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 15">Rs. 3.8bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 15">Rs. 4.2bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 11">Rs. 4.2bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 10">Rs. 4.4bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">Rs. 4.0bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 15">Rs. 4.4bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 11">Rs. 4.9bn</span></td><td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 10">Rs. 5.3bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">Rs. 5.3bn</span></td></tr></tbody></table></div></details></figure>
+<h3 id="what-happened-quarter-by-quarter">What happened, quarter by quarter</h3>
+<p>The reset ran in three phases:</p>
+<ol>
+<li><strong>Southern Europe slowed in 4QFY25.</strong> Management linked this to 'supply chain disruption, maybe overstocking' and uncertainty over US tariffs. <!-- TR4Q25 p.8 --></li>
+<li><strong>Europe contracted in 1HFY26:</strong> <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 16">-6.7%</span> yoy in 1QFY26 and <span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 16">-9.6%</span> in 2QFY26. Management gave these reasons: <!-- TR1Q26 p.5, p.9, p.14; TR2Q26 p.4, p.9, p.11 --><ul>
+<li>distributors cut inventory from <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">4-5</span> months of cover to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">2-3</span> months;</li>
+<li>the reopening of the Suez route shortened transit from about <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">2.5 months</span> to about <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">1</span> month, releasing pipeline stock;</li>
+<li>Chinese product was redirected from the US into Europe;</li>
+<li>EU MDR certificate renewals came through only in Apr-Jun 2025.</li>
+</ul>
+</li>
+<li><strong>Recovery from 3QFY26,</strong> helped by the consolidation of the acquisitions. Europe grew <span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 12">25.7%</span> in 3QFY26 and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 11">22.9%</span> in 4QFY26 as reported. Management also cited National Health Service contracts in the UK delayed by <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years after the change of government, and products dropped during the MDR transition. <!-- TR3Q26 p.8, p.16 --></li>
+</ol>
+<p>In India, private-sector revenue grew <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 4 · Himanshu Baid, MD">25%</span> and <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 4 · Himanshu Baid, MD">22.3%</span> in 1QFY26 and 2QFY26, while government business fell <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 4 · Himanshu Baid, MD">10%</span> and <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 4 · Himanshu Baid, MD">14%</span>. Management also pointed to a one-off inventory realignment at distributors around the September 2025 GST rate cut. <!-- TR2Q26 p.5, p.8 --></p>
+<figure class="exh" id="exh-q_table"><figcaption><span class="exn">Exhibit 13:</span> Exports explain the FY26 slowdown: international revenue was flat in 1HFY26 while domestic revenue kept growing at 16-25% a quarter</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Quarter</th>
+<th class="num">Consolidated revenue</th>
+<th class="num">yoy</th>
+<th class="num">Domestic</th>
+<th class="num">International</th>
+<th class="num">Europe</th>
+<th class="num">RoW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1QFY26</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">Rs. 4.0bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 15">+4.8%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 7">+20.1%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 16">-0.9%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 16">-6.7%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 16">+5.3%</span></td>
+</tr>
+<tr>
+<td>2QFY26</td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 15">Rs. 4.4bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 15">+5.7%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 6">+16.9%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 16">+1.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 16">-9.6%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 16">+13.3%</span></td>
+</tr>
+<tr>
+<td>3QFY26</td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 11">Rs. 4.9bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 11">+16.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 12">+16.2%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 12">+16.6%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 12">+25.7%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 12">+9.5%</span></td>
+</tr>
+<tr>
+<td>4QFY26</td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 10">Rs. 5.3bn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 10">+21.3%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">+25%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">+19.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 11">+22.9%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 11">+16.5%</span></td>
+</tr>
+<tr>
+<td>1QFY27</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">Rs. 5.3bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">+30.3%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+16.2%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+36.7%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+43.8%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+30.3%</span></td>
+</tr>
+<tr>
+<td>1QFY27 organic</td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">Rs. 4.5bn</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+12.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+16.2%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+10.4%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+17.6%</span></td>
+<td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">+4%</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">Growth rates as reported in each quarter's presentation. Later presentations reallocated some revenue between Europe and RoW, so levels in later decks can differ from the base used here. Organic growth for 1QFY27 excludes PendraCare and Citieffe.</p><p class="src">Source: Investor deck 1QFY27; Investor presentation 1QFY26; Investor presentation 2QFY26; Investor presentation 3QFY26; Investor presentation 4QFY26; Avendus Spark Research</p></figure>
+<figure class="exh" id="exh-q_reasons"><figcaption><span class="exn">Exhibit 14:</span> Management attributed the slowdown to channel destocking, freight, tariffs and Chinese pricing, not to lost customers</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Quarter</th>
+<th>Reasons management gave on the call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4QFY25</td>
+<td>Southern Europe slowed on 'supply chain disruption, maybe overstocking'; uncertainty over US tariffs</td>
+</tr>
+<tr>
+<td>1QFY26</td>
+<td>European distributors cut inventory cover from <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">4-5</span> months to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 9 · Himanshu Baid, MD">2-3</span> months; Chinese product redirected from the US to Europe; EU MDR renewals arrived only in Apr-Jun 2025; US tariff at <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 5 · Himanshu Baid, MD">50%</span></td>
+</tr>
+<tr>
+<td>2QFY26</td>
+<td>Suez reopening cut transit times (from ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">2.5 months</span> to ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 9 · Himanshu Baid, MD">1</span> month) and released pipeline stock; Chinese dumping; distributor inventory realignment around India's GST rate cut; government business down</td>
+</tr>
+<tr>
+<td>3QFY26</td>
+<td>Freight costs and Chinese pricing in Europe; UK NHS contracts delayed <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 16 · Himanshu Baid, MD">1-1.5</span> years; products dropped during the MDR transition; renal hit by duty-free ASEAN imports; government dialysis contracts delayed</td>
+</tr>
+<tr>
+<td>4QFY26</td>
+<td>Standalone exports negative ex-acquisitions; West Asia logistics; ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">Rs. 90mn</span> of one-off costs in a subsidiary, described on the call both as regulatory provisions and as adviser fees; raw material, wage and freight inflation</td>
+</tr>
+<tr>
+<td>1QFY27</td>
+<td>Europe back on new customers; West Asia <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">-32%</span> with orders stuck at port; renal <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">-3.8%</span> as Polymed chose price over volume against Chinese dialysers</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 1QFY26 earnings call transcript; 2QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); 4QFY26 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); Avendus Spark Research</p></figure>
+<h3 id="the-guidance-record">The guidance record</h3>
+<p>Management gives explicit annual guidance and revisits it every quarter, so the record is easy to score.</p>
+<ul>
+<li><strong>FY22-FY25:</strong> revenue guidance was met or beaten every year on management's own (for FY24-FY25, standalone) scoring. The growth was built on a mix that routinely missed: domestic revenue fell short of guidance in FY23, FY24 and FY25, renal revenue missed in every year from FY22 to FY24, and US revenue targets slipped by years. <!-- TR4Q22 p.9; TR4Q23 p.2; TR3Q24b p.7-8; TR4Q24 p.4, p.7 --></li>
+<li><strong>Management's method:</strong> it describes starting 'with a moderate number' and revising after the first or second quarter. <!-- TR3Q24b p.7 --></li>
+<li><strong>FY26:</strong><ul>
+<li>Revenue guidance was cut from <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">20%</span> to <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">15-16%</span> in Nov-2025, then missed.</li>
+<li>Renal and domestic guidance were missed by a wide margin.</li>
+<li>2HFY26 revenue was guided at <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; management">25%+</span> above 1HFY26 in Nov-2025, restated in Feb-2026 as ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · management guidance; Himanshu Baid, MD">20%</span> ('as I mentioned in the previous call'), and described in May-2026 as 'exactly delivered' at ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">21%</span>. <!-- TR2Q26 p.6; TR3Q26 p.6; TR4Q26 p.5 --></li>
+</ul>
+</li>
+<li><strong>FY27 standalone:</strong> the revenue guidance was widened from <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 19.0-19.5bn</span> in May-2026 to <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">Rs. 19-20bn</span> in Aug-2026, while being described as maintained. <!-- TR4Q26 p.6; TR1Q27S p.4 --></li>
+</ul>
+<p>We read these as signs that guidance is framed as a target to be managed toward rather than a forecast with a stated error band, so we weight management's quarterly commentary on drivers more heavily than the point guidance.</p>
+<figure class="exh" id="exh-guidance_history"><figcaption><span class="exn">Exhibit 15:</span> Revenue guidance was met every year from FY22 to FY25 while domestic and renal targets were routinely missed; FY26 missed on revenue, domestic growth and renal</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Metric</th>
+<th class="num">FY22</th>
+<th class="num">FY23</th>
+<th class="num">FY24</th>
+<th class="num">FY25</th>
+<th>FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue growth: guided</td>
+<td class="num"><span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 4 · management guidance; Himanshu Baid, MD">17-18%</span></td>
+<td class="num"><span class="n" title="Source: 2QFY23 earnings call transcript (2022-12-01), slide/page 2 · management guidance; Himanshu Baid, MD">20%+</span></td>
+<td><span class="n" title="Source: 3QFY24 earnings call transcript (full) (2024-05-27), slide/page 2 · management guidance; Himanshu Baid, MD">22-24%</span> (raised in-year)</td>
+<td class="num"><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 2 · management guidance; Himanshu Baid, MD">22-24%</span></td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">20%</span>, cut to <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">15-16%</span></td>
+</tr>
+<tr>
+<td>Revenue growth: delivered</td>
+<td><span class="n" title="Our calculation: (CC-0735/CC-0779*100-1*100); inputs: Rs. 9.2bn (Investor presentation Jul 2024, p.18); Rs. 7.9bn (Financial presentation 2QFY24, p.10)">17.4%</span> (consolidated)</td>
+<td class="num">~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 2 · Himanshu Baid, MD">21%</span></td>
+<td>~<span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 4 · Himanshu Baid, MD">22.5%</span> standalone</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">22.5%</span> standalone; consolidated <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">~21.5%</span></td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">12.3%</span>; standalone ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">4%</span></td>
+</tr>
+<tr>
+<td>Domestic growth: guided</td>
+<td class="num"><span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 4 · management guidance; Himanshu Baid, MD">25-30%</span></td>
+<td class="num"><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 4 · management guidance; Himanshu Baid, MD">25-30%</span></td>
+<td class="num"><span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 7 · management guidance; Himanshu Baid, MD">25-30%</span></td>
+<td class="num"><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 3 · management guidance; Himanshu Baid, MD">20%+</span></td>
+<td class="num"><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">30-32%</span></td>
+</tr>
+<tr>
+<td>Domestic growth: delivered</td>
+<td class="num">~<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 3 · Himanshu Baid, MD">30%</span></td>
+<td class="num">~<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 2 · Himanshu Baid, MD">15%</span></td>
+<td class="num"><span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 4 · Himanshu Baid, MD">18%</span></td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">18.6%</span> standalone</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">19.6%</span></td>
+</tr>
+<tr>
+<td>Renal revenue: guided</td>
+<td><span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 12 · management guidance; Himanshu Baid, MD">~Rs. 600mn</span> (Feb-2022)</td>
+<td class="num"><span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 11 · management guidance; Himanshu Baid, MD">~Rs. 1.0bn</span></td>
+<td class="num">+<span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">30-40%</span></td>
+<td class="num"><span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 2 · management guidance; Himanshu Baid, MD">Rs. 1.4-1.45bn</span></td>
+<td>+~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">50%</span></td>
+</tr>
+<tr>
+<td>Renal revenue: delivered</td>
+<td class="num"><span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 11 · Himanshu Baid, MD">~Rs. 550-570mn</span></td>
+<td class="num"><span class="n" title="Source: 4QFY23 earnings call transcript (2023-08-17), slide/page 5 · Himanshu Baid, MD">~Rs. 750mn</span></td>
+<td class="num"><span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 14 · Himanshu Baid, MD">~Rs. 900mn</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.5bn</span></td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+24.5%</span> (management: ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · Himanshu Baid, MD">20%</span>)</td>
+</tr>
+<tr>
+<td>EBITDA margin: guided</td>
+<td><span class="n" title="Source: 3QFY22 earnings call transcript (2022-12-01), slide/page 3 · management guidance; Himanshu Baid, MD">24.5-25%</span> (cut twice)</td>
+<td class="num">~<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 5 · management guidance; Himanshu Baid, MD">25%</span></td>
+<td class="num"><span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 3 · management guidance; Himanshu Baid, MD">25-27%</span></td>
+<td class="num">+<span class="n" title="Source: 1QFY25 earnings call transcript (2024-07-31), slide/page 2 · management guidance; Himanshu Baid, MD">100-150bps</span></td>
+<td class="num"><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">25-27%</span></td>
+</tr>
+<tr>
+<td>EBITDA margin: delivered</td>
+<td class="num">~<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 2 · Himanshu Baid, MD">24%</span></td>
+<td><span class="n" title="Source: Financial presentation 2QFY24 (2023-11-07), slide/page 10">24.2%</span> (consolidated)</td>
+<td>~<span class="n" title="Source: 4QFY24 earnings call transcript (2024-05-27), slide/page 4 · Himanshu Baid, MD">26%+</span> standalone</td>
+<td class="num"><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 3 · Himanshu Baid, MD">27.1%</span></td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">26.8%</span> standalone</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor call transcript Jun 2021; 2QFY23 earnings call transcript; 3QFY24 earnings call transcript (full); 1QFY25 earnings call transcript; 4QFY25 earnings call transcript; 2QFY26 earnings call transcript; Investor presentation Jul 2024; Financial presentation 2QFY24; our calculation; 4QFY23 earnings call transcript; 4QFY24 earnings call transcript; 4QFY26 earnings call transcript; 4QFY22 earnings call transcript; 1QFY24 earnings call transcript; 2QFY25 earnings call transcript; Annual Report FY26; 3QFY22 earnings call transcript; 1QFY23 earnings call transcript; Investor presentation 4QFY26; Avendus Spark Research</p></figure>
+<figure class="exh" id="exh-guidance_scorecard"><figcaption><span class="exn">Exhibit 16:</span> FY26 revenue guidance was cut once and still missed, as did domestic and renal targets; margin guidance was met</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Metric</th>
+<th>First guidance (date)</th>
+<th>Later revisions</th>
+<th>Delivered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consolidated revenue growth</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">20%</span> (May-2025)</td>
+<td><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">15-16%</span> (Nov-2025)</td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">12.3%</span> (<span class="n" title="Our calculation: (CB-0577/A-0040*100-1*100); inputs: Rs. 17.6bn (Investor presentation 4QFY26, p.5); Rs. 16.7bn (Annual Report FY26, p.6)">5.4%</span> organic, our calculation)</td>
+</tr>
+<tr>
+<td>Domestic growth</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">30-32%</span> (May-2025)</td>
+<td><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · management guidance; Himanshu Baid, MD">30%</span> (Aug-2025); <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">28-30%</span> (Nov-2025)</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">19.6%</span></td>
+</tr>
+<tr>
+<td>International growth</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">12-15%</span> (May-2025)</td>
+<td><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · management guidance; Himanshu Baid, MD">5-10%</span> (Aug-2025); ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">10%</span> incl. acquisitions (Nov-2025)</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">9.3%</span> incl. acquisitions; organic 'flattish'</td>
+</tr>
+<tr>
+<td>2HFY26 revenue</td>
+<td><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 10.8-10.9bn</span>, <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 6 · management guidance; management">25%+</span> above 1H (Nov-2025)</td>
+<td>~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · management guidance; Himanshu Baid, MD">20%</span> above 1H (Feb-2026)</td>
+<td><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">Rs. 10.3bn</span>, ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">21%</span> above 1H</td>
+</tr>
+<tr>
+<td>Renal revenue</td>
+<td>~<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">50%</span> growth (May-2025)</td>
+<td><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · management guidance; Himanshu Baid, MD">Rs. 2.0bn+</span> (Nov-2025); <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">~Rs. 1.8bn</span> (Feb-2026)</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">Rs. 1.9bn</span>, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 12">+24.5%</span> (management: ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · Himanshu Baid, MD">20%</span>)</td>
+</tr>
+<tr>
+<td>Dialysis machines placed</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">500-600</span> (May-2025)</td>
+<td>~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · management guidance; Himanshu Baid, MD">450</span> (Feb-2026)</td>
+<td class="num">~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">450</span></td>
+</tr>
+<tr>
+<td>Standalone EBITDA margin</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 5 · management guidance; Himanshu Baid, MD">25-27%</span> (May-2025)</td>
+<td>unchanged</td>
+<td class="num"><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">~26.8%</span></td>
+</tr>
+<tr>
+<td>Capex</td>
+<td><span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 10 · management guidance; Himanshu Baid, MD">~Rs. 5.0bn</span> over two years (May-2025)</td>
+<td><span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · management guidance; Himanshu Baid, MD">~Rs. 2.5bn+</span> for FY26 (Aug-2025)</td>
+<td class="num"><span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">~Rs. 3.0bn</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 4QFY25 earnings call transcript; 2QFY26 earnings call transcript; 4QFY26 earnings call transcript; Investor presentation 4QFY26; Annual Report FY26; our calculation; 1QFY26 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); Avendus Spark Research</p></figure>
+<h3 id="what-management-is-guiding-for-fy27-and-fy30">What management is guiding for FY27 and FY30</h3>
+<p><strong>FY27 guidance</strong> (given 25-May-2026 and 'maintained' on 10-Aug-2026): <!-- TR4Q26 p.6-7; TR1Q27S p.4 --></p>
+<ul>
+<li><strong>Consolidated revenue:</strong> <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 23-24bn</span>, including a full year of PendraCare and Citieffe. That implies <span class="n" title="Our calculation: (WM-0001/A-0039*100-1*100); inputs: Rs. 23.0bn (4QFY26 earnings call transcript, p.6); Rs. 18.8bn (Annual Report FY26, p.6)">22.6</span>-<span class="n" title="Our calculation: (WM-0002/A-0039*100-1*100); inputs: Rs. 24.0bn (4QFY26 earnings call transcript, p.6); Rs. 18.8bn (Annual Report FY26, p.6)">28.0%</span> growth on FY26 (our calculation).</li>
+<li><strong>Standalone revenue:</strong> <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">Rs. 19-20bn</span>, with domestic revenue growing <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">over 20%</span> and international revenue <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · management guidance; Himanshu Baid, MD">over 15%</span>.</li>
+<li><strong>EBITDA margin:</strong> standalone <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 6 · management guidance; Himanshu Baid, MD">25-27%</span>, consolidated <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 7 · management guidance; Himanshu Baid, MD">23-25%</span>.</li>
+<li><strong>Capex:</strong> <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 7 · management guidance; Himanshu Baid, MD">Rs. 2.0-2.25bn</span>.</li>
+</ul>
+<p><strong>Vision 2030</strong> ('PolyMed 3.0'): double revenue by FY30. Management characterized the current business as <span class="n nl" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 7 · management guidance; Himanshu Baid, MD">around 80% organic business and 20% inorganic business</span>, and expects a similar split. An analyst on the same call worked this out as about <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 7 · Bharat C. Shah (analyst); MD replied 'So that's a trajectory basically'">14-15%</span> a year organic and <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 7 · Bharat C. Shah (analyst); MD replied 'So that's a trajectory basically'">3-4%</span> from acquisitions, which the MD described as 'a trajectory basically'. <!-- TR1Q27S p.2, p.7 --></p>
+<p>The FY27 plan rests on four things:</p>
+<ol>
+<li>a recovery in Europe that 1QFY27 has begun to show;</li>
+<li>a normalization of West Asia shipping, which 1QFY27 has not;</li>
+<li>renal growth despite Chinese price pressure, which management is contesting through an anti-dumping petition;</li>
+<li>a full-year contribution from the acquired businesses, whose margins management puts below the group's.</li>
+</ol>
+<aside class="callout debate"><p class="ct">What would change our read</p><p>Evidence that FY26 was structural rather than cyclical would include three things:</p>
+<ol>
+<li>Organic export growth staying in single digits once West Asia logistics normalize.</li>
+<li>Renal revenue declining for a second year without an anti-dumping duty.</li>
+<li>Receivable days staying above the FY26 level, which management attributed to 'better terms' extended to international customers. <!-- TR4Q26 p.12 --></li>
+</ol>
+<p>Evidence that it was cyclical would be:</p>
+<ul>
+<li>organic Europe growth holding in the high teens through FY27;</li>
+<li>renal volumes recovering after a DGTR (Directorate General of Trade Remedies) determination.</li>
+</ul></aside>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a2.html"><span>Previous</span>A2 How Polymed makes money</a><a class="next" href="a4-1.html"><span>Next</span>A4.1 Infusion therapy</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

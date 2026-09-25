@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A7 What drives growth and margins: the driver maps · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html" class="active">A7 What drives growth and margins: the driver maps</a></li><li class="l3"><a href="#growth-drivers-ranked-4">Growth drivers, ranked</a></li><li class="l3"><a href="#margin-drivers-ranked-4">Margin drivers, ranked</a></li><li class="l3"><a href="#the-driver-matrix-by-business-line">The driver matrix by business line</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a6.html"><span>Previous</span>A6 Manufacturing, capacity and R&amp;D</a><a class="next" href="a8.html"><span>Next</span>A8 Competitive advantages and vulnerabilities</a></nav>
+<h2 id="a7">A7 What drives growth and margins: the driver maps</h2>
+<p>This section pulls together the company-specific drivers from the business-line chapters in Section A4. Each driver is labelled by its origin:</p>
+<ul>
+<li><strong>Management target:</strong> a figure or ambition management has stated.</li>
+<li><strong>Our view:</strong> our reading of the evidence, with the evidence shown.</li>
+</ul>
+<p>Neither is a forecast. The ranking reflects how much each driver can move group revenue or margin over the medium term, on the disclosed evidence.</p>
+<h3 id="growth-drivers-ranked-4">Growth drivers, ranked</h3>
+<figure class="exh" id="exh-growth_drivers"><figcaption><span class="exn">Exhibit 79:</span> Growth drivers: infusion mix and exports, renal volumes and the Indian channel matter most; cardiology and orthopaedics are options that still need proof</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th class="num">Rank</th>
+<th>Driver</th>
+<th>Mechanism</th>
+<th>Evidence</th>
+<th>Origin</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="num">1</td>
+<td>Safety cannulas and flush syringes in infusion exports</td>
+<td>Conversion from conventional to safety cannulas raises price per unit; flush syringes add a second high-volume family</td>
+<td>Infusion grew <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">11.1%</span> in 1QFY27 after a <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">1.5%</span> decline in FY26; flush syringes are <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> of standalone turnover</td>
+<td>Our view</td>
+<td>A4.1</td>
+</tr>
+<tr>
+<td class="num">2</td>
+<td>Renal volumes: machines, single-use conversion and share gains</td>
+<td>Each installed machine pulls through bloodlines, needles and dialysers; single use multiplies dialyser volume</td>
+<td>Installed base ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">1,000</span> machines; India share targets of <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 12 · management guidance; Himanshu Baid, MD">15-17%</span> for dialysers within <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 12 · management guidance; Himanshu Baid, MD">2-3</span> years (May-2025, repeated Feb-2026) and <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 18 · management guidance; Himanshu Baid, MD">20-25%</span> for renal by 2030 (Feb-2025), set before the 1QFY27 decline</td>
+<td>Management target</td>
+<td>A4.3</td>
+</tr>
+<tr>
+<td class="num">3</td>
+<td>The Indian channel: private hospitals and a larger sales force</td>
+<td>Wider hospital coverage and speciality products</td>
+<td>India grew at a <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">21%</span> CAGR over FY20-FY26 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">16.2%</span> in 1QFY27</td>
+<td>Management target and our view</td>
+<td>A5</td>
+</tr>
+<tr>
+<td class="num">4</td>
+<td>European recovery and direct selling</td>
+<td>New customers after destocking; direct presence in selected countries; MDR exits by smaller suppliers</td>
+<td>Europe grew <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">17.6%</span> organically in 1QFY27; <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 8 · management guidance; Himanshu Baid, MD">5-6</span> new customers from Apr-2026</td>
+<td>Management target</td>
+<td>A3, A5</td>
+</tr>
+<tr>
+<td class="num">5</td>
+<td>Cardiology: stents, catheters and the YEIDA plant</td>
+<td>PendraCare's catheters and OEM business; in-house stents in India; a dedicated plant from 1QFY28</td>
+<td>Cardiology revenue of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">Rs. 286mn</span> in 1QFY27 (vs. <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">Rs. 29mn</span>); ambition of <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 7 · management guidance; Himanshu Baid, MD">Rs. 3-4bn</span> of India cardiology revenue by 2030, set in Oct-2024 before the PendraCare deal</td>
+<td>Management target</td>
+<td>A4.8</td>
+</tr>
+<tr>
+<td class="num">6</td>
+<td>Orthopaedics: Citieffe</td>
+<td>Growth outside Italy; product transfers to India</td>
+<td>Management targets low-double-digit growth (<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 16 · management guidance; Rahul Gautam, President - Strategy &amp; Corporate Development">10-12%</span>) for Citieffe in FY27</td>
+<td>Management target</td>
+<td>A4.9</td>
+</tr>
+<tr>
+<td class="num">7</td>
+<td>New capacity</td>
+<td>Palwal, Haridwar Phase-II and YEIDA add capacity for syringes, renal and cardiology</td>
+<td>Utilization of post-2021 capacity at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">65-70%</span> (May-2026); capital commitments of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 84">Rs. 1.4bn</span></td>
+<td>Management target</td>
+<td>A6</td>
+</tr>
+<tr>
+<td class="num">8</td>
+<td>Launches from the pipeline</td>
+<td><span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 8 · management guidance; Himanshu Baid, MD">25-30</span> launches a year from a pipeline of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 14 · management guidance">100+</span> products</td>
+<td>~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 4 · Himanshu Baid, MD">35 products</span> launched in FY26, including acquired products</td>
+<td>Management target</td>
+<td>A6</td>
+</tr>
+<tr>
+<td class="num">9</td>
+<td>The US</td>
+<td>Lower tariffs on India than on China; new 510(k)s; OEM and CDMO contracts</td>
+<td>US exports of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> expected in FY27; tariff on Indian devices <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · Himanshu Baid, MD">10%</span></td>
+<td>Our view</td>
+<td>A5, B4</td>
+</tr>
+<tr>
+<td class="num">10</td>
+<td>Further acquisitions</td>
+<td>Buying technology and approvals in adjacencies</td>
+<td>Vision 2030 targets <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 11 · management guidance">2x</span> revenue by FY30; management says it will pause to absorb the FY26 deals</td>
+<td>Management target</td>
+<td>A9</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; Annual Report FY26; BRSR FY26; 4QFY26 earnings call transcript; 4QFY25 earnings call transcript; 3QFY26 earnings call transcript (6 Feb 2026); 3QFY25 earnings call transcript; 1QFY27 earnings call (Aug 10 2026); 2QFY25 earnings call transcript; Citieffe acquisition call transcript (25 Sep 2025); Avendus Spark Research</p></figure>
+<!-- DK1Q27 p.11, p.26, p.27; AR26 p.47; BRSR26 p.27; TR4Q26 p.4, p.16; TR4Q25 p.12; TR3Q26 p.5; TR3Q25 p.18; TR3Q26 p.8; TR1Q27S p.3, p.8, p.12; TR2Q25 p.7; TR4Q26 p.14; AR26 p.14, p.84; TRCIT pp.11-12 -->
+<h3 id="margin-drivers-ranked-4">Margin drivers, ranked</h3>
+<p>The standalone business earned an operating EBITDA margin of <span class="n" title="Our calculation: A-0355/A-0350*100; inputs: Rs. 4.5bn (Annual Report FY26, p.32); Rs. 16.6bn (Annual Report FY26, p.32)">26.8%</span> in FY26 (our calculation), and management guides <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · management guidance; Himanshu Baid, MD">25-27%</span> for FY27. <!-- AR26 p.8; TR1Q27S p.3 --></p>
+<p>The consolidated margin is lower, at <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">24.1%</span> in 1QFY27 against <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 24">28%</span> standalone, which management attributes to the lower margins of the subsidiaries. <!-- DK1Q27 pp.24-25; TR4Q26 p.7 --></p>
+<figure class="exh" id="exh-margin_drivers"><figcaption><span class="exn">Exhibit 80:</span> Margin drivers: mix and acquired-business margins dominate; materials, labour and freight are the cost swings; automation is the main offset</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th class="num">Rank</th>
+<th>Driver</th>
+<th>Direction</th>
+<th>Mechanism</th>
+<th>Evidence</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="num">1</td>
+<td>Mix and acquired-business margins</td>
+<td>+ gross, − EBITDA for now</td>
+<td>The acquired cardiology and orthopaedics businesses carry higher gross margins but, while sub-scale, lower EBITDA margins (management)</td>
+<td>Consolidated gross margin rose <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">495bps</span> yoy to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">73.4%</span> in 1QFY27, helped also by price increases and an inventory gain, while consolidated EBITDA margin was <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 25">24.1%</span></td>
+<td>A1, A4.8, A4.9</td>
+</tr>
+<tr>
+<td class="num">2</td>
+<td>Raw materials and the pass-through lag</td>
+<td>±</td>
+<td>Polymers and components are mostly imported; price changes pass through with a lag</td>
+<td>Materials consumed were <span class="n" title="Our calculation: A-0442/A-0350*100; inputs: Rs. 5.4bn (Annual Report FY26, p.64); Rs. 16.6bn (Annual Report FY26, p.32)">32.4%</span> of standalone revenue in FY26 (our calculation)</td>
+<td>A2</td>
+</tr>
+<tr>
+<td class="num">3</td>
+<td>Labour cost and automation</td>
+<td>− wages, + automation</td>
+<td>Minimum-wage increases against automation and yield gains</td>
+<td>Haryana minimum wage up <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">35%</span> from Apr-2026; employee cost <span class="n" title="Our calculation: A-0446/A-0350*100; inputs: Rs. 3.1bn (Annual Report FY26, p.64); Rs. 16.6bn (Annual Report FY26, p.32)">18.8%</span> of standalone revenue; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 29">530</span> automatic assembly machines</td>
+<td>A2, A6</td>
+</tr>
+<tr>
+<td class="num">4</td>
+<td>Utilization and operating leverage</td>
+<td>+</td>
+<td>Fixed costs spread over rising volumes; new plants dilute at first</td>
+<td>Utilization of post-2021 capacity at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">65-70%</span></td>
+<td>A6</td>
+</tr>
+<tr>
+<td class="num">5</td>
+<td>Pricing against Chinese competition</td>
+<td>−</td>
+<td>Price concessions in European tenders; in renal, lost volume where Polymed holds price</td>
+<td>Renal revenue fell <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">3.8%</span> in 1QFY27 as Polymed raised prices rather than defend volume</td>
+<td>A3, A4.1, A4.3</td>
+</tr>
+<tr>
+<td class="num">6</td>
+<td>Freight</td>
+<td>±</td>
+<td>Container rates and routing, especially around the Red Sea and West Asia</td>
+<td>Freight was <span class="n" title="Our calculation: A-0512/A-0350*100; inputs: Rs. 334mn (Annual Report FY26, p.79); Rs. 16.6bn (Annual Report FY26, p.32)">2.0%</span> of standalone revenue in FY26 (our calculation)</td>
+<td>A2</td>
+</tr>
+<tr>
+<td class="num">7</td>
+<td>Currency</td>
+<td>+ on a weaker rupee</td>
+<td><span class="n" title="Our calculation: A-0419/A-0350*100; inputs: Rs. 10.7bn (Annual Report FY26, p.51); Rs. 16.6bn (Annual Report FY26, p.32)">64.2%</span> of standalone revenue is earned in foreign currency; no forwards were outstanding at FY26 year-end</td>
+<td>FX gains of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 78">Rs. 381mn</span> were booked in other income</td>
+<td>A2</td>
+</tr>
+<tr>
+<td class="num">8</td>
+<td>Outsourced job work</td>
+<td>±</td>
+<td>Job work, mostly through promoter firm Vitromed, is a variable cost</td>
+<td>Job-work charges were <span class="n" title="Our calculation: A-0506/A-0350*100; inputs: Rs. 1.0bn (Annual Report FY26, p.79); Rs. 16.6bn (Annual Report FY26, p.32)">6.3%</span> of standalone revenue (our calculation)</td>
+<td>A2, A9</td>
+</tr>
+<tr>
+<td class="num">9</td>
+<td>R&amp;D ramp-up</td>
+<td>−</td>
+<td>Management plans to double R&amp;D spend within <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 10 · management guidance">3-4</span> years</td>
+<td>R&amp;D <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 49">1.6%</span> of revenue in FY26</td>
+<td>A6</td>
+</tr>
+<tr>
+<td class="num">10</td>
+<td>Export incentives</td>
+<td>+</td>
+<td>RoDTEP and duty drawback</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 133mn</span> in FY26</td>
+<td>A2</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 1QFY27 earnings call (Aug 10 2026); Investor deck 1QFY27; Investor presentation 4QFY26; 4QFY26 earnings call transcript; Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- TR1Q27S p.3, p.4; DK1Q27 pp.24-25; DK4Q26 p.29; TR4Q26 p.7, p.14; AR26 pp.10, 47, 49, 78, 86 -->
+<h3 id="the-driver-matrix-by-business-line">The driver matrix by business line</h3>
+<p>The matrix sets out what drives each business line; the A4 chapters give the evidence.</p>
+<figure class="exh" id="exh-driver_matrix"><figcaption><span class="exn">Exhibit 81:</span> Driver matrix: what moves growth and margins in each business line</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Business line</th>
+<th>Growth drivers</th>
+<th>Margin drivers</th>
+<th>KPI to track</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infusion therapy</td>
+<td>Hospital admissions and insertions; conversion to safety cannulas; flush syringes; European tenders; US access</td>
+<td>Automation and needle-making; polymer prices; European price competition; freight</td>
+<td>Infusion growth; safety mix; European organic growth</td>
+<td>A4.1</td>
+</tr>
+<tr>
+<td>Vascular access and oncology (Plan1)</td>
+<td>Ports and PICCs in cancer care; European tenders; transfer of products to India</td>
+<td>Scale at the Amaro plant; mix of ports and PICCs</td>
+<td>Plan1 revenue and profit</td>
+<td>A4.2</td>
+</tr>
+<tr>
+<td>Renal care</td>
+<td>Dialysis sessions (PMNDP, private chains); machine placements; single-use conversion; share against imports</td>
+<td>Dialyser pricing against Chinese imports; PLI incentive; local content in machines</td>
+<td>Renal growth; machines placed; DGTR outcome</td>
+<td>A4.3</td>
+</tr>
+<tr>
+<td>Blood management</td>
+<td>Component separation (multi-bag, SAGM and filtered systems); Palwal capacity from Mar-2027; collection volumes; exports and DEHP-free bags</td>
+<td>Tender pricing against incumbent capacity (HLL, Terumo Penpol); mix; utilization of new capacity; bought-in PVC film</td>
+<td>BRSR share; Palwal commissioning; India collections</td>
+<td>A4.4</td>
+</tr>
+<tr>
+<td>Diagnostics (blood collection)</td>
+<td>Laboratory test volumes and chain consolidation; cross-selling kits through the tube channel; public-procurement preference</td>
+<td>Making tubes in-house rather than buying them (our inference); IVD PLI incentive; Chinese tube pricing</td>
+<td>Traded-goods sales; IVD PLI claims; revenue [not disclosed]</td>
+<td>A4.5</td>
+</tr>
+<tr>
+<td>Anaesthesia, respiratory and critical care</td>
+<td>ICU bed growth; critical-care launches</td>
+<td>Product mix; tender pricing</td>
+<td>Launches in critical care</td>
+<td>A4.6</td>
+</tr>
+<tr>
+<td>Gastro, urology and surgery</td>
+<td>Surgical volumes and drainage; enteral-connector conversion; cross-selling through critical care</td>
+<td>Commodity pricing against many local and Chinese makers; raw materials; exit from government tenders; no premium catheter range</td>
+<td>BRSR shares of surgery and urology (both lower in FY26, our calculation); enteral launches</td>
+<td>A4.7</td>
+</tr>
+<tr>
+<td>Cardiology</td>
+<td>Stent adoption in India; PendraCare OEM and own-brand catheters; the YEIDA plant</td>
+<td>Scale; NPPA stent price ceilings; integration costs</td>
+<td>Cardiology revenue; stents deployed; PendraCare losses</td>
+<td>A4.8</td>
+</tr>
+<tr>
+<td>Orthopaedics (Citieffe)</td>
+<td>Trauma volumes in Italy, Mexico and the US; new geographies</td>
+<td>Manufacturing transfer to India; receivables; FX</td>
+<td>Orthopaedics revenue; Citieffe margins</td>
+<td>A4.9</td>
+</tr>
+<tr>
+<td>Components and OEM</td>
+<td>OEM and CDMO contracts; components for other device makers</td>
+<td>Contract pricing; utilization</td>
+<td>OEM share; CDMO contracts</td>
+<td>A4.10</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Avendus Spark Research</p></figure>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a6.html"><span>Previous</span>A6 Manufacturing, capacity and R&amp;D</a><a class="next" href="a8.html"><span>Next</span>A8 Competitive advantages and vulnerabilities</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

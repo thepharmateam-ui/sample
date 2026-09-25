@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B5 Structural trends · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html" class="active">B5 Structural trends</a></li><li class="l3"><a href="#safety-engineered-devices">Safety-engineered devices</a></li><li class="l3"><a href="#pvc-and-dehp">PVC and DEHP</a></li><li class="l3"><a href="#sterilization-ethylene-oxide-under-pressure-gamma-in-house">Sterilization: ethylene oxide under pressure, gamma in-house</a></li><li class="l3"><a href="#closed-systems-and-needle-free-access">Closed systems and needle-free access</a></li><li class="l3"><a href="#home-dialysis-and-single-use-dialysers">Home dialysis and single-use dialysers</a></li><li class="l3"><a href="#automation-and-labour-cost">Automation and labour cost</a></li><li class="l3"><a href="#china-1-tariffs-and-supply-security">China+1, tariffs and supply security</a></li><li class="l3"><a href="#eu-mdr-and-supplier-attrition">EU MDR and supplier attrition</a></li><li class="l3"><a href="#consolidation-and-m-amp-a">Consolidation and M&amp;A</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="b4.html"><span>Previous</span>B4 Export-market regimes</a><a class="next" href="c1.html"><span>Next</span>C1 Risk register</a></nav>
+<h2 id="b5">B5 Structural trends</h2>
+<p>Nine structural trends will shape disposables over the rest of the decade. Most of them favour a low-cost maker that already has safety-engineered and PVC-free products, captive gamma sterilization and European and US approvals, which describes Polymed. Two cut the other way: Chinese makers redirecting volume from the US into Polymed's markets, and consolidation that gives rivals more scale and capital.</p>
+<figure class="exh" id="exh-b5_map"><figcaption><span class="exn">Exhibit 118:</span> Nine trends: most favour Polymed's cost base and approvals; Chinese diversion and consolidation are the headwinds</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Trend</th>
+<th>Evidence</th>
+<th>What it means for Polymed</th>
+<th>Net effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safety-engineered devices</td>
+<td>EU sharps directive; vendor estimates of the safety share of the IV-catheter market conflict: <span class="n" title="Source: Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page (2026) · third-party estimate">30.3%</span> (Future Market Insights, CY26) against <span class="n" title="Source: Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page (2026-05) · third-party estimate">62%</span> (Persistence, CY25)</td>
+<td>Higher price per insertion; Polymed has US and EU clearances for safety and closed catheters</td>
+<td>Positive</td>
+</tr>
+<tr>
+<td>PVC and DEHP phase-out</td>
+<td>EU sunset for DEHP in devices <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 July 2030</span></td>
+<td>Forces reformulation of blood bags, bloodlines and tubing; <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 65">75%</span> of Polymed's units are already PVC-free</td>
+<td>Positive, with cost</td>
+</tr>
+<tr>
+<td>EtO under pressure; gamma in-house</td>
+<td>~<span class="n" title="Source: FDA – Sterilization for Medical Devices (EtO share) – read via WebFetch (curl 401) (2025-05-14)">50%</span> of US sterile devices use EtO; tighter US EPA rules</td>
+<td>Captive gamma plant cuts lead time and dependence on contract sterilizers</td>
+<td>Positive</td>
+</tr>
+<tr>
+<td>Closed systems and needle-free access</td>
+<td>BD and ICU Medical sell connectors, caps and closed systems as a package</td>
+<td>Value shifts from the catheter to the system; Polymed has the parts but not pumps</td>
+<td>Mixed</td>
+</tr>
+<tr>
+<td>Home dialysis and single-use dialysers</td>
+<td>PD <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">11%</span> of patients worldwide on Fresenius's estimate, against below <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 267">5%</span> in F&amp;S's markets; India's parliamentary panel backs home PD</td>
+<td>PD would shift demand from haemodialysis consumables to PD kits; single use would multiply dialyser volumes</td>
+<td>Mixed</td>
+</tr>
+<tr>
+<td>Automation and labour cost</td>
+<td>F&amp;S puts wages below <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$2 per hour</span> in India, against <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$5-6 per hour</span> in China and <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$28-30 per hour</span> in the US (2024)</td>
+<td>The labour edge is large but shrinking in weight as automation rises</td>
+<td>Positive, eroding</td>
+</tr>
+<tr>
+<td>China+1 and reshoring</td>
+<td>US syringe imports from India reached <span class="n" title="Our calculation: F-0176/F-0175; inputs: $14.8mn (UN Comtrade - USA imports HS 901831, 2025, by partner, p.1); $930k (UN Comtrade - USA imports HS 901831, 2024, by partner, p.1)">16x</span> their 2024 level in 2025 while those from China fell (our calculation)</td>
+<td>Openings in the US and with OEMs, so far mostly in syringes</td>
+<td>Positive, slow</td>
+</tr>
+<tr>
+<td>EU MDR supplier attrition</td>
+<td><span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">51</span> notified bodies; legacy deadlines to 2027-2028; products dropped in transition</td>
+<td>Fewer, larger bidders in EU tenders; Polymed has paid the entry cost</td>
+<td>Positive</td>
+</tr>
+<tr>
+<td>Consolidation and M&amp;A</td>
+<td>Teleflex, Baxter and BD reshaping; KKR, ADIA, Warburg Pincus and Temasek funding Indian rivals</td>
+<td>Divested lines may source from low-cost makers; rivals gain capital</td>
+<td>Mixed</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Council Directive 2010/32/EU - prevention from sharp injuries in hospital and healthcare sector; Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page; Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page; Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV); Annual Report FY25; FDA – Sterilization for Medical Devices (EtO share) – read via WebFetch (curl 401); Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025; ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025; Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025; Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025); PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare; Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025); UN Comtrade - USA imports HS 901831, 2024, by partner; UN Comtrade - USA imports HS 901831, 2025, by partner; COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD); Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions; 3QFY26 earnings call transcript (6 Feb 2026); Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025; Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations); Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025); Temasek acquires minority stake in Romsons Group; our calculation; Avendus Spark Research</p></figure>
+<!-- EU_DIR2010_32 pp.2, 6; VND_FMI_PIVC p.1; VND_PMR_PIVC p.1; EU_REACH2023_2482 p.4; AR25 p.65; FDA_ETO p.1; BD_10K25 p.1; ICUI_10K25 p.1; FMC_20F25 p.1; RHP_NEPHRO p.267; PIB_PSC176_2608 p.1; DRHP_SMT p.185; F_CT_USA_M_901831_2024 p.1; F_CT_USA_M_901831_2025 p.1; EU_COM2025_1023 p.1; EU_REG2023_607 p.4; TR3Q26 p.8; TFX_10K25 p.1; BAX_10K25 p.1; DRHP_INTEG p.216; MB_ROMSONS p.1 -->
+<h3 id="safety-engineered-devices">Safety-engineered devices</h3>
+<p>The EU's sharps directive (Directive 2010/32/EU), transposed by <span class="n" title="Source: Council Directive 2010/32/EU - prevention from sharp injuries in hospital and healthcare sector (2010-05-10), slide/page 2">11 May 2013</span>, requires employers to provide devices with safety-engineered protection where a risk assessment calls for it, and bans recapping. CRISIL lists the safety devices now in use in India: safety IV cannulas and scalp-vein sets in infusion, safety blood-collection sets and fistula needles in dialysis, and safety Huber needles and closed IV catheter systems in critical care. <!-- EU_DIR2010_32 pp.2, 6; PD24 p.137 --></p>
+<p>How far conversion has gone is uncertain. Two market-research vendors put the safety share of the IV-catheter market at <span class="n" title="Source: Peripheral IV Catheter Market Size, Share, and Growth Forecast 2026-2033 – summary page (2026-05) · third-party estimate">62%</span> (Persistence, CY25) and <span class="n" title="Source: Peripheral Intravenous Catheter Market Size, Share &amp; Forecast to 2036 – summary page (2026) · third-party estimate">30.3%</span> (Future Market Insights, CY26); both are vendor estimates, and neither splits the figure by region. <!-- VND_PMR_PIVC p.1; VND_FMI_PIVC p.1 --></p>
+<p><strong>What it means for Polymed.</strong> Each hospital that converts moves from a conventional to a higher-priced safety cannula, and Polymed has FDA 510(k) clearances for its safety and closed IV catheters as well as EU approvals (Section A4.1). The share of its cannula volume that is already safety-engineered is [not disclosed], which is the number that would show how much conversion is left. <!-- FDA510K_POLY p.1 --></p>
+<h3 id="pvc-and-dehp">PVC and DEHP</h3>
+<p>DEHP is the plasticizer that makes PVC flexible in blood bags, bloodlines and infusion tubing. Under Regulation (EU) 2023/2482, its use in medical devices has a latest application date of <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 January 2029</span> and a sunset date of <span class="n" title="Source: Commission Regulation (EU) 2023/2482 - DEHP in medical devices (REACH Annex XIV) (2023-11-13), slide/page 4">1 July 2030</span>, after which it needs an authorization. ICU Medical lists demand for "more environmentally friendly products" and "materials of concern" among the factors it competes on, and Fresenius introduced a PVC-free foil for its dialysate bags in 2025 and cut the material used in its bloodlines. HLL, which claims a dominant share of India's blood-bag market, sells PVC bags. <!-- EU_REACH2023_2482 pp.1, 4; ICUI_10K25 p.1; FMC_20F25 p.1; HLL_BISPR p.1 --></p>
+<p>Polymed sold <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 65">965.3mn units</span> of PVC-free products in FY25, <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 65">75%</span> of the finished goods it sold, and aims to develop PVC-free versions for at least <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 20 · management guidance">15%</span> of its portfolio by 2035. Its catalogue already includes blood bags with TOTM plasticizer for platelet storage, a DEHP- and PVC-free burette set, PVC-free extension lines and a DEHP-free Ryle's tube. <!-- AR25 p.65; BRSR26 p.20; CATDOM25 pp.13, 16, 25, 32 --></p>
+<p><strong>What it means for Polymed.</strong> We infer that the unit share is high because many of its products, such as cannulas, contain no PVC in the first place; the harder part is the PVC-based lines in blood management, renal and infusion tubing that it sells into Europe. We see the EU deadline as a moderate positive: it raises the cost of staying in the EU market for PVC-based rivals, but alternative plasticizers cost more and must be revalidated product by product.</p>
+<h3 id="sterilization-ethylene-oxide-under-pressure-gamma-in-house">Sterilization: ethylene oxide under pressure, gamma in-house</h3>
+<p>About <span class="n" title="Source: FDA – Sterilization for Medical Devices (EtO share) – read via WebFetch (curl 401) (2025-05-14)">50%</span> of sterile devices in the US are sterilized with ethylene oxide (EtO), per the FDA, which supports alternatives and treats radiation as an "established" method. The pressure on EtO is regulatory and legal:</p>
+<ul>
+<li>the US EPA's emissions rule for sterilization facilities took effect on 5-Apr-2024 with two years to comply, and a presidential proclamation of Jul-2025 gave certain facilities two more years;</li>
+<li>the EPA's interim registration decision of Jan-2025 tightens exposure limits, which BD warns could reduce sterilization capacity;</li>
+<li>contract sterilizers have faced lawsuits. <!-- FDA_ETO p.1; BD_10K25 p.1; TFX_10K25 p.1 --></li>
+</ul>
+<p>Polymed commissioned a captive gamma-sterilization plant in 2025, which management expects to expand <span class="n nl" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 7 · Himanshu Baid, MD">from 300 kci to 2,000 kci</span>. Before it, sterilization was outsourced, and management called gamma a "more safer process compared to the ETO gas which we use today". Citieffe still outsources sterilization but plans to bring it in-house. <!-- DK2Q26 p.24; TR1Q26 p.7; TR1Q25 p.3; DKCIT p.16 --></p>
+<p><strong>What it means for Polymed.</strong> Captive gamma shortens lead times, removes a dependence on third-party EtO capacity that tighter rules may shrink, and lowers cost at scale; management cites gamma savings among its offsets to raw-material inflation. The share of output that has moved to gamma, and what still needs EtO, is [not disclosed]. <!-- TR4Q26 p.6 --></p>
+<h3 id="closed-systems-and-needle-free-access">Closed systems and needle-free access</h3>
+<p>The leading infusion suppliers now sell the catheter as part of a system: BD's range includes flush syringes, disinfecting caps, needle-free connectors and closed-system transfer devices, and ICU Medical offers "a one-stop shop" of catheters, connectors, sets and pumps. CRISIL counts closed IV catheter systems among the safety devices in use in India. <!-- BD_10K25 p.1; ICUI_10K25 p.1; PD24 p.137 --></p>
+<p><strong>What it means for Polymed.</strong> It has most of the parts: a closed IV catheter system cleared in the US (Nouvo), needle-free connectors, disinfecting caps and prefilled flush syringes. It lacks infusion pumps, which limits it in full-line US contracts (Section A4.1). We see this trend as raising the value per line for Polymed in Europe and India, where it sells without pumps, and as a barrier in the US. <!-- FDA510K_POLY p.1; CATDOM25 pp.6, 9-10 --></p>
+<h3 id="home-dialysis-and-single-use-dialysers">Home dialysis and single-use dialysers</h3>
+<p>Estimates of how many patients dialyse at home depend on who counts:</p>
+<ul>
+<li><strong>Fresenius (worldwide, CY25):</strong> <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">89%</span> of patients received haemodialysis in a clinic and <span class="n" title="Source: Fresenius Medical Care AG – Form 20-F (Annual Report) for fiscal year 2025 (2026-02-24)">11%</span> peritoneal dialysis (PD), mostly at home.</li>
+<li><strong>F&amp;S (its study markets, 2024):</strong> PD below <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 267">5%</span> of patients and home haemodialysis below <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 269">1%</span>; it expects PD's share to stay minimal. In India, clinic haemodialysis is <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 286">&gt;98%</span> of dialysis therapies. <!-- FMC_20F25 p.1; RHP_NEPHRO pp.267, 269, 286 --></li>
+</ul>
+<p>Policy may push the other way in India. The parliamentary health committee's Aug-2026 report on kidney disease recommends promoting home-based PD and mandatory insurance for kidney patients. PM-JAY already pays a PD package of <span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,500</span> for catheter insertion and <span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,000</span> a day for fluid and disposables, and Assam's health mission funds PD at Rs. <span class="n" title="Source: PMNDP Assam operational guidelines FY2024-26 (approved ROP) (2024-06-01), slide/page 6">15,000</span> per patient per month. <!-- PIB_PSC176_2608 p.1; PMJAY_HBP2022 p.11; PMNDP_ASSAM_ROP p.6 --></p>
+<p>The other shift is to single use. Nipro expects Asian dialyser sales to grow on "the shift to single use", while Indian centres reuse dialysers several times (Section A4.3). <!-- NIPRO_FY25 p.15 --></p>
+<p><strong>What it means for Polymed.</strong> Its renal range is built around haemodialysis: dialysers, bloodlines, fistula needles and machines, with PD kits among its PLI products. A move to home PD would shift demand towards PD fluids and kits, where Vantive and Fresenius lead; a move to single use would multiply dialyser volumes. We see single use as the larger and nearer effect for Polymed, and PD as a slow policy risk. <!-- PLIMD_APPR23 p.2 --></p>
+<h3 id="automation-and-labour-cost">Automation and labour cost</h3>
+<p>F&amp;S puts India's average hourly manufacturing wage below <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$2 per hour</span>, against <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$5-6 per hour</span> in China, <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$28-30 per hour</span> in the US and <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">$36-42 per hour</span> in Europe, and India's manufacturing and R&amp;D costs about <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 185">30</span>% below those of the US and Europe. <!-- DRHP_SMT p.185 --></p>
+<p>Polymed pairs that labour-cost edge with automation: <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 29">530</span> automatic assembly machines and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 29">130</span> robots in May-2026, against <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 179">200</span> assembly machines in Jun-2024. We read its workforce data as one reason: permanent-worker attrition was <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 14">74.6%</span> in FY26, and <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 41">51.1%</span> of permanent workers were paid the minimum wage. Chinese rivals are automating too: KDL reports pushing scale expansion, automation and intelligent upgrading at each of its four manufacturing bases. <!-- DK4Q26 p.29; PD24 p.179; BRSR26 pp.14, 41; KDL_AR25 p.19 --></p>
+<p><strong>What it means for Polymed.</strong> Against Western makers the labour gap is decisive; against China it is smaller, and against both it matters less as automation cuts labour content. We read Polymed's durable edge as automation plus in-house tooling and machine building (Section A8), with low wages as a diminishing bonus. Minimum-wage revisions and high attrition are the pressure points.</p>
+<h3 id="china-1-tariffs-and-supply-security">China+1, tariffs and supply security</h3>
+<p>US policy has pushed buyers away from Chinese syringes. The FDA advised providers in 2024 to use syringes "not manufactured in China, if possible", and the US raised its Section 301 tariff on Chinese syringes and needles to <span class="n" title="Source: USTR Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer (four-year review), 89 FR 76581 (2024-09-18), slide/page 9">100%</span> from Sep-2024 (Section B4). US syringe imports show the result. <!-- FDA_SYRINGE_CHINA p.1; FR_301MOD_240918 p.9 --></p>
+<figure class="exh" id="exh-b5_syringes"><figcaption><span class="exn">Exhibit 119:</span> US syringe imports from India multiplied in 2025 as imports from China fell, though India is still a small supplier</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>From China</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>From India</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">50</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">100</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">150</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">200</text><text class="unit" text-anchor="start" x="2" y="13">US$ mn</text><text class="tick" text-anchor="middle" x="163.00" y="284">2023</text><path class="mark" d="M138.00,266.00V66.14Q138.00,62.14 142.00,62.14H158.00Q162.00,62.14 162.00,66.14V266.00Z" data-tip="2023 · From China: $167.1mn" fill="var(--s1)"><title>2023 · From China: $167.1mn</title></path><text class="val" text-anchor="middle" x="150.00" y="56.14">167.1</text><path class="mark" d="M164.00,266.00V266.00Q164.00,264.99 165.01,264.99H186.99Q188.00,264.99 188.00,266.00V266.00Z" data-tip="2023 · From India: $830k" fill="var(--s2)"><title>2023 · From India: $830k</title></path><text class="val" text-anchor="middle" x="176.00" y="258.99">0.8</text><text class="tick" text-anchor="middle" x="397.00" y="284">2024</text><path class="mark" d="M372.00,266.00V61.99Q372.00,57.99 376.00,57.99H392.00Q396.00,57.99 396.00,61.99V266.00Z" data-tip="2024 · From China: $170.5mn" fill="var(--s1)"><title>2024 · From China: $170.5mn</title></path><text class="val" text-anchor="middle" x="384.00" y="51.99">170.5</text><path class="mark" d="M398.00,266.00V266.00Q398.00,264.87 399.13,264.87H420.87Q422.00,264.87 422.00,266.00V266.00Z" data-tip="2024 · From India: $930k" fill="var(--s2)"><title>2024 · From India: $930k</title></path><text class="val" text-anchor="middle" x="410.00" y="258.87">0.9</text><text class="tick" text-anchor="middle" x="631.00" y="284">2025</text><path class="mark" d="M606.00,266.00V116.28Q606.00,112.28 610.00,112.28H626.00Q630.00,112.28 630.00,116.28V266.00Z" data-tip="2025 · From China: $126.0mn" fill="var(--s1)"><title>2025 · From China: $126.0mn</title></path><text class="val" text-anchor="middle" x="618.00" y="106.28">126.0</text><path class="mark" d="M632.00,266.00V251.94Q632.00,247.94 636.00,247.94H652.00Q656.00,247.94 656.00,251.94V266.00Z" data-tip="2025 · From India: $14.8mn" fill="var(--s2)"><title>2025 · From India: $14.8mn</title></path><text class="val" text-anchor="middle" x="644.00" y="241.94">14.8</text></svg></div><p class="note">US imports under HS 901831 (syringes), UN Comtrade, calendar years; values converted from US dollars to US$ mn (our calculation). Total US syringe imports were <span class="n" title="Source: UN Comtrade - USA imports HS 901831, 2025, by partner (2026-09-24)">$1.5bn</span> in 2025. India's own trade statistics put syringe exports to the US at <span class="n" title="Source: TradeStat EIDB - HS 901831 exports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$12.75mn</span> in FY26, out of <span class="n" title="Source: TradeStat EIDB - HS 901831 exports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$69.81mn</span> to all markets.</p><p class="src">Source: UN Comtrade - USA imports HS 901831, 2023, by partner; our calculation; UN Comtrade - USA imports HS 901831, 2024, by partner; UN Comtrade - USA imports HS 901831, 2025, by partner; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">2023</th><th class="num">2024</th><th class="num">2025</th></tr></thead><tbody><tr><th scope="row">From China</th><td class="num"><span class="n" title="Our calculation: F-0171/1000000; inputs: $167.1mn (UN Comtrade - USA imports HS 901831, 2023, by partner, p.1)">$167.1mn</span></td><td class="num"><span class="n" title="Our calculation: F-0172/1000000; inputs: $170.5mn (UN Comtrade - USA imports HS 901831, 2024, by partner, p.1)">$170.5mn</span></td><td class="num"><span class="n" title="Our calculation: F-0173/1000000; inputs: $126.0mn (UN Comtrade - USA imports HS 901831, 2025, by partner, p.1)">$126.0mn</span></td></tr><tr><th scope="row">From India</th><td class="num"><span class="n" title="Our calculation: F-0174/1000000; inputs: $827k (UN Comtrade - USA imports HS 901831, 2023, by partner, p.1)">$830k</span></td><td class="num"><span class="n" title="Our calculation: F-0175/1000000; inputs: $930k (UN Comtrade - USA imports HS 901831, 2024, by partner, p.1)">$930k</span></td><td class="num"><span class="n" title="Our calculation: F-0176/1000000; inputs: $14.8mn (UN Comtrade - USA imports HS 901831, 2025, by partner, p.1)">$14.8mn</span></td></tr></tbody></table></div></details></figure>
+<p>Other evidence points the same way, but slowly:</p>
+<ul>
+<li><strong>Buyers.</strong> 1Lattice reports that international buyers are turning to Indian suppliers for cost, flexible specifications and faster turnaround, and that "many companies are moving manufacturing from China to India". <!-- DRHP_GSURG pp.176, 178 --></li>
+<li><strong>Polymed.</strong> The MD said in Feb-2024 that "there is no shift from China today" for Polymed's products, and in Nov-2025 that US buyers had so far favoured Vietnam, Thailand, Malaysia and Indonesia. <!-- TR3Q24b p.15; TR2Q26 p.14 --></li>
+<li><strong>Chinese response.</strong> Chinese makers are localizing abroad: Weigao's Indonesian joint venture starts production in 2H26. China's drug regulator has also issued rules on export sales certificates, effective 1-May-2026, which KDL says will support device exports. <!-- WEIGAO_IR26 p.34; KDL_AR25 p.17 --></li>
+<li><strong>Supply security.</strong> Hurricane Helene's damage to a competitor's US IV-solutions plant in 2024 caused a national IV-fluid shortage, and B. Braun raised its inventory coverage to <span class="n" title="Source: B. Braun SE – Annual Report 2025 (2026-04), slide/page 43">19.8</span> weeks in 2025 "to ensure supply security". We would expect buyers that were short of product to be more willing to qualify a second source. <!-- ICUI_10K25 p.1; BBRAUN_AR25 p.43 --></li>
+</ul>
+<p><strong>What it means for Polymed.</strong> China+1 is real in syringes and slow in cannulas. We see it as a multi-year opening in the US and with OEMs that source from Asia, which depends on US tariffs on India staying below those on China (Section B4) and on Polymed winning GPO volume.</p>
+<h3 id="eu-mdr-and-supplier-attrition">EU MDR and supplier attrition</h3>
+<p>The MDR raised the cost of staying in Europe. F&amp;S says it adds complexity, delays launches and raises entry barriers, and that Europe's funding squeeze favours overseas makers with a cost advantage. The EU now has <span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">51</span> notified bodies designated under the MDR, and legacy certificates run out on <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2027</span> for higher-risk devices and <span class="n" title="Source: Regulation (EU) 2023/607 amending MDR/IVDR transitional provisions (2023-03-15), slide/page 4">31 December 2028</span> for the rest. <!-- DRHP_INTEG p.226; DRHP_HEAL p.125; EU_COM2025_1023 p.1; EU_REG2023_607 p.4 --></p>
+<p>Attrition is visible in the evidence:</p>
+<ul>
+<li>Polymed "had to drop many products initially" during the transition, and management said in May-2022 that a CE mark now took <span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 6 · Himanshu Baid, MD">18-24</span> months. <!-- TR3Q26 p.8; TR4Q22 pp.5-6 --></li>
+<li>Translumina's German unit had its CE certificate suspended by its notified body for five months from Oct-2024. <!-- DRHP_INTEG p.42 --></li>
+</ul>
+<p>Polymed has paid the entry cost: all its plants are certified under the MDR for their full range, and it had ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · Himanshu Baid, MD">75</span> CE-certified products in Nov-2025, with ~<span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 10 · management guidance; Himanshu Baid, MD">20</span> more expected to be CE-marked in CY26. The Dec-2025 proposal to simplify the MDR would remove the five-year limit on certificates and, by the Commission's estimate, save <span class="n" title="Source: COM(2025) 1023 - Proposal amending MDR/IVDR (simplification), 2025/0404(COD) (2025-12-16)">&gt;€3bn</span> a year (Section B4). <!-- AR26 p.35; TR2Q26 p.10; EU_COM2025_1023 p.1 --></p>
+<p><strong>What it means for Polymed.</strong> We read the MDR as having thinned the field of small suppliers in European tenders, and the acquisitions of PendraCare and Citieffe bought MDR-certified European manufacturing. The simplification lowers costs for all incumbents, including smaller rivals, so we see the moat widening less from here than it did in 2021-2025.</p>
+<h3 id="consolidation-and-m-amp-a">Consolidation and M&amp;A</h3>
+<figure class="exh" id="exh-b5_deals"><figcaption><span class="exn">Exhibit 120:</span> Deals since 2024: the majors are pruning low-growth consumables while private equity funds Indian rivals</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date</th>
+<th>Buyer</th>
+<th>Target</th>
+<th class="num">Value</th>
+<th>What moved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sep-2024</td>
+<td>BD</td>
+<td>Edwards Lifesciences' critical care</td>
+<td class="num"><span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$3.9bn</span></td>
+<td>Haemodynamic monitoring</td>
+</tr>
+<tr>
+<td>2024 (announced)</td>
+<td>KKR</td>
+<td>Healthium, from Apax</td>
+<td>Valued at <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 216">$839.0mn</span></td>
+<td>Indian surgical consumables</td>
+</tr>
+<tr>
+<td>Jan-2025</td>
+<td>Carlyle</td>
+<td>Vantive, Baxter's kidney-care business</td>
+<td class="num"><span class="n" title="Source: Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations) (2026-02-12)">$3.8bn</span></td>
+<td>Dialysis products</td>
+</tr>
+<tr>
+<td>May-2025</td>
+<td>Otsuka</td>
+<td>Majority stake in ICU Medical's IV-solutions joint venture</td>
+<td class="num"><span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">$211.2mn</span></td>
+<td>IV solutions</td>
+</tr>
+<tr>
+<td>Jun-2025</td>
+<td>Teleflex</td>
+<td>BIOTRONIK's vascular intervention business</td>
+<td class="num"><span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">€704.3mn</span></td>
+<td>Balloons, stents, catheters</td>
+</tr>
+<tr>
+<td>Jul-2025</td>
+<td>ADIA</td>
+<td>Minority stake in Meril</td>
+<td class="num"><span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 216">$200.0mn</span></td>
+<td>Indian cardiology and orthopaedics</td>
+</tr>
+<tr>
+<td>Sep-2025</td>
+<td>Polymed</td>
+<td>PendraCare (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">90%</span>)</td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025 (2025-11-12), slide/page 8">Rs. 1.5bn</span></td>
+<td>Guiding and diagnostic catheters</td>
+</tr>
+<tr>
+<td>Nov-2025</td>
+<td>Polymed</td>
+<td>Citieffe (via Medistream)</td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025 (2026-02-13), slide/page 8">Rs. 2.4bn</span></td>
+<td>Trauma implants</td>
+</tr>
+<tr>
+<td>Dec-2025 (signed)</td>
+<td>Intersurgical</td>
+<td>Teleflex acute care and interventional urology</td>
+<td class="num"><span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$530mn</span></td>
+<td>Anaesthesia, respiratory, urology</td>
+</tr>
+<tr>
+<td>Dec-2025 (signed)</td>
+<td>Montagu and Kohlberg</td>
+<td>Teleflex OEM business</td>
+<td class="num"><span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$1.5bn</span></td>
+<td>Contract manufacturing of catheters and components</td>
+</tr>
+<tr>
+<td>Dec-2025</td>
+<td>Healthium</td>
+<td>Controlling stake in an advanced-surgery device maker (first tranche)</td>
+<td class="num"><span class="n" title="Source: ICRA – Healthium Medtech Limited: Ratings reaffirmed for Bank Lines and assigned for Commercial Paper; outlook revised to Negative (2025-12-11), slide/page 3">Rs. 6.0bn</span></td>
+<td>Surgical devices</td>
+</tr>
+<tr>
+<td>Sep-2026</td>
+<td>Temasek</td>
+<td>Minority stake in Romsons</td>
+<td>[not disclosed]</td>
+<td>Indian disposables</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025; Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025); Baxter International Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (incl. Kidney Care/Vantive discontinued operations); ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025; Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025; Annual Report FY26; Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025; Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025; ICRA – Healthium Medtech Limited: Ratings reaffirmed for Bank Lines and assigned for Commercial Paper; outlook revised to Negative; Temasek acquires minority stake in Romsons Group; Avendus Spark Research</p></figure>
+<!-- BD_10K25 p.1; DRHP_INTEG p.216; BAX_10K25 p.1; ICUI_10K25 p.1; TFX_10K25 p.1; AR26 p.12; MA_2509 p.8; MA_2512 p.8; ICRA_HEAL p.3; MB_ROMSONS p.1 -->
+<p>Two patterns stand out. The US majors are selling low-growth consumables and contract-manufacturing units (Teleflex's acute care and OEM businesses, Baxter's kidney care) to specialists and private equity, while buying higher-growth technology (BD's critical care, Teleflex's vascular intervention). In India, F&amp;S counts <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 216">59</span> MedTech private-equity deals since 2017, and the latest have funded Polymed's closest domestic rivals. <!-- TFX_10K25 p.1; BAX_10K25 p.1; BD_10K25 p.1; DRHP_INTEG p.216 --></p>
+<p><strong>What it means for Polymed.</strong> The carve-outs create owners of consumables lines who are under pressure to cut costs, and Teleflex's OEM unit, which makes catheters, extrusions and introducers for other device makers, shows that OEM supply is a business in its own right; CRISIL notes that OEMs have been seeking cost-competitive sources since Covid. That supports Polymed's contract-manufacturing push (Section A4.10). The offset is that its Indian rivals now have capital for capacity, acquisitions and exports. <!-- TFX_10K25 p.1; PD24 p.141 --></p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="b4.html"><span>Previous</span>B4 Export-market regimes</a><a class="next" href="c1.html"><span>Next</span>C1 Risk register</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

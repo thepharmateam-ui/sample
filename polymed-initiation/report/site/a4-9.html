@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.9 Orthopaedics (Citieffe) · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html" class="active">A4.9 Orthopaedics (Citieffe)</a></li><li class="l3"><a href="#what-it-is-and-how-it-is-used">What it is and how it is used</a></li><li class="l3"><a href="#citieffe-s-portfolio-and-position">Citieffe&#x27;s portfolio and position</a></li><li class="l3"><a href="#the-deal">The deal</a></li><li class="l3"><a href="#financials-flat-sales-a-net-loss-and-a-long-receivables-tail">Financials: flat sales, a net loss and a long receivables tail</a></li><li class="l3"><a href="#market-trauma-is-the-fastest-growing-orthopaedic-segment">Market: trauma is the fastest-growing orthopaedic segment</a></li><li class="l3"><a href="#customers-channel-and-pricing-4">Customers, channel and pricing</a></li><li class="l3"><a href="#competition-3">Competition</a></li><li class="l3"><a href="#regulation-3">Regulation</a></li><li class="l3"><a href="#capacity-and-supply-chain-3">Capacity and supply chain</a></li><li class="l3"><a href="#growth-drivers-ranked-3">Growth drivers, ranked</a></li><li class="l3"><a href="#margin-drivers-ranked-3">Margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-9">What to watch</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-8.html"><span>Previous</span>A4.8 Cardiology</a><a class="next" href="a4-10.html"><span>Next</span>A4.10 Components, OEM and contract manufacturing</a></nav>
+<h2 id="a4-9">A4.9 Orthopaedics (Citieffe)</h2>
+<section class="snapshot"><p class="ct">Orthopaedics at a glance</p><dl><div><dt>Revenue 1QFY27</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 492mn</span>, <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">9%</span> of consolidated revenue, in the first full quarter of consolidation</dd></div><div><dt>FY26 contribution</dt><dd><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 726mn</span> of revenue and a pre-tax loss of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.0mn</span> from acquisition to 31 Mar 2026 (annual report)</dd></div><div><dt>Citieffe CY25</dt><dd>Revenue <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">€17.7mn</span> and EBITDA ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">€3.15mn</span> (company); IFRS net loss <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€1.21mn</span></dd></div><div><dt>Deal</dt><dd>An enterprise value of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€31mn</span>, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">10.2x</span> CY24 EBITDA (company); closed 6 Nov 2025</dd></div><div><dt>Products</dt><dd>Trauma and extremity fixation: intramedullary nails, external fixators, screws, a wrist plate and a navigation system; <span class="n" title="Source: FDA 510(k) clearances – Citieffe (2026-09-24)">11</span> US 510(k)s</dd></div><div><dt>Sales mix CY25</dt><dd>Europe <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">48.3%</span>, US <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">16.9%</span>, rest of world <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">34.8%</span></dd></div><div><dt>Management targets</dt><dd>Revenue growth of <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 16 · management guidance; Rahul Gautam, President - Strategy &amp; Corporate Development">10-12%</span> in euros in FY27; revenue of <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 9 · management guidance; Rahul Gautam, President Strategy">€25-30mn</span> within about five years (Sep-2025)</dd></div><div><dt>Not disclosed</dt><dd>Citieffe's 1QFY27 growth and margin, revenue by product, prices</dd></div></dl></section>
+<p>Citieffe gives Polymed a trauma-implant franchise (nails, fixators and screws, but only one plate) with its own brand, EU MDR and US clearances and direct sales teams in three countries. What it does not yet give is growth or profit. Revenue was flat in CY25 and the group made an IFRS net loss. It carries interest-bearing debt about equal to its equity, and <span class="n" title="Our calculation: B-0706/WC-0016*100; inputs: €3.38mn (Medistream consolidated opinion 2025, p.16); €6.66mn (Medistream consolidated opinion 2025, p.16)">51%</span> of its receivables are more than <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 16">120 days</span> old. The growth plan rests on three steps management has yet to take: 1) adding plates, 2) building a larger US sales team, and 3) moving part of production to India.</p>
+<h3 id="what-it-is-and-how-it-is-used">What it is and how it is used</h3>
+<p>Citieffe makes implants that hold broken bones in place while they heal. <!-- D_product_glossary; DKCIT p.12 --></p>
+<ul>
+<li><strong>Intramedullary nails:</strong> metal rods run down the hollow centre of the femur, tibia, humerus or fibula and locked with screws. This is the standard fix for many long-bone shaft fractures.</li>
+<li><strong>External fixators:</strong> frames outside the limb, attached to bone by pins, for open or complex fractures and limb reconstruction.</li>
+<li><strong>Screws and plates:</strong> cannulated screws for fractures such as the femoral neck, and plates for fractures such as the wrist.</li>
+</ul>
+<p>The unit of demand is the fracture: one nail and its locking screws per long-bone fracture, or one frame per complex fracture. The pins and screws are single use, while frame parts are re-used in some markets. Implant sets usually reach hospitals on consignment with instrument trays, and the navigation system is placed with hospitals to support nail sales. Trauma surgery cannot be postponed. Industry data in the acquisition deck show the trauma and extremities market fell <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">6.1%</span> in the Covid year, against <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">11%</span> for orthopaedics as a whole. <!-- D_product_glossary; DKCIT p.14 --></p>
+<h3 id="citieffe-s-portfolio-and-position">Citieffe's portfolio and position</h3>
+<figure class="exh" id="exh-ortho_products"><figcaption><span class="exn">Exhibit 54:</span> Citieffe sells nails and external fixators with US clearances, but only one plate, and no joints or spine</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Category</th>
+<th>Brands</th>
+<th>US 510(k) clearances</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intramedullary nails</td>
+<td>Estremo (tibial, femoral, fibular), EBA femoral nails, DT Humerus, titanium nailing system</td>
+<td>K113387 (2012), K131005 (2013), K181540 and K183666 (2019), K250197 fibular nail (Oct-2025)</td>
+</tr>
+<tr>
+<td>External fixators</td>
+<td>Dolphix (including an MR-conditional version), ST.A.R. fixator, Rekrea, Xframe</td>
+<td>K113384 (2012), K132363 (2014), K150661 hydroxyapatite-coated screws (2015), K163323 (2017)</td>
+</tr>
+<tr>
+<td>Screws and plates</td>
+<td>Titanium cannulated screw, Rondo screws, a wrist reconstruction plate</td>
+<td>K113388 (2012), K180150 (2018)</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>Navigation software for distal locking of nails</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Not in the range</td>
+<td>Plates beyond the wrist plate, joint replacement, spine</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: FDA 510(k) clearances – Citieffe; Citieffe acquisition presentation; 30th AGM presentation; Avendus Spark Research</p></figure>
+<!-- FDA510K_CIT p.1; DKCIT p.12, p.20; DKAGM30 p.6 -->
+<ul>
+<li><strong>Company:</strong> Citieffe was founded near Bologna in 1962. Its CEO, Pascal Govi, joined in 2019 and has more than <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 4">34 years</span> of work experience. It holds <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 12">45</span> patents, has an R&amp;D team of <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 16">6 FTE</span> spending ~<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 16">5%</span> of revenue, and launches <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 18">3-5</span> products a year. It reports a very low defect rate. <!-- DKCIT p.12, p.15-16, p.18; DKAGM30 p.4 --></li>
+<li><strong>Position:</strong> it is the number-two independent player in Italy with a share of ~<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">12%</span> excluding plates, and one of the top players in Mexico with ~<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">12%</span> excluding plates and low-cost products. Both are company estimates. <!-- DKCIT p.15 --></li>
+<li><strong>Reach:</strong> ~<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">85%</span> of sales come from the three countries where it sells direct: Italy, the US and Mexico. It sells in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">30+</span> countries in total. The distributor count is printed as <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">25</span>+ in the 1QFY27 deck but <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">50+</span> in the annual report. <!-- DKCIT p.15; PRCIT p.2; DK1Q27 p.14; AR26 p.12 --></li>
+</ul>
+<h3 id="the-deal">The deal</h3>
+<figure class="exh" id="exh-ortho_deal"><figcaption><span class="exn">Exhibit 55:</span> Polymed paid an enterprise value of €31mn for Citieffe, mostly in cash from the 2024 QIP</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stake bought</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">100%</span> of Medistream SA (Lugano), from funds led by ArchiMed (~<span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 5 · Rahul Gautam, President - Strategy &amp; Corporate Development">66%</span> before the deal)</td>
+<td>AR26; Citieffe call</td>
+</tr>
+<tr>
+<td>Equity value</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€18.8mn</span></td>
+<td>AR26</td>
+</tr>
+<tr>
+<td>Shareholder loans repaid at closing</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€4.2mn</span></td>
+<td>AR26</td>
+</tr>
+<tr>
+<td>Upfront payout</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€23mn</span></td>
+<td>AR26</td>
+</tr>
+<tr>
+<td>Net external debt taken over</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€8.1mn</span></td>
+<td>AR26</td>
+</tr>
+<tr>
+<td>Enterprise value</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">€31mn</span> (<span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">Rs. 3.2bn</span>), <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">10.2x</span> CY24 EBITDA (company)</td>
+<td>AR26; press release</td>
+</tr>
+<tr>
+<td>Funding</td>
+<td><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025 (2026-02-13), slide/page 8">Rs. 1.8bn</span> from QIP proceeds and <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025 (2026-02-13), slide/page 8">Rs. 600mn</span> from internal accruals</td>
+<td>Monitoring-agency report, Dec-2025</td>
+</tr>
+<tr>
+<td>Accounted consideration</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 120">Rs. 2.4bn</span> in cash plus <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 80mn</span> contingent, total <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 2.5bn</span></td>
+<td>AR26 business-combination note</td>
+</tr>
+<tr>
+<td>Purchase-price allocation</td>
+<td>Net identifiable assets <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.9bn</span>, of which product intangibles <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 518mn</span>; goodwill <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 627mn</span> (provisionally <span class="n" title="Source: Financial results 3QFY26 (2026-02-05), slide/page 5">Rs. 1.0bn</span> at 3QFY26)</td>
+<td>AR26; 3QFY26 results</td>
+</tr>
+<tr>
+<td>In Poly Medicure BV's books</td>
+<td>Consideration <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€20.3mn</span>; goodwill <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€10.3mn</span></td>
+<td>Poly Medicure BV accounts</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; Citieffe acquisition call transcript (25 Sep 2025); Citieffe acquisition press release; Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025; Financial results 3QFY26; Poly Medicure BV FY26 accounts; Avendus Spark Research</p></figure>
+<!-- AR26 p.12, p.120-121; TRCIT p.5; PRCIT p.2; MA_2512 p.8; RS3Q26 p.5; SUB26BV p.10 -->
+<p>The deal was signed on 24 Sep 2025, closed on 6 Nov 2025, and Citieffe was consolidated from 7 Nov 2025. The <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">10.2x</span> figure is based on CY24 EBITDA of <span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">€3.1mn</span>, which the company describes as excluding one-off expenses and income. <!-- DKAGM30 p.4; DK2Q26 p.7; DK4Q26 p.5; DKCIT p.12, p.15 --></p>
+<h3 id="financials-flat-sales-a-net-loss-and-a-long-receivables-tail">Financials: flat sales, a net loss and a long receivables tail</h3>
+<figure class="exh" id="exh-ortho_fin"><figcaption><span class="exn">Exhibit 56:</span> Citieffe's revenue was flat in CY25; on its IFRS accounts EBITDA was below the company's figure and an FX loss produced a net loss</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>EUR</th>
+<th class="num">CY24</th>
+<th>CY25</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue, company presentation</td>
+<td><span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">€17.3mn</span> (+<span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">15%</span>)</td>
+<td><span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">€17.7mn</span> (<span class="n" title="Our calculation: (CB-0141/1000/CB-2511-1)*100; inputs: €17.7mn (Investor deck 1QFY27, p.14); €17.3mn (Citieffe acquisition press release, p.2)">+2.3%</span>)</td>
+</tr>
+<tr>
+<td>EBITDA, company presentation</td>
+<td><span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">€3.1mn</span> (<span class="n" title="Our calculation: CB-2512/CB-2511*100; inputs: €3.1mn (Citieffe acquisition press release, p.2); €17.3mn (Citieffe acquisition press release, p.2)">17.9%</span> margin)</td>
+<td>~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">€3.15mn</span> (<span class="n" title="Our calculation: CB-0143/CB-0141*100; inputs: €3.15mn (Investor deck 1QFY27, p.14); €17.7mn (Investor deck 1QFY27, p.14)">17.8%</span> margin)</td>
+</tr>
+<tr>
+<td>Sale of goods, IFRS consolidated</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€16.8mn</span></td>
+<td><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€17.2mn</span> (<span class="n" title="Our calculation: (B-0697/B-0698-1)*100; inputs: €17.2mn (Medistream consolidated opinion 2025, p.6); €16.8mn (Medistream consolidated opinion 2025, p.6)">+2.7%</span>)</td>
+</tr>
+<tr>
+<td>EBITDA derived from IFRS lines</td>
+<td><span class="n" title="Our calculation: WC-0008-WC-0010-WC-0012; inputs: €245k (Medistream consolidated opinion 2025, p.6); -€1.84mn (Medistream consolidated opinion 2025, p.6); -€604k (Medistream consolidated opinion 2025, p.6)">€2.69mn</span> (<span class="n" title="Our calculation: (WC-0008-WC-0010-WC-0012)/B-0698*100; inputs: €245k (Medistream consolidated opinion 2025, p.6); -€1.84mn (Medistream consolidated opinion 2025, p.6); -€604k (Medistream consolidated opinion 2025, p.6); €16.8mn (Medistream consolidated opinion 2025, p.6)">16.0%</span> margin)</td>
+<td><span class="n" title="Our calculation: B-0700-B-0701-WC-0011; inputs: -€1.34mn (Medistream consolidated opinion 2025, p.6); -€2.13mn (Medistream consolidated opinion 2025, p.6); -€1.93mn (Medistream consolidated opinion 2025, p.6)">€2.72mn</span> (<span class="n" title="Our calculation: (B-0700-B-0701-WC-0011)/B-0697*100; inputs: -€1.34mn (Medistream consolidated opinion 2025, p.6); -€2.13mn (Medistream consolidated opinion 2025, p.6); -€1.93mn (Medistream consolidated opinion 2025, p.6); €17.2mn (Medistream consolidated opinion 2025, p.6)">15.8%</span> margin)</td>
+</tr>
+<tr>
+<td>Depreciation and amortization</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€1.84mn</span></td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€2.13mn</span></td>
+</tr>
+<tr>
+<td>Net financial result (cost)</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€604k</span></td>
+<td><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€1.93mn</span>, of which FX loss <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 21">€1.26mn</span></td>
+</tr>
+<tr>
+<td>Profit before tax</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€245k</span></td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">-€1.34mn</span></td>
+</tr>
+<tr>
+<td>Net result</td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€429k</span></td>
+<td class="num"><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">-€1.21mn</span></td>
+</tr>
+<tr>
+<td>Interest-bearing debt, year-end</td>
+<td class="num">–</td>
+<td><span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 19">€13.1mn</span> (equity <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 5">€13.1mn</span>)</td>
+</tr>
+<tr>
+<td>Receivables overdue more than <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 16">120 days</span>, share of gross</td>
+<td class="num"><span class="n" title="Our calculation: WC-0017/WC-0018*100; inputs: €2.96mn (Medistream consolidated opinion 2025, p.16); €6.70mn (Medistream consolidated opinion 2025, p.16)">44%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0706/WC-0016*100; inputs: €3.38mn (Medistream consolidated opinion 2025, p.16); €6.66mn (Medistream consolidated opinion 2025, p.16)">51%</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Citieffe acquisition press release; Investor deck 1QFY27; 31st AGM presentation; Medistream consolidated opinion 2025; our calculation; Avendus Spark Research</p></figure>
+<!-- PRCIT p.2; DK1Q27 p.14; DKAGM31 p.17; SUB26MEDC p.5-6, p.16, p.19, p.21 -->
+<p>Five points stand out.</p>
+<ol>
+<li><strong>Growth stalled.</strong> The company-presented revenue grew <span class="n" title="Our calculation: (CB-0141/1000/CB-2511-1)*100; inputs: €17.7mn (Investor deck 1QFY27, p.14); €17.3mn (Citieffe acquisition press release, p.2)">2.3%</span> in CY25, after <span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">15%</span> in CY24. Management said sales were flat because a tender Citieffe had won in Latin America was cancelled and pushed out. It guided <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 16 · management guidance; Rahul Gautam, President - Strategy &amp; Corporate Development">10-12%</span> euro growth for FY27, but on the Aug-2026 call described Citieffe as growing at "<span class="n nl" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">mid- to high single digits</span>". <!-- TR4Q26 p.17, p.16; TR1Q27S p.11 --></li>
+<li><strong>Two EBITDA figures.</strong> The company's EBITDA is ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">€3.15mn</span> for CY25. Adding back D&amp;A and finance cost to the audited IFRS profit before tax gives <span class="n" title="Our calculation: B-0700-B-0701-WC-0011; inputs: -€1.34mn (Medistream consolidated opinion 2025, p.6); -€2.13mn (Medistream consolidated opinion 2025, p.6); -€1.93mn (Medistream consolidated opinion 2025, p.6)">€2.72mn</span> (our calculation), and the same gap existed in CY24. We read the difference as the one-off items the company excludes. It matters because the price was set on the adjusted figure. <!-- SUB26MEDC p.6; DKCIT p.15 --></li>
+<li><strong>The loss was mostly currency.</strong> The CY25 net loss of <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€1.21mn</span> came after an FX loss of <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 21">€1.26mn</span> on the US and Mexican businesses. Interest fell to <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 21">€423k</span> from <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 21">€659k</span>. The CY24 profit also shrank in a restatement: the deferred tax asset on Citieffe Inc's US tax losses had been booked at the gross loss rather than the tax-effected amount, and the correction of <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 20">€3.43mn</span> cut equity. <!-- SUB26MEDC p.20-21 --></li>
+<li><strong>Receivables are stretched.</strong> <span class="n" title="Our calculation: B-0706/WC-0016*100; inputs: €3.38mn (Medistream consolidated opinion 2025, p.16); €6.66mn (Medistream consolidated opinion 2025, p.16)">51%</span> of gross receivables were more than <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 16">120 days</span> old at Dec-2025, up from <span class="n" title="Our calculation: WC-0017/WC-0018*100; inputs: €2.96mn (Medistream consolidated opinion 2025, p.16); €6.70mn (Medistream consolidated opinion 2025, p.16)">44%</span> a year earlier. The loss allowance covers only <span class="n" title="Our calculation: WC-0050/B-0706*100; inputs: €823k (Medistream consolidated opinion 2025, p.16); €3.38mn (Medistream consolidated opinion 2025, p.16)">24%</span> of that overdue book (our calculations). Management says the acquired European businesses carry longer receivable cycles. <!-- SUB26MEDC p.16; AR26 p.48 --></li>
+<li><strong>Debt stays with the business.</strong> Interest-bearing debt of <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 19">€13.1mn</span> equals about <span class="n" title="Our calculation: B-0705/B-0704*100; inputs: €13.1mn (Medistream consolidated opinion 2025, p.19); €13.1mn (Medistream consolidated opinion 2025, p.5)">100%</span> of equity (our calculation), backed partly by SIMEST and export-credit agency guarantees. Management puts the core loan at ~<span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">€9mn</span>, repaid at <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">€1.5-2mn</span> a year. Italian overdrafts carry rates up to double digits. <!-- SUB26MEDC p.5, p.19; TR1Q27S p.11; AR26 p.110, p.112 --></li>
+</ol>
+<p>Inside Polymed, Citieffe contributed <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 726mn</span> of revenue and a pre-tax loss of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.0mn</span> from the 6 Nov 2025 closing (annual report business-combination note; the MD&amp;A and decks consolidate from 7 Nov) to 31 Mar 2026, and <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">~Rs. 430-440mn</span> of 4QFY26 revenue. Management blamed part of the acquired businesses' <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 13 · Rahul Gautam, President - Strategy &amp; Corporate Development">~Rs. 26mn</span> EBITDA drag in 4QFY26 on Citieffe "selling certain low-margin products". <!-- AR26 p.121, p.47; TR4Q26 p.11, p.13 --></p>
+<figure class="exh" id="exh-ortho_geo"><figcaption><span class="exn">Exhibit 57:</span> About half of Citieffe's sales are European; the US, where prices are several times Europe's, is a small share</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Europe</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>North America (CY24) / US (CY25)</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Rest of world</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 110"><line class="base" x1="90.00" x2="90.00" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="90.00" y="100">0</text><line class="grid" x1="212.80" x2="212.80" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="212.80" y="100">20</text><line class="grid" x1="335.60" x2="335.60" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="335.60" y="100">40</text><line class="grid" x1="458.40" x2="458.40" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="458.40" y="100">60</text><line class="grid" x1="581.20" x2="581.20" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="581.20" y="100">80</text><line class="grid" x1="704.00" x2="704.00" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="704.00" y="100">100</text><text class="cat" text-anchor="end" x="82" y="43.00">CY24</text><path class="mark" d="M90.00,30.00h256.88v18.00h-256.88Z" data-tip="CY24 · Europe: 42%" fill="var(--s1)"><title>CY24 · Europe: 42%</title></path><text class="inlbl on1" text-anchor="middle" x="218.44" y="43.00">42%</text><path class="mark" d="M348.88,30.00h262.02v18.00h-262.02Z" data-tip="CY24 · North America (CY24) / US (CY25): 43%" fill="var(--s2)"><title>CY24 · North America (CY24) / US (CY25): 43%</title></path><text class="inlbl on2" text-anchor="middle" x="479.89" y="43.00">43%</text><path class="mark" d="M612.90,30.00H675.44Q679.44,30.00 679.44,34.00V44.00Q679.44,48.00 675.44,48.00H612.90Z" data-tip="CY24 · Rest of world: 11%" fill="var(--s3)"><title>CY24 · Rest of world: 11%</title></path><text class="inlbl on3" text-anchor="middle" x="646.17" y="43.00">11%</text><text class="cat" text-anchor="end" x="82" y="73.00">CY25</text><path class="mark" d="M90.00,60.00h295.56v18.00h-295.56Z" data-tip="CY25 · Europe: 48.3%" fill="var(--s1)"><title>CY25 · Europe: 48.3%</title></path><text class="inlbl on1" text-anchor="middle" x="237.78" y="73.00">48%</text><path class="mark" d="M387.56,60.00h101.77v18.00h-101.77Z" data-tip="CY25 · North America (CY24) / US (CY25): 16.9%" fill="var(--s2)"><title>CY25 · North America (CY24) / US (CY25): 16.9%</title></path><text class="inlbl on2" text-anchor="middle" x="438.44" y="73.00">17%</text><path class="mark" d="M491.33,60.00H700.00Q704.00,60.00 704.00,64.00V74.00Q704.00,78.00 700.00,78.00H491.33Z" data-tip="CY25 · Rest of world: 34.8%" fill="var(--s3)"><title>CY25 · Rest of world: 34.8%</title></path><text class="inlbl on3" text-anchor="middle" x="597.66" y="73.00">35%</text></svg></div><p class="note">CY24 shares as printed in the acquisition deck sum to less than the whole, and its North America includes Mexico. The CY25 split shows the US alone, so Mexico sits in the rest of the world. The company puts US prices at <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">4-5</span> Europe's.</p><p class="src">Source: Citieffe acquisition presentation; Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">CY24</th><th class="num">CY25</th></tr></thead><tbody><tr><th scope="row">Europe</th><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">42%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">48.3%</span></td></tr><tr><th scope="row">North America (CY24) / US (CY25)</th><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">43%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">16.9%</span></td></tr><tr><th scope="row">Rest of world</th><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">11%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">34.8%</span></td></tr></tbody></table></div></details></figure>
+<!-- DKCIT p.15; DK1Q27 p.14 -->
+<h3 id="market-trauma-is-the-fastest-growing-orthopaedic-segment">Market: trauma is the fastest-growing orthopaedic segment</h3>
+<figure class="exh" id="exh-ortho_share"><figcaption><span class="exn">Exhibit 58:</span> Two multinationals hold most of the global trauma market; Citieffe competes as a niche independent</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 230"><line class="base" x1="130.00" x2="130.00" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="130.00" y="220">0</text><line class="grid" x1="273.50" x2="273.50" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="273.50" y="220">10</text><line class="grid" x1="417.00" x2="417.00" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="417.00" y="220">20</text><line class="grid" x1="560.50" x2="560.50" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="560.50" y="220">30</text><line class="grid" x1="704.00" x2="704.00" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="704.00" y="220">40</text><text class="unit" text-anchor="end" x="704" y="16">% of global trauma market (2024E)</text><text class="cat" text-anchor="end" x="122" y="43.00">J&amp;J DePuy Synthes</text><path class="mark" d="M130.00,30.00H556.50Q560.50,30.00 560.50,34.00V44.00Q560.50,48.00 556.50,48.00H130.00Z" data-tip="J&amp;J DePuy Synthes · Share: 30%" fill="var(--s1)"><title>J&amp;J DePuy Synthes · Share: 30%</title></path><text class="val" text-anchor="start" x="565.50" y="43.00">30</text><text class="cat" text-anchor="end" x="122" y="73.00">Stryker</text><path class="mark" d="M130.00,60.00H542.15Q546.15,60.00 546.15,64.00V74.00Q546.15,78.00 542.15,78.00H130.00Z" data-tip="Stryker · Share: 29%" fill="var(--s1)"><title>Stryker · Share: 29%</title></path><text class="val" text-anchor="start" x="551.15" y="73.00">29</text><text class="cat" text-anchor="end" x="122" y="103.00">Zimmer Biomet</text><path class="mark" d="M130.00,90.00H240.80Q244.80,90.00 244.80,94.00V104.00Q244.80,108.00 240.80,108.00H130.00Z" data-tip="Zimmer Biomet · Share: 8%" fill="var(--s1)"><title>Zimmer Biomet · Share: 8%</title></path><text class="val" text-anchor="start" x="249.80" y="103.00">8</text><text class="cat" text-anchor="end" x="122" y="133.00">Smith+Nephew</text><path class="mark" d="M130.00,120.00H212.10Q216.10,120.00 216.10,124.00V134.00Q216.10,138.00 212.10,138.00H130.00Z" data-tip="Smith+Nephew · Share: 6%" fill="var(--s1)"><title>Smith+Nephew · Share: 6%</title></path><text class="val" text-anchor="start" x="221.10" y="133.00">6</text><text class="cat" text-anchor="end" x="122" y="163.00">Acumed</text><path class="mark" d="M130.00,150.00H197.75Q201.75,150.00 201.75,154.00V164.00Q201.75,168.00 197.75,168.00H130.00Z" data-tip="Acumed · Share: 5%" fill="var(--s1)"><title>Acumed · Share: 5%</title></path><text class="val" text-anchor="start" x="206.75" y="163.00">5</text><text class="cat" text-anchor="end" x="122" y="193.00">Others</text><path class="mark" d="M130.00,180.00H456.05Q460.05,180.00 460.05,184.00V194.00Q460.05,198.00 456.05,198.00H130.00Z" data-tip="Others · Share: 23%" fill="var(--s1)"><title>Others · Share: 23%</title></path><text class="val" text-anchor="start" x="465.05" y="193.00">23</text></svg></div><p class="note">Industry reports cited in the Citieffe acquisition deck (Sep-2025) [vendor estimate]. In orthopaedics as a whole the leaders are Stryker (<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">18%</span>), DePuy Synthes (<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">15%</span>) and Zimmer Biomet (<span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">12%</span>).</p><p class="src">Source: Citieffe acquisition presentation; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">J&amp;J DePuy Synthes</th><th class="num">Stryker</th><th class="num">Zimmer Biomet</th><th class="num">Smith+Nephew</th><th class="num">Acumed</th><th class="num">Others</th></tr></thead><tbody><tr><th scope="row">Share</th><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">30%</span></td><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">29%</span></td><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">8%</span></td><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">6%</span></td><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">5%</span></td><td class="num"><span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">23%</span></td></tr></tbody></table></div></details></figure>
+<!-- DKCIT p.13-14 -->
+<ul>
+<li><strong>Global:</strong> the acquisition deck puts orthopaedics at <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">$61bn</span> in 2024, growing <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">3.8%</span> a year to 2028. Trauma and extremities is the largest and fastest-growing segment at <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">$12bn</span>, growing <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">6.3%</span> a year to <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">$16bn</span> by 2028. Internal fixators are <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">82%</span> of the segment and external fixators <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 14">13%</span>, and the US is <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">67%</span> of the orthopaedic market. Management puts plates at <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 7 · Rahul Gautam, President - Strategy &amp; Corporate Development">almost 40%</span> of the trauma market. The other figures are vendor estimates quoted by the company. <!-- DKCIT p.13-14; TRCIT p.7 --></li>
+<li><strong>India:</strong> the research firm engaged for G Surgiwear's DRHP (Dec-2025) values India's orthopaedic device market at <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 207">$6.2bn</span> in FY25, rising to <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 207">$10.7bn</span> by FY30 (<span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 207">11.4%</span> a year), of which implants are <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 190">$3.0bn</span>. India is about <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 13">3%</span> of the global market. These are vendor estimates. <!-- DRHP_GSURG p.183, p.190, p.207; DKCIT p.13 --></li>
+<li><strong>Import dependence is disputed.</strong> CRISIL put implants at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 140">80-90%</span> imported in FY24, while management says <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 16 · Himanshu Baid, MD">50-60%</span> of orthopaedic implants are now made in India. <!-- PD24 p.140; TR1Q26 p.16 --></li>
+</ul>
+<h3 id="customers-channel-and-pricing-4">Customers, channel and pricing</h3>
+<ul>
+<li><strong>Buyers:</strong> trauma surgeons and hospitals. Citieffe's own sales teams cover Italy, the US and Mexico, alongside <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 39">12</span> distributors in Europe and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">50</span>+ key opinion leaders worldwide. <!-- DK4Q26 p.39; DK1Q27 p.14 --></li>
+<li><strong>US:</strong> Citieffe sells to trauma centres through independent agents rather than group purchasing contracts. Management ruled out selling Polymed's consumables through the orthopaedic reps. <!-- TRCIT p.10-11 --></li>
+<li><strong>Tenders:</strong> in Italian and Latin American public tenders a bidder often needs a full portfolio, which is the main argument for adding plates. <!-- TRCIT p.5-7 --></li>
+<li><strong>Prices:</strong> [not disclosed]; management declined to give product prices. Management put gross margin at <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 6 · Rahul Gautam, President - Strategy &amp; Corporate Development">90%+</span> at the deal, and the Sep-2026 AGM deck prints CY25 gross profit of <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">€16.6mn</span> on revenue of <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">€17.7mn</span>, while the 1QFY27 deck's figures imply <span class="n" title="Our calculation: CB-0142/CB-0141*100; inputs: €12.1mn (Investor deck 1QFY27, p.14); €17.7mn (Investor deck 1QFY27, p.14)">68%</span> (our calculation). The two company decks disagree. <!-- TRCIT p.6, p.9; DKAGM31 p.17; DK1Q27 p.14 --></li>
+</ul>
+<h3 id="competition-3">Competition</h3>
+<ul>
+<li><strong>Multinationals:</strong> Stryker, DePuy Synthes, Zimmer Biomet, Smith+Nephew, Medtronic and Arthrex lead worldwide and in India's premium segment. <!-- DKCIT p.13; DRHP_GSURG p.195 --></li>
+<li><strong>Indian makers:</strong> Meril, Sharma Orthopaedic, Narang Medical, Biorad Medisys and Bonetech sell cost-effective trauma, joint and spine implants. <!-- DRHP_GSURG p.195 --></li>
+<li><strong>Management's view:</strong> India has "a fairly large base of manufacturers" in trauma, and Zydus's recent French acquisition is mainly knee implants. <!-- TRCIT p.7 --></li>
+<li><strong>Citieffe's edge:</strong> on the company's account, Citieffe competes on design (its patents, navigation for nailing) and a low complaint rate; it has no plates to offer in tenders. <!-- DKCIT p.16, p.18 --></li>
+</ul>
+<h3 id="regulation-3">Regulation</h3>
+<p>The whole Citieffe portfolio is certified under EU MDR. Its products are Class IIb in Europe and Class II in the US. Registration in India's import regime takes <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">6-9</span> months, according to management. India capped the MRPs of coronary stents and knee implants in 2017; trauma implants were not named in that order. <!-- DKCIT p.12, p.21; TRCIT p.4; TR4Q26 p.3; PD24 p.152 --></p>
+<h3 id="capacity-and-supply-chain-3">Capacity and supply chain</h3>
+<ul>
+<li><strong>Plants:</strong> two sites in Bologna: a production plant of <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 5">1,000 m²</span> with <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 5">12</span> machines, and an assembly and packaging site of <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 5">1,100 m²</span> with <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 5">10</span> machines. They run at <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 5">60%</span> of capacity, with room to add a third shift. <!-- DKAGM30 p.5 --></li>
+<li><strong>Sterilization:</strong> outsourced, with a plan to bring it in-house. <!-- DKCIT p.16 --></li>
+<li><strong>Capex:</strong> regular capex is <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 6 · Rahul Gautam, President Strategy">€1.5-2mn</span> a year including instrument sets, on a net block of ~<span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 6 · Rahul Gautam, President - Strategy &amp; Corporate Development">€5mn</span>. Management estimates the total invested in the business at ~<span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 13 · Rahul Gautam, President Strategy">€28-30mn</span>. <!-- TRCIT p.6, p.13 --></li>
+<li><strong>Staff:</strong> <span class="n" title="Source: Citieffe acquisition presentation (2025-09-24), slide/page 15">109</span> employees at the deal and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">90</span>+ in Aug-2026, although management says no staff cuts have been made at either acquisition. <!-- DKCIT p.15; DK1Q27 p.14; TR4Q26 p.17 --></li>
+<li><strong>India:</strong> at the deal, management said it had "no such plans" to move manufacturing to India, only to outsource parts of the process. By Aug-2026, moving manufacturing processes of both acquisitions to India was "at the regulatory approval stage". The new Palwal plant in Haryana, due online around Mar-2027, will focus on orthopaedics and transfusion (Section A6). <!-- TRCIT p.6, p.8; TR1Q27S p.6, p.15-16 --></li>
+</ul>
+<h3 id="growth-drivers-ranked-3">Growth drivers, ranked</h3>
+<ol>
+<li><strong>Plates (management plan, near term).</strong> Plates are <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 7 · Rahul Gautam, President - Strategy &amp; Corporate Development">almost 40%</span> of the trauma market, and management says adding them doubles the addressable market and qualifies Citieffe for full-line tenders. No launch date or approval timeline has been given. <!-- TRCIT p.7; DK1Q27 p.14; DKCIT p.20 --></li>
+<li><strong>US sales force (management plan).</strong> Citieffe has <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">10</span> US approvals with <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">8-10</span> more in the pipeline, and prices there are <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">4-5</span> Europe's. More agents should lift the smallest share of the sales mix. <!-- DK4Q26 p.38; DK1Q27 p.14 --></li>
+<li><strong>Polymed's distribution and an India unit (management plan, from FY27).</strong> This means registering Citieffe products for India and selling through Polymed's network in more countries. <!-- TR1Q27S p.6; TRCIT p.5-10 --></li>
+<li><strong>Recovery of the cancelled tender (our view).</strong> CY26 revenue should get a lift if the Latin American tender is re-awarded. <!-- TR4Q26 p.17 --></li>
+<li><strong>Joint replacement (management plan, medium term).</strong> Spine is not in the stated plan. <!-- DKCIT p.20 --></li>
+</ol>
+<p>Management's aim is to "double the business" within five years "without any significant capex", although the figure it gave on the same call, <span class="n" title="Source: Citieffe acquisition call transcript (25 Sep 2025) (2025-10-01), slide/page 9 · management guidance; Rahul Gautam, President Strategy">€25-30mn</span>, is less than double CY24 revenue of <span class="n" title="Source: Citieffe acquisition press release (2025-09-24), slide/page 2">€17.3mn</span>. Either requires a growth rate well above the current pace. <!-- TRCIT p.5, p.8, p.9; PRCIT p.2 --></p>
+<h3 id="margin-drivers-ranked-3">Margin drivers, ranked</h3>
+<ol>
+<li><strong>India manufacturing.</strong> Management says the acquired businesses run at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">12-14%</span> EBITDA and can reach <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · management guidance; Himanshu Baid, MD">18-20%</span> within two to three years, through India engineering, global procurement and shipping some manufacturing to India once approvals allow. <!-- TR4Q26 p.18 --></li>
+<li><strong>Geographic mix.</strong> Each extra point of US sales carries prices several times Europe's.</li>
+<li><strong>Product mix.</strong> Low-margin product sales hurt 4QFY26. <!-- TR4Q26 p.13 --></li>
+<li><strong>Currency and financing.</strong> Currency swings on the US and Mexican units, and interest on <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 19">€13.1mn</span> of debt, sit below EBITDA but drove the CY25 loss.</li>
+</ol>
+<h3 id="what-to-watch-9">What to watch</h3>
+<figure class="exh" id="exh-ortho_watch"><figcaption><span class="exn">Exhibit 59:</span> Orthopaedics: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orthopaedics revenue</td>
+<td>Tests the <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 16 · management guidance; Rahul Gautam, President - Strategy &amp; Corporate Development">10-12%</span> FY27 guide against a flat CY25</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 492mn</span> in 1QFY27</td>
+<td>Quarterly deck, from 1QFY27</td>
+</tr>
+<tr>
+<td>Citieffe EBITDA and IFRS profit</td>
+<td>The company and IFRS figures differ; the price was set on the adjusted one</td>
+<td>~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 14">€3.15mn</span> (company) against <span class="n" title="Our calculation: B-0700-B-0701-WC-0011; inputs: -€1.34mn (Medistream consolidated opinion 2025, p.6); -€2.13mn (Medistream consolidated opinion 2025, p.6); -€1.93mn (Medistream consolidated opinion 2025, p.6)">€2.72mn</span> (IFRS-derived) in CY25</td>
+<td>Decks; Medistream accounts (annual)</td>
+</tr>
+<tr>
+<td>Receivables overdue more than <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 16">120 days</span></td>
+<td>Collection risk, and possible write-offs, on a thin allowance</td>
+<td><span class="n" title="Our calculation: B-0706/WC-0016*100; inputs: €3.38mn (Medistream consolidated opinion 2025, p.16); €6.66mn (Medistream consolidated opinion 2025, p.16)">51%</span> of gross at Dec-2025</td>
+<td>Medistream accounts, receivables note</td>
+</tr>
+<tr>
+<td>Plate launch</td>
+<td>Doubles the addressable market; needed for tenders</td>
+<td>Not launched</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>US agents and approvals</td>
+<td>Highest-price market</td>
+<td><span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">10</span> approved; <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 38">8-10</span> in pipeline</td>
+<td>Decks</td>
+</tr>
+<tr>
+<td>Transfer of production to India</td>
+<td>The main lever for the <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · management guidance; Himanshu Baid, MD">18-20%</span> margin target</td>
+<td>At the regulatory-approval stage (Aug-2026)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Debt and FX</td>
+<td>Drove the CY25 net loss</td>
+<td>Debt <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 19">€13.1mn</span>; FX loss <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 21">€1.26mn</span></td>
+<td>Medistream accounts; AR26 borrowings note</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; Investor presentation 4QFY26; Medistream consolidated opinion 2025; 1QFY27 earnings call (Aug 10 2026); 4QFY26 earnings call transcript; our calculation; Avendus Spark Research</p></figure>
+<!-- DK1Q27 p.14, p.27; DK4Q26 p.38; SUB26MEDC p.6, p.16; TR1Q27S p.6 -->
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-8.html"><span>Previous</span>A4.8 Cardiology</a><a class="next" href="a4-10.html"><span>Next</span>A4.10 Components, OEM and contract manufacturing</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

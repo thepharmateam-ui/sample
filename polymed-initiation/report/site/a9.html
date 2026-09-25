@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A9 Management, governance and capital allocation · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html" class="active">A9 Management, governance and capital allocation</a></li><li class="l3"><a href="#who-runs-polymed">Who runs Polymed</a></li><li class="l3"><a href="#shareholding-how-the-promoter-group-reached-62-4">Shareholding: how the promoter group reached 62.4%</a></li><li class="l3"><a href="#related-parties-vitromed-and-the-family-trust">Related parties: Vitromed and the family trust</a></li><li class="l3"><a href="#remuneration">Remuneration</a></li><li class="l3"><a href="#capital-allocation">Capital allocation</a></li><li class="l3"><a href="#audit-litigation-and-contingent-items">Audit, litigation and contingent items</a></li><li class="l3"><a href="#what-to-watch-12">What to watch</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a8.html"><span>Previous</span>A8 Competitive advantages and vulnerabilities</a><a class="next" href="b1.html"><span>Next</span>B1 How medical disposables are bought and priced</a></nav>
+<h2 id="a9">A9 Management, governance and capital allocation</h2>
+<p>Polymed is a founder-run company. The Baid brothers built it and still run it, and the reported promoter group, which now includes two LLPs reclassified from the public category, holds <span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">62.4%</span> of the equity. <!-- MGT7_26 p.3; AR26 p.74 --></p>
+<p>The strengths:</p>
+<ul>
+<li>clean audit reports, with no auditor qualification in the five years to FY24; <!-- PD24 pp.246-248 --></li>
+<li>a CRISIL rating of AA-/Positive; <!-- CR26 p.2 --></li>
+<li>a net cash balance sheet;</li>
+<li>two QIPs that institutions absorbed.</li>
+</ul>
+<p>Against these, we see five governance features that an investor should diligence before underwriting the FY30 plan:</p>
+<ol>
+<li><strong>Job work with a promoter firm.</strong> <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 870mn</span> of FY26 job work went to Vitromed Healthcare, a partnership of promoter-family members. That was <span class="n" title="Our calculation: A-0547/A-0506*100; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 1.0bn (Annual Report FY26, p.79)">84%</span> of all job-work charges (our calculation).</li>
+<li><strong>A promoter group enlarged by reclassification.</strong> The reported holding moved from <span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 61">44.7%</span> to <span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">62.4%</span> after two LLPs that had been counted as public shareholders were reclassified. Neither step involved a purchase of shares.</li>
+<li><strong>Promoter-family pay.</strong> It equalled <span class="n" title="Our calculation: (A-0427+A-0428+A-0429+A-0562)/A-0368*100; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 95mn (Annual Report FY26, p.55); Rs. 41mn (Annual Report FY26, p.89); Rs. 3.4bn (Annual Report FY26, p.32)">14.7%</span> of standalone PAT in FY26 (our calculation), and the MD earned <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">497x</span> the median employee.</li>
+<li><strong>Slow deployment of the Aug-2024 QIP.</strong> Only <span class="n" title="Our calculation: B-0827/B-0828*100; inputs: Rs. 620mn (Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026, p.8); Rs. 3.0bn (Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026, p.11)">21%</span> of the capex scheduled for deployment by FY26 was spent (our calculation), and the monitoring agency flagged that part of the idle money sat in hybrid mutual funds and a PMS.</li>
+<li><strong>A mixed early record for the FY26 acquisitions.</strong> PendraCare contributed a pre-tax loss of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 141mn</span> in its first six months under Polymed, while Citieffe was close to breakeven after closing.</li>
+</ol>
+<p>None of these is hidden. Each is disclosed in the annual report, the placement documents or the monitoring-agency reports. Institutions have not voted against the board in any number: no resolution at the 31st AGM drew more than <span class="n" title="Source: 31st AGM voting results and scrutinizer report (7-Sep-2026) (2026-09-09), slide/page 6">4.0%</span> of institutional votes against, although none of the five items above was itself put to a vote. <!-- PBN26 pp.3-7 --></p>
+<h3 id="who-runs-polymed">Who runs Polymed</h3>
+<p>The operating company is still run by its founders:</p>
+<ul>
+<li><strong>Himanshu Baid</strong> (MD), who joined on 20-Sep-1996. <!-- AR10 p.15; AR16 pp.60-61 --></li>
+<li><strong>Rishi Baid</strong> (JMD), formerly with Miles Pharma in the US. Both describe themselves as first-generation entrepreneurs. <!-- AR10 p.15; AR16 pp.60-61 --></li>
+<li><strong>Their father</strong>, J.K. Baid, sits on the board as a non-executive director. Their mother, Mukulika Baid, stepped down from the board on 6-May-2025, the day Vishal Baid became an executive director. <!-- AR26 pp.52-53 --></li>
+</ul>
+<p>The next generation is inside the business:</p>
+<ul>
+<li><strong>Vishal Baid</strong> is now an executive director, in charge of marketing, corporate finance and the Jaipur manufacturing operations. <!-- AR26 p.53; AGMN25 --></li>
+<li><strong>Dhruv, Arham and Aaryaman Baid</strong> are employed in the company. <!-- AR26 p.89 --></li>
+</ul>
+<p>From 2025-26 a professional layer was added:</p>
+<ul>
+<li>a CEO for India and APAC hired from Translumina, who earlier ran B. Braun in India;</li>
+<li>a CEO for Brazil;</li>
+<li>a head of the Indian renal business;</li>
+<li>a President for strategy and corporate development. <!-- DK1Q27 p.16, p.22; TR1Q27S p.2, p.10 --></li>
+</ul>
+<p>The acquired businesses keep their own chief executives. <!-- DK1Q27 p.16 --></p>
+<figure class="exh" id="exh-mgmt_bench"><figcaption><span class="exn">Exhibit 85:</span> Founders run the company; a professional layer was added in 2025-26 for India, Brazil, renal and M&amp;A</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Person</th>
+<th>Role</th>
+<th>Background and tenure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Himanshu Baid</td>
+<td>Managing Director, promoter</td>
+<td>Co-founder; joined 20-Sep-1996; electronics engineer</td>
+</tr>
+<tr>
+<td>Rishi Baid</td>
+<td>Joint Managing Director, promoter</td>
+<td>Co-founder; MS West Virginia University; ex-Miles Pharma USA</td>
+</tr>
+<tr>
+<td>Vishal Baid</td>
+<td>Executive Director, promoter family</td>
+<td>Chartered accountant; marketing, corporate finance and Jaipur manufacturing</td>
+</tr>
+<tr>
+<td>Pankaj Kumar Gupta</td>
+<td>Executive Director</td>
+<td>Tooling, production planning and industrial automation; appointed Aug-2025</td>
+</tr>
+<tr>
+<td>Naresh Vijayvergiya</td>
+<td>Chief Financial Officer</td>
+<td>CFO since FY22</td>
+</tr>
+<tr>
+<td>Indranil Mukherjee</td>
+<td>CEO India and APAC</td>
+<td>Joined 1-Jun-2026; ex-CEO Translumina, ex-MD B. Braun India</td>
+</tr>
+<tr>
+<td>Renato Rocha</td>
+<td>CEO Polymed Brazil</td>
+<td>Joined 1-Aug-2026</td>
+</tr>
+<tr>
+<td>Abhimanyu Hooda</td>
+<td>Head of renal business, India</td>
+<td>Renal industry background; joined 2026</td>
+</tr>
+<tr>
+<td>Rahul Gautam</td>
+<td>President, Strategy and Corporate Development</td>
+<td>Leads M&amp;A and integration</td>
+</tr>
+<tr>
+<td>Alessandro Balboni</td>
+<td>CEO Plan1 Health; non-executive director of Polymed</td>
+<td>Ex-CEO Delta Med and Paul Hartmann Italy</td>
+</tr>
+<tr>
+<td>Pascal Govi</td>
+<td>CEO Citieffe</td>
+<td>CEO since 2019; retained on STI/LTIP after the acquisition</td>
+</tr>
+<tr>
+<td>Sander Hartman</td>
+<td>CEO PendraCare</td>
+<td>Holds the stake Polymed did not acquire, which is to be bought in 2030 on CY29 EBITDA</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY10; Annual Report FY16; Annual Report FY22; Annual Report FY26; Notice of 30th AGM; Investor deck 1QFY27; 1QFY27 earnings call (Aug 10 2026); Investor presentation Nov 2020; Citieffe acquisition call transcript (25 Sep 2025); PendraCare acquisition presentation; Avendus Spark Research</p></figure>
+<!-- AR10 p.15; AR16 pp.60-61; AR22 p.109; AR26 pp.53-55; AGMN25 p.10; DK1Q27 pp.16-17, p.22; TR1Q27S p.2, p.10; DKNOV20 p.9; TRCIT pp.4-5, p.12; DKPEN p.11 -->
+<p><strong>The board.</strong> At 31-Mar-2026 the board had <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 51">12</span> directors. Eight were non-executive, five of them independent, and one was an independent woman director. <!-- AR26 p.51 --></p>
+<ul>
+<li><strong>Chairman.</strong> D.R. Mehta, a former SEBI chairman, has been on the board since 2005. He is now classified as a non-executive, non-independent director. <!-- AR26 p.53; PD24 p.183 --></li>
+<li><strong>Re-appointment.</strong> Because he is older than <span class="n" title="Source: 31st AGM voting results and scrutinizer report (7-Sep-2026) (2026-09-09), slide/page 6">75 years</span>, the 31st AGM re-appointed him by special resolution. <span class="n" title="Source: 31st AGM voting results and scrutinizer report (7-Sep-2026) (2026-09-09), slide/page 6">4.0%</span> of institutional votes were cast against, the highest dissent of any resolution at the meeting. <!-- PBN26 p.6 --></li>
+<li><strong>Balance of the board.</strong> The four executive directors include three members of the promoter family. With the promoters' father and the Plan1 founder among the non-executives, the board has a slim independent balance by the standards of widely held companies. It still meets the one-third test that applies to a non-promoter non-executive chairman. <!-- AR26 p.51 --></li>
+</ul>
+<h3 id="shareholding-how-the-promoter-group-reached-62-4">Shareholding: how the promoter group reached <span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">62.4%</span></h3>
+<p>The promoter group's reported holding has swung between <span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 61">44.7%</span> and <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 196">66.0%</span> over five years with almost no change in the family's own shareholdings. The swings are almost entirely the result of two reclassifications:</p>
+<ul>
+<li><strong>Zetta Matrix Consulting LLP.</strong> It held <span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 112">9.4%</span> in FY20 as a public shareholder and was moved into the promoter group in FY23. <!-- AR20 p.112; AR23 p.81 --></li>
+<li><strong>Ezekiel Global Business Solutions LLP.</strong> It held <span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 112">14.0%</span> in FY20 and was listed as a major non-promoter shareholder through 31-Mar-2024. By 30-Jun-2024 it was inside the promoter group. <!-- AR20 p.112; AR24 p.111; AR26 p.74; PD24 p.197 --></li>
+</ul>
+<p>The arithmetic ties exactly:</p>
+<ul>
+<li>The reported promoter holding at 31-Mar-2024 plus Ezekiel's then-public stake is <span class="n" title="Our calculation: B-0645+WM-0027; inputs: 53.1% (Annual Report FY24, p.89); 12.9% (Annual Report FY24, p.111)">66.03%</span> (our calculation). That is the promoter-group figure the placement document reported at 30-Jun-2024 (<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 196">66.0%</span>), weeks before the Aug-2024 QIP. <!-- PD24 p.197 --></li>
+<li>In FY20 the reported promoter group and the two LLPs together held <span class="n" title="Our calculation: B-0397+WM-0020+WM-0021; inputs: 48.8% (Annual Report FY20, p.90); 14.0% (Annual Report FY20, p.112); 9.4% (Annual Report FY20, p.112)">72.2%</span>. In FY22 they held <span class="n" title="Our calculation: B-0518+WM-0024+WM-0025; inputs: 44.7% (Annual Report FY22, p.61); 12.9% (Annual Report FY23, p.81); 8.7% (Annual Report FY23, p.81)">66.2%</span>. We attribute the fall between those years to dilution from the Feb-2021 QIP.</li>
+</ul>
+<figure class="exh" id="exh-promoter_reclass"><figcaption><span class="exn">Exhibit 86:</span> The promoter group rose from 45% to 62% by reclassifying two LLPs; the combined block barely moved outside QIP dilution</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Promoter group as reported</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Ezekiel Global LLP while classified as public</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Zetta Matrix LLP while classified as public</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">20</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">40</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">60</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">80</text><text class="unit" text-anchor="start" x="2" y="13">% of equity</text><text class="tick" text-anchor="middle" x="96.14" y="284">FY20</text><path class="mark" d="M84.14,118.28h24.00v147.72h-24.00Z" data-tip="FY20 · Promoter group as reported: 48.8%" fill="var(--s1)"><title>FY20 · Promoter group as reported: 48.8%</title></path><path class="mark" d="M84.14,75.55h24.00v40.73h-24.00Z" data-tip="FY20 · Ezekiel Global LLP while classified as public: 14.0%" fill="var(--s2)"><title>FY20 · Ezekiel Global LLP while classified as public: 14.0%</title></path><path class="mark" d="M84.14,73.55V49.79Q84.14,45.79 88.14,45.79H104.14Q108.14,45.79 108.14,49.79V73.55Z" data-tip="FY20 · Zetta Matrix LLP while classified as public: 9.4%" fill="var(--s3)"><title>FY20 · Zetta Matrix LLP while classified as public: 9.4%</title></path><text class="val" text-anchor="middle" x="96.14" y="39.79">72.2</text><text class="tick" text-anchor="middle" x="196.43" y="284">FY21</text><path class="mark" d="M184.43,130.12h24.00v135.88h-24.00Z" data-tip="FY21 · Promoter group as reported: 44.9%" fill="var(--s1)"><title>FY21 · Promoter group as reported: 44.9%</title></path><path class="mark" d="M184.43,90.80h24.00v37.31h-24.00Z" data-tip="FY21 · Ezekiel Global LLP while classified as public: 12.9%" fill="var(--s2)"><title>FY21 · Ezekiel Global LLP while classified as public: 12.9%</title></path><path class="mark" d="M184.43,88.80V67.33Q184.43,63.33 188.43,63.33H204.43Q208.43,63.33 208.43,67.33V88.80Z" data-tip="FY21 · Zetta Matrix LLP while classified as public: 8.7%" fill="var(--s3)"><title>FY21 · Zetta Matrix LLP while classified as public: 8.7%</title></path><text class="val" text-anchor="middle" x="196.43" y="57.33">66.5</text><text class="tick" text-anchor="middle" x="296.71" y="284">FY22</text><path class="mark" d="M284.71,130.79h24.00v135.21h-24.00Z" data-tip="FY22 · Promoter group as reported: 44.7%" fill="var(--s1)"><title>FY22 · Promoter group as reported: 44.7%</title></path><path class="mark" d="M284.71,91.47h24.00v37.31h-24.00Z" data-tip="FY22 · Ezekiel Global LLP while classified as public: 12.9%" fill="var(--s2)"><title>FY22 · Ezekiel Global LLP while classified as public: 12.9%</title></path><path class="mark" d="M284.71,89.47V68.00Q284.71,64.00 288.71,64.00H304.71Q308.71,64.00 308.71,68.00V89.47Z" data-tip="FY22 · Zetta Matrix LLP while classified as public: 8.7%" fill="var(--s3)"><title>FY22 · Zetta Matrix LLP while classified as public: 8.7%</title></path><text class="val" text-anchor="middle" x="296.71" y="58.00">66.2</text><text class="tick" text-anchor="middle" x="397.00" y="284">FY23</text><path class="mark" d="M385.00,104.40h24.00v161.60h-24.00Z" data-tip="FY23 · Promoter group as reported: 53.3%" fill="var(--s1)"><title>FY23 · Promoter group as reported: 53.3%</title></path><path class="mark" d="M385.00,102.40V68.12Q385.00,64.12 389.00,64.12H405.00Q409.00,64.12 409.00,68.12V102.40Z" data-tip="FY23 · Ezekiel Global LLP while classified as public: 12.9%" fill="var(--s2)"><title>FY23 · Ezekiel Global LLP while classified as public: 12.9%</title></path><text class="val" text-anchor="middle" x="397.00" y="58.12">66.2</text><text class="tick" text-anchor="middle" x="497.29" y="284">FY24</text><path class="mark" d="M485.29,104.89h24.00v161.11h-24.00Z" data-tip="FY24 · Promoter group as reported: 53.1%" fill="var(--s1)"><title>FY24 · Promoter group as reported: 53.1%</title></path><path class="mark" d="M485.29,102.89V68.61Q485.29,64.61 489.29,64.61H505.29Q509.29,64.61 509.29,68.61V102.89Z" data-tip="FY24 · Ezekiel Global LLP while classified as public: 12.9%" fill="var(--s2)"><title>FY24 · Ezekiel Global LLP while classified as public: 12.9%</title></path><text class="val" text-anchor="middle" x="497.29" y="58.61">66.0</text><text class="tick" text-anchor="middle" x="597.57" y="284">FY25</text><path class="mark" d="M585.57,266.00V79.59Q585.57,75.59 589.57,75.59H605.57Q609.57,75.59 609.57,79.59V266.00Z" data-tip="FY25 · Promoter group as reported: 62.4%" fill="var(--s1)"><title>FY25 · Promoter group as reported: 62.4%</title></path><text class="val" text-anchor="middle" x="597.57" y="69.59">62.4</text><text class="tick" text-anchor="middle" x="697.86" y="284">FY26</text><path class="mark" d="M685.86,266.00V79.65Q685.86,75.65 689.86,75.65H705.86Q709.86,75.65 709.86,79.65V266.00Z" data-tip="FY26 · Promoter group as reported: 62.4%" fill="var(--s1)"><title>FY26 · Promoter group as reported: 62.4%</title></path><text class="val" text-anchor="middle" x="697.86" y="69.65">62.4</text></svg></div><p class="note">Year-end (31 March) holdings. Zetta Matrix held <span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 81">8.7%</span> inside the promoter group at 31-Mar-2023 and Ezekiel Global <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 74">12.2%</span> at 31-Mar-2025. The FY25 decline reflects dilution from the Aug-2024 QIP.</p><p class="src">Source: Annual Report FY20; Annual Report FY21; Annual Report FY22; Annual Report FY23; Annual Report FY24; Annual Report FY25; Form MGT-7 FY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY20</th><th class="num">FY21</th><th class="num">FY22</th><th class="num">FY23</th><th class="num">FY24</th><th>FY25</th><th>FY26</th></tr></thead><tbody><tr><th scope="row">Promoter group as reported</th><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 90">48.8%</span></td><td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 83">44.9%</span></td><td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 61">44.7%</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 81">53.3%</span></td><td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 89">53.1%</span></td><td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 85">62.4%</span></td><td class="num"><span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">62.4%</span></td></tr><tr><th scope="row">Ezekiel Global LLP while classified as public</th><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 112">14.0%</span></td><td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 105">12.9%</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 81">12.9%</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 81">12.9%</span></td><td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 111">12.9%</span></td><td>–</td><td>–</td></tr><tr><th scope="row">Zetta Matrix LLP while classified as public</th><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 112">9.4%</span></td><td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 105">8.7%</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 81">8.7%</span></td><td class="num">–</td><td class="num">–</td><td>–</td><td>–</td></tr></tbody></table></div></details></figure>
+<p>The documents we reviewed disclose neither who controls the two LLPs nor why they were reclassified. We therefore do not infer control. We do note three consequences:</p>
+<ul>
+<li>The public float is <span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">37.6%</span>. <!-- MGT7_26 p.3 --></li>
+<li>Public institutions held about <span class="n" title="Our calculation: WM-0041/WM-0045*100; inputs: 21,500,158 (31st AGM voting results and scrutinizer report (7-Sep-2026), p.5); 101,359,490 (Annual Report FY26, p.59)">21.2%</span> at the AGM record date (our calculation). <!-- PBN26 p.5 --></li>
+<li>The effective free float is narrower than the pre-FY23 shareholding pattern implied.</li>
+</ul>
+<p>Promoter shares carried no pledge at 30-Jun-2024. <!-- PD24 p.197 --></p>
+<h3 id="related-parties-vitromed-and-the-family-trust">Related parties: Vitromed and the family trust</h3>
+<p><strong>Vitromed Healthcare</strong> is a Jaipur partnership of J.K. Baid, Rishi Baid, Vishal Baid and Polycure Martech Ltd, a company owned by directors and their relatives, according to the FY16 annual report; the FY26 report lists it among enterprises over which key management personnel and their relatives exercise significant influence. <!-- AR16 p.13, p.19; AR26 p.87 --></p>
+<ul>
+<li><strong>Its role.</strong> It has been Polymed's main job-worker since at least FY09. It makes products and components from raw materials that Polymed supplies. It is not an OEM supplier. <!-- AR10 p.41; PD24 p.177 --></li>
+<li><strong>Products.</strong> The Feb-2021 placement document named safety scalp-vein sets and silicone rubber sleeves among its products. <!-- PD21 p.86 --></li>
+<li><strong>Two-way trade.</strong> Vitromed also buys goods from Polymed, so money flows in both directions. <!-- AR26 p.88 --></li>
+</ul>
+<p>Over time Vitromed's share of total job work has eased, but the rupee amount has grown <span class="n" title="Our calculation: A-0547/B-0058; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 104mn (Annual Report FY10, p.41)">8.3x</span> since FY10 (our calculation).</p>
+<figure class="exh" id="exh-vitromed"><figcaption><span class="exn">Exhibit 87:</span> Vitromed's share of job work has eased from ~95% to ~84%, but payments to it have grown eightfold since FY10</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th></th>
+<th class="num">FY10</th>
+<th class="num">FY13</th>
+<th class="num">FY16</th>
+<th class="num">FY19</th>
+<th class="num">FY22</th>
+<th class="num">FY24</th>
+<th class="num">FY25</th>
+<th class="num">FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job work paid to Vitromed</td>
+<td class="num"><span class="n" title="Source: Annual Report FY10 (2010-09), slide/page 41">Rs. 104mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 54">Rs. 214mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 99">Rs. 300mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 136">Rs. 441mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 109">Rs. 578mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 139">Rs. 765mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 893mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 870mn</span></td>
+</tr>
+<tr>
+<td>Total job-work charges</td>
+<td class="num"><span class="n" title="Source: Annual Report FY10 (2010-09), slide/page 36">Rs. 112mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 51">Rs. 226mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 95">Rs. 320mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 117">Rs. 478mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 92">Rs. 648mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 121">Rs. 910mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 79">Rs. 1.1bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 79">Rs. 1.0bn</span></td>
+</tr>
+<tr>
+<td>Vitromed share of job work</td>
+<td class="num"><span class="n" title="Our calculation: B-0058/B-0031*100; inputs: Rs. 104mn (Annual Report FY10, p.41); Rs. 112mn (Annual Report FY10, p.36)">93%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0141/B-0119*100; inputs: Rs. 214mn (Annual Report FY13, p.54); Rs. 226mn (Annual Report FY13, p.51)">95%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0249/B-0204*100; inputs: Rs. 300mn (Annual Report FY16, p.99); Rs. 320mn (Annual Report FY16, p.95)">94%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0332/B-0308*100; inputs: Rs. 441mn (Annual Report FY19, p.136); Rs. 478mn (Annual Report FY19, p.117)">92%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0505/B-0489*100; inputs: Rs. 578mn (Annual Report FY22, p.109); Rs. 648mn (Annual Report FY22, p.92)">89%</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0634/B-0613*100; inputs: Rs. 765mn (Annual Report FY24, p.139); Rs. 910mn (Annual Report FY24, p.121)">84%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0548/A-0507*100; inputs: Rs. 893mn (Annual Report FY26, p.88); Rs. 1.1bn (Annual Report FY26, p.79)">83%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0547/A-0506*100; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 1.0bn (Annual Report FY26, p.79)">84%</span></td>
+</tr>
+<tr>
+<td>Sales by Polymed to Vitromed</td>
+<td class="num"><span class="n" title="Source: Annual Report FY10 (2010-09), slide/page 41">Rs. 79mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY13 (2013-09), slide/page 54">Rs. 149mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 99">Rs. 142mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 136">Rs. 164mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 109">Rs. 278mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 139">Rs. 214mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 247mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 229mn</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY10; Annual Report FY13; Annual Report FY16; Annual Report FY19; Annual Report FY22; Annual Report FY24; Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- AR10 p.36, p.41; AR13 p.51, p.54; AR16 p.95, p.99; AR19 p.117, p.136; AR22 p.92, p.109; AR24 p.121, p.139; AR26 p.79, p.88 -->
+<p>In FY26 the job work paid to Vitromed equalled <span class="n" title="Our calculation: A-0547/A-0440*100; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 16.6bn (Annual Report FY26, p.64)">5.2%</span> of standalone revenue (our calculation).</p>
+<p>The transactions are disclosed every year:</p>
+<ul>
+<li>Shareholders set contract caps of <span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 56">Rs. 600mn</span>, <span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 56">Rs. 750mn</span> and <span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 56">Rs. 900mn</span> for FY19-21. <!-- AR19 p.56 --></li>
+<li>In FY10 sales to Vitromed exceeded the then Section 297 approval limit by <span class="n" title="Source: Annual Report FY10 (2010-09), slide/page 20">Rs. 8.8mn</span>. <!-- AR10 p.20 --></li>
+<li>We found no related-party approval resolution in the 2025 or 2026 AGM notices. The FY26 annual report states that all related-party transactions were at arm's length. <!-- AGMN25; AGMN26; AR26 p.40 --></li>
+<li>All FY26 dealings with Vitromed together equalled <span class="n" title="Our calculation: (A-0547+A-0549+A-0551)/A-0039*100; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 229mn (Annual Report FY26, p.88); Rs. 5.1mn (Annual Report FY26, p.88); Rs. 18.8bn (Annual Report FY26, p.6)">5.9%</span> of consolidated revenue (our calculation). That is below the materiality threshold in the company's policy – the lower of <span class="n" title="Source: Policy on related party transactions (2023-02-20)">Rs. 10.0bn</span> or <span class="n" title="Source: Policy on related party transactions (2023-02-20)">10%</span> of consolidated turnover – above which shareholder approval would be needed. <!-- AR26 p.88; RPTPOL p.1 --></li>
+</ul>
+<p>We see two questions for management, both of which bear on margins:</p>
+<ol>
+<li>Is the pricing demonstrably arm's-length? The disclosures give amounts, not the terms or the margin Vitromed earns.</li>
+<li>Why is the capacity not brought in-house? The QIP funded new plants but did not absorb Vitromed.</li>
+</ol>
+<p><strong>CSR and the family trust.</strong></p>
+<ul>
+<li>Polymed routes a large share of its CSR spend through the Jai Chand Lal Hulasi Devi Baid Charitable Trust, a promoter-family trust: <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 21mn</span> in FY26, or <span class="n" title="Our calculation: A-0555/A-0403*100; inputs: Rs. 21mn (Annual Report FY26, p.88); Rs. 41mn (Annual Report FY26, p.41)">51%</span> of CSR spend (our calculation). <!-- AR26 p.88; AR26 p.41 --></li>
+<li>The trust received <span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 137">Rs. 3.0mn</span> in FY21 and <span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 139">Rs. 21mn</span> in FY24. <!-- AR21 p.137; AR24 p.139 --></li>
+</ul>
+<p><strong>Other related parties.</strong></p>
+<ul>
+<li><strong>Egypt associate.</strong> Ultra for Medical Products paid Polymed a dividend and governing-council share of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 33mn</span> in FY26. <!-- AR26 p.88 --></li>
+<li><strong>Rent.</strong> Rent to promoter company Jai Polypan is immaterial. <!-- AR26 p.88 --></li>
+<li><strong>Plan1 founder.</strong> Alessandro Balboni received business-development fees of <span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 140">Rs. 28mn</span> in FY24. <!-- AR24 p.140 --></li>
+</ul>
+<h3 id="remuneration">Remuneration</h3>
+<p>Pay for the two promoter managing directors has two parts:</p>
+<ul>
+<li><strong>A fixed element.</strong> From 1-Aug-2024 basic salaries are <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 188">Rs. 38mn</span> for the MD and <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 189">Rs. 37mn</span> for the JMD, with annual increments of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 188">8%</span> and perquisites of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 188">60%</span> of salary. <!-- PD24 pp.188-189 --></li>
+<li><strong>A profit-linked commission</strong> of up to <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 189">5%</span> of profits as computed under Section 198 of the Companies Act. <!-- PD24 p.189 --></li>
+</ul>
+<p>The ratio of the MD's pay to the median employee rose from <span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 44">161x</span> in FY16 to <span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 52">579x</span> in FY25. It eased to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">497x</span> in FY26, when the MD's pay fell <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 42">15.5%</span> while the median employee's pay fell <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 42">1.6%</span>. <!-- AR26 p.42 --></p>
+<figure class="exh" id="exh-md_pay_ratio"><figcaption><span class="exn">Exhibit 88:</span> The MD's pay rose from 161x to 579x the median employee over FY16-FY25 before easing in FY26</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">200</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">400</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">600</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">800</text><text class="unit" text-anchor="start" x="2" y="13">x median employee pay</text><text class="tick" text-anchor="middle" x="85.00" y="284">FY16</text><path class="mark" d="M73.00,266.00V220.89Q73.00,216.89 77.00,216.89H93.00Q97.00,216.89 97.00,220.89V266.00Z" data-tip="FY16 · MD pay / median employee pay: 161x" fill="var(--s1)"><title>FY16 · MD pay / median employee pay: 161x</title></path><text class="tick" text-anchor="middle" x="163.00" y="284">FY19</text><path class="mark" d="M151.00,266.00V219.37Q151.00,215.37 155.00,215.37H171.00Q175.00,215.37 175.00,219.37V266.00Z" data-tip="FY19 · MD pay / median employee pay: 166x" fill="var(--s1)"><title>FY19 · MD pay / median employee pay: 166x</title></path><text class="tick" text-anchor="middle" x="241.00" y="284">FY20</text><path class="mark" d="M229.00,266.00V205.34Q229.00,201.34 233.00,201.34H249.00Q253.00,201.34 253.00,205.34V266.00Z" data-tip="FY20 · MD pay / median employee pay: 212x" fill="var(--s1)"><title>FY20 · MD pay / median employee pay: 212x</title></path><text class="tick" text-anchor="middle" x="319.00" y="284">FY21</text><path class="mark" d="M307.00,266.00V172.40Q307.00,168.40 311.00,168.40H327.00Q331.00,168.40 331.00,172.40V266.00Z" data-tip="FY21 · MD pay / median employee pay: 320x" fill="var(--s1)"><title>FY21 · MD pay / median employee pay: 320x</title></path><text class="tick" text-anchor="middle" x="397.00" y="284">FY22</text><path class="mark" d="M385.00,266.00V160.81Q385.00,156.81 389.00,156.81H405.00Q409.00,156.81 409.00,160.81V266.00Z" data-tip="FY22 · MD pay / median employee pay: 358x" fill="var(--s1)"><title>FY22 · MD pay / median employee pay: 358x</title></path><text class="tick" text-anchor="middle" x="475.00" y="284">FY23</text><path class="mark" d="M463.00,266.00V137.63Q463.00,133.63 467.00,133.63H483.00Q487.00,133.63 487.00,137.63V266.00Z" data-tip="FY23 · MD pay / median employee pay: 434x" fill="var(--s1)"><title>FY23 · MD pay / median employee pay: 434x</title></path><text class="tick" text-anchor="middle" x="553.00" y="284">FY24</text><path class="mark" d="M541.00,266.00V114.75Q541.00,110.75 545.00,110.75H561.00Q565.00,110.75 565.00,114.75V266.00Z" data-tip="FY24 · MD pay / median employee pay: 509x" fill="var(--s1)"><title>FY24 · MD pay / median employee pay: 509x</title></path><text class="tick" text-anchor="middle" x="631.00" y="284">FY25</text><path class="mark" d="M619.00,266.00V93.41Q619.00,89.41 623.00,89.41H639.00Q643.00,89.41 643.00,93.41V266.00Z" data-tip="FY25 · MD pay / median employee pay: 579x" fill="var(--s1)"><title>FY25 · MD pay / median employee pay: 579x</title></path><text class="tick" text-anchor="middle" x="709.00" y="284">FY26</text><path class="mark" d="M697.00,266.00V118.42Q697.00,114.42 701.00,114.42H717.00Q721.00,114.42 721.00,118.42V266.00Z" data-tip="FY26 · MD pay / median employee pay: 497x" fill="var(--s1)"><title>FY26 · MD pay / median employee pay: 497x</title></path><text class="val" text-anchor="middle" x="709.00" y="108.42">497.0</text></svg></div><p class="note">Ratios as printed in each year's annual report (Rule 5(1) disclosure). FY17-FY18 not reviewed.</p><p class="src">Source: Annual Report FY16; Annual Report FY19; Annual Report FY20; Annual Report FY21; Annual Report FY22; Annual Report FY23; Annual Report FY24; Annual Report FY25; Annual Report FY26; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY16</th><th class="num">FY19</th><th class="num">FY20</th><th class="num">FY21</th><th class="num">FY22</th><th class="num">FY23</th><th class="num">FY24</th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">MD pay / median employee pay</th><td class="num"><span class="n" title="Source: Annual Report FY16 (2016-09), slide/page 44">161x</span></td><td class="num"><span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 59">166x</span></td><td class="num"><span class="n" title="Source: Annual Report FY20 (2020-09), slide/page 61">212x</span></td><td class="num"><span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 50">320x</span></td><td class="num"><span class="n" title="Source: Annual Report FY22 (2022-09), slide/page 40">358x</span></td><td class="num"><span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 34">434x</span></td><td class="num"><span class="n" title="Source: Annual Report FY24 (2024-09), slide/page 62">509x</span></td><td class="num"><span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 52">579x</span></td><td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">497x</span></td></tr></tbody></table></div></details></figure>
+<figure class="exh" id="exh-pay_fy26"><figcaption><span class="exn">Exhibit 89:</span> Promoter-family pay equalled ~15% of standalone profit after tax in FY26</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Person</th>
+<th>Role</th>
+<th>FY25</th>
+<th class="num">FY26</th>
+<th>Ratio to median, FY26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Himanshu Baid</td>
+<td>MD</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 214mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 55">Rs. 181mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">497x</span></td>
+</tr>
+<tr>
+<td>Rishi Baid</td>
+<td>JMD</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 209mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 55">Rs. 176mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">482: 1</span></td>
+</tr>
+<tr>
+<td>Vishal Baid</td>
+<td>Executive Director</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 55">Rs. 95mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">261: 1</span></td>
+</tr>
+<tr>
+<td>Pankaj Kumar Gupta</td>
+<td>Executive Director (from Aug-2025)</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 55">Rs. 11mn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 41">21: 1</span></td>
+</tr>
+<tr>
+<td>Dhruv, Arham and Aaryaman Baid</td>
+<td>Employees, promoter family</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 89">Rs. 41mn</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>MD + JMD as % of standalone PAT</td>
+<td></td>
+<td class="num"><span class="n" title="Our calculation: (A-0559+A-0560)/A-0369*100; inputs: Rs. 214mn (Annual Report FY26, p.88); Rs. 209mn (Annual Report FY26, p.88); Rs. 3.3bn (Annual Report FY26, p.32)">12.8%</span></td>
+<td class="num"><span class="n" title="Our calculation: (A-0427+A-0428)/A-0368*100; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 3.4bn (Annual Report FY26, p.32)">10.6%</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Promoter family as % of standalone PAT</td>
+<td></td>
+<td>–</td>
+<td class="num"><span class="n" title="Our calculation: (A-0427+A-0428+A-0429+A-0562)/A-0368*100; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 95mn (Annual Report FY26, p.55); Rs. 41mn (Annual Report FY26, p.89); Rs. 3.4bn (Annual Report FY26, p.32)">14.7%</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Four executive directors as % of standalone PBT</td>
+<td></td>
+<td>–</td>
+<td class="num"><span class="n" title="Our calculation: (A-0427+A-0428+A-0429+A-0430)/A-0365*100; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 95mn (Annual Report FY26, p.55); Rs. 11mn (Annual Report FY26, p.55); Rs. 4.5bn (Annual Report FY26, p.32)">10.3%</span></td>
+<td></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; Annual Report FY25; our calculation; Avendus Spark Research</p></figure>
+<!-- AR26 pp.41-42, p.55, pp.88-89; AR25 p.52 -->
+<ul>
+<li><strong>Vishal Baid.</strong> His pay rose <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 42">372%</span> in FY26 on his elevation to executive director. <!-- AR26 p.42 --></li>
+<li><strong>Total promoter-family pay</strong> in FY26 was <span class="n" title="Our calculation: A-0427+A-0428+A-0429+A-0562; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 95mn (Annual Report FY26, p.55); Rs. 41mn (Annual Report FY26, p.89)">Rs. 493mn</span> (our calculation).</li>
+<li><strong>ESOPs.</strong> The 2020 scheme grants options at an exercise price of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 32">Rs. 100</span>, against the Aug-2024 QIP price of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 1">Rs. 1,880</span>. The pool is <span class="n" title="Source: ESOP Scheme 2020 (2025-07-24), slide/page 9">1,000,000</span> shares. <!-- AR26 p.32; PD24 p.1; ESOP20 p.9 --></li>
+</ul>
+<p>We read the scheme as a retention tool for the professional layer, since the promoters are not grantees. It is a deep-discount scheme, and its cost will show up as a share-based payment charge.</p>
+<h3 id="capital-allocation">Capital allocation</h3>
+<p><strong>QIP-2021 was deployed as planned.</strong> It raised <span class="n" title="Source: Annual Report FY21 (2021-08), slide/page 32">Rs. 4.0bn</span> in Feb-2021 with general objects and was fully used by 31-Mar-2023, <span class="n" title="Source: Annual Report FY23 (2023-09), slide/page 116">Rs. 3.1bn</span> of it on capex. <!-- AR21 p.32; AR23 p.116 --></p>
+<p><strong>QIP-2024 is running behind on capex.</strong> The Aug-2024 QIP raised <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 72">Rs. 10.0bn</span> at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 1">Rs. 1,880</span> a share. Its objects were capex for new plants, inorganic growth and general corporate purposes. <!-- PD24 p.1, p.72 --></p>
+<ul>
+<li><strong>The acquisition money went first,</strong> to PendraCare and Citieffe.</li>
+<li><strong>The capex money lagged.</strong> By 31-Mar-2026, <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 620mn</span> had been spent on capex against <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 11 · management guidance">Rs. 3.0bn</span> scheduled for deployment by FY26. <!-- MA_2603 p.11 --></li>
+<li><strong>Reason given.</strong> The company attributed the delay to moving the Jaipur SEZ project to the Medical Device Park on the Yamuna Expressway (YEIDA), and rescheduled the spend to FY27-28. <!-- MA_2603 p.11 --></li>
+<li><strong>Idle money.</strong> Unutilized proceeds were <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 4.8bn</span> at 31-Mar-2026 and <span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 4.7bn</span> at 30-Jun-2026. <!-- AR26 p.94; RS1Q27 p.5 --></li>
+</ul>
+<figure class="exh" id="exh-qip24"><figcaption><span class="exn">Exhibit 90:</span> QIP-2024: acquisition money went out first; plant capex is two years behind the placement-document schedule</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Object</th>
+<th class="num">Amount allocated</th>
+<th class="num">Scheduled by FY26</th>
+<th class="num">Used by 31-Mar-2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capex for new plants</td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 7">Rs. 5.0bn</span></td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 11 · management guidance">Rs. 3.0bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 620mn</span></td>
+</tr>
+<tr>
+<td>Inorganic growth</td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 7">Rs. 2.5bn</span></td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 72 · management guidance">Rs. 2.5bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 2.5bn</span></td>
+</tr>
+<tr>
+<td>General corporate purposes</td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 7">Rs. 2.4bn</span></td>
+<td class="num"><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 11 · management guidance">Rs. 2.0bn</span></td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 1.9bn</span></td>
+</tr>
+<tr>
+<td>Unutilized, parked in liquid funds, FDs and a PMS</td>
+<td class="num">–</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 4.8bn</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: QIP Placement Document Aug 2024; Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026; Annual Report FY26; Avendus Spark Research</p></figure>
+<!-- PD24 p.72; MA_2603 pp.5-11; AR26 p.94 -->
+<p>The monitoring agency's 4QFY26 report added a sharper point:</p>
+<ul>
+<li>It flagged that <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 4">Rs. 719mn</span> of unutilized proceeds had been placed in hybrid mutual funds with equity exposure (market value <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 4">Rs. 759mn</span>), and that <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 10">Rs. 50mn</span> was in a Nuvama absolute-return PMS. <!-- MA_2603 p.4, p.10 --></li>
+<li>It called the hybrid-fund placement "not in line with the disclosures made by the Company in the Placement Document". <!-- MA_2603 p.4 --></li>
+<li>The board's recorded comment was "No Comments". <!-- MA_2603 p.11 --></li>
+</ul>
+<p>We view the amount as small, but the episode is a data point on treasury discipline.</p>
+<p><strong>Acquisitions.</strong> The acquisition record is short and mixed. Plan1 has grown into a profitable if small business. PendraCare lost money in its first six months under Polymed. Citieffe was close to breakeven after closing, although its CY25 statutory accounts show a net loss driven by an FX loss. Integration of both is only beginning. Management has said it wants to "pause and absorb". <!-- TRCIT pp.11-12 --></p>
+<p>Its stated M&amp;A criteria are unchanged:</p>
+<ul>
+<li>technology and regulatory approvals in adjacencies chosen by disease burden: renal, cardiology, critical care, oncology and orthopaedics;</li>
+<li>buying time, because organic development takes <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 10 · management">3-5</span> years. <!-- TR2Q25 p.10, p.12; TR3Q26 p.12 --></li>
+</ul>
+<figure class="exh" id="exh-deals"><figcaption><span class="exn">Exhibit 91:</span> Acquisition scorecard: Plan1 has worked; PendraCare and Citieffe started life under Polymed with losses</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Deal</th>
+<th>Closed</th>
+<th>What was bought</th>
+<th>Price</th>
+<th>Latest performance</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plan1 Health, Italy</td>
+<td>Jun-2018 and Mar-2019</td>
+<td>Vascular access and oncology devices (ports, PICCs, midlines); Amaro plant</td>
+<td>Investment <span class="n" title="Source: Annual Report FY19 (2019-09), slide/page 203">Rs. 335mn</span>; goodwill <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 8">€3.83mn</span></td>
+<td>Revenue <span class="n" title="Source: Plan1 Health srl 2024 accounts (2025-09-19), slide/page 3">€7.25mn</span> (CY23) to <span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 3">€10.5mn</span> (CY25); net profit <span class="n" title="Source: Plan1 Health srl FY26 accounts (2026-08-18), slide/page 4">€681k</span> (CY25)</td>
+<td>A4.2</td>
+</tr>
+<tr>
+<td>PendraCare and Wellinq, Netherlands (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">90%</span>)</td>
+<td>Sep-2025</td>
+<td>Guiding and diagnostic catheters; cardiology R&amp;D</td>
+<td><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025 (2025-11-12), slide/page 8">Rs. 1.5bn</span> upfront; contingent consideration <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 314mn</span></td>
+<td>Contribution from 22-Sep-2025 to 31-Mar-2026: revenue <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 442mn</span>, pre-tax loss <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 141mn</span></td>
+<td>A4.8</td>
+</tr>
+<tr>
+<td>Citieffe (via Medistream SA), Italy, US, Mexico</td>
+<td>Nov-2025</td>
+<td>Trauma implants and external fixators</td>
+<td><span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€20.3mn</span> for the shares in Poly Medicure BV's accounts; total outlay of <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025 (2026-02-13), slide/page 8">Rs. 2.4bn</span> per the monitoring agency; goodwill <span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€10.3mn</span></td>
+<td>Contribution from 6-Nov-2025: revenue <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 726mn</span>, pre-tax loss <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.0mn</span>. CY25 statutory accounts: revenue <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€17.2mn</span>, net loss <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 6">€1.21mn</span> incl. an FX loss; debt <span class="n" title="Source: Medistream consolidated opinion 2025 (2026-08-27), slide/page 19">€13.1mn</span></td>
+<td>A4.9</td>
+</tr>
+<tr>
+<td>Medyneo, Brazil</td>
+<td>1QFY27</td>
+<td>Dormant company holding ANVISA and import licences</td>
+<td class="num"><span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 3.4mn</span></td>
+<td>Pre-operational; management says it saves <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 8 · Rahul Gautam, President - Strategy &amp; Corporate Development">18-24</span> months in registrations</td>
+<td>A5</td>
+</tr>
+<tr>
+<td>Himalayan Mineral Water, India</td>
+<td>2QFY26</td>
+<td>Company bought under an insolvency resolution plan to secure land next to the Haridwar site</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 93">Rs. 332mn</span></td>
+<td>NCLAT appeal pending on past statutory liabilities</td>
+<td>A6</td>
+</tr>
+<tr>
+<td>AMPIN C&amp;I Power Two, India</td>
+<td>FY26</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">26%</span> stake in a captive solar project</td>
+<td>[not disclosed]</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 7">9.9 MWp</span> commissioned Nov-2025</td>
+<td>A6</td>
+</tr>
+</tbody>
+</table></div><p class="note">Contribution figures are from the FY26 annual report's business-combination note, which dates the acquisitions 22-Sep-2025 (PendraCare) and 6-Nov-2025 (Citieffe); the investor presentations, and other sections of this report, use the consolidation dates of 23-Sep-2025 and 7-Nov-2025.</p><p class="src">Source: Poly Medicure BV FY26 accounts; Annual Report FY19; Plan1 Health srl 2024 accounts; Plan1 Health srl FY26 accounts; Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025; Monitoring agency report on QIP proceeds - quarter ended 31-Dec-2025; Annual Report FY26; Risor Holdings accounts; Medistream consolidated opinion 2025; Board outcome and results 1QFY27; 4QFY26 earnings call transcript; Investor presentation 2QFY26; Investor presentation 4QFY26; Avendus Spark Research</p></figure>
+<!-- SUB26BV pp.8-10; AR19 p.203; SUB25P1IT p.3; SUB26P1IT pp.3-4; MA_2509 p.8; MA_2512 p.8; AR26 p.33, p.93, p.121; SUB26RIS p.2; SUB26MEDC pp.6, 19; RS1Q27 p.5; TR4Q26 pp.3-4; DK2Q26 p.19; DK4Q26 p.41 -->
+<p><strong>Cash and payout.</strong> Polymed ended FY26 with net cash of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 48">~Rs. 5.0bn</span> and liquidity of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 8">Rs. 8.0bn+</span>. <!-- AR26 p.8, p.48 --></p>
+<ul>
+<li><strong>Other income.</strong> Other income is a large part of profit: it was <span class="n" title="Our calculation: A-0290/A-0258*100; inputs: Rs. 1.2bn (Annual Report FY26, p.47); Rs. 4.3bn (Annual Report FY26, p.47)">28%</span> of consolidated PBT in FY26 (our calculation). At the standalone level it included realized and unrealized mutual-fund gains of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 78">Rs. 402mn</span> and <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 78">Rs. 126mn</span> and FX gains of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 78">Rs. 381mn</span>. <!-- AR26 p.47, p.78 --></li>
+<li><strong>Payout.</strong> The dividend was <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 33">Rs. 3.5</span> a share, a payout of <span class="n" title="Our calculation: A-0051/A-0048*100; inputs: Rs. 355mn (Annual Report FY26, p.6); Rs. 3.2bn (Annual Report FY26, p.6)">11%</span> of consolidated PAT (our calculation). <!-- AR26 p.33 --></li>
+<li><strong>Management's rationale.</strong> In May-2025 it justified a lower payout by heavy capex and M&amp;A opportunities. <!-- TR4Q25 p.16 --></li>
+<li><strong>Returns.</strong> Consolidated ROCE fell to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 6">16.4%</span> in FY26 from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 6">23.5%</span> on the company's adjusted definition, which already excludes unutilized QIP money from capital employed; we infer that the acquisitions entering the capital base, with their low early profits, explain most of the fall. <!-- AR26 p.6 --></li>
+</ul>
+<p>We see capital allocation, rather than the operating franchise, as the swing factor for returns through FY28:</p>
+<ul>
+<li>the unspent plant capex at YEIDA, Palwal and Haridwar;</li>
+<li>the turnaround of two loss-making acquisitions;</li>
+<li>what happens to about <span class="n" title="Source: Board outcome and results 1QFY27 (2026-08-07), slide/page 5">Rs. 4.7bn</span> of unused QIP money.</li>
+</ul>
+<h3 id="audit-litigation-and-contingent-items">Audit, litigation and contingent items</h3>
+<p><strong>Auditors.</strong></p>
+<ul>
+<li>Doogar &amp; Associates audited Polymed until FY19. M.C. Bhandari &amp; Co. took over from the 2019 AGM. <!-- AR19 p.18 --></li>
+<li>Doogar &amp; Associates were re-appointed at the 29th AGM on 26-Sep-2024 for a term to 2029. <!-- AR26 p.34 --></li>
+<li>The placement document reports no auditor qualifications and no material frauds over the preceding five years. <!-- PD24 pp.246-248 --></li>
+</ul>
+<p><strong>Credit.</strong> CRISIL moved the outlook to Positive in Jun-2026. <!-- CR26 p.2 --></p>
+<ul>
+<li><strong>Upgrade trigger:</strong> revenue above <span class="n" title="Source: CRISIL rating rationale 24-Jun-2026 (2026-06-24)">Rs. 22.0bn</span> with an operating margin of <span class="n" title="Source: CRISIL rating rationale 24-Jun-2026 (2026-06-24)">22-24%</span>.</li>
+<li><strong>Downgrade trigger:</strong> a sustained margin below <span class="n" title="Source: CRISIL rating rationale 24-Jun-2026 (2026-06-24)">20%</span>, or larger-than-expected capex or acquisitions. <!-- CRR2606 p.1 --></li>
+</ul>
+<figure class="exh" id="exh-litigation"><figcaption><span class="exn">Exhibit 92:</span> Disclosed litigation and contingent items are small relative to the business; one large tax notice has dropped out of the list without explanation</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Matter</th>
+<th>Status</th>
+<th>Amount</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customs demand covering FY18-FY22</td>
+<td>Under appeal at CESTAT</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 84">Rs. 85mn</span></td>
+<td>AR26 p.84</td>
+</tr>
+<tr>
+<td>CGST demand on transitional input tax credit</td>
+<td>Appeal before Joint Commissioner, Gurugram</td>
+<td class="num"><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 84">Rs. 3.2mn</span></td>
+<td>AR26 p.84</td>
+</tr>
+<tr>
+<td>CGST show-cause notice covering FY18-FY19 and FY21-FY22</td>
+<td>Listed as contingent at 31-Mar-2024; not in the FY26 annual report list, which also omits it from the FY25 comparative</td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 58">Rs. 424mn</span></td>
+<td>PD24 p.58; AR25 p.133; AR26 p.84</td>
+</tr>
+<tr>
+<td>Stamp duty on share allotments of 2021-24 (Delhi)</td>
+<td>Collector's order of 15-Jun-2026 stayed by the Delhi High Court on 3-Jul-2026; company says the proceedings are not maintainable</td>
+<td><span class="n" title="Source: Poly Medicure receives Rs 2.5 Cr stamp duty order from Delhi Revenue (2026-06-16)">Rs. 25mn</span>, of which penalty <span class="n" title="Source: Poly Medicure receives Rs 2.5 Cr stamp duty order from Delhi Revenue (2026-06-16)">Rs. 15mn</span></td>
+<td>PRESS_STAMP26; CRT26 p.1</td>
+</tr>
+<tr>
+<td>NPPA: spinal needle sold above the permitted price in 2014</td>
+<td>Demand; part paid under protest (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 205">Rs. 1.8mn</span>)</td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 205">Rs. 9.3mn</span></td>
+<td>PD21 p.205</td>
+</tr>
+<tr>
+<td>Raigad drugs inspector complaint on a three-way stopcock (2012)</td>
+<td>Stayed by the Bombay High Court in 2014; pending before the District and Sessions Court</td>
+<td>–</td>
+<td>PD24 p.246</td>
+</tr>
+<tr>
+<td>Polymed's criminal complaint against B. Braun Medical (India) over a catheter patent</td>
+<td>Revision petition pending</td>
+<td>–</td>
+<td>PD24 p.246</td>
+</tr>
+<tr>
+<td>Himalayan Mineral Water: past statutory liabilities</td>
+<td>Appeal pending before NCLAT</td>
+<td>–</td>
+<td>DK2Q26 p.19</td>
+</tr>
+<tr>
+<td>Corporate guarantee for a PendraCare International overdraft</td>
+<td>Disclosed in the notes; the Directors' Report annexure says no guarantees were given</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 85">Rs. 54mn</span> outstanding under the guarantee</td>
+<td>AR26 p.40, p.85</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; QIP Placement Document Aug 2024; Poly Medicure receives Rs 2.5 Cr stamp duty order from Delhi Revenue; QIP Placement Document Feb 2021; Avendus Spark Research</p></figure>
+<p>Total contingent liabilities listed in the FY26 annual report were <span class="n" title="Our calculation: A-0524+A-0525; inputs: Rs. 85mn (Annual Report FY26, p.84); Rs. 3.2mn (Annual Report FY26, p.84)">Rs. 88mn</span> (our calculation), against <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 58">Rs. 535mn</span> at 31-Mar-2024. <!-- AR26 p.84; PD24 p.58 --></p>
+<p>Most of the difference is the <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 58">Rs. 424mn</span> CGST show-cause notice. The disclosures do not say whether it was settled, dropped or reclassified, so we list it as a question for management.</p>
+<h3 id="what-to-watch-12">What to watch</h3>
+<figure class="exh" id="exh-a9_watch"><figcaption><span class="exn">Exhibit 93:</span> Governance watch-list: related-party trends, QIP deployment and acquisition turnarounds</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job work paid to Vitromed and its share of job work</td>
+<td>Margin transfer risk to a promoter entity</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 870mn</span>; <span class="n" title="Our calculation: A-0547/A-0506*100; inputs: Rs. 870mn (Annual Report FY26, p.88); Rs. 1.0bn (Annual Report FY26, p.79)">84%</span> of job work (FY26)</td>
+<td>Annual report, related-party note</td>
+</tr>
+<tr>
+<td>Promoter-group composition</td>
+<td>Two reclassifications since FY23; float and control</td>
+<td><span class="n" title="Source: Form MGT-7 FY26 (2026-08-19), slide/page 3">62.4%</span> promoter group; public institutions ~<span class="n" title="Our calculation: WM-0041/WM-0045*100; inputs: 21,500,158 (31st AGM voting results and scrutinizer report (7-Sep-2026), p.5); 101,359,490 (Annual Report FY26, p.59)">21.2%</span></td>
+<td>Shareholding pattern (quarterly)</td>
+</tr>
+<tr>
+<td>Promoter-family pay vs profit</td>
+<td>Alignment</td>
+<td><span class="n" title="Our calculation: (A-0427+A-0428+A-0429+A-0562)/A-0368*100; inputs: Rs. 181mn (Annual Report FY26, p.55); Rs. 176mn (Annual Report FY26, p.55); Rs. 95mn (Annual Report FY26, p.55); Rs. 41mn (Annual Report FY26, p.89); Rs. 3.4bn (Annual Report FY26, p.32)">14.7%</span> of standalone PAT (FY26)</td>
+<td>Annual report (Rule 5(1), related parties)</td>
+</tr>
+<tr>
+<td>QIP-2024 capex deployment</td>
+<td>Plants at YEIDA, Palwal and Haridwar drive FY28-30 capacity</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 94">Rs. 620mn</span> used vs <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 11 · management guidance">Rs. 3.0bn</span> scheduled by FY26</td>
+<td>Monitoring-agency report (quarterly)</td>
+</tr>
+<tr>
+<td>Treasury placement of unused proceeds</td>
+<td>Monitoring agency flagged a deviation in 4QFY26</td>
+<td><span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 4">Rs. 719mn</span> in hybrid funds; <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026 (2026-05-15), slide/page 10">Rs. 50mn</span> in a PMS</td>
+<td>Monitoring-agency report</td>
+</tr>
+<tr>
+<td>PendraCare and Citieffe profitability</td>
+<td>Test of M&amp;A execution; goodwill</td>
+<td>Pre-tax loss since acquisition <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 141mn</span> (PendraCare) and <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.0mn</span> (Citieffe) in FY26</td>
+<td>Annual report acquisition note; subsidiary accounts</td>
+</tr>
+<tr>
+<td>Contingent liabilities</td>
+<td>CGST notice status; stamp-duty case</td>
+<td><span class="n" title="Our calculation: A-0524+A-0525; inputs: Rs. 85mn (Annual Report FY26, p.84); Rs. 3.2mn (Annual Report FY26, p.84)">Rs. 88mn</span> listed (FY26)</td>
+<td>Annual report; exchange filings</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Annual Report FY26; our calculation; Form MGT-7 FY26; 31st AGM voting results and scrutinizer report (7-Sep-2026); Monitoring agency report on QIP proceeds - quarter ended 31-Mar-2026; Avendus Spark Research</p></figure>
+<p>Questions for management raised by this section feed the plant-visit question bank in <a href="c3.html#c3">Part C</a>.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a8.html"><span>Previous</span>A8 Competitive advantages and vulnerabilities</a><a class="next" href="b1.html"><span>Next</span>B1 How medical disposables are bought and priced</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

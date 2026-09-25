@@ -73,7 +73,12 @@ In the annual reports we have, blood bags are the only manufactured product besi
 :::
 <!-- FACTLY_BLOOD p.1; DGHS_BTS p.1 -->
 
-**Mix.** Policy has promoted component separation since the 2003 Action Plan for Blood Safety, and for bag makers it is a second lever besides volume: lower-middle-income countries separate {{WF-0008}} of their blood, against {{WF-0009}} in high-income ones (WHO), and each separated unit needs a multi-bag system. India's separation rate is [not disclosed] in our sources. <!-- DGHS_BTS p.1; WHO_BLOOD p.1; D_product_glossary A4.4 -->
+**Mix.** Policy has promoted component separation since the 2003 Action Plan for Blood Safety, and for bag makers it is a second lever besides volume: the share of blood separated into components rises with national income ([[EXREF:blood_sep]]), and each separated unit needs a multi-bag system. India's separation rate is [not disclosed] in our sources. <!-- DGHS_BTS p.1; WHO_BLOOD p.1; D_product_glossary A4.4 -->
+
+::: chart
+{"id":"blood_sep","type":"column","title":"High-income countries separate 98% of collected blood into components against 52% in low-income ones, and every separated unit needs a multi-bag system","cats":["Low-income","Lower-middle-income","High-income"],"unit":"% of blood collected that is separated into components","dec":0,"series":[{"name":"Share separated into components","facts":["WF-0010","WF-0008","WF-0009"]}],"label_all":true,"note":"WHO fact sheet on blood safety and availability (Jun-2026), 2023 data; countries grouped by income level. Upper-middle-income countries, not shown, fall between the lower-middle-income and high-income groups."}
+:::
+<!-- WHO_BLOOD p.1 -->
 
 **Structure.** A 1996 Supreme Court judgment that ended paid donation led to the National Blood Transfusion Council and state councils; blood banks have been licensed since 1997, and the DGHS took over from NACO in 2021. India has {{WF-0001}} licensed blood centres, and the DGHS supports {{WF-0002}} public and charitable ones with staff, training and the procurement of blood bags and test kits. <!-- DGHS_BTS p.1 -->
 

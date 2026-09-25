@@ -184,9 +184,14 @@ We read this as consistent with management's account of Chinese product being re
 
 **PLI: approved, invested, unpaid.**
 - **Approval.** Polymed is a Category A applicant under Target Segment 3 (anaesthetics, cardio-respiratory and renal-care devices) for seven products made at Faridabad: dialyser, machine, PD kit, fistula needle, bloodline, haemodialysis catheter and transducer protector. <!-- PLIMD_APPR23 p.2; PLIMD_APPR24 p.3 -->
-- **Terms.** The scheme pays {{D-0184}} on incremental sales over FY20. A Category A applicant must show incremental sales of at least {{WB-0020}} in FY23, rising to {{WB-0023}} in FY26 and {{F-0013}} in FY27, and the maximum incentive is {{F-0014}}. <!-- PD24 p.41; PLIMD_GUIDE23 p.20 -->
-- **Why it has missed.** On our proxy, renal revenue less the FY20 base, Polymed generated {{D-WB-041}}, {{D-WB-040}}, {{D-WB-039}} and {{D-WB-038}} of incremental sales in FY23-FY26, short of the threshold every year. Eligible sales may be defined differently.
+- **Terms.** The scheme pays {{D-0184}} on incremental sales over FY20. A Category A applicant must show a minimum of incremental sales that rises each year, to {{F-0013}} in FY27, and the maximum incentive is {{F-0014}}. <!-- PD24 p.41; PLIMD_GUIDE23 p.20 -->
+- **Why it has missed.** On our proxy, renal revenue less the FY20 base, incremental sales fell short of the threshold in every year from FY23 to FY26, and the gap widened ([[EXREF:renal_pli]]).
 - **Outcome.** As of Jul-2026 Polymed had received no incentive, while Nipro had received {{F-0023}}. The MD had expected {{CC-0006|range}} in 2021; by 2025 he answered "{{CA-0528|plain}}" and said he was "building the business not on based on PLI". <!-- LSQ_AU1001_260724 p.2-3, p.7; TR2021 p.3; TR4Q25 p.9 -->
+
+::: chart
+{"id":"renal_pli","type":"column","title":"On our proxy, renal sales above the FY20 base have fallen short of the PLI threshold every year since FY23, and the gap has widened","cats":["FY23","FY24","FY25","FY26"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Renal revenue above FY20 base (our proxy)","facts":["D-WB-041","D-WB-040","D-WB-039","D-WB-038"]},{"name":"PLI threshold, incremental sales (Category A)","facts":["WB-0020","WB-0021","WB-0022","WB-0023"]}],"label_all":true,"note":"Proxy = consolidated renal revenue less FY20 renal revenue of {{D-0625}} (FY23-FY24 placement-document table; FY25-FY26 4QFY26 presentation); eligible sales may be defined differently. FY27 requires {{F-0013}}. Shortfall {{D-WB-063}} in FY23 and {{D-WB-066}} in FY26 (our calculation). No incentive received by Jul-2026, against {{F-0016}} invested of {{F-0015}} committed."}
+:::
+<!-- PD21 p.130; PD24 p.173; DK4Q26 p.12; PLIMD_GUIDE23 p.20; LSQ_AU1001_260724 p.2-3, p.7 -->
 
 **Device regulation and reimbursement.**
 - Dialysis machines are Class C devices under the Medical Devices Rules 2017. Licensing of Class C/D devices began in Oct-2023, which management credits for ending unregulated parallel imports. <!-- RHP_NEPHRO p.280; F digest B3.1; TR1Q25 p.10 -->

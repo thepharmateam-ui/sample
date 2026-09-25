@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.8 Cardiology · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html" class="active">A4.8 Cardiology</a></li><li class="l3"><a href="#what-the-devices-do-and-the-unit-of-demand">What the devices do and the unit of demand</a></li><li class="l3"><a href="#polymed-s-range-a-full-cath-lab-basket-built-in-two-years">Polymed&#x27;s range: a full cath-lab basket, built in two years</a></li><li class="l3"><a href="#traction-stent-volumes-the-registry-and-the-approval-clock">Traction: stent volumes, the registry and the approval clock</a></li><li class="l3"><a href="#pendracare-what-polymed-bought-and-what-has-happened-since">PendraCare: what Polymed bought, and what has happened since</a></li><li class="l3"><a href="#market-a-price-capped-stent-market-and-an-import-heavy-acces">Market: a price-capped stent market and an import-heavy accessory market</a></li><li class="l3"><a href="#customers-channel-and-pricing-3">Customers, channel and pricing</a></li><li class="l3"><a href="#competition-2">Competition</a></li><li class="l3"><a href="#regulation-2">Regulation</a></li><li class="l3"><a href="#capacity-and-supply-chain-2">Capacity and supply chain</a></li><li class="l3"><a href="#growth-drivers-ranked-2">Growth drivers, ranked</a></li><li class="l3"><a href="#margin-drivers-ranked-2">Margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-8">What to watch</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-7.html"><span>Previous</span>A4.7 Gastroenterology, urology, surgery and wound drainage</a><a class="next" href="a4-9.html"><span>Next</span>A4.9 Orthopaedics (Citieffe)</a></nav>
+<h2 id="a4-8">A4.8 Cardiology</h2>
+<section class="snapshot"><p class="ct">Cardiology at a glance</p><dl><div><dt>Revenue 1QFY27</dt><dd><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 286mn</span>, <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">5%</span> of consolidated revenue (vs <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 29mn</span> and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">1%</span> in 1QFY26), up <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">897%</span> yoy on the PendraCare consolidation and, management says, a scale-up of the domestic business</dd></div><div><dt>What it includes</dt><dd>India-made drug-eluting stents (DES), balloons, catheters, guidewires and cath-lab accessories; PendraCare (Leek, Netherlands) from 23 Sep 2025</dd></div><div><dt>FY26 revenue</dt><dd>[not disclosed]; the MD put FY26 stent sales at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">Rs. 100-120mn</span>; PendraCare added <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 442mn</span> after acquisition</dd></div><div><dt>Stents implanted</dt><dd>~<span class="n" title="Our calculation: CB-0191*1000; inputs: 13 K units (Investor deck 1QFY27, p.22)">13,000 units</span> cumulative by Jul-2026 since the Mar-2025 launch (our unit conversion of the company's figure)</dd></div><div><dt>Clinical evidence</dt><dd>PACIFIER DES registry: <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">840</span>+ of <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">2,000</span> patients enrolled by Aug-2026</dd></div><div><dt>PendraCare deal</dt><dd>An enterprise value of <span class="n" title="Source: PendraCare acquisition press release (2025-09-04)">€18.3mn</span> (press release) to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€18.8mn</span> (1QFY27 deck), <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">13x</span> CY24 EBITDA (company); CY25 EBITDA ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€84k</span></dd></div><div><dt>Management target</dt><dd><span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 7 · management guidance; Himanshu Baid, MD">Rs. 3-4bn</span> of cardiology revenue by 2030 and <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 9 · management guidance; Himanshu Baid, MD">5-7%</span> of the business within five years (Oct-2024)</dd></div><div><dt>Not disclosed</dt><dd>The split between PendraCare and the India business, revenue by product, segment margins</dd></div></dl></section>
+<p>Cardiology is Polymed's first move out of rupee-priced disposables into cath-lab devices that sell for thousands of rupees each, and it now carries its own revenue line. The line is still small, at <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">5%</span> of 1QFY27 revenue, and its two engines are both running below plan. In-house DES volumes in FY26 were about half of what management planned. PendraCare, bought in Sep-2025, saw its EBITDA fall from <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€1.4mn</span> in CY24 to ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€84k</span> in CY25. We see the value of the line in the accessory basket and in drug-eluting balloons (DEB) and intravascular lithotripsy (IVL), where imports dominate. We see less of it in the stent, where prices are capped and Indian makers already lead.</p>
+<h3 id="what-the-devices-do-and-the-unit-of-demand">What the devices do and the unit of demand</h3>
+<p>A coronary angioplasty (percutaneous coronary intervention, PCI) consumes a basket of devices. <!-- D_product_glossary --></p>
+<ul>
+<li><strong>Access:</strong> an arterial needle and an introducer sheath.</li>
+<li><strong>Delivery:</strong> a guiding catheter seated at the mouth of the coronary artery, and a guidewire run through it.</li>
+<li><strong>Treatment:</strong> semi-compliant balloons to open the narrowing, a stent to hold it open, and non-compliant balloons to expand the stent fully.</li>
+<li><strong>Accessories:</strong> an inflation device, a Y-connector valve and a manifold, often sold together as a kit.</li>
+</ul>
+<p>A diagnostic angiogram needs diagnostic catheters and wires only. A DEB delivers drug to the vessel wall without leaving a stent, and IVL cracks calcified plaque before a stent is placed. The unit of demand is therefore the procedure. Management estimates that India performs ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">700,000</span> angioplasties a year and uses ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">1.3mn units</span> of coronary stents, or <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">1.6-1.7</span> stents per patient. It puts annual sales at ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">50,000 units</span> for DEBs and ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">10,000 units</span> for IVL. <!-- TR3Q26 p.9 --></p>
+<h3 id="polymed-s-range-a-full-cath-lab-basket-built-in-two-years">Polymed's range: a full cath-lab basket, built in two years</h3>
+<p>Polymed entered cardiology in 2024 with a soft launch at Arab Health (the 2024 placement document dates the expansion into cardiology to FY23). Its DES licence came in Feb-2025 and the stent went on sale in Mar-2025. DCGI approved its DEB and IVL systems in 3QFY26. By the Sep-2026 AGM the DEB was on sale and the IVL system was "soon launching". Management says both were developed on its own R&amp;D platform. <!-- AR26 p.11; PD24 p.167; TR3Q24b p.4, p.6; DK3Q25 p.13; DK4Q25 p.12; DK3Q26 p.5; TR3Q26 p.3, p.6; DKAGM31 p.3 --></p>
+<figure class="exh" id="exh-card_range"><figcaption><span class="exn">Exhibit 49:</span> Polymed now sells most of the cath-lab basket in India; the US-cleared devices all come from PendraCare</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Device</th>
+<th>Brands</th>
+<th>What it does</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drug-eluting stent</td>
+<td>RisoR (everolimus); Serolin Pro (sirolimus, cobalt-chromium, <span class="n" title="Source: Polymed website product pages – cardiology products and Novocent Pro (13 pages) (2026-09-24), slide/page 2">60 μm</span> struts)</td>
+<td>Holds the artery open and elutes drug against re-narrowing</td>
+<td>Launched Mar-2025; ~<span class="n" title="Our calculation: CB-0191*1000; inputs: 13 K units (Investor deck 1QFY27, p.22)">13,000 units</span> implanted by Jul-2026; PACIFIER registry under way</td>
+</tr>
+<tr>
+<td>Drug-eluting balloon</td>
+<td>Brand not disclosed</td>
+<td>Delivers drug without a permanent implant</td>
+<td>DCGI approval 3QFY26; on sale by Sep-2026</td>
+</tr>
+<tr>
+<td>IVL system</td>
+<td>Brand not disclosed</td>
+<td>Breaks calcified plaque with sonic pressure before stenting</td>
+<td>DCGI approval 3QFY26; launch pending at Sep-2026</td>
+</tr>
+<tr>
+<td>PTCA balloons</td>
+<td>Excedo SC (semi-compliant), Excedo NC (non-compliant)</td>
+<td>Pre-dilatation and stent post-dilatation</td>
+<td>On sale</td>
+</tr>
+<tr>
+<td>Guiding catheters</td>
+<td>Vasoguide (6F, 7F); PendraCare Convey and Primum</td>
+<td>Channel for wires, balloons and stents</td>
+<td>PendraCare holds US 510(k)s K120585, K132197 and K250972</td>
+</tr>
+<tr>
+<td>Diagnostic catheters</td>
+<td>Concath; PendraCare diagnostic range</td>
+<td>Contrast injection for angiography</td>
+<td>On sale</td>
+</tr>
+<tr>
+<td>Guidewires</td>
+<td>Filoflex (PTFE-coated), Aquareach (hydrophilic)</td>
+<td>Access and catheter exchange</td>
+<td>No coronary (PCI) wire listed; the wires offered are access and angiographic sizes</td>
+</tr>
+<tr>
+<td>Accessories</td>
+<td>Teravox inflation device, Zinera PTCA Y-connector kit, Neofold Pro manifold, Sylera needle; PendraCare SimplGuide introducer</td>
+<td>Inflation, haemostasis, contrast and pressure lines</td>
+<td>SimplGuide US 510(k) K261242, Jun-2026</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Polymed website product category – Cardiology; Polymed website product pages – cardiology products and Novocent Pro (13 pages); Excedo SC ordering table; Vasoguide ordering table; FDA 510(k) clearances – PendraCare; Investor presentation 3QFY26; 31st AGM presentation; Investor deck 1QFY27; our calculation; Avendus Spark Research</p></figure>
+<!-- WEB_CARDIOLOGY p.1; WEBPROD_CARDIO pp.1-12; OTEXSC p.1; OTVAS p.1; FDA510K_PEN p.1; DK3Q26 p.5; DKAGM31 p.3 -->
+<p>Who makes which device is [not disclosed]. No legal manufacturer is printed on any ordering table or product page, so we cannot tell which items come from Polymed's plants, which from PendraCare and which are bought in. The Nov-2024 components catalogue already offered a cobalt-chromium stent in sirolimus and everolimus versions, together with diagnostic catheters and guidewires, as parts for other device makers. Frost &amp; Sullivan's Jul-2025 report for Sahajanand Medical Technologies (SMT) still listed Polymed only as a PTCA-balloon maker "most focused on consumables". <!-- D_digest A4.8; CATCOMP24 p.8; DRHP_SMT p.210 --></p>
+<h3 id="traction-stent-volumes-the-registry-and-the-approval-clock">Traction: stent volumes, the registry and the approval clock</h3>
+<figure class="exh" id="exh-card_stents"><figcaption><span class="exn">Exhibit 50:</span> Cumulative DES implants by Jul-2026 were well short of what management had planned for FY26 alone</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="184.67" y2="184.67"></line><text class="tick" text-anchor="end" x="40" y="188.67">5,000</text><line class="grid" x1="46" x2="748" y1="103.33" y2="103.33"></line><text class="tick" text-anchor="end" x="40" y="107.33">10,000</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">15,000</text><text class="unit" text-anchor="start" x="2" y="13">stents implanted since launch (cumulative)</text><text class="tick" text-anchor="middle" x="116.20" y="284">May-2025</text><path class="mark" d="M104.20,266.00V266.00Q104.20,264.37 105.83,264.37H126.57Q128.20,264.37 128.20,266.00V266.00Z" data-tip="May-2025 · Cumulative stents: 100 patients" fill="var(--s1)"><title>May-2025 · Cumulative stents: 100 patients</title></path><text class="val" text-anchor="middle" x="116.20" y="258.37">100</text><text class="tick" text-anchor="middle" x="256.60" y="284">Sep-2025</text><path class="mark" d="M244.60,266.00V221.20Q244.60,217.20 248.60,217.20H264.60Q268.60,217.20 268.60,221.20V266.00Z" data-tip="Sep-2025 · Cumulative stents: 3,000 units" fill="var(--s1)"><title>Sep-2025 · Cumulative stents: 3,000 units</title></path><text class="val" text-anchor="middle" x="256.60" y="211.20">3,000</text><text class="tick" text-anchor="middle" x="397.00" y="284">Nov-2025</text><path class="mark" d="M385.00,266.00V200.05Q385.00,196.05 389.00,196.05H405.00Q409.00,196.05 409.00,200.05V266.00Z" data-tip="Nov-2025 · Cumulative stents: 4,300 units" fill="var(--s1)"><title>Nov-2025 · Cumulative stents: 4,300 units</title></path><text class="val" text-anchor="middle" x="397.00" y="190.05">4,300</text><text class="tick" text-anchor="middle" x="537.40" y="284">Apr-2026</text><path class="mark" d="M525.40,266.00V91.07Q525.40,87.07 529.40,87.07H545.40Q549.40,87.07 549.40,91.07V266.00Z" data-tip="Apr-2026 · Cumulative stents: 11,000 units" fill="var(--s1)"><title>Apr-2026 · Cumulative stents: 11,000 units</title></path><text class="val" text-anchor="middle" x="537.40" y="81.07">11,000</text><text class="tick" text-anchor="middle" x="677.80" y="284">Jul-2026</text><path class="mark" d="M665.80,266.00V58.53Q665.80,54.53 669.80,54.53H685.80Q689.80,54.53 689.80,58.53V266.00Z" data-tip="Jul-2026 · Cumulative stents: 13,000 units" fill="var(--s1)"><title>Jul-2026 · Cumulative stents: 13,000 units</title></path><text class="val" text-anchor="middle" x="677.80" y="48.53">13,000</text></svg></div><p class="note">May-2025 counts patients implanted rather than stents, and Nov-2025 is printed as year-to-date. The Apr-2026 and Jul-2026 points are our unit conversions of the rounded thousands the company printed. Management planned to deploy close to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 13 · management guidance; Himanshu Baid, MD">20,000 units</span> in FY26 (Aug-2025 call).</p><p class="src">Source: Investor presentation 4QFY25 and FY25; 30th AGM presentation; Investor presentation 2QFY26; Investor presentation 4QFY26; our calculation; Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">May-2025</th><th class="num">Sep-2025</th><th class="num">Nov-2025</th><th class="num">Apr-2026</th><th class="num">Jul-2026</th></tr></thead><tbody><tr><th scope="row">Cumulative stents</th><td class="num"><span class="n" title="Source: Investor presentation 4QFY25 and FY25 (2025-07-29), slide/page 12">100 patients</span></td><td class="num"><span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 3">3,000 units</span></td><td class="num"><span class="n" title="Source: Investor presentation 2QFY26 (2025-11-08), slide/page 6">4,300 units</span></td><td class="num"><span class="n" title="Our calculation: CB-0595*1000; inputs: 11 K units (Investor presentation 4QFY26, p.7)">11,000 units</span></td><td class="num"><span class="n" title="Our calculation: CB-0191*1000; inputs: 13 K units (Investor deck 1QFY27, p.22)">13,000 units</span></td></tr></tbody></table></div></details></figure>
+<p>Cumulative deployments reached ~<span class="n" title="Our calculation: CB-0595*1000; inputs: 11 K units (Investor presentation 4QFY26, p.7)">11,000 units</span> by 30 Apr 2026, so FY26 volumes were roughly half of the close to <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 13 · management guidance; Himanshu Baid, MD">20,000 units</span> management planned in Aug-2025. Management says the stent is a small business, worth <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">Rs. 100-120mn</span> of FY26 revenue. It uses the stent as a door-opener for diagnostic catheters, guidewires and balloons. The stent is still sold mainly outside the top-tier hospitals, which management says it has not yet entered. <!-- TR1Q26 p.13; TR4Q26 p.4, p.14; TR3Q25 p.7, p.9; TR2Q26 p.5, p.14-15 --></p>
+<p><strong>The PACIFIER registry</strong> is the evidence base for taking the RisoR stent abroad.</p>
+<ul>
+<li><strong>Design:</strong> <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">2,000</span> patients (<span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">1,960</span> in India and <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">40</span> in Europe) at <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">50</span> Indian sites and one in Italy, with imaging sub-studies of <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">100</span> (QCA) and <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">50</span> (OCT) patients, over <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">24 months</span>. It is an open-label, single-arm registry, which management describes as post-market evaluation in India and "pre-market readiness" for Europe. <!-- DK1Q26 p.8; TR1Q26 p.5-6 --></li>
+<li><strong>Enrolment:</strong> <span class="n" title="Source: Investor presentation 3QFY26 (2026-02-05), slide/page 5">200</span>+ patients by Feb-2026, <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">650</span>+ by May-2026 and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">840</span>+ by Aug-2026, against a target of full enrolment by end-FY27. The design had assumed a one-year enrolment window. <!-- DK3Q26 p.5; DK4Q26 p.7; DK1Q27 p.22; DK1Q26 p.8 --></li>
+<li><strong>Our arithmetic:</strong> at the Feb-Aug 2026 pace of ~<span class="n" title="Our calculation: (CB-0192-CB-1203)/6; inputs: 840 patients (Investor deck 1QFY27, p.22); 200 patients (Investor presentation 3QFY26, p.5)">107</span> patients a month, the remaining <span class="n" title="Our calculation: CB-1970-CB-0192; inputs: 2,000 patients (Investor presentation 1QFY26, p.8); 840 patients (Investor deck 1QFY27, p.22)">1,160</span> take ~<span class="n" title="Our calculation: (CB-1970-CB-0192)/((CB-0192-CB-1203)/6); inputs: 2,000 patients (Investor presentation 1QFY26, p.8); 840 patients (Investor deck 1QFY27, p.22); 840 patients (Investor deck 1QFY27, p.22); 200 patients (Investor presentation 3QFY26, p.5)">11 months</span>, which runs past end-FY27 (our calculation). Management says follow-up data take six months to a year after the last implant, and that Class III implants take <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">3-5</span> years to win approval in global markets. We therefore do not expect European sales of the RisoR stent before FY29. <!-- TR2Q26 p.14-15; TR3Q26 p.8-9 --></li>
+<li><strong>Disclosure quality:</strong> the 4QFY26 deck printed <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 30">2,000</span>+ patients enrolled on one slide and <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 7">650</span>+ on another. <!-- DK4Q26 p.7, p.30 --></li>
+</ul>
+<h3 id="pendracare-what-polymed-bought-and-what-has-happened-since">PendraCare: what Polymed bought, and what has happened since</h3>
+<p><strong>The deal.</strong> Polymed bought <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 12">90%</span> of PendraCare Holdings and Wellinq Medical from Wellinq Holdings. The buyer was Risor Holdings BV, which Poly Medicure BV holds <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 14">90%</span> (the annual report's directors' report calls it wholly owned). <!-- DKPEN p.11; MA_2509 p.8 --></p>
+<ul>
+<li><strong>Price:</strong> an upfront equity payment of <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€11mn</span> plus <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€3.2mn</span> of inter-company loans repaid, a total of <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€14.2mn</span>. Polymed also took on <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€2.9mn</span> of net debt.</li>
+<li><strong>Deal multiples (company):</strong> an enterprise value of <span class="n" title="Source: PendraCare acquisition press release (2025-09-04)">€18.3mn</span> at first closing, or <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€18.8mn</span> in the 1QFY27 deck. That is <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">1.8x</span> CY24 revenue and <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">13x</span> CY24 EBITDA (company).</li>
+<li><strong>Deferred terms:</strong> milestone earn-outs run over <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">4-5</span> years. The CEO's remaining <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">10%</span> is bought in 2030 at a price set on calendar 2029 EBITDA; neither amount is disclosed.</li>
+<li><strong>Accounts:</strong> the annual report records <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 1.5bn</span> paid in cash and <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 314mn</span> of contingent consideration, with provisional goodwill of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 1.6bn</span>.</li>
+<li><strong>Funding:</strong> <span class="n" title="Source: Monitoring agency report on QIP proceeds - quarter ended 30-Sep-2025 (2025-11-12), slide/page 8">Rs. 1.5bn</span> came from the Aug-2024 QIP and was lent on to Risor by Poly Medicure BV (<span class="n" title="Source: Poly Medicure BV FY26 accounts (2026-08-21), slide/page 10">€14.6mn</span> at a floating rate linked to Euribor). <!-- DKPEN p.11; PRPEN p.1; DK1Q27 p.13; AR26 p.121-122; MA_2509 p.8; SUB26BV p.10 --></li>
+</ul>
+<p><strong>The business.</strong> PendraCare was founded in 2011; Polymed describes it as one of the few independent makers of interventional-cardiology catheters. <!-- DK1Q27 p.13; TRPEN p.2; DK4Q26 p.22 --></p>
+<ul>
+<li><strong>Products:</strong> guiding catheters were <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">79%</span> of CY24 core revenue and diagnostic catheters <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">21%</span>. It also sells semi-finished catheter parts and designs and makes braided catheters for other companies.</li>
+<li><strong>Channel:</strong> <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">48%</span> of revenue came from OEM customers and <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">52%</span> from its own brand, sold through <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">50</span>+ distributors in <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">35</span>+ countries with no direct sales force. Its OEM relationships with <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">2</span> large device companies go back more than a decade.</li>
+<li><strong>Regulatory assets:</strong> registrations in <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">60</span>+ countries and <span class="n" title="Source: FDA 510(k) clearances – PendraCare (2026-09-24)">4</span> US 510(k)s, the latest for the SimplGuide introducer in Jun-2026. Its guiding catheter has <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 9">2.5 years</span> of ARCUS-IMPROVE clinical data.</li>
+<li><strong>Plant:</strong> <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">3,800 m²</span> across three leased sites in Leek with <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">1,150 m²</span> of clean room. Capacity is more than <span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 8">1.5 mn units/year</span> against production of <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">700-800</span> thousand units. The staff is <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">65</span>+ people. <!-- DKPEN pp.11-14; TRPEN pp.2-3, p.8; FDA510K_PEN p.1; DKAGM30 p.9; DK1Q27 p.13 --></li>
+</ul>
+<figure class="exh" id="exh-card_pendra"><figcaption><span class="exn">Exhibit 51:</span> PendraCare's EBITDA fell to almost nothing in its first year with Polymed, and its post-deal accounts show a loss and negative equity</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>EUR</th>
+<th>CY24 (pre-deal, pro forma)</th>
+<th>CY25</th>
+<th class="num">23 Sep 2025 to 31 Mar 2026 (post-deal, unaudited)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€9.9mn</span></td>
+<td>~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€8.2mn</span> (<span class="n" title="Our calculation: (CB-0119/1000/CB-2477-1)*100; inputs: €8.2mn (Investor deck 1QFY27, p.13); €9.9mn (PendraCare acquisition presentation, p.11)">-17.2%</span> yoy)</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">€4.17mn</span></td>
+</tr>
+<tr>
+<td>Gross profit</td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€7.3mn</span></td>
+<td class="num">~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€5.59mn</span></td>
+<td class="num">–</td>
+</tr>
+<tr>
+<td>Gross margin</td>
+<td class="num"><span class="n" title="Our calculation: CB-2478/CB-2477*100; inputs: €7.3mn (PendraCare acquisition presentation, p.11); €9.9mn (PendraCare acquisition presentation, p.11)">73.7%</span></td>
+<td class="num"><span class="n" title="Our calculation: CB-0120/CB-0119*100; inputs: €5.59mn (Investor deck 1QFY27, p.13); €8.2mn (Investor deck 1QFY27, p.13)">68.2%</span></td>
+<td class="num"><span class="n" title="Our calculation: (B-0690-WC-0004-WC-0005)/B-0690*100; inputs: €4.17mn (Risor Holdings accounts, p.2); €1.40mn (Risor Holdings accounts, p.2); €103k (Risor Holdings accounts, p.2); €4.17mn (Risor Holdings accounts, p.2)">64.1%</span></td>
+</tr>
+<tr>
+<td>EBITDA</td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€1.4mn</span></td>
+<td class="num">~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€84k</span></td>
+<td class="num"><span class="n" title="Our calculation: B-0691+WC-0002+WC-0003; inputs: -€1.76mn (Risor Holdings accounts, p.2); €506k (Risor Holdings accounts, p.2); €507k (Risor Holdings accounts, p.2)">-€752k</span></td>
+</tr>
+<tr>
+<td>EBITDA margin</td>
+<td class="num"><span class="n" title="Our calculation: CB-2479/CB-2477*100; inputs: €1.4mn (PendraCare acquisition presentation, p.11); €9.9mn (PendraCare acquisition presentation, p.11)">14.1%</span></td>
+<td class="num"><span class="n" title="Our calculation: CB-0121/CB-0119*100; inputs: €84k (Investor deck 1QFY27, p.13); €8.2mn (Investor deck 1QFY27, p.13)">1.0%</span></td>
+<td class="num">–</td>
+</tr>
+<tr>
+<td>Profit before tax</td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">€801k</span></td>
+<td>[not disclosed]</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">-€1.76mn</span></td>
+</tr>
+<tr>
+<td>Net result</td>
+<td>[not disclosed]</td>
+<td>[not disclosed]</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">-€1.33mn</span></td>
+</tr>
+<tr>
+<td>Employee cost, % of revenue</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Our calculation: B-0693/B-0690*100; inputs: €2.74mn (Risor Holdings accounts, p.2); €4.17mn (Risor Holdings accounts, p.2)">65.6%</span></td>
+</tr>
+<tr>
+<td>Guiding / diagnostic catheters, % of revenue</td>
+<td><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">79%</span> / <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">21%</span></td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">75%</span> / <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">25%</span></td>
+<td class="num">–</td>
+</tr>
+<tr>
+<td>Equity at 31 Mar 2026</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19)">-€1.31mn</span></td>
+</tr>
+<tr>
+<td>Borrowings at 31 Mar 2026</td>
+<td>–</td>
+<td>–</td>
+<td class="num"><span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 5">€16.8mn</span></td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: PendraCare acquisition presentation; Investor deck 1QFY27; Risor Holdings accounts; our calculation; Avendus Spark Research</p></figure>
+<!-- DKPEN p.11-12; DK1Q27 p.13; SUB26RIS p.1-2 -->
+<p>Four points stand out.</p>
+<ol>
+<li><strong>The CY25 collapse.</strong> Revenue fell <span class="n" title="Our calculation: (CB-0119/1000/CB-2477-1)*100; inputs: €8.2mn (Investor deck 1QFY27, p.13); €9.9mn (PendraCare acquisition presentation, p.11)">17.2%</span> and EBITDA margin went from <span class="n" title="Our calculation: CB-2479/CB-2477*100; inputs: €1.4mn (PendraCare acquisition presentation, p.11); €9.9mn (PendraCare acquisition presentation, p.11)">14.1%</span> to <span class="n" title="Our calculation: CB-0121/CB-0119*100; inputs: €84k (Investor deck 1QFY27, p.13); €8.2mn (Investor deck 1QFY27, p.13)">1.0%</span> (our calculations; the AGM deck prints CY25 gross profit of <span class="n" title="Source: 31st AGM presentation (2026-09-07), slide/page 17">€6.3mn</span>, not ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€5.59mn</span>). The company has not explained the fall. On the 1QFY27 call management pointed to an "over-indexed" exposure to West Asia of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 11 · Rahul Gautam, President - Strategy &amp; Corporate Development">about 20-odd percent</span>. It said the business is "currently not growing", has withheld FY27 guidance for it and has not disclosed its 1QFY27 growth. <!-- TR1Q27S p.11; TR4Q26 p.16; DKAGM31 p.17 --></li>
+<li><strong>The post-deal accounts are worse than the deck.</strong> Over the roughly six months after the deal, Risor's consolidated revenue of <span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">€4.17mn</span> did not cover costs, and employee cost alone ate <span class="n" title="Our calculation: B-0693/B-0690*100; inputs: €2.74mn (Risor Holdings accounts, p.2); €4.17mn (Risor Holdings accounts, p.2)">65.6%</span> of it. EBITDA was a loss of <span class="n" title="Our calculation: B-0691+WC-0002+WC-0003; inputs: -€1.76mn (Risor Holdings accounts, p.2); €506k (Risor Holdings accounts, p.2); €507k (Risor Holdings accounts, p.2)">€752k</span> and the net loss <span class="n" title="Source: Risor Holdings accounts (2026-08-19), slide/page 2">€1.33mn</span> (our calculation from the unaudited accounts). Risor was set up with <span class="n" title="Source: Risor Holdings accounts (2026-08-19)">€20k</span> of share capital and funded by the Poly Medicure BV loan, so the loss turned its equity negative. In the consolidated accounts, PendraCare added <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 442mn</span> of revenue and a pre-tax loss of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 122">Rs. 141mn</span>. <!-- SUB26RIS p.1-2; AR26 p.122 --></li>
+<li><strong>Targets are far from delivery.</strong> Management targeted <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 15 · management guidance">€3-4mn</span> of annual EBITDA synergies within three to four years, and revenue of close to <span class="n" title="Source: PendraCare acquisition call script (4 Sep 2025) (2025-09-09), slide/page 7 · management guidance; Rahul Gautam, President - Strategy &amp; Corporate Development">€25mn</span> by 2030 including new neuro and structural-heart products. CY25 EBITDA of ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€84k</span> makes both look distant. <!-- DKPEN p.15; TRPEN p.7; DK2Q26 p.8 --></li>
+<li><strong>Housekeeping conflicts.</strong> The EV is printed as <span class="n" title="Source: PendraCare acquisition press release (2025-09-04)">€18.3mn</span>, ~<span class="n" title="Source: 30th AGM presentation (2025-09-29), slide/page 7">€18mn</span> and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€18.8mn</span> in different documents. Risor's incorporation date is 29 Aug 2025 in the annual report but 4 Nov 2025 in Poly Medicure BV's notes, after the Sep-2025 loan to it. <!-- PRPEN p.1; DKAGM30 p.7; DK1Q27 p.13; AR26 p.33; SUB26BV p.9 --></li>
+</ol>
+<p>The integration plan has four parts. <!-- TRPEN p.5-7; DK4Q26 p.38-39; DK1Q27 p.13; TR1Q27S p.6; TR4Q26 p.3 --></p>
+<ul>
+<li>Move manual process steps to India; management said this was at the regulatory-approval stage in Aug-2026.</li>
+<li>Consolidate the three Leek sites into one ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">2,300 m²</span> lease in calendar 2028. The new site will need its own approvals.</li>
+<li>Start US sales of the guiding catheter in FY27 through distributors and a global OEM.</li>
+<li>Register PendraCare products for import into India, which management says takes <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 3 · Himanshu Baid, MD">6-9</span> months.</li>
+</ul>
+<h3 id="market-a-price-capped-stent-market-and-an-import-heavy-acces">Market: a price-capped stent market and an import-heavy accessory market</h3>
+<figure class="exh" id="exh-card_india"><figcaption><span class="exn">Exhibit 52:</span> India implants stents at scale under a price cap; Indian makers already lead in stents, while balloons, catheters and IVL are still largely imported</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Value</th>
+<th>Source and vintage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coronary stents implanted a year</td>
+<td class="num">~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">1.3mn units</span></td>
+<td>Management, Feb-2026</td>
+</tr>
+<tr>
+<td>Angioplasties a year; stents per patient</td>
+<td>~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">700,000</span>; <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">1.6-1.7</span></td>
+<td>Management, Feb-2026</td>
+</tr>
+<tr>
+<td>PCI procedures per mn population</td>
+<td>India <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 189">less than 500</span>; US, Germany, France, Italy <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 189">more than 3,000</span></td>
+<td>Frost &amp; Sullivan for SMT, Jul-2025 [vendor estimate]</td>
+</tr>
+<tr>
+<td>Cath labs</td>
+<td>~<span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 227">650</span> (2015) to <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 227">2,500</span>+ (2023); <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 227">200-250</span> added a year; <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 227">7,500</span>+ needed</td>
+<td>Frost &amp; Sullivan for Integris, Oct-2025 [vendor estimate]</td>
+</tr>
+<tr>
+<td>India interventional-cardiology market</td>
+<td><span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">$480.0mn</span> (2024) to <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">$817.6mn</span> (2029)</td>
+<td>Frost &amp; Sullivan for Integris [vendor estimate]</td>
+</tr>
+<tr>
+<td>India coronary-stent market</td>
+<td><span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 195">$249.2mn</span> (2024)</td>
+<td>Frost &amp; Sullivan for SMT [vendor estimate]</td>
+</tr>
+<tr>
+<td>DES ceiling price (NPPA)</td>
+<td>Rs. <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 178">38,267</span> a stent (bare-metal: Rs. <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 178">10,510</span>)</td>
+<td>Frost &amp; Sullivan for SMT, 2025</td>
+</tr>
+<tr>
+<td>Typical Indian DES price</td>
+<td>Rs. <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 9 · Himanshu Baid, MD">10,000-12,000</span>, against a cap of ~Rs. <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 9 · Himanshu Baid, MD">40,000</span></td>
+<td>Management, Feb-2025</td>
+</tr>
+<tr>
+<td>Stent volumes by approval</td>
+<td>US FDA <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">30%</span>; CE <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">50%</span>; low-cost <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">20%</span></td>
+<td>Frost &amp; Sullivan for Integris, 2024 [vendor estimate]</td>
+</tr>
+<tr>
+<td>Indian companies' share of stent volumes</td>
+<td>~<span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">60%</span> (SMT <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 211">25%</span>, Integris <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">22%</span> of DES)</td>
+<td>Frost &amp; Sullivan, FY25 [vendor estimate]</td>
+</tr>
+<tr>
+<td>DEB and IVL units a year; import share</td>
+<td>~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">50,000 units</span> and ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">10,000 units</span>; <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · Himanshu Baid, MD">90%+</span> imported</td>
+<td>Management, Feb-2026</td>
+</tr>
+<tr>
+<td>Cardiology share of India's device market</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 138">11%</span> in FY24, growing <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 138">12-13%</span> a year to FY28</td>
+<td>CRISIL for Polymed's QIP, Aug-2024 [vendor estimate]</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 3QFY26 earnings call transcript (6 Feb 2026); 3QFY25 earnings call transcript; Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025); Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025); QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- TR3Q26 p.6, p.9; TR3Q25 p.9; DRHP_SMT p.178, p.189, p.195, p.211; DRHP_INTEG p.227, p.234; PD24 p.138 -->
+<p>Three features of the market shape Polymed's opportunity.</p>
+<ol>
+<li><strong>Stents are price-capped.</strong> NPPA's 2017 cap cut patient prices by <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 152">60-80%</span> according to CRISIL, and by up to <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 178">85%</span> according to Frost &amp; Sullivan. Price increases since then have been limited to the wholesale price index. <!-- PD24 p.152; DRHP_SMT p.178; TR3Q25 p.9 --></li>
+<li><strong>Indian makers already hold the stent market.</strong> Management puts the Indian share at <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 16 · Himanshu Baid, MD">70%</span> today, against <span class="n" title="Source: 1QFY26 earnings call transcript (2025-08-14), slide/page 16 · Himanshu Baid, MD">10%</span> a decade ago, while Frost &amp; Sullivan says about <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">60%</span>. A new entrant therefore wins stent share on price or service, and management concedes that peers "already have clinical trial data". The import-dependent parts of the basket are catheters, specialty balloons, DEB and IVL. <!-- TR1Q26 p.16; DRHP_INTEG p.234; TR2Q26 p.14-15; TR3Q26 p.6 --></li>
+<li><strong>Procedures should keep growing.</strong> India performs a small fraction of rich-country PCI rates per head, and <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 227">200-250</span> cath labs are added each year. Management says the stent market has "almost doubled" in five years, and expects DEB and IVL volumes to grow <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">2-3</span>-fold in three to five years. <!-- DRHP_SMT p.189; DRHP_INTEG p.227; TR3Q26 p.9 --></li>
+</ol>
+<p>Globally, Frost &amp; Sullivan's report for Integris sizes interventional cardiology at <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 229">$14.3bn</span> in 2024. It puts catheters at <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 232">$3.6bn</span>, forecast to grow <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 232">10.6%</span> a year to 2029, and PTCA balloons at <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 232">$2.9bn</span>. The same firm's report for SMT gives <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 194">$1.3bn</span> for PTCA balloon catheters, which shows how much these vendor figures depend on definitions. <!-- DRHP_INTEG p.229, p.232; DRHP_SMT p.194 --></p>
+<h3 id="customers-channel-and-pricing-3">Customers, channel and pricing</h3>
+<ul>
+<li><strong>India:</strong> Polymed sells to cath labs through its own field force and distributors. It added <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 14 · Himanshu Baid, MD">70</span> people to cardiology and critical care in FY25 and trains cardiologists at its PACE academy. <!-- TR4Q25 p.14; TR2Q26 p.3 --></li>
+<li><strong>Price points:</strong> the DEB and IVL carry ASPs above <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · Himanshu Baid, MD">Rs. 115,000</span>, against a stent price of Rs. <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 9 · Himanshu Baid, MD">10,000-12,000</span>. Management says pipeline products will be priced between <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">Rs. 100,000</span> and <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 14 · Himanshu Baid, MD">Rs. 1.0mn</span>. <!-- TR3Q26 p.6; TR4Q26 p.14 --></li>
+<li><strong>PendraCare:</strong> it sells through distributors and OEM partners. Management rules out a direct sales force for now and plans to put PendraCare products into Polymed's Indian sales bag. <!-- TRPEN p.3, p.8 --></li>
+</ul>
+<h3 id="competition-2">Competition</h3>
+<ul>
+<li><strong>Stents:</strong> Abbott, Boston Scientific, Medtronic, Teleflex, Biosensors and Terumo hold over <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 210">90%</span> of the global DES market. <!-- DRHP_SMT p.210 --><ul>
+<li>In India the leaders are SMT (~<span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 211">25%</span> of DES volumes), Integris/Translumina (~<span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 234">22%</span>), Meril, Micro Life Sciences and Relisys.</li>
+<li>The MD calls Meril the one Indian peer with a comparable spread of businesses, and notes that it entered cardiology more than a decade before Polymed. <!-- DRHP_INTEG p.233-234; TR3Q26 p.13; TR1Q27S p.7-8 --></li>
+</ul>
+</li>
+<li><strong>Accessories, DEB and IVL:</strong> Frost &amp; Sullivan's Oct-2025 list shows that Integris already sells guiding and diagnostic catheters, guidewires, inflation devices, introducer sheaths, Y-connector kits and coronary IVL. Polymed is therefore not alone in the import-substitution play it describes. <!-- DRHP_INTEG p.233 --></li>
+<li><strong>Guiding catheters worldwide:</strong> PendraCare competes with the large multinationals, some of which also buy from it as OEM customers. Management counts several times as many competitors in cardiology as in critical care. <!-- TRPEN p.2; TR2Q26 p.14 --></li>
+</ul>
+<h3 id="regulation-2">Regulation</h3>
+<ul>
+<li><strong>India:</strong> DES and bare-metal stents sit under NPPA ceiling prices. Other cath-lab devices do not, but their MRPs are subject to the annual price-increase limit that DPCO Para 20 sets for notified devices (Section B3). <!-- DRHP_SMT p.178; PD24 p.41 --></li>
+<li><strong>Europe and the US:</strong> management says approvals for implantable devices take years and that EU MDR has made them "extremely challenging". It called PendraCare's CE and FDA clearances the main reason to buy rather than build. Polymed's own cardiology devices have no US 510(k); the group's cardiology clearances all belong to PendraCare. <!-- TRPEN p.3-4, p.6; TR3Q26 p.8-9; FDA510K_POLY p.1; FDA510K_PEN p.1 --></li>
+</ul>
+<h3 id="capacity-and-supply-chain-2">Capacity and supply chain</h3>
+<ul>
+<li><strong>India:</strong> cardiology capacity is to expand into a new plant on a plot of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 8">7.2 acres</span> in the YEIDA Medical Devices Park near the new Noida airport, where commercial production is guided for 1QFY28 (Section A6). <!-- AR26 p.8; TR1Q27S p.15-16; DKAGM31 p.4 --></li>
+<li><strong>Netherlands:</strong> PendraCare runs at about half its capacity, and management puts both acquired businesses at <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 5 · Himanshu Baid, MD">50-60%</span> of capacity. <!-- TRPEN p.2; TR3Q26 p.5 --></li>
+</ul>
+<h3 id="growth-drivers-ranked-2">Growth drivers, ranked</h3>
+<ol>
+<li><strong>DEB and IVL (management target, FY27 onward).</strong> These products are import substitutes priced above <span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 6 · Himanshu Baid, MD">Rs. 115,000</span>, sold into a market of ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">50,000 units</span> of DEBs and ~<span class="n" title="Source: 3QFY26 earnings call transcript (6 Feb 2026) (2026-02-11), slide/page 9 · Himanshu Baid, MD">10,000 units</span> of IVL systems a year that management expects to multiply. We rank this first because the ASP is high and India has few local suppliers, though Integris is ahead in IVL. <!-- TR3Q26 p.6, p.9; DRHP_INTEG p.233 --></li>
+<li><strong>Basket pull-through (our view).</strong> A catheter, wire, balloon and kit accompany every stent. Winning top-tier hospitals would lift revenue per procedure more than stent volume would.</li>
+<li><strong>PendraCare in the US and as a contract maker (management target, FY27).</strong> The guiding catheter is cleared and sales are expected from FY27. This depends on the OEM partner, which is not named. <!-- DK4Q26 p.38 --></li>
+<li><strong>RisoR abroad (our view, FY29 at the earliest).</strong> This depends on completing PACIFIER, a year of follow-up and a European approval.</li>
+<li><strong>YEIDA capacity (1QFY28, management guidance).</strong> The plant matters only if demand catches up with the stent plan.</li>
+</ol>
+<h3 id="margin-drivers-ranked-2">Margin drivers, ranked</h3>
+<ol>
+<li><strong>PendraCare's recovery.</strong> It moved from a <span class="n" title="Our calculation: CB-2479/CB-2477*100; inputs: €1.4mn (PendraCare acquisition presentation, p.11); €9.9mn (PendraCare acquisition presentation, p.11)">14.1%</span> EBITDA margin (CY24) to <span class="n" title="Our calculation: CB-0121/CB-0119*100; inputs: €84k (Investor deck 1QFY27, p.13); €8.2mn (Investor deck 1QFY27, p.13)">1.0%</span> (CY25). Management says the combined acquired businesses run at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">12-14%</span> and can reach <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · management guidance; Himanshu Baid, MD">18-20%</span> in two to three years through India engineering, global procurement and shifting manual steps to India. <!-- TR4Q26 p.13, p.18 --></li>
+<li><strong>Mix (our view).</strong> We would expect DEB, IVL and PendraCare's catheters (gross margin <span class="n" title="Our calculation: CB-2478/CB-2477*100; inputs: €7.3mn (PendraCare acquisition presentation, p.11); €9.9mn (PendraCare acquisition presentation, p.11)">73.7%</span> in CY24) to earn more than price-capped stents; product margins are [not disclosed].</li>
+<li><strong>Front-loaded costs.</strong> The registry, clinical teams and a new sales force are expensed ahead of revenue, and the government has granted <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · Himanshu Baid, MD">Rs. 33mn</span> towards clinical studies. <!-- TR1Q27S p.4 --></li>
+<li><strong>Euro translation</strong> for PendraCare.</li>
+</ol>
+<h3 id="what-to-watch-8">What to watch</h3>
+<figure class="exh" id="exh-card_watch"><figcaption><span class="exn">Exhibit 53:</span> Cardiology: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cardiology revenue</td>
+<td>First separately disclosed line; tests the <span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 7 · management guidance; Himanshu Baid, MD">Rs. 3-4bn</span> target for 2030</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 286mn</span> in 1QFY27</td>
+<td>Quarterly deck, from 1QFY27</td>
+</tr>
+<tr>
+<td>PendraCare revenue and EBITDA</td>
+<td>Tests whether the <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 15 · management guidance">€3-4mn</span> synergy target is still alive</td>
+<td>~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">€84k</span> EBITDA in CY25</td>
+<td>Acquisition slides; subsidiary accounts (annual)</td>
+</tr>
+<tr>
+<td>Stent deployments</td>
+<td>FY26 volumes were about half of plan</td>
+<td>~<span class="n" title="Our calculation: CB-0191*1000; inputs: 13 K units (Investor deck 1QFY27, p.22)">13,000 units</span> cumulative by Jul-2026</td>
+<td>Decks, irregularly</td>
+</tr>
+<tr>
+<td>PACIFIER enrolment</td>
+<td>Gates European filing of the RisoR stent</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">840</span>+ of <span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 8">2,000</span> patients (Aug-2026)</td>
+<td>Decks</td>
+</tr>
+<tr>
+<td>DEB and IVL launch</td>
+<td>Highest-ASP products in the line</td>
+<td>DEB on sale; IVL pending (Sep-2026)</td>
+<td>AGM deck; calls</td>
+</tr>
+<tr>
+<td>PendraCare US sales</td>
+<td>First US revenue for the cardiology line</td>
+<td>Guiding catheter cleared; sales expected in FY27</td>
+<td>Decks</td>
+</tr>
+<tr>
+<td>Earn-out and buyout of the remaining <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 11">10%</span></td>
+<td>Adds to the deal cost; price set on calendar 2029 EBITDA</td>
+<td>Contingent consideration <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 121">Rs. 314mn</span></td>
+<td>Annual report, business-combination note</td>
+</tr>
+<tr>
+<td>YEIDA plant</td>
+<td>Cardiology capacity in India</td>
+<td>Commercial production guided for 1QFY28</td>
+<td>Calls; AGM deck</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor deck 1QFY27; Investor presentation 4QFY26; 31st AGM presentation; Annual Report FY26; 2QFY25 earnings call transcript; PendraCare acquisition presentation; our calculation; Investor presentation 1QFY26; Avendus Spark Research</p></figure>
+<!-- DK1Q27 p.13, p.22, p.27; DK4Q26 p.38; DKAGM31 p.3-4; AR26 p.121 -->
+<p>Open questions for management are in the plant-visit question bank (Part C). They include which cardiology devices are made in-house, PendraCare's CY25 EBITDA bridge and the terms of the earn-out.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-7.html"><span>Previous</span>A4.7 Gastroenterology, urology, surgery and wound drainage</a><a class="next" href="a4-9.html"><span>Next</span>A4.9 Orthopaedics (Citieffe)</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

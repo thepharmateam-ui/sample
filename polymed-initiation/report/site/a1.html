@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A1 What Polymed sells and where the revenue comes from · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html" class="active">A1 What Polymed sells and where the revenue comes from</a></li><li class="l3"><a href="#five-therapy-lines-are-disclosed-two-of-them-new">Five therapy lines are disclosed, two of them new</a></li><li class="l3"><a href="#the-sustainability-report-gives-the-only-finer-product-split">The sustainability report gives the only finer product split</a></li><li class="l3"><a href="#two-thirds-of-revenue-is-earned-outside-india">Two-thirds of revenue is earned outside India</a></li><li class="l3"><a href="#what-the-disclosure-does-and-does-not-tell-us">What the disclosure does and does not tell us</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="index.html"><span>Previous</span>Summary, key facts and debates</a><a class="next" href="a2.html"><span>Next</span>A2 How Polymed makes money</a></nav>
+<h1 id="part-a">Part A – The business</h1>
+<h2 id="a1">A1 What Polymed sells and where the revenue comes from</h2>
+<p>Poly Medicure makes single-use medical devices: the cannulas, infusion sets, fistula needles, bloodlines, blood bags, catheters, tubes and drains that a hospital consumes in very large volumes and throws away after one patient.</p>
+<ul>
+<li><strong>Scale.</strong> It sells <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">225+</span> products across <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">13</span> specialities, from <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">15</span> plants in <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">5</span> countries with ~<span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">1.9</span>bn units of annual capacity. The products reach <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">125+</span> countries through <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 3">1,000+</span> distributors. <!-- AR26 p.3; DK1Q27 p.10 --></li>
+<li><strong>Anchor product.</strong> The IV cannula: Polymed describes itself as the third-largest maker globally, and the MD put its global share at almost <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">11%</span> on ~<span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 17 · Himanshu Baid, MD">600mn units</span> a year. <!-- DK1Q27 p.7; TR4Q26 p.17 --></li>
+<li><strong>Unit economics.</strong> Most devices sell for tens of rupees: management cites price points of Rs. <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">10-20</span> per infusion device. It sold <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 4 · Himanshu Baid, MD">320mn units</span> devices in 3QFY25 alone. <!-- TR4Q26 p.18; TR3Q25 p.4 --></li>
+<li><strong>Scale of sales.</strong> FY26 consolidated revenue was <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 6">Rs. 18.8bn</span>.</li>
+</ul>
+<p>The business model in one line: a very high-volume, low-price consumables business, built on in-house automation, that earned a consolidated operating EBITDA margin of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 5">24.4%</span> in FY26 (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 5">27.5%</span> in FY25; Section A2). It is now adding higher-priced devices in cardiology and orthopaedics, where management says a single unit sells for thousands of rupees, sometimes above <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 18 · Himanshu Baid, MD">Rs. 20,000</span>, and in oncology through Plan1Health. <!-- AR26 p.5; TR4Q26 p.18 --></p>
+<figure class="exh" id="exh-rev_long"><figcaption><span class="exn">Exhibit 3:</span> Revenue has compounded from Rs. 100mn in FY00 to Rs. 18.8bn in FY26, with the steepest step-up after the 2021 fund-raise</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">5</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">10</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">15</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">20</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">25</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="104.50" y="284">FY00</text><path class="mark" d="M92.50,266.00V266.00Q92.50,265.02 93.48,265.02H115.52Q116.50,265.02 116.50,266.00V266.00Z" data-tip="FY00 · Consolidated revenue: Rs. 100mn" fill="var(--s1)"><title>FY00 · Consolidated revenue: Rs. 100mn</title></path><text class="val" text-anchor="middle" x="104.50" y="259.02">0.1</text><text class="tick" text-anchor="middle" x="221.50" y="284">FY10</text><path class="mark" d="M209.50,266.00V256.63Q209.50,252.63 213.50,252.63H229.50Q233.50,252.63 233.50,256.63V266.00Z" data-tip="FY10 · Consolidated revenue: Rs. 1.4bn" fill="var(--s1)"><title>FY10 · Consolidated revenue: Rs. 1.4bn</title></path><text class="val" text-anchor="middle" x="221.50" y="246.63">1.4</text><text class="tick" text-anchor="middle" x="338.50" y="284">FY20</text><path class="mark" d="M326.50,266.00V202.95Q326.50,198.95 330.50,198.95H346.50Q350.50,198.95 350.50,202.95V266.00Z" data-tip="FY20 · Consolidated revenue: Rs. 6.9bn" fill="var(--s1)"><title>FY20 · Consolidated revenue: Rs. 6.9bn</title></path><text class="val" text-anchor="middle" x="338.50" y="192.95">6.9</text><text class="tick" text-anchor="middle" x="455.50" y="284">FY22</text><path class="mark" d="M443.50,266.00V179.92Q443.50,175.92 447.50,175.92H463.50Q467.50,175.92 467.50,179.92V266.00Z" data-tip="FY22 · Consolidated revenue: Rs. 9.2bn" fill="var(--s1)"><title>FY22 · Consolidated revenue: Rs. 9.2bn</title></path><text class="val" text-anchor="middle" x="455.50" y="169.92">9.2</text><text class="tick" text-anchor="middle" x="572.50" y="284">FY24</text><path class="mark" d="M560.50,266.00V135.70Q560.50,131.70 564.50,131.70H580.50Q584.50,131.70 584.50,135.70V266.00Z" data-tip="FY24 · Consolidated revenue: Rs. 13.8bn" fill="var(--s1)"><title>FY24 · Consolidated revenue: Rs. 13.8bn</title></path><text class="val" text-anchor="middle" x="572.50" y="125.70">13.8</text><text class="tick" text-anchor="middle" x="689.50" y="284">FY26</text><path class="mark" d="M677.50,266.00V87.00Q677.50,83.00 681.50,83.00H697.50Q701.50,83.00 701.50,87.00V266.00Z" data-tip="FY26 · Consolidated revenue: Rs. 18.8bn" fill="var(--s1)"><title>FY26 · Consolidated revenue: Rs. 18.8bn</title></path><text class="val" text-anchor="middle" x="689.50" y="77.00">18.8</text></svg></div><p class="note">Management describes three phases: 'PolyMed 1.0', bootstrapped growth to FY20; 'PolyMed 2.0', FY21-FY26, after the first institutional fund-raise, a multifold capacity expansion and the first acquisitions; and 'PolyMed 3.0' ('Ascent') from FY27. Revenue CAGR was <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">18%</span> over FY20-FY26 per the company.</p><p class="src">Source: Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY00</th><th class="num">FY10</th><th class="num">FY20</th><th class="num">FY22</th><th class="num">FY24</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">Consolidated revenue</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 8">Rs. 100mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 8">Rs. 1.4bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 6.9bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 9.2bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 13.8bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 18.8bn</span></td></tr></tbody></table></div></details></figure>
+<h3 id="five-therapy-lines-are-disclosed-two-of-them-new">Five therapy lines are disclosed, two of them new</h3>
+<p>Polymed reports revenue in five buckets:</p>
+<ol>
+<li><strong>Infusion therapy:</strong> IV cannulas, infusion sets and accessories.</li>
+<li><strong>Renal:</strong> dialysis consumables and machines.</li>
+<li><strong>Cardiology:</strong> reported separately since the PendraCare acquisition.</li>
+<li><strong>Orthopaedics:</strong> Citieffe, reported separately since its acquisition.</li>
+<li><strong>Others.</strong></li>
+</ol>
+<p>"Others" pools every other speciality: blood management, anaesthesia and respiratory, critical care, diagnostics, urology, gastroenterology, surgery and wound drainage, and the vascular-access and oncology products of Plan1Health. On calls, management has declined to break it out further. The MD said on the 4QFY26 call that the new lines are 'very new businesses' and 'we don't call out those numbers specifically because confidentially, we don't want to share what company is doing'. <!-- TR4Q26 p.17 --></p>
+<p>The company's statutory sustainability report (BRSR) nonetheless gives a finer split of standalone turnover, which we use below and in Section A4. We do not estimate anything beyond what that report prints.</p>
+<figure class="exh" id="exh-rev_therapy"><figcaption><span class="exn">Exhibit 4:</span> Infusion has doubled since FY20 but renal and 'others' grew faster, cutting infusion to about half of FY26 revenue</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Infusion</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Renal</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Others (incl. acquisitions)</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">5</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">10</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">15</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">20</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">25</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="133.75" y="284">FY20</text><path class="mark" d="M121.75,221.52h24.00v44.48h-24.00Z" data-tip="FY20 · Infusion: Rs. 4.7bn" fill="var(--s1)"><title>FY20 · Infusion: Rs. 4.7bn</title></path><path class="mark" d="M121.75,218.98h24.00v0.54h-24.00Z" data-tip="FY20 · Renal: Rs. 260mn" fill="var(--s2)"><title>FY20 · Renal: Rs. 260mn</title></path><path class="mark" d="M121.75,216.98V202.85Q121.75,198.85 125.75,198.85H141.75Q145.75,198.85 145.75,202.85V216.98Z" data-tip="FY20 · Others (incl. acquisitions): Rs. 2.0bn" fill="var(--s3)"><title>FY20 · Others (incl. acquisitions): Rs. 2.0bn</title></path><text class="val" text-anchor="middle" x="133.75" y="192.85">6.9</text><text class="tick" text-anchor="middle" x="309.25" y="284">FY22</text><path class="mark" d="M297.25,212.83h24.00v53.17h-24.00Z" data-tip="FY22 · Infusion: Rs. 5.5bn" fill="var(--s1)"><title>FY22 · Infusion: Rs. 5.5bn</title></path><path class="mark" d="M297.25,206.98h24.00v3.86h-24.00Z" data-tip="FY22 · Renal: Rs. 600mn" fill="var(--s2)"><title>FY22 · Renal: Rs. 600mn</title></path><path class="mark" d="M297.25,204.98V179.92Q297.25,175.92 301.25,175.92H317.25Q321.25,175.92 321.25,179.92V204.98Z" data-tip="FY22 · Others (incl. acquisitions): Rs. 3.1bn" fill="var(--s3)"><title>FY22 · Others (incl. acquisitions): Rs. 3.1bn</title></path><text class="val" text-anchor="middle" x="309.25" y="169.92">9.2</text><text class="tick" text-anchor="middle" x="484.75" y="284">FY24</text><path class="mark" d="M472.75,176.72h24.00v89.28h-24.00Z" data-tip="FY24 · Infusion: Rs. 9.2bn" fill="var(--s1)"><title>FY24 · Infusion: Rs. 9.2bn</title></path><path class="mark" d="M472.75,167.55h24.00v7.17h-24.00Z" data-tip="FY24 · Renal: Rs. 940mn" fill="var(--s2)"><title>FY24 · Renal: Rs. 940mn</title></path><path class="mark" d="M472.75,165.55V135.80Q472.75,131.80 476.75,131.80H492.75Q496.75,131.80 496.75,135.80V165.55Z" data-tip="FY24 · Others (incl. acquisitions): Rs. 3.6bn" fill="var(--s3)"><title>FY24 · Others (incl. acquisitions): Rs. 3.6bn</title></path><text class="val" text-anchor="middle" x="484.75" y="125.80">13.8</text><text class="tick" text-anchor="middle" x="660.25" y="284">FY26</text><path class="mark" d="M648.25,169.69h24.00v96.31h-24.00Z" data-tip="FY26 · Infusion: Rs. 10.0bn" fill="var(--s1)"><title>FY26 · Infusion: Rs. 10.0bn</title></path><path class="mark" d="M648.25,151.44h24.00v16.25h-24.00Z" data-tip="FY26 · Renal: Rs. 1.9bn" fill="var(--s2)"><title>FY26 · Renal: Rs. 1.9bn</title></path><path class="mark" d="M648.25,149.44V87.00Q648.25,83.00 652.25,83.00H668.25Q672.25,83.00 672.25,87.00V149.44Z" data-tip="FY26 · Others (incl. acquisitions): Rs. 6.9bn" fill="var(--s3)"><title>FY26 · Others (incl. acquisitions): Rs. 6.9bn</title></path><text class="val" text-anchor="middle" x="660.25" y="77.00">18.8</text></svg></div><p class="note">All four years from the same slide of the 1QFY27 presentation. The company's annual-report and AGM series for FY23-FY26 match these values for FY24 and FY26. FY26 'others' includes the acquired businesses, which contributed <span class="n" title="Source: Investor presentation 4QFY26 (2026-05-25), slide/page 5">Rs. 1.2bn</span> of FY26 revenue (PendraCare consolidated from 23-Sep-2025, Citieffe from 7-Nov-2025). Company CAGRs for FY20-FY26: infusion <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">14%</span>, renal <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">39%</span>, others <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">23%</span>.</p><p class="src">Source: Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY20</th><th class="num">FY22</th><th class="num">FY24</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">Infusion</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 4.7bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 5.5bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 9.2bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 10.0bn</span></td></tr><tr><th scope="row">Renal</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 260mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 600mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 940mn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 1.9bn</span></td></tr><tr><th scope="row">Others (incl. acquisitions)</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 2.0bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 3.1bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 3.6bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 6.9bn</span></td></tr></tbody></table></div></details></figure>
+<p>The mix shift has been fast:</p>
+<ul>
+<li><strong>FY20 to FY26:</strong> infusion's share fell from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">68%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">53%</span>.</li>
+<li><strong>4QFY25 to 4QFY26:</strong> management put infusion at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">50%</span> of revenue in 4QFY26 against <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 5 · Himanshu Baid, MD">57%</span> a year earlier. <!-- TR4Q26 p.5 --></li>
+<li><strong>1QFY27, the first quarter with a full five-line split:</strong><ul>
+<li>infusion <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">50%</span></li>
+<li>others <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">27%</span></li>
+<li>orthopaedics <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">9%</span></li>
+<li>renal <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">8%</span></li>
+<li>cardiology <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">5%</span></li>
+</ul>
+</li>
+</ul>
+<p>Management frames this as de-risking from what it calls 'overdependence' on infusion. It also says the acquired businesses lift the group's gross margin but, for now, earn lower EBITDA margins (Section A7). <!-- TR1Q27S p.16, p.3; TR4Q26 p.7 --></p>
+<figure class="exh" id="exh-mix_q"><figcaption><span class="exn">Exhibit 5:</span> Acquisitions and new specialities cut infusion from 58% to 50% of quarterly revenue in one year</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Infusion</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Renal</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Cardiology</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s4)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Orthopaedics</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s5)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Others</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 110"><line class="base" x1="80.00" x2="80.00" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="80.00" y="100">0</text><line class="grid" x1="204.80" x2="204.80" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="204.80" y="100">20</text><line class="grid" x1="329.60" x2="329.60" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="329.60" y="100">40</text><line class="grid" x1="454.40" x2="454.40" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="454.40" y="100">60</text><line class="grid" x1="579.20" x2="579.20" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="579.20" y="100">80</text><line class="grid" x1="704.00" x2="704.00" y1="24" y2="84"></line><text class="tick" text-anchor="middle" x="704.00" y="100">100</text><text class="cat" text-anchor="end" x="72" y="43.00">1QFY26</text><path class="mark" d="M80.00,30.00h360.92v18.00h-360.92Z" data-tip="1QFY26 · Infusion: 58%" fill="var(--s1)"><title>1QFY26 · Infusion: 58%</title></path><text class="inlbl on1" text-anchor="middle" x="260.46" y="43.00">58%</text><path class="mark" d="M442.92,30.00h66.64v18.00h-66.64Z" data-tip="1QFY26 · Renal: 11%" fill="var(--s2)"><title>1QFY26 · Renal: 11%</title></path><text class="inlbl on2" text-anchor="middle" x="476.24" y="43.00">11%</text><path class="mark" d="M511.56,30.00h4.24v18.00h-4.24Z" data-tip="1QFY26 · Cardiology: 1%" fill="var(--s3)"><title>1QFY26 · Cardiology: 1%</title></path><path class="mark" d="M517.80,30.00H700.00Q704.00,30.00 704.00,34.00V44.00Q704.00,48.00 700.00,48.00H517.80Z" data-tip="1QFY26 · Others: 30%" fill="var(--s5)"><title>1QFY26 · Others: 30%</title></path><text class="inlbl on5" text-anchor="middle" x="610.90" y="43.00">30%</text><text class="cat" text-anchor="end" x="72" y="73.00">1QFY27</text><path class="mark" d="M80.00,60.00h311.00v18.00h-311.00Z" data-tip="1QFY27 · Infusion: 50%" fill="var(--s1)"><title>1QFY27 · Infusion: 50%</title></path><text class="inlbl on1" text-anchor="middle" x="235.50" y="73.00">50%</text><path class="mark" d="M393.00,60.00h47.92v18.00h-47.92Z" data-tip="1QFY27 · Renal: 8%" fill="var(--s2)"><title>1QFY27 · Renal: 8%</title></path><text class="inlbl on2" text-anchor="middle" x="416.96" y="73.00">8%</text><path class="mark" d="M442.92,60.00h29.20v18.00h-29.20Z" data-tip="1QFY27 · Cardiology: 5%" fill="var(--s3)"><title>1QFY27 · Cardiology: 5%</title></path><path class="mark" d="M474.12,60.00h54.16v18.00h-54.16Z" data-tip="1QFY27 · Orthopaedics: 9%" fill="var(--s4)"><title>1QFY27 · Orthopaedics: 9%</title></path><text class="inlbl on4" text-anchor="middle" x="501.20" y="73.00">9%</text><path class="mark" d="M530.28,60.00H693.76Q697.76,60.00 697.76,64.00V74.00Q697.76,78.00 693.76,78.00H530.28Z" data-tip="1QFY27 · Others: 27%" fill="var(--s5)"><title>1QFY27 · Others: 27%</title></path><text class="inlbl on5" text-anchor="middle" x="614.02" y="73.00">27%</text></svg></div><p class="note">Shares as printed in the 1QFY27 presentation, which excludes export incentives from the base; rounding explains any residual. Cardiology revenue rose from <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">Rs. 29mn</span> to <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 3 · Himanshu Baid, MD">Rs. 286mn</span>, and orthopaedics contributed <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">Rs. 492mn</span> in 1QFY27.</p><p class="src">Source: Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">1QFY26</th><th class="num">1QFY27</th></tr></thead><tbody><tr><th scope="row">Infusion</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">58%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">50%</span></td></tr><tr><th scope="row">Renal</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">11%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">8%</span></td></tr><tr><th scope="row">Cardiology</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">1%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">5%</span></td></tr><tr><th scope="row">Orthopaedics</th><td class="num">–</td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">9%</span></td></tr><tr><th scope="row">Others</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">30%</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 27">27%</span></td></tr></tbody></table></div></details></figure>
+<h3 id="the-sustainability-report-gives-the-only-finer-product-split">The sustainability report gives the only finer product split</h3>
+<p>The BRSR lists Polymed's main products with each one's share of turnover. It does this for the standalone company, which excludes the foreign subsidiaries, on a product classification broader than the one in its investor presentations. <!-- BRSR26 p.12; BRSR25 p.5 --></p>
+<p>It gives the following for FY26:</p>
+<ul>
+<li><strong>Blood management and blood collection:</strong> <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span> of standalone turnover, or about <span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span> (our calculation). That makes it the third-largest line after infusion and dialysis.</li>
+<li><strong>Surgery and wound drainage:</strong> <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span>.</li>
+<li><strong>Urology:</strong> <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span>.</li>
+<li><strong>Anaesthesia and respiratory:</strong> a separate line at <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span> in FY25. It has no separate line in FY26; we infer it was reclassified into another line.</li>
+</ul>
+<p>A separate BRSR table on product life-cycle assessment shows that prefilled saline flush syringes (3 mL, 5 mL and 10 mL) alone were <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span> of FY26 standalone turnover, about <span class="n" title="Our calculation: A-0870/100*A-0350; inputs: 10.2% (BRSR FY26, p.27); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.7bn</span> (our calculation). That makes flush syringes one of the largest single product families after IV cannulas. <!-- BRSR26 p.27 --></p>
+<figure class="exh" id="exh-brsr_split"><figcaption><span class="exn">Exhibit 6:</span> The BRSR split: blood management, surgery and urology are each material businesses, and flush syringes are ~10% of standalone turnover</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product line (BRSR classification)</th>
+<th class="num">FY25 share</th>
+<th class="num">FY26 share</th>
+<th class="num">FY26 implied revenue (our calculation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infusion therapy</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">67.1%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">69.9%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0846/100*A-0350; inputs: 69.9% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 11.6bn</span></td>
+</tr>
+<tr>
+<td>of which prefilled flush syringes</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 27">10.2%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0870/100*A-0350; inputs: 10.2% (BRSR FY26, p.27); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.7bn</span></td>
+</tr>
+<tr>
+<td>Dialysis</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">9.5%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">11.2%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0847/100*A-0350; inputs: 11.2% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.9bn</span></td>
+</tr>
+<tr>
+<td>Blood management and blood collection</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">10.0%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">9.5%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0848/100*A-0350; inputs: 9.5% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.6bn</span></td>
+</tr>
+<tr>
+<td>Surgery and wound drainage</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">5.7%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">5.3%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0849/100*A-0350; inputs: 5.3% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 889mn</span></td>
+</tr>
+<tr>
+<td>Urology</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">3.3%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">3.0%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0850/100*A-0350; inputs: 3.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 497mn</span></td>
+</tr>
+<tr>
+<td>Anaesthesia and respiratory</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span></td>
+<td class="num">–</td>
+<td class="num">–</td>
+</tr>
+<tr>
+<td>Other</td>
+<td class="num"><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">1.6%</span></td>
+<td class="num"><span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">1.0%</span></td>
+<td class="num"><span class="n" title="Our calculation: A-0851/100*A-0350; inputs: 1.0% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 170mn</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">Shares of standalone turnover as printed in the BRSR; rupee values are our calculation (share x standalone revenue from operations of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 32">Rs. 16.6bn</span>). The BRSR's 'infusion therapy' is broader than the presentations' infusion segment: 'infusion' on the BRSR basis implies <span class="n" title="Our calculation: A-0846/100*A-0350; inputs: 69.9% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 11.6bn</span>, against <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 10.0bn</span> for consolidated infusion in the annual report's segment table. Its dialysis share implies <span class="n" title="Our calculation: A-0847/100*A-0350; inputs: 11.2% (BRSR FY26, p.12); Rs. 16.6bn (Annual Report FY26, p.32)">Rs. 1.9bn</span>, close to the <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 1.9bn</span> reported for renal. Flush syringes sit within infusion therapy.</p><p class="src">Source: BRSR FY25; BRSR FY26; Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- BRSR25 p.5; BRSR26 p.12, p.27; AR26 p.32, p.47 -->
+<h3 id="two-thirds-of-revenue-is-earned-outside-india">Two-thirds of revenue is earned outside India</h3>
+<p>Polymed has always been an exporter: <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 9">~73%</span> of FY20 revenue came from outside India. International revenue was still <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 10">~69%</span> of FY26 revenue (and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 26">72%</span> in 1QFY27, lifted by the acquisitions).</p>
+<ul>
+<li><strong>Domestic:</strong> India has been the fastest-growing region, with a company-stated FY20-FY26 CAGR of <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">21%</span>. Its share rose from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">27%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">31%</span>.</li>
+<li><strong>Europe:</strong> a CAGR of <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">20%</span>, lifting its share from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">29%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">32%</span>.</li>
+<li><strong>RoW:</strong> Africa, West Asia, the Americas and the rest of Asia grew at a <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">15%</span> CAGR, and their share fell from <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">46%</span> to <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">37%</span>.</li>
+</ul>
+<p>The MD's stated long-run aim is a mix of <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 11 · management guidance; Himanshu Baid, MD">1/3 India and 2/3 RoW</span>, roughly today's balance. <!-- TR4Q26 p.11 --></p>
+<figure class="exh" id="exh-rev_geo"><figcaption><span class="exn">Exhibit 7:</span> India and Europe have gained share from the rest of the world; each region now contributes about a third</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>India</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Europe</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s3)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Rest of world</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="217.20" y2="217.20"></line><text class="tick" text-anchor="end" x="40" y="221.20">5</text><line class="grid" x1="46" x2="748" y1="168.40" y2="168.40"></line><text class="tick" text-anchor="end" x="40" y="172.40">10</text><line class="grid" x1="46" x2="748" y1="119.60" y2="119.60"></line><text class="tick" text-anchor="end" x="40" y="123.60">15</text><line class="grid" x1="46" x2="748" y1="70.80" y2="70.80"></line><text class="tick" text-anchor="end" x="40" y="74.80">20</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">25</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn</text><text class="tick" text-anchor="middle" x="133.75" y="284">FY20</text><path class="mark" d="M121.75,248.75h24.00v17.25h-24.00Z" data-tip="FY20 · India: Rs. 1.9bn" fill="var(--s1)"><title>FY20 · India: Rs. 1.9bn</title></path><path class="mark" d="M121.75,229.03h24.00v17.72h-24.00Z" data-tip="FY20 · Europe: Rs. 2.0bn" fill="var(--s2)"><title>FY20 · Europe: Rs. 2.0bn</title></path><path class="mark" d="M121.75,227.03V202.85Q121.75,198.85 125.75,198.85H141.75Q145.75,198.85 145.75,202.85V227.03Z" data-tip="FY20 · Rest of world: Rs. 3.0bn" fill="var(--s3)"><title>FY20 · Rest of world: Rs. 3.0bn</title></path><text class="val" text-anchor="middle" x="133.75" y="192.85">6.9</text><text class="tick" text-anchor="middle" x="309.25" y="284">FY22</text><path class="mark" d="M297.25,237.43h24.00v28.57h-24.00Z" data-tip="FY22 · India: Rs. 3.0bn" fill="var(--s1)"><title>FY22 · India: Rs. 3.0bn</title></path><path class="mark" d="M297.25,208.73h24.00v26.69h-24.00Z" data-tip="FY22 · Europe: Rs. 2.9bn" fill="var(--s2)"><title>FY22 · Europe: Rs. 2.9bn</title></path><path class="mark" d="M297.25,206.73V180.01Q297.25,176.01 301.25,176.01H317.25Q321.25,176.01 321.25,180.01V206.73Z" data-tip="FY22 · Rest of world: Rs. 3.2bn" fill="var(--s3)"><title>FY22 · Rest of world: Rs. 3.2bn</title></path><text class="val" text-anchor="middle" x="309.25" y="170.01">9.2</text><text class="tick" text-anchor="middle" x="484.75" y="284">FY24</text><path class="mark" d="M472.75,226.20h24.00v39.80h-24.00Z" data-tip="FY24 · India: Rs. 4.2bn" fill="var(--s1)"><title>FY24 · India: Rs. 4.2bn</title></path><path class="mark" d="M472.75,181.89h24.00v42.31h-24.00Z" data-tip="FY24 · Europe: Rs. 4.5bn" fill="var(--s2)"><title>FY24 · Europe: Rs. 4.5bn</title></path><path class="mark" d="M472.75,179.89V135.70Q472.75,131.70 476.75,131.70H492.75Q496.75,131.70 496.75,135.70V179.89Z" data-tip="FY24 · Rest of world: Rs. 5.0bn" fill="var(--s3)"><title>FY24 · Rest of world: Rs. 5.0bn</title></path><text class="val" text-anchor="middle" x="484.75" y="125.70">13.8</text><text class="tick" text-anchor="middle" x="660.25" y="284">FY26</text><path class="mark" d="M648.25,210.20h24.00v55.80h-24.00Z" data-tip="FY26 · India: Rs. 5.8bn" fill="var(--s1)"><title>FY26 · India: Rs. 5.8bn</title></path><path class="mark" d="M648.25,151.93h24.00v56.27h-24.00Z" data-tip="FY26 · Europe: Rs. 6.0bn" fill="var(--s2)"><title>FY26 · Europe: Rs. 6.0bn</title></path><path class="mark" d="M648.25,149.93V87.00Q648.25,83.00 652.25,83.00H668.25Q672.25,83.00 672.25,87.00V149.93Z" data-tip="FY26 · Rest of world: Rs. 7.0bn" fill="var(--s3)"><title>FY26 · Rest of world: Rs. 7.0bn</title></path><text class="val" text-anchor="middle" x="660.25" y="77.00">18.8</text></svg></div><p class="note">Same slide as the therapy split (1QFY27 presentation). The FY26 annual report shows RoW at <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">Rs. 6.8bn</span>, excluding other operating revenue, against <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 7.0bn</span> in the presentation.</p><p class="src">Source: Investor deck 1QFY27; Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY20</th><th class="num">FY22</th><th class="num">FY24</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">India</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 1.9bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 3.0bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 4.2bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 5.8bn</span></td></tr><tr><th scope="row">Europe</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 2.0bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 2.9bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 4.5bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 6.0bn</span></td></tr><tr><th scope="row">Rest of world</th><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 3.0bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 3.2bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 5.0bn</span></td><td class="num"><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 6">Rs. 7.0bn</span></td></tr></tbody></table></div></details></figure>
+<h3 id="what-the-disclosure-does-and-does-not-tell-us">What the disclosure does and does not tell us</h3>
+<p>Company disclosure is good on:</p>
+<ul>
+<li>consolidated and standalone P&amp;L by quarter;</li>
+<li>domestic versus international revenue, with Europe and RoW;</li>
+<li>the five therapy buckets;</li>
+<li>acquisition contributions.</li>
+</ul>
+<p>It is thin on four things:</p>
+<ol>
+<li><strong>Product-level revenue</strong> within "others", beyond the standalone percentages in the BRSR. The BRSR excludes the subsidiaries and uses a broader definition of infusion than the presentations.</li>
+<li><strong>Customer concentration and the OEM/private-label share.</strong> Section A2 sets out what the placement documents and rating reports disclose.</li>
+<li><strong>Country-level export revenue.</strong> The US is the only country for which management gives a number: it expects exports there of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 12 · management guidance; Himanshu Baid, MD">$3.5-4mn</span> in FY27. <!-- TR1Q27S p.12 --></li>
+<li><strong>Volume and price split by product.</strong> Management has occasionally given total devices sold (<span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 4 · Himanshu Baid, MD">960mn units</span> in 9MFY25, up <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 10 · Himanshu Baid, MD">19%</span> yoy against consolidated revenue growth of <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 4 · Himanshu Baid, MD">23.2%</span>) but not by line. <!-- TR3Q25 p.4, p.10 --></li>
+</ol>
+<p>These gaps shape the question bank in Part C.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="index.html"><span>Previous</span>Summary, key facts and debates</a><a class="next" href="a2.html"><span>Next</span>A2 How Polymed makes money</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

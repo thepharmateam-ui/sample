@@ -1,7 +1,7 @@
 ## A3 The FY26 reset and the guidance record {#a3}
 
 FY26 broke a run of on-guidance delivery.
-- **Headline growth.** Consolidated revenue grew {{CA-0107}} to {{A-0039}}, against the {{CA-0512}} management guided in May-2025. Standalone revenue grew only {{CA-0093|approx}}.
+- **Headline growth.** Consolidated revenue grew {{CA-0107}} to {{A-0039}}, against the {{CA-0512}} management guided in May-2025. Standalone revenue grew only {{CA-0093|approx}} ([[EXREF:q_growth]]).
 - **Organic growth.** Excluding the part-year contribution of PendraCare and Citieffe, consolidated revenue grew {{D-M-003}} (our calculation on the company's organic figure of {{CB-0577}}).
 - **Both halves missed, exports by more.** Domestic revenue grew {{A-0265}} (vs. {{CA-0513|range}} guided). International revenue grew {{A-0276}} including acquisitions (vs. {{CA-0516|range}} guided) but was 'flattish' on an organic basis, and management put 4QFY26 standalone exports at minus {{CA-0164|range}}. <!-- TR4Q25 p.5; TR3Q26 p.16; TR4Q26 p.12 -->
 
@@ -11,7 +11,7 @@ Two readings of FY26 are possible:
 1. an external shock layered on a destocking cycle in the export channel;
 2. evidence that the export franchise is more exposed to Chinese pricing, US tariffs and regulatory friction than the FY21-25 record suggested.
 
-We read the 1QFY27 print as supporting the first reading more than the second. Standalone revenue grew {{CB-0198}}, and Europe grew {{CB-0324}} organically on new customers. We nonetheless see three company-specific elements that matter for FY27-30:
+We read the 1QFY27 print as supporting the first reading more than the second. Standalone growth recovered ([[EXREF:q_growth]]), and Europe grew {{CB-0324}} organically on new customers. We nonetheless see three company-specific elements that matter for FY27-30:
 1. European certification and tender slippage;
 2. price competition in renal from Chinese dialysers that, management says, enter India duty-free via ASEAN countries; <!-- TR4Q26 p.8; TR1Q27S p.9 -->
 3. a guidance practice that moved targets without always acknowledging it.
@@ -19,6 +19,11 @@ We read the 1QFY27 print as supporting the first reading more than the second. S
 ::: chart
 {"id":"q_rev","type":"column","title":"Consolidated revenue stalled in 1HFY26 and re-accelerated from 3QFY26, the later quarters helped by acquisitions","cats":["3QFY24","4QFY24","1QFY25","2QFY25","3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"scale":"bn","unit":"Rs bn","dec":2,"series":[{"name":"Consolidated revenue","facts":["CB-2894","CB-2590","CB-1978","CB-1628","CB-1332","CB-0705","CB-0254","CB-1627","CB-1331","CB-0704","CB-0253"]}],"label_last":true,"note":"PendraCare consolidated from 23-Sep-2025 and Citieffe from 7-Nov-2025. Of 4QFY26 revenue of {{CB-0704}}, {{CB-0575}} was organic; acquisitions contributed {{CB-0184}} in 1QFY27."}
 :::
+
+::: chart
+{"id":"q_growth","type":"line","title":"Standalone revenue growth fell from 28% to 2-5% a quarter through FY26 and recovered to 12% in 1QFY27; acquisitions lifted the consolidated rate from 3QFY26","cats":["3QFY25","4QFY25","1QFY26","2QFY26","3QFY26","4QFY26","1QFY27"],"unit":"% yoy","dec":1,"series":[{"name":"Consolidated, reported","facts":["CB-2897","CB-2593","CB-1979","CB-1632","CB-1336","CB-0708","CB-0255"]},{"name":"Standalone (Poly Medicure Ltd)","facts":["CB-2989","CB-2688","D-WI-001","D-WI-002","CB-1218","CB-0612","CB-0198"]}],"note":"Growth as reported in each quarter's presentation; standalone 1QFY26 and 2QFY26 are our calculation from the quarterly results. Standalone excludes every foreign subsidiary. PendraCare was consolidated from 23-Sep-2025 and Citieffe from 7-Nov-2025. Consolidated organic growth, excluding both, was {{D-WI-003}} in 4QFY26 (our calculation on the company's organic revenue of {{CB-0575}}) and {{CB-0319}} in 1QFY27."}
+:::
+<!-- DK3Q25 p.14-15; DK4Q25 p.13-14; RS1Q26 p.3; RS2Q26 p.2; DK1Q26 p.15; DK2Q26 p.15; DK3Q26 p.10-11; DK4Q26 p.5, p.9-10; DK1Q27 pp.24-26 -->
 
 ### What happened, quarter by quarter
 
@@ -33,15 +38,15 @@ The reset ran in three phases:
 
 In India, private-sector revenue grew {{CA-0419}} and {{CA-0332}} in 1QFY26 and 2QFY26, while government business fell {{CA-0420|abs}} and {{CA-0333|abs}}. Management also pointed to a one-off inventory realignment at distributors around the September 2025 GST rate cut. <!-- TR2Q26 p.5, p.8 -->
 
-::: table id="q_table" title="Exports explain the FY26 slowdown: international revenue was flat in 1HFY26 while domestic revenue kept growing at 16-25% a quarter" note="Growth rates as reported in each quarter's presentation. Later presentations reallocated some revenue between Europe and RoW, so levels in later decks can differ from the base used here. Organic growth for 1QFY27 excludes PendraCare and Citieffe."
-| Quarter | Consolidated revenue | yoy | Domestic | International | Europe | RoW |
-|---|---|---|---|---|---|---|
-| 1QFY26 | {{CB-0254}} | {{CB-1979|signed}} | {{CB-1964|signed}} | {{CB-2032}} | {{CB-2038}} | {{CB-2041|signed}} |
-| 2QFY26 | {{CB-1627}} | {{CB-1632|signed}} | {{CB-1587|signed}} | {{CB-1765|signed}} | {{CB-1781}} | {{CB-1789|signed}} |
-| 3QFY26 | {{CB-1331}} | {{CB-1336|signed}} | {{CB-1467|signed}} | {{CB-1475|signed}} | {{CB-1491|signed}} | {{CB-1499|signed}} |
-| 4QFY26 | {{CB-0704}} | {{CB-0708|signed}} | {{CB-0599|signed}} | {{CB-0600|signed}} | {{CB-0838|signed}} | {{CB-0844|signed}} |
-| 1QFY27 | {{CB-0253}} | {{CB-0255|signed}} | {{CB-0308|signed}} | {{CB-0313|signed}} | {{CB-0322|signed}} | {{CB-0327|signed}} |
-| 1QFY27 organic | {{CB-0318}} | {{CB-0319|signed}} | {{CB-0310|signed}} | {{CB-0315|signed}} | {{CB-0324|signed}} | {{CB-0329|signed}} |
+::: table id="q_table" title="Exports explain the FY26 slowdown: international revenue was flat in 1HFY26 while domestic revenue kept growing at 16-25% a quarter" note="Growth rates as reported in each quarter's presentation; consolidated growth is plotted in [[EXREF:q_growth]]. Later presentations reallocated some revenue between Europe and RoW, so levels in later decks can differ from the base used here. Organic growth for 1QFY27 excludes PendraCare and Citieffe."
+| Quarter | Consolidated revenue | Domestic, yoy | International, yoy | Europe, yoy | RoW, yoy |
+|---|---|---|---|---|---|
+| 1QFY26 | {{CB-0254}} | {{CB-1964|signed}} | {{CB-2032}} | {{CB-2038}} | {{CB-2041|signed}} |
+| 2QFY26 | {{CB-1627}} | {{CB-1587|signed}} | {{CB-1765|signed}} | {{CB-1781}} | {{CB-1789|signed}} |
+| 3QFY26 | {{CB-1331}} | {{CB-1467|signed}} | {{CB-1475|signed}} | {{CB-1491|signed}} | {{CB-1499|signed}} |
+| 4QFY26 | {{CB-0704}} | {{CB-0599|signed}} | {{CB-0600|signed}} | {{CB-0838|signed}} | {{CB-0844|signed}} |
+| 1QFY27 | {{CB-0253}} | {{CB-0308|signed}} | {{CB-0313|signed}} | {{CB-0322|signed}} | {{CB-0327|signed}} |
+| 1QFY27 organic | {{CB-0318}} | {{CB-0310|signed}} | {{CB-0315|signed}} | {{CB-0324|signed}} | {{CB-0329|signed}} |
 :::
 
 ::: table id="q_reasons" title="Management attributed the slowdown to channel destocking, freight, tariffs and Chinese pricing, not to lost customers"
@@ -64,7 +69,7 @@ Management gives explicit annual guidance and revisits it every quarter, so the 
   - Revenue guidance was cut from {{CA-0512}} to {{CA-0364|range}} in Nov-2025, then missed.
   - Renal and domestic guidance were missed by a wide margin.
   - 2HFY26 revenue was guided at {{WM-0067|range}} above 1HFY26 in Nov-2025, restated in Feb-2026 as ~{{CA-0251|range}} ('as I mentioned in the previous call'), and described in May-2026 as 'exactly delivered' at ~{{CA-0112}}. <!-- TR2Q26 p.6; TR3Q26 p.6; TR4Q26 p.5 -->
-- **FY27 standalone:** the revenue guidance was widened from {{CA-0136|range}} in May-2026 to {{CA-0057|range}} in Aug-2026, while being described as maintained. <!-- TR4Q26 p.6; TR1Q27S p.4 -->
+- **FY27 standalone:** the revenue guidance was widened in Aug-2026 while being described as maintained ([[EXREF:fy27_guide]]). <!-- TR4Q26 p.6; TR1Q27S p.4 -->
 
 We read these as signs that guidance is framed as a target to be managed toward rather than a forecast with a stated error band, so we weight management's quarterly commentary on drivers more heavily than the point guidance.
 
@@ -96,11 +101,20 @@ We read these as signs that guidance is framed as a target to be managed toward 
 
 ### What management is guiding for FY27 and FY30
 
-**FY27 guidance** (given 25-May-2026 and 'maintained' on 10-Aug-2026): <!-- TR4Q26 p.6-7; TR1Q27S p.4 -->
-- **Consolidated revenue:** {{CA-0135|range}}, including a full year of PendraCare and Citieffe. That implies {{D-M-001|num}}-{{D-M-002}} growth on FY26 (our calculation).
-- **Standalone revenue:** {{CA-0057|range}}, with domestic revenue growing {{CA-0058}} and international revenue {{CA-0059}}.
-- **EBITDA margin:** standalone {{CA-0139|range}}, consolidated {{CA-0140|range}}.
-- **Capex:** {{CA-0141|range}}.
+**FY27 guidance** was given on 25-May-2026 and described as 'maintained' on 10-Aug-2026. <!-- TR4Q26 p.6-7; TR1Q27S p.4 -->
+
+::: table id="fy27_guide" title="FY27 guidance: 23-28% consolidated growth with a full year of the acquisitions, margins guided at or below FY26 and lower capex" note="Management guidance given 25-May-2026 (4QFY26 call) and described as maintained on 10-Aug-2026, except where dated. Implied consolidated growth is our calculation on FY26 revenue. Domestic and international targets are for the standalone company."
+| Metric | FY26 delivered | FY27 guidance |
+|---|---|---|
+| Consolidated revenue | {{A-0039}} ({{CA-0107|signed}}) | {{CA-0135|range}}, implying {{D-M-001|num}}-{{D-M-002}} growth |
+| Standalone revenue | {{A-0350}} (~{{CA-0093}}) | {{CA-0136|range}} (May-2026), widened to {{CA-0057|range}} (Aug-2026) |
+| Domestic growth | {{A-0265}} (consolidated) | {{CA-0058}} (standalone) |
+| International growth | {{A-0276}} incl. acquisitions; organic 'flattish' | {{CA-0059}} (standalone) |
+| Standalone EBITDA margin | {{A-0311}} | {{CA-0139|range}} |
+| Consolidated EBITDA margin | {{A-0028}} | {{CA-0140|range}} |
+| Capex | ~{{CA-0127}} | {{CA-0141|range}} |
+:::
+<!-- AR26 p.5, p.6, p.32, p.47, p.48; TR4Q26 p.4-7, p.12; TR1Q27S p.4 -->
 
 **Vision 2030** ('PolyMed 3.0'): double revenue by FY30. Management characterized the current business as {{CA-0007|plain}}, and expects a similar split. An analyst on the same call worked this out as about {{WM-0065|range}} a year organic and {{WM-0066|range}} from acquisitions, which the MD described as 'a trajectory basically'. <!-- TR1Q27S p.2, p.7 -->
 

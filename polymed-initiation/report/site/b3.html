@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B3 India medtech: market, policy and demand · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html" class="active">B3 India medtech: market, policy and demand</a></li><li class="l3"><a href="#how-big-is-the-market-the-estimates-do-not-reconcile">How big is the market? The estimates do not reconcile</a></li><li class="l3"><a href="#imports-exports-and-the-substitution-runway">Imports, exports and the substitution runway</a></li><li class="l3"><a href="#policy-part-one-rules-that-protect-and-support-local-makers">Policy, part one: rules that protect and support local makers</a></li><li class="l3"><a href="#the-dialyser-anti-dumping-case">The dialyser anti-dumping case</a></li><li class="l3"><a href="#policy-part-two-the-price-of-a-device-and-the-trade-margin-d">Policy, part two: the price of a device and the trade-margin debate</a></li><li class="l3"><a href="#demand-what-drives-consumption">Demand: what drives consumption</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="b2.html"><span>Previous</span>B2 The competitor universe</a><a class="next" href="b4.html"><span>Next</span>B4 Export-market regimes</a></nav>
+<h2 id="b3">B3 India medtech: market, policy and demand</h2>
+<p>India is Polymed's fastest-growing region and <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 4">31%</span> of its FY26 revenue (Section A1). It is also where policy moves fastest, and in two directions at once. Industrial policy protects and subsidizes local makers through production incentives, local-content rules in public tenders and trade remedies. Price policy pushes the other way, through the cap on MRP increases, package rates for insured care and a live debate on capping trade margins. This section sets out the market, the policy on both sides and the demand drivers.</p>
+<h3 id="how-big-is-the-market-the-estimates-do-not-reconcile">How big is the market? The estimates do not reconcile</h3>
+<p>No two sources size the Indian device market on the same basis. They differ on whether exports, capital equipment and diagnostics are included, on the year, and on who paid for the study. We show them side by side rather than choose one. Estimates from reports commissioned for offer documents or published by market-research firms are vendor estimates.</p>
+<figure class="exh" id="exh-b3_size"><figcaption><span class="exn">Exhibit 105:</span> India's device market is sized very differently by source, scope and year; the estimates cannot be reconciled</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Source and vintage</th>
+<th>Type</th>
+<th>Scope</th>
+<th>Size</th>
+<th>Growth or projection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Government of India, National Medical Devices Policy (May-2023)</td>
+<td>Government estimate</td>
+<td>Medical devices</td>
+<td><span class="n" title="Source: Gazette notification - National Medical Devices Policy, 2023 (2023-05-02), slide/page 6">$11bn</span> (2020), <span class="n" title="Source: Gazette notification - National Medical Devices Policy, 2023 (2023-05-02), slide/page 6">1.5%</span> of the world market</td>
+<td>Target of <span class="n" title="Source: PIB: Cabinet approves the Policy for the Medical Devices Sector (2023-04-26)">$50bn</span> "by 2030" in the release text ("in next five years" in its headline) and a <span class="n" title="Source: Gazette notification - National Medical Devices Policy, 2023 (2023-05-02), slide/page 7">10-12%</span> global share within twenty-five years</td>
+</tr>
+<tr>
+<td>Government of India, PLI release (Mar-2024)</td>
+<td>Government estimate</td>
+<td>Medical devices</td>
+<td class="num"><span class="n" title="Source: PIB – Dr Mansukh Mandaviya inaugurates 27 greenfield bulk drug park projects and 13 greenfield manufacturing plants for medical devices under the PLI scheme (2024-03-02)">$11bn</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>CRISIL, Aug-2024, in Polymed's QIP document</td>
+<td>Vendor estimate (commissioned)</td>
+<td>Medical devices</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">Rs. 900-915bn</span> (FY24)</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 135">11-12%</span> a year to <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 135">Rs. 1,375-1,400bn</span> by FY28</td>
+</tr>
+<tr>
+<td>Frost &amp; Sullivan via IBEF, Jul-2025, for SMT</td>
+<td>Vendor estimate (commissioned)</td>
+<td>Devices, including exports</td>
+<td><span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 180">$16.4bn</span> (2023)</td>
+<td><span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 180">$60.2bn</span> by 2030</td>
+</tr>
+<tr>
+<td>Frost &amp; Sullivan, Jul-2025, for SMT</td>
+<td>Vendor estimate (commissioned)</td>
+<td>Domestic consumption</td>
+<td><span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 181">$13.0bn</span> (2023)</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Frost &amp; Sullivan, Oct-2025, for Integris</td>
+<td>Vendor estimate (commissioned)</td>
+<td>MedTech</td>
+<td>–</td>
+<td><span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 213">8%</span> a year over 2024-2029, to <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 214">$27.7bn</span></td>
+</tr>
+<tr>
+<td>1Lattice, Dec-2025, for G Surgiwear</td>
+<td>Vendor estimate (commissioned)</td>
+<td>Devices, including equipment</td>
+<td><span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 175">$30.0bn</span> (FY25)</td>
+<td><span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 175">14.3%</span> a year to <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 175">$58.5bn</span> by FY30</td>
+</tr>
+<tr>
+<td>BCG and KIHT, May-2026, cited in Polymed's FY26 annual report</td>
+<td>Consultancy estimate</td>
+<td>MedTech demand</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">$16.0bn</span> (2025)</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">$30-32bn</span> by 2030 and <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">$61-63bn</span> by 2035</td>
+</tr>
+<tr>
+<td>Frost &amp; Sullivan, Sep-2021, for Healthium</td>
+<td>Vendor estimate (historical)</td>
+<td>Medical devices</td>
+<td><span class="n" title="Source: Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021) (2021-09-05), slide/page 125">$7.3bn</span> (2020)</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Gazette notification - National Medical Devices Policy, 2023; PIB: Cabinet approves the Policy for the Medical Devices Sector; PIB – Dr Mansukh Mandaviya inaugurates 27 greenfield bulk drug park projects and 13 greenfield manufacturing plants for medical devices under the PLI scheme; QIP Placement Document Aug 2024; Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025); Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025); G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); Annual Report FY26; Healthium Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Report on Surgical Devices &amp; Medical Consumables Market in Select Geographies', Sep 2021); Avendus Spark Research</p></figure>
+<!-- NMDP2023 pp.6-7; PIB_NMDP23 p.1; PIB_PLI_MAR24 p.1; PD24 pp.134-135; DRHP_SMT pp.180-181; DRHP_INTEG pp.213-214; DRHP_GSURG p.175; AR26 p.44; DRHP_HEAL p.125 -->
+<p>For Polymed the relevant pool is consumables and disposables, which the sources also size differently:</p>
+<ul>
+<li><strong>CRISIL</strong> puts consumables and disposables at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 136">Rs. 195.0bn</span> in FY24, after <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 136">13%</span> annual growth over FY19-FY24, and expects <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 137">11-12%</span> a year to <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 136">Rs. 290-300bn</span> by FY28 (vendor estimate). It put Polymed's share at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 166">1.9%</span> in FY23, on domestic revenue of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 166">Rs. 3.4bn</span>. <!-- PD24 pp.136-137, 166 --></li>
+<li><strong>Frost &amp; Sullivan</strong> puts disposables and consumables at <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 181">$4.3bn</span> in 2023, <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 181">26%</span> of the device market, rising to <span class="n" title="Source: Sahajanand Medical Technologies Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market Research on Cardiovascular Devices Market', 24 Jul 2025) (2025-07-25), slide/page 181">$17.1bn</span> by 2030 (vendor estimate). <!-- DRHP_SMT p.181 --></li>
+<li><strong>1Lattice</strong> puts surgical disposables alone at <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 177">$3.9bn</span> in FY25, rising to <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 177">$6.4bn</span> by FY30 (vendor estimate). <!-- DRHP_GSURG p.177 --></li>
+</ul>
+<p>We use CRISIL's consumables figure as the working estimate of Polymed's domestic pool, because it is the only one that also measures Polymed's share. On that basis Polymed is a small player in a large market, and management frames the opportunity the same way: in Feb-2025 the MD said Polymed had <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 13 · Himanshu Baid, MD">only covered one-third</span> of India's hospitals, with a share of wallet below <span class="n" title="Source: 3QFY25 earnings call transcript (2025-02-10), slide/page 13 · Himanshu Baid, MD">20%</span> where it is present, and in Nov-2025 he put that share at <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 13 · Himanshu Baid, MD">5-7%</span>. <!-- DK1Q27 p.4; TR3Q25 p.13; TR2Q26 p.13 --></p>
+<h3 id="imports-exports-and-the-substitution-runway">Imports, exports and the substitution runway</h3>
+<p>Import dependence is just as contested:</p>
+<figure class="exh" id="exh-b3_imports"><figcaption><span class="exn">Exhibit 106:</span> Every source says India imports most of its devices, but estimates range from about half to nine-tenths, and consumables are far less import-dependent</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Source and vintage</th>
+<th>All devices</th>
+<th>Consumables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Government of India, PLI gazette (2020)</td>
+<td class="num"><span class="n" title="Source: Gazette notification - PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (and Medical Device Parks scheme) (2020-07-21), slide/page 7">&gt;85%</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>Government of India, PLI release (Mar-2024), for 2020</td>
+<td class="num"><span class="n" title="Source: PIB – Dr Mansukh Mandaviya inaugurates 27 greenfield bulk drug park projects and 13 greenfield manufacturing plants for medical devices under the PLI scheme (2024-03-02)">90%</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>CRISIL (Aug-2024), FY24</td>
+<td><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">80%</span> on one page, <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 139">70-75%</span> on another</td>
+<td class="num"><span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">30-40%</span></td>
+</tr>
+<tr>
+<td>1Lattice (Dec-2025), FY25</td>
+<td><span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 178">70-80%</span>, but imports are <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 178">40.8%</span> of consumption on the same page</td>
+<td>–</td>
+</tr>
+<tr>
+<td>BCG and KIHT (May-2026), 2022 to 2025</td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">~80%</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">~55%</span></td>
+<td><span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">80-85%</span> to <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">50-55%</span></td>
+</tr>
+<tr>
+<td>Industry associations (Aug-2026)</td>
+<td class="num"><span class="n" title="Source: 'Separate law needed': Medical device industry associations urge Health Ministry to reconsider draft bill 2026 (2026-08-11)">70-80%</span></td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Gazette notification - PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (and Medical Device Parks scheme); PIB – Dr Mansukh Mandaviya inaugurates 27 greenfield bulk drug park projects and 13 greenfield manufacturing plants for medical devices under the PLI scheme; QIP Placement Document Aug 2024; G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); Annual Report FY26; 'Separate law needed': Medical device industry associations urge Health Ministry to reconsider draft bill 2026; Avendus Spark Research</p></figure>
+<!-- PLIMD_GAZ20 p.7; PIB_PLI_MAR24 p.1; PD24 pp.134, 139; DRHP_GSURG p.178; AR26 p.43; ANI_DMDCB_2608 p.1 -->
+<p>Two readings survive the noise. First, consumables are less import-dependent than equipment: BCG puts imported equipment at <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">60-65%</span> in 2025 against <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 43">50-55%</span> for consumables, CRISIL puts consumables at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">30-40%</span> against ~<span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">80%</span> for all devices, and CRISIL says imports are lower in needles and syringes and higher in catheters and cannulas. Second, on BCG's estimates the import share is falling, and BCG expects domestic production to meet <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">75%</span> of demand by 2035 (consultancy projection). CRISIL puts China at <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 140">16%</span> of India's imports of medical and scientific instruments in FY24. <!-- AR26 pp.43-44; PD24 pp.134, 139-140 --></p>
+<p>India is also a sizeable exporter, and consumables are its largest export category:</p>
+<ul>
+<li><strong>Exports</strong> were <span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">$4.0bn</span> in FY25 by the Department of Pharmaceuticals' count, of which consumables and disposables <span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">$1.9bn</span>. The export council's figures are close but not identical (<span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01)">$4.0bn</span> and <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01)">$1.8bn</span>). <!-- PIB_MDM_26 p.1; EPCMD_EXIM_11MFY26 p.1 --></li>
+<li><strong>Apr-Feb FY26:</strong> exports were flat at <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01)">$3.7bn</span>, with exports to the US down to <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 4">$670.39mn</span> in the tariff period, while imports were <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 5">$9.0bn</span>, of which <span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 8">$1.4bn</span> from China. <!-- EPCMD_EXIM_11MFY26 pp.1, 4-5, 8 --></li>
+<li><strong>Net position.</strong> F&amp;S, citing IBEF, says India became a net exporter of consumables and disposables in 2022-23, and the government says net device imports fell for the first time in 2023. <!-- DRHP_SMT p.181; PIB_PLI_MAR24 p.1 --></li>
+</ul>
+<figure class="exh" id="exh-b3_trade"><figcaption><span class="exn">Exhibit 107:</span> India remains a net importer of devices overall, but consumables are its largest export category</figcaption><div class="plot"><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 230"><line class="base" x1="190.00" x2="190.00" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="190.00" y="220">0</text><line class="grid" x1="292.80" x2="292.80" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="292.80" y="220">2,000</text><line class="grid" x1="395.60" x2="395.60" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="395.60" y="220">4,000</text><line class="grid" x1="498.40" x2="498.40" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="498.40" y="220">6,000</text><line class="grid" x1="601.20" x2="601.20" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="601.20" y="220">8,000</text><line class="grid" x1="704.00" x2="704.00" y1="24" y2="204"></line><text class="tick" text-anchor="middle" x="704.00" y="220">10,000</text><text class="unit" text-anchor="end" x="704" y="16">Apr-Feb FY26, US$ mn</text><text class="cat" text-anchor="end" x="182" y="43.00">Imports, all devices</text><path class="mark" d="M190.00,30.00H647.30Q651.30,30.00 651.30,34.00V44.00Q651.30,48.00 647.30,48.00H190.00Z" data-tip="Imports, all devices · Apr-Feb FY26: $9.0bn" fill="var(--s1)"><title>Imports, all devices · Apr-Feb FY26: $9.0bn</title></path><text class="val" text-anchor="start" x="656.30" y="43.00">8,975</text><text class="cat" text-anchor="end" x="182" y="73.00">Exports, all devices</text><path class="mark" d="M190.00,60.00H375.68Q379.68,60.00 379.68,64.00V74.00Q379.68,78.00 375.68,78.00H190.00Z" data-tip="Exports, all devices · Apr-Feb FY26: $3.7bn" fill="var(--s1)"><title>Exports, all devices · Apr-Feb FY26: $3.7bn</title></path><text class="val" text-anchor="start" x="384.68" y="73.00">3,690</text><text class="cat" text-anchor="end" x="182" y="103.00">Exports, consumables and disposables</text><path class="mark" d="M190.00,90.00H269.41Q273.41,90.00 273.41,94.00V104.00Q273.41,108.00 269.41,108.00H190.00Z" data-tip="Exports, consumables and disposables · Apr-Feb FY26: $1.6bn" fill="var(--s1)"><title>Exports, consumables and disposables · Apr-Feb FY26: $1.6bn</title></path><text class="val" text-anchor="start" x="278.41" y="103.00">1,623</text><text class="cat" text-anchor="end" x="182" y="133.00">Imports from China</text><path class="mark" d="M190.00,120.00H259.85Q263.85,120.00 263.85,124.00V134.00Q263.85,138.00 259.85,138.00H190.00Z" data-tip="Imports from China · Apr-Feb FY26: $1.4bn" fill="var(--s1)"><title>Imports from China · Apr-Feb FY26: $1.4bn</title></path><text class="val" text-anchor="start" x="268.85" y="133.00">1,437</text><text class="cat" text-anchor="end" x="182" y="163.00">Exports to Europe</text><path class="mark" d="M190.00,150.00H239.04Q243.04,150.00 243.04,154.00V164.00Q243.04,168.00 239.04,168.00H190.00Z" data-tip="Exports to Europe · Apr-Feb FY26: $1.0bn" fill="var(--s1)"><title>Exports to Europe · Apr-Feb FY26: $1.0bn</title></path><text class="val" text-anchor="start" x="248.04" y="163.00">1,032</text><text class="cat" text-anchor="end" x="182" y="193.00">Exports to the US</text><path class="mark" d="M190.00,180.00H220.46Q224.46,180.00 224.46,184.00V194.00Q224.46,198.00 220.46,198.00H190.00Z" data-tip="Exports to the US · Apr-Feb FY26: $670.39mn" fill="var(--s1)"><title>Exports to the US · Apr-Feb FY26: $670.39mn</title></path><text class="val" text-anchor="start" x="229.46" y="193.00">670</text></svg></div><p class="note">Export Promotion Council for Medical Devices analysis of official trade data, eleven months to Feb-2026. Imports were <span class="n" title="Our calculation: F-0050/F-0046; inputs: $9.0bn (Medical devices trade analysis April-February 2025-26 (DGCIS), p.5); $3.7bn (Medical devices trade analysis April-February 2025-26 (DGCIS), p.1)">2.4x</span> exports (our calculation).</p><p class="src">Source: Medical devices trade analysis April-February 2025-26 (DGCIS); Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">Imports, all devices</th><th class="num">Exports, all devices</th><th class="num">Exports, consumables and disposables</th><th class="num">Imports from China</th><th class="num">Exports to Europe</th><th class="num">Exports to the US</th></tr></thead><tbody><tr><th scope="row">Apr-Feb FY26</th><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 5">$9.0bn</span></td><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01)">$3.7bn</span></td><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01)">$1.6bn</span></td><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 8">$1.4bn</span></td><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 3">$1.0bn</span></td><td class="num"><span class="n" title="Source: Medical devices trade analysis April-February 2025-26 (DGCIS) (2026-04-01), slide/page 4">$670.39mn</span></td></tr></tbody></table></div></details></figure>
+<h3 id="policy-part-one-rules-that-protect-and-support-local-makers">Policy, part one: rules that protect and support local makers</h3>
+<figure class="exh" id="exh-b3_policy"><figcaption><span class="exn">Exhibit 108:</span> India's device policy since 2020: licensing, incentives and local-content rules on one side; price caps and trade-margin scrutiny on the other</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date</th>
+<th>Instrument</th>
+<th>What it does</th>
+<th>Relevance to Polymed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11-Feb-2020, in force 1-Apr-2020</td>
+<td>Medical Devices (Amendment) Rules 2020, G.S.R. 102(E)</td>
+<td>Brings all devices under MDR 2017; NPPA applies DPCO to all devices</td>
+<td>Most of Polymed's range was already regulated; the rest had to register</td>
+</tr>
+<tr>
+<td>31-Mar-2020</td>
+<td>NPPA notification under DPCO 2013, Para 20</td>
+<td>MRPs of non-scheduled devices may rise at most <span class="n" title="Source: PIB: Medical Devices notified as Drugs w.e.f. 1st April 2020 to be governed under DPCO 2013 (2020-03-31)">10%</span> in twelve months</td>
+<td>The only statutory price control on Polymed's consumables today</td>
+</tr>
+<tr>
+<td>21-Jul-2020</td>
+<td>PLI scheme for medical devices</td>
+<td>Outlay <span class="n" title="Source: Gazette notification - PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (and Medical Device Parks scheme) (2020-07-21), slide/page 8">Rs. 34.2bn</span>; incentive of <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 14">5%</span> of incremental sales over FY20</td>
+<td>Polymed approved for renal (Target Segment 3)</td>
+</tr>
+<tr>
+<td>16-Feb-2021 and 25-Mar-2021</td>
+<td>Public procurement (Make in India) orders for devices</td>
+<td>Class-I local supplier needs <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content; <span class="n" title="Source: DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only) (2021-03-25)">19</span> device lines reserved for Class-I suppliers</td>
+<td>Syringes, needles, cannulas, urine catheters and blood-transfusion sets are closed to imports in government tenders</td>
+</tr>
+<tr>
+<td>Jun-Jul-2021</td>
+<td>NPPA trade-margin rationalization (TMR)</td>
+<td>Trade margin capped at <span class="n" title="Source: PIB: NPPA ceiling prices and trade margin caps (oxygen concentrators, five devices) (2021-07-27)">70%</span> of the price to distributor on six devices</td>
+<td>The precedent for any new cap</td>
+</tr>
+<tr>
+<td>1-Oct-2022; 1-Oct-2023</td>
+<td>MDR 2017 licensing</td>
+<td>Class A and B licensing from <span class="n" title="Source: PIB: Health Regulator geared up for transition to licensing of Class A and B Medical Devices w.e.f 1st October 2022 (2022-09-14)">1st October 2022</span>; Class C and D a year later</td>
+<td>Management welcomed it as a way to push out unlicensed makers</td>
+</tr>
+<tr>
+<td>2-May-2023</td>
+<td>National Medical Devices Policy</td>
+<td>Goals for market size and global share</td>
+<td>Industry tailwind</td>
+</tr>
+<tr>
+<td>22-Sep-2025</td>
+<td>GST rationalization</td>
+<td>GST on devices cut from <span class="n" title="Source: PIB backgrounder: GST for Affordable Healthcare (2025-09-12), slide/page 2">12% to 5%</span>, and on certain apparatus from <span class="n" title="Source: Recommendations of the 56th meeting of the GST Council (press release with annexures) (2025-09-03), slide/page 2">18% to 5%</span></td>
+<td>Lower end prices; channel destocking in 2QFY26</td>
+</tr>
+<tr>
+<td>2-Apr-2026 to 15-Jul-2026</td>
+<td>Customs notifications 12/2026 and 22/2026</td>
+<td>Basic customs duty on a list of petrochemicals and polymers, including PP, PVC and polycarbonate, cut to nil because of the West Asia conflict</td>
+<td>Temporary relief on Polymed's main resins; lapsed after 15-Jul-2026</td>
+</tr>
+<tr>
+<td>23-Jun-2026</td>
+<td>Draft Medical Devices (Amendment) Rules 2026, G.S.R. 515(E)</td>
+<td>Shorter licensing timelines; a notified-body audit before a licence</td>
+<td>Faster approvals</td>
+</tr>
+<tr>
+<td>25-Jun-2026</td>
+<td>DGTR anti-dumping initiation: dialysers from China and Malaysia</td>
+<td>Investigation on Polymed's petition</td>
+<td>Possible duty on dumped dialysers</td>
+</tr>
+<tr>
+<td>Jul-Aug-2026</td>
+<td>Draft Drugs, Medical Devices and Cosmetics Bill 2026</td>
+<td>Would replace the 1940 Act</td>
+<td>Criminal penalties for non-conforming devices; industry wants a separate law</td>
+</tr>
+<tr>
+<td>7-Aug-2026</td>
+<td>Parliamentary standing committee on health, 176th report</td>
+<td>Landing-price-to-MRP gap for devices and drugs of at most <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span></td>
+<td>Direct risk to MRP-based trade pricing</td>
+</tr>
+<tr>
+<td>15-18 Sep 2026</td>
+<td>Maharashtra FDA survey; Health Minister's review</td>
+<td>Mark-ups on consumables flagged; the Department of Pharmaceuticals and NPPA told to review TMR</td>
+<td>Names a Polymed IV set</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: G.S.R. 102(E) - Medical Devices (Amendment) Rules, 2020 (Gazette copy); PIB: Medical Devices notified as Drugs w.e.f. 1st April 2020 to be governed under DPCO 2013; Gazette notification - PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (and Medical Device Parks scheme); Revised Guidelines - PLI Scheme for Medical Devices; DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices; DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only); PIB: NPPA ceiling prices and trade margin caps (oxygen concentrators, five devices); PIB: Health Regulator geared up for transition to licensing of Class A and B Medical Devices w.e.f 1st October 2022; Gazette notification - National Medical Devices Policy, 2023; PIB backgrounder: GST for Affordable Healthcare; Recommendations of the 56th meeting of the GST Council (press release with annexures); Notification No. 12/2026-Customs (G.S.R. 246(E)) and 13/2026-Customs - BCD exemption on specified petrochemicals/polymers; Notification No. 22/2026-Customs (G.S.R. 528(E)) and 23/2026-Customs - extension to 15 July 2026 (Gazette copy); PIB: Full customs duty exemption on critical petrochemical products in view of ongoing conflict in West Asia; G.S.R. 515(E) - draft Medical Devices (Amendment) Rules, 2026 (Gazette CG-DL-E-27062026-273896; transcription); DGTR initiation notification - anti-dumping investigation on Dialyzers from China PR and Malaysia (F.No. 6/19/2026-DGTR); India drafts unified law for drugs, devices and cosmetics; 'Separate law needed': Medical device industry associations urge Health Ministry to reconsider draft bill 2026; PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare; Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set; Centre reviews hospital consumable pricing after 2,841 percent markup finding; Avendus Spark Research</p></figure>
+<!-- GSR102E_2020 pp.5, 7-8; PIB_MDDRUG_2004 p.1; PLIMD_GAZ20 p.8; PLIMD_GUIDE23 p.14; PPP_MD_GUIDE21 p.1; PPP_MD_LC21B pp.1, 8-9; PIB_TMR_2107 p.1; PIB_MDRAB_2209 p.1; NMDP2023 pp.6-7; PIB_GSTHEALTH_2509 p.2; GSTC56_PR pp.2, 4; CUSNOT12_2026 pp.4-5; CUSNOT22_2026 p.2; PIB_POLYDUTY_2604 p.1; GSR515E_2026 p.1; DGTR_DIAL_INIT p.1; MB_DMDCB_2026 p.1; ANI_DMDCB_2608 p.1; PIB_PSC176_2608 p.1; FPJ_MAHFDA_2609 p.1; MB_MRP_2609 p.1 -->
+<p><strong>Licensing.</strong> All devices have been regulated under the Medical Devices Rules 2017 since Apr-2020, with licensing phased in from Oct-2022 (Class A and B) and Oct-2023 (Class C and D). Infusion sets are Class B and haemodialysers Class C. India had <span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">4,108</span> licensed device manufacturers in Mar-2026. A draft amendment of Jun-2026 would make a notified-body audit of the quality system a condition of a licence and shorten review times. Management welcomed licensing as a way to push out unlicensed makers; in Aug-2022 the MD put the unregulated share of the industry at <span class="n" title="Source: 1QFY23 earnings call transcript (2022-12-01), slide/page 8 · Himanshu Baid, MD">70-75%</span> before the rules took effect. <!-- PIB_MDRAB_2209 p.1; DRHP_GSURG pp.180-181; PIB_MDM_26 p.1; GSR515E_2026 p.1; TR1Q23 p.8; TR2Q23 p.3 --></p>
+<p><strong>The draft devices law.</strong> The draft Drugs, Medical Devices and Cosmetics Bill 2026 has <span class="n" title="Source: India drafts unified law for drugs, devices and cosmetics (2026-08-19)">190</span> sections and would replace the 1940 Act, add a technical advisory board for devices and extend criminal penalties for substandard or misbranded products to devices. A coalition of <span class="n" title="Source: 'Separate law needed': Medical device industry associations urge Health Ministry to reconsider draft bill 2026 (2026-08-11)">11</span> industry associations led by AiMeD wrote to the Health Minister on 11-Aug-2026 asking for a separate Medical Devices Act and an autonomous regulator, and objecting to jail terms of <span class="n" title="Source: 'Separate law needed': Medical device industry associations urge Health Ministry to reconsider draft bill 2026 (2026-08-11)">1-7</span> years. These details come from press reports; the official text was not available to us. <!-- MB_DMDCB_2026 p.1; ANI_DMDCB_2608 p.1 --></p>
+<p><strong>Production incentives (PLI).</strong> The scheme pays <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 14">5%</span> of incremental sales over an FY20 base, subject to minimum sales growth. For Category A applicants the FY27 threshold is <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 2.8bn</span> of incremental sales, and the incentive is capped at <span class="n" title="Source: Revised Guidelines - PLI Scheme for Medical Devices (2023-02-25), slide/page 20">Rs. 1.2bn</span> per applicant and target segment over FY23-FY27. <!-- PLIMD_GUIDE23 pp.2, 14, 20 --></p>
+<ul>
+<li><strong>Polymed.</strong> It is approved for seven renal products (dialysers, dialysis machines, PD kits, fistula needles, bloodlines, haemodialysis catheters and transducer protectors) at Faridabad. The government lists the project as commissioned, with committed investment of <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 7">Rs. 720mn</span> and actual investment of <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 7">Rs. 556mn</span>. Polymed had received no incentive up to FY25: it is not among the recipients in the Jul-2026 parliamentary answer, and asked in May-2025 whether it had realized anything for renal, the MD said "No, Zero". He has said the scheme "has not worked well" because the thresholds are the same for equipment, implants and consumables. Whether anything was claimed for FY26 is [not disclosed]. <!-- PLIMD_APPR23 p.2; LSQ_AU1001_260724 pp.3, 7; TR4Q25 p.9; TR1Q25 pp.4, 8 --></li>
+<li><strong>Who has been paid.</strong> Incentives up to FY25 went to seven companies, including Nipro India Corporation, whose Satara plant makes dialysers, which received <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 3">Rs. 349mn</span>. The two official totals conflict: <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 2">Rs. 2.7bn</span> to FY25 in a Jul-2026 parliamentary answer, against <span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">Rs. 1.6bn</span> to Dec-2025 in a Mar-2026 release. <!-- LSQ_AU1001_260724 pp.2-3; PIB_MDM_26 p.1 --></li>
+<li><strong>A second scheme.</strong> Polymed also has a project under the scheme to reduce import dependence (MIS-RID) for polymer tubing, bloodline and central venous catheter components: project cost <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 1.0bn</span>, grant <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 100mn</span>. <!-- LSQ_AU1001_260724 p.9 --></li>
+</ul>
+<figure class="exh" id="exh-b3_pli"><figcaption><span class="exn">Exhibit 109:</span> PLI device makers' cumulative sales and exports have grown steadily; Polymed, approved for renal, had received no incentive up to FY25</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Cumulative sales</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>of which exports</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="184.67" y2="184.67"></line><text class="tick" text-anchor="end" x="40" y="188.67">50</text><line class="grid" x1="46" x2="748" y1="103.33" y2="103.33"></line><text class="tick" text-anchor="end" x="40" y="107.33">100</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">150</text><text class="unit" text-anchor="start" x="2" y="13">Rs bn, cumulative</text><text class="tick" text-anchor="middle" x="163.00" y="284">To Sep-2024</text><path class="mark" d="M138.00,266.00V139.22Q138.00,135.22 142.00,135.22H158.00Q162.00,135.22 162.00,139.22V266.00Z" data-tip="To Sep-2024 · Cumulative sales: Rs. 80.4bn" fill="var(--s1)"><title>To Sep-2024 · Cumulative sales: Rs. 80.4bn</title></path><text class="val" text-anchor="middle" x="150.00" y="129.22">80.4</text><path class="mark" d="M164.00,266.00V207.47Q164.00,203.47 168.00,203.47H184.00Q188.00,203.47 188.00,207.47V266.00Z" data-tip="To Sep-2024 · of which exports: Rs. 38.4bn" fill="var(--s2)"><title>To Sep-2024 · of which exports: Rs. 38.4bn</title></path><text class="val" text-anchor="middle" x="176.00" y="197.47">38.4</text><text class="tick" text-anchor="middle" x="397.00" y="284">To Sep-2025</text><path class="mark" d="M372.00,266.00V69.20Q372.00,65.20 376.00,65.20H392.00Q396.00,65.20 396.00,69.20V266.00Z" data-tip="To Sep-2025 · Cumulative sales: Rs. 123.4bn" fill="var(--s1)"><title>To Sep-2025 · Cumulative sales: Rs. 123.4bn</title></path><text class="val" text-anchor="middle" x="384.00" y="59.20">123.4</text><path class="mark" d="M398.00,266.00V174.53Q398.00,170.53 402.00,170.53H418.00Q422.00,170.53 422.00,174.53V266.00Z" data-tip="To Sep-2025 · of which exports: Rs. 58.7bn" fill="var(--s2)"><title>To Sep-2025 · of which exports: Rs. 58.7bn</title></path><text class="val" text-anchor="middle" x="410.00" y="164.53">58.7</text><text class="tick" text-anchor="middle" x="631.00" y="284">To Dec-2025</text><path class="mark" d="M606.00,266.00V48.37Q606.00,44.37 610.00,44.37H626.00Q630.00,44.37 630.00,48.37V266.00Z" data-tip="To Dec-2025 · Cumulative sales: Rs. 136.2bn" fill="var(--s1)"><title>To Dec-2025 · Cumulative sales: Rs. 136.2bn</title></path><text class="val" text-anchor="middle" x="618.00" y="38.37">136.2</text><path class="mark" d="M632.00,266.00V165.48Q632.00,161.48 636.00,161.48H652.00Q656.00,161.48 656.00,165.48V266.00Z" data-tip="To Dec-2025 · of which exports: Rs. 64.3bn" fill="var(--s2)"><title>To Dec-2025 · of which exports: Rs. 64.3bn</title></path><text class="val" text-anchor="middle" x="644.00" y="155.48">64.3</text></svg></div><p class="note">Cumulative eligible sales of PLI beneficiaries per government releases. Projects commissioned rose to <span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">24</span> by Dec-2025; actual investment under the scheme was <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24)">Rs. 11.5bn</span> by Jul-2026.</p><p class="src">Source: PIB: PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (RS reply); PIB: Production Linked Incentive (PLI) for pharmaceutical and medical devices (RS reply); PIB: Medical Devices Manufacturers (LS reply); Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">To Sep-2024</th><th class="num">To Sep-2025</th><th class="num">To Dec-2025</th></tr></thead><tbody><tr><th scope="row">Cumulative sales</th><td class="num"><span class="n" title="Source: PIB: PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (RS reply) (2024-12-17)">Rs. 80.4bn</span></td><td class="num"><span class="n" title="Source: PIB: Production Linked Incentive (PLI) for pharmaceutical and medical devices (RS reply) (2025-12-02)">Rs. 123.4bn</span></td><td class="num"><span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">Rs. 136.2bn</span></td></tr><tr><th scope="row">of which exports</th><td class="num"><span class="n" title="Source: PIB: PLI Scheme for Promoting Domestic Manufacturing of Medical Devices (RS reply) (2024-12-17)">Rs. 38.4bn</span></td><td class="num"><span class="n" title="Source: PIB: Production Linked Incentive (PLI) for pharmaceutical and medical devices (RS reply) (2025-12-02)">Rs. 58.7bn</span></td><td class="num"><span class="n" title="Source: PIB: Medical Devices Manufacturers (LS reply) (2026-03-13)">Rs. 64.3bn</span></td></tr></tbody></table></div></details></figure>
+<p><strong>Public procurement.</strong> Government buyers must prefer local suppliers. A Class-I local supplier needs at least <span class="n" title="Source: DoP guidelines implementing PPP-MII Order (revised 16.09.2020) for medical devices (2021-02-16)">50%</span> local content, and <span class="n" title="Source: DoP order 25.03.2021 - 19 further medical devices under Para 3(a) PPP-MII (Class-I local suppliers only) (2021-03-25)">19</span> device lines, including syringes, hollow needles, urine catheters, cannulas and blood-transfusion apparatus, are open only to Class-I suppliers whatever the tender value. Poly Medicure appears on the illustrative supplier list for these lines. Global tenders below a value threshold are barred unless a device is on an exemption list, which covered <span class="n" title="Source: DoE OM 19.12.2023 - GTE relaxation for 364 medical devices and 85 drugs (2023-12-19)">364</span> devices to Mar-2024; our search of the published lists found none of Polymed's core products on it. Since Oct-2024 PLI makers count as Class-II suppliers; Nipro is listed for dialysers and Polymed is not. <!-- PPP_MD_GUIDE21 p.1; PPP_MD_LC21B pp.1, 8-9; DOE_GTE_231219 p.1; DOP_PPO24 pp.1-2 --></p>
+<p><strong>Taxes and duties.</strong> GST on devices was cut from <span class="n" title="Source: PIB backgrounder: GST for Affordable Healthcare (2025-09-12), slide/page 2">12% to 5%</span> on 22-Sep-2025, and management linked a one-off distributor destocking in 2QFY26 to the change (Section A3). Imports of medical instruments and equipment (HS 9018 to HS 9022) carry a health cess of <span class="n" title="Source: Finance Bill, 2020 (Health Cess on imported medical devices, Fourth Schedule) (2020-02-01), slide/page 67">5%</span> on top of basic duty. The duty structure is inverted: CRISIL notes GST of <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 152">5-18%</span> across devices, and Polymed says inputs and job work attract higher GST and customs duty than finished devices, which favours importers in renal. From 2-Apr-2026 the government removed basic customs duty on a list of petrochemicals and polymers, including PP, PVC and polycarbonate, "in view of ongoing conflict in West Asia"; the relief lapsed after 15-Jul-2026. <!-- PIB_GSTHEALTH_2509 p.2; TR2Q26 p.5; FINBILL2020 p.67; PD24 p.152; AR26 pp.45, 49; CUSNOT12_2026 pp.4-5; PIB_POLYDUTY_2604 p.1; CUSNOT22_2026 p.2 --></p>
+<h3 id="the-dialyser-anti-dumping-case">The dialyser anti-dumping case</h3>
+<p>On 25-Jun-2026 the Directorate General of Trade Remedies (DGTR) opened an anti-dumping investigation into disposable haemodialysis dialysers from China and Malaysia, on Polymed's petition. The case, the policy measure most directly aimed at Polymed's own problem, is set out below; Section A4.3 covers its effect on the renal business. <!-- DGTR_DIAL_PCN p.1; DGTR_DIAL_INIT p.1 --></p>
+<ul>
+<li><strong>Scope.</strong> The period of investigation is calendar 2025, and the injury period also covers FY23-FY25. Certain Fresenius dialyser brands are excluded. <!-- DGTR_DIAL_INIT pp.1-3 --></li>
+<li><strong>Standing.</strong> Polymed told DGTR that it is "the major domestic producer"; the only other one is Nipro Medical India, a 100% export-oriented unit that makes dialysers almost entirely for export. DGTR accepted that Polymed constitutes the domestic industry. <!-- DGTR_DIAL_INIT p.3 --></li>
+<li><strong>Injury claimed.</strong> DGTR's initiation notice records prima facie evidence that dumped imports rose "significantly in absolute terms", undercut and depressed prices, and left the domestic industry with "financial losses, cash losses and negative return on capital employed" in the investigation period. Because Polymed alone constitutes the domestic industry in the case, we read this as a statement that its dialyser business made losses in the investigation period; the company does not report profitability by therapy line. Management says it claimed an injury margin of <span class="n" title="Source: 1QFY27 earnings call (Aug 10 2026) (2026-08-17), slide/page 4 · Himanshu Baid, MD">20%</span>. <!-- DGTR_DIAL_INIT p.4; TR1Q27S p.4 --></li>
+<li><strong>Process.</strong> Questionnaire responses were due by 9-Sep-2026, and <span class="n" title="Source: DGTR list of registered interested parties - Dialyzers (2026-09-15), slide/page 3">11</span> parties have registered, including Weigao's blood-purification arm, Jiangxi Sanxin and a Malaysian exporter. No preliminary finding had been published by 24-Sep-2026. Management hopes for a decision "between now and end of the year". <!-- DGTR_DIAL_EXT p.1; DGTR_DIAL_IP pp.2-3; TR1Q27S p.10 --></li>
+</ul>
+<p>Management says most Chinese makers ship to India at zero duty under the ASEAN free-trade agreement, and in May-2023 the MD described Chinese product being relabelled in Malaysia or Thailand and sent on to India duty-free. We read the trade data as consistent with that account: imports under the dialyser tariff line from Malaysia rose from <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$210k</span> in FY23 to <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$13.74mn</span> in FY26, and in units from <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">58,302 units</span> to <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">6,060,880 units</span>, while direct imports from China fell to <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">10,592,925 units</span> in FY26 from <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">17,298,455 units</span> a year earlier. The line also covers machines, so the data cannot prove the route. <!-- TR1Q27S p.9; TR4Q23 p.11; TS_M_90189031_FY24 p.1; TS_M_90189031_FY26 p.1 --></p>
+<figure class="exh" id="exh-b3_dial"><figcaption><span class="exn">Exhibit 110:</span> Dialysis imports from Malaysia have multiplied since FY23 while direct imports from China eased</figcaption><div class="plot"><div class="legend"><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s1)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>China</span></span><span class="lg-item"><svg aria-hidden="true" height="10" width="14"><rect fill="var(--s2)" height="8" rx="2" width="14" x="0" y="1"></rect></svg><span>Malaysia</span></span></div><svg class="chart" preserveaspectratio="xMidYMid meet" role="img" viewbox="0 0 760 300"><line class="base" x1="46" x2="748" y1="266.00" y2="266.00"></line><text class="tick" text-anchor="end" x="40" y="270.00">0</text><line class="grid" x1="46" x2="748" y1="205.00" y2="205.00"></line><text class="tick" text-anchor="end" x="40" y="209.00">10</text><line class="grid" x1="46" x2="748" y1="144.00" y2="144.00"></line><text class="tick" text-anchor="end" x="40" y="148.00">20</text><line class="grid" x1="46" x2="748" y1="83.00" y2="83.00"></line><text class="tick" text-anchor="end" x="40" y="87.00">30</text><line class="grid" x1="46" x2="748" y1="22.00" y2="22.00"></line><text class="tick" text-anchor="end" x="40" y="26.00">40</text><text class="unit" text-anchor="start" x="2" y="13">US$ mn</text><text class="tick" text-anchor="middle" x="133.75" y="284">FY23</text><path class="mark" d="M108.75,266.00V92.06Q108.75,88.06 112.75,88.06H128.75Q132.75,88.06 132.75,92.06V266.00Z" data-tip="FY23 · China: $29.17mn" fill="var(--s1)"><title>FY23 · China: $29.17mn</title></path><text class="val" text-anchor="middle" x="120.75" y="82.06">29.2</text><path class="mark" d="M134.75,266.00V266.00Q134.75,264.72 136.03,264.72H157.47Q158.75,264.72 158.75,266.00V266.00Z" data-tip="FY23 · Malaysia: $210k" fill="var(--s2)"><title>FY23 · Malaysia: $210k</title></path><text class="val" text-anchor="middle" x="146.75" y="258.72">0.2</text><text class="tick" text-anchor="middle" x="309.25" y="284">FY24</text><path class="mark" d="M284.25,266.00V112.92Q284.25,108.92 288.25,108.92H304.25Q308.25,108.92 308.25,112.92V266.00Z" data-tip="FY24 · China: $25.75mn" fill="var(--s1)"><title>FY24 · China: $25.75mn</title></path><text class="val" text-anchor="middle" x="296.25" y="102.92">25.8</text><path class="mark" d="M310.25,266.00V255.30Q310.25,251.30 314.25,251.30H330.25Q334.25,251.30 334.25,255.30V266.00Z" data-tip="FY24 · Malaysia: $2.41mn" fill="var(--s2)"><title>FY24 · Malaysia: $2.41mn</title></path><text class="val" text-anchor="middle" x="322.25" y="245.30">2.4</text><text class="tick" text-anchor="middle" x="484.75" y="284">FY25</text><path class="mark" d="M459.75,266.00V103.04Q459.75,99.04 463.75,99.04H479.75Q483.75,99.04 483.75,103.04V266.00Z" data-tip="FY25 · China: $27.37mn" fill="var(--s1)"><title>FY25 · China: $27.37mn</title></path><text class="val" text-anchor="middle" x="471.75" y="93.04">27.4</text><path class="mark" d="M485.75,266.00V209.06Q485.75,205.06 489.75,205.06H505.75Q509.75,205.06 509.75,209.06V266.00Z" data-tip="FY25 · Malaysia: $9.99mn" fill="var(--s2)"><title>FY25 · Malaysia: $9.99mn</title></path><text class="val" text-anchor="middle" x="497.75" y="199.06">10.0</text><text class="tick" text-anchor="middle" x="660.25" y="284">FY26</text><path class="mark" d="M635.25,266.00V128.42Q635.25,124.42 639.25,124.42H655.25Q659.25,124.42 659.25,128.42V266.00Z" data-tip="FY26 · China: $23.21mn" fill="var(--s1)"><title>FY26 · China: $23.21mn</title></path><text class="val" text-anchor="middle" x="647.25" y="118.42">23.2</text><path class="mark" d="M661.25,266.00V186.19Q661.25,182.19 665.25,182.19H681.25Q685.25,182.19 685.25,186.19V266.00Z" data-tip="FY26 · Malaysia: $13.74mn" fill="var(--s2)"><title>FY26 · Malaysia: $13.74mn</title></path><text class="val" text-anchor="middle" x="673.25" y="176.19">13.7</text></svg></div><p class="note">Imports under HS 90189031 (dialysis apparatus and dialysers) from TradeStat, Department of Commerce. The line also includes machines, so the values overstate dialysers. All sources together: <span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$99.75mn</span> in FY24 and <span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$112.39mn</span> in FY26, the largest being Germany (<span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$45.8mn</span> in FY26).</p><p class="src">Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn); TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn); TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn); Avendus Spark Research</p><details class="tv"><summary>Data table</summary><div class="tw"><table class="data"><thead><tr><th></th><th class="num">FY23</th><th class="num">FY24</th><th class="num">FY25</th><th class="num">FY26</th></tr></thead><tbody><tr><th scope="row">China</th><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$29.17mn</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$25.75mn</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn) (2026-09-24)">$27.37mn</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$23.21mn</span></td></tr><tr><th scope="row">Malaysia</th><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$210k</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2023-24 vs FY2022-23 (US$ mn) (2026-09-24)">$2.41mn</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 imports by country FY2024-25 vs FY2023-24 (US$ mn) (2026-09-24)">$9.99mn</span></td><td class="num"><span class="n" title="Source: TradeStat EIDB - HS 90189031 (dialysis apparatus &amp; haemodialyser) imports by country FY2025-26 vs FY2024-25 (US$ mn) (2026-09-24)">$13.74mn</span></td></tr></tbody></table></div></details></figure>
+<h3 id="policy-part-two-the-price-of-a-device-and-the-trade-margin-d">Policy, part two: the price of a device and the trade-margin debate</h3>
+<p>Section B1 explains how the MRP and the trade margin work. Here we set out where the policy stands.</p>
+<p><strong>Today's rules.</strong> Non-scheduled devices, which include all of Polymed's consumables, face only the Para 20 limit: their MRP may rise by at most <span class="n" title="Source: PIB: Medical Devices notified as Drugs w.e.f. 1st April 2020 to be governed under DPCO 2013 (2020-03-31)">10%</span> in twelve months. Device prices have been set directly three times: ceiling prices on coronary stents and knee implants in 2017, and trade-margin caps on six devices in 2021, which the government says save consumers <span class="n" title="Source: PIB: Production Linked Incentive (PLI) for pharmaceutical and medical devices (RS reply) (2025-12-02)">~Rs. 10.0bn</span> a year. <!-- PIB_MDDRUG_2004 p.1; PIB_TMR_2107 p.1; PIB_PLI_2512 p.1 --></p>
+<p><strong>The Aug-Sep 2026 push.</strong> Three steps in six weeks turned trade margins on consumables into a live issue:</p>
+<ol>
+<li><strong>Parliament, 7-Aug-2026.</strong> The standing committee on health recommended that "the gap should not be more than <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span> between landing price and MRP for medical devices and drugs", and called for centralized, tender-based procurement of high-end devices and consumables by private empanelled hospitals. <!-- PIB_PSC176_2608 p.1; MB_MRP_2609 p.1 --></li>
+<li><strong>Maharashtra, 15-16 Sep 2026.</strong> The state drug regulator's price-monitoring unit surveyed inpatient consumables and found mark-ups of up to <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">2,841%</span>, including on a Polymed IV set, and its commissioner asked the Department of Pharmaceuticals and NPPA to cap trade margins, issue guidelines on permissible price differentials and bring the items under DPCO. The drug regulators of Punjab, Rajasthan and Tamil Nadu sent similar inputs. <!-- FPJ_MAHFDA_2609 p.1; MB_MRP_2609 p.1 --></li>
+<li><strong>The Health Minister, 18-Sep-2026.</strong> After the department met private hospitals and FICCI on 17-Sep, J.P. Nadda directed it and NPPA to review the trade-margin exercises of 2004, 2008 and 2019 and to consult hospitals and industry. No public deadline has been set. <!-- MB_MRP_2609 p.1; ANI_MRP_260919 p.1 --></li>
+</ol>
+<figure class="exh" id="exh-b3_mhfda"><figcaption><span class="exn">Exhibit 111:</span> Maharashtra's survey, as reported: consumables were procured for a fraction of their MRPs, and Polymed's IV set had the lowest MRP and mark-up of the three IV sets named</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Item</th>
+<th>Procured for</th>
+<th>MRP</th>
+<th class="num">Mark-up as reported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV infusion set (brand not named)</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">11.05</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">325</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">2,841%</span></td>
+</tr>
+<tr>
+<td>Lyvofusion IV set</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">11.5</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">252</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">2,091%</span></td>
+</tr>
+<tr>
+<td>Polymed IV set</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">10.5</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">187</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,681%</span></td>
+</tr>
+<tr>
+<td>Nebuliser (Nebplus)</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">40</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">715</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,688%</span></td>
+</tr>
+<tr>
+<td>Catheter</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">29.41</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">310</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">955%</span></td>
+</tr>
+<tr>
+<td>10 ml syringe</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">6.75</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">57.2</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">747%</span></td>
+</tr>
+<tr>
+<td>Disposable mask</td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">197.5</span></td>
+<td>Rs. <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">500</span></td>
+<td class="num"><span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">153%</span></td>
+</tr>
+</tbody>
+</table></div><p class="note">The press report describes the first column as trade procurement costs; it does not say who bought at those prices.</p><p class="src">Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set; Avendus Spark Research</p></figure>
+<!-- FPJ_MAHFDA_2609 p.1 -->
+<p><strong>What NPPA can do.</strong> Trade press reports that NPPA has no blanket power to impose a single margin cap across non-scheduled devices; a broad cap would need an amendment to DPCO, or trade-margin rationalization category by category, the route taken for anti-cancer drugs in 2019 and for six devices in 2021. Non-scheduled products are <span class="n" title="Source: Health panel's 20 percent device margin cap faces limits (2026-09-18)">82%</span> of the pharmaceutical market by value. <!-- MB_MRP_2609 p.1; MB_20PCT_2608 p.1 --></p>
+<p><strong>Who is on which side.</strong> The Association of Healthcare Providers, which represents <span class="n" title="Source: Centre reviews hospital consumable pricing after 2,841 percent markup finding (2026-09-21)">around 30,000</span> private hospitals, argues that MRPs are "fixed upstream by manufacturers and distributors", that hospitals do not charge above MRP and that most treatment runs on insurance package rates. The domestic manufacturers' association (AiMeD) backs trade-margin caps based on ex-factory or landed import prices. <!-- MB_MRP_2609 p.1; BS_MAHFDA_260916 p.1 --></p>
+<p>We see three outcomes, in rising order of impact on Polymed:</p>
+<ol>
+<li><strong>No action, or monitoring only.</strong> The status quo, with the <span class="n" title="Source: PIB: Medical Devices notified as Drugs w.e.f. 1st April 2020 to be governed under DPCO 2013 (2020-03-31)">10%</span> limit on annual MRP increases.</li>
+<li><strong>Trade-margin caps on named inpatient consumables</strong> (IV sets, syringes, catheters), as in 2021. MRPs of the affected products would fall towards a fixed mark-up over the price to distributor. On the 2021 precedent the cap applies to the channel, and the MD argued then that it "does not impact the manufacturers"; the risk to Polymed is a second-round push by hospitals and distributors for lower purchase prices.</li>
+<li><strong>A general cap of <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">20%</span> over landing price</strong> across devices, as the parliamentary committee proposed. That would require a DPCO amendment and would compress the channel's margin on every MRP-billed product.</li>
+</ol>
+<p>In every case the exposure depends on how much of Polymed's domestic revenue is billed to patients at MRP rather than on package rates or institutional contracts, which the company does not disclose. We read the survey's single Polymed data point as a sign that it sets MRPs below rivals', not as proof. <!-- TR1Q22 pp.5-6; FPJ_MAHFDA_2609 p.1 --></p>
+<h3 id="demand-what-drives-consumption">Demand: what drives consumption</h3>
+<figure class="exh" id="exh-b3_demand"><figcaption><span class="exn">Exhibit 112:</span> Demand drivers: few beds per head, rising insurance, a national dialysis programme and a blood supply that now meets the official requirement</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Driver</th>
+<th>Latest datapoint</th>
+<th>Source and vintage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hospital capacity</td>
+<td>India has <span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 9">12</span> hospital beds for every ten thousand people, against <span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 9">43</span> in China and <span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 9">29</span> in the US; about <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 20 · Himanshu Baid, MD">1.7mn</span> beds in all</td>
+<td>CRISIL via Polymed's Feb-2021 deck; MD, Feb-2023</td>
+</tr>
+<tr>
+<td>Hospitals Polymed can serve</td>
+<td><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 20 · Himanshu Baid, MD">15,000-20,000</span> hospitals with more than fifty beds</td>
+<td>MD, Feb-2023</td>
+</tr>
+<tr>
+<td>Spending</td>
+<td>Per-capita MedTech spending of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">$3</span>, against a global average of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 47">$47</span>; out-of-pocket share of health spending down from <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 207">55.1%</span> (2017) to <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 207">46%</span> (2022)</td>
+<td>Polymed FY26 annual report; F&amp;S for Integris (Oct-2025)</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>About <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 207">37%</span> of Indians covered by health insurance schemes; PM-JAY covers about <span class="n" title="Source: Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025) (2025-10-09), slide/page 207">700 mn people</span>; the MD puts insurance at <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 10 · Himanshu Baid, MD">60-65%</span> of hospital payments in 2026, up from about half</td>
+<td>F&amp;S for Integris (Oct-2025); MD, May-2026</td>
+</tr>
+<tr>
+<td>PM-JAY dialysis rates</td>
+<td><span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,500</span> per session (national rate), <span class="n" title="Source: AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2) (2024-06-19), slide/page 11">Rs. 1,800</span> in tier-one and tier-two cities</td>
+<td>PM-JAY benefit package 2022</td>
+</tr>
+<tr>
+<td>National dialysis programme (PMNDP)</td>
+<td><span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">1,925</span> centres and <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">13,824</span> machines in <span class="n" title="Source: Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters) (2026-09-24)">751</span> districts (Sep-2026); annual sessions up from <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">2.5mn</span> to <span class="n" title="Source: PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare (2026-08-07)">7.0mn</span> in five years</td>
+<td>PMNDP dashboard; parliamentary committee, Aug-2026</td>
+</tr>
+<tr>
+<td>Dialysis demand</td>
+<td>Patients on dialysis <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 272">0.28</span>mn (2024) rising to <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 278">0.52</span>mn by 2029; <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">40,000</span> machines installed against <span class="n" title="Source: Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025) (2025-12-02), slide/page 279">105,000</span> needed</td>
+<td>F&amp;S for Nephrocare (Nov-2025), vendor estimate</td>
+</tr>
+<tr>
+<td>Blood</td>
+<td><span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">15.7mn units</span> collected in CY25 against an official requirement of <span class="n" title="Source: Securing India's Lifeblood For A Reliable National Blood Supply (2025-10-04)">14.6mn units</span>; <span class="n" title="Source: Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026) (2026-08-14)">1.7mn units</span> discarded</td>
+<td>Parliamentary answer via Factly; government estimate</td>
+</tr>
+<tr>
+<td>Surgery</td>
+<td><span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 183">165.7</span>mn surgical procedures in FY25</td>
+<td>1Lattice for G Surgiwear (Dec-2025), vendor estimate</td>
+</tr>
+<tr>
+<td>Public investment</td>
+<td>Outlay of <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">Rs. 640.0bn+</span> to strengthen hospital capacity; <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">200</span> day-care cancer centres planned for FY26</td>
+<td>Polymed FY26 annual report; MD, Nov-2025</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Roadshow presentation Feb 2021; 3QFY23 earnings call transcript; Annual Report FY26; Integris Medtech Ltd – Draft Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'Independent Market research on the Global and Indian MedTech Industry', Oct 2025); 4QFY26 earnings call transcript; AB PM-JAY Health Benefit Package 2022 rate list (HBP 2.2); Pradhan Mantri National Dialysis Programme - portal home page (dashboard counters); PIB: Press release on the 175th, 176th and 177th Reports of the Parliamentary Standing Committee on Health &amp; Family Welfare; Nephrocare Health Services Ltd – Red Herring Prospectus (Industry Overview based on Frost &amp; Sullivan 'IMR on Dialysis Services Market in Select Countries', Nov 2025); Blood Collection Rose 24% in India, While Discards More Than Doubled (citing RS USQ 1882, 4-Aug-2026); Securing India's Lifeblood For A Reliable National Blood Supply; G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025); 2QFY26 earnings call transcript; Avendus Spark Research</p></figure>
+<!-- DKFEB21 p.9; TR3Q23 p.20; AR26 pp.44, 47; DRHP_INTEG p.207; TR4Q26 p.10; PMJAY_HBP2022 p.11; PMNDP_DASH p.1; PIB_PSC176_2608 p.1; RHP_NEPHRO pp.272, 278-279; FACTLY_BLOOD p.1; ORF_BLOOD p.1; DRHP_GSURG p.183; TR2Q26 p.5 -->
+<p>The demand story is well known; what matters for Polymed is how it is paid for. The shift from cash to insurance and government schemes moves hospitals from itemized MRP billing to fixed package rates, which rewards cheaper, reliable consumables; management says the shift, together with dearer imports, is pushing hospitals towards domestic products. Dialysis is the clearest case: the government pays a fixed rate per session, private operators run many public centres, and every session uses a dialyser, a bloodline set and a pair of fistula needles (Section A4.3). <!-- TR4Q26 p.10; RHP_NEPHRO pp.280, 283 --></p>
+<p>We read India as Polymed's most attractive market on volume and its most uncertain on price. The volume case rests on insurance, PM-JAY and PMNDP; the price risk rests on a trade-margin decision for which no deadline has been set. We would watch the Department of Pharmaceuticals' assessment, the DGTR's preliminary findings on dialysers and any NPPA notification on inpatient consumables.</p>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="b2.html"><span>Previous</span>B2 The competitor universe</a><a class="next" href="b4.html"><span>Next</span>B4 Export-market regimes</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -37,9 +37,18 @@ The shift into cardiology and orthopaedics changes the unit economics: managemen
 
 ### Price and volume: most growth has come from units
 
-Management has occasionally split growth into price and volume:
-- **FY22:** the MD estimated that volume contributed about {{CC-0275}} of growth and price about {{CC-0274}}. <!-- TR4Q22 p.10 -->
-- **9MFY25:** devices sold grew {{WM-0006}} against consolidated revenue growth of {{CA-0558}}. <!-- TR3Q25 p.4, p.10 -->
+Management has occasionally split growth into price and volume, and the 3QFY25 and 4QFY25 presentations printed the number of devices sold, which we set against standalone revenue ([[EXREF:vol_price]]). The counts do not reconcile across periods, so we read them as indicative. <!-- TR4Q22 p.10; TR3Q25 p.4, p.10; DK3Q25 p.11-12; DK4Q25 p.10-11 -->
+
+::: table id="vol_price" title="Units drove FY25 growth: devices sold rose 25% against 22.5% standalone revenue growth, and revenue per device slipped from Rs. 11.4 to Rs. 11.2" note="Devices sold as printed in the 3QFY25 and 4QFY25 presentations (standalone, printed in crore units); no later counts are in our sources. The 9MFY25 and 4QFY25 counts add up to less than the FY25 total, and likewise for FY24 ({{CB-2881|num}}mn in 9MFY24 and {{CB-2565|num}}mn in 4QFY24 against {{CB-2574|num}}mn for the year); we have not been able to reconcile them. Revenue per device is standalone revenue from operations over devices sold (our calculation). For FY22 the MD put volume at ~{{CC-0275}} and price at ~{{CC-0274}} of growth."
+| Period | Devices sold (mn units) | Growth in devices sold | Standalone revenue growth | Revenue per device |
+|---|---|---|---|---|
+| 3QFY25 | {{CB-2876|num}} | {{CB-2878}} | {{CB-2989}} | – |
+| 4QFY25 | {{CB-2564|num}} | {{CB-2566}} | {{CB-2688}} | – |
+| 9MFY25 | {{CB-2880|num}} | {{CB-2882}} | {{CB-2990}} | – |
+| FY24 | {{CB-2574|num}} | – | – | {{D-WA-017}} |
+| FY25 | {{CB-2573|num}} | {{CB-2575}} | {{CB-2689}} | {{D-WA-016}} |
+:::
+<!-- DK3Q25 p.11-12, p.15; DK4Q25 p.10-11, p.14; TR4Q22 p.10 -->
 
 The placement document describes the pricing pattern for mature products: average selling prices decline over a product's life, 'partially offset' by volume and cost reductions. Raw-material and currency changes are passed on to customers 'at periodic intervals', which means with a lag. <!-- PD24 p.47, p.51, p.88 -->
 
@@ -75,7 +84,7 @@ The main outsourced stage is job work. {{D-M-007}} of it went to Vitromed Health
 - **Direct presence.** Management's Vision 2030 plan is to go direct with new product ranges in {{WRA-0005|range}} European markets and in Brazil. In Europe it is currently direct only in Italy, where Plan1Health and Citieffe are based. <!-- TR1Q27S p.8 -->
 
 **India.** Polymed runs its own field force alongside distributors.
-- **Scale.** At Jun-2024 it had {{D-0036}} sales staff covering {{D-0006}} hospitals and {{D-0201}} distributors; the FY26 annual report cites {{A-0012}} direct-sales representatives across India, the US, Italy and Mexico. <!-- PD24 p.46, p.170; AR26 p.3 -->
+- **Scale.** The field force and the distributor count have grown faster than hospital reach ([[EXREF:india_channel]], Section A5); the FY26 annual report cites {{A-0012}} direct-sales representatives across India, the US, Italy and Mexico. <!-- PD24 p.46, p.170; AR26 p.3 -->
 - **Customers.** Management names corporate chains (Apollo, Max, Fortis, Manipal, Aster DM), diagnostic laboratories (Thyrocare, Metropolis, Dr Lal PathLabs) and dialysis chains (NephroPlus, DCDC) among its customers. <!-- TR3Q23 p.20; TR2021 p.14; TR1Q22 p.4 -->
 - **Government business.** It has been shrinking: down {{CA-0420|abs}} in 1QFY26 and {{CA-0333|abs}} in 2QFY26, while private-sector sales grew. Management describes this as a deliberate exit from government business that does not meet its margin thresholds. <!-- TR1Q26 p.4; TR2Q26 p.4 -->
 
@@ -129,9 +138,13 @@ We draw four patterns from the table.
    - The materials ratio jumped to {{D-CS-rm_cost-FY22}} in FY22 and operating margin fell to {{D-CS-opebitda-FY22}}. Management blamed raw-material and freight inflation and cut its FY22 EBITDA guidance twice. <!-- TR2021 p.3; TR1Q22 p.6; TR3Q22 p.3 -->
    - It recovered to {{D-CS-rm_cost-FY24}} by FY24.
    - Two features make Polymed exposed: {{D-0244}} of raw materials were imported in FY24, and the company holds ~{{CA-0130|range}} months of raw-material cover. We infer that a crude spike reaches the P&L only once that cover is used up; management said the cover limited the impact in early FY27, while it negotiated price increases. <!-- PD24 p.88; TR4Q26 p.6 -->
-2. **Employee cost is the next pressure point.** At {{D-CS-employee_cost-FY26}} of FY26 revenue it is Polymed's second-largest cost. Haryana's minimum wage rose {{CA-0024}} from 1-Apr-2026, and standalone employee cost rose {{CA-0023}} yoy in 1QFY27. Management's answer is more automation. <!-- TR1Q27S p.3; TR4Q26 p.7 -->
-3. **Job work has fallen steadily** from {{D-CS-job_work-FY13}} to {{D-CS-job_work-FY26}} of revenue. We read this as in-house automation taking over labour-intensive steps, and as the clearest evidence in the accounts of the automation strategy at work.
+2. **Employee cost is the next pressure point.** It is Polymed's second-largest cost and has risen as a share of revenue ([[EXREF:labour_cost]]). Haryana's minimum wage rose {{CA-0024}} from 1-Apr-2026, and standalone employee cost rose {{CA-0023}} yoy in 1QFY27. Management's answer is more automation. <!-- TR1Q27S p.3; TR4Q26 p.7 -->
+3. **Job work has fallen steadily** as a share of revenue ([[EXREF:labour_cost]]). We read this as in-house automation taking over labour-intensive steps, and as the clearest evidence in the accounts of the automation strategy at work.
 4. **Freight is now a visible cost.** It ran at {{D-CS-freight-FY22|num}}-{{D-CS-freight-FY24}} of standalone revenue over FY19-FY24, then rose to {{D-CS-freight-FY25}} in FY25 and {{D-CS-freight-FY26}} in FY26 (our calculation). Management says logistics costs have risen {{CA-0067|range}} times in the last six months. <!-- TR1Q27S p.8 -->
+
+::: chart
+{"id":"labour_cost","type":"stacked_column","title":"Employee cost rose from 16% to 19% of revenue as job work fell from 9% to 6%, keeping combined labour cost at about a quarter of revenue since FY13","cats":["FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of standalone revenue","dec":1,"series":[{"name":"Employee cost","facts":["D-CS-employee_cost-FY13","D-CS-employee_cost-FY16","D-CS-employee_cost-FY19","D-CS-employee_cost-FY20","D-CS-employee_cost-FY21","D-CS-employee_cost-FY22","D-CS-employee_cost-FY23","D-CS-employee_cost-FY24","D-CS-employee_cost-FY25","D-CS-employee_cost-FY26"]},{"name":"Job work","facts":["D-CS-job_work-FY13","D-CS-job_work-FY16","D-CS-job_work-FY19","D-CS-job_work-FY20","D-CS-job_work-FY21","D-CS-job_work-FY22","D-CS-job_work-FY23","D-CS-job_work-FY24","D-CS-job_work-FY25","D-CS-job_work-FY26"]}],"totals":true,"note":"Our calculation from the standalone accounts, as in [[EXREF:cost_ratios]]; the figure above each column is the sum of the two. Job work is assembly contracted out, {{D-M-006}} of it to the promoter firm Vitromed in FY26 (Section A9)."}
+:::
 
 ::: chart
 {"id":"op_margin","type":"line","title":"Standalone operating EBITDA margin has moved in a 20-28% band, with raw-material cycles setting the dips","cats":["FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"unit":"% of revenue","dec":1,"ymin":15,"series":[{"name":"Operating EBITDA margin","facts":["D-CS-opebitda-FY13","D-CS-opebitda-FY16","D-CS-opebitda-FY19","D-CS-opebitda-FY20","D-CS-opebitda-FY21","D-CS-opebitda-FY22","D-CS-opebitda-FY23","D-CS-opebitda-FY24","D-CS-opebitda-FY25","D-CS-opebitda-FY26"]},{"name":"Materials consumed","facts":["D-CS-rm_cost-FY13","D-CS-rm_cost-FY16","D-CS-rm_cost-FY19","D-CS-rm_cost-FY20","D-CS-rm_cost-FY21","D-CS-rm_cost-FY22","D-CS-rm_cost-FY23","D-CS-rm_cost-FY24","D-CS-rm_cost-FY25","D-CS-rm_cost-FY26"]}],"note":"Our calculation from standalone financial statements. For FY21, the peak year, management credited lean manufacturing and productivity with absorbing higher raw-material and freight costs."}
@@ -142,7 +155,12 @@ We draw four patterns from the table.
 - **No forward cover at FY26 year-end.** At 31-Mar-2026 no forward contracts were outstanding, against a net unhedged US-dollar receivable of {{A-0544}}. FX gains of {{A-0487}} were booked in other income in FY26, below operating EBITDA; we read this as meaning the reported operating margin understates the full currency benefit. <!-- AR26 p.78, p.86 -->
 - **Management's view.** It cited rupee depreciation as a partial offset to FY27 cost inflation, since {{CA-0133|range}} of the business is international. <!-- TR4Q26 p.6 -->
 
-**Export incentives.** Consolidated export incentives were {{A-0272}} in FY26, below the {{B-0296}} the standalone company booked in FY19 under the earlier MEIS scheme. Management put the cost of MEIS's withdrawal at {{CC-0004|range}} in FY21 and called the replacement RoDTEP rate 'very, very low'. <!-- AR26 p.47; AR19 p.113; TR2021 p.3; TR2Q22 p.2 -->
+**Export incentives.** Incentives have not recovered from the withdrawal of the earlier MEIS scheme ([[EXREF:export_inc]]). Management put the cost of MEIS's withdrawal at {{CC-0004|range}} in FY21 and called the replacement RoDTEP rate 'very, very low'. <!-- AR26 p.47; AR19 p.113; TR2021 p.3; TR2Q22 p.2 -->
+
+::: chart
+{"id":"export_inc","type":"column","title":"Export incentives fell by three-quarters as MEIS was phased out, and at Rs. 133mn in FY26 are still below FY19's Rs. 167mn on exports 2.8 times as large","cats":["FY13","FY16","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],"scale":"mn","unit":"Rs mn","dec":0,"series":[{"name":"Export incentives (standalone)","facts":["B-0096","B-0185","B-0296","B-0369","B-0423","B-0481","B-0542","B-0606","A-0470","A-0469"]}],"label_all":true,"note":"Other operating revenue in the standalone accounts; FY25-FY26 are labelled 'export and other incentives' and the RoDTEP/drawback split is not given. Incentives equalled {{D-WI-004}} of foreign-exchange earnings in FY19, {{D-WI-005}} in FY22 and {{D-WI-006}} in FY26, and FX earnings in FY26 were {{D-WI-007}} their FY19 level (our calculations). Management: MEIS was {{CC-0001}} in FY19, {{CC-0002}} in FY20 and {{CC-0003}} from 1-Jan-2021; RoDTEP was {{CC-0098}} in Nov-2021."}
+:::
+<!-- AR13 p.49; AR16 p.93; AR19 p.73, p.113; AR20 p.117; AR21 p.110; AR22 p.52, p.89; AR23 p.88; AR24 p.119; AR26 p.51, p.77; TR2021 p.3; TR2Q22 p.2 -->
 
 ### Working capital: a long cycle by design
 

@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Product glossary: what each device is and how it is used · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html" class="active">Product glossary: what each device is and how it is used</a></li><li class="l3"><a href="#infusion">Infusion</a></li><li class="l3"><a href="#vascular-access-and-oncology-2">Vascular access and oncology</a></li><li class="l3"><a href="#renal">Renal</a></li><li class="l3"><a href="#blood-management">Blood management</a></li><li class="l3"><a href="#diagnostics">Diagnostics</a></li><li class="l3"><a href="#anaesthesia-respiratory-and-critical-care">Anaesthesia, respiratory and critical care</a></li><li class="l3"><a href="#gastro-and-enteral">Gastro and enteral</a></li><li class="l3"><a href="#urology">Urology</a></li><li class="l3"><a href="#surgery-and-wound-drainage">Surgery and wound drainage</a></li><li class="l3"><a href="#cardiology-2">Cardiology</a></li><li class="l3"><a href="#orthopaedics-2">Orthopaedics</a></li><li class="l3"><a href="#components">Components</a></li><li class="l3"><a href="#other-products">Other products</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="c4.html"><span>Previous</span>C4 Channel checks to run</a><a class="next" href="approvals.html"><span>Next</span>Regulatory approvals by market</a></nav>
+<h1 id="appendices">Appendices</h1>
+<h2 id="glossary">Product glossary: what each device is and how it is used</h2>
+<p>This glossary lists every product type in Polymed's catalogues, website and placement documents, grouped by business line, with the brands under which the company sells them. It condenses the product map we built from the domestic, export and components catalogues, the company website, the cardiology ordering tables, the two placement documents, the FDA database and the acquisition presentations. <!-- CATDOM25 p.3; CATEXP24 p.3; CATCOMP24 p.4; WEB_HOME p.1; PD24 pp.173-174; FDA510K_POLY p.1; DKCIT p.12; DKPEN p.11 --></p>
+<aside class="callout note"><p class="ct">How to read the tables</p><ul>
+<li><strong>General descriptions.</strong> The "What it is" and "Unit of demand" columns are general clinical descriptions written by us, not company disclosures. They explain what the device does and what drives its consumption, and they make no claim about Polymed.</li>
+<li><strong>Company data.</strong> The "Polymed brands or range" column is company data; the documents behind it are listed under each table.</li>
+<li><strong>Sizes.</strong> Gauge (G), French (F) and mL sizes are as printed in the catalogues.</li>
+<li><strong>Revenue.</strong> Polymed does not disclose revenue by product type; Section A1 sets out what is disclosed.</li>
+</ul></aside>
+<h3 id="infusion">Infusion</h3>
+<figure class="exh" id="exh-gl_infusion"><figcaption><span class="exn">Exhibit 126:</span> Infusion: the cannula is replaced at every insertion and the line around it at every change, so demand tracks admissions and IV-therapy days</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV cannula (peripheral IV catheter)</td>
+<td>A short plastic tube mounted on a steel needle; the needle punctures a vein in the hand or arm and is withdrawn, leaving the tube in place to give fluids, drugs and blood.</td>
+<td>One per insertion attempt; resited when it fails or at protocol intervals</td>
+<td>Polyflon, Polyflex, Polycan, Polywin and Polywin Plus, Polypen, Polyon, Polycath (built-in stopcock), Ultra I.P.; neonatal Polyneo and Neonovo; quick-flashback "Adva" versions; 14G-26G</td>
+</tr>
+<tr>
+<td>Safety IV cannula, including blood-control</td>
+<td>A cannula whose needle tip is shielded as it is withdrawn, to prevent needlestick injuries; blood-control versions add a valve that stops blood escaping from the hub.</td>
+<td>One per insertion attempt, at a price premium</td>
+<td>Passive: Polysafety, Polysafety Pro, Poly Safety Adva, Polywin Safety, Polycan Safety, Polywin Plus Safety; active: Polyguard+ and Polyshield; blood-control: Polysafety BC and Polysafety-BC Ported (18G-24G)</td>
+</tr>
+<tr>
+<td>Closed IV catheter system</td>
+<td>A cannula supplied with its extension line, needle-free connector and needle guard already attached, so the line is never open to air during insertion.</td>
+<td>One per insertion, priced above a standard cannula</td>
+<td>Nouvo Safety Set (polyurethane, power-injectable)</td>
+</tr>
+<tr>
+<td>Winged infusion (scalp-vein) set</td>
+<td>A short steel "butterfly" needle with flexible wings and tubing, used for short infusions, single injections and small veins.</td>
+<td>One per procedure or short infusion</td>
+<td>Safety winged infusion set; safety scalp-vein sets</td>
+</tr>
+<tr>
+<td>IV administration (infusion) set</td>
+<td>The tubing, drip chamber and roller clamp that connect an IV bottle or bag to the patient's cannula.</td>
+<td>One per IV line, replaced at protocol intervals</td>
+<td>Polyfusion (vented, non-vented, W, Plus), Novofusion and Novofusion BCV, Ventrifusion; air-stop Autofusion and Autofusion Nuovo; Ultrafusion; paediatric Microfusion; light-protective Photofusion; filtered Oncofusion; PVC-free versions</td>
+</tr>
+<tr>
+<td>Flow regulator and burette set</td>
+<td>A dial that sets a gravity drip rate more precisely than a roller clamp, and a graduated chamber that lets only a set volume run in, used for children and for intermittent doses.</td>
+<td>One per line, replaced with the administration set</td>
+<td>Polyflo Novo, Polytrol Micro; burettes Polyvol, Polyvol Pro and Polypedia (DEHP-free)</td>
+</tr>
+<tr>
+<td>Extension lines and T-extensions</td>
+<td>Small-bore tubing with luer ends that lengthens an IV line or connects a syringe pump; high-pressure versions serve pumps, pressure monitors and contrast injectors.</td>
+<td>One or more per line or syringe-pump infusion</td>
+<td>Low- and high-pressure lines, PVC-free and coiled lines, lines with needle-free connectors, T-extension sets</td>
+</tr>
+<tr>
+<td>Three-way stopcocks and manifolds</td>
+<td>A small tap with three luer ports that lets two infusions share one cannula; a manifold is a bank of such taps on one body.</td>
+<td>One or more per line; one manifold per multi-infusion set-up or procedure</td>
+<td>Polyway, Polyway Pro (lipid-resistant), Polyway Pro Click, stopcock with extension; lipid-resistant multi-way manifolds</td>
+</tr>
+<tr>
+<td>Needle-free connector</td>
+<td>A valve on a catheter hub that opens only when a syringe or line is attached, so drugs go in without needles and the line stays closed between uses.</td>
+<td>One per catheter lumen, changed with the administration set</td>
+<td>Safe Conekt (mono, duo, trio), Micro PolySyte; PolySyte bag, vial and arterial-line access devices</td>
+</tr>
+<tr>
+<td>Prefilled saline flush syringe</td>
+<td>A ready-to-use syringe of sterile saline for flushing a catheter before and after each dose.</td>
+<td>Several per catheter per day</td>
+<td>PolyFlush 3 mL, 5 mL and 10 mL, single- and double-sterile</td>
+</tr>
+<tr>
+<td>Disinfecting cap</td>
+<td>An alcohol-soaked cap screwed onto a needle-free connector between uses to keep it clean.</td>
+<td>One per connector each time it is accessed</td>
+<td>Polyswab</td>
+</tr>
+<tr>
+<td>Vial-access and transfer spike</td>
+<td>A spike that pierces a vial stopper and gives a filtered luer port, so several doses can be drawn without needles; a transfer spike links two containers.</td>
+<td>One per vial, or per multi-dose vial</td>
+<td>Polyspike (red-coded version for cytotoxic drugs), Polyspike V-Plus, transfer spike</td>
+</tr>
+<tr>
+<td>Obturators, stoppers, caps and injection sites</td>
+<td>Small closures that seal an idle cannula or an open luer hub, some with a septum for injections.</td>
+<td>One or more per idle cannula or line</td>
+<td>Obturator (14G-22G), injection stopper, luer lock, luer-lock injection site, universal cap</td>
+</tr>
+<tr>
+<td>IV-site dressing</td>
+<td>A transparent adhesive film that holds the cannula in place and keeps the insertion site visible.</td>
+<td>One per cannula insertion</td>
+<td>Novoguard cannula fixator</td>
+</tr>
+<tr>
+<td>CVP manometer</td>
+<td>A graduated fluid column connected to a central venous catheter to read central venous pressure without an electronic monitor.</td>
+<td>One per monitoring episode</td>
+<td>Manometer with three-way stopcock and extension tube</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymedicure catalog 2025; Polymed website product category – Infusion Therapy; Polymed website product category – Vascular Access; QIP Placement Document Aug 2024; QIP Placement Document Feb 2021; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.6-16, pp.33-34; CATEXP24 pp.6-37, p.89; CAT25 pp.2-6; WEB_INFUSION_THERAPY p.1; WEB_VASCULAR_ACCESS p.1; PD24 p.173; PD21 p.86 -->
+<h3 id="vascular-access-and-oncology-2">Vascular access and oncology</h3>
+<figure class="exh" id="exh-gl_vascular"><figcaption><span class="exn">Exhibit 127:</span> Vascular access and oncology: longer-dwelling catheters and ports sold per treatment course, many of them through Plan1Health</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Central venous catheter (CVC) kit</td>
+<td>A longer catheter placed through the neck, chest or groin into a large central vein, with several lumens for drugs, nutrition and pressure readings.</td>
+<td>One kit per insertion, in place for days to weeks</td>
+<td>Polymed CVC (Mono, Duo, Trio, Quadruple), with or without needle-free connector; export Novocent, Novocent Protekt and Novocent Pro</td>
+</tr>
+<tr>
+<td>PICC and PICC-port</td>
+<td>A long catheter threaded from an upper-arm vein to near the heart under ultrasound, for therapy lasting weeks to months; a PICC-port is a port implanted in the arm.</td>
+<td>One kit per treatment course</td>
+<td>Polymed PICC kits (power-injectable, ECG tip confirmation); Plan1Health HealthPICC; PICC-Port</td>
+</tr>
+<tr>
+<td>Midline and mini-midline</td>
+<td>A peripheral catheter longer than a cannula, placed in an upper-arm vein for therapy of days to a few weeks.</td>
+<td>One per patient course</td>
+<td>Poly Lead (over-the-needle and over-the-wire, power-injectable); Plan1Health HealthMID</td>
+</tr>
+<tr>
+<td>Arterial cannula and catheter</td>
+<td>A catheter in the radial or femoral artery that allows continuous blood-pressure monitoring and repeated blood sampling.</td>
+<td>One per monitored patient episode</td>
+<td>Art-Can Standard and Art-Can Safety; Art-Cath over-the-wire catheter</td>
+</tr>
+<tr>
+<td>Introducer needles, sheaths and dilators</td>
+<td>The needles, peel-away sheaths and dilators used to enter a vessel and pass a guidewire or catheter into it.</td>
+<td>One per insertion, often inside a kit</td>
+<td>Safety introducer needle (echogenic), Y-introducer with valve, tear-away introducer, dilators</td>
+</tr>
+<tr>
+<td>Implantable port (chemoport)</td>
+<td>A small chamber with a self-sealing septum implanted under the skin of the chest or arm and joined to a catheter in a central vein, used for months of chemotherapy.</td>
+<td>One per patient for the length of treatment</td>
+<td>Plan1Health Healthport and Secureport, titanium or plastic (ETI, LP, PLP, Power, miniMAX), in standard and all-in-one kits</td>
+</tr>
+<tr>
+<td>Huber needle</td>
+<td>A non-coring needle on a short extension line that reaches an implanted port through the skin.</td>
+<td>One per port access</td>
+<td>Polygrip Huber needle (20G, 22G) and safety Huber needle</td>
+</tr>
+<tr>
+<td>Pain-management catheter</td>
+<td>A thin, multi-hole catheter placed in a surgical wound or near a nerve to infuse local anaesthetic after surgery.</td>
+<td>One per surgical patient treated</td>
+<td>Plan1Health Painfusor</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Components product catalogue Nov 2024; Polymed website product category – Vascular Access; Polymed website product category – Oncology; Polymed website product pages – cardiology products and Novocent Pro (13 pages); Novocent pro ordering table; FDA 510(k) clearances – Plan 1 Health; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.10-12, pp.17-18; CATEXP24 pp.14-21, pp.38-47; CATCOMP24 pp.6-8, pp.13-16; WEB_VASCULAR_ACCESS p.1; WEB_ONCOLOGY p.1; WEBPROD_CARDIO p.13; OTNOV p.1; FDA510K_P1H p.1; PD24 pp.173-174 -->
+<h3 id="renal">Renal</h3>
+<figure class="exh" id="exh-gl_renal"><figcaption><span class="exn">Exhibit 128:</span> Renal: a machine placed once pulls through needles, lines and dialysers at every session</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Haemodialysis machine</td>
+<td>Capital equipment that pumps the patient's blood through a dialyser, prepares dialysate and controls fluid removal.</td>
+<td>Installed once and used for several sessions a day for years</td>
+<td>Dial-Ezee (touchscreen, bicarbonate dialysis, SLED, single or dual blood pump)</td>
+</tr>
+<tr>
+<td>Dialyser</td>
+<td>A cartridge of hollow fibres, the "artificial kidney", across which toxins and excess water pass from the blood into the dialysate.</td>
+<td>One per session where dialysers are used once; fewer where they are reused</td>
+<td>Haem-O-Flux (PES membrane; mid and high flux)</td>
+</tr>
+<tr>
+<td>Blood lines and transducer protectors</td>
+<td>The arterial and venous tubing that carries blood between patient, machine and dialyser, and the small filters that keep blood out of the machine's pressure sensors.</td>
+<td>One blood-line set per session, plus transducer protectors</td>
+<td>Haem-O-Line (pre- and post-pump); transducer protector</td>
+</tr>
+<tr>
+<td>AV fistula needle</td>
+<td>A large-bore winged needle with tubing that connects the patient's arteriovenous fistula or graft to the blood lines.</td>
+<td>An arterial and a venous needle per session, single use</td>
+<td>A.V. fistula needles (15G-17G); Poly Protekt safety fistula needle</td>
+</tr>
+<tr>
+<td>Haemodialysis catheter kit</td>
+<td>A large multi-lumen catheter placed in a central vein for temporary dialysis access.</td>
+<td>One kit per insertion</td>
+<td>Haemocent, Haemocent Pro</td>
+</tr>
+<tr>
+<td>Peritoneal dialysis set</td>
+<td>A stiff catheter pushed through the abdominal wall for acute bedside peritoneal dialysis, with a Y-set that runs fluid in and out.</td>
+<td>One catheter set per acute episode, plus administration sets</td>
+<td>Peritoneal dialysis set (adult and paediatric); PD transfusion set</td>
+</tr>
+<tr>
+<td>Endotoxin filter</td>
+<td>A membrane filter on the machine's dialysate path that removes bacteria and endotoxins.</td>
+<td>Periodic replacement per machine</td>
+<td>Polytox (for Dial-Ezee machines only)</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Components product catalogue Nov 2024; Polymed website product category – Dialysis &amp; Renal Care; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.28-29; CATEXP24 pp.48-54; CATCOMP24 p.6; WEB_DIALYSIS p.1; PD24 p.174 -->
+<h3 id="blood-management">Blood management</h3>
+<figure class="exh" id="exh-gl_blood"><figcaption><span class="exn">Exhibit 129:</span> Blood management: one bag system per donation, with sets and filters used per transfusion</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blood bag system</td>
+<td>A sterile bag set containing anticoagulant into which a donor's blood is collected, with satellite bags for separating red cells, plasma and platelets.</td>
+<td>One per donation</td>
+<td>Single to quintuple CPDA bags; CPD-SAGM and CPD-SAGM-TOTM bags; top-and-bottom systems; bags with in-line leucodepletion filter, needle guard or diversion pouch; paediatric, Penta, transfer, cord-blood and ACD (apheresis) bags</td>
+</tr>
+<tr>
+<td>Blood administration (transfusion) set</td>
+<td>An infusion set with a mesh filter that removes clots while blood or its components are transfused.</td>
+<td>One per transfusion</td>
+<td>Haemofusor (vented; single and double chamber), Transvol, transfusion pump set</td>
+</tr>
+<tr>
+<td>Leucodepletion filter and segment device</td>
+<td>An in-line filter that removes white cells from donated blood, and a single-use device for sampling the sealed tubing segments kept for cross-matching.</td>
+<td>One filter per filtered donation; one device per segment sampled</td>
+<td>Leuko-depletion filter (in LD bag systems); Haemodraw segment device</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Transfusion System; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.31-33; CATEXP24 pp.55-60; WEB_TRANSFUSION_SYSTEM p.1; PD24 p.106 -->
+<h3 id="diagnostics">Diagnostics</h3>
+<figure class="exh" id="exh-gl_diag"><figcaption><span class="exn">Exhibit 130:</span> Diagnostics: tubes, needles and syringes consumed per blood draw</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vacuum blood-collection tube</td>
+<td>A sterile evacuated plastic tube that draws a set volume of blood, with a cap colour that signals the additive and hence the test.</td>
+<td>One or more per blood draw</td>
+<td>Haemochek PET tubes: serum, gel, citrate, EDTA, heparin, glucose, ESR and CPDA</td>
+</tr>
+<tr>
+<td>Blood-collection needle and holder</td>
+<td>A double-ended needle in a plastic holder that fills several tubes from one venepuncture.</td>
+<td>One needle per venepuncture</td>
+<td>Multi-sample needles (20G-22G), HaemoFlash flashback needle, needle holder</td>
+</tr>
+<tr>
+<td>Safety blood-collection set</td>
+<td>A winged butterfly needle with tubing and a holder adapter, with a shield that covers the needle after use.</td>
+<td>One per venepuncture</td>
+<td>Nuovo Safe</td>
+</tr>
+<tr>
+<td>Arterial blood-gas syringe</td>
+<td>A syringe pre-coated with dry heparin for taking an arterial sample for blood-gas analysis.</td>
+<td>One per blood-gas test</td>
+<td>Arterial blood-collection syringe (1 mL, 3 mL and 5 mL; lithium heparin)</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Diagnostics; Polymed website product category – Infusion Therapy; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 p.30, p.34; CATEXP24 p.22, pp.61-65; WEB_DIAGNOSTICS p.1; WEB_INFUSION_THERAPY p.1; PD24 p.173 -->
+<h3 id="anaesthesia-respiratory-and-critical-care">Anaesthesia, respiratory and critical care</h3>
+<figure class="exh" id="exh-gl_anaes"><figcaption><span class="exn">Exhibit 131:</span> Anaesthesia, respiratory and critical care: airway and oxygen devices used per intubation, procedure or patient episode</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suction catheter, open and closed</td>
+<td>A flexible tube connected to suction that clears secretions from the airway; the closed type stays attached to the ventilator circuit inside a sleeve.</td>
+<td>Several a day per ventilated patient (open); one per patient, changed at intervals (closed)</td>
+<td>Endobronchial suction catheters (finger-tip or thumb control); closed suction catheter</td>
+</tr>
+<tr>
+<td>Endotracheal tube</td>
+<td>A tube passed through the mouth or nose into the windpipe to secure the airway for anaesthesia or ventilation.</td>
+<td>One per intubation</td>
+<td>Plain and cuffed tubes; tracheostomy tubes appear only in the placement document's product list</td>
+</tr>
+<tr>
+<td>Guedel airway</td>
+<td>A curved plastic device placed in the mouth to stop the tongue blocking the airway of an unconscious patient.</td>
+<td>One per procedure</td>
+<td>Guedel oropharyngeal airway in a range of sizes</td>
+</tr>
+<tr>
+<td>Breathing circuit</td>
+<td>The corrugated tubes that link a ventilator or anaesthesia machine to the patient; a Bain circuit is a coaxial anaesthesia circuit.</td>
+<td>One per patient, or at protocol intervals</td>
+<td>Adult and paediatric ventilator circuits (with water traps; combo kit with HME filter); adult and paediatric Bain circuits</td>
+</tr>
+<tr>
+<td>Catheter mount and HME filter</td>
+<td>A short flexible connector between the airway tube and the circuit, and a filter that returns exhaled heat and moisture to the patient and traps microbes.</td>
+<td>One per patient (mount); one per anaesthetic or per day (filter)</td>
+<td>Catheter mount with suction port; HME filter with capnography port</td>
+</tr>
+<tr>
+<td>Oxygen and nebulizer masks, nasal cannulas</td>
+<td>Masks and nasal prongs that deliver extra oxygen at low, high or fixed concentrations, and masks that deliver nebulized drugs.</td>
+<td>One per patient episode</td>
+<td>Nasocath nasal cannula, oxygen catheter, variable-concentration mask, Ultra Mask (reservoir), venturi mask; nebulizer and micronebulizer kits</td>
+</tr>
+<tr>
+<td>Nebulizer compressor</td>
+<td>A small electric compressor that turns liquid medicine into a mist for inhalation.</td>
+<td>A durable device bought once</td>
+<td>Compressor system with adult and paediatric masks</td>
+</tr>
+<tr>
+<td>Respiratory exerciser</td>
+<td>A hand-held device in which the patient breathes in to lift balls, to encourage deep breathing after surgery.</td>
+<td>One per patient, who keeps it</td>
+<td>Polyciser</td>
+</tr>
+<tr>
+<td>Spinal needle</td>
+<td>A long, fine needle used to reach the fluid around the spinal cord for spinal anaesthesia or a lumbar puncture.</td>
+<td>One per spinal procedure</td>
+<td>Quincke (16G-27G) and Whitacre pencil-point needles, with or without introducer</td>
+</tr>
+<tr>
+<td>Mucus extractor and LISA catheter</td>
+<td>A small suction trap that clears a newborn's mouth and nose, and a thin catheter that gives surfactant to a premature baby without a breathing tube.</td>
+<td>One per baby or procedure</td>
+<td>Mucus extractor; LISA catheter (domestic catalogue only)</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymedicure catalog 2025; Spinal needle data for website Jul 2026; Polymed website product category – Anaesthesia &amp; Respiratory Care; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.19-22; CATEXP24 pp.71-78; CAT25 p.7; SPN26 pp.1-2; WEB_ANAESTHESIA_RESPIRATORY_CARE p.1; PD24 p.173 -->
+<p>The critical-care division, launched in FY23, is a regrouping rather than a separate range: the website lists vial spikes, arterial lines, Poly Lead midlines, extension lines, enteral connectors, Novocent CVCs and Huber needles under it, all of which appear in the tables above. <!-- WEB_CRITICAL_CARE p.1; PD24 p.168, p.174 --></p>
+<h3 id="gastro-and-enteral">Gastro and enteral</h3>
+<figure class="exh" id="exh-gl_gastro"><figcaption><span class="exn">Exhibit 132:</span> Gastro and enteral: feeding tubes are replaced per insertion, and enteral connectors are built so that they cannot fit an IV line</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nasogastric tube</td>
+<td>A plastic tube passed through the nose into the stomach to feed, give drugs or drain the stomach.</td>
+<td>One per insertion</td>
+<td>Ryle's tube (radio-opaque, DEHP-free) and Levin's tube, both also with enteral connector</td>
+</tr>
+<tr>
+<td>Infant feeding tube</td>
+<td>A small-bore tube passed through the mouth or nose of a premature or sick newborn to give milk.</td>
+<td>One per insertion; several per neonatal ICU stay</td>
+<td>Novofeed; POLYFIT (enteral connector, also in polyurethane)</td>
+</tr>
+<tr>
+<td>Enteral connectors and feeding bags</td>
+<td>Fittings made to a separate enteral standard (ENFit) that cannot connect to IV lines, and bags with giving sets for tube feeds.</td>
+<td>Bags and sets at short protocol intervals; one connector-fitted tube per insertion</td>
+<td>Stopcock with enteral connector, enteral extension set; feeding bag with ice pouch</td>
+</tr>
+<tr>
+<td>Umbilical catheter</td>
+<td>A thin catheter placed in the umbilical vein or artery of a newborn in intensive care for fluids, drugs and sampling.</td>
+<td>One per neonatal ICU baby needing central access</td>
+<td>Umbilical catheter; PU Feed polyurethane umbilical catheter</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Gastroenterology; Polymed website product category – Critical Care; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 p.25; CATEXP24 pp.79-82; WEB_GASTROENTEROLOGY p.1; WEB_CRITICAL_CARE p.1; PD24 p.173 -->
+<h3 id="urology">Urology</h3>
+<figure class="exh" id="exh-gl_uro"><figcaption><span class="exn">Exhibit 133:</span> Urology: bags and catheters used per catheterized patient</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Urine collection bag and urimeter</td>
+<td>A drainage bag that collects urine from a catheter in a closed system; a urimeter adds a graduated chamber for measuring hourly output in intensive care.</td>
+<td>One per catheterized patient, changed when full or at intervals</td>
+<td>Polyuro Premium, Deluxe and Echo; leg bag; paediatric bag; Polyurimeter and Polyurimeter Plus</td>
+</tr>
+<tr>
+<td>Foley catheter</td>
+<td>An indwelling tube passed into the bladder and held there by an inflated balloon for continuous drainage.</td>
+<td>One per catheterization episode</td>
+<td>Foley balloon catheters, adult and paediatric (latex bonded with silicone)</td>
+</tr>
+<tr>
+<td>Nelaton, female and rectal catheters</td>
+<td>Straight tubes for short-term bladder drainage, and a rectal tube for enemas or drainage.</td>
+<td>One per catheterization</td>
+<td>Nelaton (male), female and rectal catheters</td>
+</tr>
+<tr>
+<td>TUR and irrigation sets</td>
+<td>Tubing that runs large volumes of irrigation fluid into the bladder during and after endoscopic prostate surgery.</td>
+<td>One per procedure or irrigation episode</td>
+<td>TUR set (Y-type), irrigation set with pump, irrigation set with soft chamber</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Urology; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.23-24; CATEXP24 pp.83-86; WEB_UROLOGY p.1 -->
+<h3 id="surgery-and-wound-drainage">Surgery and wound drainage</h3>
+<figure class="exh" id="exh-gl_surgery"><figcaption><span class="exn">Exhibit 134:</span> Surgery and wound drainage: drains and suction sets used once per operation</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Closed wound-suction set and Redon drain</td>
+<td>A portable bellows or vacuum bottle that applies gentle suction through a perforated drain left in a closed surgical wound.</td>
+<td>One set per drain, usually one per operation</td>
+<td>Polyvac, Neovac, Novovac, Ultravak; Redon drains with trocar</td>
+</tr>
+<tr>
+<td>Chest drainage system and catheter</td>
+<td>A tube placed between the lung and the chest wall that drains air, blood or fluid into an under-water-seal bottle acting as a one-way valve.</td>
+<td>One catheter and one system per chest-drain insertion</td>
+<td>Polyseal (adult, midi, kid), Polydrain bag; Ultra Cath Novo thoracic catheters</td>
+</tr>
+<tr>
+<td>Surgical suction and abdominal drainage set</td>
+<td>A rigid suction tip on long tubing that clears blood and fluid from the operating field, and a catheter-and-bag set that drains the abdomen after surgery.</td>
+<td>One per operation or drainage episode</td>
+<td>Polysuction Yankauer set and handle; abdominal drainage set</td>
+</tr>
+<tr>
+<td>Surgical scrub brush</td>
+<td>A single-use brush for scrubbing hands and forearms before surgery.</td>
+<td>One per scrub</td>
+<td>Polybrush</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Surgery and Wound Drainage; QIP Placement Document Aug 2024; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.26-27; CATEXP24 pp.66-70, p.90; WEB_SURGERY_AND_WOUND_DRAINAGE p.1; PD24 p.174 -->
+<h3 id="cardiology-2">Cardiology</h3>
+<figure class="exh" id="exh-gl_cardio"><figcaption><span class="exn">Exhibit 135:</span> Cardiology: each angioplasty uses a guiding catheter, wires, balloons, stents and a kit of accessories</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drug-eluting stent</td>
+<td>A small expandable metal mesh tube, coated with a drug that stops the artery narrowing again, left in a coronary artery during angioplasty.</td>
+<td>One or more per angioplasty (PCI)</td>
+<td>RisoR (everolimus); Serolin Pro (sirolimus; cobalt-chromium, biodegradable polymer)</td>
+</tr>
+<tr>
+<td>PTCA balloon catheter</td>
+<td>A catheter with a small balloon that is inflated to widen a narrowed artery before a stent goes in (semi-compliant) or to expand the stent fully afterwards (non-compliant).</td>
+<td>One or more per PCI</td>
+<td>Excedo SC, Excedo NC</td>
+</tr>
+<tr>
+<td>Guiding catheter</td>
+<td>A wide, pre-shaped catheter seated at the opening of a coronary artery, through which wires, balloons and stents are passed.</td>
+<td>One per PCI</td>
+<td>Vasoguide (6F, 7F); PendraCare Convey and Primum</td>
+</tr>
+<tr>
+<td>Diagnostic (angiographic) catheter</td>
+<td>A pre-shaped catheter that injects X-ray contrast into the coronary arteries or the heart chambers.</td>
+<td>One or more per angiogram</td>
+<td>Concath (5F, 6F; Judkins, Amplatz, pigtail and other curves); PendraCare diagnostic catheters</td>
+</tr>
+<tr>
+<td>Guidewire</td>
+<td>A thin wire over which catheters are advanced through the vessels.</td>
+<td>One or more per procedure; also inside every access kit</td>
+<td>Filoflex (PTFE-coated), Aquareach (hydrophilic)</td>
+</tr>
+<tr>
+<td>PCI accessories</td>
+<td>A syringe with a pressure gauge that inflates balloons and stents, a Y-connector valve that limits back-bleeding, and a manifold for contrast, flush and pressure lines.</td>
+<td>One of each per procedure, often sold as a kit</td>
+<td>Teravox inflation device, Zinera Y-connector, Neofold Pro manifold</td>
+</tr>
+<tr>
+<td>Arterial access needle and introducer sheath</td>
+<td>A needle that punctures the radial or femoral artery and a sheath that lets catheters be exchanged without a new puncture.</td>
+<td>One per procedure</td>
+<td>Sylera introducer needle; PendraCare SimplGuide</td>
+</tr>
+<tr>
+<td>ECG electrodes</td>
+<td>Disposable adhesive gel pads that connect the skin to the leads of an ECG recorder or monitor.</td>
+<td>Several per recording or monitoring set-up</td>
+<td>ECG electrodes (adult and paediatric; liquid-gel option)</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Polymed website product category – Cardiology; Polymed website product pages – cardiology products and Novocent Pro (13 pages); Ordering table (unnamed 2); Ordering table (unnamed 3); Excedo SC ordering table; Excedo NC ordering table; Vasoguide ordering table; Concath ordering table; Filoflex ordering table; Aquareach ordering table; Teravox ordering table; Zinera ordering table; Neofold Pro ordering table; FDA 510(k) clearances – PendraCare; PendraCare acquisition presentation; Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Avendus Spark Research</p></figure>
+<!-- WEB_CARDIOLOGY p.1; WEBPROD_CARDIO pp.1-12; OTGEN2 p.1; OTGEN3 p.1; OTEXSC p.1; OTEXNC p.1; OTVAS p.1; OTCON p.1; OTFIL p.1; OTAQU p.1; OTTER p.1; OTZIN p.1; OTNEO p.1; FDA510K_PEN p.1; DKPEN pp.12-13; CATDOM25 p.34; CATEXP24 pp.87-88 -->
+<h3 id="orthopaedics-2">Orthopaedics</h3>
+<figure class="exh" id="exh-gl_ortho"><figcaption><span class="exn">Exhibit 136:</span> Orthopaedics: Citieffe's implants and fixators are sold per fracture treated</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intramedullary nail</td>
+<td>A metal rod inserted along the hollow centre of a long bone and locked with screws, to hold a fracture in line while it heals.</td>
+<td>One nail plus locking screws per fractured bone</td>
+<td>Citieffe Estremo (tibial, femoral, fibular), EBA2 and EBA One femoral systems, DT Humerus, titanium nailing system</td>
+</tr>
+<tr>
+<td>External fixator</td>
+<td>A frame outside the limb, fixed to the bone by pins through the skin, used for open or complex fractures and limb reconstruction.</td>
+<td>One frame per treated limb; pins single use</td>
+<td>Dolphix (including an MR-conditional version), ST.A.R. F4 fixator with hydroxyapatite-coated screws, F4 elbow and knee, Rekrea, Xframe</td>
+</tr>
+<tr>
+<td>Bone screws and plates</td>
+<td>Screws inserted over a guide wire to fix fractures such as those of the hip or wrist bones, and plates screwed onto bone to hold wrist fractures.</td>
+<td>Several screws per fracture; one plate per fracture</td>
+<td>Titanium cannulated screws, Rondo screws, PL8 wrist reconstruction plate</td>
+</tr>
+<tr>
+<td>Navigation system for nailing</td>
+<td>Equipment that guides locking screws through the holes of a nail, cutting X-ray exposure and theatre time.</td>
+<td>A capital item placed with hospitals to support nail sales</td>
+<td>Citieffe navigation software for nailing systems</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: FDA 510(k) clearances – Citieffe; Citieffe acquisition presentation; Avendus Spark Research</p></figure>
+<!-- FDA510K_CIT p.1; DKCIT p.12, p.15 -->
+<h3 id="components">Components</h3>
+<figure class="exh" id="exh-gl_comp"><figcaption><span class="exn">Exhibit 137:</span> Components: parts and semi-finished devices sold to other makers on their production schedules</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catheter and stent components</td>
+<td>Unfinished catheters and bare stents sold to other device makers, who finish, pack or label them as their own.</td>
+<td>Set by the customer's production schedule</td>
+<td>Diagnostic, CVC, haemodialysis, midline, mini-midline, PICC and anaesthesia-conduction catheters; cobalt-chromium stent with biodegradable polymer (sirolimus or everolimus)</td>
+</tr>
+<tr>
+<td>Guidewire components</td>
+<td>Wires and wire accessories sold loose for other makers' kits.</td>
+<td>Set by the customer's production schedule</td>
+<td>Nitinol (straight and J), stainless-steel, PTFE and hydrophilic guidewires; nasogastric-tube guidewire; guidewire advancer</td>
+</tr>
+<tr>
+<td>Access components</td>
+<td>Needles, sheaths and dilators for other makers' insertion kits.</td>
+<td>Set by the customer's production schedule</td>
+<td>Introducer needles (standard, safety, Y with valve), tear-away introducers, dilators</td>
+</tr>
+<tr>
+<td>Fluid-path components</td>
+<td>Taps, regulators, connectors and tubing sold as parts.</td>
+<td>Set by the customer's production schedule</td>
+<td>Polyway stopcocks, flow regulator, T-connector with side port; extruded tubing (radio-opaque line, PVC-free, polyurethane, co-extruded)</td>
+</tr>
+<tr>
+<td>Semi-finished catheters and contract manufacturing</td>
+<td>Semi-finished guiding and diagnostic catheters, licensed designs, and contract development and manufacture of braided catheters for other companies.</td>
+<td>Supply contracts with a few large customers</td>
+<td>PendraCare OEM and licensing business</td>
+</tr>
+<tr>
+<td>Private-label finished devices</td>
+<td>Finished devices made by Polymed and sold under a customer's brand.</td>
+<td>Supply contracts</td>
+<td>A US FDA listing of a suction catheter kit made at the Jaipur plant carries the proprietary name "McKesson"</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Components product catalogue Nov 2024; PendraCare acquisition presentation; FDA registration and listing – Poly Medicure; Avendus Spark Research</p></figure>
+<!-- CATCOMP24 pp.4-16; DKPEN pp.11-13; FDAREG_POLY p.1 -->
+<h3 id="other-products">Other products</h3>
+<figure class="exh" id="exh-gl_other"><figcaption><span class="exn">Exhibit 138:</span> Other products the company lists outside its named business lines</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Product</th>
+<th>What it is</th>
+<th>Unit of demand</th>
+<th>Polymed brands or range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insulin syringe</td>
+<td>A small syringe with a fixed fine needle and a scale in insulin units, used by people with diabetes.</td>
+<td>One per injection where syringes are not reused</td>
+<td>Insulin syringes (8 mm and 13 mm needles; colour-coded caps; unit packs and multi-packs)</td>
+</tr>
+<tr>
+<td>Umbilical cord clamp</td>
+<td>A plastic clamp placed on a newborn's umbilical cord before it is cut.</td>
+<td>One or more per birth</td>
+<td>Vaso Clamp</td>
+</tr>
+<tr>
+<td>Sputum collector</td>
+<td>A sterile screw-cap container for collecting sputum for laboratory tests such as tuberculosis testing.</td>
+<td>One per sample</td>
+<td>Sputum collectors (placement-document list only)</td>
+</tr>
+<tr>
+<td>Veterinary devices</td>
+<td>Human infusion and feeding devices adapted for animals.</td>
+<td>One per treatment</td>
+<td>Large-bore infusion sets with coiled tubing, stomach tubes, endoscope flushing catheters, veterinary IV sets</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; Polymed website product category – Surgery and Wound Drainage; QIP Placement Document Aug 2024; QIP Placement Document Feb 2021; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.33-34; CATEXP24 p.90; WEB_SURGERY_AND_WOUND_DRAINAGE p.1; PD24 p.174; PD21 p.131 -->
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="c4.html"><span>Previous</span>C4 Channel checks to run</a><a class="next" href="approvals.html"><span>Next</span>Regulatory approvals by market</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

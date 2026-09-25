@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.10 Components, OEM and contract manufacturing · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html" class="active">A4.10 Components, OEM and contract manufacturing</a></li><li class="l3"><a href="#what-polymed-offers-other-device-makers">What Polymed offers other device makers</a></li><li class="l3"><a href="#the-evidence-on-oem-and-private-label">The evidence on OEM and private label</a></li><li class="l3"><a href="#why-it-matters-margins-stickiness-and-concentration">Why it matters: margins, stickiness and concentration</a></li><li class="l3"><a href="#who-else-competes-for-oem-work">Who else competes for OEM work</a></li><li class="l3"><a href="#what-to-watch-10">What to watch</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-9.html"><span>Previous</span>A4.9 Orthopaedics (Citieffe)</a><a class="next" href="a5.html"><span>Next</span>A5 Geographies and legal entities</a></nav>
+<h2 id="a4-10">A4.10 Components, OEM and contract manufacturing</h2>
+<p>Polymed sells some of what it makes to other device companies rather than under its own name: finished products sold as private label, loose components and semi-finished parts, and, since 2025, design-and-manufacture contracts. The evidence is scattered, and the revenue is [not disclosed]. What we can piece together is that private label was ~<span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">28%</span> of sales in FY22 and is concentrated in exports, that management wants it smaller, and that the acquired European businesses have brought a larger OEM share. <!-- DKMAY22 p.10; TR4Q22 p.12; DKPEN p.12 --></p>
+<section class="snapshot"><p class="ct">Components and OEM at a glance</p><dl><div><dt>Own brand vs. OEM</dt><dd><span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 14">70%</span> own brand in Oct-2020; <span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">72%</span>:<span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">28%</span> in FY22 (company); CRISIL: own brand <span class="n" title="Source: CRISIL rating rationale 08-Dec-2022 (2022-12-08)">around 70-72%</span> (FY22)</dd></div><div><dt>OEM revenue</dt><dd>[not disclosed]; ~<span class="n" title="Our calculation: CC-0872/100*CB-0037; inputs: 28% (Investor presentation May 2022, p.10); Rs. 9.2bn (Investor deck 1QFY27, p.6)">Rs. 2.6bn</span> in FY22 on the <span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">28%</span> share (our calculation)</dd></div><div><dt>By market</dt><dd>Exports ~<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">25%</span> white label (Feb-2023); India <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">0%</span></dd></div><div><dt>Target</dt><dd>Own brand "<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · management guidance; Himanshu Baid, MD">as close to 80%</span>" (May-2022)</dd></div><div><dt>Contract manufacturing</dt><dd><span class="n" title="Source: Investor presentation 1QFY26 (2025-08), slide/page 7">2</span> contracts signed in 1QFY26 (US and Hong Kong), revenue from FY27 per management</dd></div><div><dt>Acquired businesses</dt><dd>PendraCare <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">48%</span> OEM in CY24; Plan1Health sole supplier to a large Class III OEM</dd></div><div><dt>Component revenue</dt><dd>[not disclosed]</dd></div></dl></section>
+<!-- DKNOV20 p.14; DKMAY22 p.10; CRR2212 p.1; TR3Q23 p.9; TR4Q22 p.12; DK1Q26 p.7; TR1Q26 pp.4, 12-13; DKPEN p.12; DK1Q27 p.12 -->
+<h3 id="what-polymed-offers-other-device-makers">What Polymed offers other device makers</h3>
+<p><strong>Components.</strong> The Nov-2024 components catalogue ("Empowering Healthcare Innovation") offers parts that another manufacturer can assemble, pack and sterilize under its own name: <!-- CATCOMP24 pp.4-16 --></p>
+<ul>
+<li><strong>catheters:</strong> diagnostic, CVC, haemodialysis, midline, mini-midline, PICC and anaesthesia conduction;</li>
+<li><strong>a coronary stent:</strong> cobalt-chromium with a biodegradable polymer, sirolimus or everolimus;</li>
+<li><strong>guidewires:</strong> nitinol straight and J-tip, stainless steel, PTFE-coated, hydrophilic, a nasogastric-tube guidewire and a guidewire advancer;</li>
+<li><strong>access parts:</strong> introducer needles (standard, safety and Y with valve), tear-away introducers and dilators;</li>
+<li><strong>infusion parts:</strong> Polyway stopcocks, flow regulators, T-connectors, and extruded tubing (radio-opaque, PVC-free, polyurethane, co-extruded).</li>
+</ul>
+<p>Many of these items were in the components catalogue before Polymed listed them as branded cardiology products. The catalogue is therefore both a revenue line and a window into its capabilities. <!-- D digest A4.8; CATCOMP24 pp.5, 8-11 --></p>
+<p>The government has approved a grant of <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 100mn</span> towards a <span class="n" title="Source: Lok Sabha USQ 1001 - High Precision Medical Instruments (PLI, parks, SMDI, FDI annexures) (2026-07-24), slide/page 9">Rs. 1.0bn</span> Polymed project to make polymer tubing components for infusion therapy, bloodlines and dialysis accessories and central venous catheters (Section A4.1). That should deepen the extruded-tubing capability behind both the finished products and the components line (our view). <!-- LSQ_AU1001_260724 p.9 --></p>
+<p><strong>Private label.</strong> Finished products sold under a customer's brand, mainly abroad. The only documentary trace in the US is an FDA device listing at Jaipur for a suction catheter kit under the proprietary name "McKesson", a US distributor. Management says the US business will run through GPOs and distributors, with Polymed's role "limited to manufacturing in India". <!-- FDAREG_POLY p.1; D digest A4.10; TR1Q25 p.4 --></p>
+<p><strong>Contract design and manufacturing (CDMO).</strong> In 1QFY26 Polymed signed two contracts, with a US company and a Hong Kong-headquartered company with large US operations. They cover new patented devices in vascular access and pain management, and 510(k) filings are in progress. Management expects revenue from FY27 and scale in "two, three years, four years". <!-- TR1Q26 pp.4, 12-13; DK1Q26 p.7 --></p>
+<p><strong>Intra-group supply.</strong> Polymed supplies components to its subsidiaries, which management says creates "some margin creation at the India level". Sales to Plan1Health alone were <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 88">Rs. 147mn</span> in FY26. <!-- TR2Q26 p.9; AR26 p.88 --></p>
+<h3 id="the-evidence-on-oem-and-private-label">The evidence on OEM and private label</h3>
+<figure class="exh" id="exh-oem_share"><figcaption><span class="exn">Exhibit 60:</span> Private label has been roughly a quarter to a third of sales, mostly in exports, and management's target is to shrink it</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Date</th>
+<th>Measure</th>
+<th class="num">Own brand</th>
+<th class="num">OEM or private label</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct-2020</td>
+<td>Share of sales (deck)</td>
+<td class="num"><span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 14">70%</span></td>
+<td class="num"><span class="n" title="Source: Investor presentation Nov 2020 (2020-11-10), slide/page 14">30%</span></td>
+<td>Investor deck</td>
+</tr>
+<tr>
+<td>FY21</td>
+<td>Share of sales (management)</td>
+<td class="num"><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">70%</span></td>
+<td class="num"><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">30%</span></td>
+<td>4QFY22 call</td>
+</tr>
+<tr>
+<td>FY22</td>
+<td>Share of sales (management and deck)</td>
+<td class="num"><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">72%</span></td>
+<td class="num"><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">28%</span></td>
+<td>4QFY22 call; May-2022 deck</td>
+</tr>
+<tr>
+<td>FY22</td>
+<td>Own-brand share (CRISIL Ratings)</td>
+<td class="num"><span class="n" title="Source: CRISIL rating rationale 08-Dec-2022 (2022-12-08)">around 70-72%</span></td>
+<td class="num">–</td>
+<td>CRISIL rationale, Dec-2022</td>
+</tr>
+<tr>
+<td>FY23-FY24</td>
+<td>Own-brand share (CRISIL Ratings)</td>
+<td class="num"><span class="n" title="Source: CRISIL rating rationale 29-Feb-2024 (2024-02-29)">around 70%</span></td>
+<td class="num">–</td>
+<td>CRISIL rationale, Feb-2024</td>
+</tr>
+<tr>
+<td>Feb-2023</td>
+<td>Exports only</td>
+<td class="num">~<span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">75%</span></td>
+<td class="num"><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">25%</span></td>
+<td>3QFY23 call</td>
+</tr>
+<tr>
+<td>Feb-2023</td>
+<td>India only</td>
+<td class="num">–</td>
+<td class="num"><span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 9 · Himanshu Baid, MD">0%</span></td>
+<td>3QFY23 call</td>
+</tr>
+<tr>
+<td>May-2022</td>
+<td>Management target</td>
+<td>"<span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · management guidance; Himanshu Baid, MD">as close to 80%</span>"</td>
+<td class="num">–</td>
+<td>4QFY22 call</td>
+</tr>
+<tr>
+<td>CY24</td>
+<td>PendraCare (acquired 2025)</td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">52%</span></td>
+<td class="num"><span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">48%</span></td>
+<td>Acquisition deck</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Investor presentation Nov 2020; 4QFY22 earnings call transcript; Investor presentation May 2022; CRISIL rating rationale 08-Dec-2022; CRISIL rating rationale 29-Feb-2024; 3QFY23 earnings call transcript; PendraCare acquisition presentation; Avendus Spark Research</p></figure>
+<!-- DKNOV20 p.14; TR4Q22 p.12; DKMAY22 p.10; CRR2212 p.1; CRR2402 p.1; TR3Q23 p.9; DKPEN p.12 -->
+<p>Other sources add detail:</p>
+<ul>
+<li><strong>CRISIL Ratings</strong> wrote in 2023 that Polymed "supplies to other big players, such as Atroge and Asept" (names as printed). It said Polymed has "access to developed markets through contract manufacturing" but that India's low-cost image "limits the company's ability to command a premium". <!-- CR23 p.7 --></li>
+<li><strong>Management's framing</strong> has shifted. The Oct-2020 deck pitched "new contract manufacturing opportunities". In May-2023 the MD said "Polymed doesn't have any contract manufacturing business today. And that's not our model". By 1QFY26 it had signed two CDMO contracts. <!-- DKNOV20 p.12; TR4Q23 p.16; TR1Q26 p.4 --></li>
+<li><strong>By market.</strong> Europe "is more favoured towards own branded", while the US leans to white label. <!-- TR3Q23 p.9, p.18 --></li>
+<li><strong>The acquisitions</strong> raise the OEM share. PendraCare makes semi-finished guiding and diagnostic catheter parts, licenses end-product finalization and does contract development and manufacturing of braided catheters for <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 13">2</span> large OEMs, with relationships of <span class="n" title="Source: PendraCare acquisition call script (4 Sep 2025) (2025-09-09), slide/page 2 · Rahul Gautam, President - Strategy &amp; Corporate Development">over 10 years</span>. Plan1Health is the "sole approved supplier for one of the largest OEM for Class III implants". <!-- DKPEN pp.11-13; TRPEN p.2; DK1Q27 pp.12-13 --></li>
+</ul>
+<p>The Vitromed Healthcare relationship runs the other way. Polymed pays this promoter-owned firm to make products on job work from Polymed's raw materials; it is not a customer. It is covered in Section A9. <!-- PD24 p.177 --></p>
+<h3 id="why-it-matters-margins-stickiness-and-concentration">Why it matters: margins, stickiness and concentration</h3>
+<ol>
+<li><strong>Margins.</strong> Private label usually sells below own-brand prices because the customer carries the brand and the selling cost, but Polymed does not disclose the gap. Management put export EBITDA at <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 16 · Himanshu Baid, MD">30%+</span> in Feb-2023, against <span class="n" title="Source: 3QFY23 earnings call transcript (2023-02-27), slide/page 16 · Himanshu Baid, MD">18-20%</span> for India (as transcribed, the answer sits inside the analyst's turn). Since exports carry nearly all the private label, the mix does not appear to have hurt export margins, but this cannot be tested. <!-- TR3Q23 p.16 --></li>
+<li><strong>Stickiness.</strong> OEM supply is embedded in the customer's regulatory file: changing a component supplier means re-validation and often re-registration. Management says most of its customer relationships outside India run <span class="n" title="Source: 4QFY26 earnings call transcript (2026-05-29), slide/page 11 · Himanshu Baid, MD">15-20</span> years and that it has "hardly lost any large customer". <!-- TR4Q26 p.11; D_product_glossary --></li>
+<li><strong>Concentration.</strong> OEM revenue follows a few customers' production schedules. At group level concentration is low: the top ten customers were <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 50">29.0%</span> of FY24 revenue and no single customer reached a tenth of sales (Section A2). The OEM customers are not named, so their weight within the top ten is [not disclosed]. <!-- PD24 p.50; AR24 p.145 --></li>
+<li><strong>Strategic value.</strong> In Dec-2025 Teleflex agreed to sell its OEM business, which makes catheters, extrusions, introducers and guidewire-type components for other device makers, to Montagu and Kohlberg for about <span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$1.5bn</span>. That shows the OEM model can stand as a business in its own right. Polymed's components catalogue covers many of the same categories at a far smaller scale. India's CDMO opportunity is small today (<span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">&lt;$100mn</span> in 2025, per the BCG-KIHT report of May-2026 cited in the FY26 annual report), which projects it at <span class="n" title="Source: Annual Report FY26 (2026-08), slide/page 44">$6-7bn</span> by 2035. <!-- TFX_10K25 p.1; AR26 p.44 --></li>
+</ol>
+<p>We read Polymed's stance as pragmatic: own brand where it can build a franchise (India, Europe), private label and CDMO where access is otherwise hard (the US). The CDMO contracts are the first test of whether it can earn design fees, not just manufacturing margins.</p>
+<h3 id="who-else-competes-for-oem-work">Who else competes for OEM work</h3>
+<ul>
+<li><strong>Chinese suppliers</strong> have long served the global majors. KDL, which ranks itself among China's ten largest exporters of polymer consumables, sells on OEM, ODM and own-brand terms and has long-term development and supply ties with several global device companies. <!-- KDL_AR25 p.23 --></li>
+<li><strong>Chinese private label carries risk for the buyer.</strong> Jiangsu Caina made the syringes Cardinal Health sold in the US under its Monoject brand. The FDA found that Caina had received at least <span class="n" title="Source: FDA Warning Letter to Jiangsu Caina Medical Co. Ltd (MARCS-CMS 687033) (2024-07-18)">41</span> US complaints, sent it a warning letter and by May-2024 was telling users to move away from Caina's syringes. <!-- FDA_WL_CAINA p.1; AHA_SYR p.1 --></li>
+<li><strong>Indian contract makers</strong> are smaller. Angiplast offers CDMO and OEM services and makes components such as spikes, injection sites, connectors and clamps, and says it exports more than <span class="n" title="Source: Angiplast Pvt Ltd – corporate website (self-reported export share) (2026-09-24)">80%</span> of its production. Lars Medicare calls itself a contract OEM supplier. Iscon Surgicals sold to OEMs as well as to government buyers. <!-- ANGIPLAST_WEB p.1; LARS_WEB p.1; BWR_ISCON p.2 --></li>
+<li><strong>The opening.</strong> CRISIL says that pricing pressure and supply-chain problems during and after the pandemic have pushed OEMs to seek cost-competitive alternatives, making India an emerging hub for devices of high complexity and medium volume. <!-- PD24 p.141 --></li>
+</ul>
+<p>In our view Polymed's advantage over the Indian contract makers is its regulatory file: the company says every plant is certified under the EU MDR, and it holds <span class="n" title="Source: FDA 510(k) clearances – Poly Medicure (2026-09-24)">6</span> US 510(k)s (Section A4.1). <!-- AR26 p.35; FDA510K_POLY p.1 --></p>
+<h3 id="what-to-watch-10">What to watch</h3>
+<figure class="exh" id="exh-oem_watch"><figcaption><span class="exn">Exhibit 61:</span> Components, OEM and contract manufacturing: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Own-brand vs. OEM share</td>
+<td>Price realization and brand-building</td>
+<td><span class="n" title="Source: 4QFY22 earnings call transcript (2022-12-01), slide/page 12 · Himanshu Baid, MD">72%</span> own brand (FY22)</td>
+<td>Calls and decks, occasional</td>
+</tr>
+<tr>
+<td>CDMO contract revenue</td>
+<td>First test of design-and-manufacture income</td>
+<td>Revenue expected from FY27</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>US private-label volumes</td>
+<td>Main route into US GPOs</td>
+<td>One FDA listing under a distributor's name</td>
+<td>FDA listings</td>
+</tr>
+<tr>
+<td>PendraCare and Plan1Health OEM customers</td>
+<td>Concentration inside the acquired businesses</td>
+<td>PendraCare <span class="n" title="Source: PendraCare acquisition presentation (2025-09-04), slide/page 12">48%</span> OEM (CY24)</td>
+<td>Acquisition decks</td>
+</tr>
+<tr>
+<td>Component revenue</td>
+<td>Size of the business-to-business components line</td>
+<td>[not disclosed]</td>
+<td>Not disclosed</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: 4QFY22 earnings call transcript; PendraCare acquisition presentation; Avendus Spark Research</p></figure>
+<p><strong>Open questions for management</strong> (also in the question bank):</p>
+<ul>
+<li>current own-brand and OEM shares, and the margin gap between them;</li>
+<li>the names or types of the largest OEM customers, and their share of the top ten;</li>
+<li>revenue from the components catalogue;</li>
+<li>expected FY27 CDMO revenue and the status of the related 510(k) filings.</li>
+</ul>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-9.html"><span>Previous</span>A4.9 Orthopaedics (Citieffe)</a><a class="next" href="a5.html"><span>Next</span>A5 Geographies and legal entities</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>

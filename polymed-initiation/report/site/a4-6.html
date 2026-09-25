@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A4.6 Anaesthesia, respiratory and critical care · Poly Medicure Initiating Coverage</title>
+<style>
+:root{
+  color-scheme: light;
+  --page:#f3f4f3; --surface:#fcfcfb; --ink:#101314; --ink-2:#45494c; --muted:#6f7477;
+  --rule:#e2e4e2; --rule-2:#c9cdcb; --accent:#1c5cab; --accent-ink:#184f95; --accent-soft:#ebf2fa;
+  --warm-soft:#fbf2e8; --warm-rule:#ecd3b5; --good:#006300; --bad:#b3261e;
+  --grid:#e1e0d9; --baseline:#c3c2b7; --chart-muted:#898781;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --heat-1:#86b6ef; --heat-2:#5598e7; --heat-3:#256abf; --heat-4:#104281;
+  --heat-ink-1:#101314; --heat-ink-2:#101314; --heat-ink-3:#ffffff; --heat-ink-4:#ffffff;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+    --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+    --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+    --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+    --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0c0d0d; --surface:#161717; --ink:#f1f2f2; --ink-2:#c3c6c7; --muted:#90959a;
+  --rule:#2a2d2e; --rule-2:#3c4041; --accent:#6da7ec; --accent-ink:#86b6ef; --accent-soft:#142131;
+  --warm-soft:#2a1f14; --warm-rule:#5a4127; --good:#0ca30c; --bad:#e66767;
+  --grid:#2c2c2a; --baseline:#383835; --chart-muted:#898781;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --heat-1:#184f95; --heat-2:#256abf; --heat-3:#6da7ec; --heat-4:#b7d3f6;
+  --heat-ink-1:#ffffff; --heat-ink-2:#ffffff; --heat-ink-3:#101314; --heat-ink-4:#101314;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-padding-top:16px}
+body{margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 var(--font); padding-inline:16px;
+  padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+a{color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px}
+a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+.shell{display:grid; grid-template-columns:260px minmax(0,1fr); gap:28px; max-width:1260px; margin:0 auto; padding-block:24px 64px}
+.toc{position:sticky; top:env(safe-area-inset-top,0px); align-self:start; max-height:100vh; overflow:auto; padding-block:8px 24px; font-size:13px; line-height:1.4}
+.toc .brand{font-weight:650; font-size:14px; letter-spacing:.01em; margin:0 0 2px}
+.toc .asof{color:var(--muted); font-size:12px; margin:0 0 10px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); margin-bottom:8px; list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+.toc li a{display:block; color:var(--ink-2); text-decoration:none; padding:3px 8px; border-radius:5px}
+.toc li.l1{margin-top:10px}
+.toc li.l1 > a{font-weight:650; color:var(--ink); text-transform:uppercase; letter-spacing:.04em; font-size:11.5px}
+.toc li.l2 > a{padding-left:14px}
+body.companion .toc li.l2 > a{padding-left:8px; font-weight:650; color:var(--ink)}
+.toc li.l3 > a{padding-left:22px; font-size:12.5px; color:var(--muted)}
+.toc li a:hover{background:var(--accent-soft); color:var(--ink)}
+.toc li a.active{color:var(--accent-ink); background:var(--accent-soft)}
+.tools{display:flex; gap:8px; margin:0 0 12px}
+.tools button{font:inherit; font-size:12px; color:var(--ink-2); background:transparent; border:1px solid var(--rule-2); border-radius:6px; padding:3px 8px; cursor:pointer}
+.tools button:hover{background:var(--accent-soft)}
+.toc .brand a{color:inherit; text-decoration:none}
+.toc .brand a:hover{color:var(--accent-ink)}
+.sitelinks{list-style:none; margin:0 0 12px; padding:0; display:grid; gap:2px; font-size:12.5px}
+.sitelinks a{color:var(--accent-ink); text-decoration:none}
+.sitelinks a:hover{text-decoration:underline}
+.pagenav{display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px; line-height:1.35}
+.pagenav.top{margin:-12px 0 22px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.pagenav.bottom{margin-top:36px; padding-top:16px; border-top:1px solid var(--rule)}
+.pagenav a{display:block; text-decoration:none; color:var(--ink); padding:8px 12px; border:1px solid var(--rule-2); border-radius:6px}
+.pagenav a:hover{background:var(--accent-soft); border-color:var(--accent)}
+.pagenav a span{display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:2px}
+.pagenav a.next{text-align:right; grid-column:2}
+.pagenav.top a{padding:5px 10px; font-size:12.5px}
+.dirx{margin-top:28px}
+.dirgrid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:18px 26px; margin-top:10px}
+.dircol .dirpart{margin:0 0 6px; font-size:11.5px; font-weight:650; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-2)}
+.dircol ol{margin:0; padding-left:0; list-style:none; display:grid; gap:4px; font-size:14px}
+@media (max-width:640px){ .pagenav{grid-template-columns:1fr} .pagenav a.next{grid-column:auto} }
+.doc{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:40px 52px 56px; min-width:0}
+.cover{border-bottom:1px solid var(--rule-2); padding-bottom:22px; margin-bottom:8px}
+.cover .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px}
+.cover .ctitle{font-size:34px; line-height:1.15; font-weight:700; margin:0; text-wrap:balance; letter-spacing:-.01em}
+.cover .csub{font-size:18px; color:var(--ink-2); margin:6px 0 14px; text-wrap:balance}
+.cover .meta{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--ink-2); margin:0}
+.cover .meta b{color:var(--ink); font-weight:600}
+.cover .scope{margin:14px 0 0; font-size:13px; color:var(--ink-2); max-width:80ch}
+h1{font-size:27px; line-height:1.2; margin:64px 0 6px; padding-top:18px; border-top:2px solid var(--ink); text-wrap:balance; letter-spacing:-.005em}
+h2{font-size:21.5px; line-height:1.25; margin:44px 0 10px; text-wrap:balance}
+h3{font-size:17px; line-height:1.3; margin:28px 0 6px; text-wrap:balance}
+h4{font-size:14.5px; margin:20px 0 4px; font-weight:650}
+p, ul, ol, blockquote{max-width:76ch}
+p{margin:0 0 12px}
+ul, ol{padding-left:22px; margin:0 0 12px}
+li{margin:2px 0}
+strong{font-weight:650}
+.n{border-bottom:1px dotted var(--rule-2); cursor:help; white-space:nowrap}
+.n.nl{white-space:normal}
+.n:hover{background:var(--accent-soft); border-bottom-color:var(--accent)}
+figure.exh{margin:26px 0 30px; padding:0; max-width:100%}
+figure.exh figcaption{font-weight:620; font-size:14.5px; line-height:1.35; margin:0 0 10px; max-width:88ch; text-wrap:balance}
+.exn{color:var(--accent-ink); font-weight:700; margin-right:2px}
+.plot{max-width:100%}
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart text{font-family:var(--font)}
+.chart .tick{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.chart .cat{fill:var(--ink-2); font-size:12px}
+.chart .unit{fill:var(--muted); font-size:11px}
+.chart .val{fill:var(--ink); font-size:11.5px; font-weight:600; font-variant-numeric:tabular-nums}
+.chart .inlbl{fill:#fff; font-size:11px; font-weight:600}
+.chart .inlbl.on3, .chart .inlbl.on4, .chart .inlbl.on5{fill:#0b0b0b}
+:root[data-theme="dark"] .chart .inlbl.on3, :root[data-theme="dark"] .chart .inlbl.on5{fill:#fff}
+.chart .grid{stroke:var(--grid); stroke-width:1}
+.chart .base{stroke:var(--baseline); stroke-width:1}
+.chart .mark{transition:opacity .12s}
+.chart .mark:hover{opacity:.78}
+.legend{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; color:var(--ink-2); margin:0 0 6px}
+.lg-item{display:inline-flex; align-items:center; gap:6px}
+.note{font-size:12.5px; color:var(--ink-2); margin:8px 0 2px; max-width:92ch}
+.src{font-size:12px; color:var(--muted); margin:6px 0 0; max-width:100ch}
+details.tv{margin-top:6px; font-size:12.5px}
+details.tv summary{cursor:pointer; color:var(--accent-ink); width:max-content}
+.tw{overflow-x:auto; max-width:100%}
+table.data{border-collapse:collapse; width:100%; font-size:13px; line-height:1.4; font-variant-numeric:tabular-nums; margin:4px 0}
+table.data th, table.data td{padding:6px 9px; border-bottom:1px solid var(--rule); vertical-align:top; text-align:left}
+table.data thead th{border-bottom:1px solid var(--rule-2); font-weight:620; color:var(--ink); background:transparent; position:relative}
+table.data tbody th{font-weight:560; color:var(--ink)}
+table.data td.num, table.data th.num{text-align:right; white-space:nowrap}
+table.data tbody tr:hover td, table.data tbody tr:hover th{background:color-mix(in srgb, var(--accent-soft) 60%, transparent)}
+table.bib td.url{word-break:break-all; font-size:12px}
+.mono{font-family:var(--mono); font-size:12px}
+aside.callout{border:1px solid var(--rule-2); background:var(--accent-soft); border-radius:6px; padding:14px 18px 6px; margin:18px 0 22px; max-width:86ch}
+aside.callout.debate, aside.callout.risk{background:var(--warm-soft); border-color:var(--warm-rule)}
+aside.callout .ct, section.snapshot .ct{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; font-weight:700; color:var(--ink-2); margin:0 0 6px}
+aside.callout p, aside.callout ul{max-width:none}
+section.snapshot{border:1px solid var(--rule-2); border-radius:6px; padding:14px 18px; margin:14px 0 22px}
+section.snapshot dl{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:10px 22px; margin:0}
+section.snapshot dt{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+section.snapshot dd{margin:1px 0 0; font-size:14px; line-height:1.4}
+.kf{display:grid; grid-template-columns:repeat(auto-fit, minmax(190px,1fr)); gap:14px 22px; margin:18px 0 6px}
+.kf div{border-top:1px solid var(--rule-2); padding-top:8px}
+.kf .k{font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.kf .v{font-size:19px; font-weight:650; line-height:1.25}
+.kf .d{font-size:12.5px; color:var(--ink-2)}
+.qblock{border:1px solid var(--rule); border-left:3px solid var(--rule-2); border-radius:6px; padding:12px 16px 8px; margin:0 0 12px; max-width:92ch; background:var(--surface)}
+.qblock.must{border-left-color:var(--accent)}
+.qblock .qh{margin:0 0 4px; font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:4px}
+.qblock .qid{font-family:var(--mono); font-weight:700; color:var(--ink); margin-right:6px}
+.qblock .q{font-weight:640; font-size:15.5px; line-height:1.45; margin:2px 0 8px; max-width:none}
+.qblock dl.qd{display:grid; grid-template-columns:118px minmax(0,1fr); gap:4px 14px; margin:0 0 4px; font-size:13.5px; line-height:1.5}
+.qblock dl.qd dt{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; padding-top:2px}
+.qblock dl.qd dd{margin:0; color:var(--ink-2)}
+.qblock .qnotes{display:none}
+body.companion .qblock .qnotes{display:block; position:relative; height:57px; margin-top:6px; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{content:""; position:absolute; left:0; right:0; border-bottom:1px solid var(--rule-2)}
+body.companion .qblock .qnotes::before{top:18px}
+body.companion .qblock .qnotes::after{top:37px}
+.qindex h4{margin-top:18px}
+table.riskgrid{border-collapse:separate; border-spacing:2px; width:100%; min-width:560px; table-layout:fixed; font-size:13px; line-height:1.35}
+table.riskgrid th{font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; text-align:left; padding:6px 8px; background:transparent}
+table.riskgrid thead th:first-child{width:118px}
+table.riskgrid td{vertical-align:top; padding:8px 10px 10px; border-radius:4px; height:92px}
+table.riskgrid td ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:3px}
+table.riskgrid td p.none{margin:4px 0 0; opacity:.7}
+table.riskgrid .tier{display:block; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:650; opacity:.85}
+table.riskgrid td.t1{background:var(--heat-1); color:var(--heat-ink-1)}
+table.riskgrid td.t2{background:var(--heat-2); color:var(--heat-ink-2)}
+table.riskgrid td.t3{background:var(--heat-3); color:var(--heat-ink-3)}
+table.riskgrid td.t4{background:var(--heat-4); color:var(--heat-ink-4)}
+.rglegend{display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 8px}
+.rglegend span{display:inline-flex; align-items:center; gap:6px}
+.rglegend i{display:inline-block; width:14px; height:14px; border-radius:3px}
+.rglegend i.t1{background:var(--heat-1)} .rglegend i.t2{background:var(--heat-2)} .rglegend i.t3{background:var(--heat-3)} .rglegend i.t4{background:var(--heat-4)}
+.checkcol{width:28px; text-align:center; color:var(--muted)}
+.tag{display:inline-block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--rule-2); border-radius:3px; padding:0 5px; margin-right:6px; color:var(--ink-2); vertical-align:1px}
+.tag.must{border-color:var(--accent); color:var(--accent-ink)}
+#tip{position:fixed; z-index:50; pointer-events:none; background:var(--ink); color:var(--surface); font-size:12px; line-height:1.35; padding:6px 9px; border-radius:6px; max-width:320px; box-shadow:0 4px 18px rgba(0,0,0,.18)}
+@media (max-width:1100px){
+  .shell{grid-template-columns:minmax(0,1fr); gap:12px; padding-block:12px 40px}
+  .toc{position:static; max-height:none; overflow:visible; padding:0}
+  .doc{padding:26px 20px 40px}
+}
+@media (max-width:520px){
+  .qblock dl.qd{grid-template-columns:minmax(0,1fr); gap:0 0}
+  .qblock dl.qd dd{margin-bottom:6px}
+  body{font-size:15px}
+  .cover .ctitle{font-size:28px}
+  h1{font-size:23px} h2{font-size:19px}
+  .doc{padding:20px 14px 32px; border-radius:0}
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chart .inlbl.on3, :root:not([data-theme="light"]) .chart .inlbl.on5{fill:#fff} }
+@media (prefers-reduced-motion:reduce){ .chart .mark{transition:none} }
+@media print{
+  :root{color-scheme:light}
+  body{background:#fff; padding:0; font-size:10.5pt}
+  .toc, .tools, #tip, details.tv, .pagenav, .sitelinks{display:none !important}
+  .shell{display:block; max-width:none; padding:0}
+  .doc{border:0; padding:0; background:#fff}
+  h1{break-before:page}
+  figure.exh, aside.callout, section.snapshot, .qblock, table.data tr{break-inside:avoid}
+  h1, h2, h3, figcaption{break-after:avoid}
+  a{color:inherit; text-decoration:none}
+  .n{border:0}
+  .qblock{border-color:#bbb; background:#fff}
+  body.companion .qblock .qnotes, body.companion .qblock .qnotes::before, body.companion .qblock .qnotes::after{border-bottom:0.5pt solid #aaa}
+  @page{size:A4; margin:14mm 13mm}
+}
+</style>
+</head>
+<body class="report">
+<div class="shell">
+  <nav class="toc" aria-label="Contents">
+    <p class="brand"><a href="index.html">Poly Medicure Initiating Coverage</a></p>
+    <p class="asof">Draft · as of 24 Sep 2026</p>
+    <div class="tools"><button type="button" id="themeBtn" aria-label="Switch colour theme">Theme: system</button></div>
+    <ul class="sitelinks"><li><a href="full-report.html">Full report on one page</a></li><li><a href="Polymed_Plant_Visit_Question_Bank.html">Question bank for printing</a></li></ul>
+    <details id="tocd" open><summary>Contents</summary><ol><li class="l2"><a href="index.html">Summary, key facts and debates</a></li><li class="l1"><a href="a1.html">Part A – The business</a></li><li class="l2"><a href="a1.html">A1 What Polymed sells and where the revenue comes from</a></li><li class="l2"><a href="a2.html">A2 How Polymed makes money</a></li><li class="l2"><a href="a3.html">A3 The FY26 reset and the guidance record</a></li><li class="l2"><a href="a4-1.html">A4.1 Infusion therapy</a></li><li class="l2"><a href="a4-2.html">A4.2 Vascular access and oncology (Plan1Health)</a></li><li class="l2"><a href="a4-3.html">A4.3 Renal care</a></li><li class="l2"><a href="a4-4.html">A4.4 Transfusion and blood management</a></li><li class="l2"><a href="a4-5.html">A4.5 Diagnostics (blood collection)</a></li><li class="l2"><a href="a4-6.html" class="active">A4.6 Anaesthesia, respiratory and critical care</a></li><li class="l3"><a href="#what-the-range-includes-and-how-it-is-used">What the range includes and how it is used</a></li><li class="l3"><a href="#what-is-disclosed-and-what-is-not">What is disclosed, and what is not</a></li><li class="l3"><a href="#critical-care-the-growth-project">Critical care: the growth project</a></li><li class="l3"><a href="#market-and-competition-3">Market and competition</a></li><li class="l3"><a href="#regulation-specific-to-the-line-2">Regulation specific to the line</a></li><li class="l3"><a href="#growth-and-margin-drivers-ranked-3">Growth and margin drivers, ranked</a></li><li class="l3"><a href="#what-to-watch-6">What to watch</a></li><li class="l2"><a href="a4-7.html">A4.7 Gastroenterology, urology, surgery and wound drainage</a></li><li class="l2"><a href="a4-8.html">A4.8 Cardiology</a></li><li class="l2"><a href="a4-9.html">A4.9 Orthopaedics (Citieffe)</a></li><li class="l2"><a href="a4-10.html">A4.10 Components, OEM and contract manufacturing</a></li><li class="l2"><a href="a5.html">A5 Geographies and legal entities</a></li><li class="l2"><a href="a6.html">A6 Manufacturing, capacity and R&amp;D</a></li><li class="l2"><a href="a7.html">A7 What drives growth and margins: the driver maps</a></li><li class="l2"><a href="a8.html">A8 Competitive advantages and vulnerabilities</a></li><li class="l2"><a href="a9.html">A9 Management, governance and capital allocation</a></li><li class="l1"><a href="b1.html">Part B – The industry</a></li><li class="l2"><a href="b1.html">B1 How medical disposables are bought and priced</a></li><li class="l2"><a href="b2.html">B2 The competitor universe</a></li><li class="l2"><a href="b3.html">B3 India medtech: market, policy and demand</a></li><li class="l2"><a href="b4.html">B4 Export-market regimes</a></li><li class="l2"><a href="b5.html">B5 Structural trends</a></li><li class="l1"><a href="c1.html">Part C – Everything else</a></li><li class="l2"><a href="c1.html">C1 Risk register</a></li><li class="l2"><a href="c2.html">C2 Quarterly monitoring dashboard</a></li><li class="l2"><a href="c3.html">C3 Plant-visit question bank</a></li><li class="l2"><a href="c4.html">C4 Channel checks to run</a></li><li class="l1"><a href="glossary.html">Appendices</a></li><li class="l2"><a href="glossary.html">Product glossary: what each device is and how it is used</a></li><li class="l2"><a href="approvals.html">Regulatory approvals by market</a></li><li class="l2"><a href="people.html">Board and key management</a></li><li class="l2"><a href="how-to-read.html">How to read this report</a></li><li class="l2"><a href="sources.html">Sources</a></li></ol></details>
+  </nav>
+  <main class="doc" id="top">
+<nav class="pagenav top" aria-label="Chapter navigation"><a class="prev" href="a4-5.html"><span>Previous</span>A4.5 Diagnostics (blood collection)</a><a class="next" href="a4-7.html"><span>Next</span>A4.7 Gastroenterology, urology, surgery and wound drainage</a></nav>
+<h2 id="a4-6">A4.6 Anaesthesia, respiratory and critical care</h2>
+<p>This chapter covers two different businesses under one heading.</p>
+<ul>
+<li><strong>Anaesthesia and respiratory</strong> is an old, low-priced range of airways, circuits, masks, suction catheters and spinal needles that Polymed has sold for two decades. It was last disclosed at <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span> of standalone turnover.</li>
+<li><strong>Critical care</strong> is a sales division set up in recent years. It bundles ICU devices from several product families (central lines, arterial catheters, midlines, vial-access spikes, Huber needles) and is one of management's two domestic growth bets alongside cardiology.</li>
+</ul>
+<p>Neither has a revenue line in the financial statements or the investor decks. <!-- AR16 p.6; BRSR25 p.5; WEB_CRITICAL_CARE p.1; TR1Q27S p.6 --></p>
+<section class="snapshot"><p class="ct">Anaesthesia, respiratory and critical care at a glance</p><dl><div><dt>Revenue, anaesthesia and respiratory</dt><dd><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span> of FY25 standalone turnover (BRSR), ~<span class="n" title="Our calculation: A-0899/100*A-0351; inputs: 2.9% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 461mn</span> (our calculation); not shown separately in the FY26 BRSR</dd></div><div><dt>Earlier disclosure</dt><dd><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 229mn</span> in FY20 (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.4%</span> of product sales, placement document)</dd></div><div><dt>Revenue, critical care</dt><dd>[not disclosed]</dd></div><div><dt>Management ambition</dt><dd>Critical care to grow "<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">almost 2 and 1/2 times</span>" in FY26 (May-2025); <span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 0.75-1.0bn</span> of revenue in three to four years (Aug-2023)</dd></div><div><dt>Reach</dt><dd><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">20 plus</span> critical-care products launched in a year; present in <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">500</span> hospitals (Nov-2025)</dd></div><div><dt>US</dt><dd>Class I respiratory and airway items listed with the FDA (exempt from 510(k))</dd></div><div><dt>What is disclosed</dt><dd>Occasional shares of turnover; no revenue, growth or margin for either business</dd></div></dl></section>
+<!-- BRSR25 p.5; BRSR26 p.12; PD21 p.130; TR4Q25 p.4; TR1Q24 p.6; TR2Q26 p.5; FDAREG_POLY p.1 -->
+<h3 id="what-the-range-includes-and-how-it-is-used">What the range includes and how it is used</h3>
+<figure class="exh" id="exh-arc_products"><figcaption><span class="exn">Exhibit 42:</span> Anaesthesia, respiratory and critical care is a basket of low-priced, per-patient consumables plus ICU access devices</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Group</th>
+<th>Products</th>
+<th>Unit of demand</th>
+<th>Polymed brands and launches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Airway management</td>
+<td>Endotracheal tubes (plain, cuffed, reinforced); Guedel airways; tracheostomy tubes (placement-document list only); LISA surfactant catheter for premature babies; mucus extractor</td>
+<td>One per intubation, procedure or baby</td>
+<td>Reinforced ET tube and LISA catheter recent launches</td>
+</tr>
+<tr>
+<td>Breathing circuits and filters</td>
+<td>Ventilator circuits (adult, paediatric, expandable with HME filter); Bain circuits; catheter mounts; HME filters</td>
+<td>One per ventilated patient or anaesthetic; HME filters usually daily</td>
+<td>Expandable ventilator-circuit combo kit</td>
+</tr>
+<tr>
+<td>Suction</td>
+<td>Open and closed (in-line) suction catheters</td>
+<td>Open: several per ventilated patient per day; closed: one per patient per protocol interval</td>
+<td>Closed suction catheter launched recently</td>
+</tr>
+<tr>
+<td>Oxygen and aerosol therapy</td>
+<td>Nasal cannula, oxygen catheter, simple, reservoir and venturi masks, nebulizer masks and compressor, incentive spirometer</td>
+<td>One per patient episode; spikes in respiratory epidemics</td>
+<td>Nasocath, Ultra Mask, Polyciser</td>
+</tr>
+<tr>
+<td>Regional anaesthesia</td>
+<td>Spinal needles (Quincke and Whitacre pencil-point), epidural kit, peripheral-nerve-block needle</td>
+<td>One per spinal or regional block; caesarean sections are a large share in India</td>
+<td>Epidural kit and non-stimulating PNB needle launched in FY26-FY27</td>
+</tr>
+<tr>
+<td>Critical care (division)</td>
+<td>CVCs, arterial cannulas and catheters, mini-midlines, vial-access spikes, extension lines, enteral connectors, Huber needles, umbilical catheters</td>
+<td>One per ICU patient episode or line</td>
+<td>Novocent CVC, Art-Can, Art-Cath, Poly Lead, Polyspike</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: Thin catalogue domestic Oct 2025; Product catalogue export Oct 2024; QIP Placement Document Aug 2024; Spinal needle data for website Jul 2026; 30th AGM presentation; 31st AGM presentation; Polymed website product category – Critical Care; Avendus Spark Research</p></figure>
+<!-- CATDOM25 pp.19-22; CATEXP24 pp.71-78; PD24 p.173; SPN26 pp.1-2; DKAGM30 p.18; DKAGM31 p.5; WEB_CRITICAL_CARE p.1; D_product_glossary -->
+<p>Two points on how the range is used.</p>
+<ol>
+<li><strong>Demand follows surgery and ventilation.</strong> Surgery drives airways, circuits, HME filters and spinal needles. Ventilator-days drive suction catheters and circuits. Respiratory epidemics drive masks and nasal cannulas. In the second COVID wave (1QFY22) Polymed raised respiratory capacity "<span class="n" title="Source: 1QFY22 earnings call transcript (2022-12-01), slide/page 2 · Himanshu Baid, MD">three to four times</span>" within weeks and sold an oxygen Y-connector at <span class="n" title="Source: Investor call transcript Jun 2021 (2021-06-02), slide/page 5 · Himanshu Baid, MD">Rs. 10</span>. <!-- D_product_glossary; TR1Q22 p.2; TR2021 p.5 --></li>
+<li><strong>Critical care is a customer segment, not a product line.</strong> Its catalogue page regroups items also sold under infusion, vascular access and gastroenterology. Their revenue is therefore split across the BRSR buckets, and a separate "critical care" number would overlap with A4.1 and A4.2. <!-- WEB_CRITICAL_CARE p.1; PD24 pp.168, 174 --></li>
+</ol>
+<h3 id="what-is-disclosed-and-what-is-not">What is disclosed, and what is not</h3>
+<figure class="exh" id="exh-arc_disclosure"><figcaption><span class="exn">Exhibit 43:</span> Anaesthesia and respiratory has been a small, steady share of sales on every disclosure since FY18; critical care has never been quantified</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>Period</th>
+<th>Measure</th>
+<th>Anaesthesia and respiratory</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY18</td>
+<td>Revenue (share of product sales)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 184mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.6%</span>)</td>
+<td>Placement document, Feb-2021</td>
+</tr>
+<tr>
+<td>FY19</td>
+<td>Revenue (share)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 198mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.4%</span>)</td>
+<td>Placement document, Feb-2021</td>
+</tr>
+<tr>
+<td>FY20</td>
+<td>Revenue (share)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 229mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">3.4%</span>)</td>
+<td>Placement document, Feb-2021</td>
+</tr>
+<tr>
+<td>9MFY21</td>
+<td>Revenue (share)</td>
+<td><span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">Rs. 238mn</span> (<span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 130">4.2%</span>)</td>
+<td>Placement document, Feb-2021</td>
+</tr>
+<tr>
+<td>FY20</td>
+<td>Share of sales</td>
+<td><span class="n" title="Source: Roadshow presentation Feb 2021 (2021-02-04), slide/page 13">4%</span> of sales</td>
+<td>QIP deck</td>
+</tr>
+<tr>
+<td>FY22 (presumed)</td>
+<td>Share of sales</td>
+<td><span class="n" title="Source: Investor presentation May 2022 (2022-05-24), slide/page 10">5%</span> of sales</td>
+<td>May-2022 deck (visual read)</td>
+</tr>
+<tr>
+<td>FY25</td>
+<td>Share of standalone turnover</td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span>, ~<span class="n" title="Our calculation: A-0899/100*A-0351; inputs: 2.9% (BRSR FY25, p.5); Rs. 16.0bn (Annual Report FY26, p.32)">Rs. 461mn</span> (our calculation)</td>
+<td>BRSR FY25</td>
+</tr>
+<tr>
+<td>FY26</td>
+<td>Share of standalone turnover</td>
+<td>Not listed</td>
+<td>BRSR FY26</td>
+</tr>
+<tr>
+<td>Any year</td>
+<td>Critical care revenue</td>
+<td>[not disclosed]</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: QIP Placement Document Feb 2021; Roadshow presentation Feb 2021; Investor presentation May 2022; BRSR FY25; BRSR FY26; Annual Report FY26; our calculation; Avendus Spark Research</p></figure>
+<!-- PD21 p.130; DKFEB21 p.13; DKMAY22 p.10; BRSR25 p.5; BRSR26 p.12 -->
+<p>The FY26 BRSR drops the anaesthesia and respiratory line. Its FY25 share (<span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span>) is close to the rise in the infusion share, from <span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">67.1%</span> to <span class="n" title="Source: BRSR FY26 (2026-08-13), slide/page 12">69.9%</span>, which suggests the line was folded into infusion. That is our inference; the company has not said so. The bases also differ: the placement-document series is consolidated product sales, the BRSR is standalone turnover. The two show a business that has grown roughly in line with the group rather than faster than it. <!-- BRSR25 p.5; BRSR26 p.12; PD21 p.130 --></p>
+<h3 id="critical-care-the-growth-project">Critical care: the growth project</h3>
+<p>Management's account of critical care has moved:</p>
+<ul>
+<li><strong>Launch date.</strong> The FY26 annual report dates entry to 2019. The placement document says the critical care division was launched in FY23, and on the May-2025 call the MD described the division as having "just started last year". <!-- AR26 p.11; PD24 p.167; TR4Q25 p.4 --></li>
+<li><strong>Scale claims.</strong> By Nov-2025 Polymed had launched <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">20 plus</span> critical-care products in a year and was present in <span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">500</span> hospitals, including top-tier chains. <span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">6</span> new products were launched across infusion and critical care in 1QFY27. <!-- TR2Q26 p.5; DK1Q27 p.22 --></li>
+<li><strong>Targets.</strong> In Aug-2023 management aimed for <span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 0.75-1.0bn</span> of critical-care revenue in three to four years, saying the segment "definitely has a better margin". In May-2025 it hoped the segment would grow "<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">almost 2 and 1/2 times</span>" in FY26. Neither outcome has been disclosed. <!-- TR1Q24 p.6; TR4Q25 p.4 --></li>
+<li><strong>Investment.</strong> Polymed added <span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 14 · Himanshu Baid, MD">70</span> people across cardiology and critical care in FY25, whose "contribution is very less" so far, in the MD's words. <!-- TR4Q25 p.14 --></li>
+</ul>
+<p><strong>Why management likes the segment.</strong> It argues that critical care has few global competitors ("<span class="n nl" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 14 · Himanshu Baid, MD">Cardiology ... 20 companies ... Critical Care is only 4-5 companies</span>"). Indian demand is largely imported (<span class="n" title="Source: 2QFY25 earnings call transcript (2024-11-06), slide/page 8 · Himanshu Baid, MD">80-90%</span>, Oct-2024), and ICU patients consume many devices each: management put ICU beds at ~<span class="n" title="Source: 1QFY22 earnings call transcript (2022-12-01), slide/page 11 · Himanshu Baid, MD">20%</span> of hospital beds (Jul-2021). The segment is also the channel for oncology products (Section A4.2). <!-- TR2Q26 p.14; TR2Q25 p.8; TR1Q22 p.11; TR4Q25 p.4 --></p>
+<p>We read critical care as a cross-selling engine for devices Polymed already makes, sold by clinically trained staff, rather than a new product category. Its success should therefore show up in the domestic "others" line and in private-hospital growth, not in a separately reported number.</p>
+<h3 id="market-and-competition-3">Market and competition</h3>
+<p>Market data are thin and vendor-based. Research and Markets pages put the global endotracheal-tube market at <span class="n" title="Source: Endotracheal Tubes Market – Global Forecast 2026-2032 (360iResearch) – Research and Markets product page (2026-09) · third-party estimate">$2.54bn</span> in 2026 and anaesthesia face masks at <span class="n" title="Source: Anesthesia Face Masks Market – Global Forecast (360iResearch) – Research and Markets product page (2026-01) · third-party estimate">$252.42mn</span> in 2025 (vendor estimates). <!-- VND_RNM_ETT p.1; VND_RNM_ANMASK p.1 --></p>
+<p>The multinationals are consolidating, and Chinese makers are widening their ranges:</p>
+<ul>
+<li><strong>Teleflex</strong> agreed in Dec-2025 to sell its Acute Care and Interventional Urology businesses to Intersurgical for <span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$530mn</span>, alongside a separate <span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$1.5bn</span> sale of its OEM unit to Montagu and Kohlberg. Acute Care covers airway management, anaesthesia, respiratory, humidification, oxygen therapy and regional anaesthesia. Teleflex had already sold respiratory lines to Medline in 2021. <!-- TFX_10K25 p.1 --></li>
+<li><strong>ICU Medical</strong>, which bought Smiths Medical (Portex airway and tracheostomy products), reported Vital Care revenue of <span class="n" title="Source: ICU Medical, Inc. – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-19)">$437.9mn</span> in CY25. That covers anaesthesia, respiratory, haemodynamic monitoring and regional anaesthesia, after most IV solutions moved to a joint venture. It names Intersurgical among its main Vital Care competitors. <!-- ICUI_10K25 p.1 --></li>
+<li><strong>BD and B. Braun</strong> are strong in regional anaesthesia: BD sells spinal and epidural needles and trays in its Medication Delivery Solutions unit, and B. Braun cites regional anaesthesia as a growth driver of its Hospital Care division. <!-- BD_10K25 p.1; BBRAUN_AR25 p.44 --></li>
+<li><strong>BD in critical care.</strong> In Sep-2024 BD bought Edwards Lifesciences' Critical Care group for <span class="n" title="Source: Becton, Dickinson and Company – Form 10-K for fiscal year ended 30-Sep-2025 (2025-11-25)">$3.9bn</span> and renamed it Advanced Patient Monitoring. Its range includes arterial pressure monitoring products and pulmonary artery catheters, so the largest infusion competitor now also sells the monitoring systems that Polymed's arterial cannulas and catheters connect to. <!-- BD_10K25 p.1 --></li>
+<li><strong>Chinese makers</strong> are registering the same basic items in Europe: KDL completed CE registration for <span class="n" title="Source: Shanghai Kindly Enterprise Development Group Co Ltd (603987.SH) – 2025 Annual Report (Chinese; 上海康德莱企业发展集团股份有限公司2025年年度报告) (2026-04-21), slide/page 21">22</span> products in CY25, including suction, feeding and urinary catheters. <!-- KDL_AR25 p.21 --></li>
+</ul>
+<p>In India, management says imports supply most of critical-care demand. CRISIL notes that Indian makers mostly produce basic items such as nasal oxygen cannulas, oxygen masks, ventilator circuits and mucus extractors, and that multinationals and imports dominate the consumables market, although the same report puts imports at only <span class="n" title="Source: QIP Placement Document Aug 2024 (2024-08-23), slide/page 134">30-40%</span> of consumables sales. <!-- TR2Q26 p.14; PD24 p.132, p.134 --></p>
+<p>Two domestic rivals show the competition in that basic range. Romsons sells anaesthesia, respiratory, urology and transfusion disposables; 1Lattice puts its FY24 revenue at <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">Rs. 8.6bn</span> and its EBITDA margin at <span class="n" title="Source: G Surgiwear Ltd – Draft Red Herring Prospectus (Industry Overview based on 1Lattice 'Medical devices market industry report', 29 Dec 2025) (2025-12-30), slide/page 219">26.8%</span>, and Temasek took a minority stake in it in Sep-2026. Angiplast makes nasal oxygen cannulas and oxygen and nebulizer masks and says it exports more than <span class="n" title="Source: Angiplast Pvt Ltd – corporate website (self-reported export share) (2026-09-24)">80%</span> of its output. <!-- DRHP_GSURG pp.211, 219; MB_ROMSONS p.1; ANGIPLAST_WEB p.1 --></p>
+<p>Polymed's position in the basic range rests on price and breadth within the same distributor basket as infusion. In critical care it rests on local manufacture against imports and on clinical selling. We see no evidence of a share lead in any single product here.</p>
+<h3 id="regulation-specific-to-the-line-2">Regulation specific to the line</h3>
+<ul>
+<li><strong>US.</strong> Polymed's FDA device listings include Class I respiratory and airway items that need no 510(k): tracheobronchial suction catheters and a suction catheter kit (Jaipur), nasal oxygen cannula, breathing circuit, oropharyngeal airway, and oxygen and venturi masks (Faridabad). These can be sold in the US without clearance. The suction catheter kit is listed under the proprietary name "McKesson", a US distributor, which points to private-label supply (Section A4.10). <!-- FDAREG_POLY p.1; D digest A4.10 --></li>
+<li><strong>India pricing.</strong> In 2014 the NPPA alleged that Polymed charged <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 205">20%</span> above the maximum price on spinal needles. It demanded <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 205">Rs. 9.3mn</span>, of which <span class="n" title="Source: QIP Placement Document Feb 2021 (2021-02-20), slide/page 205">Rs. 1.8mn</span> was paid under protest. The contingent liability (<span class="n" title="Source: Annual Report FY25 (2025-09), slide/page 133">Rs. 6.7mn</span>) was shown in the FY25 accounts as since disposed of. The Maharashtra FDA survey reported in Sep-2026, which named a Polymed IV set, also found a Nebplus-brand nebuliser, a brand not in Polymed's catalogues, marked up <span class="n" title="Source: Maharashtra FDA Commissioner Tukaram Mundhe writes to NPPA, flags 2,841% margin on IV set (2026-09-16)">1,688%</span>; the consultation on trade margins ordered that month would cover respiratory consumables too (Section A4.1). <!-- PD21 p.205; AR25 p.133; FPJ_MAHFDA_2609 p.1; CATDOM25 pp.19-22; MB_MRP_2609 p.1 --></li>
+<li><strong>Europe.</strong> Most of the range is low-risk under the MDR, but re-certification of each variant still costs time. Management said Polymed had to drop products during the MDR transition (Section A4.1). <!-- TR3Q26 p.8 --></li>
+</ul>
+<h3 id="growth-and-margin-drivers-ranked-3">Growth and margin drivers, ranked</h3>
+<ol>
+<li><strong>Critical-care cross-selling in Indian private hospitals</strong> (management target; our view: plausible but unmeasured). The levers are import substitution and clinical sales staff. It is measurable only through domestic growth. <!-- TR2Q26 p.5 --></li>
+<li><strong>Surgical volumes and caesarean-heavy spinal-needle demand</strong> (our view). This is the base-load driver of the anaesthesia range. <!-- D_product_glossary --></li>
+<li><strong>Export of Class I items to the US</strong> (our view: small). Polymed already lists them, and private label is one route. <!-- FDAREG_POLY p.1 --></li>
+<li><strong>Margin</strong> (our view). Anaesthesia and respiratory items are commodity-like, and we read them as earning below the group average. Critical-care devices replace imports and management says they carry "a better margin". Neither margin is disclosed. <!-- TR1Q24 p.6 --></li>
+</ol>
+<h3 id="what-to-watch-6">What to watch</h3>
+<figure class="exh" id="exh-arc_watch"><figcaption><span class="exn">Exhibit 44:</span> Anaesthesia, respiratory and critical care: what to watch</figcaption><div class="tw"><table class="data">
+<thead>
+<tr>
+<th>KPI or risk</th>
+<th>Why it matters</th>
+<th>Latest datapoint</th>
+<th>Where disclosed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anaesthesia and respiratory share of turnover</td>
+<td>Only disclosure of the line's size</td>
+<td><span class="n" title="Source: BRSR FY25 (2025-09-02), slide/page 5">2.9%</span> (FY25); dropped in FY26</td>
+<td>BRSR, annual</td>
+</tr>
+<tr>
+<td>Critical-care revenue vs. management's ambition</td>
+<td>Tests a stated growth pillar</td>
+<td>[not disclosed]; target <span class="n" title="Source: 1QFY24 earnings call transcript (2023-08-17), slide/page 6 · management guidance; Himanshu Baid, MD">Rs. 0.75-1.0bn</span> in three to four years from Aug-2023</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>Hospitals using critical-care products</td>
+<td>Proxy for reach</td>
+<td><span class="n" title="Source: 2QFY26 earnings call transcript (2025-11-14), slide/page 5 · Himanshu Baid, MD">500</span> (Nov-2025)</td>
+<td>Calls</td>
+</tr>
+<tr>
+<td>New critical-care and anaesthesia launches</td>
+<td>Pipeline for cross-selling</td>
+<td><span class="n" title="Source: Investor deck 1QFY27 (2026-08-07), slide/page 22">6</span> launches in 1QFY27 with infusion</td>
+<td>Presentations</td>
+</tr>
+<tr>
+<td>Consolidation among competitors</td>
+<td>Intersurgical-Teleflex creates a larger rival in airway and anaesthesia</td>
+<td><span class="n" title="Source: Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025 (2026-02-27)">$530mn</span> deal signed Dec-2025</td>
+<td>Competitor filings</td>
+</tr>
+</tbody>
+</table></div><p class="src">Source: BRSR FY25; 1QFY24 earnings call transcript; 2QFY26 earnings call transcript; Investor deck 1QFY27; Teleflex Incorporated – Form 10-K for fiscal year ended 31-Dec-2025; Avendus Spark Research</p></figure>
+<p><strong>Open questions for management</strong> (also in the question bank):</p>
+<ul>
+<li>where the anaesthesia and respiratory line went in the FY26 BRSR;</li>
+<li>critical-care revenue, and how it overlaps with vascular access;</li>
+<li>whether the FY26 ambition for critical care to grow "<span class="n" title="Source: 4QFY25 earnings call transcript (2025-05-13), slide/page 4 · management guidance; Himanshu Baid, MD">almost 2 and 1/2 times</span>" was met;</li>
+<li>US private-label volumes of Class I respiratory items.</li>
+</ul>
+
+<nav class="pagenav bottom" aria-label="Chapter navigation"><a class="prev" href="a4-5.html"><span>Previous</span>A4.5 Diagnostics (blood collection)</a><a class="next" href="a4-7.html"><span>Next</span>A4.7 Gastroenterology, urology, surgery and wound drainage</a></nav>
+  </main>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var modes=['system','light','dark'], cur='system';
+  try{ cur=localStorage.getItem('pm-theme')||'system'; }catch(e){}
+  function apply(m){ cur=m; if(m==='system'){root.removeAttribute('data-theme');} else {root.setAttribute('data-theme',m);} btn.textContent='Theme: '+m; try{localStorage.setItem('pm-theme',m);}catch(e){} }
+  apply(cur);
+  btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  if(window.matchMedia && window.matchMedia('(max-width:1100px)').matches){ var d=document.getElementById('tocd'); if(d) d.open=false; }
+  var tip=document.getElementById('tip');
+  function show(e,el){ tip.textContent=el.getAttribute('data-tip'); tip.hidden=false; move(e); }
+  function move(e){ var x=e.clientX+14, y=e.clientY+14; var w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-14; if(y+h>window.innerHeight-8) y=e.clientY-h-14; tip.style.left=x+'px'; tip.style.top=y+'px'; }
+  [].forEach.call(document.querySelectorAll('.n[title]'),function(el){ el.setAttribute('data-tip',el.getAttribute('title')); el.removeAttribute('title'); });
+  document.addEventListener('pointerover',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) show(e,el); });
+  document.addEventListener('pointermove',function(e){ if(e.pointerType!=='touch' && !tip.hidden) move(e); });
+  document.addEventListener('pointerout',function(e){ if(e.pointerType==='touch') return; var el=e.target.closest && e.target.closest('[data-tip]'); if(el) tip.hidden=true; });
+  document.addEventListener('click',function(e){ var el=e.target.closest && e.target.closest('[data-tip]'); if(el){ show(e,el); } else { tip.hidden=true; } });
+  window.addEventListener('scroll',function(){ tip.hidden=true; },{passive:true});
+  var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ links.forEach(function(a){a.classList.remove('active');}); var a=map[en.target.id]; if(a) a.classList.add('active'); } }); },{rootMargin:'0px 0px -75% 0px'});
+    Object.keys(map).forEach(function(id){ var h=document.getElementById(id); if(h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>
