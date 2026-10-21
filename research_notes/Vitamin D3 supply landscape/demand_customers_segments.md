@@ -163,7 +163,6 @@ India is the standout pharma-D3 market. Cholecalciferol 60,000 IU (capsules, sac
   - Uprise-D3 60K (Alkem), Calcirol (Cadila Pharmaceuticals), D-Rise 60K (USV), Tayo 60K (Eris) — [Vibcare](https://vibcare.co.in/vitamin-d3-drops)
   - Cipcal D3 (Cipla), Nuvit D3, Calcirol 60K — [Sarthi Lifesciences](https://www.sarthilifesciences.com/top-10-vitamin-d3-sachets-in-india/)
   - Pure D3 60,000 IU (Aristo), whose page cites IQVIA MAT Feb-25 rankings — [Aristo Pharma](https://www.aristopharma.co.in/product/pure-d3-60000-iu/)
-  - Uprise-D3 is described as the most frequently found D3 product in Indian pharmacies. That is a retail-presence claim, not a sales ranking — [search summary of Indian retail sources](https://www.medplusmart.com/product/uprise-d3-60k-capsule_upri0004)
 - **Market-research estimates of the India vitamin D supplement market** (low reliability):
   - IMARC: USD 62.15m (2024) → USD 124.35m (2033) — [IMARC](https://www.imarcgroup.com/india-vitamin-d-supplements-market)
   - TechSci: USD 98.02m (2024) → USD 157.81m (2030) — [TechSci](https://www.techsciresearch.com/report/india-vitamin-d-supplements-market/27699.html)
@@ -308,7 +307,7 @@ Food, supplement and pharma grades are described as "relatively stable". Mid-202
 - **The 2017-18 cycle at Fermenta.** Feed D3 prices rose 3 to 4x in 6 to 9 months (China "Blue Sky" shutdowns). Fermenta's animal nutrition share of revenue went from 44% to 67% in FY19, with nearly 4x realisations per tonne — [BP Equities 2021](https://s3.ap-south-1.amazonaws.com/bpwealth-cdn/pdf/1618577883-BP%20Equities_%20Fermenta%20Biotech%20Ltd._Initiating%20Coverage_BUY_Trgt%20402.pdf)
 - **Food/supplement grade.** ChemAnalyst quoted Vitamin D3 100,000 IU/g at USD 13,200/MT (FOB Shanghai, week to 27 Jun 2025), up from USD 12,900/MT in June. It attributed this to pharma, nutraceutical and personal-care demand and lean inventories — [ChemAnalyst news](https://www.chemanalyst.com/NewsAndDeals/NewsDetails/rising-demand-and-lean-inventories-push-vitamin-d3-prices-higher-in-china-and-us-37514)
   - Tridge's China D3 powder series fell from USD 26.79/kg (Jun 2025) to USD 20.67/kg (Sep 2025); grade not clear — [Tridge](https://www.tridge.com/market-overview/powder-vitamin-d3)
-- **Europe feed D3 500 (unverified).** About USD 36/kg on contract booking (from about USD 33), attributed to a dsm-firmenich Q4 2025 update; the attribution is not confirmed. B2B asking prices for D3 500 are about USD 15 to 26/kg FOB — [search summary of feed-grade price sources](https://polifarfeedadditive.en.made-in-china.com/product/zsuEOgrHAbhC/China-Vitamin-D3-500-000-Iu-G-50-Powder-Feed-Grade.html)
+- **B2B asking prices (not transaction prices).** Chinese listings for D3 500 (500,000 IU/g) feed grade are roughly USD 15 to 26/kg FOB — [Made-in-China D3 500 listings](https://mm.made-in-china.com/hot-china-products/Vitamin_D3_500_Price.html); [Polifar listing](https://polifarfeedadditive.en.made-in-china.com/product/zsuEOgrHAbhC/China-Vitamin-D3-500-000-Iu-G-50-Powder-Feed-Grade.html)
   - Glowlit reported D3 500 at USD 24.9/kg in Feb 2020 — [FeedNavigator, Mar 2020](https://WWW.FEEDNAVIGATOR.COM/Article/2020/03/20/What-impact-are-supply-disruptions-having-on-vitamin-prices)
 - **Crystalline USP/EP (40 MIU/g).** No public price was found. Merck/Sigma's Ph. Eur./BP/USP 40 MIU/g crystal is "request pricing" only — [MilliporeSigma 500936](https://merckmillipore.com/CL/en/product/Vitamin-D3-cholecalciferol-cryst.-1-g-40-Mio.I.U.,MDA_CHEM-500936)
 - **NF cholesterol feedstock.** GB 7300.202-2019 allows only lanolin as raw material for NF cholesterol in China — [Tianfeng via Sina](https://finance.sina.com.cn/roll/2024-12-17/doc-inczuerp4854682.shtml)
@@ -323,7 +322,8 @@ Food, supplement and pharma grades are described as "relatively stable". Mid-202
 - **Value share swings with the feed cycle.** Because feed prices swing 3 to 9x within cycles while human-grade prices are stable, the feed share of total D3 value does too. It is low in trough years (2019-20, 2022-23 and probably 2026) and high in spike years (2017-18, H2 2024 to H1 2025).
 
 ### Gaps
-- No verified 2026 price series for feed D3 500 (China or Europe), NF/food-grade D3 100, oily concentrates or crystalline USP/EP. The EUR 36/kg "dsm-firmenich" European figure is unverified.
+- No verified 2026 price series for feed D3 500 (China or Europe), NF/food-grade D3 100, oily concentrates or crystalline USP/EP.
+- A search snippet from an unidentified market-research page put European feed D3 at about USD 36/kg (contract booking, up from about USD 33), attributed to a "dsm-firmenich Q4 2025 update". Neither the page nor the attribution could be confirmed, so do not use it.
 - No published price relationship (e.g., crystal-to-feed per-IU ratio) from a primary trade source (Feedinfo, Kynetec, Boyar Hexun) was accessible.
 
 ---
