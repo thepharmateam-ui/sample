@@ -19,7 +19,7 @@ The RHP gives no standalone Indian fermentation API market size. It says China s
 
 **(a) Global pharma and global API**
 - **Global pharmaceutical spending** went from $1,138bn (INR 81,074bn) in 2019 to $1,333bn (INR 110,315bn) in 2022, a 5.4% CAGR. COVID vaccines and therapeutics were about $92bn of the 2022 figure — [Concord RHP p.103](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-- A second passage puts the global pharma market at $1.3trn (INR 110trn) in 2022, rising to $1.6trn (INR 133trn) by 2026 (4.8% CAGR, IQVIA MIDAS) — [Concord RHP, "Global Pharmaceutical Market Size"](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
+- A second passage puts the global pharma market at $1.3trn (INR 110trn) in 2022, rising to $1.6trn (INR 133trn) by 2026 (4.8% CAGR, IQVIA MIDAS) — [Concord RHP p.126, "Global Pharmaceutical Market Size"](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
 - **Global API market**, from the exhibit "Global API Market: 2019 to 2026" — [Concord RHP p.106](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf):
   - $181bn (2019), $188bn (2020), $211bn (2021) and $219bn (INR 18,157bn, 2022), reaching $278bn (INR 23,051bn) in 2026.
   - CAGR is 6.5% for 2019–22 and 6.1% for 2022–26.
@@ -71,7 +71,7 @@ The RHP gives no standalone Indian fermentation API market size. It says China s
   | Sub-segment | Volume share, 2022 | Value share, 2022 | Approx. value, 2022 | Outlook 2022–26 |
   |---|---|---|---|---|
   | Immunosuppressants | ~2% | 9–11% | ~$1bn | Volume growth 9–11%; more than 90% of approved small-molecule organ-transplant drugs are fermentation-based |
-  | Oncology | ~1% | 12–14% | ~$1.4bn | — |
+  | Oncology (p.115) | ~1% | 12–14% | ~$1.4bn | — |
   | Anti-infectives (antibacterials and antifungals) | 74% | 28–30% | ~$3.2bn | Value growth 2–4% to ~$3.5bn in 2026 |
 
   - **Generic share of volume, 2022:** immunosuppressants 54%, oncology 29%, anti-infectives 23%.
@@ -89,10 +89,10 @@ The RHP gives no standalone Indian fermentation API market size. It says China s
   | Teicoplanin | $20m | 3,268 kg | — | Value CAGR 3.3%; Sanofi has 38% volume share |
   | Mupirocin | — | 24 MT | — | — |
 
-- **Patent-expiry driver** (Evaluate Pharma): 22 fermentation-based biologics lose exclusivity in 2023–25, worth about $60bn (INR 4,458bn). About four fermentation-derived small molecules worth about $280m also lose exclusivity — [Concord RHP p.119](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-- **China's share:** "China has traditionally dominated the small molecule fermentation APIs market and accounted for nearly 70% of the global market supply until 2021." Separately, "small molecule fermentation API companies are largely concentrated in Asia, with China accounting for more than 50% of the global supply" — [Concord RHP pp.119–120](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-- **Concord's own position:** more than 20% volume share in 2022 across its identified fermentation APIs — [Concord RHP p.120](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-- **cGMP competition:** of more than 3,000 API makers, only 542 meet cGMP (Newport 2017) — [Concord RHP p.120](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
+- **Patent-expiry driver** (Evaluate Pharma): 22 fermentation-based biologics lose exclusivity in 2023–25, worth about $60bn (INR 4,458bn). About four fermentation-derived small molecules worth about $280m also lose exclusivity — [Concord RHP p.120](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
+- **China's share:** "China has traditionally dominated the small molecule fermentation APIs market and accounted for nearly 70% of the global market supply until 2021." Separately, "small molecule fermentation API companies are largely concentrated in Asia, with China accounting for more than 50% of the global supply" — [Concord RHP pp.119, 121](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
+- **Concord's own position:** more than 20% volume share in 2022 across its identified fermentation APIs — [Concord RHP p.121](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
+- **cGMP competition:** of more than 3,000 API makers, only 542 meet cGMP (Newport 2017) — [Concord RHP p.121](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
 
 **(c) Indian API market and exports (Concord RHP)**
 - **Indian API market, 2022:** $17bn (INR 1,377bn). Of this, $5bn (INR 356bn) is exports and $12bn (INR 1,035bn) is APIs consumed in Indian formulation manufacturing — [Concord RHP p.122](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
@@ -199,19 +199,19 @@ Anthem's F&S report (Dec-2024) puts global API at $262.2bn in 2023, rising to $3
   | Alternative proteins | $2.7bn | $4.2bn | 9.2% |
 
   - Pharma fermentation CDMO totals $35.2bn by 2030F.
-- **Manufacturing cost vs USA (=100%), Symbiotec RHP:** India 30–50%, China 45–55%, Europe 65–75% ("Industry KOL, Frost & Sullivan") — [Symbiotec RHP p.211](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
+- **Manufacturing cost vs USA (=100%), Symbiotec RHP:** India 30–50%, China 45–55%, Europe 65–75% ("Industry KOL, Frost & Sullivan") — [Symbiotec RHP p.212](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
 
 **Symbiotec DRHP (filed 19-Dec-2025; F&S report dated 18-Dec-2025)** — same report title, one year earlier base
 - The DRHP was filed for about ₹2,180 crore (₹150 crore fresh issue plus ₹2,030 crore OFS). BRLMs were JM Financial, Avendus, Motilal Oswal and Nomura — [BioSpectrum](https://www.biospectrumindia.com/news/16/27105/symbiotec-pharmalab-files-drhp-with-sebi-for-ipo-aggregating-upto-rs-2180-cr.html).
 - **Global pharma:** $1.2trn (2019) rising to $2.1trn (2029). CAGR is 5.2% for 2019–24 and 6.4% for 2024–29 — [Symbiotec DRHP](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
 - **Global API:** about $285.4bn in 2024, rising to $399.9bn by 2029 (7.0% CAGR). Small-molecule APIs were about 66% of 2024 value. North America's share goes from 47.1% (2019) to 52.4% (2024) — [Symbiotec DRHP p.186](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
   - **Revision in the RHP:** the DRHP says biological APIs rose "from 22% in 2019 to 24% in 2024". The RHP's 26.5% (2020) to 35.7% (2025) is a large revision in the modality split.
-- **Global fermentation API:** $91.7bn in 2024, rising to $150.4bn in 2029. CAGR is 10.4% forecast and 12.7% for 2019–24 — [Symbiotec DRHP p.190](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
+- **Global fermentation API:** $91.7bn in 2024, rising to $150.4bn in 2029. CAGR is 10.4% forecast and 12.7% for 2019–24 — [Symbiotec DRHP p.191](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
   - Small-molecule pharma: $18.7bn in 2024 (4.6% CAGR).
   - Biologics pharma: $73.0bn (11.7%).
   - Specialty ingredients: $704.0bn (6.4%).
 - **Classical fermentation API:** $464.7m in 2024, with a 0.5–2.5% CAGR for 2024–29 — [Symbiotec DRHP p.190](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
-- **India API exports:** $4.1bn (2019), $4.8bn (2024), $6.3bn (2029F); CAGR 3.2% then 5.6% — [Symbiotec DRHP](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
+- **India API exports:** $4.1bn (2019), $4.8bn (2024), $6.3bn (2029F); CAGR 3.2% then 5.6% — [Symbiotec DRHP p.211](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf).
   - Regulated markets: $1.9bn to $2.3bn to $3.1bn.
   - Emerging markets: $2.2bn to $2.5bn to $3.2bn (2.6% then 5.1%).
   - Total pharma exports were $28bn in 2024.
@@ -338,14 +338,14 @@ Broad market-research houses put "steroid hormone API" at $3.5bn+, an order of m
   - Overall FY26 global volume share: 38.2% in corticosteroids and 23.841% in steroidal hormones (excluding androstenedione and HPC).
   - The top five products average 57.0%.
   - Shares are "indicative and based on the Company's supply as provided by them".
-- **Share changes vs the DRHP:** the DRHP (FY25) claimed 36.2% of corticosteroid and **44.2%** of steroidal-hormone API volume — [Symbiotec DRHP](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf). The steroidal-hormone figure roughly halved in the RHP, probably because of a scope change; a critical review also flagged this — [Listings Tracker](https://listingstracker.substack.com/p/ipo-2-symbiotec-pharmalab).
+- **Share changes vs the DRHP:** the DRHP (FY25) claimed 36.2% of corticosteroid and **44.2%** of steroidal-hormone API volume — [Symbiotec DRHP pp.1, 208](https://www.bseindia.com/corporates/download/379013/IPO%20Prior/DRHP_fillingversion_20251219165255.pdf). The steroidal-hormone figure roughly halved in the RHP, probably because of a scope change; a critical review also flagged this — [Listings Tracker](https://listingstracker.substack.com/p/ipo-2-symbiotec-pharmalab).
 - **India:** Symbiotec is "the only Indian API supplier with regulated market DMFs" in progesterone, hydrocortisone, methylprednisolone and prednisolone. It had the highest corticosteroid and steroid-hormone API revenue among Indian API makers in FY24–26 — [Symbiotec RHP p.205](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf). **No Indian steroid API market size is given.**
 - **Steroid intermediates:**
   - The only sized intermediate is androstenedione (AD): $61.0m and 176 t in FY26, with 4 global regulated DMF holders.
   - Manufacturing begins with "fermentation conversion of plant sterols into key intermediates", then chemical conversion.
   - Symbiotec has make-vs-buy flexibility on about 80% of its portfolio, "reducing dependence on China for intermediates".
   - Sources: [Symbiotec RHP pp.193, 202, 205](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
-- **China (qualitative only):** "China's Cortisone and steroid export dominance has fueled global pharmaceutical supply chains for decades... post-pandemic supply shocks and rising costs have driven leading companies to implement China + 1 strategies" — [Symbiotec RHP p.211](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
+- **China (qualitative only):** "China's Cortisone and steroid export dominance has fueled global pharmaceutical supply chains for decades... post-pandemic supply shocks and rising costs have driven leading companies to implement China + 1 strategies" — [Symbiotec RHP p.212](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
 - **Symbiotec's raw-material imports from China** (share of total expenses) — [Symbiotec RHP p.36](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf):
   - FY24: ₹3,119.82m (52.79%).
   - FY25: ₹1,024.32m (16.82%).
@@ -406,13 +406,14 @@ India's import dependence on China for APIs, KSMs and DIs actually rose to about
   - Volume: chronic disease, diagnosis rates and emerging markets.
   - Value: complex and high-potency APIs. 227 NCEs and 88 NBEs were approved over 2016–2022, and about 25% of NCEs in development are highly potent.
 - **Concord RHP: API market restraints:** stringent cGMP and impurity regulation (for example, carcinogenic impurities), green-chemistry costs, the need for specialization in complex APIs, and supply-chain diversification strain — [Concord RHP pp.108–109](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-- **Concord RHP: fermentation drivers and trends** — [Concord RHP pp.119–120](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf):
+- **Concord RHP: fermentation drivers and trends** — [Concord RHP pp.119–121](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf):
   - Low-cost agricultural feedstocks and fewer toxic solvents.
   - Loss of exclusivity: 22 fermentation biologics (about $60bn) and about 4 fermentation small molecules (about $280m) in 2023–25.
   - CRISPR and strain improvement.
   - Outsourcing to CDMOs.
   - "China's Dominance Being Replaced by India's Growth".
   - High entry barriers.
+  - Sources: [Concord RHP pp.119–121](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
 - **Symbiotec RHP: fermentation API drivers** — [Symbiotec RHP pp.188–189](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf):
   - Technology: synthetic biology, CRISPR, AI bioprocess.
   - Cost efficiency.
@@ -446,7 +447,7 @@ India's import dependence on China for APIs, KSMs and DIs actually rose to about
 - **Trade defence:** DGTR has an anti-dumping investigation into Chinese APIs, including Penicillin G, 6-APA, amoxycillin trihydrate and montelukast — [IASPoint](https://iaspoint.com/dgtr-anti-dumping-investigation-into-chinese-apis/). The exact initiation date was not verified.
 - **India's cost and regulatory edge:**
   - Setting up an FDA plant costs about 50% less, operations are 40–70% cheaper and labour 60–70% cheaper vs the West — [Concord RHP p.125](https://www.jefferies.com/wp-content/uploads/sites/4/2023/10/Concord-Biotech-limited-RHP.pdf).
-  - Manufacturing cost indexed to the USA: India 30–50%, China 45–55% — [Symbiotec RHP p.211](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
+  - Manufacturing cost indexed to the USA: India 30–50%, China 45–55% — [Symbiotec RHP p.212](https://assets.upstox.com/ipo/documents/rhp/symbiotec-rhp.pdf).
 
 ### Inferences
 - **China+1 is real but slow:** China's share of Indian API/KSM imports rose (68% to 74%) between FY21 and FY25 despite PLI.
