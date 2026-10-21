@@ -336,17 +336,17 @@ MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),1000 mg,2026,1,Pfizer
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Amneal,Generic,1172.9,718,18606.43,0.3,0.2,0.1,15.86,25.91,1.63,2
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Fresenius Kabi,Generic,33343.4,24875,1413647.18,9.5,8.3,9.4,42.4,56.83,1.34,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,314203.2,273236,13418248.37,89.8,91.2,89.5,42.71,49.11,1.15,10
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,157.0,109,843.11,0.0,0.0,0.0,5.37,7.73,1.44,10
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,174.0,129,2786.08,0.0,0.0,0.0,16.01,21.6,1.35,16
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2018,"1,2,3,4",Sagent,Generic,886.0,716,140533.8,0.3,0.2,0.9,158.61,196.28,1.24,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Amneal,Generic,1029.3,752,8355.4,0.3,0.3,0.0,8.12,11.11,1.37,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Fresenius Kabi,Generic,32896.0,25541,1142434.33,9.5,8.7,4.8,34.73,44.73,1.29,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,311160.7,265064,22449952.53,90.0,90.7,94.9,72.15,84.7,1.17,7
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,19.0,15,790.0,0.0,0.0,0.0,41.58,52.67,1.27,9
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,311160.7,265064,22449952.53,89.9,90.7,94.8,72.15,84.7,1.17,7
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,104.0,95,38168.65,0.0,0.0,0.2,367.01,401.78,1.09,15
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2019,"1,2,3,4",Sagent,Generic,819.0,724,46851.02,0.2,0.2,0.2,57.21,64.71,1.13,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Amneal,Generic,1284.6,642,4682.64,0.5,0.3,0.0,3.65,7.29,2.0,3
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Fresenius Kabi,Generic,27581.1,21143,1427088.84,9.9,9.1,6.2,51.74,67.5,1.3,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,249610.5,208793,21433448.62,89.4,90.3,93.4,85.87,102.65,1.2,8
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,31.0,26,83.99,0.0,0.0,0.0,2.71,3.23,1.19,11
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,59.0,46,363.76,0.0,0.0,0.0,6.17,7.91,1.28,16
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2020,"1,2,3,4",Sagent,Generic,661.6,576,87605.61,0.2,0.2,0.4,132.42,152.09,1.15,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2021,"1,2,3,4",Amneal,Generic,963.0,586,4442.66,0.3,0.2,0.0,4.61,7.58,1.64,2
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),125 mg,2021,"1,2,3,4",Fresenius Kabi,Generic,36160.8,29287,1836064.47,12.7,12.2,8.1,50.78,62.69,1.23,0
@@ -389,49 +389,50 @@ MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),2000 mg,2023,"1,2,3,4
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),2000 mg,2024,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,49.2,171,1869.76,100.0,100.0,100.0,38.0,10.93,0.29,4
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),2000 mg,2025,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,29.9,284,121715.89,100.0,100.0,100.0,4071.58,428.58,0.11,3
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),2000 mg,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,5.9,58,344.43,100.0,100.0,100.0,58.14,5.94,0.1,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Amneal,Generic,1044.7,334,4793.25,2.5,1.8,0.4,4.59,14.35,3.13,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Fresenius Kabi,Generic,11995.8,6315,695509.54,29.2,35.0,55.2,57.98,110.14,1.9,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,27161.9,11043,550645.61,66.1,61.1,43.7,20.27,49.86,2.46,10
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,265.0,12,313.18,0.6,0.1,0.0,1.18,26.1,22.08,7
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Sagent,Generic,610.0,355,8672.31,1.5,2.0,0.7,14.22,24.43,1.72,2
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Amneal,Generic,413.1,240,1471.89,0.9,1.1,0.1,3.56,6.13,1.72,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Fresenius Kabi,Generic,12328.8,6716,263110.47,27.8,30.7,11.0,21.34,39.18,1.84,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,30950.5,14578,2122118.58,69.9,66.6,88.5,68.57,145.57,2.12,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Sagent,Generic,616.0,344,10703.69,1.4,1.6,0.4,17.38,31.12,1.79,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Amneal,Generic,746.0,131,632.6,2.2,0.8,0.0,0.85,4.83,5.69,9
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Fresenius Kabi,Generic,11173.1,5508,370658.85,33.5,33.2,20.0,33.17,67.29,2.03,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,21108.8,10777,1484125.04,63.3,64.9,79.9,70.31,137.71,1.96,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Sagent,Generic,318.0,196,1584.55,1.0,1.2,0.1,4.98,8.08,1.62,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Amneal,Generic,158.5,129,596.54,0.4,0.7,0.0,3.76,4.62,1.23,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Fresenius Kabi,Generic,14253.4,7453,674940.03,37.6,37.9,35.7,47.35,90.56,1.91,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,23299.0,11981,1209637.11,61.5,60.9,64.1,51.92,100.96,1.94,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Sagent,Generic,178.0,115,3113.17,0.5,0.6,0.2,17.49,27.07,1.55,2
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Amneal,Generic,381.2,262,4489.57,0.8,1.1,0.2,11.78,17.14,1.46,5
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Dr. Reddy's,Generic,653.6,265,3797.4,1.4,1.1,0.2,5.81,14.33,2.47,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Fresenius Kabi,Generic,15768.4,8520,611446.29,34.2,35.2,30.4,38.78,71.77,1.85,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,29229.7,15081,1387153.12,63.3,62.3,69.0,47.46,91.98,1.94,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Sagent,Generic,114.0,94,2154.64,0.2,0.4,0.1,18.9,22.92,1.21,2
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Amneal,Generic,1405.6,844,61000.18,3.1,3.5,2.5,43.4,72.28,1.67,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Dr. Reddy's,Generic,10556.2,3970,532719.8,23.5,16.4,21.5,50.46,134.19,2.66,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Fresenius Kabi,Generic,16015.2,9401,1237286.1,35.7,38.8,49.9,77.26,131.61,1.7,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Hikma (West-Ward),Generic,638.6,400,40588.79,1.4,1.7,1.6,63.56,101.47,1.6,3
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,16212.3,9583,606615.99,36.1,39.6,24.5,37.42,63.3,1.69,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Sagent,Generic,43.0,27,374.81,0.1,0.1,0.0,8.72,13.88,1.59,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Amneal,Generic,219.9,123,873.01,0.6,0.6,0.1,3.97,7.1,1.79,11
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Dr. Reddy's,Generic,13297.2,5480,364426.72,33.4,27.3,34.0,27.41,66.5,2.43,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Fresenius Kabi,Generic,11903.6,7146,524419.02,29.9,35.6,49.0,44.06,73.39,1.67,3
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Hikma (West-Ward),Generic,4823.3,1894,23600.64,12.1,9.4,2.2,4.89,12.46,2.55,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,9512.1,5415,157537.25,23.9,27.0,14.7,16.56,29.09,1.76,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Sagent,Generic,29.0,18,156.99,0.1,0.1,0.0,5.41,8.72,1.61,7
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Dr. Reddy's,Generic,23652.4,9688,505553.37,35.9,32.9,44.6,21.37,52.18,2.44,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Fresenius Kabi,Generic,11700.7,6511,228485.65,17.8,22.1,20.1,19.53,35.09,1.8,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Hikma (West-Ward),Generic,13367.8,3144,50726.44,20.3,10.7,4.5,3.79,16.13,4.25,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,17109.8,10111,349834.4,26.0,34.3,30.8,20.45,34.6,1.69,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Amneal,Generic,12.5,13,746.64,0.1,0.2,0.3,59.73,57.43,0.96,3
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Dr. Reddy's,Generic,4807.2,2592,29219.75,43.7,41.7,13.6,6.08,11.27,1.85,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Fresenius Kabi,Generic,1939.9,1030,142582.41,17.6,16.6,66.4,73.5,138.43,1.88,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Hikma (West-Ward),Generic,1243.6,564,9029.84,11.3,9.1,4.2,7.26,16.01,2.21,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,3001.8,2013,33161.58,27.3,32.4,15.4,11.05,16.47,1.49,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Amneal,Generic,1044.7,334,4793.25,0.7,0.4,0.1,4.59,14.35,3.13,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Fresenius Kabi,Generic,11995.8,6315,695509.54,8.2,7.8,12.3,57.98,110.14,1.9,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,133031.8,73737,4944378.53,90.5,91.3,87.5,37.17,67.05,1.8,10
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,265.0,12,313.18,0.2,0.0,0.0,1.18,26.1,22.08,13
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2018,"1,2,3,4",Sagent,Generic,610.0,355,8672.31,0.4,0.4,0.2,14.22,24.43,1.72,2
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Amneal,Generic,413.1,240,1471.89,0.3,0.3,0.0,3.56,6.13,1.72,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Fresenius Kabi,Generic,12328.8,6716,263110.47,8.2,8.0,3.8,21.34,39.18,1.84,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,136700.1,76135,6445729.19,91.1,91.2,92.8,47.15,84.66,1.8,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,17.0,16,222304.13,0.0,0.0,3.2,13076.71,13894.01,1.06,13
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2019,"1,2,3,4",Sagent,Generic,616.0,344,10703.69,0.4,0.4,0.2,17.38,31.12,1.79,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Amneal,Generic,746.0,131,632.6,0.6,0.2,0.0,0.85,4.83,5.69,9
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Fresenius Kabi,Generic,11173.1,5508,370658.85,9.7,8.7,6.0,33.17,67.29,2.03,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,103094.5,57590,5779857.18,89.4,90.8,93.9,56.06,100.36,1.79,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2020,"1,2,3,4",Sagent,Generic,318.0,196,1584.55,0.3,0.3,0.0,4.98,8.08,1.62,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Amneal,Generic,158.5,129,596.54,0.1,0.2,0.0,3.76,4.62,1.23,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Fresenius Kabi,Generic,14253.4,7453,674940.03,12.2,10.7,10.9,47.35,90.56,1.91,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,101947.8,61798,5491636.98,87.5,88.9,89.0,53.87,88.86,1.65,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2021,"1,2,3,4",Sagent,Generic,178.0,115,3113.17,0.2,0.2,0.1,17.49,27.07,1.55,2
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Amneal,Generic,381.2,262,4489.57,0.3,0.3,0.1,11.78,17.14,1.46,5
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Dr. Reddy's,Generic,653.6,265,3797.4,0.5,0.3,0.1,5.81,14.33,2.47,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Fresenius Kabi,Generic,15768.4,8520,611446.29,11.2,10.2,9.0,38.78,71.77,1.85,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,123617.1,74726,6135367.13,88.0,89.1,90.8,49.63,82.1,1.65,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2022,"1,2,3,4",Sagent,Generic,114.0,94,2154.64,0.1,0.1,0.0,18.9,22.92,1.21,2
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Amneal,Generic,1405.6,844,61000.18,0.9,1.0,0.7,43.4,72.28,1.67,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Dr. Reddy's,Generic,10556.2,3970,532719.8,7.1,4.5,5.7,50.46,134.19,2.66,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Fresenius Kabi,Generic,16015.2,9401,1237286.1,10.8,10.6,13.2,77.26,131.61,1.7,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Hikma (West-Ward),Generic,638.6,400,40588.79,0.4,0.5,0.4,63.56,101.47,1.6,3
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,119672.9,74007,7496612.51,80.7,83.5,80.0,62.64,101.3,1.62,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2023,"1,2,3,4",Sagent,Generic,43.0,27,374.81,0.0,0.0,0.0,8.72,13.88,1.59,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Amneal,Generic,219.9,123,873.01,0.2,0.2,0.0,3.97,7.1,1.79,11
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Dr. Reddy's,Generic,13297.2,5480,364426.72,10.1,7.4,7.8,27.41,66.5,2.43,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Fresenius Kabi,Generic,11903.6,7146,524419.02,9.1,9.6,11.2,44.06,73.39,1.67,3
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Hikma (West-Ward),Generic,4823.3,1894,23600.64,3.7,2.5,0.5,4.89,12.46,2.55,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,101248.0,59821,3771411.72,77.0,80.3,80.5,37.25,63.04,1.69,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2024,"1,2,3,4",Sagent,Generic,29.0,18,156.99,0.0,0.0,0.0,5.41,8.72,1.61,7
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Dr. Reddy's,Generic,23652.4,9688,505553.37,15.1,11.5,17.3,21.37,52.18,2.44,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Fresenius Kabi,Generic,11700.7,6511,228485.65,7.5,7.8,7.8,19.53,35.09,1.8,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Hikma (West-Ward),Generic,13367.8,3144,50726.44,8.5,3.7,1.7,3.79,16.13,4.25,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2025,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,107776.5,64656,2129789.17,68.9,77.0,73.1,19.76,32.94,1.67,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Amneal,Generic,12.5,13,746.64,0.0,0.1,0.2,59.73,57.43,0.96,3
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Dr. Reddy's,Generic,4807.2,2592,29219.75,17.8,15.6,6.8,6.08,11.27,1.85,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Fresenius Kabi,Generic,1939.9,1030,142582.41,7.2,6.2,33.0,73.5,138.43,1.88,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Hikma (West-Ward),Generic,1243.6,564,9029.84,4.6,3.4,2.1,7.26,16.01,2.21,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),40 mg,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,18947.7,12374,250854.47,70.3,74.7,58.0,13.24,20.27,1.53,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,5378.9,5977,629195.84,100.0,100.0,100.0,116.97,105.27,0.9,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,4719.2,5949,380922.32,100.0,100.0,100.0,80.72,64.03,0.79,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2020,"1,2,3,4",Hikma (West-Ward),Generic,44.9,25,1089.45,1.1,0.6,0.6,24.28,43.58,1.79,6
@@ -453,54 +454,54 @@ MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2025,"1,2,3,4"
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2026,1,Dr. Reddy's,Generic,722.5,171,6069.62,24.6,19.3,7.9,8.4,35.49,4.23,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2026,1,Hikma (West-Ward),Generic,906.5,128,1654.93,30.9,14.5,2.2,1.83,12.93,7.08,0
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),500 mg,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,1305.7,586,69032.04,44.5,66.2,89.9,52.87,117.8,2.23,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Amneal,Generic,2217.6,1052,23399.68,0.5,0.3,0.1,10.55,22.24,2.11,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Fresenius Kabi,Generic,51235.4,35667,2954602.59,12.2,10.4,14.4,57.67,82.84,1.44,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,363026.2,304643,17309667.43,86.7,88.9,84.6,47.68,56.82,1.19,36
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,422.0,121,1156.29,0.1,0.0,0.0,2.74,9.56,3.49,17
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Sagent,Generic,1804.3,1339,181600.51,0.4,0.4,0.9,100.65,135.62,1.35,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Amneal,Generic,1442.4,992,9827.29,0.3,0.3,0.0,6.81,9.91,1.45,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Fresenius Kabi,Generic,53290.7,37454,2049551.97,12.7,11.0,7.1,38.46,54.72,1.42,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,363891.8,299270,26938784.48,86.6,88.3,92.7,74.03,90.01,1.22,19
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,19.0,15,790.0,0.0,0.0,0.0,41.58,52.67,1.27,16
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Sagent,Generic,1573.4,1288,60443.83,0.4,0.4,0.2,38.42,46.93,1.22,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Amneal,Generic,2030.6,773,5315.24,0.6,0.3,0.0,2.62,6.88,2.63,12
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Fresenius Kabi,Generic,45109.9,31167,2228189.03,13.2,11.6,8.2,49.39,71.49,1.45,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Hikma (West-Ward),Generic,3089.7,604,52911.27,0.9,0.2,0.2,17.13,87.6,5.12,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,290544.9,235851,24802823.68,85.0,87.6,91.2,85.37,105.16,1.23,22
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,31.0,26,83.99,0.0,0.0,0.0,2.71,3.23,1.19,15
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Amneal,Generic,2217.6,1052,23399.68,0.4,0.3,0.1,10.55,22.24,2.11,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Fresenius Kabi,Generic,51235.4,35667,2954602.59,9.8,8.8,11.9,57.67,82.84,1.44,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,468896.1,367337,21703400.35,89.4,90.6,87.3,46.29,59.08,1.28,36
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,439.0,141,3099.26,0.1,0.0,0.0,7.06,21.98,3.11,29
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2018,"1,2,3,4",Sagent,Generic,1804.3,1339,181600.51,0.3,0.3,0.7,100.65,135.62,1.35,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Amneal,Generic,1442.4,992,9827.29,0.3,0.2,0.0,6.81,9.91,1.45,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Fresenius Kabi,Generic,53290.7,37454,2049551.97,10.1,9.3,6.1,38.46,54.72,1.42,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,469641.5,360827,31262395.09,89.3,90.1,92.9,66.57,86.64,1.3,19
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,121.0,111,260472.78,0.0,0.0,0.8,2152.67,2346.6,1.09,28
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2019,"1,2,3,4",Sagent,Generic,1573.4,1288,60443.83,0.3,0.3,0.2,38.42,46.93,1.22,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Amneal,Generic,2030.6,773,5315.24,0.5,0.2,0.0,2.62,6.88,2.63,12
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Fresenius Kabi,Generic,45109.9,31167,2228189.03,10.6,9.9,7.1,49.39,71.49,1.45,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Hikma (West-Ward),Generic,3089.7,604,52911.27,0.7,0.2,0.2,17.13,87.6,5.12,6
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,372530.6,282664,29098555.82,87.9,89.4,92.4,78.11,102.94,1.32,22
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Pfizer/Hospira (A-Methapred/A-Hydrocort ANDA),Generic,59.0,46,363.76,0.0,0.0,0.0,6.17,7.91,1.28,26
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2020,"1,2,3,4",Sagent,Generic,1068.4,897,92154.63,0.3,0.3,0.3,86.25,102.74,1.19,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Amneal,Generic,1121.5,715,5039.2,0.3,0.3,0.0,4.49,7.05,1.57,8
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Fresenius Kabi,Generic,55663.0,41796,2870773.93,15.8,14.8,10.7,51.57,68.69,1.33,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Hikma (West-Ward),Generic,3707.6,811,68463.75,1.1,0.3,0.3,18.47,84.42,4.57,3
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,289990.7,238755,23914593.69,82.5,84.4,88.9,82.47,100.16,1.21,24
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Amneal,Generic,1121.5,715,5039.2,0.3,0.2,0.0,4.49,7.05,1.57,8
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Fresenius Kabi,Generic,55663.0,41796,2870773.93,12.9,12.6,9.2,51.57,68.69,1.33,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Hikma (West-Ward),Generic,3707.6,811,68463.75,0.9,0.2,0.2,18.47,84.42,4.57,3
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,368639.4,288572,28196593.56,85.7,86.8,90.5,76.49,97.71,1.28,24
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2021,"1,2,3,4",Sagent,Generic,832.1,685,31402.65,0.2,0.2,0.1,37.74,45.84,1.21,5
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Amneal,Generic,1207.2,898,27336.07,0.3,0.3,0.1,22.64,30.44,1.34,7
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Dr. Reddy's,Generic,2027.2,1385,23558.97,0.5,0.4,0.1,11.62,17.01,1.46,12
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Fresenius Kabi,Generic,59285.0,44073,2223403.16,15.0,14.0,7.2,37.5,50.45,1.35,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Hikma (West-Ward),Generic,1519.5,807,74001.15,0.4,0.3,0.2,48.7,91.7,1.88,2
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,331529.7,267627,28656161.13,83.6,84.8,92.3,86.44,107.08,1.24,23
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Amneal,Generic,1207.2,898,27336.07,0.2,0.2,0.1,22.64,30.44,1.34,7
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Dr. Reddy's,Generic,2027.2,1385,23558.97,0.4,0.4,0.1,11.62,17.01,1.46,12
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Fresenius Kabi,Generic,59285.0,44073,2223403.16,12.1,11.8,6.2,37.5,50.45,1.35,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Hikma (West-Ward),Generic,1519.5,807,74001.15,0.3,0.2,0.2,48.7,91.7,1.88,2
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,425917.1,327272,33404375.14,86.8,87.3,93.4,78.43,102.07,1.3,23
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2022,"1,2,3,4",Sagent,Generic,777.0,653,29478.08,0.2,0.2,0.1,37.94,45.14,1.19,6
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Amneal,Generic,2791.2,1886,157684.29,0.7,0.6,0.4,56.49,83.61,1.48,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Dr. Reddy's,Generic,27506.6,16685,1266206.88,6.9,5.1,3.6,46.03,75.89,1.65,1
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Fresenius Kabi,Generic,57953.0,48597,6212450.97,14.6,15.0,17.4,107.2,127.84,1.19,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Hikma (West-Ward),Generic,4080.9,3338,542982.62,1.0,1.0,1.5,133.05,162.67,1.22,7
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,304262.4,253201,27481556.82,76.5,78.1,77.1,90.32,108.54,1.2,20
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Amneal,Generic,2791.2,1886,157684.29,0.6,0.5,0.4,56.49,83.61,1.48,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Dr. Reddy's,Generic,27506.6,16685,1266206.88,5.5,4.3,3.0,46.03,75.89,1.65,1
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Fresenius Kabi,Generic,57953.0,48597,6212450.97,11.6,12.5,14.6,107.2,127.84,1.19,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Hikma (West-Ward),Generic,4080.9,3338,542982.62,0.8,0.9,1.3,133.05,162.67,1.22,7
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,407722.9,317625,34371553.34,81.4,81.7,80.8,84.3,108.21,1.28,20
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2023,"1,2,3,4",Sagent,Generic,903.0,430,4746.19,0.2,0.1,0.0,5.26,11.04,2.1,9
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Amneal,Generic,1423.4,389,46709.94,0.4,0.1,0.3,32.82,120.08,3.66,16
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Dr. Reddy's,Generic,49408.5,24609,1230384.26,12.3,9.1,6.7,24.9,50.0,2.01,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Fresenius Kabi,Generic,54634.3,36515,3840489.22,13.6,13.5,20.8,70.29,105.18,1.5,3
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Hikma (West-Ward),Generic,23923.4,6922,172500.7,5.9,2.6,0.9,7.21,24.92,3.46,4
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,273130.9,202270,13200805.94,67.8,74.6,71.4,48.33,65.26,1.35,16
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Amneal,Generic,1423.4,389,46709.94,0.3,0.1,0.2,32.82,120.08,3.66,16
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Dr. Reddy's,Generic,49408.5,24609,1230384.26,10.0,7.6,5.6,24.9,50.0,2.01,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Fresenius Kabi,Generic,54634.3,36515,3840489.22,11.0,11.2,17.4,70.29,105.18,1.5,3
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Hikma (West-Ward),Generic,23923.4,6922,172500.7,4.8,2.1,0.8,7.21,24.92,3.46,4
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,364866.8,256676,16814680.41,73.8,78.9,76.1,46.08,65.51,1.42,16
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2024,"1,2,3,4",Sagent,Generic,422.1,322,3047.33,0.1,0.1,0.0,7.22,9.46,1.31,9
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Amneal,Generic,162.5,26,485.13,0.0,0.0,0.0,2.98,18.66,6.25,27
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Dr. Reddy's,Generic,72617.6,45597,2760309.08,14.6,14.4,16.8,38.01,60.54,1.59,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Fresenius Kabi,Generic,55108.2,32295,1217149.91,11.1,10.2,7.4,22.09,37.69,1.71,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Hikma (West-Ward),Generic,70007.5,14590,290438.88,14.1,4.6,1.8,4.15,19.91,4.8,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,297858.9,223185,12209059.32,60.1,70.7,74.1,40.99,54.7,1.33,13
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Dr. Reddy's,Generic,72617.6,45597,2760309.08,12.4,12.3,15.1,38.01,60.54,1.59,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Fresenius Kabi,Generic,55108.2,32295,1217149.91,9.4,8.7,6.7,22.09,37.69,1.71,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Hikma (West-Ward),Generic,70007.5,14590,290438.88,11.9,3.9,1.6,4.15,19.91,4.8,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Pfizer (Pharmacia & Upjohn) - brand,Brand,388525.6,277730,13989014.09,66.3,75.0,76.6,36.01,50.37,1.4,13
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2025,"1,2,3,4",Sagent,Generic,31.0,30,179.29,0.0,0.0,0.0,5.78,5.98,1.03,7
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Amneal,Generic,12.5,13,746.64,0.0,0.0,0.0,59.73,57.43,0.96,6
 MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,"Civica (Hikma-made, ANDA203125)",Generic,187.3,48,247.63,0.2,0.1,0.0,1.32,5.16,3.9,2
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Dr. Reddy's,Generic,16636.0,11976,629026.18,20.3,19.8,20.7,37.81,52.52,1.39,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Fresenius Kabi,Generic,7272.4,4300,286285.39,8.9,7.1,9.4,39.37,66.58,1.69,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Hikma (West-Ward),Generic,6189.0,2253,34898.09,7.6,3.7,1.1,5.64,15.49,2.75,0
-MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,51636.4,41980,2093844.97,63.0,69.3,68.8,40.55,49.88,1.23,2
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Dr. Reddy's,Generic,16636.0,11976,629026.18,17.0,16.9,19.3,37.81,52.52,1.39,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Fresenius Kabi,Generic,7272.4,4300,286285.39,7.4,6.1,8.8,39.37,66.58,1.69,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Hikma (West-Ward),Generic,6189.0,2253,34898.09,6.3,3.2,1.1,5.64,15.49,2.75,0
+MPSS,Methylprednisolone sodium succinate inj (Solu-Medrol),All strengths,2026,1,Pfizer (Pharmacia & Upjohn) - brand,Brand,67582.3,52341,2311537.86,69.0,73.8,70.8,34.2,44.16,1.29,2
