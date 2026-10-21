@@ -1,18 +1,36 @@
 # Pfizer-only Cortef vials anchor Symbiotec's DCV case
 
-*As of 21 October 2026. Prepared for a sell-side analyst covering Symbiotec Pharmalab. Statements marked "inference" are our reading of the data, not disclosed facts.*
+*As of 21 October 2026. Prepared for a sell-side analyst covering Symbiotec Pharmalab. Every factual claim links to its source. "Our calculation" marks figures we derived from the linked dataset. "Inference" marks our reading of the data, not a disclosed fact. All links were checked and opened on 21 October 2026. SEC EDGAR links open in a browser, but EDGAR refuses scripts that do not identify themselves.*
 
-The view that "Medrol is crowded, Cortef is not" holds, but each half needs a qualifier. **Generic Solu-Medrol (methylprednisolone sodium succinate, MPSS)** has five active ANDA holders and seven listed generic labelers. Only **four generic labelers actually report ASP**: Dr. Reddy's (selling under Tianjin Kingyork's ANDA), Fresenius Kabi, Hikma, and Civica (selling under Hikma's ANDA). No new MPSS ANDA has been approved since September 2022. Pfizer still writes **~74% of Medicaid MPSS prescriptions**. The blended Part B ASP per 125 mg has fallen from a **US$6.57 peak (Q3 2018) to US$6.01 in Q4 2026**, and generic 125 mg vials acquire at **US$3.27 (NADAC)**.
+The view that "Medrol is crowded, Cortef is not" holds, but each half needs a qualifier.
 
-**Generic Solu-Cortef (hydrocortisone sodium succinate, HSS)** exists only at **100 mg, in plain vials**, from Cipla (September 2024), Apotex (February 2026) and Zydus (May 2026). The **250 mg, 500 mg and 1 g strengths are sold only as Pfizer Act-O-Vial dual-chamber vials (DCVs) and have no ANDA at all**. J1720 ASP has compounded **~11% a year since 2016, to US$21.84 per 100 mg in Q4 2026**, which implies roughly **US$55, US$109 and US$218 per 250 mg, 500 mg and 1 g vial**. No US generic of either molecule comes in a DCV.
+**Generic Solu-Medrol (methylprednisolone sodium succinate, MPSS):**
+- **Approvals vs sellers:** five active ANDA holders ([Orange Book](https://www.fda.gov/media/76860/download)) and seven listed generic labelers ([openFDA NDC, MPSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200)). Only **four generic labelers actually report ASP** ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)):
+  - Dr. Reddy's, selling under Tianjin Kingyork's ANDA ([DRL label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=738753c7-507d-4881-5194-02dd7597768b))
+  - Fresenius Kabi
+  - Hikma
+  - Civica, selling under Hikma's ANDA ([Civica label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2))
+- **No new approvals:** no MPSS ANDA has been approved since September 2022 ([Orange Book](https://www.fda.gov/media/76860/download)).
+- **Brand share:** Pfizer still writes **~74% of Medicaid MPSS prescriptions** (our calculation from [SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)).
+- **Price:** the blended Part B ASP per 125 mg has fallen from a **US$6.57 peak (Q3 2018) to US$6.01 in Q4 2026** (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). Generic 125 mg vials acquire at **US$3.27** ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)).
+
+**Generic Solu-Cortef (hydrocortisone sodium succinate, HSS):**
+- **100 mg plain vials only:** the only generics are from Cipla (September 2024), Apotex (February 2026) and Zydus (May 2026) ([Orange Book](https://www.fda.gov/media/76860/download)).
+- **Larger strengths are Pfizer-only:** the **250 mg, 500 mg and 1 g strengths are sold only as Pfizer Act-O-Vial dual-chamber vials (DCVs) and have no ANDA at all** ([Orange Book](https://www.fda.gov/media/76860/download); [Solu-Cortef label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65eefd58-b166-4d71-ade6-45c8fdf86922)).
+- **Price:** J1720 ASP has compounded **~11% a year since 2016, to US$21.84 per 100 mg in Q4 2026**. That implies roughly **US$55, US$109 and US$218 per 250 mg, 500 mg and 1 g vial** (our calculation from [CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip) and [crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)).
+
+**No US generic of either molecule comes in a DCV.** Every generic label describes a single-chamber vial ([openFDA NDC, MPSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200); [openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)).
 
 Symbiotec's subsidiary Knovea has disclosed four things:
-- It filed its **first DCV ANDA in September 2026** and did not name the molecule.
-- It plans a **second filing in January–March 2027**.
-- On **30 September 2026** it licensed both DCV products to an unnamed global partner, for milestones plus a profit share.
-- It sizes the two-product US market at **US$288 mn**, a figure that covers both molecules combined.
+- It filed its **first DCV ANDA in September 2026** and did not name the molecule ([Q1FY27 presentation](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf), slide 5).
+- It plans a **second filing in Q4 FY27 (January–March 2027)** (same slide).
+- On **30 September 2026** it licensed both DCV products to an unnamed global partner, for milestones plus a profit share ([BSE Reg. 30 filing](https://www.bseindia.com/xml-data/corpfiling/AttachLive/47a96a6d-0348-40db-a957-9ae203f20580.pdf)).
+- It sizes the two-product US market at **US$288 mn**, a figure that covers both molecules combined ([RHP](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf) p.182; [BSE Reg. 30 filing](https://www.bseindia.com/xml-data/corpfiling/AttachLive/47a96a6d-0348-40db-a957-9ae203f20580.pdf)).
 
-The most protected slice is the HSS large-strength DCVs, where the first approved ANDA could plausibly seek Competitive Generic Therapy (CGT) exclusivity (inference). Outpatient proxies, however, put those strengths at only **~3% of Medicaid HSS prescriptions**, so your IQVIA pack-level data has to size the hospital channel before the thesis can carry numbers. Under standard GDUFA timelines, and with the Mhow plant not yet FDA-inspected, approval is unlikely before **mid-2027 (FY28)**.
+**The opportunity (inference):**
+- **Best-protected slice:** the HSS large-strength DCVs, where the first approved ANDA could plausibly seek Competitive Generic Therapy (CGT) exclusivity ([FDA CGT list](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)).
+- **But small in outpatient data:** those strengths are only **~3% of Medicaid HSS prescriptions** (our calculation from [SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)). Your IQVIA pack-level data has to size the hospital channel before the thesis can carry numbers.
+- **Timing:** FDA's goal is to act on standard ANDAs within 10 months ([FDA GDUFA III goals letter](https://www.fda.gov/media/153631/download)). The company has disclosed US FDA audits only at its Rau and Pithampur API plants, not at Mhow ([Q1FY27 presentation](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf), slide 5). Approval is therefore unlikely before **mid-2027 (FY28)**.
 
 ## Medrol has four live generic sellers; Cortef has none above 100 mg
 
@@ -38,7 +56,7 @@ Sources: [FDA Orange Book data file](https://www.fda.gov/media/76860/download); 
 | HSS 500 mg | Act-O-Vial only | 1 | 0 | 100% (2025) | $109.19 | $100.56 |
 | HSS 1 g | Act-O-Vial only | 1 | 0 | 100% | $218.39 | $201.05 |
 
-Implied ASP is the CMS payment limit × billing units per vial ÷ 1.06. The October 2026 file reflects 2Q26 sales.
+Implied ASP is the CMS payment limit × billing units per vial ÷ 1.06 (our calculation). The October 2026 file reflects 2Q26 sales ([CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip)). Medicaid Rx shares are our calculation from [SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3); HSS 500 mg uses 2025 ([SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)). Presentation and Orange Book source counts come from the [Orange Book](https://www.fda.gov/media/76860/download) and the [Solu-Medrol](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd99be87-c8d9-48d6-a8e5-e081052e3f19) and [Solu-Cortef](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65eefd58-b166-4d71-ade6-45c8fdf86922) labels.
 
 ### Players-by-strength matrix: MPSS (Solu-Medrol)
 
@@ -67,9 +85,9 @@ Sources: [Orange Book](https://www.fda.gov/media/76860/download); [FDA CGT appro
 
 ### Approval timing
 
-The two molecules sit at opposite ends of the generic life cycle. **MPSS** generics date from Fresenius Kabi's 2004 approvals. Only **two MPSS ANDAs were approved in 2018–2026** (Kingyork April 2021; Hikma 40/125 mg September 2022), and **none since**. Every entry after 2022 came through a distribution deal on an existing ANDA (Dr. Reddy's on Kingyork's; Civica on Hikma's), not a new filing. Of the 53 MPSS records in Drugs@FDA, 44 are legacy discontinued ANDAs, including all of Hospira's "A-Methapred" products ([openFDA Drugs@FDA](https://api.fda.gov/drug/drugsfda.json?search=products.active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=100)).
+The two molecules sit at opposite ends of the generic life cycle. **MPSS** generics date from Fresenius Kabi's 2004 approvals. Only **two MPSS ANDAs were approved in 2018–2026** (Kingyork April 2021; Hikma 40/125 mg September 2022), and **none since** ([Orange Book](https://www.fda.gov/media/76860/download)). Every entry after 2022 came through a distribution deal on an existing ANDA, not a new filing: Dr. Reddy's on Kingyork's ([DRL label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=738753c7-507d-4881-5194-02dd7597768b)) and Civica on Hikma's ([Civica label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2)). Of the 53 MPSS records in Drugs@FDA, 44 are legacy discontinued ANDAs, including all of Hospira's "A-Methapred" products ([openFDA Drugs@FDA](https://api.fda.gov/drug/drugsfda.json?search=products.active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=100)).
 
-**HSS** went the other way. About 25 legacy ANDAs from 1978–2006 were all discontinued, leaving **Pfizer as sole source until Cipla's CGT approval in September 2024**. The three current ANDAs were all approved in the last 25 months. FDA's CGT list records Cipla as CGT-eligible with first marketing on 26 September 2024, so its 180-day exclusivity would have lapsed around March 2025 (our calculation). Zydus was approved as a CGT but was not eligible for exclusivity, and Apotex is not on the list ([FDA CGT list](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)). Neither reference product carries Orange Book patents or exclusivities, so no Paragraph IV route exists for either molecule ([Orange Book](https://www.fda.gov/media/76860/download)).
+**HSS** went the other way. About 25 legacy ANDAs from 1978–2006 were all discontinued, leaving **Pfizer as sole source until Cipla's CGT approval in September 2024**. The three current ANDAs were all approved in the last 25 months ([Orange Book](https://www.fda.gov/media/76860/download)). Pfizer was the only J1720 labeler in every CMS crosswalk from Q1 2016 to Q4 2024 ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). FDA's CGT list records Cipla as CGT-eligible with first marketing on 26 September 2024, so its 180-day exclusivity would have lapsed around March 2025 (our calculation). Zydus was approved as a CGT but was not eligible for exclusivity, and Apotex is not on the list ([FDA CGT list](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)). Neither reference product carries Orange Book patents or exclusivities, so no Paragraph IV route exists for either molecule ([Orange Book](https://www.fda.gov/media/76860/download)).
 
 ### Presentation: no generic DCV in either molecule
 
@@ -84,7 +102,9 @@ On supply, Pfizer's Act-O-Vial line has repeatedly been the bottleneck:
 - **Solu-Cortef, April 2025:** the 100 mg Act-O-Vial again went to 80% wholesaler allocation ([FDA-posted Pfizer letter, 14 Apr 2025](https://www.fda.gov/media/186195/download)).
 - **MPSS, mid-2025:** backorders hit Pfizer, Fresenius and Hikma at the same time, and Pfizer's 40/125 mg Act-O-Vials were on weekly allocation ([Isaacs et al., PMC12646679](https://pmc.ncbi.nlm.nih.gov/articles/PMC12646679/)).
 
-Civica, a non-profit created to stabilise hospital supply, entered MPSS in December 2025. Hikma's 1 g vial carries a Vizient Novaplus private label. Both suggest hospitals still treat these products as supply-risk items (inference).
+Two listings suggest hospitals still treat these products as supply-risk items (inference):
+- **Civica**, a non-profit created to stabilise hospital supply, entered MPSS in December 2025 ([Civica label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2); [openFDA NDC, MPSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200)).
+- **Hikma's 1 g vial** carries a Vizient Novaplus private label ([openFDA NDC, MPSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200)).
 
 ## Medicaid and Part D show Pfizer holding 74% of Medrol and 93% of Cortef
 
@@ -138,9 +158,9 @@ Sources: [SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-9
 ### What the proxies show
 
 The proxies carry three messages your IQVIA share probably does not isolate:
-- **Dr. Reddy's is the MPSS share-taker.** Its Medicaid share went 0.4% → 4.3% → 7.6% → 12.3% → 16.9% from 2022 to Q1 2026. It has taken share from Fresenius (the incumbent generic) as much as from Pfizer. That is how a price-led entrant with a reliable supply base behaves in this molecule.
-- **Brand loyalty depends on channel.** Pfizer keeps ~75% of Medicaid MPSS claims, which are dominated by physician-administered use, against ~47% of Part D claims, which are pharmacy-dispensed. That fits the idea that provider stocking and the Act-O-Vial format matter more than pharmacy substitution (inference).
-- **Generic HSS has barely started.** Cipla reached 5–7% of claims after 18 months. Apotex and Zydus listed NDCs only in May–June 2026, after the latest SDUD quarter ([RxNav NDC history](https://rxnav.nlm.nih.gov/REST/rxcui/238755/allhistoricalndcs.json)).
+- **Dr. Reddy's is the MPSS share-taker.** Its Medicaid share went 0.4% → 4.3% → 7.6% → 12.3% → 16.9% from 2022 to Q1 2026 (MPSS table above, from SDUD). It has taken share from Fresenius (the incumbent generic) as much as from Pfizer. That is how a price-led entrant with a reliable supply base behaves in this molecule (inference).
+- **Brand loyalty depends on channel.** Pfizer keeps ~75% of Medicaid MPSS claims, which are dominated by physician-administered use ([SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)). It has only ~47% of Part D claims, which are pharmacy-dispensed ([Part D Spending by Drug DY2024](https://data.cms.gov/sites/default/files/2026-06/98218f98-166c-4723-8438-c344a4ef96a6/DSD_PTD_RY26_P04_V10_DY24_BGM.csv)). That fits the idea that provider stocking and the Act-O-Vial format matter more than pharmacy substitution (inference).
+- **Generic HSS has barely started.** Cipla reached 5–7% of claims after 18 months ([SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536), [SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)). Apotex and Zydus listed NDCs only in May–June 2026, after the latest SDUD quarter ([RxNav NDC history](https://rxnav.nlm.nih.gov/REST/rxcui/238755/allhistoricalndcs.json); [openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)).
 
 ### Limits of the proxies
 
@@ -185,15 +205,15 @@ All 88 quarterly CMS files from January 2016 to October 2026 were parsed: 44 pay
 | 2025 | 1.86 | 5.83 | 23.30 | 46.60 | 19.82 | 49.55 | 99.09 | 198.19 | 4.40 | 8.79 |
 | 2026 | 1.85 | 5.80 | 23.21 | 46.41 | 21.32 | 53.31 | 106.61 | 213.22 | 4.46 | 8.90 |
 
-\*2024 blends Q1 (old codes) with Q2–Q4 (new codes).
+\*2024 blends Q1 (old codes) with Q2–Q4 (new codes). 2026 averages the four files effective in 2026 (Q1–Q4). Source: our calculation from the 44 quarterly [CMS payment limit files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files) and the billing units in the [crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip).
 
 ### HSS: steady sole-source price increases
 
-**HSS is a steady sole-source price-taker.** J1720 rose in almost every quarter and never fell 10% or more in a quarter. Its two step-ups, +20.1% in Q3 2017 and +19.2% in Q3 2022, held, which looks like list-price increases rather than shortage spikes. The Medicare Part B dashboard confirms the series: average spend per J1720 unit went from **$7.51 (2016) to $17.99 (2024)** while units roughly halved, from 54.7k to 26.7k ([Part B Spending by Drug](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug)).
+**HSS is a steady sole-source price-taker.** J1720 rose in almost every quarter and never fell 10% or more in a quarter. Its two step-ups, +20.1% in Q3 2017 and +19.2% in Q3 2022, held (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). That looks like list-price increases rather than shortage spikes (inference). The Medicare Part B dashboard confirms the series: average spend per J1720 unit went from **$7.51 (2016) to $17.99 (2024)** while units roughly halved, from 54.7k to 26.7k ([Part B Spending by Drug](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug)).
 
 ### MPSS: a 2018–19 peak, then erosion
 
-**MPSS** rose about 60% between Q1 2016 and Q3 2018. Through that stretch, Fresenius Kabi was the only generic labeler in the crosswalk until Amneal and Sagent were added in Q3–Q4 2017. Prices then eroded as Hikma (2020) and Dr. Reddy's (2022) arrived. Within the J2919 code, ASP is **−6.6% from Q2 2024 to Q4 2026**, with violent quarters: −18.9% in Q4 2025, then +25.7% in Q1 2026. That volatility looks like a blend shifting between brand and generic NDCs, not a list-price signal ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
+**MPSS** rose about 60% between Q1 2016 and Q3 2018. Fresenius Kabi was the only generic labeler in the crosswalk until Amneal and Sagent were added in Q3–Q4 2017. Prices then eroded as Hikma (2020) and Dr. Reddy's (2022) arrived (our calculation from the [CMS ASP files and crosswalks](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files); labeler entry dates are in `asp_crosswalk_labelers.csv`). Within the J2919 code, ASP is **−6.6% from Q2 2024 to Q4 2026**, with violent quarters: −18.9% in Q4 2025, then +25.7% in Q1 2026. That volatility looks like a blend shifting between brand and generic NDCs, not a list-price signal ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
 
 **WAC and NADAC cross-check, latest (US$ per vial)**
 
@@ -222,9 +242,9 @@ Sources: [Pfizer Solu-Cortef CT disclosure, 6 Jul 2026](https://cdn.pfizer.com/p
 | 250 mg Act-O-Vial | $39.64 | $51.21 | +29.2% |
 | 1 g Act-O-Vial | $158.57 | $201.05 | +26.8% |
 
-Over the same period Pfizer left Solu-Medrol WAC flat, except for **mid-2025 cuts of 24–42% on specific NDCs**: 40 mg Act-O-Vial $6.76 → $5.11, 125 mg $10.88 → $8.14, and the 1 g multi-dose vial $43.98 → $25.35 ([Pfizer Solu-Cortef CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf); [Pfizer Solu-Medrol CT disclosure, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)).
+Over the same period Pfizer left Solu-Medrol WAC flat, except for **mid-2025 cuts of 24–42% on specific NDCs**: 40 mg Act-O-Vial $6.76 → $5.11, 125 mg $10.88 → $8.14, and the 1 g multi-dose vial $43.98 → $25.35 ([Pfizer Solu-Cortef CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf); [Solu-Cortef, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf); [Pfizer Solu-Medrol CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07092024.pdf); [Solu-Medrol, 28 Mar 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf); [Solu-Medrol, 28 Jul 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf); [Solu-Medrol, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)). The cuts appear between the 28 March and 28 July 2025 disclosures. For example, the 40 mg Act-O-Vial 25-pack went from US$168.96 to US$127.84.
 
-On NADAC, generic MPSS 125 mg sits at **~33% of brand**, while generic HSS 100 mg sits at **~56–57% of brand**. The HSS discount is shallower, consistent with only three entrants at a single strength. J1720 ASP runs at **86–109% of the 100 mg WAC**, which implies thin gross-to-net for a sole-source hospital injectable (inference).
+On NADAC, generic MPSS 125 mg sits at **~33% of brand**, while generic HSS 100 mg sits at **~56–57% of brand** (our calculation from [NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)). The HSS discount is shallower, consistent with only three entrants at a single strength (inference). J1720 ASP runs at **86–109% of the 100 mg WAC** (our calculation from the [CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip) and [Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)). That implies thin gross-to-net for a sole-source hospital injectable (inference).
 
 ### Data caveats that change interpretation
 
@@ -232,10 +252,10 @@ On NADAC, generic MPSS 125 mg sits at **~33% of brand**, while generic HSS 100 m
 |---|---|---|
 | **April 2024 HCPCS recode.** J2920 (40 mg) and J2930 (125 mg) became J2919 (per 5 mg); J1020/J1030/J1040 became J1010 (per 1 mg) ([CMS April 2024 file](https://www.cms.gov/files/zip/april-2024-asp-pricing-file.zip); [AAPC J2919](https://www.aapc.com/codes/hcpcs-codes/J2919)) | Before the recode the 40 mg vial had its own code. Afterwards every strength is blended into one per-mg price. Implied 40 mg ASP fell from $3.95 to $2.06 on the code change alone, and large MPSS vials are slightly overstated. | Use within-code trends. For 40 mg, use J2920 history to Q1 2024 or WAC/NADAC. Do not splice the per-vial series across Q1/Q2 2024. |
 | **October 2026 crosswalk: 250 mg Solu-Cortef counted as 3 billing units instead of 2.5**; J1720 descriptor changed to "UP TO 100 MG" ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)) | If CMS divides 250 mg sales by 3 units from 3Q26 data onward, J1720 per-unit ASP falls mechanically. CMS has given no explanation. On Medicaid's 2025 strength mix the drag is about 1.2% (our calculation). It would be larger if hospital volume skews to 250 mg. | Watch the January 2027 file. Do not read a small J1720 dip as generic erosion. Model 250 mg on both 2.5 and 3 units (both are in `asp_per_vial.csv`). |
-| **Blended per-unit ASP across strengths and labelers** | J1720's per-100 mg rate is lifted by the 100 mg Act-O-Vial's higher per-mg price. Implied ASP for 250 mg, 500 mg and 1 g therefore runs 7–9% *above* WAC, which is not credible as a true vial price. | For the large HSS vials, treat WAC (US$51 / US$101 / US$201) as the ceiling and assume ASP at or below it. |
-| **Two-quarter lag** | The October 2026 file reflects 2Q26 sales. Apotex (launched June 2026) and Zydus (May 2026) are barely in it. | The first real test of HSS generic erosion comes in the January and April 2027 files. |
-| **Medicaid SDUD is a small, outpatient, pre-rebate slice** | Excludes inpatient use. Units are inconsistent across states. A 2024 dollar mismatch exists between CMS Medicaid Spending by Drug (Solu-Medrol $22.5M) and the re-published SDUD ($16.8M), although claim shares agree at 78.9% brand in both. | Use Rx share and direction only. |
-| **AMP price substitution not checked** | If CMS had substituted AMP-based prices in any quarter, PL ÷ 1.06 would differ from true ASP. | Low risk for these codes; worth one check. |
+| **Blended per-unit ASP across strengths and labelers** | J1720's per-100 mg rate is lifted by the 100 mg Act-O-Vial's higher per-mg price. Implied ASP for 250 mg, 500 mg and 1 g therefore runs 7–9% *above* WAC, which is not credible as a true vial price (our calculation vs [Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)). | For the large HSS vials, treat WAC (US$51 / US$101 / US$201) as the ceiling and assume ASP at or below it. |
+| **Two-quarter lag** | The October 2026 file reflects 2Q26 sales ([CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip)). Apotex (launched June 2026) and Zydus (May 2026) are barely in it ([openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)). | The first real test of HSS generic erosion comes in the January and April 2027 files. |
+| **Medicaid SDUD is a small, outpatient, pre-rebate slice** | Excludes inpatient use; units are inconsistent across states ([CMS SDUD field descriptions](https://www.cms.gov/files/document/medicaid-state-drug-utilization-data-field-descriptions.pdf)). 2024 dollars do not match: CMS Medicaid Spending by Drug shows Solu-Medrol at $22.5M ([Medicaid DY2024](https://data.cms.gov/sites/default/files/2026-06/ae1c5e06-957d-42dd-b783-e7fe598c01c9/DSD_MCD_RY26_P06_V20_D24_BGM.csv)), the re-published SDUD at $16.8M ([SDUD 2024](https://data.medicaid.gov/dataset/61729e5a-7aa8-448c-8903-ba3e0cd0ea3c)). Claim shares agree, at 78.9% brand in both. | Use Rx share and direction only. |
+| **AMP price substitution not checked** | If CMS had substituted AMP-based prices in any quarter, PL ÷ 1.06 would differ from true ASP ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). | Low risk for these codes; worth one check. |
 
 ## Symbiotec has filed one DCV ANDA and licensed both products
 
@@ -269,31 +289,43 @@ Simple subtraction (US$288 mn less US$144 mn) would put HSS near US$144 mn. Outp
 
 The cleanest opening is **HSS 250 mg, 500 mg and 1 g**:
 - **Pfizer-only.** They are sold only as Act-O-Vials, have no TE code and no ANDA ([Orange Book](https://www.fda.gov/media/76860/download)).
-- **Rising prices.** J1720 has compounded ~9% a year over five years, and WAC is US$51 / US$101 / US$201 per vial.
+- **Rising prices.** J1720 has compounded ~9% a year over five years (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). WAC is US$51 / US$101 / US$201 per vial ([Pfizer Solu-Cortef CT disclosure, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)).
 - **Possible exclusivity.** FDA's CGT list treats eligibility strength by strength (it shows "Yes" for one theophylline ER strength and "No" for another), so the first approved ANDA at these strengths could plausibly seek CGT designation and 180-day exclusivity ([FDA CGT list](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)). This is unverified for HSS.
-- **Fits the filing language.** If Symbiotec's "first generic filing for the DCV product" means the first ANDA for a reference product with no generic filing, HSS large strengths fit best. The phrase can also simply mean the first generic DCV presentation, which fits either molecule.
+- **Fits the filing language.** The company calls it the "first generic filing for the DCV product in US market" ([Q1FY27 presentation](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf), slide 5). If that means the first ANDA for a reference product with no generic filing, HSS large strengths fit best. The phrase can also simply mean the first generic DCV presentation, which fits either molecule.
 
-The catch is size. In Medicaid these strengths are ~3% of HSS prescriptions and ~6% of dollars. Their use is likely ICU and high-dose inpatient, which the public data cannot see. Pfizer's per-vial price is 2.5–10x the 100 mg vial, so the dollar weight in hospitals could be far higher. That is the single most important number to pull from IQVIA.
+The catch is size. In Medicaid these strengths are ~3% of HSS prescriptions and ~6% of dollars (our calculation from [SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)). Their use is likely ICU and high-dose inpatient, which the public data cannot see (inference). Pfizer's per-vial price is 2.5–10x the 100 mg vial ([Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)), so the dollar weight in hospitals could be far higher. That is the single most important number to pull from IQVIA.
 
 ### HSS 100 mg: a fifth source into a market about to reprice
 
-At **HSS 100 mg**, a Symbiotec DCV would be the fifth source, behind Pfizer's Act-O-Vial and three plain-vial generics. Generic NADAC is US$14.46 against US$25.5 for brand, and generic erosion has yet to show in ASP. The DCV's pitch is convenience at the Act-O-Vial price point (US$25.27 WAC), where Pfizer still holds ~93% of Medicaid claims. But AP-rated plain vials can substitute for 100 mg Act-O-Vial orders, so that price point will compress through 2027.
+At **HSS 100 mg**, a Symbiotec DCV would be the fifth source, behind Pfizer's Act-O-Vial and three plain-vial generics ([Orange Book](https://www.fda.gov/media/76860/download)):
+- **Price:** generic NADAC is US$14.46 against US$25.5 for brand ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)). Generic erosion has yet to show in ASP ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
+- **Pitch:** convenience at the Act-O-Vial price point (US$25.27 WAC; [Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)), where Pfizer still holds ~93% of Medicaid claims ([SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)).
+- **Risk:** AP-rated plain vials can substitute for 100 mg Act-O-Vial orders ([Orange Book](https://www.fda.gov/media/76860/download)), so that price point will compress through 2027 (inference).
 
 ### MPSS: competing for the brand Act-O-Vial pool
 
-**MPSS DCV is a different trade.** No exclusivity is available: every DCV strength already has two to four ASP-reporting generics. The commercial prize is Pfizer's residual Act-O-Vial pool, ~74% of Medicaid claims at 40/125 mg. Generic single vials there already acquire at US$3.27 (125 mg NADAC) against US$8.14–10.42 for brand WAC. A generic DCV can plausibly price inside that corridor. Pfizer has shown it will defend, with the mid-2025 WAC cuts of 24–42%. Dr. Reddy's climb from 0.4% to 16.9% of Medicaid claims in four years shows how fast a reliable entrant can take share in this molecule.
+**MPSS DCV is a different trade:**
+- **No exclusivity:** every DCV strength already has two to four ASP-reporting generics ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)).
+- **The prize:** Pfizer's residual Act-O-Vial pool, ~74% of Medicaid claims at 40/125 mg ([SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)).
+- **Price corridor:** generic single vials there already acquire at US$3.27 (125 mg; [NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)), against US$8.14–10.42 brand WAC ([Pfizer Solu-Medrol CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)). A generic DCV can plausibly price inside that corridor (inference).
+- **Pfizer will defend:** it cut WAC 24–42% in mid-2025 (same disclosure).
+- **Share can move fast:** Dr. Reddy's climbed from 0.4% to 16.9% of Medicaid claims in four years (MPSS share table above), which shows how fast a reliable entrant can take share in this molecule.
 
 ### Supply security and capacity
 
-The supply argument cuts in Symbiotec's favour. Pfizer's Act-O-Vial line was the bottleneck in 2023 and again in 2025, and Civica's entry shows hospitals pay for redundancy. Symbiotec's own hemisuccinate DMFs and ~76–80% global API volume share give it cost and security-of-supply credentials. For HSS, DMF 29221 was the only active third-party DMF before 2023, which raises the open question of whether Symbiotec already supplies Cipla's 2020-era filing; no source names the supplier.
+The supply argument cuts in Symbiotec's favour:
+- **Pfizer's bottleneck:** its Act-O-Vial line was the bottleneck in 2023 and again in 2025 ([Pfizer letter, 22 Mar 2023](https://www.pfizerhospitalus.com/sites/default/files/news_announcements/Solu-Cortef%20Supply%20Update%20%203-22-23.pdf); [FDA-posted Pfizer letter, 14 Apr 2025](https://www.fda.gov/media/186195/download); [Isaacs et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12646679/)).
+- **Hospitals pay for redundancy:** Civica's entry shows it (inference).
+- **Symbiotec's credentials:** its own hemisuccinate DMFs ([FDA DMF list](https://www.fda.gov/media/192069/download)) and ~76–80% global API volume share ([RHP](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf)) give it cost and security-of-supply credentials.
+- **Open question on Cipla's supplier:** for HSS, DMF 29221 was the only active third-party DMF before 2023 ([FDA DMF list](https://www.fda.gov/media/192069/download)). Cipla's ANDA 214050 was approved in September 2024 ([Orange Book](https://www.fda.gov/media/76860/download)). Its application number suggests a filing around 2020, before the other three DMFs existed (inference from FDA's sequential ANDA numbering). That raises the question of whether Symbiotec already supplies Cipla. No source names the supplier.
 
-The DCV capacity of 20 mn vials a year is large against a US MPSS market worth roughly US$144 mn (2022) at blended prices of a few dollars per vial. That points to multi-product and ex-US loading over time (inference).
+The DCV capacity of 20 mn vials a year ([RHP](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf)) is large against a US MPSS market worth roughly US$144 mn in 2022 ([Dr. Reddy's release](https://www.sec.gov/Archives/edgar/data/1135951/000157587222000246/drr0379_ex99-2.htm)), at blended prices of a few dollars per vial. That points to multi-product and ex-US loading over time (inference).
 
 ### Timing and how ICICI's numbers compare
 
-A September 2026 filing on a standard 10-month GDUFA clock points to **approval around July 2027 at the earliest (FY28)** for product one. Product two would follow around late 2027 or early 2028. Both are exposed to a pre-approval inspection of the uninspected Mhow plant.
+FDA's goal is to act on 90% of standard original ANDAs within 10 months of submission ([FDA GDUFA III goals letter](https://www.fda.gov/media/153631/download)). On that clock, a September 2026 filing points to **approval around July 2027 at the earliest (FY28)** for product one. Product two, due for filing in Q4 FY27 ([Q1FY27 presentation](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf)), would follow around late 2027 or early 2028. Both are exposed to a pre-approval inspection of the Mhow plant. The company lists US FDA audits only at Rau and Pithampur ([Q1FY27 presentation](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf), slide 5), and the RHP describes Mhow as at R&D and pilot scale ([RHP](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf) p.30).
 
-ICICI's FY29E complex-injectables revenue of ₹208 cr (≈US$24 mn) is about 8% of US$288 mn. Under a profit-share model Symbiotec books its transfer price plus its share, not the partner's net sales, so that implies meaningful but not dominant penetration ([ICICI Direct](https://mailcontent.icicidirect.com/mailcontent/idirect_symbiotec_convictionidea.pdf)).
+ICICI models FY29E complex-injectables revenue at ₹207.7 cr ([ICICI Direct](https://mailcontent.icicidirect.com/mailcontent/idirect_symbiotec_convictionidea.pdf)). That is ≈US$24 mn at an assumed ₹86.5/US$, or about 8% of US$288 mn (our calculation). Under a profit-share model Symbiotec books its transfer price plus its share, not the partner's net sales, so that implies meaningful but not dominant penetration (inference).
 
 ### Adjacent threats
 
@@ -303,7 +335,7 @@ Two adjacent threats sit outside the ANDA queue:
 
 ## Depo-Medrol is a crowded, shortage-bound API story, not a DCV one
 
-Methylprednisolone acetate (MPA) matters to Symbiotec as an API (DMF 24611; bulk NDC 22552-0023), not as a DCV.
+Methylprednisolone acetate (MPA) matters to Symbiotec as an API (DMF 24611, [FDA DMF list](https://www.fda.gov/media/192069/download); bulk NDC 22552-0023, [openFDA NDC, Symbiotec](https://api.fda.gov/drug/ndc.json?search=labeler_name:%22Symbiotec%22&limit=100)), not as a DCV.
 
 ### Approvals versus actual sellers
 
@@ -316,11 +348,11 @@ MPA is the most contested of the three molecules on paper. It has **11 active AN
 - Eugia
 - Caplin, newly listed in February 2026
 
-Source: [CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip); ANDA links via [RxNav](https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928). Teva, the main MPA generic in 2019–2022 with 28.1% of Medicaid claims in 2021, has exited. Its last crosswalk appearance was Q1 2024.
+Source: [CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip); ANDA links via [RxNav](https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928). Teva, the main MPA generic in 2019–2022 with 28.1% of Medicaid claims in 2021, has exited (our calculation from SDUD; `sdud_labeler_share.csv`). Its last crosswalk appearance was Q1 2024 ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
 
 ### Share and pricing
 
-Pfizer holds 57.3% of Medicaid MPA claims (Q1 2026) but only 7.4% of Part D claims (2024). The 40 mg/mL brand and generic reimburse within a few percent of each other. Generic NADAC (US$7.49/mL for Amneal 40 mg/mL) actually sits above brand (US$6.90/mL) ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)). J1010 ASP has slipped 8.2% since Q2 2024, to US$4.64 per 40 mg/mL vial and US$9.28 per 80 mg/mL vial in Q4 2026.
+Pfizer holds 57.3% of Medicaid MPA claims in Q1 2026 ([SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)) but only 7.4% of Part D claims in 2024 ([Part D DY2024](https://data.cms.gov/sites/default/files/2026-06/98218f98-166c-4723-8438-c344a4ef96a6/DSD_PTD_RY26_P04_V10_DY24_BGM.csv)). The 40 mg/mL brand and generic reimburse within a few percent of each other ([SDUD 2025](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)). Generic NADAC (US$7.49/mL for Amneal 40 mg/mL) actually sits above brand (US$6.90/mL) ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)). J1010 ASP has slipped 8.2% since Q2 2024, to US$4.64 per 40 mg/mL vial and US$9.28 per 80 mg/mL vial in Q4 2026 (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
 
 ### Market size and shortage
 
@@ -335,19 +367,19 @@ Caplin cites IQVIA US sales of **US$57.4 mn for 40/80 mg/mL single-dose vials (1
 | Teva in MPA | Landscape notes: Teva's ANDA 040620 discontinued, no active Teva MPA. SDUD and crosswalk: Teva (Sicor, 00703) and Northstar sold MPA under ANDAs 040557/040620, with 28% of Medicaid claims in 2021 and in the crosswalk to Q1 2024. | **Both are right for their dates.** Teva was a major MPA generic to ~2022 and has exited (0.0% in 2025). ANDA 040557 now sits under Emerge Bioscience in the Orange Book (RX, no NDC); a transfer from Teva is likely but unverified. |
 | MPA marketers Par and Sandoz | Landscape notes: PH Health (214297) and Wilshire (214870) have no NDC listing, and Par's shortage-listed NDC had an unknown ANDA. | **RxNav-based NDC map and crosswalk win.** Par's NDCs 42023-238/-239/-240 map to ANDA 214297, and Sandoz's 0781-3516/-3522 map to ANDA 214870. Both are in the Oct 2026 crosswalk. |
 | Source manufacturer for DRL and Civica | ASP notes: DRL "probably Kingyork", Civica unknown. | **Labels settle it:** the DRL label says "Manufactured by Tianjin Kingyork", and Civica's NDCs sit on Hikma's ANDA 203125. |
-| J2919 effective date | CMS: added April 2024. hcpcs.codes: a 2025 date. | **CMS April 2024 file.** |
-| Cipla HSS launch | CGT list: first marketing 26 Sep 2024. NDC: 25 Sep 2024. Medthority: 31 Jul 2025. Crosswalk: from Q1 2025. | **FDA CGT list.** The crosswalk lag reflects ASP-reporting timing. |
+| J2919 effective date | J2919 first appears in the April 2024 CMS file ([link](https://www.cms.gov/files/zip/april-2024-asp-pricing-file.zip)). A secondary coding site gave a later date. | **CMS April 2024 file.** Primary source wins. |
+| Cipla HSS launch | CGT list: first marketing 26 Sep 2024 ([FDA CGT list](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)). NDC: 25 Sep 2024 ([openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)). Crosswalk: from Q1 2025 ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). | **FDA CGT list.** The crosswalk lag reflects ASP-reporting timing. |
 | Pfizer's April 2025 Solu-Cortef letter | ASP notes: no primary URL. Hydrocortisone notes: FDA-hosted copy. | **FDA-hosted letter** ([link](https://www.fda.gov/media/186195/download)). |
 | Market size | RHP: US$288 mn (two products). ICICI: ~US$300 mn with 90% Pfizer. IQVIA: US$144 mn for MPSS alone (Feb 2022). | **Treat US$288–300 mn as combined and unsplit.** The 90% figure is not a usable MPSS brand share. |
-| Number of products partnered | ICICI: "one of its two" in one passage, "first two" in another. Company filing of 30 Sep: two. | **Company filing.** |
-| "Two pre-existing approved DCV products" (RHP p.148) | RHP p.239 says "two developed DCV products". The Orange Book shows no Symbiotec approvals. | Read as Symbiotec's developed products, or the Pfizer reference products. **Not Symbiotec approvals.** |
+| Number of products partnered | ICICI: "one of its two" in one passage, "first two" in another ([ICICI Direct](https://mailcontent.icicidirect.com/mailcontent/idirect_symbiotec_convictionidea.pdf)). Company filing of 30 Sep: two ([BSE Reg. 30 filing](https://www.bseindia.com/xml-data/corpfiling/AttachLive/47a96a6d-0348-40db-a957-9ae203f20580.pdf)). | **Company filing.** |
+| "Two pre-existing approved DCV products" ([RHP](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf) p.148) | RHP p.239 says "two developed DCV products". The Orange Book shows no Symbiotec approvals ([Orange Book](https://www.fda.gov/media/76860/download)). | Read as Symbiotec's developed products, or the Pfizer reference products. **Not Symbiotec approvals.** |
 
 ## Data to pull next and open questions
 
 | Question | Why it matters | Where to get it |
 |---|---|---|
-| IQVIA units and dollars for HSS 250 mg, 500 mg and 1 g, hospital versus retail | Sizes the Pfizer-only DCV slice; outpatient data puts it at ~3% of claims | IQVIA pack-level data on Bloomberg, by NDC (Pfizer 0009-0013, -0016, -0005) |
-| IQVIA split of Act-O-Vial versus plain-vial NDCs at MPSS 40/125 mg and HSS 100 mg | Measures the brand DCV pool a generic DCV would contest | IQVIA by NDC: Pfizer 0009-0039, -0047, -0011 versus 0009-0825 |
+| IQVIA units and dollars for HSS 250 mg, 500 mg and 1 g, hospital versus retail | Sizes the Pfizer-only DCV slice; outpatient data puts it at ~3% of claims | IQVIA pack-level data on Bloomberg, by NDC (Pfizer 0009-0013, -0016, -0005; NDCs per [openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)) |
+| IQVIA split of Act-O-Vial versus plain-vial NDCs at MPSS 40/125 mg and HSS 100 mg | Measures the brand DCV pool a generic DCV would contest | IQVIA by NDC: Pfizer 0009-0039, -0047, -0011 versus 0009-0825 (NDCs per [openFDA NDC, MPSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200) and [openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)) |
 | Molecule and strengths in the September 2026 ANDA; whether all strengths were filed | Decides whether CGT exclusivity is in play | Management; watch for an FDA CGT designation |
 | US$288 mn split by molecule and the basis used (gross or net) | Prevents double-counting | Management / F&S full report at investor.symbiotec.com |
 | January 2027 ASP file (due ~December 2026) and April 2027 file | First files to reflect 3Q26 and 4Q26 sales with Apotex and Zydus in the market, and possibly the 3-unit 250 mg convention | [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files) |
