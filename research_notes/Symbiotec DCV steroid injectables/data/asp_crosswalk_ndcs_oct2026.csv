@@ -1,0 +1,88 @@
+quarter_label,molecule,hcpcs,labeler,ndc,drug_name,hcpcs_dosage,pkg_size,pkg_qty,billunits,billunits_pkg,source_file,labeler_type
+2026-Q4,HSS,J1720,Apotex Corp,60505-6411-00,Hydrocortisone Sodium Succinate,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,HSS,J1720,"Cipla USA, Inc.",69097-0004-67,Hydrocortisone Sodium Succinate,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,HSS,J1720,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1261-01,Solu-Cortef,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,HSS,J1720,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1262-01,Solu-Cortef,UP TO 100 MG,1,1,3,3,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0005-01,Solu-Cortef,UP TO 100 MG,1,1,10,10,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0011-03,Solu-Cortef,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0011-04,Solu-Cortef,UP TO 100 MG,1,25,1,25,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0013-05,Solu-Cortef,UP TO 100 MG,1,1,3,3,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0013-06,Solu-Cortef,UP TO 100 MG,1,25,3,75,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0016-12,Solu-Cortef,UP TO 100 MG,1,1,5,5,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Pfizer Inc,00009-0825-01,Solu-Cortef,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,HSS,J1720,Zydus Pharmaceuticals (USA) Inc.,70710-1907-01,Hydrocortisone Sodium Succinate,UP TO 100 MG,1,1,1,1,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-0436-00,Depo-Medrol,1 MG,1,1,80,80,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-0556-00,Depo-Medrol,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-1823-00,Depo-Medrol,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-2098-00,Depo-Medrol,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-5894-00,Methylprednisolone Acetate,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,A-S Medication Solutions,50090-6024-00,Methylprednisolone Acetate,1 MG,1,25,80,2000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",60219-1573-01,Methylprednisolone Acetate,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",60219-1573-05,Methylprednisolone Acetate,1 MG,1,25,40,1000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",60219-1574-01,Methylprednisolone Acetate,1 MG,1,1,80,80,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",60219-1574-05,Methylprednisolone Acetate,1 MG,1,25,80,2000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1552-05,Methylprednisolone Acetate,1 MG,1,25,80,2000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1573-01,Methylprednisolone Acetate,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1573-05,Methylprednisolone Acetate,1 MG,1,25,40,1000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1574-01,Methylprednisolone Acetate,1 MG,1,1,80,80,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1574-05,Methylprednisolone Acetate,1 MG,1,25,80,2000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1609-01,Methylprednisolone Acetate,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1609-05,Methylprednisolone Acetate,1 MG,10,25,400,10000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1610-01,Methylprednisolone Acetate,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Amneal Pharmaceuticals, LLC",70121-1610-05,Methylprednisolone Acetate,1 MG,5,25,400,10000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Endo USA, Inc.",42023-0238-01,Methylprednisolone Acetate,1 MG,5,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Endo USA, Inc.",42023-0239-01,Methylprednisolone Acetate,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,"Endo USA, Inc.",42023-0240-01,Methylprednisolone Acetate,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Eugia US LLC,55150-0313-01,Methylprednisolone Acetate,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0274-01,Depo-Medrol,1 MG,5,1,100,100,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0280-02,Depo-Medrol,1 MG,5,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0280-03,Depo-Medrol,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0280-51,Depo-Medrol,1 MG,5,25,200,5000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0280-52,Depo-Medrol,1 MG,10,25,400,10000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0306-02,Depo-Medrol,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-0306-12,Depo-Medrol,1 MG,5,25,400,10000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3073-01,Depo-Medrol,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3073-03,Depo-Medrol,1 MG,1,25,40,1000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3073-22,Depo-Medrol,1 MG,1,1,40,40,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3073-23,Depo-Medrol,1 MG,1,25,40,1000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3475-01,Depo-Medrol,1 MG,1,1,80,80,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Pfizer Inc,00009-3475-03,Depo-Medrol,1 MG,1,25,80,2000,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPA,J1010,Sagent Pharmaceuticals,25021-0820-05,Methylprednisolone Acetate,1 MG,5,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Sagent Pharmaceuticals,25021-0820-10,Methylprednisolone Acetate,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Sagent Pharmaceuticals,25021-0821-05,Methylprednisolone Acetate,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Sandoz Inc.,00781-3516-75,Methylprednisolone Acetate,1 MG,5,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Sandoz Inc.,00781-3522-70,Methylprednisolone Acetate,1 MG,10,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPA,J1010,Sandoz Inc.,00781-3522-75,Methylprednisolone Acetate,1 MG,5,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,A-S Medication Solutions,50090-0271-00,Solu-Medrol,5 MG,1,1,25,25,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,A-S Medication Solutions,50090-0271-01,Solu-Medrol,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,"Civica, Inc.",72572-0097-25,Methylprednisolone Sodium Succinate,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,"Civica, Inc.",72572-0098-25,Methylprednisolone Sodium Succinate,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Dr. Reddy's Laboratories Inc.,43598-0127-25,Methylprednisolone Sodium Succ,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Dr. Reddy's Laboratories Inc.,43598-0128-11,Methylprednisolone Sodium Succ,5 MG,1,1,100,100,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Dr. Reddy's Laboratories Inc.,43598-0129-25,Methylprednisolone Sodium Succ,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Dr. Reddy's Laboratories Inc.,43598-0130-74,Methylprednisolone Sodium Succ,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,"FreseniUS Kabi USA, LLC",63323-0255-03,Methylprednisolone Sodium Succ,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,"FreseniUS Kabi USA, LLC",63323-0258-03,Methylprednisolone Sodium Succ,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,"FreseniUS Kabi USA, LLC",63323-0265-30,Methylprednisolone Sodium Succ,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1263-01,Solu-Medrol,5 MG,1,1,25,25,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1263-03,Solu-Medrol,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1264-01,Solu-Medrol,5 MG,1,1,8,8,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,"HF Acquisition Co. LLC, DBA HealthFirst",51662-1264-03,Solu-Medrol,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,Henry Schein Inc.,00404-9957-02,Solu-Medrol,5 MG,1,1,25,25,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,Henry Schein Inc.,00404-9958-01,Solu-Medrol,5 MG,1,1,8,8,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,repackager/relabeler
+2026-Q4,MPSS,J2919,Hikma Pharmaceuticals USA Inc.,00143-9753-25,Methylprednisolone Sodium Succ,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Hikma Pharmaceuticals USA Inc.,00143-9754-25,Methylprednisolone Sodium Succ,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Hikma Pharmaceuticals USA Inc.,00143-9850-01,Methylprednisolone Sodium Succ,5 MG,1,1,100,100,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Hikma Pharmaceuticals USA Inc.,00143-9851-01,Methylprednisolone Sodium Succ,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,generic manufacturer/marketer
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0003-02,Solu-Medrol,5 MG,1,1,100,100,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0018-20,Solu-Medrol,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0039-06,Solu-Medrol,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0039-28,Solu-Medrol,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0039-32,Solu-Medrol,5 MG,1,25,8,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0047-04,Solu-Medrol,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0047-22,Solu-Medrol,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0047-26,Solu-Medrol,5 MG,1,25,25,625,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0698-01,Solu-Medrol,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0698-02,Solu-Medrol,5 MG,1,1,200,200,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0758-01,Solu-Medrol,5 MG,1,1,100,100,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)
+2026-Q4,MPSS,J2919,Pfizer Inc,00009-0850-01,Solu-Medrol,5 MG,1,1,400,400,section 508 version of October 2026 ASP NDC-HCPCS Crosswalk 091126.csv,brand (NDA holder)

@@ -1,0 +1,21 @@
+product,vial,asp_per_vial_2026Q4,asp_per_vial_2025-Q4,pct_chg_1y,cagr_1y,code_break_in_1y,asp_per_vial_2023-Q4,pct_chg_3y,cagr_3y,code_break_in_3y,asp_per_vial_2021-Q4,pct_chg_5y,cagr_5y,code_break_in_5y,asp_per_vial_2016-Q1,pct_chg_since 2016-Q1,cagr_since 2016-Q1,code_break_in_since 2016-Q1,peak_quarter,peak_asp_per_vial,first_quarter,last_quarter,asp_first,asp_last,pct_chg_first_to_last,cagr_first_to_last
+HSS (Solu-Cortef & generics),1 g vial,218.39,201.06,8.6,8.6,False,166.72,31.0,9.4,False,139.73,56.3,9.3,False,70.77,208.6,11.1,False,2026-Q4,218.39,,,,,,
+HSS (Solu-Cortef & generics),100 mg vial,21.84,20.11,8.6,8.6,False,16.67,31.0,9.4,False,13.97,56.3,9.3,False,7.08,208.5,11.0,False,2026-Q4,21.84,,,,,,
+HSS (Solu-Cortef & generics),"250 mg vial (2.5 units, CMS crosswalk convention to Q3-2026)",54.6,50.26,8.6,8.6,False,41.68,31.0,9.4,False,34.93,56.3,9.3,False,17.69,208.6,11.1,False,2026-Q4,54.6,,,,,,
+HSS (Solu-Cortef & generics),"250 mg vial (3 units, Medicare billed / Oct-2026 crosswalk)",65.52,60.32,8.6,8.6,False,50.02,31.0,9.4,False,41.92,56.3,9.3,False,21.23,208.6,11.1,False,2026-Q4,65.52,,,,,,
+HSS (Solu-Cortef & generics),500 mg vial,109.19,100.53,8.6,8.6,False,83.36,31.0,9.4,False,69.86,56.3,9.3,False,35.39,208.5,11.0,False,2026-Q4,109.19,,,,,,
+MPA (Depo-Medrol & generics),40 mg/mL 1 mL vial,4.64,4.49,3.3,3.3,False,6.79,-31.7,-11.9,True,5.31,-12.6,-2.7,True,4.06,14.3,1.2,True,2023-Q2,7.63,,,,,,
+MPA (Depo-Medrol & generics),80 mg/mL 1 mL vial,9.28,8.98,3.3,3.3,False,10.15,-8.6,-2.9,True,10.07,-7.8,-1.6,True,7.86,18.1,1.6,True,2018-Q3,12.75,,,,,,
+MPSS (Solu-Medrol & generics),1 g vial,48.11,39.62,21.4,21.4,False,37.62,27.9,8.5,True,42.0,14.5,2.8,True,30.98,55.3,4.2,True,2024-Q4,57.36,,,,,,
+MPSS (Solu-Medrol & generics),125 mg vial,6.01,4.95,21.4,21.4,False,4.7,27.9,8.5,True,5.25,14.5,2.7,True,3.87,55.3,4.2,True,2024-Q4,7.17,,,,,,
+MPSS (Solu-Medrol & generics),2 g vial,96.23,79.25,21.4,21.4,False,75.25,27.9,8.5,True,84.0,14.6,2.8,True,61.96,55.3,4.2,True,2024-Q4,114.72,,,,,,
+MPSS (Solu-Medrol & generics),40 mg vial,1.92,1.58,21.5,21.5,False,3.24,-40.7,-16.0,True,3.88,-50.5,-13.1,True,2.73,-29.7,-3.2,True,2019-Q1,4.6,,,,,,
+MPSS (Solu-Medrol & generics),500 mg vial,24.06,19.81,21.5,21.5,False,18.81,27.9,8.6,True,21.0,14.6,2.8,True,15.49,55.3,4.2,True,2024-Q4,28.68,,,,,,
+"J1010 (within-code, per billing unit)",1 MG,,,,,,,,,,,,,,,,,,2024-Q3,0.1302,2024-Q2,2026-Q4,0.1264,0.116,-8.2,-3.4
+"J1020 (within-code, per billing unit)",20 MG,,,,,,,,,,,,,,,,,,2023-Q3,6.7613,2016-Q1,2024-Q1,4.2406,6.6396,56.6,5.8
+"J1030 (within-code, per billing unit)",40 MG,,,,,,,,,,,,,,,,,,2023-Q2,7.6264,2016-Q1,2024-Q1,4.0642,6.0557,49.0,5.1
+"J1040 (within-code, per billing unit)",80 MG,,,,,,,,,,,,,,,,,,2018-Q3,12.7453,2016-Q1,2024-Q1,7.8623,9.2481,17.6,2.0
+"J1720 (within-code, per billing unit)",100 MG,,,,,,,,,,,,,,,,,,2026-Q4,21.8387,2016-Q1,2026-Q4,7.0774,21.8387,208.6,11.1
+"J2919 (within-code, per billing unit)",5 MG,,,,,,,,,,,,,,,,,,2024-Q4,0.2868,2024-Q2,2026-Q4,0.2575,0.2406,-6.6,-2.7
+"J2920 (within-code, per billing unit)",40 MG,,,,,,,,,,,,,,,,,,2019-Q1,4.5962,2016-Q1,2024-Q1,2.734,3.9509,44.5,4.7
+"J2930 (within-code, per billing unit)",125 MG,,,,,,,,,,,,,,,,,,2018-Q3,6.5708,2016-Q1,2024-Q1,3.8726,5.5491,43.3,4.6

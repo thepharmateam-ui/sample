@@ -1,0 +1,8 @@
+hcpcs,hcpcs_desc,brand_name,year,total_spending_usd,total_dosage_units,total_claims,total_beneficiaries,avg_spend_per_dosage_unit,avg_DY24_ASP_price
+J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Solu-Cortef*,2020,590909.18,45086,40851,10623,13.10626758,
+J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Solu-Cortef*,2021,642328.11,45377.5,41505,10837,14.1552115,
+J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Solu-Cortef*,2022,680268.42,43568,40136,10380,15.61394647,
+J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Solu-Cortef*,2023,441126.91,26194,24445,8291,16.84076163,
+J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Solu-Cortef*,2024,480302.61,26691.5,24926,7252,17.99459041,18.8885
+J1010,"Injection, methylprednisolone acetate, 1 mg",Depo-Medrol*,2024,10310247.44,80220707.9,1297268,890806,0.128523516,0.130333333
+J2919,"Injection, methylprednisolone sodium succinate, 5 mg",MethylprednIsolone Sodium Succ*,2024,1179259.8,4151843.2,177911,92927,0.284032836,0.290666667

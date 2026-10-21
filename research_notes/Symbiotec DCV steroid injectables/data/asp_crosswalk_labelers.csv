@@ -1,0 +1,29 @@
+molecule,labeler_code,labeler_latest_name,first_crosswalk_quarter,last_crosswalk_quarter,quarters_listed,hcpcs_codes,drug_names,labeler_type,in_oct2026_crosswalk
+HSS,00009,Pfizer Inc,2016-Q1,2026-Q4,44,J1720,Solu-Cortef; Solu-Cortef 500mg 4ml,brand (NDA holder),True
+HSS,54569,A-S Medication Solutions,2016-Q1,2017-Q4,8,J1720,Solu-Cortef,repackager/relabeler,False
+HSS,51662,"HF Acquisition Co. LLC, DBA HealthFirst",2023-Q4,2026-Q4,13,J1720,Solu-Cortef,repackager/relabeler,True
+HSS,69097,"Cipla USA, Inc.",2025-Q1,2026-Q4,8,J1720,Hydrocortisone Sodium Succinate,generic manufacturer/marketer,True
+HSS,60505,Apotex Corp,2026-Q4,2026-Q4,1,J1720,Hydrocortisone Sodium Succinate,generic manufacturer/marketer,True
+HSS,70710,Zydus Pharmaceuticals (USA) Inc.,2026-Q4,2026-Q4,1,J1720,Hydrocortisone Sodium Succinate,generic manufacturer/marketer,True
+MPA,00009,Pfizer Inc,2016-Q1,2026-Q4,44,"J1010,J1020,J1030,J1040",Depo-Medrol,brand (NDA holder),True
+MPA,00703,"SICOR PHARMACEUTICALS, INC.",2016-Q1,2024-Q1,33,"J1020,J1030,J1040",Methylprednisolone Acetate; Methylprednisolone Acetate Usp,generic manufacturer/marketer,False
+MPA,00781,Sandoz Inc.,2016-Q1,2026-Q4,18,"J1010,J1020,J1030,J1040",METHYLPRED; METHYLPREDNISOLONE ACETAT; METHYLPREDNISOLONE ACETATE; Methylprednisolone Acetate; Methylprednisolone Acetate Usp,generic manufacturer/marketer,True
+MPA,54569,A-S Medication Solutions,2016-Q1,2020-Q4,20,"J1030,J1040",Depo-Medrol,repackager/relabeler,False
+MPA,50090,A-S Medication Solutions,2019-Q3,2026-Q4,30,"J1010,J1030,J1040",Depo-Medrol; Methylprednisolone Acetate,repackager/relabeler,True
+MPA,70121,"Amneal Pharmaceuticals, LLC",2021-Q1,2026-Q4,24,"J1010,J1030,J1040",Methylprednisolone Acetate,generic manufacturer/marketer,True
+MPA,16714,NORTHSTAR RX LLC,2021-Q4,2024-Q4,13,"J1010,J1030,J1040",METHYLPREDNISOLONE ACETATE; Methylprednisolone Acetate,generic manufacturer/marketer,False
+MPA,25021,Sagent Pharmaceuticals,2022-Q3,2026-Q4,18,"J1010,J1030,J1040",Methylprednisolone Acetate,generic manufacturer/marketer,True
+MPA,60219,"Amneal Pharmaceuticals, LLC",2023-Q1,2026-Q4,16,"J1010,J1030,J1040",Methylprednisolone Acetate,generic manufacturer/marketer,True
+MPA,42023,"Endo USA, Inc.",2023-Q2,2026-Q4,15,"J1010,J1030,J1040",METHYLPREDNISOLONE ACETATE; Methylprednisolone Acetate,generic manufacturer/marketer,True
+MPA,55150,Eugia US LLC,2023-Q4,2026-Q4,13,"J1010,J1030,J1040",Methylprednisolone Acetate; Methylprednisolone Acetate Usp,generic manufacturer/marketer,True
+MPSS,00009,Pfizer Inc,2016-Q1,2026-Q4,44,"J2919,J2920,J2930",SOLU-MEDROL; Solu-Medrol,brand (NDA holder),True
+MPSS,54569,A-S MEDICATION SOLUTIONS,2016-Q1,2022-Q3,27,"J2920,J2930",Solu-Medrol,repackager/relabeler,False
+MPSS,63323,"FreseniUS Kabi USA, LLC",2016-Q1,2026-Q4,44,"J2919,J2920,J2930",Methylprednisolone Sodium Succ,generic manufacturer/marketer,True
+MPSS,70121,AMNEAL BIOSCIENCES,2017-Q3,2022-Q3,21,"J2920,J2930",Methylprednisolone Sodium Succ,generic manufacturer/marketer,False
+MPSS,25021,SAGENT PHARMACEUTICALS INC,2017-Q4,2022-Q3,20,"J2920,J2930",Methylprednisolone Sodium Succ,generic manufacturer/marketer,False
+MPSS,50090,A-S Medication Solutions,2019-Q3,2026-Q4,30,"J2919,J2930",Solu-Medrol,repackager/relabeler,True
+MPSS,00143,Hikma Pharmaceuticals USA Inc.,2020-Q2,2026-Q4,27,"J2919,J2920,J2930",Methylprednisolone Sodium Succ,generic manufacturer/marketer,True
+MPSS,43598,Dr. Reddy's Laboratories Inc.,2022-Q4,2026-Q4,17,"J2919,J2920,J2930",Methylprednisolone Sodium Succ,generic manufacturer/marketer,True
+MPSS,00404,Henry Schein Inc.,2023-Q3,2026-Q4,14,"J2919,J2920,J2930",Solu-Medrol,repackager/relabeler,True
+MPSS,51662,"HF Acquisition Co. LLC, DBA HealthFirst",2023-Q4,2026-Q4,13,"J2919,J2920,J2930",Solu-Medrol,repackager/relabeler,True
+MPSS,72572,"Civica, Inc.",2026-Q3,2026-Q4,2,J2919,Methylprednisolone Sodium Succinate,generic manufacturer/marketer,True

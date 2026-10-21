@@ -1,0 +1,161 @@
+molecule,brand_name,generic_name,manufacturer,year,total_spending_usd,total_dosage_units,total_claims,total_beneficiaries,avg_spend_per_dosage_unit_wtd,avg_spend_per_claim,outlier_flag
+HSS,Hydrocortisone Sod Succinate,Hydrocortisone Sod Succinate,Overall,2024,14610.12,262,145,,55.763816794,100.75944828,1
+HSS,Hydrocortisone Sod Succinate,Hydrocortisone Sod Succinate,"Cipla USA, Inc.",2024,14610.12,262,145,,55.763816794,100.75944828,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Overall,2020,459576.84,13924.283,7004,,33.005422254,65.616339235,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Overall,2020,3284688.69,53824.464,30098,,61.02340788,109.13312147,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Overall,2021,1123180.94,15630.945,7981,,71.856240298,140.73185566,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Overall,2021,3513424.52,60990.228,32720,,57.446355199,107.3785,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Overall,2022,430857.74,17569.69,8244,,24.522785547,52.263190199,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Overall,2022,4164785.42,65512.497,34899,,65.405335326,119.33824522,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Overall,2023,455333.11,11777.621,7018,,38.660873024,64.880750926,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Overall,2023,3809220.68,51881.686,28816,,81.088489224,132.19116741,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Overall,2024,702861.71,10843,6607,,64.821701559,106.38136976,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Overall,2024,3382163.16,71183.757,31029,,47.90304611,109.00006961,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Pfizer US Pharm,2020,3284688.69,53824.464,30098,,61.02340788,109.13312147,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Pfizer US Pharm,2021,3513424.52,60990.228,32720,,57.446355199,107.3785,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Pfizer US Pharm,2022,4164785.42,65512.497,34899,,65.405335326,119.33824522,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Pfizer US Pharm,2023,3809220.68,51881.686,28816,,81.088489224,132.19116741,1
+HSS,Solu-Cortef,Hydrocortisone Sodium Succ/PF,Pfizer US Pharm,2024,3382163.16,71183.757,31029,,47.90304611,109.00006961,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Pharmacia-Upjhn,2020,459576.84,13924.283,7004,,33.005422254,65.616339235,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Pharmacia-Upjhn,2021,1123180.94,15630.945,7981,,71.856240298,140.73185566,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Pharmacia-Upjhn,2022,430857.74,17569.69,8244,,24.522785547,52.263190199,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Pharmacia-Upjhn,2023,455333.11,11777.621,7018,,38.660873024,64.880750926,1
+HSS,Solu-Cortef,Hydrocortisone Sod Succinate,Pharmacia-Upjhn,2024,702861.71,10843,6607,,64.821701559,106.38136976,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Overall,2020,10153481.79,853629.894,622126,,12.116403391,16.320619601,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Overall,2021,9073532.25,812895.925,596722,,11.410725943,15.20562716,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Overall,2022,6492995.69,475733.894,342128,,14.036947407,18.978264538,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Overall,2023,8269665.09,595727.804,392728,,14.917605041,21.056978596,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Overall,2024,5740354.88,546334.367,294975,,10.841080268,19.460479295,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pfizer-Novaplus,2020,539952.19,40439,30898,,13.404988412,17.475311994,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pfizer-Novaplus,2021,458617.5,44726.39,36603,,10.310636089,12.529505778,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pfizer-Novaplus,2022,259751.84,20948.25,17128,,12.557457689,15.165333956,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pfizer-Novaplus,2023,489060.63,18769.812,15166,,25.549466318,32.247173282,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pfizer-Novaplus,2024,421617.12,37174.879,12325,,11.670430201,34.208285598,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pharmacia-Upjhn,2020,9613529.6,813190.894,591228,,12.049061012,16.260274547,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pharmacia-Upjhn,2021,8614914.75,768169.535,560119,,11.48261529,15.380507981,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pharmacia-Upjhn,2022,6233243.85,454785.644,325000,,14.114918791,19.179211846,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pharmacia-Upjhn,2023,7780604.46,576957.992,377562,,14.490541915,20.607488201,1
+MPA,Depo-Medrol,Methylprednisolone Acetate,Pharmacia-Upjhn,2024,5318737.76,509159.488,282650,,10.804916327,18.817398762,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Overall,2020,2832530.42,255648.687,194728,,11.375863318,14.546086952,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Overall,2021,3767538.73,361021.647,257816,,10.943008898,14.613285172,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Overall,2022,4586592.83,333491.325,236324,,14.392700481,19.408070403,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Overall,2023,4219423.68,298886.97,227964,,14.545088529,18.509166711,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Overall,2024,3121661.16,414898.455,184261,,9.0562913977,16.941518607,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bio-Nova,2022,104677.42,5602.14,5235,,18.685255991,19.995686724,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bio-Nova,2023,197218.88,9694.57,8717,,20.343231314,22.624627739,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bio-Nova,2024,124182.08,11910.378,6446,,10.426376056,19.264982935,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bioscien,2020,40628.93,597,445,,64.427524817,91.300966292,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bioscien,2021,319045.3,18438.56,12507,,16.82440659,25.50933877,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bioscien,2022,2065666.5,119459.919,93078,,17.408413068,22.19285438,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bioscien,2023,2321640.71,156299.079,126795,,14.957859179,18.310191332,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal Bioscien,2024,2085182.26,231614.181,125503,,9.4584742536,16.614600926,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal-Premier,2022,33847.16,2019.11,1685,,16.739599179,20.087335312,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal-Premier,2023,105209.74,6895.218,5681,,15.213748734,18.51958106,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Amneal-Premier,2024,115197.14,9458.193,6503,,13.39213507,17.714461018,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Eugia US LLC,2023,5279.63,503.05,421,,10.652912241,12.540688836,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Eugia US LLC,2024,42261.58,11542.53,3569,,4.1995934598,11.84129448,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Northstar Rx Ll,2021,37883.47,4498.5,3249,,8.3749692718,11.660040012,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Northstar Rx Ll,2022,410688.74,29522.08,21279,,14.182319805,19.300189859,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Northstar Rx Ll,2023,91453,3471.75,2683,,29.207168418,34.086097652,0
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Northstar Rx Ll,2024,2180.8,384.588,67,,8.2791395097,32.549253731,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Par Pharm.,2022,8657.5,259.75,287,,33.33012512,30.165505226,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Par Pharm.,2023,25744.59,3535.375,2165,,7.2613097908,11.891265589,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Par Pharm.,2024,110485.35,68309.632,7270,,2.1384843588,15.197434663,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sagent Pharmace,2022,141313.96,12895.92,7624,,11.904792115,18.535409234,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sagent Pharmace,2023,326986.62,28597.421,19766,,12.0150088,16.542882728,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sagent Pharmace,2024,442217.47,59973.859,27757,,7.3307706908,15.931745866,0
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sandoz,2020,13119.77,2190,1160,,6.2939037867,11.310146552,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sandoz,2021,13063.02,2319,1212,,5.7709691851,10.778069307,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sandoz,2022,2971.02,502,230,,5.9669148732,12.917478261,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sandoz,2023,8790.06,466.5,285,,19.200233273,30.842315789,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Sandoz,2024,25934.39,5070.551,2052,,5.3961990839,12.638591618,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Teva Parenteral,2020,2778781.72,252861.687,193123,,11.284145002,14.388662769,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Teva Parenteral,2021,3397546.94,335765.587,240848,,10.698262967,14.106602255,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Teva Parenteral,2022,1818770.53,163230.406,106906,,11.706460654,17.012801246,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Teva Parenteral,2023,1137100.45,89424.007,61451,,13.244444807,18.50418138,1
+MPA,Methylprednisolone Acetate,Methylprednisolone Acetate,Teva Parenteral,2024,174020.09,16634.543,5094,,16.041206376,34.1617766,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Overall,2020,11194.79,142,118,,73.823473613,94.871101695,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Overall,2021,11836.17,47,42,,251.67206026,281.81357143,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Overall,2022,9203.64,48.44,26,,148.10031035,353.98615385,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Overall,2023,2293.7,160.8,27,,16.035964452,84.951851852,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Overall,2024,344.26,12,11,,29.415272727,31.296363636,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Hospira,2020,11194.79,142,118,,73.823473613,94.871101695,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Hospira,2021,11836.17,47,42,,251.67206026,281.81357143,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Hospira,2022,9203.64,48.44,26,,148.10031035,353.98615385,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Hospira,2023,2293.7,160.8,27,,16.035964452,84.951851852,1
+MPSS,A-Methapred,Methylprednisolone Sod Succ,Hospira,2024,344.26,12,11,,29.415272727,31.296363636,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Overall,2020,2418898.51,51570.368,33553,,50.759436208,72.091869878,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Overall,2021,2970068.21,64004.51,45129,,48.566921072,65.812852268,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Overall,2022,2464552.68,61091.961,46290,,41.059692441,53.241578743,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Overall,2023,8319354.13,99381.722,70716,,87.458856223,117.64458015,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Overall,2024,8952791.13,133849.384,66758,,80.747537358,134.1081388,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Amneal Bioscien,2020,5770.34,2101.89,832,,3.1910791804,6.9355048077,0
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Amneal Bioscien,2021,5313.14,1188.5,756,,4.4371213662,7.027962963,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Amneal Bioscien,2022,33838.53,1256.25,939,,26.966731539,36.036773163,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Amneal Bioscien,2023,157533.55,2847.12,1908,,57.083863214,82.564753669,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Amneal Bioscien,2024,47644.26,1571.89,456,,24.65395642,104.48302632,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,App/Fresenius K,2020,433598.32,6458.833,4542,,67.132610489,95.464183179,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,App/Fresenius K,2021,361055,5285.412,5072,,68.311609388,71.185922713,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,App/Fresenius K,2022,412973.24,5645.071,5276,,73.156429742,78.273927218,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,App/Fresenius K,2023,1034144.14,7285.709,4504,,141.94145553,229.60571492,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,App/Fresenius K,2024,409805.15,15190.821,3972,,26.977156139,103.17350201,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Dr.Reddy'S Lab*,2022,24892.1,2103.861,1431,,13.094502364,17.394898672,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Dr.Reddy'S Lab*,2023,1312603.54,27657.781,16696,,46.218814704,78.617844993,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Dr.Reddy'S Lab*,2024,3981195.67,52288.699,24314,,75.763128685,163.74087645,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Fresenius Kabi,2020,1833527.03,38774.15,26652,,48.905279277,68.795100931,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Fresenius Kabi,2021,2502169.56,52509.888,37743,,47.704644342,66.294930451,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Fresenius Kabi,2022,1888682.2,49742.108,37136,,37.903809206,50.85852542,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Fresenius Kabi,2023,5234069.03,56486.421,43882,,95.513639678,119.27599084,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Fresenius Kabi,2024,3907469.33,39520.653,30858,,104.4327176,126.62743308,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Hikma Pharmaceu,2023,537216.95,3277.9,2603,,169.71636055,206.38376873,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Hikma Pharmaceu,2024,573917.91,16887.125,6174,,32.773788768,92.957225462,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Sagent Pharmace*,2020,92174.31,1070.56,899,,90.563118884,102.52982202,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Sagent Pharmace*,2021,31616.69,984.75,721,,36.531961881,43.851165049,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Sagent Pharmace*,2022,29711.55,797.25,679,,37.239934382,43.757805596,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Sagent Pharmace*,2023,7515.15,966,472,,8.7305061441,15.921927966,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,Sagent Pharmace*,2024,3309.39,585.37,359,,6.0520124456,9.218356546,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,West-Ward/Hikma,2020,53828.51,3164.935,628,,17.070575181,85.714187898,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,West-Ward/Hikma,2021,69913.82,4035.96,837,,18.0283137,83.529056153,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,West-Ward/Hikma,2022,74455.06,1547.421,829,,45.522402735,89.813100121,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,West-Ward/Hikma,2023,36271.77,860.791,651,,42.44054978,55.717004608,1
+MPSS,Methylprednisolone Sodium Succ*,Methylprednisolone Sod Succ,West-Ward/Hikma,2024,29449.42,7804.826,625,,4.7057214543,47.119072,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Overall,2020,1531885.63,12000.228,10328,,159.15133796,148.32355054,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Overall,2020,27551462.17,362155.171,273447,,78.191775711,100.75613252,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Overall,2021,1535690.98,11921.604,10393,,158.1610151,147.76204946,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Overall,2021,26633394.42,355824.999,277651,,77.003682954,95.923999625,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Overall,2022,2484761.51,8523.986,10399,,306.7287846,238.94235119,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Overall,2022,31101724.18,418608.881,315990,,76.860057494,98.426292541,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Overall,2023,2705742.29,9422.732,11347,,343.60779019,238.45441879,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Overall,2023,32234348.11,400848.189,309082,,82.371495152,104.29060285,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Overall,2024,1299377.62,11473.886,8014,,111.04514619,162.13846019,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Overall,2024,21206702.02,366053.303,241804,,62.562045699,87.70203148,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer US Pharm*,2020,21541423.18,302938.089,231719,,72.918709629,92.963560088,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer US Pharm*,2021,20784202.84,289557.896,227607,,73.152254791,91.316184652,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer US Pharm*,2022,23282835.32,332134.127,256263,,71.581874238,90.85523591,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer US Pharm*,2023,29120244.9,357536.766,277190,,83.075900646,105.0551784,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer US Pharm*,2024,19569133.07,307521.567,219471,,64.556518478,89.165006174,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer-Novaplus,2020,4018000.85,43677.182,29151,,98.641109171,137.83406573,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer-Novaplus,2021,4309081.92,46039.985,33395,,101.95745984,129.03374517,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer-Novaplus,2022,5766548.56,55605.907,40269,,115.46677124,143.20068936,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer-Novaplus,2023,2299569.57,31164.196,22096,,79.58389554,104.07175824,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Pfizer-Novaplus,2024,1311259.25,22982.138,15331,,57.464140892,85.529923032,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Phar-Prep/Pfize,2020,52087.2,2959.625,449,,17.599256663,116.00712695,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Phar-Prep/Pfize,2020,1992038.14,15539.9,12577,,127.94537988,158.38738491,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Phar-Prep/Pfize,2021,35821.86,2749.75,433,,13.02731521,82.729468822,0
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Phar-Prep/Pfize,2021,1540109.66,20227.118,16649,,79.60327639,92.504634513,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Phar-Prep/Pfize,2022,20107.23,867.125,317,,23.188386911,63.429747634,0
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Phar-Prep/Pfize,2022,2052340.3,30868.847,19458,,66.476118746,105.47539829,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Phar-Prep/Pfize,2023,40193.15,1943.235,407,,20.683628074,98.754668305,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Phar-Prep/Pfize,2023,814533.64,12147.227,9796,,68.727216059,83.14961617,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Phar-Prep/Pfize,2024,11549.14,538.67,435,,21.440102475,26.549747126,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ/PF,Phar-Prep/Pfize,2024,326309.7,35549.598,7002,,11.209152724,46.60235647,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia-Upjhn,2020,1478944.41,8883.353,9745,,167.78370966,151.76443407,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia-Upjhn,2021,1499150.31,9090.729,9889,,165.57991711,151.5977662,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia-Upjhn,2022,2464597.45,7599.736,10046,,316.76922132,245.33122138,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia-Upjhn,2023,2665281.37,7256.217,10801,,360.17734828,246.76246366,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia-Upjhn,2024,1287828.48,10861.966,7521,,117.08407885,171.23101715,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia/Upjhn*,2020,854.02,157.25,134,,5.6768775038,6.3732835821,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia/Upjhn*,2021,718.81,81.125,71,,9.9549589202,10.124084507,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia/Upjhn*,2022,56.83,57.125,36,,1.6198611111,1.5786111111,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia/Upjhn*,2023,267.77,223.28,139,,1.6102151713,1.9264028777,1
+MPSS,Solu-Medrol*,Methylprednisolone Sod Succ,Pharmacia/Upjhn*,2024,0,73.25,58,,0,0,1
