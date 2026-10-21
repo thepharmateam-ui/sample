@@ -1,6 +1,6 @@
 # Pfizer-only Cortef vials anchor Symbiotec's DCV case
 
-*As of 21 October 2026. Prepared for a sell-side analyst covering Symbiotec Pharmalab. Every factual claim links to its source. "Our calculation" marks figures we derived from the linked dataset. "Inference" marks our reading of the data, not a disclosed fact. All links were checked and opened on 21 October 2026. SEC EDGAR links open in a browser, but EDGAR refuses scripts that do not identify themselves.*
+*As of 21 October 2026. Prepared for a sell-side analyst covering Symbiotec Pharmalab. Every factual claim links to its source. "Our calculation" marks figures we derived from the linked dataset. "Inference" marks our reading of the data, not a disclosed fact. All links were checked and opened on 21 October 2026. SEC EDGAR links open in a browser, but EDGAR refuses scripts that do not identify themselves. Every calculation is rebuilt with live formulas in the companion workbook "Symbiotec DCV calculations.xlsx". Its Report_Map sheet links each figure quoted here to the cell that calculates it.*
 
 The view that "Medrol is crowded, Cortef is not" holds, but each half needs a qualifier.
 
@@ -12,7 +12,7 @@ The view that "Medrol is crowded, Cortef is not" holds, but each half needs a qu
   - Civica, selling under Hikma's ANDA ([Civica label](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2))
 - **No new approvals:** no MPSS ANDA has been approved since September 2022 ([Orange Book](https://www.fda.gov/media/76860/download)).
 - **Brand share:** Pfizer still writes **~74% of Medicaid MPSS prescriptions** (our calculation from [SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)).
-- **Price:** the blended Part B ASP per 125 mg has fallen from a **US$6.57 peak (Q3 2018) to US$6.01 in Q4 2026** (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). Generic 125 mg vials acquire at **US$3.27** ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)).
+- **Price:** the Part B ASP per 125 mg vial peaked at **US$6.57 in Q3 2018** under the old J2930 code and is **US$6.01 in Q4 2026**. On the blended J2919 code used since April 2024, it touched US$7.17 in Q4 2024 (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). Generic 125 mg vials acquire at **US$3.27** ([NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)).
 
 **Generic Solu-Cortef (hydrocortisone sodium succinate, HSS):**
 - **100 mg plain vials only:** the only generics are from Cipla (September 2024), Apotex (February 2026) and Zydus (May 2026) ([Orange Book](https://www.fda.gov/media/76860/download)).
@@ -209,11 +209,11 @@ All 88 quarterly CMS files from January 2016 to October 2026 were parsed: 44 pay
 
 ### HSS: steady sole-source price increases
 
-**HSS is a steady sole-source price-taker.** J1720 rose in almost every quarter and never fell 10% or more in a quarter. Its two step-ups, +20.1% in Q3 2017 and +19.2% in Q3 2022, held (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). That looks like list-price increases rather than shortage spikes (inference). The Medicare Part B dashboard confirms the series: average spend per J1720 unit went from **$7.51 (2016) to $17.99 (2024)** while units roughly halved, from 54.7k to 26.7k ([Part B Spending by Drug](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug)).
+**HSS is a steady sole-source price-taker.** J1720 rose in almost every quarter; its largest quarterly fall was 2.3%. Its two step-ups, +20.1% in Q3 2017 and +19.2% in Q3 2022, held (our calculation from [CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). That looks like list-price increases rather than shortage spikes (inference). The Medicare Part B dashboard confirms the series: average spend per J1720 unit went from **$7.51 (2016) to $17.99 (2024)** while units roughly halved, from 54.7k to 26.7k ([Part B Spending by Drug](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug)).
 
 ### MPSS: a 2018–19 peak, then erosion
 
-**MPSS** rose about 60% between Q1 2016 and Q3 2018. Fresenius Kabi was the only generic labeler in the crosswalk until Amneal and Sagent were added in Q3–Q4 2017. Prices then eroded as Hikma (2020) and Dr. Reddy's (2022) arrived (our calculation from the [CMS ASP files and crosswalks](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files); labeler entry dates are in `asp_crosswalk_labelers.csv`). Within the J2919 code, ASP is **−6.6% from Q2 2024 to Q4 2026**, with violent quarters: −18.9% in Q4 2025, then +25.7% in Q1 2026. That volatility looks like a blend shifting between brand and generic NDCs, not a list-price signal ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
+**MPSS** rose about 66–70% between Q1 2016 and Q3 2018 (40 mg +66%, 125 mg +70%). Fresenius Kabi was the only generic labeler in the crosswalk until Amneal and Sagent were added in Q3–Q4 2017. Prices then eroded as Hikma (2020) and Dr. Reddy's (2022) arrived (our calculation from the [CMS ASP files and crosswalks](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files); labeler entry and exit dates are in the research data file asp_crosswalk_labelers.csv). Within the J2919 code, ASP is **−6.6% from Q2 2024 to Q4 2026**, with violent quarters: −18.9% in Q4 2025, then +25.7% in Q1 2026. That volatility looks like a blend shifting between brand and generic NDCs, not a list-price signal ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)). On the new code the 125 mg equivalent peaked at US$7.17 in Q4 2024 and has since fallen 16% to US$6.01 (our calculation).
 
 **WAC and NADAC cross-check, latest (US$ per vial)**
 
@@ -233,7 +233,7 @@ Sources: [Pfizer Solu-Cortef CT disclosure, 6 Jul 2026](https://cdn.pfizer.com/p
 
 ### What the price points say
 
-**The price trajectories split cleanly.** From July 2024 to July 2026, Pfizer raised Solu-Cortef WAC **18–29% across all sizes**:
+**The price trajectories split cleanly.** From July 2024 to July 2026, Pfizer raised Solu-Cortef WAC **18–29% on every single-vial presentation**. The 100 mg and 250 mg 25-pack lines rose about 16% and 21% per vial, assuming the second 100 mg and 250 mg entries in the 2024 disclosure are those packs.
 
 | Solu-Cortef presentation | WAC Jul 2024 | WAC Jul 2026 | Change |
 |---|---|---|---|
@@ -242,7 +242,7 @@ Sources: [Pfizer Solu-Cortef CT disclosure, 6 Jul 2026](https://cdn.pfizer.com/p
 | 250 mg Act-O-Vial | $39.64 | $51.21 | +29.2% |
 | 1 g Act-O-Vial | $158.57 | $201.05 | +26.8% |
 
-Over the same period Pfizer left Solu-Medrol WAC flat, except for **mid-2025 cuts of 24–42% on specific NDCs**: 40 mg Act-O-Vial $6.76 → $5.11, 125 mg $10.88 → $8.14, and the 1 g multi-dose vial $43.98 → $25.35 ([Pfizer Solu-Cortef CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf); [Solu-Cortef, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf); [Pfizer Solu-Medrol CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07092024.pdf); [Solu-Medrol, 28 Mar 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf); [Solu-Medrol, 28 Jul 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf); [Solu-Medrol, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)). The cuts appear between the 28 March and 28 July 2025 disclosures. For example, the 40 mg Act-O-Vial 25-pack went from US$168.96 to US$127.84.
+Over the same period Pfizer left Solu-Medrol WAC flat, except for **mid-2025 cuts of 17–42% on five presentations**: two 40 mg Act-O-Vial lines ($6.76 → $5.11 and $6.47 → $5.37), two 125 mg Act-O-Vial lines ($10.88 → $8.14 and $10.42 → $8.54) and the 1 g multi-dose vial ($43.98 → $25.35) ([Pfizer Solu-Cortef CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf); [Solu-Cortef, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf); [Pfizer Solu-Medrol CT disclosure, 9 Jul 2024](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07092024.pdf); [Solu-Medrol, 28 Mar 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf); [Solu-Medrol, 28 Jul 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf); [Solu-Medrol, 6 Jul 2026](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)). The cuts appear between the 28 March and 28 July 2025 disclosures. For example, the 40 mg Act-O-Vial 25-pack went from US$168.96 to US$127.84.
 
 On NADAC, generic MPSS 125 mg sits at **~33% of brand**, while generic HSS 100 mg sits at **~56–57% of brand** (our calculation from [NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)). The HSS discount is shallower, consistent with only three entrants at a single strength (inference). J1720 ASP runs at **86–109% of the 100 mg WAC** (our calculation from the [CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip) and [Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)). That implies thin gross-to-net for a sole-source hospital injectable (inference).
 
@@ -251,7 +251,7 @@ On NADAC, generic MPSS 125 mg sits at **~33% of brand**, while generic HSS 100 m
 | Caveat | Effect | How to handle |
 |---|---|---|
 | **April 2024 HCPCS recode.** J2920 (40 mg) and J2930 (125 mg) became J2919 (per 5 mg); J1020/J1030/J1040 became J1010 (per 1 mg) ([CMS April 2024 file](https://www.cms.gov/files/zip/april-2024-asp-pricing-file.zip); [AAPC J2919](https://www.aapc.com/codes/hcpcs-codes/J2919)) | Before the recode the 40 mg vial had its own code. Afterwards every strength is blended into one per-mg price. Implied 40 mg ASP fell from $3.95 to $2.06 on the code change alone, and large MPSS vials are slightly overstated. | Use within-code trends. For 40 mg, use J2920 history to Q1 2024 or WAC/NADAC. Do not splice the per-vial series across Q1/Q2 2024. |
-| **October 2026 crosswalk: 250 mg Solu-Cortef counted as 3 billing units instead of 2.5**; J1720 descriptor changed to "UP TO 100 MG" ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)) | If CMS divides 250 mg sales by 3 units from 3Q26 data onward, J1720 per-unit ASP falls mechanically. CMS has given no explanation. On Medicaid's 2025 strength mix the drag is about 1.2% (our calculation). It would be larger if hospital volume skews to 250 mg. | Watch the January 2027 file. Do not read a small J1720 dip as generic erosion. Model 250 mg on both 2.5 and 3 units (both are in `asp_per_vial.csv`). |
+| **October 2026 crosswalk: 250 mg Solu-Cortef counted as 3 billing units instead of 2.5**; J1720 descriptor changed to "UP TO 100 MG" ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)) | If CMS divides 250 mg sales by 3 units from 3Q26 data onward, J1720 per-unit ASP falls mechanically. CMS has given no explanation. On Medicaid's 2025 strength mix the drag is about 1.2% (our calculation). It would be larger if hospital volume skews to 250 mg. | Watch the January 2027 file. Do not read a small J1720 dip as generic erosion. Model 250 mg on both 2.5 and 3 units (both are on the ASP_per_vial sheet of the workbook). |
 | **Blended per-unit ASP across strengths and labelers** | J1720's per-100 mg rate is lifted by the 100 mg Act-O-Vial's higher per-mg price. Implied ASP for 250 mg, 500 mg and 1 g therefore runs 7–9% *above* WAC, which is not credible as a true vial price (our calculation vs [Pfizer Solu-Cortef CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)). | For the large HSS vials, treat WAC (US$51 / US$101 / US$201) as the ceiling and assume ASP at or below it. |
 | **Two-quarter lag** | The October 2026 file reflects 2Q26 sales ([CMS Oct 2026 payment limit file](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip)). Apotex (launched June 2026) and Zydus (May 2026) are barely in it ([openFDA NDC, HSS](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)). | The first real test of HSS generic erosion comes in the January and April 2027 files. |
 | **Medicaid SDUD is a small, outpatient, pre-rebate slice** | Excludes inpatient use; units are inconsistent across states ([CMS SDUD field descriptions](https://www.cms.gov/files/document/medicaid-state-drug-utilization-data-field-descriptions.pdf)). 2024 dollars do not match: CMS Medicaid Spending by Drug shows Solu-Medrol at $22.5M ([Medicaid DY2024](https://data.cms.gov/sites/default/files/2026-06/ae1c5e06-957d-42dd-b783-e7fe598c01c9/DSD_MCD_RY26_P06_V20_D24_BGM.csv)), the re-published SDUD at $16.8M ([SDUD 2024](https://data.medicaid.gov/dataset/61729e5a-7aa8-448c-8903-ba3e0cd0ea3c)). Claim shares agree, at 78.9% brand in both. | Use Rx share and direction only. |
@@ -308,7 +308,7 @@ At **HSS 100 mg**, a Symbiotec DCV would be the fifth source, behind Pfizer's Ac
 - **No exclusivity:** every DCV strength already has two to four ASP-reporting generics ([CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)).
 - **The prize:** Pfizer's residual Act-O-Vial pool, ~74% of Medicaid claims at 40/125 mg ([SDUD 2026](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)).
 - **Price corridor:** generic single vials there already acquire at US$3.27 (125 mg; [NADAC 2026](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)), against US$8.14–10.42 brand WAC ([Pfizer Solu-Medrol CT disclosure](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)). A generic DCV can plausibly price inside that corridor (inference).
-- **Pfizer will defend:** it cut WAC 24–42% in mid-2025 (same disclosure).
+- **Pfizer will defend:** it cut WAC 17–42% on five presentations in mid-2025 ([Solu-Medrol, 28 Mar 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf); [Solu-Medrol, 28 Jul 2025](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf)).
 - **Share can move fast:** Dr. Reddy's climbed from 0.4% to 16.9% of Medicaid claims in four years (MPSS share table above), which shows how fast a reliable entrant can take share in this molecule.
 
 ### Supply security and capacity
@@ -348,7 +348,7 @@ MPA is the most contested of the three molecules on paper. It has **11 active AN
 - Eugia
 - Caplin, newly listed in February 2026
 
-Source: [CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip); ANDA links via [RxNav](https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928). Teva, the main MPA generic in 2019–2022 with 28.1% of Medicaid claims in 2021, has exited (our calculation from SDUD; `sdud_labeler_share.csv`). Its last crosswalk appearance was Q1 2024 ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
+Source: [CMS Oct 2026 crosswalk](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip); ANDA links via [RxNav](https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928). Teva, the main MPA generic in 2019–2022 with 28.1% of Medicaid claims in 2021, has exited (our calculation from SDUD; Medicaid_SDUD sheet of the workbook). Its last crosswalk appearance was Q1 2024 ([CMS ASP files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)).
 
 ### Share and pricing
 
@@ -397,28 +397,92 @@ Caplin cites IQVIA US sales of **US$57.4 mn for 40/80 mg/mL single-dose vials (1
 
 The December 2025 DRHP coverage names **JM Financial, Nomura, Motilal Oswal and Avendus** as book-running lead managers on Symbiotec's IPO ([The Week/PTI, 19 Dec 2025](https://www.theweek.in/wire-updates/business/2025/12/19/dcm91-biz-ipo-symbiotec-pharmalab.html)). Motilal Oswal was confined to marketing because of its link to selling shareholder India Business Excellence Fund-III ([RHP p.44](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf)). If your desk is part of the Avendus group, confirm with compliance whether Symbiotec is on a restricted or watch list, whether any post-listing research blackout still applies, and what conflict disclosures a note must carry, before publishing or circulating this work externally.
 
-## Appendix: CSV files for the model
-
-All files are in `/home/user/sample/research_notes/Symbiotec DCV steroid injectables/data/`.
-
-| File | Contents | Use |
-|---|---|---|
-| `asp_payment_limit_wide.csv` | Quarterly payment limit per billing unit, Q1 2016–Q4 2026, for J1720, J2919, J2920, J2930, J1010, J1020, J1030, J1040 | Raw ASP input |
-| `asp_per_vial.csv` / `asp_per_vial_wide.csv` | Implied ASP per vial by strength and quarter, including the 2.5- and 3-unit HSS 250 mg variants | Per-vial price deck |
-| `asp_history.csv` | Long-format ASP history | Pivoting |
-| `asp_growth_summary.csv`, `asp_qoq_moves_over_10pct.csv` | 1y, 3y, 5y and since-2016 changes; quarter-on-quarter moves of 10% or more | Trend flags |
-| `asp_crosswalk_ndcs_oct2026.csv`, `asp_crosswalk_labelers.csv`, `asp_crosswalk_labeler_counts_by_quarter.csv` | NDC-to-HCPCS map, labeler entry and exit dates, labeler counts per quarter | Competitor timeline |
-| `sdud_labeler_share.csv`, `sdud_brand_generic_summary.csv` | Medicaid units, Rx and dollars by molecule × strength × year × labeler; brand vs generic summary | Share proxies |
-| `sdud_clean_price_per_vial.csv`, `sdud_ndc_year.csv`, `sdud_ndc_map.csv` | Cleaned Medicaid $/vial; NDC-year totals; 147-NDC map with ANDA links | Price proxies; NDC lookups |
-| `partb_spending_by_hcpcs_2016_2024.csv`, `partb_spending_by_molecule.csv`, `partb_spending.csv` | Medicare Part B fee-for-service spend, units and claims | Volume context |
-| `partd_spending.csv`, `partd_spending_steroid_injectables_2020_2024.csv` | Part D by manufacturer | Pharmacy substitution |
-| `medicaid_spending_by_drug.csv`, `medicaid_spending_steroid_injectables_2020_2024.csv` | CMS Medicaid gross spend by product | Brand vs generic dollars |
-| `nadac_steroid_injectables_annual.csv`, `nadac_steroid_injectables_latest_by_ndc.csv` | NADAC by NDC | Acquisition-cost check |
-| `pfizer_wac_ct_disclosures.csv` | Pfizer WAC per vial, Jul 2024–Jul 2026 | List-price check |
-| `fda_applications_openfda.csv`, `asp_source_files.csv` | Application roster; URL of every CMS file used | Audit trail |
-
 ## Conclusion
 
-Symbiotec's opportunity is a format-and-strength arbitrage, not a molecule arbitrage. In MPSS the generic market already prices single vials at about US$3. There a DCV competes only for Pfizer's convenience premium, against an incumbent that has shown it will cut price. In HSS the protected ground is narrow but real: three Act-O-Vial-only strengths with no ANDA, list prices up roughly 27% in two years, and a plausible CGT route.
+Symbiotec's opportunity is a format-and-strength arbitrage, not a molecule arbitrage. In MPSS the generic market already prices single vials at about US$3. There a DCV competes only for Pfizer's convenience premium, against an incumbent that has shown it will cut price. In HSS the protected ground is narrow but real: three Act-O-Vial-only strengths with no ANDA, list prices up 18–29% in two years, and a plausible CGT route.
 
 Whether that ground is worth much depends on two numbers the public data cannot give: hospital-channel dollars for HSS 250 mg to 1 g, and which molecule went into the September 2026 filing. Your IQVIA pack data and one management question resolve both. The next hard checkpoint is the January 2027 ASP file, the first to show whether the 2026 HSS generic launches, or CMS's quiet change to 250 mg billing units, break J1720's decade-long climb.
+
+## Appendix A: Calculation workbook
+
+Every figure marked "our calculation" is rebuilt with live formulas in **Symbiotec DCV calculations.xlsx**. Inputs are blue and cite their source, formulas are black, cross-sheet links are green, and the two analyst assumptions (FX rate and the assumed filing day) are shaded yellow.
+
+| Sheet | What it calculates | Report sections |
+|---|---|---|
+| Report_Map | Every number quoted in this report, linked live to the cell that calculates it, with a check against the rounding shown here | All |
+| Assumptions | ASP divisor (1.06), billing units per vial, code-change quarter, FX, 10-month review goal, key dates | All |
+| CMS_PL | Input: Part B payment limit per billing unit for J2920, J2930, J2919, J1720, J1020, J1030, J1040, J1010, Q1 2016 to Q4 2026 | ASP |
+| ASP_per_vial | Implied ASP per vial by quarter and annual average | At a glance; ASP tables |
+| ASP_growth | Old-code and new-code peaks, 1y change, 3y and 5y CAGRs, quarter-on-quarter moves | ASP |
+| Pfizer_WAC | List price per vial by presentation and date; 2024-26 changes; mid-2025 Solu-Medrol cuts; ASP vs WAC | Price points |
+| NADAC | Generic acquisition cost as % of brand | Price points |
+| SDUD_NDC_data | Input: Medicaid prescriptions, units and dollars by NDC and year | Share proxies |
+| Medicaid_SDUD | Prescription and dollar shares by labeler and strength; HSS large-vial slice; 250 mg billing-unit drag | Share proxies; caveats |
+| CMS_Spending | Part D and Medicaid Spending by Drug 2024; Part B volume and spend per unit; HSS vs MPSS spend ratios | Share proxies; market size |
+| Market_Size | Market-size figures, ICICI estimates in US$, Pfizer Medrol revenue, capacity cross-check | Market size; implications |
+| Timing | Earliest FDA action date, fiscal year, CGT exclusivity end | Timing |
+| Sources | Every source used in the workbook, with links | All |
+
+## Appendix B: Source list
+
+All links were opened and checked on 21 October 2026.
+
+1. FDA Orange Book data file (9 Oct 2026): [https://www.fda.gov/media/76860/download](https://www.fda.gov/media/76860/download)
+2. openFDA NDC directory: methylprednisolone sodium succinate: [https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=200)
+3. CMS October 2026 NDC-HCPCS crosswalk: [https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip](https://www.cms.gov/files/zip/october-2026-ndc-hcpcs-crosswalk-final.zip)
+4. DailyMed label: Dr. Reddy's methylprednisolone sodium succinate (made by Tianjin Kingyork): [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=738753c7-507d-4881-5194-02dd7597768b](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=738753c7-507d-4881-5194-02dd7597768b)
+5. DailyMed label: Civica methylprednisolone sodium succinate: [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e6020f5-a486-41cc-8956-58b5f6751aa2)
+6. Medicaid State Drug Utilization Data 2026: [https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3](https://data.medicaid.gov/dataset/2957a7f9-9a15-453e-9afd-3bbdcbac8fd3)
+7. CMS Part B ASP pricing files, 2016-2026 (index page): [https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files](https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files)
+8. NADAC 2026: [https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704](https://data.medicaid.gov/dataset/fbb83258-11c7-47f5-8b18-5f8e79f7e704)
+9. DailyMed label: Solu-Cortef (Pfizer): [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65eefd58-b166-4d71-ade6-45c8fdf86922](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65eefd58-b166-4d71-ade6-45c8fdf86922)
+10. CMS October 2026 Part B payment limit file: [https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip](https://www.cms.gov/files/zip/october-2026-medicare-part-b-payment-limit-files-final.zip)
+11. openFDA NDC directory: hydrocortisone sodium succinate: [https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100](https://api.fda.gov/drug/ndc.json?search=active_ingredients.name:%22HYDROCORTISONE+SODIUM+SUCCINATE%22&limit=100)
+12. Symbiotec Q1FY27 investor presentation (BSE): [https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf](https://www.bseindia.com/xml-data/corpfiling/Attachhis/91eed093-577e-4264-babd-546a03192722.pdf)
+13. Symbiotec BSE Reg. 30 filing: DCV licensing agreement, 30 Sep 2026: [https://www.bseindia.com/xml-data/corpfiling/AttachLive/47a96a6d-0348-40db-a957-9ae203f20580.pdf](https://www.bseindia.com/xml-data/corpfiling/AttachLive/47a96a6d-0348-40db-a957-9ae203f20580.pdf)
+14. Symbiotec Pharmalab Red Herring Prospectus, 18 Aug 2026 (SEBI): [https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf](https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1787119258529.pdf)
+15. FDA Competitive Generic Therapy approvals list: [https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals](https://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals)
+16. Medicaid State Drug Utilization Data 2025: [https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536](https://data.medicaid.gov/dataset/158a1baa-5506-400a-8ec3-97756f0b0536)
+17. FDA GDUFA III performance goals letter: [https://www.fda.gov/media/153631/download](https://www.fda.gov/media/153631/download)
+18. Pfizer Connecticut WAC disclosure: Solu-Cortef, 6 Jul 2026: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07062026.pdf)
+19. Pfizer Connecticut WAC disclosure: Solu-Medrol, 6 Jul 2026: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07062026.pdf)
+20. DailyMed label: Solu-Medrol (Pfizer): [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd99be87-c8d9-48d6-a8e5-e081052e3f19](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd99be87-c8d9-48d6-a8e5-e081052e3f19)
+21. DailyMed label: Cipla hydrocortisone sodium succinate: [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=451d6d04-b7d9-47d9-ba71-43cc5b9b3054](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=451d6d04-b7d9-47d9-ba71-43cc5b9b3054)
+22. DailyMed label: Apotex hydrocortisone sodium succinate: [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfe185a6-b657-2fbb-4ac2-e085373f15f3](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfe185a6-b657-2fbb-4ac2-e085373f15f3)
+23. DailyMed label: Zydus hydrocortisone sodium succinate: [https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=37534164-9de5-4bb3-9f87-341dfcf90883](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=37534164-9de5-4bb3-9f87-341dfcf90883)
+24. openFDA Drugs@FDA: methylprednisolone sodium succinate applications: [https://api.fda.gov/drug/drugsfda.json?search=products.active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=100](https://api.fda.gov/drug/drugsfda.json?search=products.active_ingredients.name:%22METHYLPREDNISOLONE+SODIUM+SUCCINATE%22&limit=100)
+25. FDA draft guidance: comparative analyses for drug-device combination ANDAs: [https://www.fda.gov/regulatory-information/search-fda-guidance-documents/comparative-analyses-and-related-comparative-use-human-factors-studies-drug-device-combination](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/comparative-analyses-and-related-comparative-use-human-factors-studies-drug-device-combination)
+26. FDA Drug Master File list, 3Q2026: [https://www.fda.gov/media/192069/download](https://www.fda.gov/media/192069/download)
+27. Pfizer Solu-Cortef supply update, 22 Mar 2023: [https://www.pfizerhospitalus.com/sites/default/files/news_announcements/Solu-Cortef%20Supply%20Update%20%203-22-23.pdf](https://www.pfizerhospitalus.com/sites/default/files/news_announcements/Solu-Cortef%20Supply%20Update%20%203-22-23.pdf)
+28. Pfizer Solu-Cortef supply letter, 14 Apr 2025 (FDA-hosted): [https://www.fda.gov/media/186195/download](https://www.fda.gov/media/186195/download)
+29. Isaacs et al., corticosteroid shortages (PMC12646679): [https://pmc.ncbi.nlm.nih.gov/articles/PMC12646679/](https://pmc.ncbi.nlm.nih.gov/articles/PMC12646679/)
+30. CMS SDUD field descriptions: [https://www.cms.gov/files/document/medicaid-state-drug-utilization-data-field-descriptions.pdf](https://www.cms.gov/files/document/medicaid-state-drug-utilization-data-field-descriptions.pdf)
+31. Medicaid State Drug Utilization Data 2018: [https://data.medicaid.gov/dataset/a1f3598e-fc71-51aa-8560-78e7e1a61b09](https://data.medicaid.gov/dataset/a1f3598e-fc71-51aa-8560-78e7e1a61b09)
+32. Medicaid State Drug Utilization Data 2024: [https://data.medicaid.gov/dataset/61729e5a-7aa8-448c-8903-ba3e0cd0ea3c](https://data.medicaid.gov/dataset/61729e5a-7aa8-448c-8903-ba3e0cd0ea3c)
+33. CMS Medicaid Spending by Drug, data year 2024: [https://data.cms.gov/sites/default/files/2026-06/ae1c5e06-957d-42dd-b783-e7fe598c01c9/DSD_MCD_RY26_P06_V20_D24_BGM.csv](https://data.cms.gov/sites/default/files/2026-06/ae1c5e06-957d-42dd-b783-e7fe598c01c9/DSD_MCD_RY26_P06_V20_D24_BGM.csv)
+34. CMS Medicare Part D Spending by Drug, data year 2024: [https://data.cms.gov/sites/default/files/2026-06/98218f98-166c-4723-8438-c344a4ef96a6/DSD_PTD_RY26_P04_V10_DY24_BGM.csv](https://data.cms.gov/sites/default/files/2026-06/98218f98-166c-4723-8438-c344a4ef96a6/DSD_PTD_RY26_P04_V10_DY24_BGM.csv)
+35. NLM RxNav: historical NDCs for hydrocortisone sodium succinate 100 mg injection: [https://rxnav.nlm.nih.gov/REST/rxcui/238755/allhistoricalndcs.json](https://rxnav.nlm.nih.gov/REST/rxcui/238755/allhistoricalndcs.json)
+36. CMS Medicare Part B Spending by Drug methodology: [https://data.cms.gov/sites/default/files/2023-02/DSD_PTB_R22_20230125_Methodology%20508.pdf](https://data.cms.gov/sites/default/files/2023-02/DSD_PTB_R22_20230125_Methodology%20508.pdf)
+37. CMS Medicare Part B Spending by Drug dashboard: [https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-b-spending-by-drug)
+38. Pfizer Connecticut WAC disclosure: Solu-Cortef, 9 Jul 2024: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-CORTEFCTPriceDisclosureShortForm07092024.pdf)
+39. Pfizer Connecticut WAC disclosure: Solu-Medrol, 9 Jul 2024: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07092024.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07092024.pdf)
+40. Pfizer Connecticut WAC disclosure: Solu-Medrol, 28 Mar 2025: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm03282025.pdf)
+41. Pfizer Connecticut WAC disclosure: Solu-Medrol, 28 Jul 2025: [https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf](https://cdn.pfizer.com/pfizercom/products/ctprescribers/SOLU-MEDROLCTPriceDisclosureShortForm07282025.pdf)
+42. CMS April 2024 ASP pricing file (first J2919 / J1010 quarter): [https://www.cms.gov/files/zip/april-2024-asp-pricing-file.zip](https://www.cms.gov/files/zip/april-2024-asp-pricing-file.zip)
+43. AAPC: HCPCS J2919 descriptor: [https://www.aapc.com/codes/hcpcs-codes/J2919](https://www.aapc.com/codes/hcpcs-codes/J2919)
+44. Sahi: Symbiotec Pithampur USFDA EIR with VAI status: [https://www.sahi.com/news/symbiotec-pharmalab-receives-u-s-fda-eir-with-vai-status-for-pithampur-facility](https://www.sahi.com/news/symbiotec-pharmalab-receives-u-s-fda-eir-with-vai-status-for-pithampur-facility)
+45. ICICI Direct: Symbiotec conviction idea, 1 Oct 2026: [https://mailcontent.icicidirect.com/mailcontent/idirect_symbiotec_convictionidea.pdf](https://mailcontent.icicidirect.com/mailcontent/idirect_symbiotec_convictionidea.pdf)
+46. BioSpectrum: Aurobindo methylprednisolone approval (IMS US$102 mn): [https://biospectrumindia.com/news/95/6186/another-fda-approval-in-aurobindos-kitty.html](https://biospectrumindia.com/news/95/6186/another-fda-approval-in-aurobindos-kitty.html)
+47. Hikma: methylprednisolone sodium succinate approval, 9 Mar 2016 (IMS US$123.5 mn): [https://hikma.com/media/3cpbifha/09032016-product-hikma-receives-fda-approval-for-methylprednisolone-sodium-succinate-injection.pdf](https://hikma.com/media/3cpbifha/09032016-product-hikma-receives-fda-approval-for-methylprednisolone-sodium-succinate-injection.pdf)
+48. Dr. Reddy's: methylprednisolone launch release, Mar 2022 (IQVIA US$144 mn): [https://www.sec.gov/Archives/edgar/data/1135951/000157587222000246/drr0379_ex99-2.htm](https://www.sec.gov/Archives/edgar/data/1135951/000157587222000246/drr0379_ex99-2.htm)
+49. CMS Medicare Part B Spending by Drug, data year 2024 (by HCPCS): [https://data.cms.gov/sites/default/files/2026-06/6616fc91-eb70-404c-9f27-1448e47a3a73/DSD_PTB_RY26_P06_V10_DYT24_HCPCS-%20260602.csv](https://data.cms.gov/sites/default/files/2026-06/6616fc91-eb70-404c-9f27-1448e47a3a73/DSD_PTB_RY26_P06_V10_DYT24_HCPCS-%20260602.csv)
+50. Pfizer FY2019 results release (SEC exhibit 99): [https://www.sec.gov/Archives/edgar/data/78003/000007800320000003/pfe-12312019xex99.htm](https://www.sec.gov/Archives/edgar/data/78003/000007800320000003/pfe-12312019xex99.htm)
+51. Pfizer FY2023 results release (SEC exhibit 99): [https://www.sec.gov/Archives/edgar/data/78003/000007800324000017/pfe-12312023xex99.htm](https://www.sec.gov/Archives/edgar/data/78003/000007800324000017/pfe-12312023xex99.htm)
+52. Pfizer 2024 Form 10-K: [https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm](https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm)
+53. Federal Register 2024-26916: Hydrocortone determination, 19 Nov 2024: [https://www.federalregister.gov/documents/2024/11/19/2024-26916/determination-that-hydrocortone-hydrocortisone-sodium-phosphate-injection-equivalent-to-50](https://www.federalregister.gov/documents/2024/11/19/2024-26916/determination-that-hydrocortone-hydrocortisone-sodium-phosphate-injection-equivalent-to-50)
+54. openFDA NDC directory: Symbiotec bulk API listings: [https://api.fda.gov/drug/ndc.json?search=labeler_name:%22Symbiotec%22&limit=100](https://api.fda.gov/drug/ndc.json?search=labeler_name:%22Symbiotec%22&limit=100)
+55. NLM RxNav: NDC status lookup (example Solu-Medrol NDC): [https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928](https://rxnav.nlm.nih.gov/REST/ndcstatus.json?ndc=00009003928)
+56. Caplin Steriles: methylprednisolone acetate approval filing, Jan 2026 (IQVIA US$57.4 mn): [https://bsmedia.business-standard.com/_media/bs/data/announcements/bse/27012026/a9ea92dd-a2a8-4632-8e08-e434fdcec6fc.pdf](https://bsmedia.business-standard.com/_media/bs/data/announcements/bse/27012026/a9ea92dd-a2a8-4632-8e08-e434fdcec6fc.pdf)
+57. openFDA drug shortages: methylprednisolone: [https://api.fda.gov/drug/shortages.json?search=generic_name:methylprednisolone&limit=100](https://api.fda.gov/drug/shortages.json?search=generic_name:methylprednisolone&limit=100)
+58. CMS Medicare Part B quarterly spending file, Q1 2026: [https://data.cms.gov/sites/default/files/2026-07/6d9e955a-d199-42cf-9f73-7e0d93c33b3e/qddptb_r2603_p06_v10_dqt2601_260722.csv](https://data.cms.gov/sites/default/files/2026-07/6d9e955a-d199-42cf-9f73-7e0d93c33b3e/qddptb_r2603_p06_v10_dqt2601_260722.csv)
+59. The Week / PTI: Symbiotec files DRHP, 19 Dec 2025 (lead managers): [https://www.theweek.in/wire-updates/business/2025/12/19/dcm91-biz-ipo-symbiotec-pharmalab.html](https://www.theweek.in/wire-updates/business/2025/12/19/dcm91-biz-ipo-symbiotec-pharmalab.html)
